@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dmkwmof6t6lpx"
+path="res://.godot/imported/bathing_stool.obj-4cc61d199e91a3f1d7ec1c4f0ca9b546.mesh"
+
+[deps]
+
+files=["res://.godot/imported/bathing_stool.obj-4cc61d199e91a3f1d7ec1c4f0ca9b546.mesh"]
+
+source_file="res://Mesh/bathing_stool.obj"
+dest_files=["res://.godot/imported/bathing_stool.obj-4cc61d199e91a3f1d7ec1c4f0ca9b546.mesh", "res://.godot/imported/bathing_stool.obj-4cc61d199e91a3f1d7ec1c4f0ca9b546.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

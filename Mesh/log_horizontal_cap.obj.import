@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://rjdyb6nadwmi"
+path="res://.godot/imported/log_horizontal_cap.obj-ca7682781a4b214c3b6e5d88e432628e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/log_horizontal_cap.obj-ca7682781a4b214c3b6e5d88e432628e.mesh"]
+
+source_file="res://Mesh/log_horizontal_cap.obj"
+dest_files=["res://.godot/imported/log_horizontal_cap.obj-ca7682781a4b214c3b6e5d88e432628e.mesh", "res://.godot/imported/log_horizontal_cap.obj-ca7682781a4b214c3b6e5d88e432628e.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

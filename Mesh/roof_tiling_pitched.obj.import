@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://q8ns0bwqmqt0"
+path="res://.godot/imported/roof_tiling_pitched.obj-6650db8f64a48707ac3b7c5ca86ce6b4.mesh"
+
+[deps]
+
+files=["res://.godot/imported/roof_tiling_pitched.obj-6650db8f64a48707ac3b7c5ca86ce6b4.mesh"]
+
+source_file="res://Mesh/roof_tiling_pitched.obj"
+dest_files=["res://.godot/imported/roof_tiling_pitched.obj-6650db8f64a48707ac3b7c5ca86ce6b4.mesh", "res://.godot/imported/roof_tiling_pitched.obj-6650db8f64a48707ac3b7c5ca86ce6b4.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

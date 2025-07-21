@@ -1,0 +1,512 @@
+Room
+
+
+
+
+
+
+
+Cocktail Counter
+
+Dracky Stack
+Tree Swing
+Station
+
+
+
+
+
+
+Buffet
+
+
+Medication Station
+
+
+Slime Stack
+
+
+
+Banqueting Table
+Three-Course Meal
+Potted Flower
+Potted Plant
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Fisherman's Cookfire
+Fish Cage
+Fish Tank
+
+Celebratory Cedar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Spa
+Pool
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Fiery Frying Pan
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Dining Table
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Simple Sipper's Set
+Darty Party
+
+
+
+
+
+
+
+Card Table
+
+
+
+
+Playable Piano
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Rocket Battery
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Social Sippers' Set
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Basic Bedroom
+Farmers' Bedroom
+Barn
+
+Private Bedroom
+Master Bedroom
+Imperial Bedroom
+
+
+Rustic Bathroom
+Well-Stocked Bar
+Relaxation Room
+Dormitory
+Pumping Station
+Shower Room
+Neat 'n' Sweet Bedroom
+Chapel
+Wizard's Workshop
+Castle Cafeteria
+Training Room
+Banqueting Hall
+Throne Room
+
+Animal House
+Billet
+War Room
+Smithy
+Chapel of the Children
+
+
+Gory Grillhouse
+Creepy Conservatory
+Suspicious Spa
+Agricultural Kitchen
+Agricultural Cafe
+Mushroom Cookroom
+Toadstool Tearoom
+Armoury
+
+Basic Bar
+Party Pub
+Toilet
+Potable Plant
+Castle Kitchen
+Dining Room
+Changing Room
+Spa Changing Room
+Dancer's Changing Room
+Pool Changing Room
+Diviner's Den
+Armourer's Workshop
+
+Dyeworks
+Pool of Paradise
+Steamy Spa
+Kitchen Diner
+Study Room
+Music Hall
+Armourer's Shop
+Item Shop
+Dance Hall
+Torture Chamber
+Sculpture Gallery
+Art Gallery
+Miniature Museum
+Play Room
+
+Function Room
+Cell
+Shabby Throne Room
+Summoning Chamber
+Rough 'n' Tough Bedroom
+Slimy Room
+Graveyard
+Treasure House
+Magma Chamber
+Winter Garden
+Playful Park
+
+
+
+
+
+
+
+
+
+
+
+
+
+Rockery
+Arboretum
+Botanical Garden
+Cactus Garden
+Tropical Garden
+Fountain Foyer
+Grassy Garden
+
+Freak-Out Room
+Illumination Station
+Chill-Out Room
+Fun-and-Games Room
+Pot Chamber
+Marsh-Room
+Dragonlord's Throne Room
+Doomed Room
+
+
+
+
+
+Watering Hole
+
+Princess's Bedroom
+Cantlin Garden
+Builder's Workshop
+Treasury
+Flower Garden
+Social Bedroom
+Communal Bedroom
+Venerable Bedroom
+Farmers' Flophouse
+Farmers' Lodge
+Done-Up Dormitory
+Drop-Dead Dormitory
+Barracks
+Garrison
+
+Shared Bathroom
+Men's Baths
+Ladies' Baths
+Wood-Burning Bathroom
+Scenic Shower Room
+Simple Kitchen
+Shared Room
+Superior Shared Room
+Stupendous Shared Room
+Public Toilet
+Men's Toilet
+Ladies' Toilet
+Rustic Toilet
+Sweet-Smelling Toilet
+Chivalrous Toilet
+Reception Room
+Hallway
+Hargon's Throne Room
+Swamp
+Library
+Exhibition Room
+Monumental Museum
+Town Hall
+Royal Bedchamber
+Paddock
+Well Room
+
+
+
+
+
+Low-Lit Bedroom
+Low-Lit Hostel
+Low-Lit Lodge
+Simple Scullery
+Luncheon Lounge
+Meditation Station
+Clogged Bog
+Wheelhouse
+Dojo
+Elegant Garden
+Fishing Hole
+Aquarium
+Waterlogged Bedroom
+Waterlogged Quarters
+Waterlogged Lodging
+Sea-Salty Scullery
+Oceanic Eatery
+Souvenir Shop
+Wet Room
+Contemporary Chamber
+Contemporary Residence
+Contemporary Co-Living Pod
+Porch
+Sink 'n' Soak Bathroom
+Fitted Kitchen
+Cultured Café
+Stylish Study
+Bar Counter
+Bar Counter
+Bar Counter
+Bar Counter
+Bar Counter
+Bar Counter
+Bar Counter
+Bar Counter
+Bar Counter
+Bar Counter
+Bar Counter
+Bar Counter
+Bar Counter
+Bar Counter
+Bar Counter
+Bar Counter
+Bar Counter
+Bar Counter
+Bar Counter
+Bar Counter
+Bar Counter
+Bar Counter
+Bar Counter
+Bar Counter
+Bar Counter

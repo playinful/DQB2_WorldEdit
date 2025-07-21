@@ -9,14 +9,15 @@
     },
     {
         "ID": 0,
-        "Name": "Empty",
+        "Name": "Air",
         "ImageID": 1927,
         "Tags": [
             "empty",
             "mood:none"
         ],
         "SortIndex": 0,
-        "VoxelID": 0
+        "VoxelID": 0,
+        "Note": "When used as a prop, displays blank texture of Builder flag"
     },
     {
         "ID": 1,
@@ -758,7 +759,9 @@
             "colour:white": 463,
             "colour:yellow": 469
         },
-        "VoxelID": 55
+        "VoxelID": 55,
+        "Fanciness": 1,
+        "Mood": 1
     },
     {
         "ID": 49,
@@ -1549,39 +1552,39 @@
     },
     {
         "ID": 120,
-        "Name": "Clear water full block",
+        "Name": "Water (Runoff - Full)",
         "ImageID": 73,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 582
     },
     {
         "ID": 121,
-        "Name": "Clear water surface block",
+        "Name": "Water (Runoff - [6/6])",
         "ImageID": 73,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 582
     },
     {
         "ID": 122,
-        "Name": "Clear water surface block",
+        "Name": "Water (Runoff - [4/6])",
         "ImageID": 73,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 582
     },
     {
         "ID": 123,
-        "Name": "Clear water surface block",
+        "Name": "Water (Runoff - [2/6])",
         "ImageID": 73,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 582
     },
     {
         "ID": 124,
@@ -1641,12 +1644,12 @@
     },
     {
         "ID": 128,
-        "Name": "Clear water full block",
+        "Name": "Water (Full)",
         "ImageID": 73,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 582
     },
     {
         "ID": 130,
@@ -1736,39 +1739,39 @@
     },
     {
         "ID": 142,
-        "Name": "Clear water surface block",
+        "Name": "Water (Runoff - [7/6]?)",
         "ImageID": 73,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 582
     },
     {
         "ID": 143,
-        "Name": "Clear water surface block",
+        "Name": "Water (Runoff - [5/6])",
         "ImageID": 73,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 582
     },
     {
         "ID": 144,
-        "Name": "Clear water surface block",
+        "Name": "Water (Runoff - [3/6])",
         "ImageID": 73,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 582
     },
     {
         "ID": 145,
-        "Name": "Clear water shallow block",
+        "Name": "Water (Runoff - [1/6])",
         "ImageID": 73,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 582
     },
     {
         "ID": 146,
@@ -2159,246 +2162,246 @@
     },
     {
         "ID": 182,
-        "Name": "Poison shallow block",
+        "Name": "Poison (Runoff - [1/6])",
         "ImageID": 16,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 587
     },
     {
         "ID": 183,
-        "Name": "Poison surface block",
+        "Name": "Poison (Runoff - [2/6])",
         "ImageID": 16,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 587
     },
     {
         "ID": 184,
-        "Name": "Poison surface block",
+        "Name": "Poison (Runoff - [3/6])",
         "ImageID": 16,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 587
     },
     {
         "ID": 185,
-        "Name": "Poison surface block",
+        "Name": "Poison (Runoff - [4/6])",
         "ImageID": 16,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 587
     },
     {
         "ID": 186,
-        "Name": "Poison surface block",
+        "Name": "Poison (Runoff - [5/6])",
         "ImageID": 16,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 587
     },
     {
         "ID": 187,
-        "Name": "Poison surface block",
+        "Name": "Poison (Runoff - [6/6])",
         "ImageID": 16,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 587
     },
     {
         "ID": 188,
-        "Name": "Poison surface block",
+        "Name": "Poison (Runoff - [7/6]?)",
         "ImageID": 16,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 587
     },
     {
         "ID": 189,
-        "Name": "Poison full block",
+        "Name": "Poison (Runoff - Full)",
         "ImageID": 16,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 587
     },
     {
         "ID": 190,
-        "Name": "Poison full block",
+        "Name": "Poison (Full)",
         "ImageID": 16,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 587
     },
     {
         "ID": 191,
-        "Name": "Bottomless Swamp shallow block",
+        "Name": "Bottomless Swamp (Runoff - [1/6])",
         "ImageID": 2130,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 585
     },
     {
         "ID": 192,
-        "Name": "Bottomless Swamp surface block",
+        "Name": "Bottomless Swamp (Runoff - [2/6])",
         "ImageID": 2130,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 585
     },
     {
         "ID": 193,
-        "Name": "Bottomless Swamp surface block",
+        "Name": "Bottomless Swamp (Runoff - [3/6])",
         "ImageID": 2130,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 585
     },
     {
         "ID": 194,
-        "Name": "Bottomless Swamp surface block",
+        "Name": "Bottomless Swamp (Runoff - [4/6])",
         "ImageID": 2130,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 585
     },
     {
         "ID": 195,
-        "Name": "Bottomless Swamp surface block",
+        "Name": "Bottomless Swamp (Runoff - [5/6])",
         "ImageID": 2130,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 585
     },
     {
         "ID": 196,
-        "Name": "Bottomless Swamp surface block",
+        "Name": "Bottomless Swamp (Runoff - [6/6])",
         "ImageID": 2130,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 585
     },
     {
         "ID": 197,
-        "Name": "Bottomless Swamp surface block",
+        "Name": "Bottomless Swamp (Runoff - [7/6]?)",
         "ImageID": 2130,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 585
     },
     {
         "ID": 198,
-        "Name": "Bottomless Swamp full block",
+        "Name": "Bottomless Swamp (Full - Runoff)",
         "ImageID": 2130,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 585
     },
     {
         "ID": 199,
-        "Name": "Bottomless Swamp full block",
+        "Name": "Bottomless Swamp (Full)",
         "ImageID": 2130,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 585
     },
     {
         "ID": 200,
-        "Name": "Muddy Water shallow block",
+        "Name": "Muddy Water (Runoff - [1/6])",
         "ImageID": 2130,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 584
     },
     {
         "ID": 201,
-        "Name": "Muddy Water surface block",
+        "Name": "Muddy Water (Runoff - [2/6])",
         "ImageID": 2130,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 584
     },
     {
         "ID": 202,
-        "Name": "Muddy Water surface block",
+        "Name": "Muddy Water (Runoff - [3/6])",
         "ImageID": 2130,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 584
     },
     {
         "ID": 203,
-        "Name": "Muddy Water surface block",
+        "Name": "Muddy Water (Runoff - [4/6])",
         "ImageID": 2130,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 584
     },
     {
         "ID": 204,
-        "Name": "Muddy Water surface block",
+        "Name": "Muddy Water (Runoff - [5/6])",
         "ImageID": 2130,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 584
     },
     {
         "ID": 205,
-        "Name": "Muddy Water surface block",
+        "Name": "Muddy Water (Runoff - [6/6])",
         "ImageID": 2130,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 584
     },
     {
         "ID": 206,
-        "Name": "Muddy Water surface block",
+        "Name": "Muddy Water (Runoff - [7/6]?)",
         "ImageID": 2130,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 584
     },
     {
         "ID": 207,
-        "Name": "Muddy Water full block",
+        "Name": "Muddy Water (Runoff - Full)",
         "ImageID": 2130,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 584
     },
     {
         "ID": 208,
-        "Name": "Muddy Water full block",
+        "Name": "Muddy Water (Full)",
         "ImageID": 2130,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 584
     },
     {
         "ID": 209,
@@ -2433,84 +2436,84 @@
     },
     {
         "ID": 223,
-        "Name": "Hot Water shallow block",
+        "Name": "Hot Water (Runoff - [1/6])",
         "ImageID": 798,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 586
     },
     {
         "ID": 224,
-        "Name": "Hot Water surface block",
+        "Name": "Hot Water (Runoff - [2/6])",
         "ImageID": 798,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 586
     },
     {
         "ID": 225,
-        "Name": "Hot Water surface block",
+        "Name": "Hot Water (Runoff - [3/6])",
         "ImageID": 798,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 586
     },
     {
         "ID": 226,
-        "Name": "Hot Water surface block",
+        "Name": "Hot Water (Runoff - [4/6])",
         "ImageID": 798,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 586
     },
     {
         "ID": 227,
-        "Name": "Hot Water surface block",
+        "Name": "Hot Water (Runoff - [5/6])",
         "ImageID": 798,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 586
     },
     {
         "ID": 228,
-        "Name": "Hot Water surface block",
+        "Name": "Hot Water (Runoff - [6/6])",
         "ImageID": 798,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 586
     },
     {
         "ID": 229,
-        "Name": "Hot Water surface block",
+        "Name": "Hot Water (Runoff - [7/6]?)",
         "ImageID": 798,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 586
     },
     {
         "ID": 230,
-        "Name": "Hot Water full block",
+        "Name": "Hot Water (Runoff - Full)",
         "ImageID": 798,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 586
     },
     {
         "ID": 231,
-        "Name": "Hot Water full block",
+        "Name": "Hot Water (Full)",
         "ImageID": 798,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 586
     },
     {
         "ID": 232,
@@ -2667,39 +2670,39 @@
     },
     {
         "ID": 259,
-        "Name": "Lava shallow block",
+        "Name": "Liquid Lava (Runoff - [1/6])",
         "ImageID": 24,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 589
     },
     {
         "ID": 260,
-        "Name": "Lava surface block",
+        "Name": "Liquid Lava (Runoff - [2/6])",
         "ImageID": 24,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 589
     },
     {
         "ID": 261,
-        "Name": "Lava surface block",
+        "Name": "Liquid Lava (Runoff - [3/6])",
         "ImageID": 24,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 589
     },
     {
         "ID": 262,
-        "Name": "Lava surface block",
+        "Name": "Liquid Lava (Runoff - [4/6])",
         "ImageID": 24,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 589
     },
     {
         "ID": 623,
@@ -2717,48 +2720,48 @@
     },
     {
         "ID": 263,
-        "Name": "Lava surface block",
+        "Name": "Liquid Lava (Runoff - [5/6])",
         "ImageID": 24,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 589
     },
     {
         "ID": 264,
-        "Name": "Lava surface block",
+        "Name": "Liquid Lava (Runoff - [6/6])",
         "ImageID": 24,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 589
     },
     {
         "ID": 265,
-        "Name": "Lava surface block",
+        "Name": "Liquid Lava (Runoff - [7/6]?)",
         "ImageID": 24,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 589
     },
     {
         "ID": 266,
-        "Name": "Lava surface block",
+        "Name": "Liquid Lava (Runoff - Full)",
         "ImageID": 24,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 589
     },
     {
         "ID": 267,
-        "Name": "Lava surface block",
+        "Name": "Liquid Lava (Full)",
         "ImageID": 24,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 589
     },
     {
         "ID": 268,
@@ -3598,147 +3601,147 @@
     },
     {
         "ID": 333,
-        "Name": "Sea water shallow block",
+        "Name": "Seawater (Runoff - [1/6])",
         "ImageID": 2131,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 583
     },
     {
         "ID": 334,
-        "Name": "Sea water surface block",
+        "Name": "Seawater (Runoff - [2/6])",
         "ImageID": 2131,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 583
     },
     {
         "ID": 335,
-        "Name": "Sea water surface block",
+        "Name": "Seawater (Runoff - [3/6])",
         "ImageID": 2131,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 583
     },
     {
         "ID": 336,
-        "Name": "Sea water surface block",
+        "Name": "Seawater (Runoff - [4/6])",
         "ImageID": 2131,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 583
     },
     {
         "ID": 337,
-        "Name": "Sea water surface block",
+        "Name": "Seawater (Runoff - [5/6])",
         "ImageID": 2131,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 583
     },
     {
         "ID": 338,
-        "Name": "Sea water surface block",
+        "Name": "Seawater (Runoff - [6/6])",
         "ImageID": 2131,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 583
     },
     {
         "ID": 339,
-        "Name": "Sea water surface block",
+        "Name": "Seawater (Runoff - [7/6]?)",
         "ImageID": 2131,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 583
     },
     {
         "ID": 340,
-        "Name": "Sea water full block",
+        "Name": "Seawater (Runoff - Full)",
         "ImageID": 2131,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 583
     },
     {
         "ID": 341,
-        "Name": "Sea water full block",
+        "Name": "Seawater (Full)",
         "ImageID": 2131,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 583
     },
     {
         "ID": 343,
-        "Name": "Clear water shallow block",
+        "Name": "Water (Shallow)",
         "ImageID": 73,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 582
     },
     {
         "ID": 344,
-        "Name": "Hot water shallow block",
+        "Name": "Hot Water (Shallow)",
         "ImageID": 798,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 586
     },
     {
         "ID": 345,
-        "Name": "Poison shallow block",
+        "Name": "Poison (Shallow)",
         "ImageID": 16,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 587
     },
     {
         "ID": 346,
-        "Name": "Lava shallow block",
+        "Name": "Liquid Lava (Shallow)",
         "ImageID": 24,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 589
     },
     {
         "ID": 347,
-        "Name": "Bottomless Swamp shallow block",
+        "Name": "Bottomless Swamp (Shallow)",
         "ImageID": 2130,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 585
     },
     {
         "ID": 348,
-        "Name": "Muddy Water shallow block",
+        "Name": "Muddy Water (Shallow)",
         "ImageID": 2130,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 584
     },
     {
         "ID": 349,
-        "Name": "Sea water shallow block",
+        "Name": "Seawater (Shallow)",
         "ImageID": 2131,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 583
     },
     {
         "ID": 351,
@@ -4190,39 +4193,39 @@
     },
     {
         "ID": 383,
-        "Name": "Clear water surface block",
+        "Name": "Water (Surface)",
         "ImageID": 73,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 582
     },
     {
         "ID": 384,
-        "Name": "Hot water surface block",
+        "Name": "Hot Water (Surface)",
         "ImageID": 798,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 586
     },
     {
         "ID": 385,
-        "Name": "Poison surface block",
+        "Name": "Poison (Surface)",
         "ImageID": 16,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 587
     },
     {
         "ID": 386,
-        "Name": "Lava surface block",
+        "Name": "Liquid Lava (Surface)",
         "ImageID": 24,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 589
     },
     {
         "ID": 387,
@@ -4231,124 +4234,124 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 585
     },
     {
         "ID": 388,
-        "Name": "Muddy Water surface block",
+        "Name": "Muddy Water (Surface)",
         "ImageID": 2130,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 584
     },
     {
         "ID": 389,
-        "Name": "Sea water surface block",
+        "Name": "Seawater (Surface)",
         "ImageID": 2131,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 583
     },
     {
         "ID": 390,
-        "Name": "Plasma shallow block",
+        "Name": "Plasma (Runoff - [1/6])",
         "ImageID": 2135,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 588
     },
     {
         "ID": 391,
-        "Name": "Plasma surface block",
+        "Name": "Plasma (Runoff - [2/6])",
         "ImageID": 2135,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 588
     },
     {
         "ID": 392,
-        "Name": "Plasma surface block",
+        "Name": "Plasma (Runoff - [3/6])",
         "ImageID": 2135,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 588
     },
     {
         "ID": 393,
-        "Name": "Plasma surface block",
+        "Name": "Plasma (Runoff - [4/6])",
         "ImageID": 2135,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 588
     },
     {
         "ID": 394,
-        "Name": "Plasma surface block",
+        "Name": "Plasma (Runoff - [5/6])",
         "ImageID": 2135,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 588
     },
     {
         "ID": 395,
-        "Name": "Plasma surface block",
+        "Name": "Plasma (Runoff - [6/6])",
         "ImageID": 2135,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 588
     },
     {
         "ID": 396,
-        "Name": "Plasma surface block",
+        "Name": "Plasma (Runoff - [7/6]?)",
         "ImageID": 2135,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 588
     },
     {
         "ID": 397,
-        "Name": "Plasma full block",
+        "Name": "Plasma (Runoff - Full)",
         "ImageID": 2135,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 588
     },
     {
         "ID": 398,
-        "Name": "Plasma full block",
+        "Name": "Plasma (Full)",
         "ImageID": 2135,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 588
     },
     {
         "ID": 399,
-        "Name": "Plasma shallow block",
+        "Name": "Plasma (Shallow)",
         "ImageID": 2135,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 588
     },
     {
         "ID": 400,
-        "Name": "Plasma surface block",
+        "Name": "Plasma (Surface)",
         "ImageID": 2135,
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 588
     },
     {
         "ID": 401,
@@ -4632,7 +4635,7 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 583
     },
     {
         "ID": 421,
@@ -10197,7 +10200,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1159,
@@ -10206,7 +10210,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1160,
@@ -10215,7 +10220,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1161,
@@ -10224,7 +10230,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1162,
@@ -10233,7 +10240,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1163,
@@ -10242,7 +10250,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1164,
@@ -10251,7 +10260,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1165,
@@ -10260,7 +10270,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1166,
@@ -10269,7 +10280,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1167,
@@ -10278,7 +10290,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1168,
@@ -10287,7 +10300,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1169,
@@ -10296,7 +10310,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1170,
@@ -10305,7 +10320,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1171,
@@ -10314,7 +10330,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1172,
@@ -10323,7 +10340,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1173,
@@ -10332,7 +10350,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1174,
@@ -10341,7 +10360,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1175,
@@ -10350,7 +10370,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1176,
@@ -10359,7 +10380,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1177,
@@ -10368,7 +10390,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1178,
@@ -10377,7 +10400,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1179,
@@ -10386,7 +10410,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1180,
@@ -10395,7 +10420,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1181,
@@ -10404,7 +10430,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1182,
@@ -10413,7 +10440,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1183,
@@ -10422,7 +10450,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1184,
@@ -10431,7 +10460,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1185,
@@ -10440,7 +10470,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1186,
@@ -10449,7 +10480,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1187,
@@ -10458,7 +10490,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1188,
@@ -10467,7 +10500,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1189,
@@ -10476,7 +10510,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1190,
@@ -10485,7 +10520,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1191,
@@ -10494,7 +10530,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1192,
@@ -10503,7 +10540,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1193,
@@ -10512,7 +10550,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1194,
@@ -10521,7 +10560,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1195,
@@ -10530,7 +10570,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1196,
@@ -10539,7 +10580,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1197,
@@ -10548,7 +10590,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1198,
@@ -10557,7 +10600,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1199,
@@ -10566,7 +10610,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1200,
@@ -10575,7 +10620,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1201,
@@ -10584,7 +10630,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1202,
@@ -10593,7 +10640,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1203,
@@ -10602,7 +10650,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1204,
@@ -10611,7 +10660,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1205,
@@ -10620,7 +10670,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1206,
@@ -10629,7 +10680,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1207,
@@ -10638,7 +10690,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1208,
@@ -10647,7 +10700,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1209,
@@ -10656,7 +10710,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1210,
@@ -10665,7 +10720,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1211,
@@ -10674,7 +10730,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1212,
@@ -10683,7 +10740,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1213,
@@ -10692,7 +10750,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1214,
@@ -10701,7 +10760,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1215,
@@ -10710,7 +10770,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1216,
@@ -10719,7 +10780,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1217,
@@ -10728,7 +10790,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1218,
@@ -10737,7 +10800,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1219,
@@ -10746,7 +10810,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1220,
@@ -10755,7 +10820,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1221,
@@ -10764,7 +10830,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1222,
@@ -10773,7 +10840,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1223,
@@ -10782,7 +10850,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1224,
@@ -10791,7 +10860,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1225,
@@ -10800,7 +10870,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1226,
@@ -10809,7 +10880,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1227,
@@ -10818,7 +10890,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1228,
@@ -10827,7 +10900,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1229,
@@ -10836,7 +10910,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1230,
@@ -10845,7 +10920,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1231,
@@ -10854,7 +10930,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1232,
@@ -10863,7 +10940,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1233,
@@ -10872,7 +10950,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1234,
@@ -10881,7 +10960,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1235,
@@ -10890,7 +10970,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1236,
@@ -10899,7 +10980,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1237,
@@ -10908,7 +10990,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1238,
@@ -10917,7 +11000,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1239,
@@ -10926,7 +11010,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1240,
@@ -10935,7 +11020,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1241,
@@ -10944,7 +11030,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1242,
@@ -10953,7 +11040,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1243,
@@ -10962,7 +11050,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1244,
@@ -10971,7 +11060,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1245,
@@ -10980,16 +11070,18 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fence"
     },
     {
         "ID": 1246,
-        "Name": "Item - UNKNOWN",
+        "Name": "Prop (Fence)",
         "ImageID": 2047,
         "Tags": [
             "noeditor"
         ],
-        "VoxelID": 599
+        "VoxelID": 4,
+        "PropShell": "Fence"
     },
     {
         "ID": 1247,
@@ -11785,12 +11877,13 @@
     },
     {
         "ID": 1335,
-        "Name": "Item - UNKNOWN",
+        "Name": "Prop (Frying Pan)",
         "ImageID": 2047,
         "Tags": [
             "noeditor"
         ],
-        "VoxelID": 599
+        "VoxelID": 4,
+        "PropShell": "FryingPan"
     },
     {
         "ID": 1336,
@@ -12586,12 +12679,13 @@
     },
     {
         "ID": 1424,
-        "Name": "Item - Track",
+        "Name": "Prop (Track)",
         "ImageID": 2047,
         "Tags": [
             "noeditor"
         ],
-        "VoxelID": 599
+        "VoxelID": 4,
+        "PropShell": "Track"
     },
     {
         "ID": 1425,
@@ -13387,12 +13481,13 @@
     },
     {
         "ID": 1513,
-        "Name": "Item - Roof",
+        "Name": "Prop (Roof)",
         "ImageID": 2047,
         "Tags": [
             "noeditor"
         ],
-        "VoxelID": 599
+        "VoxelID": 4,
+        "PropShell": "Roof"
     },
     {
         "ID": 1514,
@@ -14188,12 +14283,13 @@
     },
     {
         "ID": 1602,
-        "Name": "Item - Table",
+        "Name": "Prop (Table)",
         "ImageID": 2047,
         "Tags": [
             "noeditor"
         ],
-        "VoxelID": 599
+        "VoxelID": 4,
+        "PropShell": "Table"
     },
     {
         "ID": 1603,
@@ -14796,7 +14892,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Lighting"
     },
     {
         "ID": 1670,
@@ -14989,12 +15086,13 @@
     },
     {
         "ID": 1691,
-        "Name": "Item - Lighting",
+        "Name": "Prop (Lighting)",
         "ImageID": 2047,
         "Tags": [
             "noeditor"
         ],
-        "VoxelID": 599
+        "VoxelID": 4,
+        "PropShell": "Lighting"
     },
     {
         "ID": 1692,
@@ -15003,7 +15101,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "Note": "Item shell Fixture"
     },
     {
         "ID": 1693,
@@ -15012,7 +15111,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fixture"
     },
     {
         "ID": 1694,
@@ -15021,7 +15121,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fixture"
     },
     {
         "ID": 1695,
@@ -15030,7 +15131,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fixture"
     },
     {
         "ID": 1696,
@@ -15075,7 +15177,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "Note": "Item shell Fixture"
     },
     {
         "ID": 1701,
@@ -15084,7 +15187,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fixture"
     },
     {
         "ID": 1702,
@@ -15093,7 +15197,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fixture"
     },
     {
         "ID": 1703,
@@ -15210,7 +15315,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fixture"
     },
     {
         "ID": 1716,
@@ -15300,7 +15406,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fixture"
     },
     {
         "ID": 1726,
@@ -15309,7 +15416,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fixture"
     },
     {
         "ID": 1727,
@@ -15318,7 +15426,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fixture"
     },
     {
         "ID": 1728,
@@ -15372,7 +15481,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fixture"
     },
     {
         "ID": 1734,
@@ -15507,7 +15617,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fixture"
     },
     {
         "ID": 1749,
@@ -15597,7 +15708,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fixture"
     },
     {
         "ID": 1759,
@@ -15606,7 +15718,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fixture"
     },
     {
         "ID": 1760,
@@ -15642,7 +15755,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fixture"
     },
     {
         "ID": 1764,
@@ -15687,7 +15801,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fixture"
     },
     {
         "ID": 1769,
@@ -15696,7 +15811,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "Note": "Item shell Fixture"
     },
     {
         "ID": 1770,
@@ -15714,7 +15830,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fixture"
     },
     {
         "ID": 1772,
@@ -15750,7 +15867,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fixture"
     },
     {
         "ID": 1776,
@@ -15759,7 +15877,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fixture"
     },
     {
         "ID": 1777,
@@ -15768,7 +15887,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Fixture"
     },
     {
         "ID": 1778,
@@ -15777,7 +15897,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "Note": "Item shell Fixture"
     },
     {
         "ID": 1779,
@@ -15786,16 +15907,18 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "Note": "Item shell Fixture"
     },
     {
         "ID": 1780,
-        "Name": "Item - Fixture",
+        "Name": "Prop (Fixture)",
         "ImageID": 2047,
         "Tags": [
             "noeditor"
         ],
-        "VoxelID": 599
+        "VoxelID": 4,
+        "PropShell": "Fixture"
     },
     {
         "ID": 1781,
@@ -16362,7 +16485,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Door"
     },
     {
         "ID": 1844,
@@ -16371,7 +16495,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Door"
     },
     {
         "ID": 1845,
@@ -16591,12 +16716,13 @@
     },
     {
         "ID": 1869,
-        "Name": "Item - Door",
+        "Name": "Prop (Door)",
         "ImageID": 2047,
         "Tags": [
             "noeditor"
         ],
-        "VoxelID": 599
+        "VoxelID": 4,
+        "PropShell": "Door"
     },
     {
         "ID": 1870,
@@ -17392,12 +17518,13 @@
     },
     {
         "ID": 1958,
-        "Name": "Item - UNKNOWN",
+        "Name": "Prop (UNKNOWN)",
         "ImageID": 2047,
         "Tags": [
             "noeditor"
         ],
-        "VoxelID": 599
+        "VoxelID": 4,
+        "PropShell": "Unknown"
     },
     {
         "ID": 1959,
@@ -17406,7 +17533,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "Note": "Item shell Generic"
     },
     {
         "ID": 1960,
@@ -17415,7 +17543,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "Note": "Item shell Generic"
     },
     {
         "ID": 1961,
@@ -17424,7 +17553,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "Note": "Item shell Generic"
     },
     {
         "ID": 1962,
@@ -17433,7 +17563,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "Note": "Item shell Generic"
     },
     {
         "ID": 1963,
@@ -17442,7 +17573,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "Note": "Item shell Generic"
     },
     {
         "ID": 1964,
@@ -17451,7 +17583,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "Note": "Item shell Generic"
     },
     {
         "ID": 1965,
@@ -17460,7 +17593,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "Note": "Item shell Generic"
     },
     {
         "ID": 1966,
@@ -17469,7 +17603,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "Note": "Item shell Generic"
     },
     {
         "ID": 1967,
@@ -17478,7 +17613,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "Note": "Item shell Generic"
     },
     {
         "ID": 1968,
@@ -17487,7 +17623,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "Note": "Item shell Generic"
     },
     {
         "ID": 1969,
@@ -17496,7 +17633,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "Note": "Item shell Generic"
     },
     {
         "ID": 1970,
@@ -17604,7 +17742,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "Note": "Item shell Generic"
     },
     {
         "ID": 1982,
@@ -17613,7 +17752,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "Note": "Item shell Generic"
     },
     {
         "ID": 1983,
@@ -17703,7 +17843,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "Note": "Item shell Generic"
     },
     {
         "ID": 1993,
@@ -17721,7 +17862,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "Note": "Item shell Generic"
     },
     {
         "ID": 1995,
@@ -17811,7 +17953,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Generic"
     },
     {
         "ID": 2005,
@@ -17901,7 +18044,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "Note": "Item shell Generic"
     },
     {
         "ID": 2015,
@@ -17910,7 +18054,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "Note": "Item shell Generic"
     },
     {
         "ID": 2016,
@@ -17919,7 +18064,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Generic"
     },
     {
         "ID": 2017,
@@ -17937,7 +18083,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "Note":"Item shell Generic"
     },
     {
         "ID": 2019,
@@ -18000,7 +18147,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "Note": "Item shell Generic"
     },
     {
         "ID": 2026,
@@ -18009,7 +18157,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "Note": "Item shell Generic"
     },
     {
         "ID": 2027,
@@ -18018,7 +18167,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Generic"
     },
     {
         "ID": 2028,
@@ -18027,7 +18177,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Generic"
     },
     {
         "ID": 2029,
@@ -18045,7 +18196,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Generic"
     },
     {
         "ID": 2031,
@@ -18054,7 +18206,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "Note": "Item shell Generic"
     },
     {
         "ID": 2032,
@@ -18081,7 +18234,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "Note": "Item shell Generic"
     },
     {
         "ID": 2035,
@@ -18090,7 +18244,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "Note":"Item shell Generic"
     },
     {
         "ID": 2036,
@@ -18099,7 +18254,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Generic"
     },
     {
         "ID": 2037,
@@ -18108,7 +18264,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Generic"
     },
     {
         "ID": 2038,
@@ -18117,7 +18274,8 @@
         "Tags": [
             "liquid"
         ],
-        "VoxelID": 0
+        "VoxelID": 0,
+        "PropShell": "Generic"
     },
     {
         "ID": 2039,
@@ -18193,11 +18351,12 @@
     },
     {
         "ID": 2047,
-        "Name": "Item - UNKNOWN",
+        "Name": "Prop (Generic)",
         "ImageID": 2047,
         "Tags": [
             "noeditor"
         ],
-        "VoxelID": 599
+        "VoxelID": 4,
+        "PropShell": "Generic"
     }
 ]

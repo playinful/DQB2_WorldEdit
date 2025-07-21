@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://re3y55rft45"
+path="res://.godot/imported/straw_mattress.obj-d0b8fa07419e612ceb6eba055cf11f0a.mesh"
+
+[deps]
+
+files=["res://.godot/imported/straw_mattress.obj-d0b8fa07419e612ceb6eba055cf11f0a.mesh"]
+
+source_file="res://Mesh/straw_mattress.obj"
+dest_files=["res://.godot/imported/straw_mattress.obj-d0b8fa07419e612ceb6eba055cf11f0a.mesh", "res://.godot/imported/straw_mattress.obj-d0b8fa07419e612ceb6eba055cf11f0a.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

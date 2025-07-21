@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://p7t7yekh5gx4"
+path="res://.godot/imported/buckwheat_4.obj-2ee9aadfc5716d5d6e37d67b6631055a.mesh"
+
+[deps]
+
+files=["res://.godot/imported/buckwheat_4.obj-2ee9aadfc5716d5d6e37d67b6631055a.mesh"]
+
+source_file="res://Mesh/buckwheat_4.obj"
+dest_files=["res://.godot/imported/buckwheat_4.obj-2ee9aadfc5716d5d6e37d67b6631055a.mesh", "res://.godot/imported/buckwheat_4.obj-2ee9aadfc5716d5d6e37d67b6631055a.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

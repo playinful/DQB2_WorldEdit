@@ -1,0 +1,24 @@
+0000	room
+0001	<null>
+0002	<null>
+0003	<null>
+0004	<null>
+0005	<null>
+0006	<null>
+0007	<null>
+0008	Cocktail counter
+0009	<null>
+000A	Dracky stack
+000B	Tree swing
+000C	Station
+000D	<null>
+000E	<null>
+000F	<null>
+0010	<null>
+0011	<null>
+0012	<null>
+0013	Buffet
+0014	<null>
+0015	<null>
+0016	Medication station
+012C	basic bedroom

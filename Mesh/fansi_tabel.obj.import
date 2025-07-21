@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dcv40dv5tq1t2"
+path="res://.godot/imported/fansi_tabel.obj-beb7440741e42a90234d88e011ed1ecc.mesh"
+
+[deps]
+
+files=["res://.godot/imported/fansi_tabel.obj-beb7440741e42a90234d88e011ed1ecc.mesh"]
+
+source_file="res://Mesh/fansi_tabel.obj"
+dest_files=["res://.godot/imported/fansi_tabel.obj-beb7440741e42a90234d88e011ed1ecc.mesh", "res://.godot/imported/fansi_tabel.obj-beb7440741e42a90234d88e011ed1ecc.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

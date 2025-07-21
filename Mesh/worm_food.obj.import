@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://r5h2g5kcd7we"
+path="res://.godot/imported/worm_food.obj-c4e6d83f00d1c4abdd37cd093a842216.mesh"
+
+[deps]
+
+files=["res://.godot/imported/worm_food.obj-c4e6d83f00d1c4abdd37cd093a842216.mesh"]
+
+source_file="res://Mesh/worm_food.obj"
+dest_files=["res://.godot/imported/worm_food.obj-c4e6d83f00d1c4abdd37cd093a842216.mesh", "res://.godot/imported/worm_food.obj-c4e6d83f00d1c4abdd37cd093a842216.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

@@ -7,8 +7,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": -1,
-        "Category": "-1",
-        "SortIndex": null
+        "Category": "-1"
     },
     {
         "ID": 1,
@@ -18,8 +17,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 873,
-        "Category": "Equipment",
-        "SortIndex": null
+        "Category": "Equipment"
     },
     {
         "ID": 2,
@@ -51,8 +49,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 866,
-        "Category": "Equipment",
-        "SortIndex": null
+        "Category": "Equipment"
     },
     {
         "ID": 5,
@@ -106,8 +103,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2230,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 10,
@@ -128,8 +124,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2233,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 12,
@@ -227,8 +222,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2228,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 21,
@@ -271,8 +265,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2231,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 25,
@@ -326,8 +319,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1965,
-        "Category": "Blueprint",
-        "SortIndex": null
+        "Category": "Blueprint"
     },
     {
         "ID": 30,
@@ -348,8 +340,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 867,
-        "Category": "Equipment",
-        "SortIndex": null
+        "Category": "Equipment"
     },
     {
         "ID": 32,
@@ -359,8 +350,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 768,
-        "Category": "Equipment",
-        "SortIndex": null
+        "Category": "Equipment"
     },
     {
         "ID": 33,
@@ -381,8 +371,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "Building Block",
-        "SortIndex": null
+        "Category": "Building Block"
     },
     {
         "ID": 35,
@@ -623,8 +612,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1965,
-        "Category": "Blueprint",
-        "SortIndex": null
+        "Category": "Blueprint"
     },
     {
         "ID": 57,
@@ -645,8 +633,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1940,
-        "Category": "Consumable",
-        "SortIndex": null
+        "Category": "Consumable"
     },
     {
         "ID": 59,
@@ -656,8 +643,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1965,
-        "Category": "Blueprint",
-        "SortIndex": null
+        "Category": "Blueprint"
     },
     {
         "ID": 60,
@@ -678,8 +664,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1965,
-        "Category": "Blueprint",
-        "SortIndex": null
+        "Category": "Blueprint"
     },
     {
         "ID": 62,
@@ -722,8 +707,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "Lighting",
-        "SortIndex": null
+        "Category": "Lighting"
     },
     {
         "ID": 66,
@@ -777,8 +761,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 756,
-        "Category": "Unused Item",
-        "SortIndex": null
+        "Category": "Unused Item"
     },
     {
         "ID": 71,
@@ -788,8 +771,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 756,
-        "Category": "Unused Item",
-        "SortIndex": null
+        "Category": "Unused Item"
     },
     {
         "ID": 72,
@@ -799,8 +781,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 756,
-        "Category": "Unused Item",
-        "SortIndex": null
+        "Category": "Unused Item"
     },
     {
         "ID": 73,
@@ -810,8 +791,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 756,
-        "Category": "Unused Item",
-        "SortIndex": null
+        "Category": "Unused Item"
     },
     {
         "ID": 74,
@@ -821,8 +801,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 756,
-        "Category": "Unused Item",
-        "SortIndex": null
+        "Category": "Unused Item"
     },
     {
         "ID": 75,
@@ -832,8 +811,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 757,
-        "Category": "Unused Item",
-        "SortIndex": null
+        "Category": "Unused Item"
     },
     {
         "ID": 76,
@@ -843,8 +821,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 757,
-        "Category": "Unused Item",
-        "SortIndex": null
+        "Category": "Unused Item"
     },
     {
         "ID": 77,
@@ -854,8 +831,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 757,
-        "Category": "Unused Item",
-        "SortIndex": null
+        "Category": "Unused Item"
     },
     {
         "ID": 78,
@@ -865,8 +841,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 757,
-        "Category": "Unused Item",
-        "SortIndex": null
+        "Category": "Unused Item"
     },
     {
         "ID": 79,
@@ -876,8 +851,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 757,
-        "Category": "Unused Item",
-        "SortIndex": null
+        "Category": "Unused Item"
     },
     {
         "ID": 80,
@@ -887,8 +861,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 758,
-        "Category": "Unused Item",
-        "SortIndex": null
+        "Category": "Unused Item"
     },
     {
         "ID": 81,
@@ -898,8 +871,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 758,
-        "Category": "Unused Item",
-        "SortIndex": null
+        "Category": "Unused Item"
     },
     {
         "ID": 82,
@@ -909,8 +881,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 758,
-        "Category": "Unused Item",
-        "SortIndex": null
+        "Category": "Unused Item"
     },
     {
         "ID": 83,
@@ -920,8 +891,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 758,
-        "Category": "Unused Item",
-        "SortIndex": null
+        "Category": "Unused Item"
     },
     {
         "ID": 84,
@@ -931,8 +901,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 758,
-        "Category": "Unused Item",
-        "SortIndex": null
+        "Category": "Unused Item"
     },
     {
         "ID": 85,
@@ -942,8 +911,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1930,
-        "Category": "Unused Item",
-        "SortIndex": null
+        "Category": "Unused Item"
     },
     {
         "ID": 86,
@@ -953,8 +921,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1930,
-        "Category": "Unused Item",
-        "SortIndex": null
+        "Category": "Unused Item"
     },
     {
         "ID": 87,
@@ -964,8 +931,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1930,
-        "Category": "Unused Item",
-        "SortIndex": null
+        "Category": "Unused Item"
     },
     {
         "ID": 88,
@@ -975,8 +941,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1930,
-        "Category": "Unused Item",
-        "SortIndex": null
+        "Category": "Unused Item"
     },
     {
         "ID": 89,
@@ -986,8 +951,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1930,
-        "Category": "Unused Item",
-        "SortIndex": null
+        "Category": "Unused Item"
     },
     {
         "ID": 90,
@@ -997,8 +961,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1930,
-        "Category": "Unused Item",
-        "SortIndex": null
+        "Category": "Unused Item"
     },
     {
         "ID": 91,
@@ -1008,8 +971,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1930,
-        "Category": "Unused Item",
-        "SortIndex": null
+        "Category": "Unused Item"
     },
     {
         "ID": 92,
@@ -1019,8 +981,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1930,
-        "Category": "Unused Item",
-        "SortIndex": null
+        "Category": "Unused Item"
     },
     {
         "ID": 93,
@@ -1030,8 +991,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1930,
-        "Category": "Unused Item",
-        "SortIndex": null
+        "Category": "Unused Item"
     },
     {
         "ID": 94,
@@ -1041,8 +1001,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1930,
-        "Category": "Unused Item",
-        "SortIndex": null
+        "Category": "Unused Item"
     },
     {
         "ID": 95,
@@ -1107,8 +1066,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 758,
-        "Category": "Material",
-        "SortIndex": null
+        "Category": "Material"
     },
     {
         "ID": 101,
@@ -1283,8 +1241,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 296,
-        "Category": "Equipment",
-        "SortIndex": null
+        "Category": "Equipment"
     },
     {
         "ID": 117,
@@ -1294,8 +1251,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 297,
-        "Category": "Equipment",
-        "SortIndex": null
+        "Category": "Equipment"
     },
     {
         "ID": 118,
@@ -1305,8 +1261,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1982,
-        "Category": "Equipment",
-        "SortIndex": null
+        "Category": "Equipment"
     },
     {
         "ID": 119,
@@ -1679,8 +1634,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 153,
@@ -1690,8 +1644,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2228,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 154,
@@ -1701,8 +1654,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2229,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 155,
@@ -1734,8 +1686,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 158,
@@ -1745,8 +1696,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 159,
@@ -2009,8 +1959,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 185,
@@ -2020,8 +1969,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 186,
@@ -2031,8 +1979,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 187,
@@ -2185,8 +2132,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 359,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 201,
@@ -2889,8 +2835,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 265,
@@ -3032,8 +2977,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1713,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 280,
@@ -3109,8 +3053,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1965,
-        "Category": "Blueprint",
-        "SortIndex": null
+        "Category": "Blueprint"
     },
     {
         "ID": 287,
@@ -3142,8 +3085,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1965,
-        "Category": "Blueprint",
-        "SortIndex": null
+        "Category": "Blueprint"
     },
     {
         "ID": 290,
@@ -3153,8 +3095,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1965,
-        "Category": "Blueprint",
-        "SortIndex": null
+        "Category": "Blueprint"
     },
     {
         "ID": 291,
@@ -3164,8 +3105,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1965,
-        "Category": "Blueprint",
-        "SortIndex": null
+        "Category": "Blueprint"
     },
     {
         "ID": 292,
@@ -3219,8 +3159,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1965,
-        "Category": "Blueprint",
-        "SortIndex": null
+        "Category": "Blueprint"
     },
     {
         "ID": 297,
@@ -3230,8 +3169,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1965,
-        "Category": "Blueprint",
-        "SortIndex": null
+        "Category": "Blueprint"
     },
     {
         "ID": 298,
@@ -3263,8 +3201,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2230,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 301,
@@ -3516,8 +3453,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 324,
@@ -3527,8 +3463,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 325,
@@ -3538,8 +3473,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 326,
@@ -3747,8 +3681,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2233,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 345,
@@ -4308,8 +4241,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 876,
-        "Category": "Equipment",
-        "SortIndex": null
+        "Category": "Equipment"
     },
     {
         "ID": 396,
@@ -4385,8 +4317,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2126,
-        "Category": "Building Block",
-        "SortIndex": null
+        "Category": "Building Block"
     },
     {
         "ID": 403,
@@ -4517,8 +4448,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 395,
-        "Category": "Material",
-        "SortIndex": null
+        "Category": "Material"
     },
     {
         "ID": 415,
@@ -4825,8 +4755,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 982,
-        "Category": "Building Block",
-        "SortIndex": null
+        "Category": "Building Block"
     },
     {
         "ID": 443,
@@ -4836,8 +4765,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 982,
-        "Category": "Building Block",
-        "SortIndex": null
+        "Category": "Building Block"
     },
     {
         "ID": 444,
@@ -4847,8 +4775,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 982,
-        "Category": "Building Block",
-        "SortIndex": null
+        "Category": "Building Block"
     },
     {
         "ID": 445,
@@ -4858,8 +4785,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 982,
-        "Category": "Building Block",
-        "SortIndex": null
+        "Category": "Building Block"
     },
     {
         "ID": 446,
@@ -4869,8 +4795,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 982,
-        "Category": "Building Block",
-        "SortIndex": null
+        "Category": "Building Block"
     },
     {
         "ID": 447,
@@ -4880,8 +4805,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1573,
-        "Category": "Debug",
-        "SortIndex": null
+        "Category": "Debug"
     },
     {
         "ID": 448,
@@ -4891,8 +4815,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1574,
-        "Category": "Debug",
-        "SortIndex": null
+        "Category": "Debug"
     },
     {
         "ID": 449,
@@ -4902,8 +4825,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1575,
-        "Category": "Debug",
-        "SortIndex": null
+        "Category": "Debug"
     },
     {
         "ID": 450,
@@ -4913,8 +4835,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 451,
@@ -4924,8 +4845,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 452,
@@ -4990,8 +4910,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2230,
-        "Category": "Farming Equipment",
-        "SortIndex": null
+        "Category": "Farming Equipment"
     },
     {
         "ID": 458,
@@ -5012,8 +4931,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2230,
-        "Category": "Farming Equipment",
-        "SortIndex": null
+        "Category": "Farming Equipment"
     },
     {
         "ID": 460,
@@ -5023,8 +4941,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2230,
-        "Category": "Farming Equipment",
-        "SortIndex": null
+        "Category": "Farming Equipment"
     },
     {
         "ID": 461,
@@ -5045,8 +4962,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2230,
-        "Category": "Farming Equipment",
-        "SortIndex": null
+        "Category": "Farming Equipment"
     },
     {
         "ID": 463,
@@ -5056,8 +4972,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2230,
-        "Category": "Farming Equipment",
-        "SortIndex": null
+        "Category": "Farming Equipment"
     },
     {
         "ID": 464,
@@ -5254,8 +5169,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 547,
-        "Category": "Material",
-        "SortIndex": null
+        "Category": "Material"
     },
     {
         "ID": 482,
@@ -5529,8 +5443,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2230,
-        "Category": "Farming Equipment",
-        "SortIndex": null
+        "Category": "Farming Equipment"
     },
     {
         "ID": 507,
@@ -5661,8 +5574,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2233,
-        "Category": "Farming Equipment",
-        "SortIndex": null
+        "Category": "Farming Equipment"
     },
     {
         "ID": 519,
@@ -5914,8 +5826,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1847,
-        "Category": "Blueprint",
-        "SortIndex": null
+        "Category": "Blueprint"
     },
     {
         "ID": 542,
@@ -5925,8 +5836,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1848,
-        "Category": "Blueprint",
-        "SortIndex": null
+        "Category": "Blueprint"
     },
     {
         "ID": 543,
@@ -5936,8 +5846,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1849,
-        "Category": "Blueprint",
-        "SortIndex": null
+        "Category": "Blueprint"
     },
     {
         "ID": 544,
@@ -5947,8 +5856,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1850,
-        "Category": "Blueprint",
-        "SortIndex": null
+        "Category": "Blueprint"
     },
     {
         "ID": 545,
@@ -6035,8 +5943,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 510,
-        "Category": "Material",
-        "SortIndex": null
+        "Category": "Material"
     },
     {
         "ID": 553,
@@ -6233,8 +6140,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1965,
-        "Category": "Blueprint",
-        "SortIndex": null
+        "Category": "Blueprint"
     },
     {
         "ID": 571,
@@ -6343,8 +6249,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1965,
-        "Category": "Blueprint",
-        "SortIndex": null
+        "Category": "Blueprint"
     },
     {
         "ID": 581,
@@ -6354,8 +6259,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1965,
-        "Category": "Blueprint",
-        "SortIndex": null
+        "Category": "Blueprint"
     },
     {
         "ID": 582,
@@ -6365,8 +6269,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1965,
-        "Category": "Blueprint",
-        "SortIndex": null
+        "Category": "Blueprint"
     },
     {
         "ID": 583,
@@ -6398,8 +6301,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2230,
-        "Category": "Farming Equipment",
-        "SortIndex": null
+        "Category": "Farming Equipment"
     },
     {
         "ID": 586,
@@ -6409,8 +6311,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2233,
-        "Category": "Farming Equipment",
-        "SortIndex": null
+        "Category": "Farming Equipment"
     },
     {
         "ID": 587,
@@ -6420,8 +6321,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2230,
-        "Category": "Farming Equipment",
-        "SortIndex": null
+        "Category": "Farming Equipment"
     },
     {
         "ID": 588,
@@ -6431,8 +6331,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2230,
-        "Category": "Farming Equipment",
-        "SortIndex": null
+        "Category": "Farming Equipment"
     },
     {
         "ID": 589,
@@ -6464,8 +6363,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1965,
-        "Category": "Blueprint",
-        "SortIndex": null
+        "Category": "Blueprint"
     },
     {
         "ID": 592,
@@ -6519,8 +6417,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1965,
-        "Category": "Blueprint",
-        "SortIndex": null
+        "Category": "Blueprint"
     },
     {
         "ID": 597,
@@ -6541,8 +6438,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1965,
-        "Category": "Blueprint",
-        "SortIndex": null
+        "Category": "Blueprint"
     },
     {
         "ID": 599,
@@ -6662,8 +6558,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2230,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 610,
@@ -6838,8 +6733,7 @@
         "Rarity": 1,
         "Connecting": false,
         "Image": 618,
-        "Category": "Unobtainable Item",
-        "SortIndex": null
+        "Category": "Unobtainable Item"
     },
     {
         "ID": 626,
@@ -6904,8 +6798,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1323,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 632,
@@ -7091,8 +6984,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1965,
-        "Category": "Blueprint",
-        "SortIndex": null
+        "Category": "Blueprint"
     },
     {
         "ID": 649,
@@ -7168,8 +7060,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1993,
-        "Category": "Equipment",
-        "SortIndex": null
+        "Category": "Equipment"
     },
     {
         "ID": 656,
@@ -7190,8 +7081,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2230,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 658,
@@ -7223,8 +7113,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1965,
-        "Category": "Blueprint",
-        "SortIndex": null
+        "Category": "Blueprint"
     },
     {
         "ID": 661,
@@ -7234,8 +7123,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 662,
@@ -7355,8 +7243,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "Unused Item",
-        "SortIndex": null
+        "Category": "Unused Item"
     },
     {
         "ID": 674,
@@ -7531,8 +7418,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1965,
-        "Category": "Blueprint",
-        "SortIndex": null
+        "Category": "Blueprint"
     },
     {
         "ID": 690,
@@ -7542,8 +7428,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1965,
-        "Category": "Blueprint",
-        "SortIndex": null
+        "Category": "Blueprint"
     },
     {
         "ID": 691,
@@ -7553,8 +7438,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1965,
-        "Category": "Blueprint",
-        "SortIndex": null
+        "Category": "Blueprint"
     },
     {
         "ID": 692,
@@ -7817,8 +7701,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2230,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 716,
@@ -7828,8 +7711,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 717,
@@ -7850,8 +7732,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 719,
@@ -8136,8 +8017,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2233,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 745,
@@ -8422,8 +8302,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 771,
@@ -8433,8 +8312,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 772,
@@ -8444,8 +8322,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 773,
@@ -8455,8 +8332,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 774,
@@ -8466,8 +8342,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 775,
@@ -8477,8 +8352,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 776,
@@ -8488,8 +8362,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 777,
@@ -8642,8 +8515,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 791,
@@ -8653,8 +8525,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 792,
@@ -8664,8 +8535,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 793,
@@ -8675,8 +8545,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 794,
@@ -8686,8 +8555,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 795,
@@ -8697,8 +8565,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 796,
@@ -8708,8 +8575,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 797,
@@ -8719,8 +8585,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 798,
@@ -8730,8 +8595,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 799,
@@ -8741,8 +8605,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 800,
@@ -8752,8 +8615,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 801,
@@ -9115,8 +8977,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1495,
-        "Category": "Wall Hanging",
-        "SortIndex": null
+        "Category": "Wall Hanging"
     },
     {
         "ID": 834,
@@ -9599,8 +9460,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2231,
-        "Category": "Farming Equipment",
-        "SortIndex": null
+        "Category": "Farming Equipment"
     },
     {
         "ID": 878,
@@ -9610,8 +9470,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2232,
-        "Category": "Farming Equipment",
-        "SortIndex": null
+        "Category": "Farming Equipment"
     },
     {
         "ID": 879,
@@ -9621,8 +9480,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2231,
-        "Category": "Farming Equipment",
-        "SortIndex": null
+        "Category": "Farming Equipment"
     },
     {
         "ID": 880,
@@ -9632,8 +9490,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2232,
-        "Category": "Farming Equipment",
-        "SortIndex": null
+        "Category": "Farming Equipment"
     },
     {
         "ID": 881,
@@ -9742,8 +9599,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2230,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 891,
@@ -9753,8 +9609,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2230,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 892,
@@ -9764,8 +9619,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2230,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 893,
@@ -9775,8 +9629,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2230,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 894,
@@ -9786,8 +9639,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2230,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 895,
@@ -9819,8 +9671,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2238,
-        "Category": "Equipment",
-        "SortIndex": null
+        "Category": "Equipment"
     },
     {
         "ID": 898,
@@ -9874,8 +9725,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 300,
-        "Category": "Equipment",
-        "SortIndex": null
+        "Category": "Equipment"
     },
     {
         "ID": 903,
@@ -9885,8 +9735,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 300,
-        "Category": "Equipment",
-        "SortIndex": null
+        "Category": "Equipment"
     },
     {
         "ID": 904,
@@ -9896,8 +9745,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 300,
-        "Category": "Equipment",
-        "SortIndex": null
+        "Category": "Equipment"
     },
     {
         "ID": 905,
@@ -9907,8 +9755,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 300,
-        "Category": "Equipment",
-        "SortIndex": null
+        "Category": "Equipment"
     },
     {
         "ID": 906,
@@ -9918,8 +9765,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 300,
-        "Category": "Equipment",
-        "SortIndex": null
+        "Category": "Equipment"
     },
     {
         "ID": 907,
@@ -9929,8 +9775,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 300,
-        "Category": "Equipment",
-        "SortIndex": null
+        "Category": "Equipment"
     },
     {
         "ID": 908,
@@ -9940,8 +9785,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 300,
-        "Category": "Equipment",
-        "SortIndex": null
+        "Category": "Equipment"
     },
     {
         "ID": 909,
@@ -9951,8 +9795,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 300,
-        "Category": "Equipment",
-        "SortIndex": null
+        "Category": "Equipment"
     },
     {
         "ID": 910,
@@ -10864,8 +10707,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 855,
-        "Category": "Equipment",
-        "SortIndex": null
+        "Category": "Equipment"
     },
     {
         "ID": 993,
@@ -10875,8 +10717,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 856,
-        "Category": "Equipment",
-        "SortIndex": null
+        "Category": "Equipment"
     },
     {
         "ID": 994,
@@ -10886,8 +10727,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 857,
-        "Category": "Equipment",
-        "SortIndex": null
+        "Category": "Equipment"
     },
     {
         "ID": 995,
@@ -10897,8 +10737,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 858,
-        "Category": "Equipment",
-        "SortIndex": null
+        "Category": "Equipment"
     },
     {
         "ID": 996,
@@ -11128,8 +10967,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 18,
-        "Category": "Building Block",
-        "SortIndex": null
+        "Category": "Building Block"
     },
     {
         "ID": 1018,
@@ -11337,8 +11175,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": -1,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 1038,
@@ -11524,8 +11361,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2035,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 1055,
@@ -11535,8 +11371,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2036,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 1056,
@@ -11568,8 +11403,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2037,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 1059,
@@ -11700,8 +11534,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2038,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 1071,
@@ -11711,8 +11544,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2039,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 1072,
@@ -11799,8 +11631,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2040,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 1080,
@@ -11843,8 +11674,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2041,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 1084,
@@ -12305,8 +12135,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2042,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 1126,
@@ -12492,8 +12321,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2043,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 1143,
@@ -12547,8 +12375,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1714,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 1148,
@@ -12558,8 +12385,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1715,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 1149,
@@ -12569,8 +12395,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1716,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 1150,
@@ -12613,8 +12438,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 1154,
@@ -12690,8 +12514,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2044,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 1161,
@@ -12778,8 +12601,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2045,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 1169,
@@ -12800,8 +12622,7 @@
         "Rarity": 2,
         "Connecting": false,
         "Image": 1995,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 1171,
@@ -12811,8 +12632,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1376,
-        "Category": "Machinery",
-        "SortIndex": null
+        "Category": "Machinery"
     },
     {
         "ID": 1172,
@@ -12844,8 +12664,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1994,
-        "Category": "Equipment",
-        "SortIndex": null
+        "Category": "Equipment"
     },
     {
         "ID": 1175,
@@ -12855,8 +12674,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 1176,
@@ -12998,8 +12816,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 1189,
@@ -13009,8 +12826,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 1190,
@@ -13944,8 +13760,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 154,
-        "Category": "Wall Hanging",
-        "SortIndex": null
+        "Category": "Wall Hanging"
     },
     {
         "ID": 1275,
@@ -14626,8 +14441,7 @@
         "Rarity": 1,
         "Connecting": false,
         "Image": 222,
-        "Category": "Furniture",
-        "SortIndex": null
+        "Category": "Furniture"
     },
     {
         "ID": 1337,
@@ -14769,8 +14583,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1272,
-        "Category": "Crafting Station",
-        "SortIndex": null
+        "Category": "Crafting Station"
     },
     {
         "ID": 1350,
@@ -14934,8 +14747,7 @@
         "Rarity": 3,
         "Connecting": false,
         "Image": 1996,
-        "Category": "Machinery",
-        "SortIndex": null
+        "Category": "Machinery"
     },
     {
         "ID": 1365,
@@ -15440,8 +15252,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2230,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 1411,
@@ -15451,8 +15262,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2233,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 1412,
@@ -15473,8 +15283,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 257,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 1414,
@@ -15484,8 +15293,7 @@
         "Rarity": 1,
         "Connecting": false,
         "Image": 812,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 1415,
@@ -15869,8 +15677,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1495,
-        "Category": "Wall Hanging",
-        "SortIndex": null
+        "Category": "Wall Hanging"
     },
     {
         "ID": 1450,
@@ -16243,8 +16050,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1404,
-        "Category": "Building Block",
-        "SortIndex": null
+        "Category": "Building Block"
     },
     {
         "ID": 1484,
@@ -16353,8 +16159,7 @@
         "Rarity": 1,
         "Connecting": false,
         "Image": 1419,
-        "Category": "Wall Hanging",
-        "SortIndex": null
+        "Category": "Wall Hanging"
     },
     {
         "ID": 1494,
@@ -16430,8 +16235,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1425,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 1501,
@@ -17057,8 +16861,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 870,
-        "Category": "Equipment",
-        "SortIndex": null
+        "Category": "Equipment"
     },
     {
         "ID": 1558,
@@ -17068,8 +16871,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 871,
-        "Category": "Equipment",
-        "SortIndex": null
+        "Category": "Equipment"
     },
     {
         "ID": 1559,
@@ -17079,8 +16881,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 872,
-        "Category": "Equipment",
-        "SortIndex": null
+        "Category": "Equipment"
     },
     {
         "ID": 1560,
@@ -17090,8 +16891,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 1561,
@@ -17101,8 +16901,7 @@
         "Rarity": 3,
         "Connecting": false,
         "Image": 0,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 1562,
@@ -17277,8 +17076,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1965,
-        "Category": "Blueprint",
-        "SortIndex": null
+        "Category": "Blueprint"
     },
     {
         "ID": 1578,
@@ -17288,8 +17086,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1965,
-        "Category": "Blueprint",
-        "SortIndex": null
+        "Category": "Blueprint"
     },
     {
         "ID": 1579,
@@ -17299,8 +17096,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1965,
-        "Category": "Blueprint",
-        "SortIndex": null
+        "Category": "Blueprint"
     },
     {
         "ID": 1580,
@@ -17310,8 +17106,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1965,
-        "Category": "Blueprint",
-        "SortIndex": null
+        "Category": "Blueprint"
     },
     {
         "ID": 1581,
@@ -17321,8 +17116,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1965,
-        "Category": "Blueprint",
-        "SortIndex": null
+        "Category": "Blueprint"
     },
     {
         "ID": 1582,
@@ -17332,8 +17126,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1965,
-        "Category": "Blueprint",
-        "SortIndex": null
+        "Category": "Blueprint"
     },
     {
         "ID": 1583,
@@ -17343,8 +17136,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1965,
-        "Category": "Blueprint",
-        "SortIndex": null
+        "Category": "Blueprint"
     },
     {
         "ID": 1584,
@@ -17354,8 +17146,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1965,
-        "Category": "Blueprint",
-        "SortIndex": null
+        "Category": "Blueprint"
     },
     {
         "ID": 1585,
@@ -17365,8 +17156,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1965,
-        "Category": "Blueprint",
-        "SortIndex": null
+        "Category": "Blueprint"
     },
     {
         "ID": 1586,
@@ -17376,8 +17166,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1965,
-        "Category": "Blueprint",
-        "SortIndex": null
+        "Category": "Blueprint"
     },
     {
         "ID": 1587,
@@ -17387,8 +17176,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1965,
-        "Category": "Blueprint",
-        "SortIndex": null
+        "Category": "Blueprint"
     },
     {
         "ID": 1588,
@@ -17398,8 +17186,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1965,
-        "Category": "Blueprint",
-        "SortIndex": null
+        "Category": "Blueprint"
     },
     {
         "ID": 1589,
@@ -17409,8 +17196,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1965,
-        "Category": "Blueprint",
-        "SortIndex": null
+        "Category": "Blueprint"
     },
     {
         "ID": 1590,
@@ -17420,8 +17206,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1965,
-        "Category": "Blueprint",
-        "SortIndex": null
+        "Category": "Blueprint"
     },
     {
         "ID": 1591,
@@ -17442,8 +17227,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1965,
-        "Category": "Blueprint",
-        "SortIndex": null
+        "Category": "Blueprint"
     },
     {
         "ID": 1593,
@@ -17453,8 +17237,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1965,
-        "Category": "Blueprint",
-        "SortIndex": null
+        "Category": "Blueprint"
     },
     {
         "ID": 1594,
@@ -17464,8 +17247,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1965,
-        "Category": "Blueprint",
-        "SortIndex": null
+        "Category": "Blueprint"
     },
     {
         "ID": 1595,
@@ -17475,8 +17257,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1965,
-        "Category": "Blueprint",
-        "SortIndex": null
+        "Category": "Blueprint"
     },
     {
         "ID": 1596,
@@ -17486,8 +17267,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1965,
-        "Category": "Blueprint",
-        "SortIndex": null
+        "Category": "Blueprint"
     },
     {
         "ID": 1597,
@@ -17508,8 +17288,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1965,
-        "Category": "Blueprint",
-        "SortIndex": null
+        "Category": "Blueprint"
     },
     {
         "ID": 1599,
@@ -17519,8 +17298,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1965,
-        "Category": "Blueprint",
-        "SortIndex": null
+        "Category": "Blueprint"
     },
     {
         "ID": 1600,
@@ -17530,8 +17308,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1965,
-        "Category": "Blueprint",
-        "SortIndex": null
+        "Category": "Blueprint"
     },
     {
         "ID": 1601,
@@ -17541,8 +17318,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1965,
-        "Category": "Blueprint",
-        "SortIndex": null
+        "Category": "Blueprint"
     },
     {
         "ID": 1602,
@@ -17552,8 +17328,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1710,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 1603,
@@ -17563,8 +17338,7 @@
         "Rarity": 1,
         "Connecting": false,
         "Image": 2050,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 1604,
@@ -17651,8 +17425,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1998,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 1612,
@@ -17662,8 +17435,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2230,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 1613,
@@ -17673,8 +17445,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2233,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 1614,
@@ -17783,8 +17554,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 442,
-        "Category": "Equipment",
-        "SortIndex": null
+        "Category": "Equipment"
     },
     {
         "ID": 1624,
@@ -17794,8 +17564,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 442,
-        "Category": "Equipment",
-        "SortIndex": null
+        "Category": "Equipment"
     },
     {
         "ID": 1625,
@@ -17805,8 +17574,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 442,
-        "Category": "Equipment",
-        "SortIndex": null
+        "Category": "Equipment"
     },
     {
         "ID": 1626,
@@ -17816,8 +17584,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 442,
-        "Category": "Equipment",
-        "SortIndex": null
+        "Category": "Equipment"
     },
     {
         "ID": 1627,
@@ -17827,8 +17594,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "Equipment",
-        "SortIndex": null
+        "Category": "Equipment"
     },
     {
         "ID": 1628,
@@ -17915,8 +17681,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 1636,
@@ -17926,8 +17691,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 1637,
@@ -17937,8 +17701,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 1638,
@@ -17948,8 +17711,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 1639,
@@ -17959,8 +17721,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 1640,
@@ -18135,8 +17896,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1965,
-        "Category": "Blueprint",
-        "SortIndex": null
+        "Category": "Blueprint"
     },
     {
         "ID": 1656,
@@ -18201,8 +17961,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 1662,
@@ -18245,8 +18004,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2230,
-        "Category": "Farming Equipment",
-        "SortIndex": null
+        "Category": "Farming Equipment"
     },
     {
         "ID": 1666,
@@ -18256,8 +18014,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2230,
-        "Category": "Farming Equipment",
-        "SortIndex": null
+        "Category": "Farming Equipment"
     },
     {
         "ID": 1667,
@@ -18278,8 +18035,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2230,
-        "Category": "Farming Equipment",
-        "SortIndex": null
+        "Category": "Farming Equipment"
     },
     {
         "ID": 1669,
@@ -18300,8 +18056,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2230,
-        "Category": "Farming Equipment",
-        "SortIndex": null
+        "Category": "Farming Equipment"
     },
     {
         "ID": 1671,
@@ -18311,8 +18066,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2230,
-        "Category": "Farming Equipment",
-        "SortIndex": null
+        "Category": "Farming Equipment"
     },
     {
         "ID": 1672,
@@ -18333,8 +18087,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2230,
-        "Category": "Farming Equipment",
-        "SortIndex": null
+        "Category": "Farming Equipment"
     },
     {
         "ID": 1674,
@@ -18355,8 +18108,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2230,
-        "Category": "Farming Equipment",
-        "SortIndex": null
+        "Category": "Farming Equipment"
     },
     {
         "ID": 1676,
@@ -18366,8 +18118,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2230,
-        "Category": "Farming Equipment",
-        "SortIndex": null
+        "Category": "Farming Equipment"
     },
     {
         "ID": 1677,
@@ -18377,8 +18128,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2230,
-        "Category": "Farming Equipment",
-        "SortIndex": null
+        "Category": "Farming Equipment"
     },
     {
         "ID": 1678,
@@ -18388,8 +18138,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2233,
-        "Category": "Farming Equipment",
-        "SortIndex": null
+        "Category": "Farming Equipment"
     },
     {
         "ID": 1679,
@@ -18399,8 +18148,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2233,
-        "Category": "Farming Equipment",
-        "SortIndex": null
+        "Category": "Farming Equipment"
     },
     {
         "ID": 1680,
@@ -18410,8 +18158,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2233,
-        "Category": "Farming Equipment",
-        "SortIndex": null
+        "Category": "Farming Equipment"
     },
     {
         "ID": 1681,
@@ -18421,8 +18168,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2233,
-        "Category": "Farming Equipment",
-        "SortIndex": null
+        "Category": "Farming Equipment"
     },
     {
         "ID": 1682,
@@ -18432,8 +18178,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2233,
-        "Category": "Farming Equipment",
-        "SortIndex": null
+        "Category": "Farming Equipment"
     },
     {
         "ID": 1683,
@@ -18443,8 +18188,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2233,
-        "Category": "Farming Equipment",
-        "SortIndex": null
+        "Category": "Farming Equipment"
     },
     {
         "ID": 1684,
@@ -18454,8 +18198,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2233,
-        "Category": "Farming Equipment",
-        "SortIndex": null
+        "Category": "Farming Equipment"
     },
     {
         "ID": 1685,
@@ -18465,8 +18208,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2233,
-        "Category": "Farming Equipment",
-        "SortIndex": null
+        "Category": "Farming Equipment"
     },
     {
         "ID": 1686,
@@ -18476,8 +18218,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2233,
-        "Category": "Farming Equipment",
-        "SortIndex": null
+        "Category": "Farming Equipment"
     },
     {
         "ID": 1687,
@@ -18487,8 +18228,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2233,
-        "Category": "Farming Equipment",
-        "SortIndex": null
+        "Category": "Farming Equipment"
     },
     {
         "ID": 1688,
@@ -18498,8 +18238,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2233,
-        "Category": "Farming Equipment",
-        "SortIndex": null
+        "Category": "Farming Equipment"
     },
     {
         "ID": 1689,
@@ -18509,8 +18248,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2233,
-        "Category": "Farming Equipment",
-        "SortIndex": null
+        "Category": "Farming Equipment"
     },
     {
         "ID": 1690,
@@ -18520,8 +18258,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2233,
-        "Category": "Farming Equipment",
-        "SortIndex": null
+        "Category": "Farming Equipment"
     },
     {
         "ID": 1691,
@@ -18531,8 +18268,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2233,
-        "Category": "Farming Equipment",
-        "SortIndex": null
+        "Category": "Farming Equipment"
     },
     {
         "ID": 1692,
@@ -18542,8 +18278,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2233,
-        "Category": "Farming Equipment",
-        "SortIndex": null
+        "Category": "Farming Equipment"
     },
     {
         "ID": 1693,
@@ -18553,8 +18288,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 1694,
@@ -18564,8 +18298,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2233,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 1695,
@@ -18575,8 +18308,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2233,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 1696,
@@ -18586,8 +18318,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2233,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 1697,
@@ -18597,8 +18328,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2233,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 1698,
@@ -18608,8 +18338,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2233,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 1699,
@@ -18619,8 +18348,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2233,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 1700,
@@ -18630,8 +18358,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2233,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 1701,
@@ -18641,8 +18368,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2233,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 1702,
@@ -18652,8 +18378,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2233,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 1703,
@@ -18674,8 +18399,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2230,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 1705,
@@ -18685,8 +18409,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2230,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 1706,
@@ -18696,8 +18419,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2230,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 1707,
@@ -18707,8 +18429,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2230,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 1708,
@@ -18718,8 +18439,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2230,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 1709,
@@ -18729,8 +18449,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2230,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 1710,
@@ -18740,8 +18459,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2233,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 1711,
@@ -18751,8 +18469,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2233,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 1712,
@@ -18762,8 +18479,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2233,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 1713,
@@ -18773,8 +18489,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2233,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 1714,
@@ -18784,8 +18499,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2233,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 1715,
@@ -18795,8 +18509,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2233,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 1716,
@@ -18872,8 +18585,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 1723,
@@ -19037,8 +18749,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 249,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 1738,
@@ -19048,8 +18759,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1927,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 1739,
@@ -19202,8 +18912,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1965,
-        "Category": "Blueprint",
-        "SortIndex": null
+        "Category": "Blueprint"
     },
     {
         "ID": 1753,
@@ -19235,8 +18944,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 1756,
@@ -19246,8 +18954,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 1757,
@@ -19257,8 +18964,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 1758,
@@ -19268,8 +18974,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 1759,
@@ -19345,8 +19050,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1965,
-        "Category": "Blueprint",
-        "SortIndex": null
+        "Category": "Blueprint"
     },
     {
         "ID": 1766,
@@ -19367,8 +19071,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 869,
-        "Category": "Equipment",
-        "SortIndex": null
+        "Category": "Equipment"
     },
     {
         "ID": 1768,
@@ -19378,8 +19081,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 875,
-        "Category": "Equipment",
-        "SortIndex": null
+        "Category": "Equipment"
     },
     {
         "ID": 1769,
@@ -19565,8 +19267,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 1786,
@@ -19631,8 +19332,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2228,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 1792,
@@ -19642,8 +19342,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2229,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 1793,
@@ -19708,8 +19407,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2237,
-        "Category": "Equipment",
-        "SortIndex": null
+        "Category": "Equipment"
     },
     {
         "ID": 1799,
@@ -19719,8 +19417,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1123,
-        "Category": "Crafting Station",
-        "SortIndex": null
+        "Category": "Crafting Station"
     },
     {
         "ID": 1800,
@@ -19763,8 +19460,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 860,
-        "Category": "Equipment",
-        "SortIndex": null
+        "Category": "Equipment"
     },
     {
         "ID": 1804,
@@ -19774,8 +19470,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 861,
-        "Category": "Equipment",
-        "SortIndex": null
+        "Category": "Equipment"
     },
     {
         "ID": 1805,
@@ -19796,8 +19491,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 863,
-        "Category": "Equipment",
-        "SortIndex": null
+        "Category": "Equipment"
     },
     {
         "ID": 1807,
@@ -19807,8 +19501,7 @@
         "Rarity": 1,
         "Connecting": false,
         "Image": 1571,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 1808,
@@ -19818,8 +19511,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 1809,
@@ -19829,8 +19521,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 1810,
@@ -19840,8 +19531,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 1811,
@@ -19851,8 +19541,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 1812,
@@ -19862,8 +19551,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 1813,
@@ -19873,8 +19561,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 1814,
@@ -20137,8 +19824,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2230,
-        "Category": "Farming Equipment",
-        "SortIndex": null
+        "Category": "Farming Equipment"
     },
     {
         "ID": 1838,
@@ -20368,8 +20054,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 864,
-        "Category": "Equipment",
-        "SortIndex": null
+        "Category": "Equipment"
     },
     {
         "ID": 1859,
@@ -20379,8 +20064,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 1860,
@@ -20390,8 +20074,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 1861,
@@ -20401,8 +20084,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 1862,
@@ -20698,8 +20380,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1269,
-        "Category": "Equipment",
-        "SortIndex": null
+        "Category": "Equipment"
     },
     {
         "ID": 1890,
@@ -20709,8 +20390,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 881,
-        "Category": "Equipment",
-        "SortIndex": null
+        "Category": "Equipment"
     },
     {
         "ID": 1891,
@@ -20797,8 +20477,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2230,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 1899,
@@ -20808,8 +20487,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2233,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 1900,
@@ -20830,8 +20508,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1848,
-        "Category": "Blueprint",
-        "SortIndex": null
+        "Category": "Blueprint"
     },
     {
         "ID": 1902,
@@ -20841,8 +20518,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1849,
-        "Category": "Blueprint",
-        "SortIndex": null
+        "Category": "Blueprint"
     },
     {
         "ID": 1903,
@@ -20852,8 +20528,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1850,
-        "Category": "Blueprint",
-        "SortIndex": null
+        "Category": "Blueprint"
     },
     {
         "ID": 1904,
@@ -20863,8 +20538,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1851,
-        "Category": "Blueprint",
-        "SortIndex": null
+        "Category": "Blueprint"
     },
     {
         "ID": 1905,
@@ -20995,8 +20669,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "Building Block",
-        "SortIndex": null
+        "Category": "Building Block"
     },
     {
         "ID": 1918,
@@ -21083,8 +20756,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2241,
-        "Category": "Equipment",
-        "SortIndex": null
+        "Category": "Equipment"
     },
     {
         "ID": 1926,
@@ -21105,8 +20777,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": -1,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 1928,
@@ -21116,8 +20787,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": -1,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 1929,
@@ -21127,8 +20797,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": -1,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 1930,
@@ -21138,8 +20807,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": -1,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 1931,
@@ -21149,8 +20817,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": -1,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 1932,
@@ -21182,8 +20849,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2230,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 1935,
@@ -21193,8 +20859,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2233,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 1936,
@@ -21215,8 +20880,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1816,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 1938,
@@ -21226,8 +20890,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1800,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 1939,
@@ -21237,8 +20900,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1801,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 1940,
@@ -21369,8 +21031,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 982,
-        "Category": "Building Block",
-        "SortIndex": null
+        "Category": "Building Block"
     },
     {
         "ID": 1954,
@@ -21380,8 +21041,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 982,
-        "Category": "Building Block",
-        "SortIndex": null
+        "Category": "Building Block"
     },
     {
         "ID": 1955,
@@ -21809,8 +21469,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 2001,
@@ -21820,8 +21479,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 2002,
@@ -21831,8 +21489,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 796,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 2003,
@@ -21842,8 +21499,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 847,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 2004,
@@ -21875,8 +21531,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 982,
-        "Category": "Building Block",
-        "SortIndex": null
+        "Category": "Building Block"
     },
     {
         "ID": 2008,
@@ -21886,8 +21541,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 2010,
@@ -21919,8 +21573,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 874,
-        "Category": "Equipment",
-        "SortIndex": null
+        "Category": "Equipment"
     },
     {
         "ID": 2015,
@@ -21963,8 +21616,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1210,
-        "Category": "Crafting Station",
-        "SortIndex": null
+        "Category": "Crafting Station"
     },
     {
         "ID": 2019,
@@ -22018,8 +21670,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 2025,
@@ -22040,8 +21691,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 881,
-        "Category": "Equipment",
-        "SortIndex": null
+        "Category": "Equipment"
     },
     {
         "ID": 2028,
@@ -22051,8 +21701,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 881,
-        "Category": "Equipment",
-        "SortIndex": null
+        "Category": "Equipment"
     },
     {
         "ID": 2029,
@@ -22073,8 +21722,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 2031,
@@ -22711,8 +22359,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1965,
-        "Category": "Blueprint",
-        "SortIndex": null
+        "Category": "Blueprint"
     },
     {
         "ID": 2091,
@@ -22722,8 +22369,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1965,
-        "Category": "Blueprint",
-        "SortIndex": null
+        "Category": "Blueprint"
     },
     {
         "ID": 2092,
@@ -22733,8 +22379,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1965,
-        "Category": "Blueprint",
-        "SortIndex": null
+        "Category": "Blueprint"
     },
     {
         "ID": 2093,
@@ -22755,8 +22400,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1965,
-        "Category": "Blueprint",
-        "SortIndex": null
+        "Category": "Blueprint"
     },
     {
         "ID": 2095,
@@ -22766,8 +22410,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1965,
-        "Category": "Blueprint",
-        "SortIndex": null
+        "Category": "Blueprint"
     },
     {
         "ID": 2096,
@@ -22777,8 +22420,7 @@
         "Rarity": 1,
         "Connecting": false,
         "Image": 1144,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 2097,
@@ -22788,8 +22430,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1869,
-        "Category": "Material",
-        "SortIndex": null
+        "Category": "Material"
     },
     {
         "ID": 2098,
@@ -22799,8 +22440,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1870,
-        "Category": "Material",
-        "SortIndex": null
+        "Category": "Material"
     },
     {
         "ID": 2099,
@@ -22898,8 +22538,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "Unused Item",
-        "SortIndex": null
+        "Category": "Unused Item"
     },
     {
         "ID": 2108,
@@ -23063,8 +22702,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1965,
-        "Category": "Blueprint",
-        "SortIndex": null
+        "Category": "Blueprint"
     },
     {
         "ID": 2124,
@@ -23074,8 +22712,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1965,
-        "Category": "Blueprint",
-        "SortIndex": null
+        "Category": "Blueprint"
     },
     {
         "ID": 2125,
@@ -23558,8 +23195,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 881,
-        "Category": "Equipment",
-        "SortIndex": null
+        "Category": "Equipment"
     },
     {
         "ID": 2169,
@@ -23580,8 +23216,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1965,
-        "Category": "Blueprint",
-        "SortIndex": null
+        "Category": "Blueprint"
     },
     {
         "ID": 2171,
@@ -23591,8 +23226,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1965,
-        "Category": "Blueprint",
-        "SortIndex": null
+        "Category": "Blueprint"
     },
     {
         "ID": 2172,
@@ -23624,8 +23258,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1965,
-        "Category": "Blueprint",
-        "SortIndex": null
+        "Category": "Blueprint"
     },
     {
         "ID": 2175,
@@ -24625,8 +24258,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1965,
-        "Category": "Blueprint",
-        "SortIndex": null
+        "Category": "Blueprint"
     },
     {
         "ID": 2267,
@@ -24746,8 +24378,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 2278,
@@ -24757,8 +24388,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 2279,
@@ -24768,8 +24398,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2233,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 2280,
@@ -24779,8 +24408,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 2281,
@@ -25131,8 +24759,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2094,
-        "Category": "Building Block",
-        "SortIndex": null
+        "Category": "Building Block"
     },
     {
         "ID": 2313,
@@ -25274,8 +24901,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 2326,
@@ -25307,8 +24933,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1965,
-        "Category": "Blueprint",
-        "SortIndex": null
+        "Category": "Blueprint"
     },
     {
         "ID": 2329,
@@ -26110,8 +25735,7 @@
         "Rarity": 3,
         "Connecting": false,
         "Image": 2252,
-        "Category": "Equipment",
-        "SortIndex": null
+        "Category": "Equipment"
     },
     {
         "ID": 2402,
@@ -26726,8 +26350,7 @@
         "Rarity": 1,
         "Connecting": false,
         "Image": 1570,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 2462,
@@ -26737,8 +26360,7 @@
         "Rarity": 1,
         "Connecting": false,
         "Image": 1571,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 2464,
@@ -26781,8 +26403,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1577,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 2469,
@@ -26792,8 +26413,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 149,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 2470,
@@ -26814,8 +26434,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1877,
-        "Category": "Material",
-        "SortIndex": null
+        "Category": "Material"
     },
     {
         "ID": 2472,
@@ -26836,8 +26455,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1879,
-        "Category": "Material",
-        "SortIndex": null
+        "Category": "Material"
     },
     {
         "ID": 2474,
@@ -26858,8 +26476,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1881,
-        "Category": "Material",
-        "SortIndex": null
+        "Category": "Material"
     },
     {
         "ID": 2476,
@@ -26902,8 +26519,7 @@
         "Rarity": 3,
         "Connecting": false,
         "Image": 1579,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 2483,
@@ -26913,8 +26529,7 @@
         "Rarity": 2,
         "Connecting": false,
         "Image": 1580,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 2484,
@@ -26924,8 +26539,7 @@
         "Rarity": 1,
         "Connecting": false,
         "Image": 1581,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 2487,
@@ -26935,8 +26549,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1584,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 2488,
@@ -26946,8 +26559,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1585,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 2489,
@@ -26957,8 +26569,7 @@
         "Rarity": 2,
         "Connecting": false,
         "Image": 1586,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 2490,
@@ -26968,8 +26579,7 @@
         "Rarity": 2,
         "Connecting": false,
         "Image": 1587,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 2491,
@@ -26979,8 +26589,7 @@
         "Rarity": 1,
         "Connecting": false,
         "Image": 1588,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 2493,
@@ -26990,8 +26599,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1590,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 2494,
@@ -27001,8 +26609,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 134,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 2495,
@@ -27034,8 +26641,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 295,
-        "Category": "Equipment",
-        "SortIndex": null
+        "Category": "Equipment"
     },
     {
         "ID": 2499,
@@ -27045,8 +26651,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 359,
-        "Category": "Consumable",
-        "SortIndex": null
+        "Category": "Consumable"
     },
     {
         "ID": 2500,
@@ -27056,8 +26661,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1972,
-        "Category": "Equipment",
-        "SortIndex": null
+        "Category": "Equipment"
     },
     {
         "ID": 2501,
@@ -27067,8 +26671,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 323,
-        "Category": "Equipment",
-        "SortIndex": null
+        "Category": "Equipment"
     },
     {
         "ID": 2502,
@@ -27078,8 +26681,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 2503,
@@ -27089,8 +26691,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 2504,
@@ -27100,8 +26701,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 2505,
@@ -27210,8 +26810,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1602,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 2515,
@@ -27474,8 +27073,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 118,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 2540,
@@ -27485,8 +27083,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1344,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 2541,
@@ -27496,8 +27093,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1375,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 2542,
@@ -27518,8 +27114,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1965,
-        "Category": "Blueprint",
-        "SortIndex": null
+        "Category": "Blueprint"
     },
     {
         "ID": 2544,
@@ -27540,8 +27135,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1965,
-        "Category": "Blueprint",
-        "SortIndex": null
+        "Category": "Blueprint"
     },
     {
         "ID": 2546,
@@ -27771,8 +27365,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 5,
-        "Category": "Building Block",
-        "SortIndex": null
+        "Category": "Building Block"
     },
     {
         "ID": 2571,
@@ -27782,8 +27375,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1965,
-        "Category": "Blueprint",
-        "SortIndex": null
+        "Category": "Blueprint"
     },
     {
         "ID": 2572,
@@ -27826,8 +27418,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2253,
-        "Category": "Equipment",
-        "SortIndex": null
+        "Category": "Equipment"
     },
     {
         "ID": 2576,
@@ -27870,8 +27461,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 73,
-        "Category": "Material",
-        "SortIndex": null
+        "Category": "Material"
     },
     {
         "ID": 2580,
@@ -27881,8 +27471,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 798,
-        "Category": "Material",
-        "SortIndex": null
+        "Category": "Material"
     },
     {
         "ID": 2581,
@@ -27892,8 +27481,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 16,
-        "Category": "Material",
-        "SortIndex": null
+        "Category": "Material"
     },
     {
         "ID": 2582,
@@ -27936,8 +27524,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 24,
-        "Category": "Material",
-        "SortIndex": null
+        "Category": "Material"
     },
     {
         "ID": 2586,
@@ -27947,8 +27534,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "Material",
-        "SortIndex": null
+        "Category": "Material"
     },
     {
         "ID": 2587,
@@ -27958,8 +27544,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2130,
-        "Category": "Material",
-        "SortIndex": null
+        "Category": "Material"
     },
     {
         "ID": 2588,
@@ -28079,8 +27664,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2131,
-        "Category": "Material",
-        "SortIndex": null
+        "Category": "Material"
     },
     {
         "ID": 2599,
@@ -28090,8 +27674,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2135,
-        "Category": "Material",
-        "SortIndex": null
+        "Category": "Material"
     },
     {
         "ID": 2600,
@@ -34151,8 +33734,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1965,
-        "Category": "Blueprint",
-        "SortIndex": null
+        "Category": "Blueprint"
     },
     {
         "ID": 3152,
@@ -34162,8 +33744,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "Decorative Item",
-        "SortIndex": null
+        "Category": "Decorative Item"
     },
     {
         "ID": 3153,
@@ -34173,8 +33754,7 @@
         "Rarity": 3,
         "Connecting": false,
         "Image": 1996,
-        "Category": "Machinery",
-        "SortIndex": null
+        "Category": "Machinery"
     },
     {
         "ID": 3154,
@@ -34184,8 +33764,7 @@
         "Rarity": 3,
         "Connecting": false,
         "Image": 1996,
-        "Category": "Machinery",
-        "SortIndex": null
+        "Category": "Machinery"
     },
     {
         "ID": 3155,
@@ -34217,8 +33796,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 206,
-        "Category": "Furniture",
-        "SortIndex": null
+        "Category": "Furniture"
     },
     {
         "ID": 3158,
@@ -34228,8 +33806,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 4,
-        "Category": "Building Block",
-        "SortIndex": null
+        "Category": "Building Block"
     },
     {
         "ID": 3159,
@@ -34239,8 +33816,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 995,
-        "Category": "Building Block",
-        "SortIndex": null
+        "Category": "Building Block"
     },
     {
         "ID": 3160,
@@ -34250,8 +33826,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 11,
-        "Category": "Building Block",
-        "SortIndex": null
+        "Category": "Building Block"
     },
     {
         "ID": 3161,
@@ -34261,8 +33836,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 2,
-        "Category": "Building Block",
-        "SortIndex": null
+        "Category": "Building Block"
     },
     {
         "ID": 3162,
@@ -34272,8 +33846,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 19,
-        "Category": "Building Block",
-        "SortIndex": null
+        "Category": "Building Block"
     },
     {
         "ID": 3163,
@@ -34283,8 +33856,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 3,
-        "Category": "Building Block",
-        "SortIndex": null
+        "Category": "Building Block"
     },
     {
         "ID": 3164,
@@ -34294,8 +33866,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1882,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 3165,
@@ -34305,8 +33876,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1882,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 3166,
@@ -34316,8 +33886,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1882,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 3167,
@@ -34327,8 +33896,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1882,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 3168,
@@ -34338,8 +33906,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1882,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 3169,
@@ -34360,8 +33927,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "0",
-        "SortIndex": null
+        "Category": "0"
     },
     {
         "ID": 3171,
@@ -35075,8 +34641,7 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1965,
-        "Category": "Blueprint",
-        "SortIndex": null
+        "Category": "Blueprint"
     },
     {
         "ID": 3236,

@@ -1,4 +1,4 @@
-using Godot;
+/*using Godot;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -109,11 +109,11 @@ namespace EyeOfRubiss.Testing.Nodes
 					{
 						foreach (CommonData.Resident resident in CommonData.Instance.ImportantResidents)
 						{
-							GD.Print($"Resident {resident.ID} @ 0x{resident.Address:X8} : {resident.GetDisplayName()}");
+							GD.Print($"Resident {resident.Index} @ 0x{resident.GetAddress():X8} : {resident.GetDisplayName()}");
 						}
 						foreach (CommonData.Resident resident in CommonData.Instance.Residents)
 						{
-							GD.Print($"Resident {resident.ID} @ 0x{resident.Address:X8} : {resident.GetDisplayName()}");
+							GD.Print($"Resident {resident.Index} @ 0x{resident.GetAddress():X8} : {resident.GetDisplayName()}");
 						}
 					}
 					break;
@@ -123,3 +123,4 @@ namespace EyeOfRubiss.Testing.Nodes
 		}
 	}
 }
+*/

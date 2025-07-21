@@ -1,0 +1,181 @@
+Acorn [1093] x 34
+Altar [633] x 1
+Anvil [265] x 2
+Arched Window [67] x 5
+Banner of Hargon [1037] x 9
+Barrel [53] x 24
+Big Bramble [1084] x 424
+Big Plumberry Tree [31] x 6
+Big Rock [123] x 302
+Big Withered Tree [578] x 165
+Blocky Branch [1090] x 39
+Blocky Buttress Root [1091] x 121
+Blocky Root [1092] x 22
+Bones [124] x 28
+Bonfire [80] x 15
+Bramble [1085] x 334
+Branch [221] x 104
+Brazier [85] x 10
+Broken Barrel [334] x 33
+Broken Barricade [50] x 9
+Broken Brickwork [48] x 7
+Broken Masonry [348] x 454
+Broken Stone Wall [1360] x 291
+Broken Vault Wall [1240] x 5
+Builder’s Bell [545] x 1
+Cabbage [2/4] [396] x 2
+Cabbage [3/4] [397] x 3
+Cabbage [4/4] [398] x 3
+Candelabrum [84] x 2
+Candle [634] x 7
+Cell Doors [982] x 1
+Ceramic Sconce [1109] x 13
+Chains [126] x 2
+Chimney [208] x 2
+Classical Column Capital [800] x 47
+Classical Column Midsection [349] x 145
+Classical Column Pedestal [350] x 54
+Clover Carving [111] x 14
+Column [118] x 7
+Column Crown [1100] x 4
+Connecting Window [1310] x 12
+Cookfire [81] x 1
+Corrupted Cabbage [2260] x 3
+Crate [52] x 4
+Dead Tree [42] x 58
+Deitree Planter [839] x 1
+Diagonal Fencing [58] x 106
+Dilapidated Crate [47] x 144
+Driftlumber [330] x 12
+Driftwood [331] x 38
+Dry Ivy [342] x 3804
+False Idol [1394] x 1
+Farming Tools [1123] x 3
+Fat Rat Signpost [2356] x 1
+Fiddleheads [1088] x 97
+Firewood [1122] x 1
+Flat Wooden Roofing [1099] x 40
+Gangrenous Greenery [466] x 131
+Gangrenous Greenery [Pole] [652] x 12
+Glowdrop [1089] x 92
+Goddess Statue [110] x 2
+Grass [1] x 356
+Gravestone [46] x 4
+Hargon’s Standard [1328] x 2
+Haystack [629] x 1
+Hexed Chest [215] x 1
+Horizontal Log [1095] x 219
+Infernal Ivy [168] x 196
+Inner Corner Tiling [178] x 6
+Ivy [7] x 619
+Ladder [60] x 101
+Large Lily Pad [11] x 50
+Lily Pad [365] x 486
+Log Wall Corner [1097] x 25
+Medicinal Shrub [3] x 1
+Metal Memorial [43] x 6
+Mossy Rock [585] x 150
+Mossy Stones [576] x 436
+Naviglobe [1169] x 1
+Naviglobe [1195] x 1
+Naviglobe [1196] x 1
+Naviglobe [1197] x 1
+Naviglobe [1198] x 1
+Null [989] x 1
+Old Book [162] x 3
+Old Note [163] x 3
+Outer Corner Tiling [177] x 20
+Pebble Pile [340] x 18
+Pebbles [1130] x 90
+Pitched Tiling [176] x 256
+Pitched Wooden Roofing [1158] x 517
+Planter [1117] x 1
+Planting Pole [383] x 10
+Plumberry Stump [30] x 40
+Plumberry Tree [29] x 53
+Pot [54] x 5
+Pumice [41] x 23
+Puzzlepost [DQB2] [1403] x 10
+Reeds [1083] x 378
+Roof Tiling [175] x 94
+Rope [638] x 6
+Ropy Horizontal Log [1438] x 16
+Ropy Vertical Log [1437] x 45
+Rose Leaves [1079] x 47
+Rustic Door [1101] x 1
+Sack of Wheat [1124] x 9
+Sandwort [15] x 1191
+Scallywinkle [328] x 49
+Sconce [1296] x 2
+Sconce [79] x 13
+Seaside Seaweed [332] x 73
+Seaslime Shell [336] x 1
+Seaweed Stack [572] x 40
+Septic Shrub [25] x 14
+Shadowgrass [26] x 150
+Ship [2517] x 1
+Ship Part A [967] x 2
+Ship Part B [968] x 2
+Ship Part C [969] x 2
+Ship Part D [970] x 1
+Ship Part E [971] x 1
+Ship Part F [972] x 1
+Ship Part G [973] x 2
+Ship Part H [974] x 1
+Ship Part I [975] x 1
+Ship Part J [976] x 1
+Ship Part K [977] x 3
+Ship Part L [978] x 1
+Ship Part M [980] x 2
+Ship Part N [981] x 1
+Ship Part O [1327] x 2
+Ship Part P [2173] x 2
+Ship Part Q [2174] x 5
+Ship Part R [2518] x 1
+Ship Part S [2519] x 2
+Ship Part T [2520] x 1
+Ship Part U [2521] x 1
+Signpost [57] x 9
+Simple Small Table [597] x 2
+Simple Supper Set [1435] x 1
+Sluice Gate [991] x 4
+Small Stones [122] x 664
+Spleenwort [575] x 4151
+Splinters [1131] x 22
+Spoilspore [598] x 7
+Spoilspore [599] x 8
+Stackable Drackolyte [1473] x 1
+Stackable Dracky [1471] x 1
+Stackable Drackyma [1472] x 1
+Stalwort [2] x 63
+Starfish [335] x 21
+Stone Capping [120] x 10
+Stone Steps [61] x 105
+Stone Window [68] x 4
+Storage Sack [984] x 1
+Straw Bedding [532] x 4
+Straw Door [206] x 3
+Straw Mattress [97] x 1
+Tainted Tree [22] x 97
+Torch [78] x 2
+Treasure Chest [113] x 17
+Twisted Tree Trunk [23] x 49
+Unholy Altar [1366] x 2
+Unidentified Dung [525] x 5
+Vertical Log [1096] x 207
+Well [77] x 1
+Wheat [4/4] [390] x 12
+Withered Sapling [577] x 23
+Withered Stump [579] x 41
+Withered Tree [583] x 126
+Wooden Fencing [594] x 362
+Wooden Gate [73] x 1
+Wooden Grating [1139] x 227
+Wooden Handrail [1001] x 70
+Wooden Inner Corner Roofing [1160] x 18
+Wooden Memorial [45] x 79
+Wooden Outer Corner Roofing [1159] x 77
+Wooden Roof Ridge [1162] x 1
+Wooden Steps [207] x 40
+Wooden Workbench Lv. 0 [1147] x 2
+Wooden Workbench Lv. 1 [148] x 1

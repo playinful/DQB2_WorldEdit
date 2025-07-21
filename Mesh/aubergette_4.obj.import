@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b7f62xnhthl78"
+path="res://.godot/imported/aubergette_4.obj-46044006e0a9f80608cfb65758487e9e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/aubergette_4.obj-46044006e0a9f80608cfb65758487e9e.mesh"]
+
+source_file="res://Mesh/aubergette_4.obj"
+dest_files=["res://.godot/imported/aubergette_4.obj-46044006e0a9f80608cfb65758487e9e.mesh", "res://.godot/imported/aubergette_4.obj-46044006e0a9f80608cfb65758487e9e.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

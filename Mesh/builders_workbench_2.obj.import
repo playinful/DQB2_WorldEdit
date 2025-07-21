@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://clch1a0wg8uc2"
+path="res://.godot/imported/builders_workbench_2.obj-ba7c53184f73b6cab0957967da5ba45c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/builders_workbench_2.obj-ba7c53184f73b6cab0957967da5ba45c.mesh"]
+
+source_file="res://Mesh/builders_workbench_2.obj"
+dest_files=["res://.godot/imported/builders_workbench_2.obj-ba7c53184f73b6cab0957967da5ba45c.mesh", "res://.godot/imported/builders_workbench_2.obj-ba7c53184f73b6cab0957967da5ba45c.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

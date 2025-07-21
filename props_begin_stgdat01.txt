@@ -1,0 +1,109 @@
+Barrel [53] x 1
+Biblio-Pile [1375] x 8
+Big Palm Tree [555] x 3
+Big Rock [123] x 65
+Book [Blue] [1671] x 1
+Book [Green] [1669] x 1
+Book [Red] [1668] x 1
+Bookcase [101] x 11
+Brazier [557] x 35
+Broken Barrel [334] x 24
+Broken Brickwork [48] x 13
+Broken Citadel Wall [1359] x 205
+Broken Masonry [348] x 36
+Broken Stone Wall [1360] x 22
+Broken Vault Wall [1240] x 39
+Broken Vault Wall [2432] x 5
+Builder’s Workbench Lv. 0 [1495] x 3
+Cactus Crown [17] x 44
+Cactus Trunk [18] x 111
+Candle [634] x 4
+Cedar Stump [39] x 1
+Cell Wall [1140] x 9
+Cerulean Steppe Tablet [2254] x 1
+Chest Of Drawers [102] x 3
+Citadel Bracket [2210] x 127
+Citadel Capping [2248] x 8
+Citadel Column Capital [2228] x 158
+Citadel Column Midsection [2227] x 481
+Citadel Column Pedestal [2226] x 158
+Citadel Column Plinth [2230] x 4
+Citadel Creature Carving [1398] x 72
+Citadel Cross Carving [1402] x 3
+Citadel Handrail [2246] x 18
+Citadel Merlon [2239] x 24
+Citadel Steps [2364] x 88
+Citadel Wall Rubble [2363] x 17
+Classical Column Capital [800] x 22
+Classical Column Midsection [349] x 13
+Classical Column Pedestal [350] x 21
+Dead Tree [42] x 59
+Dilapidated Crate [47] x 12
+Dressing Table [89] x 1
+Driftlumber [330] x 8
+Driftwood [331] x 29
+Dry Ivy [342] x 2718
+False Arid Earth [3231] x 3
+False Umber [3293] x 5
+Fiendish Face [1399] x 26
+First Aid Kit [1011] x 1
+Flat Wooden Roofing [1099] x 9
+Grass [1] x 23
+Green Gardens Tablet [2252] x 1
+Light Box [Green] [1453] x 32
+Light Box [Purple] [1450] x 18
+Light Box [Red] [1452] x 327
+Magnetic Block [2775] x 16
+Medicinal Mortar [1120] x 1
+Mud-Brick Wall Rubble [660] x 15
+Noticeboard [1986] x 1
+Old Book [162] x 1
+Old Note [163] x 5
+Palm Tree [34] x 1
+Pampas Grass [344] x 233
+Pebbles [1130] x 5
+Peculiar Pillar [1400] x 2
+Pitched Wooden Roofing [1158] x 27
+Pot [54] x 2
+Prickly Peach Cactus [16] x 3
+Rock Pile [1278] x 1
+Rocky Column [584] x 39
+Rope [638] x 2
+Sandwort [15] x 519
+Scallywinkle [328] x 177
+Scarlet Sands Tablet [2253] x 1
+Sconce [1296] x 3
+Sconce [79] x 2
+Seaside Seaweed [332] x 105
+Seaweed [1842] x 297
+Seaweed Stack [572] x 30
+Sideways-Pointing Puller [1006] x 2
+Sideways-Pointing Pusher [1021] x 2
+Sign of the Builder [1410] x 1
+Simple Bed [98] x 1
+Simple Small Table [597] x 3
+Simple Table [601] x 2
+Small Stones [122] x 747
+Spider Web [623] x 7
+Spleenwort [575] x 71
+Splinters [1131] x 51
+Stalwort [2] x 2
+Starfish [335] x 226
+Stone Steps [61] x 86
+Straw Bedding [532] x 1
+Tainted Glass Arch [1367] x 76
+Tainted Glass Midsection [1368] x 144
+Tainted Glass Sill [1369] x 76
+Tainted Tree [22] x 25
+Teleportal [216] x 1
+Toppled Citadel Column [2225] x 4
+Treasure Chest [113] x 3
+Twisted Tree Trunk [23] x 10
+Vault Bracket [2434] x 8
+Vault Bracket [625] x 70
+Wooden Door [69] x 1
+Wooden Handrail [1001] x 18
+Wooden Memorial [45] x 1
+Wooden Steps [207] x 1
+Wooden Stool [94] x 2
+Worn-Out Workbench [526] x 1

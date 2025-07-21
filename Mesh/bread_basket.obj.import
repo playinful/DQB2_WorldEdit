@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dpru2d46xtes6"
+path="res://.godot/imported/bread_basket.obj-2862390c72336aabeba3939a6ff48b1e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/bread_basket.obj-2862390c72336aabeba3939a6ff48b1e.mesh"]
+
+source_file="res://Mesh/bread_basket.obj"
+dest_files=["res://.godot/imported/bread_basket.obj-2862390c72336aabeba3939a6ff48b1e.mesh", "res://.godot/imported/bread_basket.obj-2862390c72336aabeba3939a6ff48b1e.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

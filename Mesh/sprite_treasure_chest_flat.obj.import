@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://xb1uj7pasquf"
+path="res://.godot/imported/sprite_treasure_chest_flat.obj-b3eb8cb8e5a21a49fa50824de798712d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/sprite_treasure_chest_flat.obj-b3eb8cb8e5a21a49fa50824de798712d.mesh"]
+
+source_file="res://Mesh/sprite_treasure_chest_flat.obj"
+dest_files=["res://.godot/imported/sprite_treasure_chest_flat.obj-b3eb8cb8e5a21a49fa50824de798712d.mesh", "res://.godot/imported/sprite_treasure_chest_flat.obj-b3eb8cb8e5a21a49fa50824de798712d.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

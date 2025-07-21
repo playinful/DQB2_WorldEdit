@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dbau1kvh2hhwp"
+path="res://.godot/imported/reinforced_iron_corner.obj-056ac051a3423233c33c46436a9636aa.mesh"
+
+[deps]
+
+files=["res://.godot/imported/reinforced_iron_corner.obj-056ac051a3423233c33c46436a9636aa.mesh"]
+
+source_file="res://Mesh/reinforced_iron_corner.obj"
+dest_files=["res://.godot/imported/reinforced_iron_corner.obj-056ac051a3423233c33c46436a9636aa.mesh", "res://.godot/imported/reinforced_iron_corner.obj-056ac051a3423233c33c46436a9636aa.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

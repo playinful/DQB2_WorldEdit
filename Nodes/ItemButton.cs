@@ -1,3 +1,4 @@
+using EyeOfRubiss.Info;
 using Godot;
 using System;
 using System.IO;
@@ -12,14 +13,13 @@ namespace EyeOfRubiss.Nodes
 		private TextureRect Connecting_TextureRect { get; set; }
 		private TextureRect Rarity_TextureRect { get; set; }
 		private ColorRect Colour_ColorRect { get; set; }
-	
+
+		// public ushort ID { get; set; }
+
 		// Called when the node enters the scene tree for the first time.
 		public override void _Ready()
 		{
 			_OnReadyVariables();
-	
-			SetItem(50, 1, false, 5);
-			SetItemCount(12);
 		}
 		private void _OnReadyVariables()
 		{
@@ -29,13 +29,24 @@ namespace EyeOfRubiss.Nodes
 			Connecting_TextureRect = GetNode<TextureRect>("ConnectingIcon");
 			Colour_ColorRect = GetNode<ColorRect>("ColorRect");
 		}
-	
-		public void SetItem(int iconIndex, int rarity, bool connecting, int colour)
+
+		public void SetItem(ItemInfo itemInfo)
+		{
+			SetItem(itemInfo.Name, itemInfo.ImageID, itemInfo.Rarity, itemInfo.Connecting, 0);
+			//SetItem(Util.ToRichText(itemInfo.Name), itemInfo.ImageID, itemInfo.Rarity, itemInfo.Connecting, 0);
+		}
+		public void SetBlock(BlockInfo blockInfo)
+		{
+			SetItem(blockInfo.Name, blockInfo.ImageID, 0, false, 0);
+			//SetItem(Util.ToRichText(blockInfo.Name), blockInfo.ImageID, 0, false, 0);
+		}
+
+		public void SetItem(string name, int iconIndex, int rarity, bool connecting, int colour)
 		{
 			Item_TextureRect.Texture = Util.GetItemIcon(iconIndex);
-	
+
 			Connecting_TextureRect.Visible = connecting;
-	
+
 			switch (rarity)
 			{
 				case 1:
@@ -54,7 +65,7 @@ namespace EyeOfRubiss.Nodes
 					Rarity_TextureRect.Hide();
 					break;
 			}
-	
+
 			switch (colour)
 			{
 				case 1:
@@ -93,6 +104,8 @@ namespace EyeOfRubiss.Nodes
 					Colour_ColorRect.Hide();
 					break;
 			}
+
+			TooltipText = name;
 		}
 		public void SetItemCount(int count)
 		{

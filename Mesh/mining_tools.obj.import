@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dw3dgoh6yxha"
+path="res://.godot/imported/mining_tools.obj-4373405b83b811275a982cd95be4d433.mesh"
+
+[deps]
+
+files=["res://.godot/imported/mining_tools.obj-4373405b83b811275a982cd95be4d433.mesh"]
+
+source_file="res://Mesh/mining_tools.obj"
+dest_files=["res://.godot/imported/mining_tools.obj-4373405b83b811275a982cd95be4d433.mesh", "res://.godot/imported/mining_tools.obj-4373405b83b811275a982cd95be4d433.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

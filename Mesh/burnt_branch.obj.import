@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://4fn73m6wum3t"
+path="res://.godot/imported/burnt_branch.obj-21c9b69bbd7cc2a99e901044387d19bd.mesh"
+
+[deps]
+
+files=["res://.godot/imported/burnt_branch.obj-21c9b69bbd7cc2a99e901044387d19bd.mesh"]
+
+source_file="res://Mesh/burnt_branch.obj"
+dest_files=["res://.godot/imported/burnt_branch.obj-21c9b69bbd7cc2a99e901044387d19bd.mesh", "res://.godot/imported/burnt_branch.obj-21c9b69bbd7cc2a99e901044387d19bd.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

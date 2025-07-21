@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://7i8k711dsyi3"
+path="res://.godot/imported/medal_participation.obj-a906e4c57fd2bf11eaee617e3d76eab0.mesh"
+
+[deps]
+
+files=["res://.godot/imported/medal_participation.obj-a906e4c57fd2bf11eaee617e3d76eab0.mesh"]
+
+source_file="res://Mesh/medal_participation.obj"
+dest_files=["res://.godot/imported/medal_participation.obj-a906e4c57fd2bf11eaee617e3d76eab0.mesh", "res://.godot/imported/medal_participation.obj-a906e4c57fd2bf11eaee617e3d76eab0.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

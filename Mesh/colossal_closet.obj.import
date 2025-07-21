@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://copipf8o3as52"
+path="res://.godot/imported/colossal_closet.obj-5312cb0a2429eb6e95b02ea173112e1f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/colossal_closet.obj-5312cb0a2429eb6e95b02ea173112e1f.mesh"]
+
+source_file="res://Mesh/colossal_closet.obj"
+dest_files=["res://.godot/imported/colossal_closet.obj-5312cb0a2429eb6e95b02ea173112e1f.mesh", "res://.godot/imported/colossal_closet.obj-5312cb0a2429eb6e95b02ea173112e1f.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

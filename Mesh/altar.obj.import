@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cn6lxs60injmy"
+path="res://.godot/imported/altar.obj-1476912308099c2b7649a46c0b2ce381.mesh"
+
+[deps]
+
+files=["res://.godot/imported/altar.obj-1476912308099c2b7649a46c0b2ce381.mesh"]
+
+source_file="res://Mesh/altar.obj"
+dest_files=["res://.godot/imported/altar.obj-1476912308099c2b7649a46c0b2ce381.mesh", "res://.godot/imported/altar.obj-1476912308099c2b7649a46c0b2ce381.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

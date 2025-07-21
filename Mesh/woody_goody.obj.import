@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://5h26capqp673"
+path="res://.godot/imported/woody_goody.obj-14236a2d9e9628eed6b2bb209a5af7ac.mesh"
+
+[deps]
+
+files=["res://.godot/imported/woody_goody.obj-14236a2d9e9628eed6b2bb209a5af7ac.mesh"]
+
+source_file="res://Mesh/woody_goody.obj"
+dest_files=["res://.godot/imported/woody_goody.obj-14236a2d9e9628eed6b2bb209a5af7ac.mesh", "res://.godot/imported/woody_goody.obj-14236a2d9e9628eed6b2bb209a5af7ac.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

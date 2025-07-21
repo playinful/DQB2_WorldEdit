@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cdn7voqmd8vkc"
+path="res://.godot/imported/blocky_buttress_root.obj-ee9b4f9ead6e9e5cd98920d548858e56.mesh"
+
+[deps]
+
+files=["res://.godot/imported/blocky_buttress_root.obj-ee9b4f9ead6e9e5cd98920d548858e56.mesh"]
+
+source_file="res://Mesh/blocky_buttress_root.obj"
+dest_files=["res://.godot/imported/blocky_buttress_root.obj-ee9b4f9ead6e9e5cd98920d548858e56.mesh", "res://.godot/imported/blocky_buttress_root.obj-ee9b4f9ead6e9e5cd98920d548858e56.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

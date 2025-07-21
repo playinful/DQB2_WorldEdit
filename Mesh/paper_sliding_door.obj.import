@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://suho5ro42cvl"
+path="res://.godot/imported/paper_sliding_door.obj-8aacc7aa9785d42621f764fc03e830ba.mesh"
+
+[deps]
+
+files=["res://.godot/imported/paper_sliding_door.obj-8aacc7aa9785d42621f764fc03e830ba.mesh"]
+
+source_file="res://Mesh/paper_sliding_door.obj"
+dest_files=["res://.godot/imported/paper_sliding_door.obj-8aacc7aa9785d42621f764fc03e830ba.mesh", "res://.godot/imported/paper_sliding_door.obj-8aacc7aa9785d42621f764fc03e830ba.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

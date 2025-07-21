@@ -1,0 +1,223 @@
+¿Cerulean Steppe Tablet Lv2 [2567] x 1
+¿Green Garden Tablet Lv2 [2565] x 1
+¿Scarlet Sands Tablet Lv2 [2569] x 1
+Anvil [265] x 1
+Bar Counter [227] x 1
+Barrel [53] x 32
+Basic Bathtub [804] x 2
+Basic Bridge [836] x 38
+Bathing Stool [1382] x 3
+Bent Pipe Bottom Left [2217] x 24
+Bent Pipe Top Left [2220] x 6
+Bent Pipe Top Right [2219] x 2
+Biblio-Pile [1375] x 8
+Big Bolt [1329] x 81
+Big Palm Tree [555] x 8
+Big Plumberry Tree [31] x 1
+Big Rock [123] x 20
+Blooming Poxglove [2157] x 2
+Bones [124] x 27
+Book [Blue] [1671] x 1
+Book [Green] [1669] x 1
+Book [Red] [1668] x 1
+Bookcase [101] x 11
+Bottles [87] x 1
+Brazier [85] x 4
+Brick Barbecue [153] x 1
+Broken Barrel [334] x 31
+Broken Citadel Wall [1359] x 205
+Broken Masonry [2433] x 3
+Broken Masonry [348] x 1
+Broken Stone Wall [1360] x 20
+Broken Vault Wall [1240] x 2
+Bubbly Bath [2995] x 1
+Budding Poxglove [2158] x 4
+Buggy Buggy [164] x 1
+Builder’s Workbench Lv. MAX [2543] x 8
+Cactus Crown [17] x 36
+Cactus Trunk [18] x 98
+Candle [634] x 7
+Cannon [169] x 18
+Cannonball [1138] x 5
+Carafe Collection [1250] x 1
+Cask [229] x 8
+Cell Door [71] x 1
+Cell Wall [1140] x 118
+Ceramic Sconce [1109] x 3
+Chains [126] x 2
+Chest Of Drawers [102] x 3
+Chopping Board [2927] x 1
+Citadel Bracket [2210] x 127
+Citadel Capping [2248] x 8
+Citadel Column Capital [2228] x 158
+Citadel Column Midsection [2227] x 481
+Citadel Column Pedestal [2226] x 158
+Citadel Column Plinth [2230] x 4
+Citadel Creature Carving [1398] x 74
+Citadel Cross Carving [1402] x 4
+Citadel Handrail [2246] x 36
+Citadel Merlon [2239] x 24
+Citadel Steps [2364] x 88
+Citadel Wall Rubble [2363] x 17
+Classical Column Capital [800] x 43
+Classical Column Midsection [349] x 73
+Classical Column Pedestal [350] x 48
+Cocktail Shaker [826] x 1
+Coffee Beans [6/6] [425] x 1
+Cooking Pot [3012] x 1
+Coralily [4] x 21
+Crate [52] x 2
+Cupboard [1271] x 3
+Dead Tree [42] x 4
+Dilapidated Crate [47] x 80
+Doors of Doom [2371] x 3
+Drapery Door [1102] x 2
+Drawer [1272] x 32
+Dressing Table [89] x 3
+Driftlumber [330] x 5
+Driftwood [331] x 6
+Dry Ivy [342] x 2035
+False Idol [1394] x 2
+Fancy Signpost [1267] x 1
+Farming Tools [1123] x 1
+Fiendish Face [1399] x 29
+Firewood [1122] x 1
+First Aid Kit [1011] x 1
+Flat Wooden Roofing [1099] x 9
+Fungusbord [1253] x 1
+Gladiolus [608] x 3
+Golden Brazier [998] x 1
+Grass [1] x 110
+Hargon’s Standard [1328] x 1
+Helm [1014] x 1
+Horizontal Pipe [2215] x 42
+Individual Air Vent [2214] x 20
+Joint Pipe Horizontal Top [2221] x 2
+Ladder [60] x 28
+Leather Sack [55] x 12
+Left Air Vent [2211] x 2
+Light Box [1353] x 35
+Light Box [Green] [1453] x 32
+Light Box [Purple] [1450] x 18
+Light Box [Red] [1452] x 327
+Liquid Metal Soup [2502] x 1
+Magnetic Block [2775] x 16
+Meaty Marshy Mountain [2373] x 1
+Medicinal Mortar [1120] x 1
+Medicinal Shrub [3] x 6
+Middle Air Vent [2212] x 2
+Milkblossom [6] x 20
+Mud-Brick Wall Rubble [660] x 2
+Nameplate [928] x 2
+Nameplate [Green] [1701] x 1
+Netting [2896] x 2
+Old Book [162] x 1
+Old Note [163] x 4
+Ornamental Swords [105] x 1
+Palm Tree [34] x 3
+Pampas Grass [344] x 2
+Pebbles [1130] x 5
+Peculiar Pillar [1400] x 2
+Pitched Wooden Roofing [1158] x 27
+Planting Pole [383] x 7
+Player Lyre [237] x 1
+Plumberry Seedling [27] x 1
+Plumberry Stump [30] x 3
+Porched Window [66] x 3
+Porthole [1142] x 9
+Postbox [561] x 1
+Pot [54] x 5
+Prickly Peach Cactus [16] x 30
+Ramp [2156] x 15
+Reinforced Iron Corner [2426] x 51
+Residents’ Register [582] x 8
+Right Air Vent [2213] x 2
+Rocky Column [584] x 40
+Rope [638] x 14
+Rustic Bed [Green] [1589] x 1
+Sandwort [15] x 252
+Scallywinkle [328] x 155
+Scarecrow [621] x 67
+Sconce [1296] x 7
+Sconce [79] x 25
+Seaside Seaweed [332] x 43
+Seaslime Shell [336] x 1
+Seaweed [1842] x 297
+Seaweed Stack [572] x 13
+Ship [2517] x 1
+Ship Part A [967] x 2
+Ship Part B [968] x 2
+Ship Part C [969] x 2
+Ship Part D [970] x 1
+Ship Part E [971] x 1
+Ship Part F [972] x 1
+Ship Part G [973] x 2
+Ship Part H [974] x 1
+Ship Part I [975] x 1
+Ship Part J [976] x 1
+Ship Part K [977] x 3
+Ship Part L [978] x 1
+Ship Part M [980] x 2
+Ship Part N [981] x 1
+Ship Part O [1327] x 2
+Ship Part P [2173] x 2
+Ship Part Q [2174] x 5
+Ship Part R [2518] x 1
+Ship Part S [2519] x 2
+Ship Part T [2520] x 1
+Ship Part U [2521] x 1
+Sideways-Pointing Puller [1006] x 2
+Sideways-Pointing Pusher [1021] x 2
+Sign of the Builder [1410] x 1
+Signpost [57] x 8
+Simple Bed [98] x 1
+Simple Door [823] x 5
+Simple Small Table [597] x 4
+Simple Stool [596] x 1
+Simple Table [601] x 2
+Small Stones [122] x 631
+Spaceship Capital [2425] x 103
+Spaceship Corner Capital [2422] x 20
+Spaceship Corner Foundation [2424] x 24
+Spaceship Corner Midsection [2423] x 110
+Spaceship Foundation [2427] x 143
+Spider Web [623] x 110
+Spleenwort [575] x 2
+Splinters [1131] x 123
+Stalwort [2] x 39
+Starfish [335] x 225
+Stickler’s Sifter [1294] x 1
+Stone Handrail [1000] x 8
+Stone Steps [61] x 529
+Storage Bay [2224] x 2
+Storage Sack [984] x 1
+Straw Bedding [532] x 7
+Straw Mattress [97] x 7
+Swabbing Tools [1141] x 1
+Swing [1121] x 1
+Tainted Glass Arch [1367] x 83
+Tainted Glass Midsection [1368] x 145
+Tainted Glass Sill [1369] x 83
+Tainted Tree [22] x 3
+Terraforma Tiles [1153] x 29
+Toppled Citadel Column [2225] x 4
+Towel Rail [100] x 5
+Tree Stump [145] x 1
+Unholy Altar [1366] x 1
+Unknown [3231] x 3
+Unknown [3293] x 5
+Vault Bracket [2434] x 742
+Vault Bracket [625] x 82
+Vertical Pipe [2216] x 9
+Viewing Dome [2047] x 2
+Ward of Erdrick [2901] x 1
+Washtub [56] x 4
+Water Jug [240] x 1
+Watered Planted Earth [541] x 18
+Wooden Door [69] x 6
+Wooden Grating [1139] x 152
+Wooden Handrail [1001] x 155
+Wooden Memorial [45] x 1
+Wooden Steps [207] x 51
+Wooden Stool [94] x 6
+Wooden Toilet [1262] x 3

@@ -1,0 +1,5024 @@
+[gd_scene load_steps=2 format=3 uid="uid://eicafd4q58bf"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_k2i3t"]
+
+[node name="GridMapTest2" type="Node3D"]
+visible = false
+
+[node name="DUMMY" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Grass")
+
+[node name="Grass" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Stalwort" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Medicinal Shrub" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Coralily" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Daffodaisy" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Milkblossom" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Ivy" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Tingleweed" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Cotton Plant" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Marshroom" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Large Lily Pad" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Fibrous Fern" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Bigonia" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Pongsettia" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Sandwort" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Prickly Peach Cactus" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Cactus Crown" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Cactus Trunk" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Witchgrass" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Bogwort" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Frogstool" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Tainted Tree" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Twisted Tree Trunk" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Freezia" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Septic Shrub" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Shadowgrass" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Plumberry Seedling" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Plumberry Sapling" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Plumberry Tree" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Plumberry Stump" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Big Plumberry Tree" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Palm Seedling" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Palm Sapling" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Palm Tree" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Big Palm Tree" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Cedar Seedling")
+
+[node name="Palm Stump" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Cedar Seedling" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Cedar Sapling" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Cedar Tree" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Big Cedar Tree" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Cedar Tree")
+
+[node name="Cedar Stump" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Snowy Cedar" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Big Snowy Cedar" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Big Cedar Tree")
+
+[node name="Pumice" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Dead Tree" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Metal Memorial" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Huge Horn" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Wooden Memorial" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Gravestone" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Dilapidated Crate" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Broken Brickwork" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Tattered Banner of Erdrick (DQB1)" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Broken Barricade" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Tattered Tent" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Crate" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Barrel" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Pot" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Leather Sack" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Washtub" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Signpost" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Diagonal Fencing" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Diagonal Fencing [White]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Diagonal Fencing")
+
+[node name="Diagonal Fencing [Black]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Diagonal Fencing [White]")
+
+[node name="Diagonal Fencing [Purple]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Diagonal Fencing [Black]")
+
+[node name="Diagonal Fencing [Pink]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Diagonal Fencing [Purple]")
+
+[node name="Diagonal Fencing [Red]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Diagonal Fencing [Pink]")
+
+[node name="Diagonal Fencing [Green]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Diagonal Fencing [Red]")
+
+[node name="Diagonal Fencing [Yellow]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Diagonal Fencing [Green]")
+
+[node name="Diagonal Fencing [Blue]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Diagonal Fencing [Yellow]")
+
+[node name="Barricade" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Ladder" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Ladder [White]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Ladder")
+
+[node name="Ladder [Black]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Ladder")
+
+[node name="Ladder [Purple]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Ladder")
+
+[node name="Ladder [Pink]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Ladder")
+
+[node name="Ladder [Red]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Ladder")
+
+[node name="Ladder [Green]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Ladder")
+
+[node name="Ladder [Yellow]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Ladder")
+
+[node name="Ladder [Blue]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Ladder")
+
+[node name="Stone Steps" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Stone Steps [White]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Stone Steps")
+
+[node name="Stone Steps [Black]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Stone Steps")
+
+[node name="Stone Steps [Purple]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Stone Steps")
+
+[node name="Stone Steps [Pink]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Stone Steps")
+
+[node name="Stone Steps [Red]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Stone Steps")
+
+[node name="Stone Steps [Green]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Stone Steps")
+
+[node name="Stone Steps [Yellow]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Stone Steps")
+
+[node name="Stone Steps [Blue]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Stone Steps")
+
+[node name="Armourer\'s Sign" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Shop Sign" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Inn Sign" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="BLD_BGPARTS_SINGN_RECEPTION" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Porched Window" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Porched Window [White]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Porched Window")
+
+[node name="Porched Window [Black]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Porched Window")
+
+[node name="Porched Window [Purple]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Porched Window")
+
+[node name="Porched Window [Pink]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Porched Window")
+
+[node name="Porched Window [Red]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Porched Window")
+
+[node name="Porched Window [Green]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Porched Window")
+
+[node name="Porched Window [Yellow]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Porched Window")
+
+[node name="Porched Window [Blue]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Porched Window")
+
+[node name="Arched Window" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Arched Window [White]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Arched Window")
+
+[node name="Arched Window [Black]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Arched Window")
+
+[node name="Arched Window [Purple]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Arched Window")
+
+[node name="Arched Window [Pink]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Arched Window")
+
+[node name="Arched Window [Red]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Arched Window")
+
+[node name="Arched Window [Green]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Arched Window")
+
+[node name="Arched Window [Yellow]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Arched Window")
+
+[node name="Arched Window [Blue]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Arched Window")
+
+[node name="Stone Window" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Wooden Door" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Wooden Door [White]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Wooden Door")
+
+[node name="Wooden Door [Black]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Wooden Door")
+
+[node name="Wooden Door [Purple]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Wooden Door")
+
+[node name="Wooden Door [Pink]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Wooden Door")
+
+[node name="Wooden Door [Red]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Wooden Door")
+
+[node name="Wooden Door [Green]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Wooden Door")
+
+[node name="Wooden Door [Yellow]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Wooden Door")
+
+[node name="Wooden Door [Blue]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Wooden Door")
+
+[node name="Magic Door" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Magic Door [White]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Magic Door")
+
+[node name="Magic Door [Black]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Magic Door")
+
+[node name="Magic Door [Purple]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Magic Door")
+
+[node name="Magic Door [Pink]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Magic Door")
+
+[node name="Magic Door [Red]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Magic Door")
+
+[node name="Magic Door [Green]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Magic Door")
+
+[node name="Magic Door [Yellow]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Magic Door")
+
+[node name="Magic Door [Blue]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Magic Door")
+
+[node name="Cell Door" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Steel Doors" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Wooden Gate" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Wooden Gate [White]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Wooden Gate")
+
+[node name="Wooden Gate [Black]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Wooden Gate")
+
+[node name="Wooden Gate [Purple]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Wooden Gate")
+
+[node name="Wooden Gate [Pink]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Wooden Gate")
+
+[node name="Wooden Gate [Red]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Wooden Gate")
+
+[node name="Wooden Gate [Green]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Wooden Gate")
+
+[node name="Wooden Gate [Yellow]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Wooden Gate")
+
+[node name="Wooden Gate [Blue]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Wooden Gate")
+
+[node name="Little Lock" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Large Lock" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Buttress" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Ridge Tiling" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Ridge Tiling [White]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Ridge Tiling")
+
+[node name="Ridge Tiling [Black]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Ridge Tiling")
+
+[node name="Ridge Tiling [Purple]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Ridge Tiling")
+
+[node name="Ridge Tiling [Pink]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Ridge Tiling")
+
+[node name="Ridge Tiling [Red]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Ridge Tiling")
+
+[node name="Ridge Tiling [Green]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Ridge Tiling")
+
+[node name="Ridge Tiling [Yellow]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Ridge Tiling")
+
+[node name="Ridge Tiling [Blue]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Ridge Tiling")
+
+[node name="Well" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Torch" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Sconce" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Bonfire" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Cookfire" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Wall Lamp" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Candlestick" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Candelabrum" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Brazier" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Pot Plant" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Pot Plant [White]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Pot Plant")
+
+[node name="Pot Plant [Black]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Pot Plant")
+
+[node name="Pot Plant [Purple]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Pot Plant")
+
+[node name="Pot Plant [Pink]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Pot Plant")
+
+[node name="Pot Plant [Red]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Pot Plant")
+
+[node name="Pot Plant [Green]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Pot Plant")
+
+[node name="Pot Plant [Yellow]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Pot Plant")
+
+[node name="Pot Plant [Blue]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Pot Plant")
+
+[node name="Bottles" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Crockery" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Dressing Table" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Dressing Table [White]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Dressing Table")
+
+[node name="Dressing Table [Black]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Dressing Table")
+
+[node name="Dressing Table [Purple]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Dressing Table")
+
+[node name="Dressing Table [Pink]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Dressing Table")
+
+[node name="Dressing Table [Red]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Dressing Table")
+
+[node name="Dressing Table [Green]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Dressing Table")
+
+[node name="Dressing Table [Yellow]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Dressing Table")
+
+[node name="Dressing Table [Blue]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Dressing Table")
+
+[node name="Small Table" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Small Table [White]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Small Table")
+
+[node name="Small Table [Black]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Small Table")
+
+[node name="Small Table [Purple]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Small Table")
+
+[node name="Small Table [Pink]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Small Table")
+
+[node name="Small Table [Red]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Small Table")
+
+[node name="Small Table [Green]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Small Table")
+
+[node name="Small Table [Yellow]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Small Table")
+
+[node name="Small Table [Blue]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Small Table")
+
+[node name="Big Table" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Big Table [White]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Big Table")
+
+[node name="Big Table [Black]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Big Table")
+
+[node name="Big Table [Purple]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Big Table")
+
+[node name="Big Table [Pink]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Big Table")
+
+[node name="Big Table [Red]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Big Table")
+
+[node name="Big Table [Green]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Big Table")
+
+[node name="Big Table [Yellow]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Big Table")
+
+[node name="Big Table [Blue]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Big Table")
+
+[node name="Stone Table" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Dining Table" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Dining Table [White]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Dining Table")
+
+[node name="Dining Table [Black]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Dining Table")
+
+[node name="Dining Table [Purple]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Dining Table")
+
+[node name="Dining Table [Pink]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Dining Table")
+
+[node name="Dining Table [Red]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Dining Table")
+
+[node name="Dining Table [Green]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Dining Table")
+
+[node name="Dining Table [Yellow]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Dining Table")
+
+[node name="Dining Table [Blue]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Dining Table")
+
+[node name="Wooden Stool" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Wooden Stool [White]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Wooden Stool")
+
+[node name="Wooden Stool [Black]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Wooden Stool")
+
+[node name="Wooden Stool [Purple]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Wooden Stool")
+
+[node name="Wooden Stool [Pink]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Wooden Stool")
+
+[node name="Wooden Stool [Red]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Wooden Stool")
+
+[node name="Wooden Stool [Green]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Wooden Stool")
+
+[node name="Wooden Stool [Yellow]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Wooden Stool")
+
+[node name="Wooden Stool [Blue]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Wooden Stool")
+
+[node name="Comfy Stool" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Comfy Stool [White]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Comfy Stool")
+
+[node name="Comfy Stool [Black]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Comfy Stool")
+
+[node name="Comfy Stool [Purple]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Comfy Stool")
+
+[node name="Comfy Stool [Pink]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Comfy Stool")
+
+[node name="Comfy Stool [Red]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Comfy Stool")
+
+[node name="Comfy Stool [Green]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Comfy Stool")
+
+[node name="Comfy Stool [Yellow]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Comfy Stool")
+
+[node name="Comfy Stool [Blue]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Comfy Stool")
+
+[node name="Throne" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Straw Mattress" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Simple Bed" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Simple Bed [White]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Simple Bed")
+
+[node name="Simple Bed [Black]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Simple Bed")
+
+[node name="Simple Bed [Purple]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Simple Bed")
+
+[node name="Simple Bed [Pink]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Simple Bed")
+
+[node name="Simple Bed [Red]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Simple Bed")
+
+[node name="Simple Bed [Green]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Simple Bed")
+
+[node name="Simple Bed [Yellow]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Simple Bed")
+
+[node name="Simple Bed [Blue]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Simple Bed")
+
+[node name="King-Sized Bed" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="King-Sized Bed [White]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../King-Sized Bed")
+
+[node name="King-Sized Bed [Black]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../King-Sized Bed")
+
+[node name="King-Sized Bed [Purple]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../King-Sized Bed")
+
+[node name="King-Sized Bed [Pink]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../King-Sized Bed")
+
+[node name="King-Sized Bed [Red]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../King-Sized Bed")
+
+[node name="King-Sized Bed [Green]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../King-Sized Bed")
+
+[node name="King-Sized Bed [Yellow]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../King-Sized Bed")
+
+[node name="King-Sized Bed [Blue]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../King-Sized Bed")
+
+[node name="Towel Rail" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Towel Rail [White]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Towel Rail")
+
+[node name="Towel Rail [Black]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Towel Rail")
+
+[node name="Towel Rail [Purple]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Towel Rail")
+
+[node name="Towel Rail [Pink]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Towel Rail")
+
+[node name="Towel Rail [Red]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Towel Rail")
+
+[node name="Towel Rail [Green]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Towel Rail")
+
+[node name="Towel Rail [Yellow]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Towel Rail")
+
+[node name="Towel Rail [Blue]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Towel Rail")
+
+[node name="Bookcase" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Bookcase [White]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Bookcase")
+
+[node name="Bookcase [Black]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Bookcase")
+
+[node name="Bookcase [Purple]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Bookcase")
+
+[node name="Bookcase [Pink]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Bookcase")
+
+[node name="Bookcase [Red]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Bookcase")
+
+[node name="Bookcase [Green]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Bookcase")
+
+[node name="Bookcase [Yellow]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Bookcase")
+
+[node name="Bookcase [Blue]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Bookcase")
+
+[node name="Chest of Drawers" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Chest of Drawers [White]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Chest of Drawers")
+
+[node name="Chest of Drawers [Black]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Chest of Drawers")
+
+[node name="Chest of Drawers [Purple]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Chest of Drawers")
+
+[node name="Chest of Drawers [Pink]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Chest of Drawers")
+
+[node name="Chest of Drawers [Red]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Chest of Drawers")
+
+[node name="Chest of Drawers [Green]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Chest of Drawers")
+
+[node name="Chest of Drawers [Yellow]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Chest of Drawers")
+
+[node name="Chest of Drawers [Blue]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Chest of Drawers")
+
+[node name="Wardrobe" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Grandfather Clock" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Grandfather Clock [White]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Grandfather Clock")
+
+[node name="Grandfather Clock [Black]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Grandfather Clock")
+
+[node name="Grandfather Clock [Purple]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Grandfather Clock")
+
+[node name="Grandfather Clock [Pink]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Grandfather Clock")
+
+[node name="Grandfather Clock [Red]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Grandfather Clock")
+
+[node name="Grandfather Clock [Green]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Grandfather Clock")
+
+[node name="Grandfather Clock [Yellow]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Grandfather Clock")
+
+[node name="Grandfather Clock [Blue]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Grandfather Clock")
+
+[node name="Ornamental Swords" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Ornamental Armour" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Stove" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Sink" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Bathtub" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Goddess Statue" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Clover Carving" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Clover Carving [White]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Clover Carving")
+
+[node name="Clover Carving [Black]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Clover Carving")
+
+[node name="Clover Carving [Purple]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Clover Carving")
+
+[node name="Clover Carving [Pink]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Clover Carving")
+
+[node name="Clover Carving [Red]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Clover Carving")
+
+[node name="Clover Carving [Green]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Clover Carving")
+
+[node name="Clover Carving [Yellow]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Clover Carving")
+
+[node name="Clover Carving [Blue]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Clover Carving")
+
+[node name="Item Display Stand" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Treasure Chest" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Decorative Drapery" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Decorative Drapery [White]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Decorative Drapery")
+
+[node name="Decorative Drapery [Black]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Decorative Drapery")
+
+[node name="Decorative Drapery [Purple]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Decorative Drapery")
+
+[node name="Decorative Drapery [Pink]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Decorative Drapery")
+
+[node name="Decorative Drapery [Red]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Decorative Drapery")
+
+[node name="Decorative Drapery [Green]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Decorative Drapery")
+
+[node name="Decorative Drapery [Yellow]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Decorative Drapery")
+
+[node name="Decorative Drapery [Blue]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Decorative Drapery")
+
+[node name="Bold Banner" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Bold Banner [White]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Bold Banner")
+
+[node name="Bold Banner [Black]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Bold Banner")
+
+[node name="Bold Banner [Purple]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Bold Banner")
+
+[node name="Bold Banner [Pink]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Bold Banner")
+
+[node name="Bold Banner [Red]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Bold Banner")
+
+[node name="Bold Banner [Green]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Bold Banner")
+
+[node name="Bold Banner [Yellow]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Bold Banner")
+
+[node name="Bold Banner [Blue]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Bold Banner")
+
+[node name="Big Bold Banner" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Big Bold Banner [White]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Big Bold Banner")
+
+[node name="Big Bold Banner [Black]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Big Bold Banner")
+
+[node name="Big Bold Banner [Purple]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Big Bold Banner")
+
+[node name="Big Bold Banner [Pink]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Big Bold Banner")
+
+[node name="Big Bold Banner [Red]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Big Bold Banner")
+
+[node name="Big Bold Banner [Green]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Big Bold Banner")
+
+[node name="Big Bold Banner [Yellow]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Big Bold Banner")
+
+[node name="Big Bold Banner [Blue]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Big Bold Banner")
+
+[node name="Pretty Pillar" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Column" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Stone Coping" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Stone Capping" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Decorative Shield" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Small Stones" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Big Rock" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Bones" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Dragon Bones" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Chains" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Dragonlord\'s Standard" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Vile Tile" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Seal of Erdrick" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Draconic Column" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Vile Visage" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Evil Idol" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Beastly Burrow" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Beastly Burrow (Broken)" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Beastly Burrow")
+
+[node name="Helliportal" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Spike Trap" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Dragonlord\'s Throne" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Pristine Plumberry" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Chilli Pepper 1" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Chilli Pepper 2" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Chilli Pepper 1")
+
+[node name="Chilli Pepper 3" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Chilli Pepper 1")
+
+[node name="Chilli Pepper 4" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Chilli Pepper 1")
+
+[node name="Red-Hot Chilli Pepper" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Chilli Pepper 1")
+
+[node name="Wheat 1" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Wheat 2" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Wheat 1")
+
+[node name="Wheat 3" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Wheat 1")
+
+[node name="Wheat 4" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Wheat 1")
+
+[node name="Potato 1" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Potato 2" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Potato 1")
+
+[node name="Potato 3" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Potato 1")
+
+[node name="Potato 4" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Potato 1")
+
+[node name="Potato 5" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Potato 1")
+
+[node name="Heartfruit 1" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Heartfruit 2" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Heartfruit 1")
+
+[node name="Heartfruit 3" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Heartfruit 1")
+
+[node name="Transmutation Table" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Sugar Cane 1" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Sugar Cane 2" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Sugar Cane 1")
+
+[node name="Sugar Cane 3" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Sugar Cane 1")
+
+[node name="Sugar Cane 4" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Sugar Cane 1")
+
+[node name="Ancient Altar" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Tree Stump" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Slime Balloons" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Mason\'s Workstation" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Carpenter\'s Workstation" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Multipurpose Workbench" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Colour Wheel (DQB1)" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Colour Wheel (DQB2)" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Colour Wheel (DQB1)")
+
+[node name="Forge (DQB1)" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Forge (DQB2)" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Forge (DQB1)")
+
+[node name="Hela\'s Hammer Sign" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Brick Barbecue" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Stickler\'s Sifter" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Sewing Station" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Tinting Tun" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Machinist\'s Workbench" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Welder\'s Workbench" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Wizard\'s Workbench" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Forbidden Altar" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Furnace (DQB1)" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Furnace (DQB2)" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Furnace (DQB1)")
+
+[node name="Old Book" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Old Book [White]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Old Book")
+
+[node name="Old Book [Black]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Old Book")
+
+[node name="Old Book [Purple]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Old Book")
+
+[node name="Old Book [Pink]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Old Book")
+
+[node name="Old Book [Red]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Old Book")
+
+[node name="Old Book [Green]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Old Book")
+
+[node name="Old Book [Yellow]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Old Book")
+
+[node name="Old Book [Blue]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Old Book")
+
+[node name="Book" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Old Book")
+
+[node name="Book [White]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Book")
+
+[node name="Book [Black]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Book")
+
+[node name="Book [Purple]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Book")
+
+[node name="Book [Pink]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Book")
+
+[node name="Book [Red]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Book")
+
+[node name="Book [Green]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Book")
+
+[node name="Book [Yellow]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Book")
+
+[node name="Book [Blue]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Book")
+
+[node name="Old Note" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Note" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Old Note")
+
+[node name="Bashmobile" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Cantlin Shield" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Holyhock 1" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Holyhock 2" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Holyhock 1")
+
+[node name="Holyhock 3" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Holyhock 1")
+
+[node name="Infernal Ivy" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Cannon" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Magic Cannon" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Piston" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Pressure Plate (DQB1)" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Pressure Plate (DQB2)" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Pressure Plate (DQB1)")
+
+[node name="Pressure Plate [White]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Pressure Plate (DQB2)")
+
+[node name="Pressure Plate [Black]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Pressure Plate (DQB2)")
+
+[node name="Pressure Plate [Purple]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Pressure Plate (DQB2)")
+
+[node name="Pressure Plate [Pink]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Pressure Plate (DQB2)")
+
+[node name="Pressure Plate [Red]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Pressure Plate (DQB2)")
+
+[node name="Pressure Plate [Green]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Pressure Plate (DQB2)")
+
+[node name="Pressure Plate [Yellow]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Pressure Plate (DQB2)")
+
+[node name="Pressure Plate [Blue]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Pressure Plate (DQB2)")
+
+[node name="Button (DQB1)" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Button (DQB2)" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Button (DQB1)")
+
+[node name="Button [White]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Button (DQB2)")
+
+[node name="Button [Black]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Button (DQB2)")
+
+[node name="Button [Purple]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Button (DQB2)")
+
+[node name="Button [Pink]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Button (DQB2)")
+
+[node name="Button [Red]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Button (DQB2)")
+
+[node name="Button [Green]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Button (DQB2)")
+
+[node name="Button [Yellow]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Button (DQB2)")
+
+[node name="Button [Blue]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Button (DQB2)")
+
+[node name="Ballista" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Roof Tiling" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Roof Tiling [White]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Roof Tiling")
+
+[node name="Roof Tiling [Black]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Roof Tiling")
+
+[node name="Roof Tiling [Purple]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Roof Tiling")
+
+[node name="Roof Tiling [Pink]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Roof Tiling")
+
+[node name="Roof Tiling [Red]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Roof Tiling")
+
+[node name="Roof Tiling [Green]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Roof Tiling")
+
+[node name="Roof Tiling [Yellow]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Roof Tiling")
+
+[node name="Roof Tiling [Blue]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Roof Tiling")
+
+[node name="Pitched Tiling" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Pitched Tiling [White]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Pitched Tiling")
+
+[node name="Pitched Tiling [Black]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Pitched Tiling")
+
+[node name="Pitched Tiling [Purple]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Pitched Tiling")
+
+[node name="Pitched Tiling [Pink]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Pitched Tiling")
+
+[node name="Pitched Tiling [Red]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Pitched Tiling")
+
+[node name="Pitched Tiling [Green]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Pitched Tiling")
+
+[node name="Pitched Tiling [Yellow]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Pitched Tiling")
+
+[node name="Pitched Tiling [Blue]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Pitched Tiling")
+
+[node name="Outer Corner Tiling" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Outer Corner Tiling [White]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Outer Corner Tiling")
+
+[node name="Outer Corner Tiling [Black]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Outer Corner Tiling")
+
+[node name="Outer Corner Tiling [Purple]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Outer Corner Tiling")
+
+[node name="Outer Corner Tiling [Pink]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Outer Corner Tiling")
+
+[node name="Outer Corner Tiling [Red]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Outer Corner Tiling")
+
+[node name="Outer Corner Tiling [Green]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Outer Corner Tiling")
+
+[node name="Outer Corner Tiling [Yellow]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Outer Corner Tiling")
+
+[node name="Outer Corner Tiling [Blue]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Outer Corner Tiling")
+
+[node name="Inner Corner Tiling" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Inner Corner Tiling [White]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Inner Corner Tiling")
+
+[node name="Inner Corner Tiling [Black]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Inner Corner Tiling")
+
+[node name="Inner Corner Tiling [Purple]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Inner Corner Tiling")
+
+[node name="Inner Corner Tiling [Pink]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Inner Corner Tiling")
+
+[node name="Inner Corner Tiling [Red]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Inner Corner Tiling")
+
+[node name="Inner Corner Tiling [Green]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Inner Corner Tiling")
+
+[node name="Inner Corner Tiling [Yellow]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Inner Corner Tiling")
+
+[node name="Inner Corner Tiling [Blue]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Inner Corner Tiling")
+
+[node name="Colossal Coffer" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Armoire" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Colossal Closet" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Equipment Display Stand" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Straight Track" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Curved Track" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Sloped Track" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Stop Sign" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Wooden Minecart" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Spiked Metal Minecart" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Banner Pedestal 0 (Cantlin)" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Banner Pedestal 1 (Cantlin)" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Banner Pedestal 0 (Cantlin)")
+
+[node name="Banner Pedestal 2 (Cantlin)" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Banner Pedestal 0 (Cantlin)")
+
+[node name="Banner Pedestal 3 (Cantlin)" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Banner Pedestal 0 (Cantlin)")
+
+[node name="Banner Pedestal 4 (Cantlin)" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Banner Pedestal 0 (Cantlin)")
+
+[node name="Banner Pedestal 0 (Rimuldar)" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Banner Pedestal 1 (Rimuldar)" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Banner Pedestal 0 (Rimuldar)")
+
+[node name="Banner Pedestal 2 (Rimuldar)" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Banner Pedestal 0 (Rimuldar)")
+
+[node name="Banner Pedestal 3 (Rimuldar)" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Banner Pedestal 0 (Rimuldar)")
+
+[node name="Banner Pedestal 4 (Rimuldar)" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Banner Pedestal 0 (Rimuldar)")
+
+[node name="Banner Pedestal 0 (Kol)" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Banner Pedestal 1 (Kol)" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Banner Pedestal 0 (Kol)")
+
+[node name="Banner Pedestal 2 (Kol)" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Banner Pedestal 0 (Kol)")
+
+[node name="Banner Pedestal 3 (Kol)" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Banner Pedestal 0 (Kol)")
+
+[node name="Banner Pedestal 4 (Kol)" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Banner Pedestal 0 (Kol)")
+
+[node name="Banner Pedestal 0 (Tantegel)" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Banner Pedestal 1 (Tantegel)" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Banner Pedestal 0 (Tantegel)")
+
+[node name="Banner Pedestal 2 (Tantegel)" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Banner Pedestal 0 (Tantegel)")
+
+[node name="Banner Pedestal 3 (Tantegel)" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Banner Pedestal 0 (Tantegel)")
+
+[node name="Banner Pedestal 4 (Tantegel)" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Banner Pedestal 0 (Tantegel)")
+
+[node name="Blue Teleportal" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Red Teleportal" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Green Teleportal" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Yellow Teleportal" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Blue Naviglobe" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Red Naviglobe" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Green Naviglobe" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Wrecking Ball" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Rusty Wrecking Ball" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Wrecking Ball")
+
+[node name="Portrait of a Lady" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Fountain" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Water Crystal" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hot Water Crystal" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Straw Door" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Wooden Steps" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Wooden Steps [White]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Wooden Steps")
+
+[node name="Wooden Steps [Black]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Wooden Steps")
+
+[node name="Wooden Steps [Purple]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Wooden Steps")
+
+[node name="Wooden Steps [Pink]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Wooden Steps")
+
+[node name="Wooden Steps [Red]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Wooden Steps")
+
+[node name="Wooden Steps [Green]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Wooden Steps")
+
+[node name="Wooden Steps [Yellow]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Wooden Steps")
+
+[node name="Wooden Steps [Blue]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Wooden Steps")
+
+[node name="Chimney" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Stone Stool" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Butterbeans 1" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Butterbeans 2 (DQB1)" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Butterbeans 1")
+
+[node name="Butterbeans 2 (DQB2)" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Butterbeans 2 (DQB1)")
+
+[node name="Butterbeans 3" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Butterbeans 1")
+
+[node name="Butterbeans 4" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Butterbeans 1")
+
+[node name="Window" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Window [White]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Window")
+
+[node name="Window [Black]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Window")
+
+[node name="Window [Purple]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Window")
+
+[node name="Window [Pink]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Window")
+
+[node name="Window [Red]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Window")
+
+[node name="Window [Green]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Window")
+
+[node name="Window [Yellow]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Window")
+
+[node name="Window [Blue]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Window")
+
+[node name="Princess Statue" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Fierce Fountain" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Fierce Fountain [White]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Fierce Fountain")
+
+[node name="Fierce Fountain [Black]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Fierce Fountain")
+
+[node name="Fierce Fountain [Purple]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Fierce Fountain")
+
+[node name="Fierce Fountain [Pink]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Fierce Fountain")
+
+[node name="Fierce Fountain [Red]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Fierce Fountain")
+
+[node name="Fierce Fountain [Green]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Fierce Fountain")
+
+[node name="Fierce Fountain [Yellow]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Fierce Fountain")
+
+[node name="Fierce Fountain [Blue]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Fierce Fountain")
+
+[node name="Filter Fountain" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hexed Chest" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Teleportal" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Sharing Stone" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Summoning Stone" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Puzzlepost (DQB1)" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Tiled Window" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Tiled Window [White]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Tiled Window")
+
+[node name="Tiled Window [Black]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Tiled Window")
+
+[node name="Tiled Window [Purple]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Tiled Window")
+
+[node name="Tiled Window [Pink]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Tiled Window")
+
+[node name="Tiled Window [Red]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Tiled Window")
+
+[node name="Tiled Window [Green]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Tiled Window")
+
+[node name="Tiled Window [Yellow]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Tiled Window")
+
+[node name="Tiled Window [Blue]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Tiled Window")
+
+[node name="Branch" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Mini Merlon" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Gentleman Sign" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Lady Sign" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Bench" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Bar Counter" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Chic Chair" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Chic Chair [White]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Chic Chair")
+
+[node name="Chic Chair [Black]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Chic Chair")
+
+[node name="Chic Chair [Purple]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Chic Chair")
+
+[node name="Chic Chair [Pink]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Chic Chair")
+
+[node name="Chic Chair [Red]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Chic Chair")
+
+[node name="Chic Chair [Green]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Chic Chair")
+
+[node name="Chic Chair [Yellow]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Chic Chair")
+
+[node name="Chic Chair [Blue]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Chic Chair")
+
+[node name="Cask" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Naughty Night Light" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Comfy Sofa" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Comfy Sofa [White]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Comfy Sofa")
+
+[node name="Comfy Sofa [Black]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Comfy Sofa")
+
+[node name="Comfy Sofa [Purple]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Comfy Sofa")
+
+[node name="Comfy Sofa [Pink]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Comfy Sofa")
+
+[node name="Comfy Sofa [Red]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Comfy Sofa")
+
+[node name="Comfy Sofa [Green]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Comfy Sofa")
+
+[node name="Comfy Sofa [Yellow]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Comfy Sofa")
+
+[node name="Comfy Sofa [Blue]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Comfy Sofa")
+
+[node name="Princess-Sized Bed" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Princess-Sized Bed [White]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Princess-Sized Bed")
+
+[node name="Princess-Sized Bed [Black]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Princess-Sized Bed")
+
+[node name="Princess-Sized Bed [Purple]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Princess-Sized Bed")
+
+[node name="Princess-Sized Bed [Pink]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Princess-Sized Bed")
+
+[node name="Princess-Sized Bed [Red]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Princess-Sized Bed")
+
+[node name="Princess-Sized Bed [Green]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Princess-Sized Bed")
+
+[node name="Princess-Sized Bed [Yellow]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Princess-Sized Bed")
+
+[node name="Princess-Sized Bed [Blue]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Princess-Sized Bed")
+
+[node name="Extravagant Table" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Extravagant Table [White]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Extravagant Table")
+
+[node name="Extravagant Table [Black]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Extravagant Table")
+
+[node name="Extravagant Table [Purple]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Extravagant Table")
+
+[node name="Extravagant Table [Pink]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Extravagant Table")
+
+[node name="Extravagant Table [Red]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Extravagant Table")
+
+[node name="Extravagant Table [Green]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Extravagant Table")
+
+[node name="Extravagant Table [Yellow]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Extravagant Table")
+
+[node name="Extravagant Table [Blue]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Extravagant Table")
+
+[node name="Round Table" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Fireplace" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Plant Pot" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Plant Pot [White]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Plant Pot")
+
+[node name="Plant Pot [Black]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Plant Pot")
+
+[node name="Plant Pot [Purple]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Plant Pot")
+
+[node name="Plant Pot [Pink]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Plant Pot")
+
+[node name="Plant Pot [Red]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Plant Pot")
+
+[node name="Plant Pot [Green]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Plant Pot")
+
+[node name="Plant Pot [Yellow]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Plant Pot")
+
+[node name="Plant Pot [Blue]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Plant Pot")
+
+[node name="Lyre of Slime Immemorial" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Player Lyre" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Dumb-Bells" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Stationery" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Water Jug" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Tea Service" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Salad Plate" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Fish Dish" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Bread Basket" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Meat Feast" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Treasures \'n\' Trapdoors" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Stuffed Hammerhood" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Powie Yowie Rug" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Cherry Blossom Tree" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Healix the Hero" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Blighted Branch" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Wall-Mounted Banner" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Wall-Mounted Banner [White]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Wall-Mounted Banner")
+
+[node name="Wall-Mounted Banner [Black]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Wall-Mounted Banner")
+
+[node name="Wall-Mounted Banner [Purple]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Wall-Mounted Banner")
+
+[node name="Wall-Mounted Banner [Pink]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Wall-Mounted Banner")
+
+[node name="Wall-Mounted Banner [Red]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Wall-Mounted Banner")
+
+[node name="Wall-Mounted Banner [Green]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Wall-Mounted Banner")
+
+[node name="Wall-Mounted Banner [Yellow]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Wall-Mounted Banner")
+
+[node name="Wall-Mounted Banner [Blue]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Wall-Mounted Banner")
+
+[node name="Stone Workbench Lv 0" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Stone Workbench Lv 1" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Stone Workbench Lv 0")
+
+[node name="Stone Workbench Lv 2" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Stone Workbench Lv 0")
+
+[node name="Stone Workbench Lv 3" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Stone Workbench Lv 0")
+
+[node name="Stone Workbench Lv MAX" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Stone Workbench Lv 0")
+
+[node name="Wooden Workbench Lv 0" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Wooden Workbench Lv 1" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Wooden Workbench Lv 0")
+
+[node name="Wooden Workbench Lv 2" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Wooden Workbench Lv 0")
+
+[node name="Wooden Workbench Lv 3" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Wooden Workbench Lv 0")
+
+[node name="Wooden Workbench Lv MAX" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Wooden Workbench Lv 0")
+
+[node name="Iron Workbench Lv 0" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Wooden Fortification")
+
+[node name="Iron Workbench Lv 1" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Wooden Fortification")
+
+[node name="Iron Workbench Lv 2" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Wooden Fortification")
+
+[node name="Iron Workbench Lv 3" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Wooden Fortification")
+
+[node name="Iron Workbench Lv MAX" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Wooden Fortification")
+
+[node name="Builder\'s Workbench Lv 0" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Wooden Fortification")
+
+[node name="Builder\'s Workbench Lv 1" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Wooden Fortification")
+
+[node name="Builder\'s Workbench Lv 2" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Wooden Fortification")
+
+[node name="Builder\'s Workbench Lv 3" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Wooden Fortification")
+
+[node name="Builder\'s Workbench Lv MAX" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Wooden Fortification")
+
+[node name="Wooden Fortification" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Wooden Fortification [White]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Wooden Fortification")
+
+[node name="Wooden Fortification [Black]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Wooden Fortification")
+
+[node name="Wooden Fortification [Purple]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Wooden Fortification")
+
+[node name="Wooden Fortification [Pink]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Wooden Fortification")
+
+[node name="Wooden Fortification [Red]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Wooden Fortification")
+
+[node name="Wooden Fortification [Green]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Wooden Fortification")
+
+[node name="Wooden Fortification [Yellow]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Wooden Fortification")
+
+[node name="Wooden Fortification [Blue]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Wooden Fortification")
+
+[node name="Gangrenous Greenery" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Gangrenous Greenery (Pole)" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Buggy Buggy" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Lightning Buggy Buggy" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Buggy Buggy")
+
+[node name="Millennium Buggy Buggy" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Buggy Buggy")
+
+[node name="Emblematic Clock" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Emblematic Clock [White]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Emblematic Clock")
+
+[node name="Emblematic Clock [Black]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Emblematic Clock")
+
+[node name="Emblematic Clock [Purple]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Emblematic Clock")
+
+[node name="Emblematic Clock [Pink]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Emblematic Clock")
+
+[node name="Emblematic Clock [Red]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Emblematic Clock")
+
+[node name="Emblematic Clock [Green]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Emblematic Clock")
+
+[node name="Emblematic Clock [Yellow]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Emblematic Clock")
+
+[node name="Emblematic Clock [Blue]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Emblematic Clock")
+
+[node name="Plain-Pane Leadlight" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Plain-Pane Leadlight [White]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Plain-Pane Leadlight")
+
+[node name="Plain-Pane Leadlight [Black]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Plain-Pane Leadlight")
+
+[node name="Plain-Pane Leadlight [Purple]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Plain-Pane Leadlight")
+
+[node name="Plain-Pane Leadlight [Pink]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Plain-Pane Leadlight")
+
+[node name="Plain-Pane Leadlight [Red]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Plain-Pane Leadlight")
+
+[node name="Plain-Pane Leadlight [Green]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Plain-Pane Leadlight")
+
+[node name="Plain-Pane Leadlight [Yellow]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Plain-Pane Leadlight")
+
+[node name="Plain-Pane Leadlight [Blue]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Plain-Pane Leadlight")
+
+[node name="Four-Square Leadlight" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Four-Square Leadlight [White]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Four-Square Leadlight")
+
+[node name="Four-Square Leadlight [Black]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Four-Square Leadlight")
+
+[node name="Four-Square Leadlight [Purple]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Four-Square Leadlight")
+
+[node name="Four-Square Leadlight [Pink]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Four-Square Leadlight")
+
+[node name="Four-Square Leadlight [Red]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Four-Square Leadlight")
+
+[node name="Four-Square Leadlight [Green]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Four-Square Leadlight")
+
+[node name="Four-Square Leadlight [Yellow]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Four-Square Leadlight")
+
+[node name="Four-Square Leadlight [Blue]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Four-Square Leadlight")
+
+[node name="Criss-Cross Leadlight" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Criss-Cross Leadlight [White]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Criss-Cross Leadlight")
+
+[node name="Criss-Cross Leadlight [Black]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Criss-Cross Leadlight")
+
+[node name="Criss-Cross Leadlight [Purple]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Criss-Cross Leadlight")
+
+[node name="Criss-Cross Leadlight [Pink]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Criss-Cross Leadlight")
+
+[node name="Criss-Cross Leadlight [Red]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Criss-Cross Leadlight")
+
+[node name="Criss-Cross Leadlight [Green]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Criss-Cross Leadlight")
+
+[node name="Criss-Cross Leadlight [Yellow]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Criss-Cross Leadlight")
+
+[node name="Criss-Cross Leadlight [Blue]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Criss-Cross Leadlight")
+
+[node name="Anvil" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Classy Couch" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Classy Couch [White]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Classy Couch")
+
+[node name="Classy Couch [Black]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Classy Couch")
+
+[node name="Classy Couch [Purple]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Classy Couch")
+
+[node name="Classy Couch [Pink]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Classy Couch")
+
+[node name="Classy Couch [Red]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Classy Couch")
+
+[node name="Classy Couch [Green]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Classy Couch")
+
+[node name="Classy Couch [Yellow]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Classy Couch")
+
+[node name="Classy Couch [Blue]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Classy Couch")
+
+[node name="Tartan Bed" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Tartan Bed [White]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Tartan Bed")
+
+[node name="Tartan Bed [Black]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Tartan Bed")
+
+[node name="Tartan Bed [Purple]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Tartan Bed")
+
+[node name="Tartan Bed [Pink]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Tartan Bed")
+
+[node name="Tartan Bed [Red]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Tartan Bed")
+
+[node name="Tartan Bed [Green]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Tartan Bed")
+
+[node name="Tartan Bed [Yellow]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Tartan Bed")
+
+[node name="Tartan Bed [Blue]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Tartan Bed")
+
+[node name="Cooking Pot" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Cooking Pot [White]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Cooking Pot")
+
+[node name="Cooking Pot [Black]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Cooking Pot")
+
+[node name="Cooking Pot [Purple]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Cooking Pot")
+
+[node name="Cooking Pot [Pink]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Cooking Pot")
+
+[node name="Cooking Pot [Red]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Cooking Pot")
+
+[node name="Cooking Pot [Green]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Cooking Pot")
+
+[node name="Cooking Pot [Yellow]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Cooking Pot")
+
+[node name="Cooking Pot [Blue]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Cooking Pot")
+
+[node name="Quest Tablet" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Scallywinkle" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Driftlumber" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Driftwood" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Seaside Seaweed" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Broken Barrel" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Starfish" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Seaslime Shell" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Pebble Pile" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Toppled Column" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Dry Ivy" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Pampas Grass" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Pot and Shot Set" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Pot and Shot Set [White]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Pot and Shot Set")
+
+[node name="Pot and Shot Set [Black]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Pot and Shot Set")
+
+[node name="Pot and Shot Set [Purple]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Pot and Shot Set")
+
+[node name="Pot and Shot Set [Pink]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Pot and Shot Set")
+
+[node name="Pot and Shot Set [Red]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Pot and Shot Set")
+
+[node name="Pot and Shot Set [Green]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Pot and Shot Set")
+
+[node name="Pot and Shot Set [Yellow]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Pot and Shot Set")
+
+[node name="Pot and Shot Set [Blue]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Pot and Shot Set")
+
+[node name="Broken Masonry" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Classical Column Midsection" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Classical Column Pedestal" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Colossal Crag" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Crag" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Glass Floor" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Glass Floor [White]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Glass Floor")
+
+[node name="Glass Floor [Black]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Glass Floor")
+
+[node name="Glass Floor [Purple]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Glass Floor")
+
+[node name="Glass Floor [Pink]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Glass Floor")
+
+[node name="Glass Floor [Red]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Glass Floor")
+
+[node name="Glass Floor [Green]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Glass Floor")
+
+[node name="Glass Floor [Yellow]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Glass Floor")
+
+[node name="Glass Floor [Blue]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Glass Floor")
+
+[node name="Water Lily Flower" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Lily Pad" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Slimespawn" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="She-Slimespawn" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Slimespawn")
+
+[node name="Sunbrella" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Chic Sunbrella [Yellow]")
+
+[node name="Sunbrella [White]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Sunbrella")
+
+[node name="Sunbrella [Black]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Sunbrella")
+
+[node name="Sunbrella [Purple]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Sunbrella")
+
+[node name="Sunbrella [Pink]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Sunbrella")
+
+[node name="Sunbrella [Red]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Sunbrella")
+
+[node name="Sunbrella [Green]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Sunbrella")
+
+[node name="Sunbrella [Yellow]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Sunbrella")
+
+[node name="Sunbrella [Blue]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Sunbrella")
+
+[node name="Chic Sunbrella" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Chic Sunbrella [White]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Chic Sunbrella")
+
+[node name="Chic Sunbrella [Black]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Chic Sunbrella")
+
+[node name="Chic Sunbrella [Purple]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Chic Sunbrella")
+
+[node name="Chic Sunbrella [Pink]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Chic Sunbrella")
+
+[node name="Chic Sunbrella [Red]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Chic Sunbrella")
+
+[node name="Chic Sunbrella [Green]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Chic Sunbrella")
+
+[node name="Chic Sunbrella [Yellow]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Chic Sunbrella")
+
+[node name="Chic Sunbrella [Blue]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Chic Sunbrella")
+
+[node name="Deitree" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Planting Pole" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Worm Food" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Woody Goody" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Worm Food")
+
+[node name="Basic Bunk" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Basic Bunk [White]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Basic Bunk")
+
+[node name="Basic Bunk [Black]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Basic Bunk")
+
+[node name="Basic Bunk [Purple]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Basic Bunk")
+
+[node name="Basic Bunk [Pink]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Basic Bunk")
+
+[node name="Basic Bunk [Red]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Basic Bunk")
+
+[node name="Basic Bunk [Green]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Basic Bunk")
+
+[node name="Basic Bunk [Yellow]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Basic Bunk")
+
+[node name="Basic Bunk [Blue]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Basic Bunk")
+
+[node name="Gift-Wrapped Gift" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Gift-Wrapped Gift [White]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Gift-Wrapped Gift")
+
+[node name="Gift-Wrapped Gift [Black]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Gift-Wrapped Gift")
+
+[node name="Gift-Wrapped Gift [Purple]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Gift-Wrapped Gift")
+
+[node name="Gift-Wrapped Gift [Pink]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Gift-Wrapped Gift")
+
+[node name="Gift-Wrapped Gift [Red]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Gift-Wrapped Gift")
+
+[node name="Gift-Wrapped Gift [Green]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Gift-Wrapped Gift")
+
+[node name="Gift-Wrapped Gift [Yellow]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Gift-Wrapped Gift")
+
+[node name="Gift-Wrapped Gift [Blue]" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+skeleton = NodePath("../Gift-Wrapped Gift")
+
+[node name="Sunstone" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Ancient Emblem" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Staff of Rain" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires320" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires321" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires322" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires323" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires324" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires325" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires326" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires327" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires328" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires329" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires330" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires331" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires332" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires333" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires334" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires335" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires336" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires337" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires338" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires339" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires340" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires341" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires342" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires343" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires344" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires345" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires346" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires347" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires348" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires349" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires350" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires351" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires352" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires353" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires354" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires355" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires356" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires357" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires358" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires359" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires360" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires361" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires362" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires363" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires364" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires365" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires366" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires367" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires368" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires369" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires370" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires371" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires372" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires373" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires374" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires375" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires376" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires377" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires378" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires379" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires380" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires381" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires382" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires383" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires384" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires385" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires386" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires387" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires388" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires389" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires390" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires391" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires392" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires393" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires394" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires395" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires396" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires397" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires398" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires399" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires400" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires401" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires402" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires403" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires404" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires405" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires406" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires407" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires408" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires409" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires410" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires411" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires412" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires413" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires414" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires415" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires416" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires417" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires418" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires419" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires420" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires421" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires422" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires423" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires424" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires425" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires426" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires427" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires428" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires429" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires430" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires431" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires432" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires433" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires434" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires435" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires436" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires437" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires438" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires439" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires440" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires441" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires442" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires443" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires444" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires445" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires446" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires447" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires448" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires449" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires450" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires451" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires452" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires453" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires454" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires455" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires456" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires457" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires458" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires459" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires460" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires461" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires462" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires463" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires464" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires465" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires466" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires467" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires468" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires469" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires470" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires471" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires472" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires473" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires474" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires475" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires476" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires477" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires478" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires479" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires480" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires481" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires482" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires483" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires484" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires485" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires486" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires487" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires488" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires489" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires490" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires491" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires492" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires493" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires494" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires495" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires496" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires497" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires498" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires499" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires500" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires501" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires502" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires503" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires504" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires505" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires506" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires507" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires508" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires509" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires510" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires511" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires512" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires513" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires514" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires515" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires516" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires517" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires518" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires519" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires520" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires521" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires522" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires523" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires524" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires525" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires526" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires527" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires528" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires529" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires530" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires531" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires532" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires533" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires534" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires535" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires536" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires537" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires538" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires539" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires540" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires541" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires542" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires543" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires544" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires545" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires546" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires547" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires548" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires549" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires550" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires551" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires552" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires553" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires554" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires555" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires556" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires557" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires558" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires559" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires560" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires561" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires562" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires563" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires564" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires565" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires566" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires567" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires568" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires569" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires570" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires571" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires572" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires573" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires574" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires575" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires576" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires577" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires578" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires579" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires580" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires581" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires582" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires583" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires584" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires585" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires586" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires587" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires588" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires589" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires590" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires591" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires592" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires593" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires594" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires595" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires596" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires597" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires598" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires599" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires600" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires601" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires602" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires603" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires604" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")
+
+[node name="Hires605" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_k2i3t")

@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cvcjgjj3lgt8y"
+path="res://.godot/imported/rice_dumpling_arrangement.obj-c699d8f2ead9468c19173a39bdc0776e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/rice_dumpling_arrangement.obj-c699d8f2ead9468c19173a39bdc0776e.mesh"]
+
+source_file="res://Mesh/rice_dumpling_arrangement.obj"
+dest_files=["res://.godot/imported/rice_dumpling_arrangement.obj-c699d8f2ead9468c19173a39bdc0776e.mesh", "res://.godot/imported/rice_dumpling_arrangement.obj-c699d8f2ead9468c19173a39bdc0776e.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

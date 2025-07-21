@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cfk4rdhv0deag"
+path="res://.godot/imported/teleportal.obj-b14b1df0609a9241121cc42396635134.mesh"
+
+[deps]
+
+files=["res://.godot/imported/teleportal.obj-b14b1df0609a9241121cc42396635134.mesh"]
+
+source_file="res://Mesh/teleportal.obj"
+dest_files=["res://.godot/imported/teleportal.obj-b14b1df0609a9241121cc42396635134.mesh", "res://.godot/imported/teleportal.obj-b14b1df0609a9241121cc42396635134.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

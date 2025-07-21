@@ -1,14 +1,20 @@
-[gd_scene load_steps=18 format=3 uid="uid://si68n61gn1cn"]
+[gd_scene load_steps=27 format=3 uid="uid://chekdrqr80s3n"]
 
 [ext_resource type="Texture2D" uid="uid://b5wcgwa3elvlc" path="res://Graphics/blocks.png" id="1_djn2n"]
 [ext_resource type="VoxelBlockyLibrary" uid="uid://ds0n7xj6hqhdx" path="res://Resources/Voxel Library.tres" id="1_ec1xm"]
 [ext_resource type="Script" uid="uid://da6gt5x2hlsns" path="res://Scenes/WorldEditorScene.cs" id="1_kqags"]
+[ext_resource type="VoxelBlockyLibrary" uid="uid://dkixrdmtruusw" path="res://Resources/Voxel Library Props.tres" id="2_mua0n"]
 [ext_resource type="Script" uid="uid://bgg687qn5fg8" path="res://Nodes/CameraController.cs" id="4_drl5t"]
+[ext_resource type="MeshLibrary" uid="uid://d245o52jja65n" path="res://Testing/PropLibraryA.tres" id="4_qfxig"]
+[ext_resource type="Script" uid="uid://dbareqhst8tgr" path="res://Scenes/PropGridHacky.cs" id="5_1olrm"]
 [ext_resource type="Theme" uid="uid://nd34kb5d40qb" path="res://Resources/DQB_Theme.tres" id="5_reqmc"]
+[ext_resource type="VoxelBlockyLibrary" uid="uid://dh12d5k2twag0" path="res://Resources/Voxel Library Liquid.tres" id="5_wt1c1"]
+[ext_resource type="MeshLibrary" uid="uid://cy8hdrxgofc1o" path="res://Testing/PropLibraryB.tres" id="6_mua0n"]
 [ext_resource type="Script" uid="uid://c8d5ejfxksjcm" path="res://Nodes/FPSLabel.cs" id="6_rkejf"]
 [ext_resource type="Texture2D" uid="uid://b44a5on8vq3cx" path="res://Graphics/crosshair.png" id="7_sgdhm"]
 [ext_resource type="Script" uid="uid://cef171jih3wvg" path="res://Scenes/PositionLabel.cs" id="8_o1mxb"]
 [ext_resource type="Script" uid="uid://b8l5wycxi2gqt" path="res://Nodes/StatusLabel.cs" id="9_33hxh"]
+[ext_resource type="Script" uid="uid://bhfgnuw7cwaqp" path="res://Nodes/CommandParser.cs" id="15_s7pme"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_amqqt"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -20,12 +26,31 @@ sky_material = SubResource("ProceduralSkyMaterial_amqqt")
 [sub_resource type="Environment" id="Environment_nmm71"]
 background_mode = 2
 sky = SubResource("Sky_1jypa")
+ambient_light_source = 2
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_energy = 0.5
+reflected_light_source = 1
 tonemap_mode = 2
 
 [sub_resource type="VoxelMesherBlocky" id="VoxelMesherBlocky_yg1cn"]
 library = ExtResource("1_ec1xm")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sq1al"]
+transparency = 1
+depth_draw_mode = 1
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_djn2n")
+texture_filter = 0
+
+[sub_resource type="VoxelMesherBlocky" id="VoxelMesherBlocky_jut71"]
+library = ExtResource("2_mua0n")
+
+[sub_resource type="VoxelMesherBlocky" id="VoxelMesherBlocky_wt1c1"]
+library = ExtResource("5_wt1c1")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jut71"]
+transparency = 1
+depth_draw_mode = 1
 vertex_color_use_as_albedo = true
 albedo_texture = ExtResource("1_djn2n")
 texture_filter = 0
@@ -67,8 +92,18 @@ _data = {
 &"fadeout": SubResource("Animation_o1mxb")
 }
 
-[node name="WorldEditor" type="Node3D"]
+[node name="WorldEditor" type="Node3D" node_paths=PackedStringArray("_VoxelTerrain", "_VoxelTerrain_PropShells", "_ResidentLayer", "_PropGrid", "_CameraController", "_DebugInfoContainer", "_FPSLabel", "_PointedVoxelLabel", "_StatusLabel", "_CommandParser")]
 script = ExtResource("1_kqags")
+_VoxelTerrain = NodePath("VoxelTerrain")
+_VoxelTerrain_PropShells = NodePath("VoxelTerrain_PropShells")
+_ResidentLayer = NodePath("ResidentLayer")
+_PropGrid = NodePath("PropGrid")
+_CameraController = NodePath("Camera3D")
+_DebugInfoContainer = NodePath("HUD/DebugInfo")
+_FPSLabel = NodePath("HUD/FPSLabel")
+_PointedVoxelLabel = NodePath("HUD/DebugInfo/PointedVoxelLabel")
+_StatusLabel = NodePath("HUD/StatusLabel")
+_CommandParser = NodePath("HUD/CommandParser")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.866024, -0.433016, 0.250001, 0, 0.499998, 0.866026, -0.500003, 0.749999, -0.43301, 0, 0, 0)
@@ -85,9 +120,46 @@ generate_collisions = false
 material_override = SubResource("StandardMaterial3D_sq1al")
 run_stream_in_editor = false
 
+[node name="VoxelTerrain_PropShells" type="VoxelTerrain" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1024, 0, -1024)
+mesher = SubResource("VoxelMesherBlocky_jut71")
+cast_shadow = 0
+render_layers_mask = 2
+bounds = AABB(-5.36871e+08, -16, -5.36871e+08, 1.07374e+09, 144, 1.07374e+09)
+generate_collisions = false
+material_override = SubResource("StandardMaterial3D_sq1al")
+run_stream_in_editor = false
+
+[node name="VoxelTerrain_Liquids" type="VoxelTerrain" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1024, 0, -1024)
+mesher = SubResource("VoxelMesherBlocky_wt1c1")
+cast_shadow = 0
+render_layers_mask = 2
+bounds = AABB(-5.36871e+08, -16, -5.36871e+08, 1.07374e+09, 144, 1.07374e+09)
+generate_collisions = false
+collision_layer = 0
+collision_mask = 0
+material_override = SubResource("StandardMaterial3D_jut71")
+run_stream_in_editor = false
+
 [node name="ResidentLayer" type="Node3D" parent="."]
 
-[node name="ObjectLayer" type="Node3D" parent="."]
+[node name="PropGrid" type="GridMap" parent="." node_paths=PackedStringArray("SubGrid")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1024, 0, -1024)
+mesh_library = ExtResource("4_qfxig")
+cell_size = Vector3(1, 1, 1)
+cell_center_y = false
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("5_1olrm")
+SubGrid = NodePath("PropGridB")
+
+[node name="PropGridB" type="GridMap" parent="PropGrid"]
+mesh_library = ExtResource("6_mua0n")
+cell_size = Vector3(1, 1, 1)
+cell_center_y = false
+collision_layer = 4
+collision_mask = 0
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 96, 0)
@@ -196,3 +268,20 @@ script = ExtResource("9_33hxh")
 libraries = {
 &"": SubResource("AnimationLibrary_qfxig")
 }
+
+[node name="CommandParser" type="LineEdit" parent="HUD" node_paths=PackedStringArray("_WorldEditorScene", "_StatusLabel")]
+visible = false
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -39.0
+offset_bottom = -9.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("15_s7pme")
+_WorldEditorScene = NodePath("../..")
+_StatusLabel = NodePath("../StatusLabel")
+
+[connection signal="text_submitted" from="HUD/CommandParser" to="HUD/CommandParser" method="_On_TextSubmitted"]

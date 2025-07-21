@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bpvtdj761i6ll"
+path="res://.godot/imported/wooden_memorial.obj-3e2b7de8b7d8ecab0eb313fb212c980c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/wooden_memorial.obj-3e2b7de8b7d8ecab0eb313fb212c980c.mesh"]
+
+source_file="res://Mesh/wooden_memorial.obj"
+dest_files=["res://.godot/imported/wooden_memorial.obj-3e2b7de8b7d8ecab0eb313fb212c980c.mesh", "res://.godot/imported/wooden_memorial.obj-3e2b7de8b7d8ecab0eb313fb212c980c.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

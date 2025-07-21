@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://kpcw42clwij8"
+path="res://.godot/imported/sprite_gentleman_flat.obj-9ac495a25c3f07d009ada0b3981b86cf.mesh"
+
+[deps]
+
+files=["res://.godot/imported/sprite_gentleman_flat.obj-9ac495a25c3f07d009ada0b3981b86cf.mesh"]
+
+source_file="res://Mesh/sprite_gentleman_flat.obj"
+dest_files=["res://.godot/imported/sprite_gentleman_flat.obj-9ac495a25c3f07d009ada0b3981b86cf.mesh", "res://.godot/imported/sprite_gentleman_flat.obj-9ac495a25c3f07d009ada0b3981b86cf.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

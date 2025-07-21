@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dumji72vy1c3q"
+path="res://.godot/imported/dressing_table.obj-f15f769b72961a390ce091cad4ebf640.mesh"
+
+[deps]
+
+files=["res://.godot/imported/dressing_table.obj-f15f769b72961a390ce091cad4ebf640.mesh"]
+
+source_file="res://Mesh/dressing_table.obj"
+dest_files=["res://.godot/imported/dressing_table.obj-f15f769b72961a390ce091cad4ebf640.mesh", "res://.godot/imported/dressing_table.obj-f15f769b72961a390ce091cad4ebf640.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

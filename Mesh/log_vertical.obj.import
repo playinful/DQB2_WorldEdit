@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://r3w2gvpav8bl"
+path="res://.godot/imported/log_vertical.obj-90e9f4a4b9d153e5dff64824c8249456.mesh"
+
+[deps]
+
+files=["res://.godot/imported/log_vertical.obj-90e9f4a4b9d153e5dff64824c8249456.mesh"]
+
+source_file="res://Mesh/log_vertical.obj"
+dest_files=["res://.godot/imported/log_vertical.obj-90e9f4a4b9d153e5dff64824c8249456.mesh", "res://.godot/imported/log_vertical.obj-90e9f4a4b9d153e5dff64824c8249456.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

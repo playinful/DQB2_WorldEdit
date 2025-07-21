@@ -1,8 +1,0 @@
-[gd_resource type="Resource" script_class="DecorationMeshResource" load_steps=2 format=3 uid="uid://bk62wi1e2wewu"]
-
-[ext_resource type="Script" uid="uid://jjrmk3nartuc" path="res://Scripts/Classes/PropMeshResource.cs" id="1_ec7vy"]
-
-[resource]
-script = ExtResource("1_ec7vy")
-Offset = Vector3(0, 0, 0)
-metadata/_custom_type_script = ExtResource("1_ec7vy")

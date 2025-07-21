@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bq72id8k7ehj8"
+path="res://.godot/imported/rocky_column.obj-4c5902e02245ea336ec0fbfc442bbca4.mesh"
+
+[deps]
+
+files=["res://.godot/imported/rocky_column.obj-4c5902e02245ea336ec0fbfc442bbca4.mesh"]
+
+source_file="res://Mesh/rocky_column.obj"
+dest_files=["res://.godot/imported/rocky_column.obj-4c5902e02245ea336ec0fbfc442bbca4.mesh", "res://.godot/imported/rocky_column.obj-4c5902e02245ea336ec0fbfc442bbca4.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

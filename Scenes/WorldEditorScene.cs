@@ -1,9 +1,10 @@
 using EyeOfRubiss.Info;
 using EyeOfRubiss.Nodes;
-using EyeOfRubiss.Resources;
 using Godot;
 using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 using System.Reflection.Metadata;
 using System.Text.RegularExpressions;
 using System.Threading;
@@ -14,107 +15,78 @@ namespace EyeOfRubiss.Scenes
 {
 	public partial class WorldEditorScene : Node3D
 	{
-		private VoxelTerrain _VoxelTerrain;
+		[ExportGroup("Scene Elements")]
+		[Export] private VoxelTerrain _VoxelTerrain;
 		private VoxelTool _VoxelTool;
-		private Node3D _ResidentLayer;
-		private Node3D _ObjectLayer;
+		[Export] private VoxelTerrain _VoxelTerrain_PropShells;
+		private VoxelTool _VoxelTool_PropShells;
+		[Export] private Node3D _ResidentLayer;
+		[Export] private PropGridHacky _PropGrid;
 
-		private CameraController _CameraController;
+		[Export] private CameraController _CameraController;
 
-		private CanvasItem _DebugInfoContainer;
-		private FPSLabel _FPSLabel;
-		private Label _PointedVoxelLabel;
-		private StatusLabel _StatusLabel;
+		[Export] private CanvasItem _DebugInfoContainer;
+		[Export] private FPSLabel _FPSLabel;
+		[Export] private Label _PointedVoxelLabel;
+		[Export] private StatusLabel _StatusLabel;
+		[Export] private LineEdit _CommandParser;
 
-		public bool AutomaticallyGenerateBedrock = true;
+		[ExportGroup("Settings")]
+		[Export] public bool AutomaticallyGenerateBedrock = true;
 
-		public BrushType BrushPrimary = BrushType.Pencil;
-		public BrushType BrushSecondary = BrushType.Erase;
-		public BrushType BrushTertiary = BrushType.Eyedropper;
-		public ushort BrushBlock = 1;
+		[Export] public BrushType BrushPrimary = BrushType.Pencil;
+		[Export] public BrushType BrushSecondary = BrushType.Erase;
+		[Export] public BrushType BrushTertiary = BrushType.Eyedropper;
+		[Export] public ushort BrushBlock = 1;
+		[Export] public ushort BrushProp = 1;
 
-		// Called when the node enters the scene tree for the first time.
+		private StageData _StageData;
+
+		public bool ShowDebugInfo { get; set; } = true;
+		public bool ShowFps { get; set; } = true;
+		public bool ShowTerrain { get; set; } = true;
+		public bool ShowPropShells { get; set; } = false;
+		public bool ShowProps { get; set; } = true;
+		public bool ShowNPCs { get; set; } = true;
+		public bool ShowPlayer { get; set; } = true;
+
 		public override void _Ready()
 		{
-			_OnReadyVariables();
-		}
-		private void _OnReadyVariables()
-		{
-			_VoxelTerrain = GetNode<VoxelTerrain>("VoxelTerrain");
 			_VoxelTool = _VoxelTerrain.GetVoxelTool();
-			_VoxelTool.Channel = VoxelBuffer.ChannelId.ChannelType;
-			_ResidentLayer = GetNode<Node3D>("ResidentLayer");
-			_ObjectLayer = GetNode<Node3D>("ObjectLayer");
-
-			_CameraController = GetNode<CameraController>("Camera3D");
-
-			_DebugInfoContainer = GetNode<CanvasItem>("HUD/DebugInfo");
-			_FPSLabel = GetNode<FPSLabel>("HUD/FPSLabel");
-			_PointedVoxelLabel = GetNode<Label>("HUD/DebugInfo/PointedVoxelLabel");
-			_StatusLabel = GetNode<StatusLabel>("HUD/StatusLabel");
+			_VoxelTool_PropShells = _VoxelTerrain_PropShells.GetVoxelTool();
 		}
 
-        public override void _Process(double delta)
-        {
-            
-        }
-        public override void _PhysicsProcess(double delta)
-        {
-            UpdatePointedVoxelLabel();
-        }
-        public override void _Input(InputEvent @event)
-        {
-			if (@event.IsActionPressed(Constants.Controls.CURSOR_RELEASE))
-				ReleaseCursor();
-
-			if (_CameraController.Enabled)
-			{
-				if (@event.IsPressed() && @event is InputEventMouseButton mouseButtonEvent) // TODO probably change this to action
-				{
-					if (mouseButtonEvent.ButtonIndex == MouseButton.Left)
-						DoBrush(GetPointedVoxel(), BrushPrimary);
-					if (mouseButtonEvent.ButtonIndex == MouseButton.Right)
-						DoBrush(GetPointedVoxel(), BrushSecondary);
-					if (mouseButtonEvent.ButtonIndex == MouseButton.Middle)
-						DoBrush(GetPointedVoxel(), BrushTertiary);
-				}
-			}
-
-			if (@event.IsPressed() && @event is InputEventMouseButton mouseButtonEvent2 && mouseButtonEvent2.ButtonIndex == MouseButton.Left) // TODO probably change this to action
-				CaptureCursor();
-        }
-
-		public void LoadWorld(StageData stageData)
+		public override void _Process(double delta)
 		{
-            _VoxelTerrain.Stream = new VoxelStreamDQB2()
-            {
-                DQB2StageData = stageData
-            };
-			
-			if (CommonData.Instance is not null && CommonData.Instance.IsLoaded)
-				CreateResidents(CommonData.Instance);
+
 		}
-		public void UnloadWorld()
+		public override void _PhysicsProcess(double delta)
 		{
-			_VoxelTerrain.Stream = null;
-			DestroyResidents();
+			UpdatePointedVoxelLabel();
 		}
 
+		public VoxelRaycastResult GetPointedVoxel()
+		{
+			Vector3 origin = _CameraController.GlobalTransform.Origin;
+			Vector3 forward = -_CameraController.Transform.Basis.Z.Normalized();
+			VoxelRaycastResult hit = _VoxelTool.Raycast(origin, forward, 4096);
+			return hit;
+		}
 		private void UpdatePointedVoxelLabel()
 		{
 			if (_PointedVoxelLabel is null)
 				return;
-			
+
 			VoxelRaycastResult result = GetPointedVoxel();
 			if (result is not null)
 			{
-				Vector3I friendlyPos = result.Position + new Vector3I(1024, 0, 1024);
+				Vector3I friendlyPos = result.Position;// - new Vector3I(1024, 0, 1024);
 
 				//Vector3I indexPos = StageData.Instance.EuclidPosToIndex(result.Position);
 
-				StageData.BlockInstance block = StageData.Instance.GetBlockAtPosition(result.Position);
+				StageData.BlockInstance block = _StageData.GetBlockAtPosition(result.Position);
 
-				_PointedVoxelLabel.Text = 
+				_PointedVoxelLabel.Text =
 					$"Targeted block: {(block is not null ? BlockInfo.Get(block.BlockID).Name + $" [{block.BlockID}]" : "UNKNOWN")}\n" +
 					$"X: {friendlyPos.X}, Y: {friendlyPos.Y}, Z: {friendlyPos.Z}\n" +
 					//$"Chunk: {indexPos.X}, Layer: {indexPos.Y}, Tile: {indexPos.Z}\n" +
@@ -127,17 +99,98 @@ namespace EyeOfRubiss.Scenes
 			}
 		}
 
+
+
+		#region Display options
 		public void ChangeFPSDisplay(bool show)
 		{
+			ShowFps = show;
 			_FPSLabel.Visible = show;
 		}
 		public void ChangeDebugInfoDisplay(bool show)
 		{
+			ShowDebugInfo = show;
 			_DebugInfoContainer.Visible = show;
 		}
 		public void ChangeNPCDisplay(bool show)
 		{
+			ShowNPCs = show;
 			_ResidentLayer.Visible = show;
+		}
+		public void ChangeTerrainDisplay(bool show)
+		{
+			ShowTerrain = show;
+			_VoxelTerrain.Stream = show ? new VoxelStreamDQB2(_StageData) : null;
+			//_VoxelTerrain.Visible = show;
+		}
+		public void ChangePlayerDisplay(bool show)
+		{
+			ShowPlayer = show;
+			throw new NotImplementedException();// TODO
+		}
+		public void ChangePropDisplay(bool show)
+		{
+			ShowProps = show;
+			_PropGrid.Visible = show;
+		}
+		public void ChangePropShellDisplay(bool show)
+		{
+			ShowPropShells = show;
+			_VoxelTerrain_PropShells.Stream = show ? new VoxelStreamDQB2(_StageData, propsOnly: true) : null;
+		}
+		#endregion
+
+		#region Scene setup
+		public void LoadWorld(StageData stageData)
+		{
+			_StageData = stageData;
+
+			if (ShowTerrain)
+				_VoxelTerrain.Stream = new VoxelStreamDQB2(stageData);
+			if (ShowPropShells)
+				_VoxelTerrain_PropShells.Stream = new VoxelStreamDQB2(stageData, propsOnly: true);
+
+			// TEST
+			/*foreach (StageData.Prop prop in stageData.Props)
+			{
+				if (!prop.Exists() || prop.ChunkIndex < 64 * 32)
+					continue;
+
+                _VoxelTerrain.AddChild(new Label3D()
+				{
+					Text = $"{prop.PropID}",
+					Position = prop.GetPosition() + Vector3.One * 0.5f,
+					Billboard = BaseMaterial3D.BillboardModeEnum.Enabled,
+					NoDepthTest = true
+                });
+			}*/
+			CreateProps(stageData);
+
+			if (CommonData.Instance is not null && CommonData.Instance.IsLoaded)
+				CreateResidents(CommonData.Instance);
+		}
+		public void UnloadWorld()
+		{
+			_VoxelTerrain.Stream = null;
+			_VoxelTerrain_PropShells.Stream = null;
+			DestroyResidents();
+			DestroyProps();
+		}
+
+		public void CreateProps(StageData stageData)
+		{
+			foreach (StageData.Prop prop in stageData.GetProps())
+			{
+				if (prop.Exists() && prop.GetInfo().MeshID is int meshId)
+				{
+					_PropGrid.SetCellItemDelegated(prop.GetPosition(), meshId, prop.GetGridMapRotation());
+				}
+			}
+		}
+		public void DestroyProps()
+		{
+			_PropGrid.Clear();
+			_PropGrid.ClearSubGrid();
 		}
 
 		public void CreateResident(CommonData.Resident resident)
@@ -167,20 +220,13 @@ namespace EyeOfRubiss.Scenes
 		}
 		public void CreateResidents(CommonData commonData)
 		{
-			if (StageData.Instance is null || !StageData.Instance.IsLoaded)
+			if (_StageData is null || !_StageData.IsLoaded)
 				return;
 
 			DestroyResidents();
-			foreach (CommonData.Resident resident in commonData.Residents)
+			foreach (CommonData.Resident resident in commonData.GetResidents())
 			{
-				if (resident.CurrentIsland == StageData.Instance.IslandID)
-				{
-					CreateResident(resident);
-				}
-			}
-			foreach (CommonData.Resident resident in commonData.ImportantResidents)
-			{
-				if (resident.CurrentIsland == StageData.Instance.IslandID)
+				if (resident.CurrentIsland == _StageData.IslandID)
 				{
 					CreateResident(resident);
 				}
@@ -191,14 +237,49 @@ namespace EyeOfRubiss.Scenes
 			_ResidentLayer.QueueFreeAllChildren();
 		}
 
-		public VoxelRaycastResult GetPointedVoxel()
+		public void Reload()
 		{
-			Vector3 origin = _CameraController.GlobalTransform.Origin;
-			Vector3 forward = -_CameraController.Transform.Basis.Z.Normalized();
-			VoxelRaycastResult hit = _VoxelTool.Raycast(origin, forward, 4096);
-			return hit;
+			if (_StageData is null || !_StageData.IsLoaded)
+				return;
+
+			if (ShowTerrain)
+				_VoxelTerrain.Stream = new VoxelStreamDQB2(_StageData);
+			if (ShowPropShells)
+				_VoxelTerrain_PropShells.Stream = new VoxelStreamDQB2(_StageData, propsOnly: true);
+			DestroyProps();
+			CreateProps(_StageData);
 		}
-		
+		#endregion
+
+		#region Control handling
+		public override void _Input(InputEvent @event)
+		{
+			if (@event.IsActionPressed(Constants.Controls.CURSOR_RELEASE))
+				ReleaseCursor();
+
+			if (_CameraController.Enabled)
+			{
+				if (@event.IsPressed() && @event is InputEventMouseButton mouseButtonEvent) // TODO probably change this to action
+				{
+					if (mouseButtonEvent.ButtonIndex == MouseButton.Left)
+						DoBrush(GetPointedVoxel(), BrushPrimary);
+					if (mouseButtonEvent.ButtonIndex == MouseButton.Right)
+						DoBrush(GetPointedVoxel(), BrushSecondary);
+					if (mouseButtonEvent.ButtonIndex == MouseButton.Middle)
+						DoBrush(GetPointedVoxel(), BrushTertiary);
+				}
+			}
+
+			if (@event.IsPressed() && @event is InputEventMouseButton mouseButtonEvent2 && mouseButtonEvent2.ButtonIndex == MouseButton.Left) // TODO probably change this to action
+				CaptureCursor();
+
+			if (@event.IsActionPressed(Constants.Controls.RESET_CAMERA))
+			{
+				_CameraController.Position = Vector3.Up * 96;
+				_CameraController.Rotation = Vector3.Zero;
+			}
+		}
+
 		public void CaptureCursor()
 		{
 			Input.MouseMode = Input.MouseModeEnum.Captured;
@@ -210,17 +291,38 @@ namespace EyeOfRubiss.Scenes
 			_CameraController.Enabled = false;
 		}
 
+		public void MoveCamera(Vector3 target)
+		{
+			_CameraController.Position = target;
+		}
+		#endregion
+
+		#region Stage editing
 		public void SetBlock(Vector3I position, ushort blockId, StageData.BlockInstance.ChiselType? chiselType = null, bool? playerPlaced = null)
 		{
-			if (StageData.Instance is null || !StageData.Instance.IsLoaded)
+			if (_StageData is null || !_StageData.IsLoaded)
 				return;
-			// TODO
 
-			bool success = StageData.Instance.SetBlockAtPosition(position, blockId, chiselType, playerPlaced, true);
+			bool success = _StageData.SetBlockAtPosition(position, blockId, chiselType, playerPlaced, true);
 			if (success)
 			{
-				ulong voxelId = BlockInfo.Get(blockId).VoxelID;
-				_VoxelTerrain.GetVoxelTool().SetVoxel(position, voxelId);
+				BlockInfo blockInfo = BlockInfo.Get(blockId);
+
+				if (ShowTerrain)
+				{
+					ulong voxelId = blockInfo.VoxelID;
+					_VoxelTool.SetVoxel(position, voxelId);
+				}
+				if (ShowPropShells)
+				{
+					ulong voxelId = (ulong)blockInfo.PropShell;
+					_VoxelTerrain_PropShells.GetVoxelTool().SetVoxel(position, voxelId);
+				}
+
+				if (blockInfo.PropShell == PropShell.None)
+				{
+					DeleteProp(position);
+				}
 
 				if (AutomaticallyGenerateBedrock && blockId != Constants.BLOCK_AIR && position.Y > 0)
 				{
@@ -232,21 +334,103 @@ namespace EyeOfRubiss.Scenes
 				_StatusLabel.PrintMessage("Cannot place blocks out of bounds.");
 			}
 		}
-		public void Builderize(Vector3I position)
+		public void FillCube(Vector3I from, Vector3I to, ushort blockId)
 		{
-			if (StageData.Instance is null || !StageData.Instance.IsLoaded)
+			for (int x = from.X; x < to.X; x++)
+			{
+				for (int y = from.Y; y < to.Y; y++)
+				{
+					for (int z = from.Z; z < to.Z; z++)
+					{
+						SetBlock(new Vector3I(x, y, z), blockId);
+					}
+				}
+			}
+		}
+
+		public void FillRecursive(Vector3I position)
+		{
+			ushort baseBlock = _StageData.GetBlockAtPosition(position).BlockID;
+			FillRecursive(position, baseBlock);
+		}
+		public void FillRecursive(Vector3I position, ushort baseBlock)
+		{
+			if (_StageData.GetBlockAtPosition(position) is not StageData.BlockInstance blockInstance || blockInstance.BlockID != baseBlock)
 				return;
 
-			StageData.BlockInstance blockInstance = StageData.Instance.GetBlockAtPosition(position);
-			blockInstance.PlayerPlaced = true;
+			SetBlock(position, BrushBlock);
+
+			FillRecursive(position + Vector3I.Up, baseBlock);
+			FillRecursive(position + Vector3I.Down, baseBlock);
+			FillRecursive(position + Vector3I.Left, baseBlock);
+			FillRecursive(position + Vector3I.Right, baseBlock);
+			FillRecursive(position + Vector3I.Forward, baseBlock);
+			FillRecursive(position + Vector3I.Back, baseBlock);
+
+			// TODO this breaks for some reason
 		}
-		public void DoEyedropper(Vector3I position)
+
+		public void CreateProp(Vector3I position, ushort propId)
 		{
-			if (StageData.Instance.GetBlockAtPosition(position) is StageData.BlockInstance block)
+			if (_StageData is null || !_StageData.IsLoaded)
+				return;
+
+			// TODO replace with genuine prop shell
+			SetBlock(position, 2047, StageData.BlockInstance.ChiselType.FullBlock, playerPlaced: false);
+			_StageData.AddProp(position, propId);
+
+			PropInfo propInfo = PropInfo.Get(propId);
+			_PropGrid.SetCellItemDelegated(position, propInfo.MeshID ?? -1);
+		}
+		public void DeleteProp(Vector3I position)
+		{
+			// TODO
+		}
+
+		public void Builderize()
+		{
+			if (_StageData is null || !_StageData.IsLoaded)
+				return;
+
+			foreach (StageData.BlockInstance block in _StageData.GetAllBlocks())
 			{
-				SetBrushBlock(block.BlockID);
-				GD.Print($"Set brush block to {BlockInfo.Get(block.BlockID).Name} ({block.BlockID})");
+				if (block.BlockID != 0)
+					block.PlayerPlaced = true; // TODO: what happens if props/liquids are PlayerPlaced?
 			}
+		}
+
+		public void CopyPaste(Vector3I from, Vector3I bounds, Vector3I to)
+		{
+			if (!StageData.HasInstance())
+				return;
+
+			for (int x = 0; x <= bounds.X; x++)
+			{
+				for (int y = 0; y <= bounds.Y; y++)
+				{
+					for (int z = 0; z <= bounds.Z; z++)
+					{
+						Vector3I fromPos = from + new Vector3I(x, y, z);
+						Vector3I toPos = to + new Vector3I(x, y, z);
+						StageData.BlockInstance fromBlock = _StageData.GetBlockAtPosition(fromPos);
+						SetBlock(toPos, fromBlock.BlockID, fromBlock.Chisel, fromBlock.PlayerPlaced);
+					}
+				}
+			}
+
+		}
+		#endregion
+
+		#region Brushes
+		public enum BrushType : int
+		{
+			Erase = 0,
+			Pencil = 1,
+			Fill = 2,
+			Swap = 3,
+			Eyedropper = 5,
+			PropChecker = 6,
+			PropMaker = 7
 		}
 
 		public void SetBrushPrimary(BrushType brush)
@@ -255,11 +439,15 @@ namespace EyeOfRubiss.Scenes
 		}
 		public void SetBrushPrimary(int brush)
 		{
-			SetBrushPrimary((BrushType) brush);
+			SetBrushPrimary((BrushType)brush);
 		}
 		public void SetBrushBlock(ushort block)
 		{
 			BrushBlock = block;
+		}
+		public void SetBrushProp(ushort prop)
+		{
+			BrushProp = prop;
 		}
 
 		public void DoBrush(VoxelRaycastResult result, BrushType brush)
@@ -278,30 +466,209 @@ namespace EyeOfRubiss.Scenes
 				case BrushType.Swap:
 					SetBlock(result.Position, BrushBlock);
 					break;
-				case BrushType.Builderize:
-					Builderize(result.Position);
-					break;
 				case BrushType.Eyedropper:
 					DoEyedropper(result.Position);
 					break;
+				case BrushType.PropChecker:
+					TEST_DoPropChecker(result.Position);
+					break;
+				case BrushType.Fill:
+					FillRecursive(result.Position);
+					break;
+				case BrushType.PropMaker:
+					CreateProp(result.PreviousPosition, BrushProp);
+					break;
 			}
 		}
-
-		public void Refresh()
+		public void DoEyedropper(Vector3I position)
 		{
-			var x = _VoxelTerrain.Stream;
-			_VoxelTerrain.Stream = _VoxelTerrain.Stream;
-			_VoxelTerrain.Stream = x;
+			if (_StageData.GetBlockAtPosition(position) is StageData.BlockInstance block)
+			{
+				SetBrushBlock(block.BlockID);
+				GD.Print($"Set brush block to {BlockInfo.Get(block.BlockID).Name} ({block.BlockID})");
+			}
+		}
+		#endregion
+
+		#region Debug functions
+		public void CountBlocks(string path)
+		{
+
+		}
+		public void CountProps(string path)
+		{
+			Dictionary<ushort, int> propCounts = [];
+
+			foreach (StageData.Prop prop in _StageData.GetProps())
+			{
+				if (prop.PropID == 0)
+					continue;
+
+				if (propCounts.ContainsKey(prop.PropID))
+					propCounts[prop.PropID]++;
+				else
+					propCounts[prop.PropID] = 1;
+			}
+
+			List<string> outlines = [];
+			foreach ((ushort id, int count) in propCounts)
+			{
+				outlines.Add($"{PropInfo.Get(id).Name} [{id}] x {count}");
+			}
+
+			using var file = Godot.FileAccess.Open(path, Godot.FileAccess.ModeFlags.Write);
+			file.StoreString(string.Join('\n', outlines.Order()));
+
+			_StatusLabel.PrintMessage($"Wrote prop counts to {path}.");
+		}
+		public void FindProp(ushort propId)
+		{
+			if (_StageData.GetProps().FirstOrDefault(prop => prop.PropID == propId) is StageData.Prop prop)
+				_StatusLabel.PrintMessage($"Found prop {prop.GetInfo().Name} [{propId}] at ({prop.GetPosition()}).");
+			else
+				_StatusLabel.PrintMessage($"Could not find prop {PropInfo.Get(propId).Name} [{propId}].");
 		}
 
-		public enum BrushType : int
+		public void TEST_DoPropChecker(Vector3I position)
 		{
-			Erase = 0,
-			Pencil = 1,
-			Fill = 2,
-			Swap = 3,
-			Builderize = 4,
-			Eyedropper = 5
+			if (_StageData.GetPropAtPosition(position) is StageData.Prop prop)
+			{
+				_StatusLabel.PrintMessage($"Prop {prop.DataIndex} @ [{prop.GetAddress()}] at position ({position}): {prop.GetInfo().Name} [{prop.PropID}] | Rotation: {(prop.Rotation == 0 ? "North" : (prop.Rotation == 1 ? "West" : (prop.Rotation == 2 ? "South" : "East")))}");
+
+				Window propEditor = GetNode<Window>("%BasicPropEditor");
+
+				if (!propEditor.Visible)
+				{
+					//ReleaseCursor();
+					propEditor.Show();
+				}
+
+				propEditor.GetNode<SpinBox>("VBoxContainer/HBoxContainer1/SpinBox").SetValueNoSignal(prop.PropID);
+				propEditor.GetNode<SpinBox>("VBoxContainer/HBoxContainer1/SpinBox2").SetValueNoSignal(prop.Rotation);
+
+				propEditor.GetNode<SpinBox>("VBoxContainer/HBoxContainer2/SpinBoxX").SetValueNoSignal(position.X);
+				propEditor.GetNode<SpinBox>("VBoxContainer/HBoxContainer2/SpinBoxY").SetValueNoSignal(position.Y);
+				propEditor.GetNode<SpinBox>("VBoxContainer/HBoxContainer2/SpinBoxZ").SetValueNoSignal(position.Z);
+
+				_TEST_selectedprop = prop;
+			}
+			else
+				_StatusLabel.PrintMessage($"No prop found at ({position})");
 		}
+		private StageData.Prop _TEST_selectedprop;
+		public void DoPropEditor(Vector3I position, ushort propId, byte rotation)
+		{
+			_TEST_selectedprop.PropID = propId;
+			_TEST_selectedprop.Rotation = rotation;
+
+			_TEST_selectedprop.X = (byte)(position.X % 32);
+			_TEST_selectedprop.Y = (byte)position.Y;
+			_TEST_selectedprop.Z = (byte)(position.Z % 32);
+
+			_TEST_selectedprop.Chunk = (ushort)(position.Z / 32 * 64 + position.X / 32);
+		}
+
+		public void TEST_Mood()
+		{
+			List<string> blocks = [];
+			List<string> props = [];
+			foreach (StageData.Room room in _StageData.GetRooms())
+			{
+				StageData.BlockInstance block = _StageData.GetBlockAtPosition(new Vector3I(room.X, room.Y, room.Z));
+
+				if (block.BlockID == 0)
+					continue;
+
+				if (block.GetInfo().PropShell == PropShell.None)
+				{
+					GD.Print($"{block.GetInfo().Name} [{block.BlockID}]");
+
+					blocks.Add($"{block.BlockID}\t{room.Fanciness - 20}\t{room.Normalness}\t{room.Cuteness}\t{room.Coolness}\t{room.Naturalness - 24}\t{room.Flamboyantness}\t{room.Cheekiness}");
+				}
+				else
+				{
+					StageData.Prop prop = _StageData.GetPropAtPosition(new Vector3I(room.X, room.Y, room.Z));
+
+					if (prop is null)
+					{
+						GD.Print($"Error: No prop at ({room.X}, {room.Y}, {room.Z}). Using block {block.GetInfo().Name} [{block.BlockID}] instead");
+
+						blocks.Add($"{block.BlockID}\t{room.Fanciness - 20}\t{room.Normalness}\t{room.Cuteness}\t{room.Coolness}\t{room.Naturalness - 24}\t{room.Flamboyantness}\t{room.Cheekiness}");
+						continue;
+					}
+
+					GD.Print($"{prop.GetInfo().Name} [{prop.PropID}]");
+
+					props.Add($"{prop.PropID}\t{room.Fanciness - 20}\t{room.Normalness}\t{room.Cuteness}\t{room.Coolness}\t{room.Naturalness - 24}\t{room.Flamboyantness}\t{room.Cheekiness}");
+				}
+			}
+
+			if (Godot.FileAccess.FileExists("res://mood_blocks.txt"))
+			{
+				using var file = Godot.FileAccess.Open("res://mood_blocks.txt", Godot.FileAccess.ModeFlags.ReadWrite);
+				List<string> before = [.. file.GetAsText().Split('\n')];
+				blocks = [.. before, .. blocks];
+				file.StoreString(string.Join('\n', blocks));
+			}
+			else
+			{
+				using var file = Godot.FileAccess.Open("res://mood_blocks.txt", Godot.FileAccess.ModeFlags.Write);
+				file.StoreString(string.Join('\n', blocks));
+			}
+
+			if (Godot.FileAccess.FileExists("res://mood_props.txt"))
+			{
+				using var file = Godot.FileAccess.Open("res://mood_props.txt", Godot.FileAccess.ModeFlags.ReadWrite);
+				List<string> before = [.. file.GetAsText().Split('\n')];
+				props = [.. before, .. props];
+				file.StoreString(string.Join('\n', props));
+			}
+			else
+			{
+				using var file = Godot.FileAccess.Open("res://mood_props.txt", Godot.FileAccess.ModeFlags.Write);
+				file.StoreString(string.Join('\n', props));
+			}
+		}
+		public void TEST_Mood2()
+		{
+			int i = 0;
+			foreach (StageData.Room room in _StageData.GetRooms())
+			{
+				i++;
+				GD.Print($"Room {i} | Fanciness: {room.Fanciness} | Normal: {room.Normalness} | Cute: {room.Cuteness} | Cool: {room.Coolness} | Natural: {room.Naturalness} | Flamboyant: {room.Flamboyantness} | Cheeky: {room.Cheekiness}");
+			}
+		}
+		public void TEST_Mood3()
+		{
+			List<int> ids = [];
+			foreach (string line in Godot.FileAccess.GetFileAsString("res://incense.txt").Split("\r\n"))
+			{
+				ids.Add(line.ToInt());
+			}
+
+			for (int i = 0; i < StageData.Room.MAXIMUM && i < ids.Count; i++)
+			{
+				StageData.Room room = _StageData.GetRoom(i);
+				StageData.Prop prop = _StageData.GetPropAtPosition(room.GetPosition());
+
+				prop.PropID = (ushort)ids[i];
+				prop.Rotation = 3;
+			}
+		}
+		public void TEST_Mood4()
+		{
+			List<int> ids = [];
+			foreach (string line in Godot.FileAccess.GetFileAsString("res://incense.txt").Split("\r\n"))
+			{
+				ids.Add(line.ToInt());
+			}
+
+			for (int i = 0; i < StageData.Room.MAXIMUM && i < ids.Count; i++)
+			{
+				StageData.Room room = _StageData.GetRoom(i);
+				SetBlock(room.GetPosition(), (ushort)ids[i]);
+			}
+		}
+		#endregion
 	}
 }

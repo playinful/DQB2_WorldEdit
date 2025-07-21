@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cc4qt7rxwqce6"
+path="res://.godot/imported/big_border_boulder.obj-0c3067caf739a4e8b2edf155b71d8a1c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/big_border_boulder.obj-0c3067caf739a4e8b2edf155b71d8a1c.mesh"]
+
+source_file="res://Mesh/big_border_boulder.obj"
+dest_files=["res://.godot/imported/big_border_boulder.obj-0c3067caf739a4e8b2edf155b71d8a1c.mesh", "res://.godot/imported/big_border_boulder.obj-0c3067caf739a4e8b2edf155b71d8a1c.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

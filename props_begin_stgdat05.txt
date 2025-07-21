@@ -1,0 +1,132 @@
+¿ [2435] x 18
+¿Soul Sigil Tablet [2256] x 13
+¿Sun Sigil Tablet [2255] x 7
+Barrel [53] x 8
+Bent Pipe Bottom Left [2217] x 23
+Bent Pipe Bottom Right [2218] x 1
+Bent Pipe Top Left [2220] x 3
+Bent Pipe Top Right [2219] x 15
+Big Bad Bottom Teeth [2050] x 10
+Big Bolt [1329] x 19
+Big Bramble [1084] x 6
+Blooming Poxglove [2157] x 13
+Bones [124] x 35
+Bonfire [80] x 2
+Bramble [1085] x 14
+Broken Barrel [334] x 6
+Broken Barricade [50] x 3
+Broken Citadel Wall [1359] x 785
+Broken Track [622] x 5
+Budding Poxglove [2158] x 25
+Candle [634] x 3
+Cannonball [1138] x 1
+Capsized Crate [1433] x 6
+Cell Door [71] x 1
+Cell Wall [1140] x 60
+Citadel Belvedere [2243] x 4
+Citadel Bracket [2210] x 989
+Citadel Capping [2248] x 52
+Citadel Column Capital [2228] x 26
+Citadel Column Midsection [2227] x 181
+Citadel Column Pedestal [2226] x 48
+Citadel Column Plinth [2230] x 199
+Citadel Coping [2247] x 180
+Citadel Corner Capital [2231] x 516
+Citadel Corner Foundation [2233] x 568
+Citadel Corner Midsection [2232] x 909
+Citadel Creature Carving [1398] x 677
+Citadel Cross Carving [1402] x 23
+Citadel Fanlight [2229] x 124
+Citadel Handrail [2246] x 476
+Citadel Merlon [2239] x 2
+Citadel Spear Symbol [1401] x 4
+Citadel Steps [2364] x 1149
+Citadel Wall Battlement [2234] x 1312
+Citadel Wall Buttress [2235] x 2138
+Citadel Wall Rubble [2363] x 72
+Citadel Window Arch [2236] x 80
+Citadel Window Midsection [2237] x 45
+Citadel Window Sill [2238] x 79
+Coffer [1116] x 1
+Crate [52] x 4
+Crowned Citadel Column [2240] x 549
+Curved Track [184] x 1
+Dead Tree [42] x 2
+Dilapidated Crate [47] x 9
+Doors of Doom [2371] x 2
+Downward-Pointing Vile Vines [2337] x 69
+Enormous Eyeball [2045] x 8
+False Idol [1394] x 64
+Fiendish Face [1399] x 145
+Floating Fragments [2155] x 248
+Forge [151] x 1
+Freakish Fin [2103] x 45
+Frogstool [21] x 17
+Furnace [161] x 2
+Golden Brazier [998] x 98
+Hargon’s Standard [1328] x 2
+Hargon’s Throne [1396] x 2
+Helm [1014] x 1
+Horizontal Pipe [2215] x 109
+Huge Horn [44] x 30
+Humongous Horn [2048] x 25
+Infernal Ivy [168] x 401
+Infernal Workbench (Indestructible) [2374] x 1
+Joint Pipe Horizontal Bottom [2222] x 4
+Joint Pipe Vertical Left [2242] x 1
+Knight Oddments [1134] x 5
+Ladder [60] x 29
+Light Box [1353] x 14
+Light Box [Red] [1452] x 167
+Long Vile Vines [2161] x 312
+Malroth’s Oaken Club [2176] x 1
+Medicinal Shrub [3] x 5
+Null [1164] x 1
+Null [1165] x 1
+Null [2154] x 14
+Old Book [162] x 1
+Pebbles [1130] x 6
+Peculiar Pillar [1400] x 43
+Plain-Pane Leadlight [1352] x 21
+Portcullis [1340] x 2
+Porthole [1142] x 1
+Pot [1412] x 1
+Pot [54] x 1
+Pot Plant [Red] [1692] x 4
+Rope [638] x 3
+Rose [1080] x 91
+Rose Leaves [1079] x 27
+Scarletulip [1445] x 49
+Sconce [1296] x 192
+Sconce [79] x 50
+Shadowgrass [26] x 243
+Simple Small Table [597] x 1
+Sloped Track [185] x 1
+Small Stones [122] x 30
+Small Vile Vines [2160] x 228
+Spider Web [623] x 15
+Splinters [1131] x 22
+Straight Track [183] x 21
+Straw Mattress [97] x 5
+Swabbing Tools [1141] x 1
+Tainted Glass Arch [1367] x 700
+Tainted Glass Midsection [1368] x 1657
+Tainted Glass Sill [1369] x 723
+Terrible Talon [2044] x 98
+Titanic Top Teeth [2049] x 12
+Toppled Citadel Column [2225] x 3
+Torch [78] x 4
+Treasure Chest [113] x 11
+Tree Stump [145] x 1
+Unholy Altar [1366] x 1
+Upward-Pointing Vile Vines [2338] x 6
+Vertical Pipe [2216] x 26
+Vertical Vile Vines [2339] x 72
+Wall Lamp [82] x 4
+Wide Vile Vines [2159] x 143
+Wooden Door [69] x 1
+Wooden Fencing [594] x 3
+Wooden Grating [1139] x 168
+Wooden Handrail [1001] x 10
+Wooden Steps [207] x 25
+Worn-Out Workbench [1002] x 1

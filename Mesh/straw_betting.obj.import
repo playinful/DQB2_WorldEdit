@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bnyro2e26ni5b"
+path="res://.godot/imported/straw_betting.obj-427d575c0b12db84f3741fe8580fa8b0.mesh"
+
+[deps]
+
+files=["res://.godot/imported/straw_betting.obj-427d575c0b12db84f3741fe8580fa8b0.mesh"]
+
+source_file="res://Mesh/straw_betting.obj"
+dest_files=["res://.godot/imported/straw_betting.obj-427d575c0b12db84f3741fe8580fa8b0.mesh", "res://.godot/imported/straw_betting.obj-427d575c0b12db84f3741fe8580fa8b0.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://da75ooovmrism"
+path="res://.godot/imported/glass_sliding_door.obj-c0e2c349c6d2a453a08f3db4a2c3ac07.mesh"
+
+[deps]
+
+files=["res://.godot/imported/glass_sliding_door.obj-c0e2c349c6d2a453a08f3db4a2c3ac07.mesh"]
+
+source_file="res://Mesh/glass_sliding_door.obj"
+dest_files=["res://.godot/imported/glass_sliding_door.obj-c0e2c349c6d2a453a08f3db4a2c3ac07.mesh", "res://.godot/imported/glass_sliding_door.obj-c0e2c349c6d2a453a08f3db4a2c3ac07.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

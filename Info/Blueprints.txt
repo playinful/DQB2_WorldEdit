@@ -1,0 +1,7 @@
+01 = research room
+02 = ballista barricade
+03 = power tower 1
+
+3C = red blueprint
+3D = blue print
+3E = green? print

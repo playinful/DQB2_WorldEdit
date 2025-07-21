@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dic0w7tyy5qh"
+path="res://.godot/imported/ship.obj-200c871d8c6ab797be4a83de806011bf.mesh"
+
+[deps]
+
+files=["res://.godot/imported/ship.obj-200c871d8c6ab797be4a83de806011bf.mesh"]
+
+source_file="res://Mesh/ship.obj"
+dest_files=["res://.godot/imported/ship.obj-200c871d8c6ab797be4a83de806011bf.mesh", "res://.godot/imported/ship.obj-200c871d8c6ab797be4a83de806011bf.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

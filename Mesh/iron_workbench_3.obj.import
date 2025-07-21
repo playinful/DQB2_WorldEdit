@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cnnhkqyuuk67x"
+path="res://.godot/imported/iron_workbench_3.obj-be4f9dad1e4d4414578b4132f41f693e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/iron_workbench_3.obj-be4f9dad1e4d4414578b4132f41f693e.mesh"]
+
+source_file="res://Mesh/iron_workbench_3.obj"
+dest_files=["res://.godot/imported/iron_workbench_3.obj-be4f9dad1e4d4414578b4132f41f693e.mesh", "res://.godot/imported/iron_workbench_3.obj-be4f9dad1e4d4414578b4132f41f693e.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

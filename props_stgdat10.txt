@@ -1,0 +1,141 @@
+Banner of Hargon [1037] x 2
+Barrel [53] x 56
+Barricade [59] x 14
+Big Rock [123] x 13
+Bones [124] x 48
+Bonfire [80] x 3
+Brazier [85] x 56
+Broken Barrel [334] x 16
+Broken Barricade [50] x 109
+Broken Castle Wall [1357] x 144
+Broken Citadel Wall [1359] x 7
+Broken Masonry [348] x 10
+Broken Stone Wall [1360] x 241
+Buttress [75] x 1
+Capsized Crate [1433] x 7
+Cell Door [71] x 15
+Cell Doors [982] x 1
+Cell Wall [1140] x 1083
+Ceramic Sconce [1109] x 18
+Chains [126] x 15
+Citadel Bracket [2210] x 445
+Citadel Capping [2248] x 14
+Citadel Coping [2247] x 87
+Citadel Corner Capital [2231] x 71
+Citadel Corner Foundation [2233] x 112
+Citadel Corner Midsection [2232] x 141
+Citadel Creature Carving [1398] x 188
+Citadel Cross Carving [1402] x 7
+Citadel Fanlight [2229] x 5
+Citadel Handrail [2246] x 66
+Citadel Steps [2364] x 110
+Citadel Wall Battlement [2234] x 210
+Citadel Wall Buttress [2235] x 376
+Coffer [1116] x 2
+Colossal Crag [351] x 7
+Crag [352] x 9
+Crate [52] x 13
+Crowned Citadel Column [2240] x 281
+Dilapidated Crate [47] x 190
+Dragon Bones [125] x 1
+Driftlumber [330] x 2
+Driftwood [331] x 6
+Dry Ivy [342] x 364
+Evil Idol [132] x 8
+False Idol [1394] x 15
+Fiendish Face [1399] x 39
+Firewood [1122] x 13
+Flat Wooden Roofing [1099] x 71
+Frogstool [21] x 2
+Golden Brazier [998] x 25
+Hargon’s Standard [1328] x 5
+Helm [1014] x 1
+Horizontal Log [1095] x 1198
+Horizontal Log Cap [1493] x 8
+Ladder [60] x 44
+Light Box [Red] [1452] x 51
+Little Lock [74] x 10
+Log Wall Corner [1097] x 107
+Mining Tools [1275] x 1
+Mud-Brick Wall Rubble [1241] x 5
+Null [1165] x 1
+Ornamental Spears [636] x 6
+Pebble Pile [340] x 31
+Pebbles [1130] x 128
+Peculiar Pillar [1400] x 9
+Picket Fencing [White] [654] x 16
+Portcullis [1340] x 1
+Pot [2769] x 4
+Pot [54] x 8
+Pretty Pillar [117] x 2
+Rock Pile [1278] x 16
+Rope [638] x 8
+Ropy Horizontal Log [1438] x 104
+Ropy Vertical Log [1437] x 193
+Sack of Wheat [1124] x 1
+Sandwort [15] x 131
+Scallywinkle [328] x 68
+Scarecrow [621] x 3
+Sconce [1296] x 27
+Sconce [79] x 129
+Seaside Seaweed [332] x 7
+Sewing Station (Skelkatraz) [1492] x 1
+Sharpened Log [1305] x 201
+Ship [2517] x 2
+Ship Part A [967] x 6
+Ship Part B [968] x 4
+Ship Part C [969] x 4
+Ship Part D [970] x 2
+Ship Part E [971] x 2
+Ship Part F [972] x 2
+Ship Part G [973] x 8
+Ship Part H [974] x 3
+Ship Part I [975] x 3
+Ship Part J [976] x 2
+Ship Part K [977] x 7
+Ship Part L [978] x 4
+Ship Part M [980] x 6
+Ship Part N [981] x 3
+Ship Part O [1327] x 4
+Ship Part P [2173] x 4
+Ship Part Q [2174] x 10
+Ship Part R [2518] x 2
+Ship Part S [2519] x 4
+Ship Part T [2520] x 2
+Ship Part U [2521] x 2
+Signpost [57] x 1
+Simple Bench [602] x 1
+Simple Small Table [597] x 3
+Simple Stool [596] x 5
+Sizeable Stalagmite [1286] x 13
+Small Stones [122] x 357
+Smashing Sign [1003] x 2
+Spider Web [623] x 17
+Spike Trap [135] x 73
+Splinters [1131] x 55
+Stalagmites [1287] x 17
+Starfish [335] x 84
+Stone Capping [120] x 14
+Stone Coping [119] x 31
+Stone Handrail [1000] x 13
+Stone Pot [1260] x 1
+Stone Steps [61] x 222
+Stone Window [68] x 1
+Storage Sack [984] x 1
+Straw Mattress [97] x 11
+Stuffed Hammerhood [247] x 105
+Swabbing Tools [1141] x 2
+Tainted Glass Arch [1367] x 149
+Tainted Glass Midsection [1368] x 154
+Tainted Glass Sill [1369] x 151
+Tattered Tent [51] x 1
+Torch [78] x 1
+Treasure Chest [113] x 1
+Unknown [3603] x 3
+Vertical Log [1096] x 861
+Watchfire [643] x 1
+Wooden Door [69] x 1
+Wooden Fencing [594] x 338
+Wooden Grating [1139] x 630
+Wooden Handrail [1001] x 24
+Wooden Steps [207] x 94

@@ -1,0 +1,244 @@
+¿ [2365] x 1
+Animal Bones [1086] x 3
+Anvil [265] x 1
+Babs’s Billboard [1263] x 1
+Bar Counter [227] x 1
+Barrel [53] x 63
+Barricade [59] x 1
+Big Bolt [1329] x 203
+Big Bramble [1084] x 9
+Big Palm Tree [555] x 4
+Big Rock [123] x 258
+Bigonia [13] x 21
+Bones [124] x 35
+Bonfire [80] x 10
+Boogie Board [1840] x 5
+Bookcase [101] x 3
+Bottles [87] x 9
+Bramble [1085] x 5
+Brazier [85] x 443
+Broken Barrel [334] x 38
+Broken Barricade [50] x 35
+Broken Citadel Wall [1359] x 129
+Broken Masonry [348] x 51
+Broken Stone Wall [1360] x 492
+Broken Track [622] x 65
+Broken Vault Wall [1240] x 1968
+Buggy Buggy [164] x 1
+Builder’s Bell [545] x 1
+Buried Rockbomb [1276] x 20
+Burning Rock [965] x 12
+Cactail [1154] x 6
+Cactiball [2346] x 2
+Cactus Crown [17] x 1236
+Cactus Trunk [18] x 3743
+Candle [634] x 1
+Candlestick [83] x 5
+Capsized Crate [1433] x 6
+Carafe Collection [1250] x 8
+Cask [229] x 7
+Chain [1841] x 539
+Citadel Belvedere [2243] x 4
+Citadel Bracket [2210] x 214
+Citadel Capping [2248] x 2
+Citadel Column Capital [2228] x 31
+Citadel Column Midsection [2227] x 73
+Citadel Column Pedestal [2226] x 38
+Citadel Corner Capital [2231] x 31
+Citadel Corner Midsection [2232] x 16
+Citadel Handrail [2246] x 28
+Citadel Steps [2364] x 58
+Classical Column Capital [800] x 91
+Classical Column Midsection [349] x 155
+Classical Column Pedestal [350] x 105
+Cloth Sacks [1113] x 2
+Clover Carving [111] x 1
+Cocktail Shaker [826] x 3
+Column [118] x 2
+Community Chest [626] x 6
+Connecting Counter [1419] x 1
+Connecting Window [1310] x 26
+Connecting Window [1314] x 16
+Connecting Window [1318] x 12
+Connecting Window [1324] x 5
+Coralily [4] x 19
+Corner Counter [1257] x 6
+Cotton Plant [9] x 16
+Crate [52] x 9
+Crested Viper Fountain [2357] x 1
+Crockery [88] x 3
+Curtain [647] x 30
+Curved Track [184] x 43
+Daffodaisy [5] x 7
+Dartboard [1025] x 3
+Deckchair [1033] x 3
+Diagonal Fencing [58] x 11
+Dilapidated Crate [47] x 239
+Dining Table [93] x 8
+Dressing Table [89] x 2
+Dry Ivy [342] x 221
+Dumb-Bells [238] x 2
+Earth Pile [1277] x 26
+Evil Idol [132] x 10
+Fiddleheads [1088] x 2
+Firewood [1122] x 5
+Flat Wooden Roofing [1099] x 73
+Folding Screen [1370] x 7
+Forge [151] x 2
+Fountain [199] x 4
+Frogstool [21] x 163
+Frying Pan [590] x 4
+Full Flagon [1251] x 16
+Fun-Sized Fountain [1245] x 5
+Fungusbord [1253] x 1
+Gladiolus [608] x 6
+Glumgus [1282] x 292
+Goddess Statue [110] x 2
+Golden Brazier [998] x 75
+Goldinoggin [2175] x 1
+Grass [1] x 107
+Gravestone [46] x 10
+Helm [1014] x 2
+Horizontal Log [1095] x 2733
+Horizontal Log Cap [1493] x 65
+Horizontal Pipe [2215] x 1
+Inn Sign [64] x 1
+Iron Workbench Lv. MAX [2010] x 5
+Ivy [7] x 10018
+Keg Counter [827] x 2
+Ladder [60] x 80
+Lantern [828] x 12
+Leather Sack [55] x 2
+Left Counter [1254] x 1
+Light Box [1353] x 28
+Light Box [Blue] [1455] x 14
+Light Box [Red] [1452] x 8
+Little Lock [B] [251] x 2
+Log Wall Corner [1097] x 13
+Magic Pencil [522] x 1
+Magnetic Block [2251] x 19
+Marshroom [10] x 198
+Massive Mushroom Cap [1284] x 18
+Massive Mushroom Stem [1283] x 151
+Meat Feast [245] x 2
+Medicinal Shrub [3] x 10
+Midsection Counter [1255] x 9
+Milkblossom [6] x 9
+Mining Tools [1275] x 19
+Mossy Rock [585] x 11
+Mossy Stones [576] x 76
+Mud-Brick Wall Rubble [1241] x 183
+Nameplate [928] x 1
+Naviglobe [1203] x 1
+Naviglobe [1204] x 1
+Naviglobe [1205] x 1
+Naviglobe [1206] x 1
+Naviglobe [1207] x 1
+Naviglobe [1208] x 1
+Naviglobe [1209] x 1
+Naviglobe [1211] x 1
+Naviglobe [1225] x 1
+Old Book [162] x 1
+Palm Tree [34] x 2
+Pebble Pile [340] x 74
+Pebbles [1130] x 341
+Plank Pathway [1105] x 28
+Plant Pot [236] x 4
+Planted Earth [523] x 1
+Playing Cards [1249] x 2
+Portcullis [1340] x 2
+Porthole [1142] x 1
+Prickly Peach Cactus [16] x 227
+Protective Planks [1274] x 572
+Pub Sign [635] x 6
+Puzzlepost [DQB2] [1404] x 10
+Pyramidal Merlon [1397] x 6
+Right Counter [1256] x 3
+Rock Pile [1278] x 9
+Rockbomb Bed [2354] x 1
+Rope [638] x 7
+Ropy Horizontal Log [1438] x 823
+Ropy Vertical Log [1437] x 363
+Rose Leaves [1079] x 15
+Round Table [234] x 2
+Saloon Door [825] x 5
+Sandwort [15] x 945
+Sconce [79] x 234
+Sharpened Log [1305] x 21
+Shineapple [1281] x 251
+Ship [2517] x 1
+Ship Part A [967] x 2
+Ship Part B [968] x 2
+Ship Part C [969] x 2
+Ship Part D [970] x 1
+Ship Part E [971] x 1
+Ship Part F [972] x 1
+Ship Part G [973] x 2
+Ship Part H [974] x 1
+Ship Part I [975] x 1
+Ship Part J [976] x 1
+Ship Part K [977] x 3
+Ship Part L [978] x 1
+Ship Part M [980] x 2
+Ship Part N [981] x 1
+Ship Part O [1327] x 2
+Ship Part P [2173] x 2
+Ship Part Q [2174] x 5
+Ship Part R [2518] x 1
+Ship Part S [2519] x 2
+Ship Part T [2520] x 1
+Ship Part U [2521] x 1
+Shower [1259] x 5
+Sideways-Pointing Puller [1006] x 37
+Signpost [57] x 5
+Simple Bed [98] x 15
+Simple Door [823] x 3
+Simple Small Table [597] x 2
+Sizeable Stalagmite [1286] x 17
+Sloped Track [185] x 119
+Small Stones [122] x 1796
+Small Table [90] x 3
+Spider Web [623] x 158
+Spleenwort [575] x 54
+Splinters [1131] x 349
+Stalagmites [1287] x 27
+Stalwort [2] x 14
+Stone Capping [120] x 2
+Stone Handrail [1000] x 85
+Stone Pot [1260] x 4
+Stone Steps [61] x 1041
+Stone Stool [209] x 47
+Stone Table [92] x 6
+Stop Sign [186] x 10
+Storage Sack [984] x 1
+Straight Track [183] x 761
+Straw Bedding [532] x 7
+Straw Door [206] x 2
+Straw Mattress [97] x 1
+Sunbrella [1062] x 1
+Supermassive Mushroom Cap [1285] x 45
+Tinting Tun [808] x 1
+Toppled Column [341] x 5
+Torch [78] x 8
+Towel Rail [100] x 10
+Treasure Chest [113] x 30
+Vault Bracket [2434] x 512
+Vault Bracket [625] x 12018
+Vertical Log [1096] x 1150
+Vertical Log Cap [1494] x 84
+Vertical Log Shoe [2165] x 4
+Vile Tile [128] x 1
+Vile Visage [131] x 4
+Vineapple [1280] x 312
+Wardrobe [103] x 3
+Water Jug [240] x 2
+Wheat [4/4] [390] x 11
+Wooden Bracket [1330] x 14
+Wooden Door [69] x 11
+Wooden Fencing [594] x 752
+Wooden Fortification [1361] x 33
+Wooden Grating [1139] x 464
+Wooden Minecart [187] x 8
+Wooden Steps [207] x 9
+Wooden Stool [94] x 5
+Wooden Toilet [1262] x 1

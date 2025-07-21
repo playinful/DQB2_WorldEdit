@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://clv8xtmg4ripo"
+path="res://.godot/imported/statue_of_babs.obj-b0aaca67b45aac7ecfd8e4522274207c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/statue_of_babs.obj-b0aaca67b45aac7ecfd8e4522274207c.mesh"]
+
+source_file="res://Mesh/statue_of_babs.obj"
+dest_files=["res://.godot/imported/statue_of_babs.obj-b0aaca67b45aac7ecfd8e4522274207c.mesh", "res://.godot/imported/statue_of_babs.obj-b0aaca67b45aac7ecfd8e4522274207c.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

@@ -6,28 +6,23 @@ using System.Runtime.ExceptionServices;
 namespace EyeOfRubiss
 {
     /// <summary> VoxelStreamScript that streams a DQB2 StageData instance as voxel data. </summary>
-    public partial class VoxelStreamDQB2 : VoxelStreamScript
+    public partial class VoxelStreamDQB2(StageData stageData, bool propsOnly = false) : VoxelStreamScript
     {
-        /// <summary> The voxel ID of the seafloor block. Used to create the very bottom layer of the terrain, at Y = -1. </summary>
         const ulong BLOCK_SEAFLOOR = 8;
 
-        /// <summary> The StageData instance from which to stream voxel data. </summary>
-        public StageData DQB2StageData { get; set; }
+        public StageData DQB2StageData { get; set; } = stageData;
+        public bool PropsOnly { get; set; } = propsOnly;
 
-        /// <summary> The channel for _GetUsedChannelsMask. </summary>
-        const int Channel = (int)VoxelBuffer.ChannelId.ChannelType;
+        const int CHANNEL = (int)VoxelBuffer.ChannelId.ChannelType;
 
-        public override int _GetUsedChannelsMask()
-        {
-            return 1 << Channel;
-        }
+        public override int _GetUsedChannelsMask() => 1 << CHANNEL;
 
         public override int _LoadVoxelBlock(VoxelBuffer outBuffer, Vector3I positionInBlocks, int lod)
         {
             if (DQB2StageData is null || !DQB2StageData.IsLoaded)
-                return (int)ResultCode.BlockNotFound;
+                    return (int)ResultCode.BlockNotFound;
 
-            if (positionInBlocks.Y < 0)
+            if (positionInBlocks.Y < 0 && !PropsOnly)
             {
                 outBuffer.Fill(BLOCK_SEAFLOOR);
                 return (int)ResultCode.BlockFound;
@@ -44,23 +39,25 @@ namespace EyeOfRubiss
             
 
             for (int x = 0; x < bufferSize.X; x++)
+            {
+                for (int y = 0; y < bufferSize.Y; y++)
                 {
-                    for (int y = 0; y < bufferSize.Y; y++)
+                    for (int z = 0; z < bufferSize.Z; z++)
                     {
-                        for (int z = 0; z < bufferSize.Z; z++)
+                        Vector3I coords = (positionInBlocks * bufferSize) + new Vector3I(x, y, z);
+                        //int tile = coords.X % 32 + (coords.Z % 32 * 32);
+                        //StageData.BlockInstance block = chunk.GetBlock(coords.Y, tile);
+                        StageData.BlockInstance block = StageData.Instance.GetBlockAtPosition(coords);
+                        if (block is not null)
                         {
-                            Vector3I coords = (positionInBlocks * bufferSize) + new Vector3I(x, y, z);
-                            //int tile = coords.X % 32 + (coords.Z % 32 * 32);
-                            //StageData.BlockInstance block = chunk.GetBlock(coords.Y, tile);
-                            StageData.BlockInstance block = StageData.Instance.GetBlockAtPosition(coords);
-                            if (block is not null)
-                            {
-                                ulong voxelId = BlockInfo.Get(block.BlockID).VoxelID;
-                                outBuffer.SetVoxel(voxelId, x, y, z, Channel);
-                            }
+                            BlockInfo blockInfo = BlockInfo.Get(block.BlockID);
+                            ulong voxelId = PropsOnly ? (ulong)blockInfo.PropShell : blockInfo.VoxelID;
+                            //ulong voxelId = blockInfo.VoxelID;
+                            outBuffer.SetVoxel(voxelId, x, y, z, CHANNEL);
                         }
                     }
                 }
+            }
 
             return (int)ResultCode.BlockFound;
         }

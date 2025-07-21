@@ -2,5 +2,6 @@
     "godotTools.editorPath.godot4": "c:\\Program Files\\Godot\\godot_voxel.windows.editor.x86_64.mono\\godot.windows.editor.x86_64.mono.exe",
 	"files.exclude": {
 		"**/*.{uid,tscn,tres}": true
-	}
+	},
+	"git.ignoreLimitWarning": true
 }

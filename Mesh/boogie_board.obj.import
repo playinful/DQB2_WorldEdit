@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bm7q077x3816n"
+path="res://.godot/imported/boogie_board.obj-ad6284bff55632bf0c1e923a65b0a04f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/boogie_board.obj-ad6284bff55632bf0c1e923a65b0a04f.mesh"]
+
+source_file="res://Mesh/boogie_board.obj"
+dest_files=["res://.godot/imported/boogie_board.obj-ad6284bff55632bf0c1e923a65b0a04f.mesh", "res://.godot/imported/boogie_board.obj-ad6284bff55632bf0c1e923a65b0a04f.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

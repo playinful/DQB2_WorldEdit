@@ -5,6 +5,8 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using EyeOfRubiss.Nodes;
 using EyeOfRubiss.Info;
+using System.Net;
+using System.Collections.Generic;
 
 namespace EyeOfRubiss.Scenes
 {
@@ -19,19 +21,21 @@ namespace EyeOfRubiss.Scenes
 		//   Hacky-ass solution: if _Header.Length == StageData.HeaderLength
 
 		/// References to scene elements
-		private WorldEditorScene _WorldEditorScene;
-		private FileDialog _FileDialog;
-		private Window _UnsavedChanges_Window;
-		private PopupMenu _File_PopupMenu;
-		private PopupMenu _File_SaveSingleFile_PopupMenu;
-		private PopupMenu _File_SaveAsSingleFile_PopupMenu;
-		private PopupMenu _File_Export_PopupMenu;
-		private PopupMenu _File_Import_PopupMenu;
-		private PopupMenu _Settings_PopupMenu;
-		private OptionButton _IslandSelector_Button;
-		private SpinBox _Gratitude_SpinBox;
-		private SpinBox _Time_SpinBox;
-		private OptionButton _Weather_OptionButton;
+		[ExportGroup("Scene Elements")]
+		[Export] private WorldEditorScene _WorldEditorScene;
+		[Export] private FileDialog _FileDialog;
+		[Export] private Window _UnsavedChanges_Window;
+		[Export] private PopupMenu _File_PopupMenu;
+		[Export] private PopupMenu _File_SaveSingleFile_PopupMenu;
+		[Export] private PopupMenu _File_SaveAsSingleFile_PopupMenu;
+		[Export] private PopupMenu _File_Export_PopupMenu;
+		[Export] private PopupMenu _File_Import_PopupMenu;
+		[Export] private PopupMenu _Settings_PopupMenu;
+		[Export] private PopupMenu _View_PopupMenu;
+		[Export] private OptionButton _IslandSelector_Button;
+		[Export] private SpinBox _Gratitude_SpinBox;
+		[Export] private SpinBox _Time_SpinBox;
+		[Export] private OptionButton _Weather_OptionButton;
 
 		/// <summary> Enum repreresenting the state of the FileDialog. </summary>
 		private enum FileDialogStateEnum
@@ -59,7 +63,7 @@ namespace EyeOfRubiss.Scenes
 
 		public override void _Ready()
 		{
-			_OnReadyVariables();
+			//_OnReadyVariables();
 
 			GetTree().AutoAcceptQuit = false;
 			GetTree().Root.CloseRequested += _On_Root_CloseRequested;
@@ -68,28 +72,28 @@ namespace EyeOfRubiss.Scenes
 			UpdateLoadedData();
 			UpdateMenuButtons();
 		}
-		private void _OnReadyVariables()
+		/*private void _OnReadyVariables()
 		{
-			_WorldEditorScene = GetNode<WorldEditorScene>("WorldEditorContainer/SubViewport/WorldEditor");
+			//_WorldEditorScene = GetNode<WorldEditorScene>("%WorldEditor");
 
 			_FileDialog = GetNode<FileDialog>("Popups/FileDialog");
 
 			_UnsavedChanges_Window = GetNode<Window>("Popups/UnsavedChangesWindow");
 
-			_File_PopupMenu = GetNode<PopupMenu>("Toolbar/HBoxContainer/MenuBar/FileMenu");
-			_File_SaveSingleFile_PopupMenu = GetNode<PopupMenu>("Toolbar/HBoxContainer/MenuBar/FileMenu/SaveSingleFileMenu");
-			_File_SaveAsSingleFile_PopupMenu = GetNode<PopupMenu>("Toolbar/HBoxContainer/MenuBar/FileMenu/SaveAsSingleFileMenu");
-			_File_Export_PopupMenu = GetNode<PopupMenu>("Toolbar/HBoxContainer/MenuBar/FileMenu/ExportMenu");
-			_File_Import_PopupMenu = GetNode<PopupMenu>("Toolbar/HBoxContainer/MenuBar/FileMenu/ImportMenu");
+			_File_PopupMenu = GetNode<PopupMenu>("Toolbar/VBoxContainer/MenuBar_Main/MenuBar/FileMenu");
+			_File_SaveSingleFile_PopupMenu = GetNode<PopupMenu>("Toolbar/VBoxContainer/MenuBar_Main/MenuBar/FileMenu/SaveSingleFileMenu");
+			_File_SaveAsSingleFile_PopupMenu = GetNode<PopupMenu>("Toolbar/VBoxContainer/MenuBar_Main/MenuBar/FileMenu/SaveAsSingleFileMenu");
+			_File_Export_PopupMenu = GetNode<PopupMenu>("Toolbar/VBoxContainer/MenuBar_Main/MenuBar/FileMenu/ExportMenu");
+			_File_Import_PopupMenu = GetNode<PopupMenu>("Toolbar/VBoxContainer/MenuBar_Main/MenuBar/FileMenu/ImportMenu");
 
-			_Settings_PopupMenu = GetNode<PopupMenu>("Toolbar/HBoxContainer/MenuBar/SettingsMenu");
+			_Settings_PopupMenu = GetNode<PopupMenu>("Toolbar/VBoxContainer/MenuBar_Main/MenuBar/SettingsMenu");
 
-			_IslandSelector_Button = GetNode<OptionButton>("Toolbar/IslandSelectorButton");
+			_IslandSelector_Button = GetNode<OptionButton>("Toolbar/VBoxContainer/MenuBar_Stage/IslandSelectorButton");
 
-			_Gratitude_SpinBox = GetNode<SpinBox>("Toolbar/GratitudeBox");
-			_Time_SpinBox = GetNode<SpinBox>("Toolbar/TimeBox");
-			_Weather_OptionButton = GetNode<OptionButton>("Toolbar/ComplexWeatherSelect");
-		}
+			_Gratitude_SpinBox = GetNode<SpinBox>("Toolbar/VBoxContainer/MenuBar_Stage/GratitudeBox");
+			//_Time_SpinBox = GetNode<SpinBox>("Toolbar/TimeBox");
+			//_Weather_OptionButton = GetNode<OptionButton>("Toolbar/ComplexWeatherSelect");
+		}*/
 		private void _InitializeFileDialogPath()
 		{
 			// TODO add support for saving this as a preference
@@ -380,6 +384,23 @@ namespace EyeOfRubiss.Scenes
 			_FileDialog.PopupCentered();
 		}
 
+		public void _On_Edit_PopupMenu_IdPressed(int id)
+		{
+			switch (id)
+			{
+				case 0: // Make Superflat...
+					StageData.Instance?.MakeSuperflat([1, 2, 2, 3]);
+					_WorldEditorScene.Reload();
+					break;
+				case 1: // Delete All Props
+					StageData.Instance?.DeleteAllProps();
+					break;
+				case 2: // Very Simple Copy
+					GetNode<Window>("VeryBasicCopierWindow").Popup();
+					break;
+			}
+		}
+
 		public void _On_Settings_PopupMenu_IdPressed(int id)
 		{
 			switch (id)
@@ -395,6 +416,38 @@ namespace EyeOfRubiss.Scenes
 					bool showDebugInfo = !_Settings_PopupMenu.IsItemChecked(2);
 					_Settings_PopupMenu.SetItemChecked(2, showDebugInfo);
 					_WorldEditorScene.ChangeDebugInfoDisplay(showDebugInfo);
+					break;
+			}
+		}
+
+		public void _On_View_PopupMenu_IdPressed(int id)
+		{
+			switch (id)
+			{
+				case 0: // Terrain
+					bool showTerrain = !_View_PopupMenu.IsItemChecked(0);
+					_View_PopupMenu.SetItemChecked(0, showTerrain);
+					_WorldEditorScene.ChangeTerrainDisplay(showTerrain);
+					break;
+				case 1: // Props
+					bool showProps = !_View_PopupMenu.IsItemChecked(1);
+					_View_PopupMenu.SetItemChecked(1, showProps);
+					_WorldEditorScene.ChangePropDisplay(showProps);
+					break;
+				case 2: // Prop Shells
+					bool showPropShells = !_View_PopupMenu.IsItemChecked(2);
+					_View_PopupMenu.SetItemChecked(2, showPropShells);
+					_WorldEditorScene.ChangePropShellDisplay(showPropShells);
+					break;
+				case 3: // Residents
+					bool showResidents = !_View_PopupMenu.IsItemChecked(3);
+					_View_PopupMenu.SetItemChecked(3, showResidents);
+					_WorldEditorScene.ChangeNPCDisplay(showResidents);
+					break;
+				case 4: // Player
+					bool showPlayer = !_View_PopupMenu.IsItemChecked(4);
+					_View_PopupMenu.SetItemChecked(4, showPlayer);
+					_WorldEditorScene.ChangePlayerDisplay(showPlayer);
 					break;
 			}
 		}
@@ -480,6 +533,36 @@ namespace EyeOfRubiss.Scenes
 			WantsToQuit = true;
 			if (TryCloseFile())
 				GetTree().Quit();
+		}
+
+		public void DoVerySimpleCopy()
+		{
+			int x1 = (int)Math.Round(GetNode<SpinBox>("VeryBasicCopierWindow/VBoxContainer/GridContainer/SpinBoxX1").Value);
+			int y1 = (int)Math.Round(GetNode<SpinBox>("VeryBasicCopierWindow/VBoxContainer/GridContainer/SpinBoxY1").Value);
+			int z1 = (int)Math.Round(GetNode<SpinBox>("VeryBasicCopierWindow/VBoxContainer/GridContainer/SpinBoxZ1").Value);
+			int x2 = (int)Math.Round(GetNode<SpinBox>("VeryBasicCopierWindow/VBoxContainer/GridContainer/SpinBoxX2").Value);
+			int y2 = (int)Math.Round(GetNode<SpinBox>("VeryBasicCopierWindow/VBoxContainer/GridContainer/SpinBoxY2").Value);
+			int z2 = (int)Math.Round(GetNode<SpinBox>("VeryBasicCopierWindow/VBoxContainer/GridContainer/SpinBoxZ2").Value);
+			int x3 = (int)Math.Round(GetNode<SpinBox>("VeryBasicCopierWindow/VBoxContainer/HBoxContainer/SpinBoxX3").Value);
+			int y3 = (int)Math.Round(GetNode<SpinBox>("VeryBasicCopierWindow/VBoxContainer/HBoxContainer/SpinBoxY3").Value);
+			int z3 = (int)Math.Round(GetNode<SpinBox>("VeryBasicCopierWindow/VBoxContainer/HBoxContainer/SpinBoxZ3").Value);
+
+			Vector3I from = new(x1, y1, z1);
+			Vector3I bounds = new Vector3I(x2, y2, z2) - from;
+			Vector3I to = new(x3, y3, z3);
+
+			_WorldEditorScene.CopyPaste(from, bounds, to);
+		}
+		public void BasicPropEditor()
+		{
+			int propId = (int)Math.Round(GetNode<SpinBox>("BasicPropEditor/VBoxContainer/HBoxContainer1/SpinBox").Value);
+			int rotation = (int)Math.Round(GetNode<SpinBox>("BasicPropEditor/VBoxContainer/HBoxContainer1/SpinBox2").Value);
+
+			int x = (int)Math.Round(GetNode<SpinBox>("BasicPropEditor/VBoxContainer/HBoxContainer2/SpinBoxX").Value);
+			int y = (int)Math.Round(GetNode<SpinBox>("BasicPropEditor/VBoxContainer/HBoxContainer2/SpinBoxY").Value);
+			int z = (int)Math.Round(GetNode<SpinBox>("BasicPropEditor/VBoxContainer/HBoxContainer2/SpinBoxZ").Value);
+
+			_WorldEditorScene.DoPropEditor(new Vector3I(x, y, z), (ushort)propId, (byte)rotation);
 		}
 	}
 }

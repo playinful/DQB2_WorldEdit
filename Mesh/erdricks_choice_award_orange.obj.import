@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dxhlfoj1vymmp"
+path="res://.godot/imported/erdricks_choice_award_orange.obj-3acd2c67dd05e8af2d68df33fe42e99b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/erdricks_choice_award_orange.obj-3acd2c67dd05e8af2d68df33fe42e99b.mesh"]
+
+source_file="res://Mesh/erdricks_choice_award_orange.obj"
+dest_files=["res://.godot/imported/erdricks_choice_award_orange.obj-3acd2c67dd05e8af2d68df33fe42e99b.mesh", "res://.godot/imported/erdricks_choice_award_orange.obj-3acd2c67dd05e8af2d68df33fe42e99b.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

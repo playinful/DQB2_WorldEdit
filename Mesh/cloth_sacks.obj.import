@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cyd04vl0qgpkd"
+path="res://.godot/imported/cloth_sacks.obj-376af5b72d204eb59f70514eb772877b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/cloth_sacks.obj-376af5b72d204eb59f70514eb772877b.mesh"]
+
+source_file="res://Mesh/cloth_sacks.obj"
+dest_files=["res://.godot/imported/cloth_sacks.obj-376af5b72d204eb59f70514eb772877b.mesh", "res://.godot/imported/cloth_sacks.obj-376af5b72d204eb59f70514eb772877b.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

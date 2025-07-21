@@ -126,7 +126,7 @@ namespace EyeOfRubiss.Info
 
         /// <summary> Parameterless constructor for use with JSON. </summary> 
         [JsonConstructor]
-        private BlockInfo(){}
+        private BlockInfo() { }
         /// <summary>  
         /// Constructor for the BlockInfo class.
         /// </summary>  
@@ -139,7 +139,7 @@ namespace EyeOfRubiss.Info
             if (unknown)
                 Name = "Unknown";
         }
- 
+
         /// <summary>  
         /// Populates the Database field by loading JSON file at DATABASE_PATH.
         /// </summary>  
@@ -173,10 +173,19 @@ namespace EyeOfRubiss.Info
 
         /// <returns>An AtlasTexture displaying the Block's icon.</returns>  
         public AtlasTexture GetIcon() => Util.GetItemIcon(ImageID);
+
+        public PropShell PropShell { get; set; } = PropShell.None;
     }
     /// <summary> Holds information about props. </summary> 
     public class PropInfo
     {
+        // Note: Dimensions
+        // -- 
+        // Assuming the prop is facing north.
+        // X: West-East. Start with the prop position and head east.
+        // Y: Up-Down. Start with the prop position and head up.
+        // Z: North-South. Start with the prop position and head north.
+
         /// <summary> Path to the JSON file containing PropInfo entries. </summary> 
         private const string DATABASE_PATH = "res://Info/Props.json";
 
@@ -187,10 +196,11 @@ namespace EyeOfRubiss.Info
     	public ushort ID { get; set; }
         /// <summary> The name of this prop. Used when displaying the prop in GUI. </summary> 
     	public string Name { get; set; } = "";
-        
-        /// <summary> Path to the PropMeshResource for this prop. </summary>
-        public string Mesh { get; set; }
+
+        [JsonIgnore] public Vector3I Dimensions { get; set; } = Vector3I.One;
+
         //public Vector3I Dimensions { get; set; }
+        public int? MeshID { get; set; }
 
         /// <summary> True if the block does not exist in the database. </summary> 
         public bool Unknown { get; set; } = false;
@@ -204,10 +214,9 @@ namespace EyeOfRubiss.Info
         /// <param name="id">ID of the prop.</param>  
         /// <param name="mesh">Path to the PropMeshResource. Null by default.</param>  
         /// <param name="unknown">True if the prop does not exist in the Database. False by default.</param>  
-        private PropInfo(ushort id, string mesh = null, bool unknown = false)
+        private PropInfo(ushort id, bool unknown = false)
         {
             ID = id;
-            Mesh = mesh;
             Unknown = unknown;
             if (unknown)
                 Name = "Unknown";
@@ -245,6 +254,8 @@ namespace EyeOfRubiss.Info
 
             return _Database;
         }
+
+        public PropShell PropShell { get; set; } = PropShell.Generic;
     }
     /// <summary> Holds information about weather. </summary> 
     public class WeatherInfo

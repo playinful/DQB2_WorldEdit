@@ -40,6 +40,7 @@ namespace EyeOfRubiss
             public const string CAMERA_SPEED_UP = "camera_speed_up";
             public const string CAMERA_SPEED_DOWN = "camera_speed_down";
             public const string CURSOR_RELEASE = "cursor_release";
+            public const string RESET_CAMERA = "reset_camera";
         }
     }
 }
