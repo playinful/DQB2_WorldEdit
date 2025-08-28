@@ -16,7 +16,7 @@ using System.Data.SqlTypes;
 
 namespace EyeOfRubiss
 {
-    public class StageData : SaveData
+    public class StageData : SaveData, EyeOfRubiss.Integration.IWorld
     {
         /*
             Here follows a general map of the buffer's layout.
@@ -380,6 +380,15 @@ namespace EyeOfRubiss
         public Chunk GetChunkAtPosition(Vector3I position)
         {
             return GetChunk(PositionToChunkIndex(position));
+        }
+
+        bool Integration.IWorld.HasData(Integration.Box box)
+        {
+            // We're lucky that the Zylann's boxes line up with DQB2 chunks such that
+            // we only have to check the start position of the box.
+            // (They are 16x16x16 and thus will never exist in more than one 32x32x96 chunk.)
+            var chunkIndex = PositionToChunkIndex(box.Start);
+            return chunkIndex >= 0 && chunkIndex < Chunk.MAXIMUM && GetChunk(chunkIndex).IsUsed();
         }
 
         public Chunk AddChunk(int index, ushort? id = null)

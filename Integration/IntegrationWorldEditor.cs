@@ -1,5 +1,6 @@
 using EyeOfRubiss;
 using EyeOfRubiss.Info;
+using EyeOfRubiss.Integration;
 using EyeOfRubiss.Nodes;
 using Godot;
 using System;
@@ -14,8 +15,7 @@ public partial class IntegrationWorldEditor : Node3D
 	private VoxelTerrain _VoxelTerrain;
 	private VoxelTool _VoxelTool;
 	private Label _PointedVoxelLabel;
-
-	private StageData _StageData;
+	private IWorld _StageData;
 
 	public bool ShowDebugInfo { get; set; } = true;
 	public bool ShowFps { get; set; } = true;
@@ -73,25 +73,25 @@ public partial class IntegrationWorldEditor : Node3D
 	}
 
 	#region Scene setup
-	public void LoadWorld(StageData stageData)
+	internal void LoadWorld(IWorld stageData)
 	{
 		_StageData = stageData;
 
 		if (ShowTerrain)
-			_VoxelTerrain.Stream = new VoxelStreamDQB2(stageData);
+			_VoxelTerrain.Generator = new WIPGenerator(stageData);
 	}
 	public void UnloadWorld()
 	{
-		_VoxelTerrain.Stream = null;
+		_VoxelTerrain.Generator = null;
 	}
 
 	public void Reload()
 	{
-		if (_StageData is null || !_StageData.IsLoaded)
+		if (_StageData is null)
 			return;
 
 		if (ShowTerrain)
-			_VoxelTerrain.Stream = new VoxelStreamDQB2(_StageData);
+			_VoxelTerrain.Generator = new WIPGenerator(_StageData);
 	}
 	#endregion
 
