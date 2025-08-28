@@ -228,11 +228,17 @@ namespace EyeOfRubiss.Scenes
 			}
 			if (StageData.TryLoadAndSet(path) is not null)
 			{
-				UpdateLoadedData();
-				UpdateMenuButtons();
-				_WorldEditorScene.UnloadWorld();
-				_WorldEditorScene.LoadWorld(StageData.Instance);
+				// TEMP HACKING!
+				GetTree().AutoAcceptQuit = true;
+				GetTree().Root.CloseRequested -= _On_Root_CloseRequested;
+				WantsToQuit = true;
+				GetTree().ChangeSceneToFile("res://Integration/IntegrationMain.tscn");
 				return true;
+				//UpdateLoadedData();
+				//UpdateMenuButtons();
+				//_WorldEditorScene.UnloadWorld();
+				//_WorldEditorScene.LoadWorld(StageData.Instance);
+				//return true;
 			}
 			if (ScreenshotData.TryLoadAndSet(path) is not null)
 			{
