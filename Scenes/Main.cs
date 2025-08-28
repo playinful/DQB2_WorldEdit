@@ -214,6 +214,11 @@ namespace EyeOfRubiss.Scenes
 		}
 		public bool TryLoadFile(string path)
 		{
+			if (path.ToLowerInvariant().EndsWith(".json"))
+			{
+				GetTree().ChangeSceneToFile("res://Integration/IntegrationMain.tscn");
+				return true;
+			}
 			if (CommonData.TryLoadAndSet(path) is not null)
 			{
 				UpdateLoadedData();

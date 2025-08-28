@@ -1,0 +1,9 @@
+# To make Git locally ignore changes on tracked files (e.g., .import files).
+# This is useful for ignoring temporary changes from different tool versions
+# without affecting the main repository history.
+
+## Command to tell Git to IGNORE changes on all .import files:
+git ls-files -z | grep -z '\.import$' | xargs -0 git update-index --assume-unchanged
+
+## Command to tell Git to TRACK changes on all .import files again:
+git ls-files -z | grep -z '\.import$' | xargs -0 git update-index --no-assume-unchanged
