@@ -57,10 +57,10 @@ public partial class IntegrationWorldEditor : Node3D
 
 			//Vector3I indexPos = StageData.Instance.EuclidPosToIndex(result.Position);
 
-			StageData.BlockInstance block = _StageData.GetBlockAtPosition(result.Position);
+			var block = _StageData.GetBlockAtPosition(result.Position);
 
 			_PointedVoxelLabel.Text =
-				$"Targeted block: {(block is not null ? BlockInfo.Get(block.BlockID).Name + $" [{block.BlockID}]" : "UNKNOWN")}\n" +
+				$"Targeted block: {(block.BlockId > 0 ? BlockInfo.Get(block.BlockId).Name + $" [{block.BlockId}]" : "UNKNOWN")}\n" +
 				$"X: {friendlyPos.X}, Y: {friendlyPos.Y}, Z: {friendlyPos.Z}\n" +
 				//$"Chunk: {indexPos.X}, Layer: {indexPos.Y}, Tile: {indexPos.Z}\n" +
 				$"Placed by Builder: {block.PlayerPlaced}" +
@@ -75,6 +75,10 @@ public partial class IntegrationWorldEditor : Node3D
 	#region Scene setup
 	internal void LoadWorld(IWorld stageData)
 	{
+		if (_StageData == null)
+		{
+			_CameraController.Position = stageData.InitialCameraPosition;
+		}
 		_StageData = stageData;
 
 		if (ShowTerrain)
@@ -90,8 +94,7 @@ public partial class IntegrationWorldEditor : Node3D
 		if (_StageData is null)
 			return;
 
-		if (ShowTerrain)
-			_VoxelTerrain.Generator = new WIPGenerator(_StageData);
+		LoadWorld(_StageData);
 	}
 	#endregion
 

@@ -46,7 +46,6 @@ environment = SubResource("Environment_nmm71")
 
 [node name="VoxelTerrain" type="VoxelTerrain" parent="."]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1024, 0, -1024)
 mesher = SubResource("VoxelMesherBlocky_yg1cn")
 cast_shadow = 0
 bounds = AABB(-536870900, -16, -536870900, 1073739970, 144, 1073739970)

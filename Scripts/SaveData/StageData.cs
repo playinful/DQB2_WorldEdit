@@ -13,6 +13,7 @@ using System.Security.Cryptography.X509Certificates;
 using EyeOfRubiss.Info;
 using EyeOfRubiss.Nodes;
 using System.Data.SqlTypes;
+using EyeOfRubiss.Integration;
 
 namespace EyeOfRubiss
 {
@@ -333,6 +334,8 @@ namespace EyeOfRubiss
             public bool PlayerPlaced { get => SaveData.GetBit(Address + 1, 3); set => SaveData.SetBit(Address + 1, 3, value); }
             public ChiselType Chisel { get => (ChiselType)SaveData.GetNumberBitwise(Address + 1, 4, 4); set => SaveData.SetNumberBitwise(Address + 1, 4, 4, (byte)value); }
 
+            internal Block AsIntegrationBlock => new Block((ushort)SaveData.GetNumberBitwise(Address, 0, 16));
+
             public BlockInfo GetInfo() => BlockInfo.Get(BlockID);
 
             public enum ChiselType : byte
@@ -382,7 +385,7 @@ namespace EyeOfRubiss
             return GetChunk(PositionToChunkIndex(position));
         }
 
-        bool Integration.IWorld.HasData(Integration.Box box)
+        bool IWorld.HasData(Box box)
         {
             // We're lucky that the Zylann's boxes line up with DQB2 chunks such that
             // we only have to check the start position of the box.
@@ -390,6 +393,10 @@ namespace EyeOfRubiss
             var chunkIndex = PositionToChunkIndex(box.Start);
             return chunkIndex >= 0 && chunkIndex < Chunk.MAXIMUM && GetChunk(chunkIndex).IsUsed();
         }
+
+        Block IWorld.GetBlockAtPosition(Vector3I position) => GetBlockAtPosition(position).AsIntegrationBlock;
+
+		Vector3I IWorld.InitialCameraPosition => new Vector3I(1024, 96, 1024);
 
         public Chunk AddChunk(int index, ushort? id = null)
         {
