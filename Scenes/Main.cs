@@ -63,6 +63,14 @@ namespace EyeOfRubiss.Scenes
 
 		public override void _Ready()
 		{
+			// NOMERGE temp workaround until I can export the Godot project as a windows app
+			//if (IntegrationMain.IsRunningIntegrationMode(OS.GetCmdlineUserArgs()))
+			if (IntegrationMain.IsRunningIntegrationMode(new string[] { "--driverFile", @"C:\Users\kramer\Documents\My Games\DRAGON QUEST BUILDERS II\Steam\76561198073553084\_INTEGRATE\driver.json" }))
+			{
+				GetTree().ChangeSceneToFile("res://Integration/IntegrationMain.tscn");
+				return;
+			}
+
 			//_OnReadyVariables();
 
 			GetTree().AutoAcceptQuit = false;
@@ -214,17 +222,6 @@ namespace EyeOfRubiss.Scenes
 		}
 		public bool TryLoadFile(string path)
 		{
-			if (path.ToLowerInvariant().EndsWith(".json"))
-			{
-				// allow us to exit cleanly:
-				GetTree().AutoAcceptQuit = true;
-				GetTree().Root.CloseRequested -= _On_Root_CloseRequested;
-				WantsToQuit = true;
-
-				IntegrationMain.SelectedFile = path;
-				GetTree().ChangeSceneToFile("res://Integration/IntegrationMain.tscn");
-				return true;
-			}
 			if (CommonData.TryLoadAndSet(path) is not null)
 			{
 				UpdateLoadedData();
@@ -234,14 +231,6 @@ namespace EyeOfRubiss.Scenes
 			}
 			if (StageData.TryLoadAndSet(path) is not null)
 			{
-				///*
-				// TEMP HACKING!
-				GetTree().AutoAcceptQuit = true;
-				GetTree().Root.CloseRequested -= _On_Root_CloseRequested;
-				WantsToQuit = true;
-				GetTree().ChangeSceneToFile("res://Integration/IntegrationMain.tscn");
-				return true;
-				//*/
 				UpdateLoadedData();
 				UpdateMenuButtons();
 				_WorldEditorScene.UnloadWorld();

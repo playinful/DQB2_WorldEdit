@@ -22,6 +22,7 @@ sealed class FileSystemDriver : IDriver
 	public IWorld World => world;
 	private readonly FileInfo driverFile;
 	private readonly FileSystemWatcher watcher;
+	private readonly object reloadLockObject = new();
 	private World world;
 
 	private FileSystemDriver(FileInfo driverFile)
@@ -58,31 +59,34 @@ sealed class FileSystemDriver : IDriver
 	{
 		if (e.ChangeType == WatcherChangeTypes.Changed)
 		{
-			int retries = 0;
-			bool giveUp = false;
-
-			WorldUpdatedEventArgs args;
-			while (!TryReload(out args) && !giveUp)
+			lock (reloadLockObject)
 			{
-				retries++;
-				if (retries > 3)
+				int retries = 0;
+				bool giveUp = false;
+
+				WorldUpdatedEventArgs args;
+				while (!TryReload(out args) && !giveUp)
 				{
-					giveUp = true;
+					retries++;
+					if (retries > 3)
+					{
+						giveUp = true;
+					}
+					else
+					{
+						const int milliseconds = 500;
+						System.Threading.Thread.Sleep(milliseconds);
+					}
+				}
+
+				if (giveUp)
+				{
+					GD.PrintErr("File still locked, giving up!");
 				}
 				else
 				{
-					const int milliseconds = 500;
-					System.Threading.Thread.Sleep(milliseconds);
+					WorldUpdated?.Invoke(this, args);
 				}
-			}
-
-			if (giveUp)
-			{
-				GD.PrintErr("File still locked, giving up!");
-			}
-			else
-			{
-				WorldUpdated?.Invoke(this, args);
 			}
 		}
 	}
