@@ -58,12 +58,53 @@ sealed class FileSystemDriver : IDriver
 	{
 		if (e.ChangeType == WatcherChangeTypes.Changed)
 		{
+			int retries = 0;
+			bool giveUp = false;
+
+			WorldUpdatedEventArgs args;
+			while (!TryReload(out args) && !giveUp)
+			{
+				retries++;
+				if (retries > 3)
+				{
+					giveUp = true;
+				}
+				else
+				{
+					const int milliseconds = 500;
+					System.Threading.Thread.Sleep(milliseconds);
+				}
+			}
+
+			if (giveUp)
+			{
+				GD.PrintErr("File still locked, giving up!");
+			}
+			else
+			{
+				WorldUpdated?.Invoke(this, args);
+			}
+		}
+	}
+
+	private bool TryReload(out WorldUpdatedEventArgs args)
+	{
+		try
+		{
 			var newWorld = Reload(world, driverFile);
 			this.world = newWorld;
-			this.WorldUpdated?.Invoke(this, new WorldUpdatedEventArgs()
+			args = new WorldUpdatedEventArgs()
 			{
 				World = newWorld,
-			});
+			};
+			return true;
+		}
+		catch (System.IO.IOException ex)
+		{
+			// writer still has file locked probably
+			GD.Print($"File still locked: {ex.ToString()}");
+			args = null;
+			return false;
 		}
 	}
 
@@ -118,12 +159,14 @@ sealed class DriverFileContent
 sealed class World : IWorld
 {
 	private readonly IReadOnlyList<IReadOnlyList<Chunk>> chunkGrid;
+	public int ChunkCount { get; }
 
 	public static World Empty() => new World(new List<List<Chunk>>());
 
 	private World(IReadOnlyList<IReadOnlyList<Chunk>> chunkGrid)
 	{
 		this.chunkGrid = chunkGrid;
+		ChunkCount = chunkGrid.Where(c => c != null).Count();
 	}
 
 	public Vector3I InitialCameraPosition => new Vector3I(0, 96, 0);
@@ -189,7 +232,8 @@ sealed class World : IWorld
 	{
 		List<Chunk> newChunks = new();
 		string directory = driverFile.Directory.FullName;
-		bool hasFreshData = false;
+		int reusedChunkCount = 0;
+		int freshChunkCount = 0;
 
 		foreach (var chunkInfo in content.ChunkInfos)
 		{
@@ -204,19 +248,22 @@ sealed class World : IWorld
 
 			if (CanReuseExistingChunk(chunkInfo, directory, out var existingChunk))
 			{
+				reusedChunkCount++;
 				newChunks.Add(existingChunk);
 			}
 			else
 			{
-				hasFreshData = true;
+				freshChunkCount++;
 				newChunks.Add(LoadChunk(chunkInfo, directory));
 			}
 		}
 
-		if (!hasFreshData)
+		if (freshChunkCount == 0 && reusedChunkCount == this.ChunkCount)
 		{
 			return this;
 		}
+
+		GD.Print($"Reused chunks: {reusedChunkCount}, Fresh chunks: {freshChunkCount}");
 
 		List<List<Chunk>> newGrid = new();
 		foreach (var chunk in newChunks)
