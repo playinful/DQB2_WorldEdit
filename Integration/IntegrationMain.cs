@@ -11,6 +11,13 @@ public partial class IntegrationMain : Control
 	private IWorld world;
 	private IDriver driver; // needed to make sure the driver doesn't get GC'd which would cause the FileSystemWatcher to stop firing
 
+	protected override void Dispose(bool disposing)
+	{
+		base.Dispose(disposing);
+		driver?.Dispose();
+		driver = null;
+	}
+
 	private static string DriverFile { get; set; }
 
 	/// <summary>

@@ -21,7 +21,7 @@ sealed class World : IWorld
 	private World(IReadOnlyList<IReadOnlyList<Chunk>> chunkGrid)
 	{
 		this.chunkGrid = chunkGrid;
-		ChunkCount = chunkGrid.Where(c => c != null).Count();
+		ChunkCount = chunkGrid.SelectMany(x => x).Where((Chunk c) => c != null).Count();
 	}
 
 	public Vector3I InitialCameraPosition => new Vector3I(0, 96, 0);
