@@ -82,7 +82,7 @@ public partial class IntegrationWorldEditor : Node3D
 		_StageData = stageData;
 
 		if (ShowTerrain)
-			_VoxelTerrain.Generator = new WIPGenerator(stageData);
+			_VoxelTerrain.Generator = new IWorldVoxelGenerator(stageData);
 	}
 	public void UnloadWorld()
 	{

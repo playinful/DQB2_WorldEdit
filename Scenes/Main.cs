@@ -64,10 +64,10 @@ namespace EyeOfRubiss.Scenes
 		public override void _Ready()
 		{
 			// NOMERGE temp workaround until I can export the Godot project as a windows app
-			//if (IntegrationMain.IsRunningIntegrationMode(OS.GetCmdlineUserArgs()))
-			if (IntegrationMain.IsRunningIntegrationMode(new string[] { "--driverFile", @"C:\Users\kramer\Documents\My Games\DRAGON QUEST BUILDERS II\Steam\76561198073553084\_INTEGRATE\driver.json" }))
+			//if (IntegrationMain.ShouldSwitchToIntegrationMode(OS.GetCmdlineUserArgs()))
+			if (IntegrationMain.ShouldSwitchToIntegrationMode(new string[] { "--driverFile", @"C:\Users\kramer\Documents\My Games\DRAGON QUEST BUILDERS II\Steam\76561198073553084\_INTEGRATE\driver.json" }))
 			{
-				GetTree().ChangeSceneToFile("res://Integration/IntegrationMain.tscn");
+				CallDeferred(nameof(SwitchToIntegrationMode));
 				return;
 			}
 
@@ -80,6 +80,11 @@ namespace EyeOfRubiss.Scenes
 			UpdateLoadedData();
 			UpdateMenuButtons();
 		}
+		private void SwitchToIntegrationMode()
+		{
+			GetTree().ChangeSceneToFile("res://Integration/IntegrationMain.tscn");
+		}
+
 		/*private void _OnReadyVariables()
 		{
 			//_WorldEditorScene = GetNode<WorldEditorScene>("%WorldEditor");
