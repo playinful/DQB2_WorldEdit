@@ -1,6 +1,3 @@
-/*
- * Not sure what this was doing, but my `dotnet publish` was failing so I
- * commented this file out and now it works...
 using Godot;
 using System;
 
@@ -17,4 +14,3 @@ public partial class GridMapTest2 : EditorScript
 		}
 	}
 }
-*/
