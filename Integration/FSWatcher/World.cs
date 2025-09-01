@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -40,8 +41,6 @@ sealed class World : IWorld
 		return column[loc.Z32];
 	}
 
-	bool firstTime = true;
-
 	public Block GetBlockAtPosition(Vector3I position)
 	{
 		var loc = ChunkLocation.FromPosition(position);
@@ -56,16 +55,12 @@ sealed class World : IWorld
 		return GetChunkOrNull(loc) != null;
 	}
 
-	sealed class Chunk
+	abstract class Chunk
 	{
-		private readonly ushort[] blockdata;
 		public DriverFileContent.FileChunkInfo FileChunkInfo { get; init; }
 		public DateTime LastWriteTimeUtc { get; init; }
 
-		public Chunk(ushort[] blockdata)
-		{
-			this.blockdata = blockdata;
-		}
+		protected abstract ReadOnlySpan<ushort> Blockdata { get; }
 
 		/// <summary>
 		/// Operates modulo 32 (assumes the caller determined this is the correct chunk given the global position)
@@ -76,8 +71,30 @@ sealed class World : IWorld
 			int z = position.Z % 32;
 			int x = position.X % 32;
 			int index = y * (32 * 32) + z * 32 + x;
-			return new Block(blockdata[index]);
+			return new Block(Blockdata[index]);
 		}
+	}
+
+	sealed class Chunk_LittleEndian : Chunk
+	{
+		private readonly byte[] bytes;
+		public Chunk_LittleEndian(byte[] bytes)
+		{
+			this.bytes = bytes;
+		}
+
+		protected override ReadOnlySpan<ushort> Blockdata => MemoryMarshal.Cast<byte, ushort>(bytes);
+	}
+
+	sealed class Chunk_BigEndian : Chunk
+	{
+		private readonly ushort[] blockdata;
+		public Chunk_BigEndian(ushort[] blockdata)
+		{
+			this.blockdata = blockdata;
+		}
+
+		protected override ReadOnlySpan<ushort> Blockdata => blockdata;
 	}
 
 	/// <summary>
@@ -164,18 +181,28 @@ sealed class World : IWorld
 			throw new BadIntegrationException($"Chunk file must be exactly {expectedLength} bytes, but got {bytes.Length} from {fullPath}");
 		}
 
-		ushort[] blockdata = new ushort[expectedLength / 2];
-		for (int i = 0; i < blockdata.Length; i++)
+		if (BitConverter.IsLittleEndian)
 		{
-			byte lo = bytes[i * 2];
-			byte hi = bytes[i * 2 + 1];
-			blockdata[i] = (ushort)(lo | (hi << 8));
+			return new Chunk_LittleEndian(bytes)
+			{
+				FileChunkInfo = chunkInfo,
+				LastWriteTimeUtc = lastWriteTimeUtc,
+			};
 		}
-
-		return new Chunk(blockdata)
+		else
 		{
-			FileChunkInfo = chunkInfo,
-			LastWriteTimeUtc = lastWriteTimeUtc,
-		};
+			var blockdata = new ushort[expectedLength / 2];
+			for (int i = 0; i < blockdata.Length; i++)
+			{
+				byte lo = bytes[i * 2];
+				byte hi = bytes[i * 2 + 1];
+				blockdata[i] = (ushort)(lo | (hi << 8));
+			}
+			return new Chunk_BigEndian(blockdata)
+			{
+				FileChunkInfo = chunkInfo,
+				LastWriteTimeUtc = lastWriteTimeUtc,
+			};
+		}
 	}
 }
