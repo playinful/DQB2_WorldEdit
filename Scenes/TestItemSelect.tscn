@@ -1,7 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://bdlrmvc1qlk6e"]
-
-[ext_resource type="Script" uid="uid://b6rks3i6fkaly" path="res://Scenes/TestItemSelect.cs" id="1_0is22"]
-[ext_resource type="Script" path="res://Scenes/ButtonSelectorContainer.cs" id="2_r6oxi"]
+[gd_scene load_steps=1 format=3 uid="uid://bdlrmvc1qlk6e"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -10,7 +7,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_0is22")
 
 [node name="OptionButton" type="OptionButton" parent="."]
 layout_mode = 0
@@ -70,6 +66,3 @@ horizontal_scroll_mode = 0
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-script = ExtResource("2_r6oxi")
-
-[connection signal="ButtonPressed" from="ScrollContainer/GridContainer" to="." method="_On_ButtonSelectorContainer_ButtonPressed"]
