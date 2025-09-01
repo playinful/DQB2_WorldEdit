@@ -34,7 +34,7 @@ public partial class IntegrationMain : Control
 		}
 		if (idx == args.Count - 1)
 		{
-			GD.PrintErr("The `--driverFile` argument must be followed by the full path to the driver file");
+			GD.PushError("The `--driverFile` argument must be followed by the full path to the driver file");
 			return false;
 		}
 		DriverFile = cmdLineArgs[idx + 1];
