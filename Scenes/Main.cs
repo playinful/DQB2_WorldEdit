@@ -63,6 +63,12 @@ namespace EyeOfRubiss.Scenes
 
 		public override void _Ready()
 		{
+			if (IntegrationMain.ShouldSwitchToIntegrationMode(OS.GetCmdlineArgs()))
+			{
+				CallDeferred(nameof(SwitchToIntegrationMode));
+				return;
+			}
+
 			//_OnReadyVariables();
 
 			GetTree().AutoAcceptQuit = false;
@@ -72,6 +78,11 @@ namespace EyeOfRubiss.Scenes
 			UpdateLoadedData();
 			UpdateMenuButtons();
 		}
+		private void SwitchToIntegrationMode()
+		{
+			GetTree().ChangeSceneToFile("res://Integration/IntegrationMain.tscn");
+		}
+
 		/*private void _OnReadyVariables()
 		{
 			//_WorldEditorScene = GetNode<WorldEditorScene>("%WorldEditor");
