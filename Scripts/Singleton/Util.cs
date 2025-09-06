@@ -20,7 +20,7 @@ namespace EyeOfRubiss
 				return new AtlasTexture
 				{
 					Atlas = atlas,
-					Region = new Rect2(0, 0, 0, 0)
+					Region = new Rect2(0, 112, 0, 112)
 				};
 			}
 

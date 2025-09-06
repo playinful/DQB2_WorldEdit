@@ -30,18 +30,18 @@ namespace EyeOfRubiss.Nodes
 			Colour_ColorRect = GetNode<ColorRect>("ColorRect");
 		}
 
-		public void SetItem(ItemInfo itemInfo)
+		public void SetItem(ItemInfo itemInfo, int? count = null)
 		{
-			SetItem(itemInfo.Name, itemInfo.ImageID, itemInfo.Rarity, itemInfo.Connecting, 0);
+			SetItem(itemInfo.Name, itemInfo.Image, itemInfo.Rarity, itemInfo.Connecting, 0, count);
 			//SetItem(Util.ToRichText(itemInfo.Name), itemInfo.ImageID, itemInfo.Rarity, itemInfo.Connecting, 0);
 		}
-		public void SetBlock(BlockInfo blockInfo)
+		public void SetBlock(BlockInfo blockInfo, int? count = null)
 		{
-			SetItem(blockInfo.Name, blockInfo.ImageID, 0, false, 0);
+			SetItem(blockInfo.Name, blockInfo.ImageID, 0, false, 0, count);
 			//SetItem(Util.ToRichText(blockInfo.Name), blockInfo.ImageID, 0, false, 0);
 		}
 
-		public void SetItem(string name, int iconIndex, int rarity, bool connecting, int colour)
+		public void SetItem(string name, int iconIndex, int rarity = 0, bool connecting = false, int colour = 0, int? count = null)
 		{
 			Item_TextureRect.Texture = Util.GetItemIcon(iconIndex);
 
@@ -106,10 +106,16 @@ namespace EyeOfRubiss.Nodes
 			}
 
 			TooltipText = name;
+
+			if (count is int _count)
+				SetItemCount(_count);
 		}
 		public void SetItemCount(int count)
 		{
-			Count_Label.Text = count.ToString();
+			if (count != 0)
+				Count_Label.Text = count.ToString();
+			else
+				Count_Label.Text = "";
 		}
 	}
 }

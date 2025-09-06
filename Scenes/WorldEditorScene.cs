@@ -50,6 +50,8 @@ namespace EyeOfRubiss.Scenes
 		public bool ShowNPCs { get; set; } = true;
 		public bool ShowPlayer { get; set; } = true;
 
+		private bool _PropsLoaded = false;
+
 		public override void _Ready()
 		{
 			_VoxelTool = _VoxelTerrain.GetVoxelTool();
@@ -120,7 +122,7 @@ namespace EyeOfRubiss.Scenes
 		public void ChangeTerrainDisplay(bool show)
 		{
 			ShowTerrain = show;
-			_VoxelTerrain.Stream = show ? new VoxelStreamDQB2(_StageData) : null;
+			_VoxelTerrain.Stream = (show && _StageData is not null) ? new VoxelStreamDQB2(_StageData) : null;
 			//_VoxelTerrain.Visible = show;
 		}
 		public void ChangePlayerDisplay(bool show)
@@ -132,17 +134,20 @@ namespace EyeOfRubiss.Scenes
 		{
 			ShowProps = show;
 			_PropGrid.Visible = show;
+			if (show && _StageData is not null && !_PropsLoaded)
+				CreateProps(_StageData);
 		}
 		public void ChangePropShellDisplay(bool show)
 		{
 			ShowPropShells = show;
-			_VoxelTerrain_PropShells.Stream = show ? new VoxelStreamDQB2(_StageData, propsOnly: true) : null;
+			_VoxelTerrain_PropShells.Stream = (show && _StageData is not null) ? new VoxelStreamDQB2(_StageData, propsOnly: true) : null;
 		}
 		#endregion
 
 		#region Scene setup
 		public void LoadWorld(StageData stageData)
 		{
+			UnloadWorld();
 			_StageData = stageData;
 
 			if (ShowTerrain)
@@ -164,7 +169,8 @@ namespace EyeOfRubiss.Scenes
 					NoDepthTest = true
                 });
 			}*/
-			CreateProps(stageData);
+			if (ShowProps)
+				CreateProps(stageData);
 
 			if (CommonData.Instance is not null && CommonData.Instance.IsLoaded)
 				CreateResidents(CommonData.Instance);
@@ -186,11 +192,13 @@ namespace EyeOfRubiss.Scenes
 					_PropGrid.SetCellItemDelegated(prop.GetPosition(), meshId, prop.GetGridMapRotation());
 				}
 			}
+			_PropsLoaded = true;
 		}
 		public void DestroyProps()
 		{
 			_PropGrid.Clear();
 			_PropGrid.ClearSubGrid();
+			_PropsLoaded = false;
 		}
 
 		public void CreateResident(CommonData.Resident resident)
@@ -315,11 +323,11 @@ namespace EyeOfRubiss.Scenes
 				}
 				if (ShowPropShells)
 				{
-					ulong voxelId = (ulong)blockInfo.PropShell;
+					ulong voxelId = (ulong)blockInfo.GetPropShell();
 					_VoxelTerrain_PropShells.GetVoxelTool().SetVoxel(position, voxelId);
 				}
 
-				if (blockInfo.PropShell == PropShell.None)
+				if (blockInfo.GetPropShell() == PropShell.None)
 				{
 					DeleteProp(position);
 				}
@@ -419,6 +427,11 @@ namespace EyeOfRubiss.Scenes
 			}
 
 		}
+		public void MakeSuperflat(List<ushort> layers)
+		{
+			_StageData.MakeSuperflat(layers);
+			Reload();// TODO
+		}
 		#endregion
 
 		#region Brushes
@@ -493,7 +506,7 @@ namespace EyeOfRubiss.Scenes
 		#region Debug functions
 		public void CountBlocks(string path)
 		{
-
+			// TODO
 		}
 		public void CountProps(string path)
 		{
@@ -568,106 +581,28 @@ namespace EyeOfRubiss.Scenes
 			_TEST_selectedprop.Chunk = (ushort)(position.Z / 32 * 64 + position.X / 32);
 		}
 
-		public void TEST_Mood()
+		public void TEST_PropData()
 		{
-			List<string> blocks = [];
-			List<string> props = [];
-			foreach (StageData.Room room in _StageData.GetRooms())
+			List<string> lines = [];
+			for (int i = 0; i < _StageData.PropCount; i++)
 			{
-				StageData.BlockInstance block = _StageData.GetBlockAtPosition(new Vector3I(room.X, room.Y, room.Z));
+				StageData.Prop prop = _StageData.GetProp(i);
 
-				if (block.BlockID == 0)
-					continue;
+				string line = "";
 
-				if (block.GetInfo().PropShell == PropShell.None)
+				foreach (byte b in prop.GetBytes())
 				{
-					GD.Print($"{block.GetInfo().Name} [{block.BlockID}]");
-
-					blocks.Add($"{block.BlockID}\t{room.Fanciness - 20}\t{room.Normalness}\t{room.Cuteness}\t{room.Coolness}\t{room.Naturalness - 24}\t{room.Flamboyantness}\t{room.Cheekiness}");
+					line += $"{b:X2} ";
 				}
-				else
-				{
-					StageData.Prop prop = _StageData.GetPropAtPosition(new Vector3I(room.X, room.Y, room.Z));
 
-					if (prop is null)
-					{
-						GD.Print($"Error: No prop at ({room.X}, {room.Y}, {room.Z}). Using block {block.GetInfo().Name} [{block.BlockID}] instead");
+				line += $"{prop.GetInfo().Name} [{prop.PropID}] ({prop.GetPosition()})";
 
-						blocks.Add($"{block.BlockID}\t{room.Fanciness - 20}\t{room.Normalness}\t{room.Cuteness}\t{room.Coolness}\t{room.Naturalness - 24}\t{room.Flamboyantness}\t{room.Cheekiness}");
-						continue;
-					}
+				lines.Add(line);
+			}
+			
+			using var file = Godot.FileAccess.Open("res://propdata.txt", Godot.FileAccess.ModeFlags.Write);
+			file.StoreString(string.Join('\n', lines));
 
-					GD.Print($"{prop.GetInfo().Name} [{prop.PropID}]");
-
-					props.Add($"{prop.PropID}\t{room.Fanciness - 20}\t{room.Normalness}\t{room.Cuteness}\t{room.Coolness}\t{room.Naturalness - 24}\t{room.Flamboyantness}\t{room.Cheekiness}");
-				}
-			}
-
-			if (Godot.FileAccess.FileExists("res://mood_blocks.txt"))
-			{
-				using var file = Godot.FileAccess.Open("res://mood_blocks.txt", Godot.FileAccess.ModeFlags.ReadWrite);
-				List<string> before = [.. file.GetAsText().Split('\n')];
-				blocks = [.. before, .. blocks];
-				file.StoreString(string.Join('\n', blocks));
-			}
-			else
-			{
-				using var file = Godot.FileAccess.Open("res://mood_blocks.txt", Godot.FileAccess.ModeFlags.Write);
-				file.StoreString(string.Join('\n', blocks));
-			}
-
-			if (Godot.FileAccess.FileExists("res://mood_props.txt"))
-			{
-				using var file = Godot.FileAccess.Open("res://mood_props.txt", Godot.FileAccess.ModeFlags.ReadWrite);
-				List<string> before = [.. file.GetAsText().Split('\n')];
-				props = [.. before, .. props];
-				file.StoreString(string.Join('\n', props));
-			}
-			else
-			{
-				using var file = Godot.FileAccess.Open("res://mood_props.txt", Godot.FileAccess.ModeFlags.Write);
-				file.StoreString(string.Join('\n', props));
-			}
-		}
-		public void TEST_Mood2()
-		{
-			int i = 0;
-			foreach (StageData.Room room in _StageData.GetRooms())
-			{
-				i++;
-				GD.Print($"Room {i} | Fanciness: {room.Fanciness} | Normal: {room.Normalness} | Cute: {room.Cuteness} | Cool: {room.Coolness} | Natural: {room.Naturalness} | Flamboyant: {room.Flamboyantness} | Cheeky: {room.Cheekiness}");
-			}
-		}
-		public void TEST_Mood3()
-		{
-			List<int> ids = [];
-			foreach (string line in Godot.FileAccess.GetFileAsString("res://incense.txt").Split("\r\n"))
-			{
-				ids.Add(line.ToInt());
-			}
-
-			for (int i = 0; i < StageData.Room.MAXIMUM && i < ids.Count; i++)
-			{
-				StageData.Room room = _StageData.GetRoom(i);
-				StageData.Prop prop = _StageData.GetPropAtPosition(room.GetPosition());
-
-				prop.PropID = (ushort)ids[i];
-				prop.Rotation = 3;
-			}
-		}
-		public void TEST_Mood4()
-		{
-			List<int> ids = [];
-			foreach (string line in Godot.FileAccess.GetFileAsString("res://incense.txt").Split("\r\n"))
-			{
-				ids.Add(line.ToInt());
-			}
-
-			for (int i = 0; i < StageData.Room.MAXIMUM && i < ids.Count; i++)
-			{
-				StageData.Room room = _StageData.GetRoom(i);
-				SetBlock(room.GetPosition(), (ushort)ids[i]);
-			}
 		}
 		#endregion
 	}

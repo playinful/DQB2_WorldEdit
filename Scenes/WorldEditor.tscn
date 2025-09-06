@@ -1,15 +1,13 @@
-[gd_scene load_steps=27 format=3 uid="uid://chekdrqr80s3n"]
+[gd_scene load_steps=25 format=3 uid="uid://chekdrqr80s3n"]
 
 [ext_resource type="Texture2D" uid="uid://b5wcgwa3elvlc" path="res://Graphics/blocks.png" id="1_djn2n"]
 [ext_resource type="VoxelBlockyLibrary" uid="uid://ds0n7xj6hqhdx" path="res://Resources/Voxel Library.tres" id="1_ec1xm"]
 [ext_resource type="Script" uid="uid://da6gt5x2hlsns" path="res://Scenes/WorldEditorScene.cs" id="1_kqags"]
 [ext_resource type="VoxelBlockyLibrary" uid="uid://dkixrdmtruusw" path="res://Resources/Voxel Library Props.tres" id="2_mua0n"]
 [ext_resource type="Script" uid="uid://bgg687qn5fg8" path="res://Nodes/CameraController.cs" id="4_drl5t"]
-[ext_resource type="MeshLibrary" uid="uid://d245o52jja65n" path="res://Testing/PropLibraryA.tres" id="4_qfxig"]
 [ext_resource type="Script" uid="uid://dbareqhst8tgr" path="res://Scenes/PropGridHacky.cs" id="5_1olrm"]
 [ext_resource type="Theme" uid="uid://nd34kb5d40qb" path="res://Resources/DQB_Theme.tres" id="5_reqmc"]
 [ext_resource type="VoxelBlockyLibrary" uid="uid://dh12d5k2twag0" path="res://Resources/Voxel Library Liquid.tres" id="5_wt1c1"]
-[ext_resource type="MeshLibrary" uid="uid://cy8hdrxgofc1o" path="res://Testing/PropLibraryB.tres" id="6_mua0n"]
 [ext_resource type="Script" uid="uid://c8d5ejfxksjcm" path="res://Nodes/FPSLabel.cs" id="6_rkejf"]
 [ext_resource type="Texture2D" uid="uid://b44a5on8vq3cx" path="res://Graphics/crosshair.png" id="7_sgdhm"]
 [ext_resource type="Script" uid="uid://cef171jih3wvg" path="res://Scenes/PositionLabel.cs" id="8_o1mxb"]
@@ -146,16 +144,16 @@ run_stream_in_editor = false
 
 [node name="PropGrid" type="GridMap" parent="." node_paths=PackedStringArray("SubGrid")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1024, 0, -1024)
-mesh_library = ExtResource("4_qfxig")
 cell_size = Vector3(1, 1, 1)
 cell_center_y = false
 collision_layer = 4
 collision_mask = 0
 script = ExtResource("5_1olrm")
 SubGrid = NodePath("PropGridB")
+_MeshLibraryA = "uid://d245o52jja65n"
+_MeshLibraryB = "uid://cy8hdrxgofc1o"
 
 [node name="PropGridB" type="GridMap" parent="PropGrid"]
-mesh_library = ExtResource("6_mua0n")
 cell_size = Vector3(1, 1, 1)
 cell_center_y = false
 collision_layer = 4

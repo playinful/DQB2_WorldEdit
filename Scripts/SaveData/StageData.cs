@@ -512,10 +512,12 @@ namespace EyeOfRubiss
             public const int MAXIMUM = 0xC8000;
 
             public StageData SaveData { get; set; } = saveData;
-            public int Index { get; set; } = index;
+            public int Index { get; set; } = index; // todo fix
 
             public int GetAddress() => START_ADDRESS + (int)DataIndex * LENGTH;
             public int GetMetadataAddress() => START_ADDRESS_METADATA + Index * LENGTH_METADATA;
+
+            public Span<byte> GetBytes() => SaveData.GetBytes(GetAddress(), LENGTH);
 
             public ushort Chunk { get { return (ushort)SaveData.GetNumberBitwise(GetMetadataAddress(), 0, 12); } set { SaveData.SetNumberBitwise(GetMetadataAddress(), 0, 12, value); } }
             public uint DataIndex { get { return SaveData.GetNumberBitwise(GetMetadataAddress(), 12, 20); } set { SaveData.SetNumberBitwise(GetMetadataAddress(), 12, 20, value); } }

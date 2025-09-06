@@ -51,7 +51,7 @@ namespace EyeOfRubiss
                         if (block is not null)
                         {
                             BlockInfo blockInfo = BlockInfo.Get(block.BlockID);
-                            ulong voxelId = PropsOnly ? (ulong)blockInfo.PropShell : blockInfo.VoxelID;
+                            ulong voxelId = PropsOnly ? (ulong)blockInfo.GetPropShell() : blockInfo.VoxelID;
                             //ulong voxelId = blockInfo.VoxelID;
                             outBuffer.SetVoxel(voxelId, x, y, z, CHANNEL);
                         }

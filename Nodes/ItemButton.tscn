@@ -35,6 +35,7 @@ metadata/_edit_lock_ = true
 
 [node name="RarityIcon" type="TextureRect" parent="."]
 visible = false
+z_index = 1
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -46,6 +47,7 @@ stretch_mode = 5
 
 [node name="ConnectingIcon" type="TextureRect" parent="."]
 visible = false
+z_index = 1
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -59,6 +61,7 @@ texture = ExtResource("3_8twxc")
 expand_mode = 1
 
 [node name="CountLabel" type="Label" parent="."]
+z_index = 2
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
@@ -68,12 +71,15 @@ offset_top = -12.0
 offset_bottom = 11.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 12
 horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_lock_ = true
 
 [node name="ColorRect" type="ColorRect" parent="."]
 visible = false
+z_index = 1
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
@@ -88,6 +94,7 @@ metadata/_edit_lock_ = true
 
 [node name="ColorRectBG" type="ColorRect" parent="ColorRect"]
 show_behind_parent = true
+z_index = 1
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0

@@ -50,5 +50,19 @@ namespace EyeOfRubiss
                 child.QueueFree();
             }
         }
+        public static void Unparent(this Node node)
+        {
+            if (node.GetParent() is Node parent)
+            {
+                parent.RemoveChild(node);
+            }
+        }
+        public static void DisconnectAll(this GodotObject @object, StringName signal)
+        {
+            foreach (Godot.Collections.Dictionary dic in @object.GetSignalConnectionList(signal))
+			{
+				@object.Disconnect(signal, (Callable)dic["callable"]);
+			}
+        }
     }
 }

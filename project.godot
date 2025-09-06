@@ -26,7 +26,7 @@ movie_writer/movie_file="C:/Users/walke/Videos/GodotMovie.avi"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/native_dialogs/plugin.cfg")
+enabled=PackedStringArray("res://addons/Gizmo3DScript/plugin.cfg", "res://addons/native_dialogs/plugin.cfg")
 
 [input]
 

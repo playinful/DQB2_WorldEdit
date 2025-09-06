@@ -1,6 +1,8 @@
 using EyeOfRubiss.Scenes;
 using Godot;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace EyeOfRubiss.Nodes
 {
@@ -22,13 +24,10 @@ namespace EyeOfRubiss.Nodes
 
         public void _On_TextSubmitted(string new_text)
         {
-            if (_WorldEditorScene is null)
-                return;
-
             Text = "";
             if (!new_text.StartsWith('/'))
             {
-                _StatusLabel?.PrintMessage(new_text);
+                _StatusLabel?.PrintMessage(new_text, console: false);
                 return;
             }
 
@@ -37,6 +36,32 @@ namespace EyeOfRubiss.Nodes
             {
                 switch (command_parts[0])
                 {
+                    case "tp":
+                        _WorldEditorScene.MoveCamera(new Vector3(command_parts[1].ToFloat(), command_parts[2].ToFloat(), command_parts[3].ToFloat()) - new Vector3(1024, 0, 1024));
+                        break;
+                    case "reload":
+                        _WorldEditorScene.Reload();
+                        break;
+
+                    case "setblock":
+                        _WorldEditorScene.SetBlock(new Vector3I(command_parts[1].ToInt(), command_parts[2].ToInt(), command_parts[3].ToInt()), (ushort)command_parts[4].ToInt());
+                        break;
+                    case "fill":
+                        _WorldEditorScene.FillCube(new Vector3I(command_parts[1].ToInt(), command_parts[2].ToInt(), command_parts[3].ToInt()),
+                            new Vector3I(command_parts[4].ToInt(), command_parts[5].ToInt(), command_parts[6].ToInt()), (ushort)command_parts[7].ToInt());
+                        break;
+                    case "clone":
+                        _WorldEditorScene.CopyPaste(new Vector3I(command_parts[1].ToInt(), command_parts[2].ToInt(), command_parts[3].ToInt()),
+                            new Vector3I(command_parts[4].ToInt(), command_parts[5].ToInt(), command_parts[6].ToInt()),
+                            new Vector3I(command_parts[7].ToInt(), command_parts[8].ToInt(), command_parts[9].ToInt()));
+                        break;
+                    case "setbrushblock":
+                        _WorldEditorScene.SetBrushBlock((ushort)command_parts[1].ToInt());
+                        break;
+                    case "setbrushprop":
+                        _WorldEditorScene.SetBrushProp((ushort)command_parts[1].ToInt());
+                        break;
+
                     case "countblocks":
                         _WorldEditorScene.CountBlocks(command_parts[1]);
                         break;
@@ -46,36 +71,53 @@ namespace EyeOfRubiss.Nodes
                     case "findprop":
                         _WorldEditorScene.FindProp((ushort)command_parts[1].ToInt());
                         break;
-                    case "tp":
-                        _WorldEditorScene.MoveCamera(new Vector3(command_parts[1].ToFloat(), command_parts[2].ToFloat(), command_parts[3].ToFloat()) - new Vector3(1024, 0, 1024));
-                        break;
-                    case "fill":
-                        _WorldEditorScene.FillCube(new Vector3I(command_parts[1].ToInt(), command_parts[2].ToInt(), command_parts[3].ToInt()),
-                            new Vector3I(command_parts[4].ToInt(), command_parts[5].ToInt(), command_parts[6].ToInt()), (ushort)command_parts[7].ToInt());
-                        break;
-                    
-                    case "moodtest":
-                        _WorldEditorScene.TEST_Mood();
-                        break;
-                    case "moodtest2":
-                        _WorldEditorScene.TEST_Mood2();
-                        break;
-                    case "moodtest3":
-                        _WorldEditorScene.TEST_Mood3();
-                        break;
-                    case "moodtest4":
-                        _WorldEditorScene.TEST_Mood4();
+
+                    case "superflat":
+                        string[] superflat_args = command_parts[1].Split(",");
+                        List<ushort> layers = [];
+                        foreach (string arg in superflat_args)
+                        {
+                            int count;
+                            ushort blockId;
+                            if (arg.Contains('*'))
+                            {
+                                var split = arg.Split("*", 2);
+                                blockId = (ushort)split[0].ToInt();
+                                count = split[1].ToInt();
+                            }
+                            else
+                            {
+                                count = 1;
+                                blockId = (ushort)arg.ToInt();
+                            }
+
+                            for (int i = 0; i < count; i++)
+                                layers.Add(blockId);
+                        }
+                        _WorldEditorScene.MakeSuperflat(layers);
                         break;
 
-                    case "setbrushblock":
-                        _WorldEditorScene.SetBrushBlock((ushort)command_parts[1].ToInt());
+                    case "sethotbaritem":
+                        InventoryItem hotbar_item = CommonData.Instance.GetHotbarItem(command_parts[1].ToInt());
+                        hotbar_item.ItemID = (ushort)command_parts[2].ToInt();
+                        if (command_parts.Length > 2)
+                            hotbar_item.Count = (short)command_parts[3].ToInt();
+                        else if (hotbar_item.Count == 0)
+                            hotbar_item.Count = 1;
                         break;
-                    case "setbrushprop":
-                        _WorldEditorScene.SetBrushProp((ushort)command_parts[1].ToInt());
+                    case "setbagitem":
+                        InventoryItem bag_item = CommonData.Instance.GetBagItem(command_parts[1].ToInt());
+                        bag_item.ItemID = (ushort)command_parts[2].ToInt();
+                        if (command_parts.Length > 2)
+                            bag_item.Count = (short)command_parts[3].ToInt();
+                        else if (bag_item.Count == 0)
+                            bag_item.Count = 1;
                         break;
-                    case "reload":
-                        _WorldEditorScene.Reload();
+
+                    case "propdata":
+                        _WorldEditorScene.TEST_PropData();
                         break;
+
                     default:
                         _StatusLabel.PrintMessage($"Unknown command: {new_text}");
                         break;

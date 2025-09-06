@@ -39,13 +39,14 @@ namespace EyeOfRubiss
         public byte ToIsland { get => GetByte(0xC8, header: true); set => SetByte(0xC8, value, header: true); }
 
         public string PlayerName { get => GetString(0xCD, 12, header: true); set => SetString(0xCD, value, 12, header: true); }
-        public bool PlayerGender { get => GetBit(0xC4, 1, header: true); set => SetBit(0xC4, 1, value, header: true); } // False: female, True: male
+        public bool PlayerSex { get => GetBit(0xC4, 1, header: true); set => SetBit(0xC4, 1, value, header: true); } // False: female, True: male
         
-        public byte PlayerLevel { get => GetByte(0xCA9CF); set => SetByte(0xCA9CF, value); }
-        public short PlayerExperience { get => GetInt16(0x6A9D1); set => SetInt16(0x6A9D1, value); } // TODO test if signed
+        public byte PlayerLevel { get => GetByte(0x6A9CF); set => SetByte(0x6A9CF, value); }
+        public int PlayerExperience { get => GetInt32(0x6A9D1); set => SetInt32(0x6A9D1, value); } // TODO test if signed
 
         public short PlayerHP { get => GetInt16(0x6A890); set => SetInt16(0x6A890, value); } // TODO test if signed, also is this current or max? </summary>
         public short PlayerAdditionalHP { get => GetInt16(0x6A892); set => SetInt16(0x6A892, value); } // TODO I think this means bonuses from seeds of life, test this please -- also test if signed
+        public short PlayerCurrentHP { get => GetInt16(0x6A890); set => SetInt16(0x6A892, value); }
         public short PlayerHunger { get => GetInt16(0x6A896); set => SetInt16(0x6A896, value); }
         public short PlayerStamina { get => GetInt16(0x6A8A0); set => SetInt16(0x6A8A0, value); } // TODO test if signed
         public short PlayerAttack { get => GetInt16(0x6A898); set => SetInt16(0x6A898, value); } // TODO test if signed
@@ -109,6 +110,14 @@ namespace EyeOfRubiss
         public InventoryItem PlayerArmour => new(this, 0x55B989);
         public InventoryItem PlayerShield => new(this, 0x55B985);
         public InventoryItem PlayerHammer => new(this, 0x55B95D);
+
+        public InventoryItem PlayerGloves => new(this, 0x55B961);
+        public InventoryItem PlayerMagicPencil => new(this, 0x55B965);
+        public InventoryItem PlayerTransformOTrowel => new(this, 0x55B969);
+        public InventoryItem PlayerEchoFlute => new(this, 0x55B96D);
+        public InventoryItem PlayerChisel => new(this, 0x55B971);
+        public InventoryItem PlayerBottomlessPot => new(this, 0x55B975);
+        public InventoryItem PlayerFishingRod => new(this, 0x55B979);
 
         public InventoryItem GlamourHammer => new(this, 0x6A8C6);
         public InventoryItem GlamourWeapon => new(this, 0x6A8C2);

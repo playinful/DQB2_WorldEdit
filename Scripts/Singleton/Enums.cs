@@ -19,17 +19,17 @@ namespace EyeOfRubiss
     [JsonConverter(typeof(JsonStringEnumConverter))]
     public enum PropShell : int
     {
-        None,
-        Generic,
-        Fixture,
-        Door,
-        Roof,
-        Lighting,
-        Table,
-        Track,
-        Fence,
-        FryingPan,
-        Unknown
+        None = -1,
+        Fence = 0,
+        FryingPan = 1,
+        Track = 2,
+        Roof = 3,
+        Table = 4,
+        Lighting = 5,
+        Fixture = 6,
+        Door = 7,
+        Unknown = 8,
+        Generic = 9
     }
 
     public enum DQB2Crop : byte
@@ -53,5 +53,36 @@ namespace EyeOfRubiss
         Melon = 0x10,
         Rice = 0x11,
         Heatroot = 0x12
+    }
+
+    [JsonConverter(typeof(JsonStringEnumConverter))]
+    public enum FluidType : int
+    {
+        Air = -1,
+        Water = 0,
+        HotWater = 1,
+        Poison = 2,
+        Lava = 3,
+        SwampWater = 4,
+        MuddyWater = 5,
+        Seawater = 6,
+        Plasma = 7,
+        MAXIMUM = 8
+    }
+    public enum FluidLevel : int
+    {
+        None = -1,
+        Full = 0,
+        Shallow = 1,
+        Surface = 2,
+        OneEighth = 3,
+        TwoEighths = 4,
+        ThreeEighths = 5,
+        FourEighths = 6,
+        FiveEighths = 7,
+        SixEighths = 8,
+        SevenEighths = 9,
+        EightEighths = 10,
+        MAXIMUM = 11
     }
 }

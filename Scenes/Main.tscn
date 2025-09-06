@@ -1,16 +1,26 @@
-[gd_scene load_steps=10 format=3 uid="uid://d5ygrv1j2owh"]
+[gd_scene load_steps=20 format=3 uid="uid://d5ygrv1j2owh"]
 
 [ext_resource type="Theme" uid="uid://nd34kb5d40qb" path="res://Resources/DQB_Theme.tres" id="1_sua2j"]
 [ext_resource type="Script" uid="uid://dmw4aaodejfmb" path="res://Nodes/AutoSubmenu.cs" id="2_50glp"]
 [ext_resource type="Script" uid="uid://o1l3wpft1cmb" path="res://Scenes/Main.cs" id="2_vy5pj"]
 [ext_resource type="ButtonGroup" uid="uid://iilnu3cspndh" path="res://Resources/ToolSelectorButtonGroup.tres" id="4_v1gob"]
 [ext_resource type="Texture2D" uid="uid://b342q8jhhuatw" path="res://Graphics/icon_gratitude.png" id="6_vy5pj"]
-[ext_resource type="Script" uid="uid://dq2xt80fukn22" path="res://Nodes/BlockSelector.cs" id="7_jw32o"]
+[ext_resource type="Texture2D" uid="uid://bas763qy7loid" path="res://Graphics/BrushIcon/pencil.png" id="8_grg3l"]
+[ext_resource type="Texture2D" uid="uid://blqdbmxjkghmx" path="res://Graphics/BrushIcon/swap.png" id="9_frkhe"]
+[ext_resource type="Texture2D" uid="uid://dqp6cufmisgap" path="res://Graphics/BrushIcon/bucket.png" id="10_1p5hy"]
 [ext_resource type="Texture2D" uid="uid://dksjirgdotgbq" path="res://Graphics/icon_isle12.png" id="10_sxkr1"]
 [ext_resource type="PackedScene" uid="uid://chekdrqr80s3n" path="res://Scenes/WorldEditor.tscn" id="11_4kpch"]
+[ext_resource type="Texture2D" uid="uid://nvo001dadd0e" path="res://Graphics/BrushIcon/select.png" id="11_346fj"]
 [ext_resource type="Texture2D" uid="uid://diyestt7o7ejn" path="res://Graphics/icon_isle14.png" id="11_fq0cl"]
+[ext_resource type="Texture2D" uid="uid://bukeminmeelvv" path="res://Graphics/BrushIcon/copy.png" id="12_0sclb"]
+[ext_resource type="PackedScene" uid="uid://c8ji32ohm06et" path="res://Scenes/InventoryEditor.tscn" id="12_grg3l"]
+[ext_resource type="PackedScene" uid="uid://o3d56yqxtw7o" path="res://Scenes/PlayerEditor.tscn" id="13_frkhe"]
+[ext_resource type="Texture2D" uid="uid://bv0k7sacwx5k4" path="res://Graphics/BrushIcon/cut.png" id="13_sxkr1"]
+[ext_resource type="Script" uid="uid://blmw2vekf34is" path="res://Nodes/ItemButtonSelector.cs" id="14_1p5hy"]
+[ext_resource type="Texture2D" uid="uid://bq58vaml02jo5" path="res://Graphics/BrushIcon/paste.png" id="14_fq0cl"]
+[ext_resource type="Script" uid="uid://4b1u3e3eyj1n" path="res://Nodes/InventoryItemSelector.cs" id="19_0sclb"]
 
-[node name="Main" type="Control" node_paths=PackedStringArray("_WorldEditorScene", "_FileDialog", "_UnsavedChanges_Window", "_File_PopupMenu", "_File_SaveSingleFile_PopupMenu", "_File_SaveAsSingleFile_PopupMenu", "_File_Export_PopupMenu", "_File_Import_PopupMenu", "_Settings_PopupMenu", "_View_PopupMenu", "_IslandSelector_Button", "_Gratitude_SpinBox", "_Time_SpinBox", "_Weather_OptionButton")]
+[node name="Main" type="Control" node_paths=PackedStringArray("_WorldEditorScene", "_FileDialog", "_UnsavedChanges_Window", "_File_PopupMenu", "_File_SaveSingleFile_PopupMenu", "_File_SaveAsSingleFile_PopupMenu", "_File_Export_PopupMenu", "_File_Import_PopupMenu", "_Settings_PopupMenu", "_View_PopupMenu", "_Inventory_Button", "_Player_Button", "_IslandSelector_Button", "_Gratitude_SpinBox", "_Time_SpinBox", "_Weather_OptionButton", "_Block_ItemButtonSelector", "_Prop_ItemButtonSelector", "_Fluid_ItemButtonSelector", "_Inventory_Panel", "_ItemSelector_Panel", "_ItemSelector")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -29,10 +39,18 @@ _File_Export_PopupMenu = NodePath("Toolbar/VBoxContainer/MenuBar_Main/MenuBar/Fi
 _File_Import_PopupMenu = NodePath("Toolbar/VBoxContainer/MenuBar_Main/MenuBar/FileMenu/ImportMenu")
 _Settings_PopupMenu = NodePath("Toolbar/VBoxContainer/MenuBar_Main/MenuBar/SettingsMenu")
 _View_PopupMenu = NodePath("Toolbar/VBoxContainer/MenuBar_Main/MenuBar/ViewMenu")
+_Inventory_Button = NodePath("Toolbar/VBoxContainer/MenuBar_Main/InventoryButton")
+_Player_Button = NodePath("Toolbar/VBoxContainer/MenuBar_Main/PlayerButton")
 _IslandSelector_Button = NodePath("Toolbar/VBoxContainer/MenuBar_Stage/IslandSelectorButton")
 _Gratitude_SpinBox = NodePath("Toolbar/VBoxContainer/MenuBar_Stage/GratitudeBox")
 _Time_SpinBox = NodePath("Toolbar/VBoxContainer/MenuBar_Stage/TimeBox")
 _Weather_OptionButton = NodePath("Toolbar/VBoxContainer/MenuBar_Stage/SimpleWeatherSelect")
+_Block_ItemButtonSelector = NodePath("Toolbar/VBoxContainer/HSplitContainer/Control/TabContainer/Blocks/BlockSelector")
+_Prop_ItemButtonSelector = NodePath("Toolbar/VBoxContainer/HSplitContainer/Control/TabContainer/Props/PropSelector")
+_Fluid_ItemButtonSelector = NodePath("Toolbar/VBoxContainer/HSplitContainer/Control/TabContainer/Liquids/FluidSelector")
+_Inventory_Panel = NodePath("InventoryEditor")
+_ItemSelector_Panel = NodePath("ItemSelectorPanel")
+_ItemSelector = NodePath("ItemSelectorPanel/ItemSelector")
 metadata/_edit_lock_ = true
 
 [node name="Toolbar" type="Control" parent="."]
@@ -196,6 +214,18 @@ item_2/checkable = 1
 item_2/checked = true
 item_2/id = 2
 
+[node name="InventoryButton" type="Button" parent="Toolbar/VBoxContainer/MenuBar_Main"]
+layout_mode = 2
+text = "Inventory"
+
+[node name="PlayerButton" type="Button" parent="Toolbar/VBoxContainer/MenuBar_Main"]
+layout_mode = 2
+text = "Player"
+
+[node name="ResidentsButton" type="Button" parent="Toolbar/VBoxContainer/MenuBar_Main"]
+layout_mode = 2
+text = "Residents"
+
 [node name="AboutButton" type="Button" parent="Toolbar/VBoxContainer/MenuBar_Main"]
 layout_mode = 2
 text = "About
@@ -236,7 +266,7 @@ popup/item_11/text = "Battle Atoll"
 popup/item_11/icon = ExtResource("11_fq0cl")
 popup/item_11/id = 14
 
-[node name="Weather_" type="Label" parent="Toolbar/VBoxContainer/MenuBar_Stage"]
+[node name="Weather_Label" type="Label" parent="Toolbar/VBoxContainer/MenuBar_Stage"]
 layout_mode = 2
 text = "Weather:"
 
@@ -315,12 +345,13 @@ expand_mode = 3
 
 [node name="GratitudeBox" type="SpinBox" parent="Toolbar/VBoxContainer/MenuBar_Stage"]
 layout_mode = 2
+tooltip_text = "Gratitude"
 theme = ExtResource("1_sua2j")
 max_value = 99999.0
 rounded = true
 editable = false
 
-[node name="Label" type="Label" parent="Toolbar/VBoxContainer/MenuBar_Stage"]
+[node name="Time_Label" type="Label" parent="Toolbar/VBoxContainer/MenuBar_Stage"]
 layout_mode = 2
 text = "Time:"
 
@@ -336,13 +367,13 @@ layout_mode = 2
 toggle_mode = true
 button_pressed = true
 button_group = ExtResource("4_v1gob")
-text = "Pencil"
+icon = ExtResource("8_grg3l")
 
 [node name="Swap" type="Button" parent="Toolbar/VBoxContainer/MenuBar_Tools"]
 layout_mode = 2
 toggle_mode = true
 button_group = ExtResource("4_v1gob")
-text = "Swap"
+icon = ExtResource("9_frkhe")
 
 [node name="Eraser" type="Button" parent="Toolbar/VBoxContainer/MenuBar_Tools"]
 layout_mode = 2
@@ -354,7 +385,7 @@ text = "Eraser"
 layout_mode = 2
 toggle_mode = true
 button_group = ExtResource("4_v1gob")
-text = "Bucket"
+icon = ExtResource("10_1p5hy")
 
 [node name="PropChecker" type="Button" parent="Toolbar/VBoxContainer/MenuBar_Tools"]
 layout_mode = 2
@@ -367,6 +398,30 @@ layout_mode = 2
 toggle_mode = true
 button_group = ExtResource("4_v1gob")
 text = "AddProp"
+
+[node name="Select" type="Button" parent="Toolbar/VBoxContainer/MenuBar_Tools"]
+layout_mode = 2
+toggle_mode = true
+button_group = ExtResource("4_v1gob")
+icon = ExtResource("11_346fj")
+
+[node name="Copy" type="Button" parent="Toolbar/VBoxContainer/MenuBar_Tools"]
+layout_mode = 2
+toggle_mode = true
+button_group = ExtResource("4_v1gob")
+icon = ExtResource("12_0sclb")
+
+[node name="Cut" type="Button" parent="Toolbar/VBoxContainer/MenuBar_Tools"]
+layout_mode = 2
+toggle_mode = true
+button_group = ExtResource("4_v1gob")
+icon = ExtResource("13_sxkr1")
+
+[node name="Paste" type="Button" parent="Toolbar/VBoxContainer/MenuBar_Tools"]
+layout_mode = 2
+toggle_mode = true
+button_group = ExtResource("4_v1gob")
+icon = ExtResource("14_fq0cl")
 
 [node name="HSplitContainer" type="HSplitContainer" parent="Toolbar/VBoxContainer"]
 layout_mode = 2
@@ -381,7 +436,7 @@ metadata/_edit_lock_ = true
 
 [node name="SubViewport" type="SubViewport" parent="Toolbar/VBoxContainer/HSplitContainer/WorldEditorContainer"]
 handle_input_locally = false
-size = Vector2i(2, 2)
+size = Vector2i(860, 546)
 render_target_update_mode = 4
 
 [node name="WorldEditor" parent="Toolbar/VBoxContainer/HSplitContainer/WorldEditorContainer/SubViewport" instance=ExtResource("11_4kpch")]
@@ -390,22 +445,55 @@ unique_name_in_owner = true
 [node name="Control" type="Control" parent="Toolbar/VBoxContainer/HSplitContainer"]
 layout_mode = 2
 
-[node name="ScrollContainer" type="ScrollContainer" parent="Toolbar/VBoxContainer/HSplitContainer/Control"]
+[node name="TabContainer" type="TabContainer" parent="Toolbar/VBoxContainer/HSplitContainer/Control"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = -31.0
 grow_horizontal = 2
 grow_vertical = 2
-horizontal_scroll_mode = 0
+tab_alignment = 1
+current_tab = 0
 
-[node name="BlockSelector" type="HFlowContainer" parent="Toolbar/VBoxContainer/HSplitContainer/Control/ScrollContainer"]
+[node name="Blocks" type="ScrollContainer" parent="Toolbar/VBoxContainer/HSplitContainer/Control/TabContainer"]
+layout_mode = 2
+horizontal_scroll_mode = 0
+metadata/_tab_index = 0
+
+[node name="BlockSelector" type="HFlowContainer" parent="Toolbar/VBoxContainer/HSplitContainer/Control/TabContainer/Blocks"]
 clip_contents = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-script = ExtResource("7_jw32o")
-InitialSelectedBlock = 1
+script = ExtResource("14_1p5hy")
+InitialSelection = 1
+
+[node name="Props" type="ScrollContainer" parent="Toolbar/VBoxContainer/HSplitContainer/Control/TabContainer"]
+visible = false
+layout_mode = 2
+horizontal_scroll_mode = 0
+metadata/_tab_index = 1
+
+[node name="PropSelector" type="HFlowContainer" parent="Toolbar/VBoxContainer/HSplitContainer/Control/TabContainer/Props"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("14_1p5hy")
+
+[node name="Liquids" type="ScrollContainer" parent="Toolbar/VBoxContainer/HSplitContainer/Control/TabContainer"]
+visible = false
+layout_mode = 2
+horizontal_scroll_mode = 0
+metadata/_tab_index = 2
+
+[node name="FluidSelector" type="HFlowContainer" parent="Toolbar/VBoxContainer/HSplitContainer/Control/TabContainer/Liquids"]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("14_1p5hy")
 
 [node name="ComplexWeatherSelect" type="OptionButton" parent="Toolbar"]
 layout_mode = 0
@@ -685,6 +773,7 @@ unique_name_in_owner = true
 title = "Basic Prop Editor"
 initial_position = 2
 size = Vector2i(330, 100)
+visible = false
 
 [node name="VBoxContainer" type="VBoxContainer" parent="BasicPropEditor"]
 anchors_preset = 15
@@ -749,6 +838,47 @@ layout_mode = 2
 size_flags_horizontal = 4
 text = "Execute"
 
+[node name="InventoryEditor" parent="." node_paths=PackedStringArray("_InventoryItemSelector") instance=ExtResource("12_grg3l")]
+visible = false
+layout_mode = 1
+anchor_left = 0.0381944
+anchor_top = 0.16821
+anchor_right = 0.947048
+anchor_bottom = 0.79784
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1
+_InventoryItemSelector = NodePath("../ItemSelectorPanel/ItemSelector")
+metadata/_edit_use_anchors_ = true
+
+[node name="PlayerEditor" parent="." instance=ExtResource("13_frkhe")]
+visible = false
+layout_mode = 1
+anchor_left = 0.188368
+anchor_top = 0.188272
+anchor_right = 0.801215
+anchor_bottom = 0.859568
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="ItemSelectorPanel" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 695.0
+offset_top = 124.0
+offset_right = 995.0
+offset_bottom = 599.0
+
+[node name="ItemSelector" type="HFlowContainer" parent="ItemSelectorPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("19_0sclb")
+
 [connection signal="id_pressed" from="Toolbar/VBoxContainer/MenuBar_Main/MenuBar/FileMenu" to="." method="_On_File_PopupMenu_IdPressed"]
 [connection signal="id_pressed" from="Toolbar/VBoxContainer/MenuBar_Main/MenuBar/FileMenu/SaveSingleFileMenu" to="." method="_On_SaveSingleFile_PopupMenu_IdPressed"]
 [connection signal="id_pressed" from="Toolbar/VBoxContainer/MenuBar_Main/MenuBar/FileMenu/SaveAsSingleFileMenu" to="." method="_On_SaveAsSingleFile_PopupMenu_IdPressed"]
@@ -757,6 +887,8 @@ text = "Execute"
 [connection signal="id_pressed" from="Toolbar/VBoxContainer/MenuBar_Main/MenuBar/EditMenu" to="." method="_On_Edit_PopupMenu_IdPressed"]
 [connection signal="id_pressed" from="Toolbar/VBoxContainer/MenuBar_Main/MenuBar/ViewMenu" to="." method="_On_View_PopupMenu_IdPressed"]
 [connection signal="id_pressed" from="Toolbar/VBoxContainer/MenuBar_Main/MenuBar/SettingsMenu" to="." method="_On_Settings_PopupMenu_IdPressed"]
+[connection signal="pressed" from="Toolbar/VBoxContainer/MenuBar_Main/InventoryButton" to="." method="_On_Inventory_Button_Pressed"]
+[connection signal="pressed" from="Toolbar/VBoxContainer/MenuBar_Main/PlayerButton" to="PlayerEditor" method="show"]
 [connection signal="pressed" from="Toolbar/VBoxContainer/MenuBar_Main/AboutButton" to="Popups/AboutDialog" method="show"]
 [connection signal="pressed" from="Toolbar/VBoxContainer/MenuBar_Tools/Pencil" to="Toolbar/VBoxContainer/HSplitContainer/WorldEditorContainer/SubViewport/WorldEditor" method="SetBrushPrimary" binds= [1]]
 [connection signal="pressed" from="Toolbar/VBoxContainer/MenuBar_Tools/Swap" to="Toolbar/VBoxContainer/HSplitContainer/WorldEditorContainer/SubViewport/WorldEditor" method="SetBrushPrimary" binds= [3]]
@@ -764,8 +896,8 @@ text = "Execute"
 [connection signal="pressed" from="Toolbar/VBoxContainer/MenuBar_Tools/Bucket" to="Toolbar/VBoxContainer/HSplitContainer/WorldEditorContainer/SubViewport/WorldEditor" method="SetBrushPrimary" binds= [2]]
 [connection signal="pressed" from="Toolbar/VBoxContainer/MenuBar_Tools/PropChecker" to="Toolbar/VBoxContainer/HSplitContainer/WorldEditorContainer/SubViewport/WorldEditor" method="SetBrushPrimary" binds= [6]]
 [connection signal="pressed" from="Toolbar/VBoxContainer/MenuBar_Tools/PropAdder" to="Toolbar/VBoxContainer/HSplitContainer/WorldEditorContainer/SubViewport/WorldEditor" method="SetBrushPrimary" binds= [7]]
-[connection signal="BlockSelected" from="Toolbar/VBoxContainer/HSplitContainer/Control/ScrollContainer/BlockSelector" to="Toolbar/VBoxContainer/HSplitContainer/WorldEditorContainer/SubViewport/WorldEditor" method="SetBrushBlock"]
-[connection signal="ready" from="Toolbar/VBoxContainer/HSplitContainer/Control/ScrollContainer/BlockSelector" to="Toolbar/VBoxContainer/HSplitContainer/Control/ScrollContainer/BlockSelector" method="Populate"]
+[connection signal="ItemSelected" from="Toolbar/VBoxContainer/HSplitContainer/Control/TabContainer/Blocks/BlockSelector" to="Toolbar/VBoxContainer/HSplitContainer/WorldEditorContainer/SubViewport/WorldEditor" method="SetBrushBlock"]
+[connection signal="ItemSelected" from="Toolbar/VBoxContainer/HSplitContainer/Control/TabContainer/Props/PropSelector" to="Toolbar/VBoxContainer/HSplitContainer/WorldEditorContainer/SubViewport/WorldEditor" method="SetBrushProp"]
 [connection signal="dir_selected" from="Popups/FileDialog" to="." method="_On_FileDialog_FileSelected"]
 [connection signal="file_selected" from="Popups/FileDialog" to="." method="_On_FileDialog_FileSelected"]
 [connection signal="close_requested" from="Popups/UnsavedChangesWindow" to="." method="_On_UnsavedChanges_Window_Cancel_Button_Pressed"]
@@ -775,3 +907,5 @@ text = "Execute"
 [connection signal="pressed" from="VeryBasicCopierWindow/VBoxContainer/Button" to="." method="DoVerySimpleCopy"]
 [connection signal="close_requested" from="BasicPropEditor" to="BasicPropEditor" method="hide"]
 [connection signal="pressed" from="BasicPropEditor/VBoxContainer/Button" to="." method="BasicPropEditor"]
+[connection signal="visibility_changed" from="InventoryEditor" to="InventoryEditor" method="Initialize"]
+[connection signal="visibility_changed" from="PlayerEditor" to="PlayerEditor" method="UpdateAll"]

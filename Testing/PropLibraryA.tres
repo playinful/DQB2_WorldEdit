@@ -63,7 +63,7 @@
 [ext_resource type="Texture2D" uid="uid://0urix27lo3is" path="res://Mesh/grand_piano_color.png" id="21_ciyuh"]
 [ext_resource type="Texture2D" uid="uid://bjn0qswwxnc0k" path="res://Mesh/grass_normal.png" id="21_ttkkq"]
 [ext_resource type="Texture2D" uid="uid://dd4v2g5cy218y" path="res://Mesh/steel_doors.png" id="22_24byx"]
-[ext_resource type="Texture2D" uid="uid://406kk76rasio" path="res://arched_window_color.png" id="22_jeqb5"]
+[ext_resource type="Texture2D" uid="uid://406kk76rasio" path="res://Mesh/arched_window_color.png" id="22_jeqb5"]
 [ext_resource type="Texture2D" uid="uid://c4lihjaf4ngx2" path="res://Mesh/grand_piano_black.png" id="22_nc0hr"]
 [ext_resource type="Texture2D" uid="uid://d2pgw3hdww8d" path="res://Mesh/bogwort.png" id="23_044nk"]
 [ext_resource type="Texture2D" uid="uid://2wjg3lyjk2nj" path="res://Mesh/flower_black.png" id="23_kousx"]

@@ -371,7 +371,8 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "Building Block"
+        "Category": "Building Block",
+        "Note": "Block ID 413"
     },
     {
         "ID": 35,
@@ -562,7 +563,7 @@
     },
     {
         "ID": 52,
-        "Name": "Builder’s Workbench A",
+        "Name": "Builder’s Workbench Lv. 0",
         "NameJP": "からっぽ島作業台",
         "NameKana": "からっぽじまさぎょうだい",
         "Rarity": 0,
@@ -1628,17 +1629,18 @@
     },
     {
         "ID": 152,
-        "Name": "[Debug - Outer frame of a small boat]",
+        "Name": "",
         "NameJP": "【入不】小舟の外枠",
         "NameKana": "【にゅうふ】こぶねのそとわく",
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "0"
+        "Category": "0",
+        "Note": "Prop ID 519. No collision."
     },
     {
         "ID": 153,
-        "Name": "Planted Earth",
+        "Name": "Planted Earth (Watered)",
         "NameJP": "タネ植え土",
         "NameKana": "たねうえつち",
         "Rarity": 0,
@@ -1648,7 +1650,7 @@
     },
     {
         "ID": 154,
-        "Name": "Planted Humus",
+        "Name": "Planted Humus (Watered)",
         "NameJP": "タネ植え腐葉土",
         "NameKana": "たねうえふようど",
         "Rarity": 0,
@@ -1686,7 +1688,8 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "0"
+        "Category": "0",
+        "Note": "Prop ID 803"
     },
     {
         "ID": 158,
@@ -1696,7 +1699,8 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "0"
+        "Category": "0",
+        "Note": "Prop ID 1059"
     },
     {
         "ID": 159,
@@ -3453,7 +3457,8 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "Decorative Item"
+        "Category": "Decorative Item",
+        "Note": "Prop ID 2413"
     },
     {
         "ID": 324,
@@ -3463,7 +3468,8 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "Decorative Item"
+        "Category": "Decorative Item",
+        "Note": "Prop ID 2414"
     },
     {
         "ID": 325,
@@ -3473,7 +3479,8 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "Decorative Item"
+        "Category": "Decorative Item",
+        "Note": "Prop ID 2412"
     },
     {
         "ID": 326,
@@ -4805,7 +4812,8 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1573,
-        "Category": "Debug"
+        "Category": "Debug",
+        "Note": "GG Tablet Prop 2252"
     },
     {
         "ID": 448,
@@ -4815,7 +4823,8 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1574,
-        "Category": "Debug"
+        "Category": "Debug",
+        "Note": "SS Tablet Prop 2253"
     },
     {
         "ID": 449,
@@ -4825,7 +4834,8 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1575,
-        "Category": "Debug"
+        "Category": "Debug",
+        "Note": "CS Tablet Prop 2254"
     },
     {
         "ID": 450,
@@ -6798,7 +6808,8 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1323,
-        "Category": "0"
+        "Category": "0",
+        "Note": "Prop ID 839"
     },
     {
         "ID": 632,
@@ -7280,7 +7291,7 @@
     },
     {
         "ID": 677,
-        "Name": "Worn-Out Workbench",
+        "Name": "Worn-Out Workbench (Tutorial)",
         "NameJP": "ボロの作業台",
         "NameKana": "ぼろのさぎょうだい",
         "Rarity": 0,
@@ -8186,7 +8197,7 @@
     },
     {
         "ID": 760,
-        "Name": "Builder’s Workbench B",
+        "Name": "Builder’s Workbench Lv. 1",
         "NameJP": "からっぽ島作業台",
         "NameKana": "からっぽじまさぎょうだい",
         "Rarity": 0,
@@ -8197,7 +8208,7 @@
     },
     {
         "ID": 761,
-        "Name": "Builder’s Workbench C",
+        "Name": "Builder’s Workbench Lv. 2",
         "NameJP": "からっぽ島作業台",
         "NameKana": "からっぽじまさぎょうだい",
         "Rarity": 0,
@@ -8208,7 +8219,7 @@
     },
     {
         "ID": 762,
-        "Name": "Builder’s Workbench D",
+        "Name": "Builder’s Workbench Lv. 3",
         "NameJP": "からっぽ島作業台",
         "NameKana": "からっぽじまさぎょうだい",
         "Rarity": 0,
@@ -8219,7 +8230,7 @@
     },
     {
         "ID": 763,
-        "Name": "Wooden Workbench",
+        "Name": "Wooden Workbench Lv. 0",
         "NameJP": "木の作業台",
         "NameKana": "きのさぎょうだい",
         "Rarity": 0,
@@ -8230,7 +8241,7 @@
     },
     {
         "ID": 764,
-        "Name": "Stone Workbench",
+        "Name": "Stone Workbench Lv. 0",
         "NameJP": "石の作業台",
         "NameKana": "いしのさぎょうだい",
         "Rarity": 0,
@@ -8241,7 +8252,7 @@
     },
     {
         "ID": 765,
-        "Name": "Iron Workbench",
+        "Name": "Iron Workbench Lv. 0",
         "NameJP": "鉄の作業台",
         "NameKana": "てつのさぎょうだい",
         "Rarity": 0,
@@ -9474,7 +9485,7 @@
     },
     {
         "ID": 879,
-        "Name": "Poled and Planted Earth",
+        "Name": "Poled and Planted Earth (Watered)",
         "NameJP": "タネ植え土・支柱",
         "NameKana": "たねうえつち・しちゅう",
         "Rarity": 0,
@@ -9484,7 +9495,7 @@
     },
     {
         "ID": 880,
-        "Name": "Poled and Planted Humus",
+        "Name": "Poled and Planted Humus (Watered)",
         "NameJP": "タネ植え腐葉土・支柱",
         "NameKana": "たねうえふようど・しちゅう",
         "Rarity": 0,
@@ -10162,7 +10173,7 @@
     },
     {
         "ID": 943,
-        "Name": "Builder’s Workbench",
+        "Name": "Builder’s Workbench Lv. MAX",
         "NameJP": "からっぽ島作業台",
         "NameKana": "からっぽじまさぎょうだい",
         "Rarity": 0,
@@ -11517,7 +11528,7 @@
     },
     {
         "ID": 1069,
-        "Name": "Orichalcum  Vein",
+        "Name": "Orichalcum Vein",
         "NameJP": "オリハルコン鉱脈",
         "NameKana": "おりはるこんこうみゃく",
         "Rarity": 1,
@@ -12816,7 +12827,8 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "0"
+        "Category": "0",
+        "Note": "Plasma shallow"
     },
     {
         "ID": 1189,
@@ -12826,7 +12838,8 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "0"
+        "Category": "0",
+        "Note": "Plasma full"
     },
     {
         "ID": 1190,
@@ -12885,7 +12898,7 @@
     },
     {
         "ID": 1195,
-        "Name": "Stone Workbench",
+        "Name": "Stone Workbench Lv. 2",
         "NameJP": "石の作業台",
         "NameKana": "いしのさぎょうだい",
         "Rarity": 0,
@@ -14555,7 +14568,7 @@
     },
     {
         "ID": 1347,
-        "Name": "Stone Workbench",
+        "Name": "Stone Workbench Lv. 1",
         "NameJP": "石の作業台",
         "NameKana": "いしのさぎょうだい",
         "Rarity": 0,
@@ -14566,7 +14579,7 @@
     },
     {
         "ID": 1348,
-        "Name": "Wooden Workbench",
+        "Name": "Wooden Workbench Lv. 1",
         "NameJP": "木の作業台",
         "NameKana": "きのさぎょうだい",
         "Rarity": 0,
@@ -15791,7 +15804,7 @@
     },
     {
         "ID": 1460,
-        "Name": "Iron Workbench",
+        "Name": "Iron Workbench Lv. 1",
         "NameJP": "鉄の作業台",
         "NameKana": "てつのさぎょうだい",
         "Rarity": 0,
@@ -15802,7 +15815,7 @@
     },
     {
         "ID": 1461,
-        "Name": "Iron Workbench",
+        "Name": "Iron Workbench Lv. 2",
         "NameJP": "鉄の作業台",
         "NameKana": "てつのさぎょうだい",
         "Rarity": 0,
@@ -16235,7 +16248,8 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1425,
-        "Category": "Decorative Item"
+        "Category": "Decorative Item",
+        "Note": "Prop ID 1118. Name implies watered but model is identical."
     },
     {
         "ID": 1501,
@@ -16891,7 +16905,8 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "0"
+        "Category": "0",
+        "Note": "Block ID 611"
     },
     {
         "ID": 1561,
@@ -16901,7 +16916,8 @@
         "Rarity": 3,
         "Connecting": false,
         "Image": 0,
-        "Category": "Decorative Item"
+        "Category": "Decorative Item",
+        "Note": "Malroth's oaken club, prop ID 2176"
     },
     {
         "ID": 1562,
@@ -19346,7 +19362,7 @@
     },
     {
         "ID": 1793,
-        "Name": "Infernal Workbench",
+        "Name": "Infernal Workbench Lv. 0",
         "NameJP": "邪教の作業台",
         "NameKana": "じゃきょうのさぎょうだい",
         "Rarity": 0,
@@ -19357,7 +19373,7 @@
     },
     {
         "ID": 1794,
-        "Name": "Infernal Workbench",
+        "Name": "Infernal Workbench Lv. 1",
         "NameJP": "邪教の作業台",
         "NameKana": "じゃきょうのさぎょうだい",
         "Rarity": 0,
@@ -19368,7 +19384,7 @@
     },
     {
         "ID": 1795,
-        "Name": "Infernal Workbench",
+        "Name": "Infernal Workbench Lv. MAX",
         "NameJP": "邪教の作業台",
         "NameKana": "じゃきょうのさぎょうだい",
         "Rarity": 0,
@@ -19501,7 +19517,8 @@
         "Rarity": 1,
         "Connecting": false,
         "Image": 1571,
-        "Category": "Decorative Item"
+        "Category": "Decorative Item",
+        "Note": "Prop ID 929"
     },
     {
         "ID": 1808,
@@ -19511,7 +19528,8 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "0"
+        "Category": "0",
+        "Note": "Prop ID 379"
     },
     {
         "ID": 1809,
@@ -19521,7 +19539,8 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "0"
+        "Category": "0",
+        "Note": "Prop ID 376"
     },
     {
         "ID": 1810,
@@ -19531,7 +19550,8 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "0"
+        "Category": "0",
+        "Note": "Prop ID 377"
     },
     {
         "ID": 1811,
@@ -19541,7 +19561,8 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "Decorative Item"
+        "Category": "Decorative Item",
+        "Note": "Prop ID 381"
     },
     {
         "ID": 1812,
@@ -19551,7 +19572,8 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "Decorative Item"
+        "Category": "Decorative Item",
+        "Note": "Prop ID 543"
     },
     {
         "ID": 1813,
@@ -19561,7 +19583,8 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "Decorative Item"
+        "Category": "Decorative Item",
+        "Note": "Prop ID 801"
     },
     {
         "ID": 1814,
@@ -20064,7 +20087,8 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "Decorative Item"
+        "Category": "Decorative Item",
+        "Note": "Prop ID 807"
     },
     {
         "ID": 1860,
@@ -20074,7 +20098,8 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "Decorative Item"
+        "Category": "Decorative Item",
+        "Note": "Prop ID 835"
     },
     {
         "ID": 1861,
@@ -20084,7 +20109,8 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "Decorative Item"
+        "Category": "Decorative Item",
+        "Note": "Prop ID 989"
     },
     {
         "ID": 1862,
@@ -20630,7 +20656,7 @@
     },
     {
         "ID": 1914,
-        "Name": "Wooden Workbench",
+        "Name": "Wooden Workbench Lv. 2",
         "NameJP": "木の作業台",
         "NameKana": "きのさぎょうだい",
         "Rarity": 0,
@@ -20641,7 +20667,7 @@
     },
     {
         "ID": 1915,
-        "Name": "Wooden Workbench",
+        "Name": "Wooden Workbench Lv. 3",
         "NameJP": "木の作業台",
         "NameKana": "きのさぎょうだい",
         "Rarity": 0,
@@ -20652,7 +20678,7 @@
     },
     {
         "ID": 1916,
-        "Name": "Wooden Workbench",
+        "Name": "Wooden Workbench Lv. MAX",
         "NameJP": "木の作業台",
         "NameKana": "きのさぎょうだい",
         "Rarity": 0,
@@ -20777,7 +20803,8 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": -1,
-        "Category": "0"
+        "Category": "0",
+        "Note": "Prop ID 545"
     },
     {
         "ID": 1928,
@@ -21067,7 +21094,7 @@
     },
     {
         "ID": 1957,
-        "Name": "Infernal Workbench",
+        "Name": "Infernal Workbench (Indestructible)",
         "NameJP": "邪教の作業台",
         "NameKana": "じゃきょうのさぎょうだい",
         "Rarity": 1,
@@ -21722,7 +21749,8 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "Decorative Item"
+        "Category": "Decorative Item",
+        "Note": "Whirlwind"
     },
     {
         "ID": 2031,
@@ -24378,7 +24406,8 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "0"
+        "Category": "0",
+        "Note": "Small spoilspore"
     },
     {
         "ID": 2278,
@@ -24388,7 +24417,8 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "0"
+        "Category": "0",
+        "Note": "Spoilspore Large"
     },
     {
         "ID": 2279,
@@ -24408,7 +24438,8 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "Decorative Item"
+        "Category": "Decorative Item",
+        "Note": "Beastly Burrow Broken"
     },
     {
         "ID": 2281,
@@ -24901,7 +24932,8 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "Decorative Item"
+        "Category": "Decorative Item",
+        "Note": "Pestilential Nest Broken"
     },
     {
         "ID": 2326,
@@ -26350,7 +26382,8 @@
         "Rarity": 1,
         "Connecting": false,
         "Image": 1570,
-        "Category": "Decorative Item"
+        "Category": "Decorative Item",
+        "Note": "Prop ID 1403"
     },
     {
         "ID": 2462,
@@ -26360,7 +26393,8 @@
         "Rarity": 1,
         "Connecting": false,
         "Image": 1571,
-        "Category": "Decorative Item"
+        "Category": "Decorative Item",
+        "Note": "Prop ID 1404"
     },
     {
         "ID": 2464,
@@ -27073,7 +27107,8 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 118,
-        "Category": "0"
+        "Category": "0",
+        "Note": "Prop ID 2191"
     },
     {
         "ID": 2540,
@@ -27083,7 +27118,8 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1344,
-        "Category": "0"
+        "Category": "0",
+        "Note": "Prop ID 2192"
     },
     {
         "ID": 2541,
@@ -27093,7 +27129,8 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 1375,
-        "Category": "0"
+        "Category": "0",
+        "Note": "Prop ID 2193"
     },
     {
         "ID": 2542,
@@ -27183,7 +27220,7 @@
     },
     {
         "ID": 2550,
-        "Name": "Stone Workbench",
+        "Name": "Stone Workbench Lv. 3",
         "NameJP": "石の作業台",
         "NameKana": "いしのさぎょうだい",
         "Rarity": 0,
@@ -27194,7 +27231,7 @@
     },
     {
         "ID": 2551,
-        "Name": "Stone Workbench",
+        "Name": "Stone Workbench Lv. MAX",
         "NameJP": "石の作業台",
         "NameKana": "いしのさぎょうだい",
         "Rarity": 0,
@@ -27205,7 +27242,7 @@
     },
     {
         "ID": 2553,
-        "Name": "Iron Workbench",
+        "Name": "Iron Workbench Lv. 3",
         "NameJP": "鉄の作業台",
         "NameKana": "てつのさぎょうだい",
         "Rarity": 0,
@@ -27216,7 +27253,7 @@
     },
     {
         "ID": 2554,
-        "Name": "Iron Workbench",
+        "Name": "Iron Workbench Lv. MAX",
         "NameJP": "鉄の作業台",
         "NameKana": "てつのさぎょうだい",
         "Rarity": 0,
@@ -33744,7 +33781,8 @@
         "Rarity": 0,
         "Connecting": false,
         "Image": 0,
-        "Category": "Decorative Item"
+        "Category": "Decorative Item",
+        "Note": "N04H"
     },
     {
         "ID": 3153,

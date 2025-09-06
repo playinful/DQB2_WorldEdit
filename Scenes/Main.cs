@@ -25,6 +25,7 @@ namespace EyeOfRubiss.Scenes
 		[Export] private WorldEditorScene _WorldEditorScene;
 		[Export] private FileDialog _FileDialog;
 		[Export] private Window _UnsavedChanges_Window;
+
 		[Export] private PopupMenu _File_PopupMenu;
 		[Export] private PopupMenu _File_SaveSingleFile_PopupMenu;
 		[Export] private PopupMenu _File_SaveAsSingleFile_PopupMenu;
@@ -32,12 +33,24 @@ namespace EyeOfRubiss.Scenes
 		[Export] private PopupMenu _File_Import_PopupMenu;
 		[Export] private PopupMenu _Settings_PopupMenu;
 		[Export] private PopupMenu _View_PopupMenu;
+		[Export] private Button _Inventory_Button;
+		[Export] private Button _Player_Button;
+
 		[Export] private OptionButton _IslandSelector_Button;
 		[Export] private SpinBox _Gratitude_SpinBox;
 		[Export] private SpinBox _Time_SpinBox;
 		[Export] private OptionButton _Weather_OptionButton;
 
-		/// <summary> Enum repreresenting the state of the FileDialog. </summary>
+		[Export] private ItemButtonSelector _Block_ItemButtonSelector;
+		[Export] private ItemButtonSelector _Prop_ItemButtonSelector;
+		[Export] private ItemButtonSelector _Fluid_ItemButtonSelector;
+		
+		[Export] private Control _Inventory_Panel;
+		[Export] private PlayerEditor _PlayerEditor;
+
+		[Export] private Control _ItemSelector_Panel;
+		[Export] private ItemButtonSelector _ItemSelector;
+
 		private enum FileDialogStateEnum
 		{
 			Unknown,
@@ -54,7 +67,6 @@ namespace EyeOfRubiss.Scenes
 			ImportSTGDAT,
 			ImportSCSHDAT
 		}
-		/// <summary> Current state of the FileDialog. Handles how the FileDialog should behave. </summary>
 		private FileDialogStateEnum _FileDialogState = FileDialogStateEnum.Unknown;
 
 		public string WorkingDirectory { get; set; } = null;
@@ -71,29 +83,9 @@ namespace EyeOfRubiss.Scenes
 			_InitializeFileDialogPath();
 			UpdateLoadedData();
 			UpdateMenuButtons();
+
+			_InitializeItemButtonSelectors_DQB2();
 		}
-		/*private void _OnReadyVariables()
-		{
-			//_WorldEditorScene = GetNode<WorldEditorScene>("%WorldEditor");
-
-			_FileDialog = GetNode<FileDialog>("Popups/FileDialog");
-
-			_UnsavedChanges_Window = GetNode<Window>("Popups/UnsavedChangesWindow");
-
-			_File_PopupMenu = GetNode<PopupMenu>("Toolbar/VBoxContainer/MenuBar_Main/MenuBar/FileMenu");
-			_File_SaveSingleFile_PopupMenu = GetNode<PopupMenu>("Toolbar/VBoxContainer/MenuBar_Main/MenuBar/FileMenu/SaveSingleFileMenu");
-			_File_SaveAsSingleFile_PopupMenu = GetNode<PopupMenu>("Toolbar/VBoxContainer/MenuBar_Main/MenuBar/FileMenu/SaveAsSingleFileMenu");
-			_File_Export_PopupMenu = GetNode<PopupMenu>("Toolbar/VBoxContainer/MenuBar_Main/MenuBar/FileMenu/ExportMenu");
-			_File_Import_PopupMenu = GetNode<PopupMenu>("Toolbar/VBoxContainer/MenuBar_Main/MenuBar/FileMenu/ImportMenu");
-
-			_Settings_PopupMenu = GetNode<PopupMenu>("Toolbar/VBoxContainer/MenuBar_Main/MenuBar/SettingsMenu");
-
-			_IslandSelector_Button = GetNode<OptionButton>("Toolbar/VBoxContainer/MenuBar_Stage/IslandSelectorButton");
-
-			_Gratitude_SpinBox = GetNode<SpinBox>("Toolbar/VBoxContainer/MenuBar_Stage/GratitudeBox");
-			//_Time_SpinBox = GetNode<SpinBox>("Toolbar/TimeBox");
-			//_Weather_OptionButton = GetNode<OptionButton>("Toolbar/ComplexWeatherSelect");
-		}*/
 		private void _InitializeFileDialogPath()
 		{
 			// TODO add support for saving this as a preference
@@ -103,6 +95,28 @@ namespace EyeOfRubiss.Scenes
 				path = Path.Join(Directory.GetDirectories(path)[0], "SD");
 			}
 			_FileDialog.SetCurrentDirRecursive(path);
+		}
+		private void _InitializeItemButtonSelectors_DQB2()
+		{
+			foreach (BlockInfo blockInfo in BlockInfo.GetAll()[..1158].Where(b => !b.Tags.Contains("noeditor") && b.FluidType == FluidType.Air).OrderBy(b => b.SortIndex))
+			{
+				_Block_ItemButtonSelector.AddButton(blockInfo.ID, blockInfo.Name, blockInfo.ImageID, 0 /*TODO*/, false /*TODO*/, 0 /*TODO*/);
+			}
+			foreach (PropInfo propInfo in PropInfo.GetAll().OrderBy(b => b.SortIndex))
+			{
+				_Prop_ItemButtonSelector.AddButton(propInfo.ID, propInfo.Name, propInfo.Icon, propInfo.Rarity, false /*TODO*/, 0 /*TODO*/);
+			}
+			
+			_Fluid_ItemButtonSelector.AddButton((int)FluidType.Water,      "Water",         73);
+            _Fluid_ItemButtonSelector.AddButton((int)FluidType.Seawater,   "Seawater",    2131);
+            _Fluid_ItemButtonSelector.AddButton((int)FluidType.HotWater,   "Hot Water",    798);
+            _Fluid_ItemButtonSelector.AddButton((int)FluidType.MuddyWater, "Muddy Water", 2130);
+            _Fluid_ItemButtonSelector.AddButton((int)FluidType.SwampWater, "Swamp Water", 2130);
+            _Fluid_ItemButtonSelector.AddButton((int)FluidType.Poison,     "Poison",        16);
+            _Fluid_ItemButtonSelector.AddButton((int)FluidType.Lava,       "Liquid Lava",   24);
+            _Fluid_ItemButtonSelector.AddButton((int)FluidType.Plasma,     "Plasma",      2135);
+
+			_Block_ItemButtonSelector.Select(1); // Bedrock
 		}
 
 		public void UpdateLoadedData()
@@ -143,31 +157,50 @@ namespace EyeOfRubiss.Scenes
 		}
 		public void UpdateMenuButtons()
 		{
-			_File_PopupMenu.SetItemDisabled(3, !AnyIsLoaded()); // Save All
-			_File_PopupMenu.SetItemDisabled(4, !AnyIsLoaded()); // Save All As...
-			_File_PopupMenu.SetItemDisabled(5, !AnyIsLoaded()); // Save File
-			_File_PopupMenu.SetItemDisabled(6, !AnyIsLoaded()); // Save File As
-			_File_PopupMenu.SetItemDisabled(8, !AnyIsLoaded()); // Export
-			_File_PopupMenu.SetItemDisabled(9, !AnyIsLoaded()); // Import
-			_File_PopupMenu.SetItemDisabled(11, !AnyIsLoaded()); // Close
+			_File_PopupMenu?.SetItemDisabled(3, !AnyIsLoaded()); // Save All
+			_File_PopupMenu?.SetItemDisabled(4, !AnyIsLoaded()); // Save All As...
+			_File_PopupMenu?.SetItemDisabled(5, !AnyIsLoaded()); // Save File
+			_File_PopupMenu?.SetItemDisabled(6, !AnyIsLoaded()); // Save File As
+			_File_PopupMenu?.SetItemDisabled(8, !AnyIsLoaded()); // Export
+			_File_PopupMenu?.SetItemDisabled(9, !AnyIsLoaded()); // Import
+			_File_PopupMenu?.SetItemDisabled(11, !AnyIsLoaded()); // Close
 
-			_File_SaveSingleFile_PopupMenu.SetItemDisabled(0, !CommonData.HasInstance());
-			_File_SaveSingleFile_PopupMenu.SetItemDisabled(1, !StageData.HasInstance());
-			_File_SaveSingleFile_PopupMenu.SetItemDisabled(2, !ScreenshotData.HasInstance());
+			_File_SaveSingleFile_PopupMenu?.SetItemDisabled(0, !CommonData.HasInstance());
+			_File_SaveSingleFile_PopupMenu?.SetItemDisabled(1, !StageData.HasInstance());
+			_File_SaveSingleFile_PopupMenu?.SetItemDisabled(2, !ScreenshotData.HasInstance());
 
-			_File_SaveAsSingleFile_PopupMenu.SetItemDisabled(0, !CommonData.HasInstance());
-			_File_SaveAsSingleFile_PopupMenu.SetItemDisabled(1, !StageData.HasInstance());
-			_File_SaveAsSingleFile_PopupMenu.SetItemDisabled(2, !ScreenshotData.HasInstance());
+			_File_SaveAsSingleFile_PopupMenu?.SetItemDisabled(0, !CommonData.HasInstance());
+			_File_SaveAsSingleFile_PopupMenu?.SetItemDisabled(1, !StageData.HasInstance());
+			_File_SaveAsSingleFile_PopupMenu?.SetItemDisabled(2, !ScreenshotData.HasInstance());
 
-			_File_Export_PopupMenu.SetItemDisabled(0, !CommonData.HasInstance());
-			_File_Export_PopupMenu.SetItemDisabled(1, !StageData.HasInstance());
-			_File_Export_PopupMenu.SetItemDisabled(2, !ScreenshotData.HasInstance());
+			_File_Export_PopupMenu?.SetItemDisabled(0, !CommonData.HasInstance());
+			_File_Export_PopupMenu?.SetItemDisabled(1, !StageData.HasInstance());
+			_File_Export_PopupMenu?.SetItemDisabled(2, !ScreenshotData.HasInstance());
 
-			_File_Import_PopupMenu.SetItemDisabled(0, !CommonData.HasInstance());
-			_File_Import_PopupMenu.SetItemDisabled(1, !StageData.HasInstance());
-			_File_Import_PopupMenu.SetItemDisabled(2, !ScreenshotData.HasInstance());
+			_File_Import_PopupMenu?.SetItemDisabled(0, !CommonData.HasInstance());
+			_File_Import_PopupMenu?.SetItemDisabled(1, !StageData.HasInstance());
+			_File_Import_PopupMenu?.SetItemDisabled(2, !ScreenshotData.HasInstance());
+
+			_Inventory_Button.Disabled = !CommonData.HasInstance();
+			_Player_Button.Disabled = !CommonData.HasInstance();
 		}
 
+		public void ShowItemSelector(Vector2 position)
+		{
+			_ItemSelector_Panel.Position = position;
+			_ItemSelector_Panel.Show();
+		}
+		public void ConnectItemSelector(StringName signal, Callable callable)
+		{
+
+		}
+		public void HideItemSelector()
+		{
+			_ItemSelector_Panel.Hide();
+			_ItemSelector.DisconnectAll(ItemButtonSelector.SignalName.ItemSelected);
+		}
+
+		#region I/O Operations
 		public static void SaveAll()
 		{
 			CommonData.Instance?.Save();
@@ -255,8 +288,9 @@ namespace EyeOfRubiss.Scenes
 		{
 			return CommonData.HasInstance() || StageData.HasInstance() || ScreenshotData.HasInstance();
 		}
+		#endregion
 
-		// Callback methods
+		#region Callbacks
 		public void _On_File_PopupMenu_IdPressed(int id)
 		{
 			switch (id)
@@ -528,13 +562,20 @@ namespace EyeOfRubiss.Scenes
 			StageData.Instance.Weather = (byte)index;
 		}
 
+		public void _On_Inventory_Button_Pressed()
+		{
+			_Inventory_Panel.ToggleVisible();
+		}
+
 		public void _On_Root_CloseRequested()
 		{
 			WantsToQuit = true;
 			if (TryCloseFile())
 				GetTree().Quit();
 		}
+		#endregion
 
+		#region TEST
 		public void DoVerySimpleCopy()
 		{
 			int x1 = (int)Math.Round(GetNode<SpinBox>("VeryBasicCopierWindow/VBoxContainer/GridContainer/SpinBoxX1").Value);
@@ -564,5 +605,6 @@ namespace EyeOfRubiss.Scenes
 
 			_WorldEditorScene.DoPropEditor(new Vector3I(x, y, z), (ushort)propId, (byte)rotation);
 		}
+		#endregion
 	}
 }

@@ -1,9 +1,11 @@
 weather selection
-name editing
+
 clothes editing
 inventory editing
+
 npc editing
 npcs editable on map
+
 connecting tiles
 liquids
 props showing on map

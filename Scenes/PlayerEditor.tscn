@@ -1,0 +1,267 @@
+[gd_scene load_steps=7 format=3 uid="uid://o3d56yqxtw7o"]
+
+[ext_resource type="Theme" uid="uid://nd34kb5d40qb" path="res://Resources/DQB_Theme.tres" id="1_lyj0w"]
+[ext_resource type="Script" uid="uid://w37rdvawu7r0" path="res://Scenes/PlayerEditor.cs" id="2_olm4b"]
+[ext_resource type="PackedScene" uid="uid://mgvg4mys85bh" path="res://Nodes/ItemButton.tscn" id="2_qfrg7"]
+[ext_resource type="Texture2D" uid="uid://boya06dwpnc0h" path="res://Graphics/text_hair.png" id="3_olm4b"]
+[ext_resource type="Texture2D" uid="uid://ws84sw6rau4t" path="res://Graphics/text_skin.png" id="4_yrtxl"]
+[ext_resource type="Texture2D" uid="uid://dt6qfccvt0np4" path="res://Graphics/text_eyes.png" id="5_8n7u0"]
+
+[node name="PlayerEditor" type="Panel" node_paths=PackedStringArray("_PlayerName_LineEdit", "_HP_SpinBox", "_AdditionalHP_SpinBox", "_Experience_SpinBox", "_Level_SpinBox", "_Hunger_SpinBox", "_Stamina_SpinBox", "_Attack_SpinBox", "_Defence_SpinBox", "_Sex_OptionButton", "_HairColor_Button", "_SkinColor_Button", "_EyeColor_Button", "_Weapon_ItemButton", "_Shield_ItemButton", "_Armor_ItemButton", "_Hammer_ItemButton", "_Gloves_ItemButton", "_BottomlessPot_ItemButton", "_EchoFlute_ItemButton", "_TransformOTrowel_ItemButton", "_MagicPencil_ItemButton", "_Chisel_ItemButton", "_FishingRod_ItemButton", "_Glamour_Weapon_ItemButton", "_Glamour_Shield_ItemButton", "_Glamour_Armor_ItemButton", "_Glamour_Hammer_ItemButton", "_Glamour_Headwear_ItemButton", "_Glamour_Accessory1_ItemButton", "_Glamour_Accessory2_ItemButton", "_Glamour_Accessory3_ItemButton")]
+anchors_preset = -1
+anchor_right = 0.612847
+anchor_bottom = 0.671296
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_lyj0w")
+script = ExtResource("2_olm4b")
+_PlayerName_LineEdit = NodePath("PlayerName")
+_HP_SpinBox = NodePath("Stats/PlayerHP")
+_AdditionalHP_SpinBox = NodePath("Stats/AdditionalHP")
+_Experience_SpinBox = NodePath("Stats/Experience")
+_Level_SpinBox = NodePath("Stats/Level")
+_Hunger_SpinBox = NodePath("Stats/Hunger")
+_Stamina_SpinBox = NodePath("Stats/Stamina")
+_Attack_SpinBox = NodePath("Stats/Attack")
+_Defence_SpinBox = NodePath("Stats/Defence")
+_Sex_OptionButton = NodePath("Sex")
+_HairColor_Button = NodePath("HairColor")
+_SkinColor_Button = NodePath("SkinColor")
+_EyeColor_Button = NodePath("EyeColor")
+_Weapon_ItemButton = NodePath("Equipment/Weapon")
+_Shield_ItemButton = NodePath("Equipment/Shield")
+_Armor_ItemButton = NodePath("Equipment/Armour")
+_Hammer_ItemButton = NodePath("Equipment/Hammer")
+_Gloves_ItemButton = NodePath("Equipment/Gloves")
+_BottomlessPot_ItemButton = NodePath("Equipment/BottomlessPot")
+_EchoFlute_ItemButton = NodePath("Equipment/EchoFlute")
+_TransformOTrowel_ItemButton = NodePath("Equipment/TransformOTrowel")
+_MagicPencil_ItemButton = NodePath("Equipment/MagicPencil")
+_Chisel_ItemButton = NodePath("Equipment/Chisel")
+_FishingRod_ItemButton = NodePath("Equipment/FishingRod")
+_Glamour_Weapon_ItemButton = NodePath("Glamour/Weapon")
+_Glamour_Shield_ItemButton = NodePath("Glamour/Shield")
+_Glamour_Armor_ItemButton = NodePath("Glamour/Armour")
+_Glamour_Hammer_ItemButton = NodePath("Glamour/Hammer")
+_Glamour_Headwear_ItemButton = NodePath("Glamour/Headwear")
+_Glamour_Accessory1_ItemButton = NodePath("Glamour/Accessory1")
+_Glamour_Accessory2_ItemButton = NodePath("Glamour/Accessory2")
+_Glamour_Accessory3_ItemButton = NodePath("Glamour/Accessory3")
+metadata/_edit_use_anchors_ = true
+
+[node name="PlayerName" type="LineEdit" parent="."]
+layout_mode = 2
+offset_left = 20.0
+offset_top = 15.0
+offset_right = 200.0
+offset_bottom = 49.0
+placeholder_text = "Player Name"
+max_length = 12
+emoji_menu_enabled = false
+
+[node name="Sex" type="OptionButton" parent="."]
+layout_mode = 2
+offset_left = 8.0
+offset_top = 326.0
+offset_right = 119.0
+offset_bottom = 356.0
+selected = 0
+item_count = 2
+popup/item_0/text = "Male"
+popup/item_0/id = 0
+popup/item_1/text = "Female"
+popup/item_1/id = 1
+
+[node name="Stats" type="GridContainer" parent="."]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 54.0
+offset_right = 312.0
+offset_bottom = 220.0
+columns = 2
+
+[node name="Label_PlayerHP" type="Label" parent="Stats"]
+layout_mode = 2
+text = "HP:"
+
+[node name="Label_AdditionalHP" type="Label" parent="Stats"]
+layout_mode = 2
+text = "HP+:"
+
+[node name="PlayerHP" type="SpinBox" parent="Stats"]
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 9999.0
+
+[node name="AdditionalHP" type="SpinBox" parent="Stats"]
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 9999.0
+
+[node name="Label_Experience" type="Label" parent="Stats"]
+layout_mode = 2
+text = "Experience:"
+
+[node name="Label_Level" type="Label" parent="Stats"]
+layout_mode = 2
+text = "Level:"
+
+[node name="Experience" type="SpinBox" parent="Stats"]
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 1e+07
+
+[node name="Level" type="SpinBox" parent="Stats"]
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 255.0
+
+[node name="Label_Hunger" type="Label" parent="Stats"]
+layout_mode = 2
+text = "Hunger:"
+
+[node name="Label_Stamina" type="Label" parent="Stats"]
+layout_mode = 2
+text = "Stamina:"
+
+[node name="Hunger" type="SpinBox" parent="Stats"]
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 9999.0
+step = 0.01
+suffix = "%"
+custom_arrow_step = 1.0
+
+[node name="Stamina" type="SpinBox" parent="Stats"]
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 9999.0
+
+[node name="Label_Attack" type="Label" parent="Stats"]
+layout_mode = 2
+text = "Attack:"
+
+[node name="Label_Defence" type="Label" parent="Stats"]
+layout_mode = 2
+text = "Defence:"
+
+[node name="Attack" type="SpinBox" parent="Stats"]
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 9999.0
+
+[node name="Defence" type="SpinBox" parent="Stats"]
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 9999.0
+
+[node name="Equipment" type="GridContainer" parent="."]
+layout_mode = 0
+offset_left = 330.0
+offset_top = 23.0
+offset_right = 530.0
+offset_bottom = 291.0
+columns = 3
+
+[node name="Weapon" parent="Equipment" instance=ExtResource("2_qfrg7")]
+layout_mode = 2
+
+[node name="Shield" parent="Equipment" instance=ExtResource("2_qfrg7")]
+layout_mode = 2
+
+[node name="Armour" parent="Equipment" instance=ExtResource("2_qfrg7")]
+layout_mode = 2
+
+[node name="Hammer" parent="Equipment" instance=ExtResource("2_qfrg7")]
+layout_mode = 2
+
+[node name="Gloves" parent="Equipment" instance=ExtResource("2_qfrg7")]
+layout_mode = 2
+
+[node name="BottomlessPot" parent="Equipment" instance=ExtResource("2_qfrg7")]
+layout_mode = 2
+
+[node name="EchoFlute" parent="Equipment" instance=ExtResource("2_qfrg7")]
+layout_mode = 2
+
+[node name="TransformOTrowel" parent="Equipment" instance=ExtResource("2_qfrg7")]
+layout_mode = 2
+
+[node name="MagicPencil" parent="Equipment" instance=ExtResource("2_qfrg7")]
+layout_mode = 2
+
+[node name="Chisel" parent="Equipment" instance=ExtResource("2_qfrg7")]
+layout_mode = 2
+
+[node name="FishingRod" parent="Equipment" instance=ExtResource("2_qfrg7")]
+layout_mode = 2
+
+[node name="Glamour" type="GridContainer" parent="."]
+layout_mode = 0
+offset_left = 555.0
+offset_top = 24.0
+offset_right = 687.0
+offset_bottom = 292.0
+columns = 2
+
+[node name="Hammer" parent="Glamour" instance=ExtResource("2_qfrg7")]
+layout_mode = 2
+
+[node name="Headwear" parent="Glamour" instance=ExtResource("2_qfrg7")]
+layout_mode = 2
+
+[node name="Weapon" parent="Glamour" instance=ExtResource("2_qfrg7")]
+layout_mode = 2
+
+[node name="Accessory1" parent="Glamour" instance=ExtResource("2_qfrg7")]
+layout_mode = 2
+
+[node name="Armour" parent="Glamour" instance=ExtResource("2_qfrg7")]
+layout_mode = 2
+
+[node name="Accessory2" parent="Glamour" instance=ExtResource("2_qfrg7")]
+layout_mode = 2
+
+[node name="Shield" parent="Glamour" instance=ExtResource("2_qfrg7")]
+layout_mode = 2
+
+[node name="Accessory3" parent="Glamour" instance=ExtResource("2_qfrg7")]
+layout_mode = 2
+
+[node name="HairColor" type="Button" parent="."]
+layout_mode = 0
+offset_left = 158.0
+offset_top = 337.0
+offset_right = 320.0
+offset_bottom = 405.0
+icon = ExtResource("3_olm4b")
+icon_alignment = 1
+
+[node name="SkinColor" type="Button" parent="."]
+layout_mode = 0
+offset_left = 343.0
+offset_top = 338.0
+offset_right = 505.0
+offset_bottom = 406.0
+icon = ExtResource("4_yrtxl")
+icon_alignment = 1
+
+[node name="EyeColor" type="Button" parent="."]
+layout_mode = 0
+offset_left = 531.0
+offset_top = 342.0
+offset_right = 693.0
+offset_bottom = 410.0
+icon = ExtResource("5_8n7u0")
+icon_alignment = 1
+
+[connection signal="text_changed" from="PlayerName" to="." method="_On_PlayerName_LineEdit_TextChanged"]
+[connection signal="item_selected" from="Sex" to="." method="_On_Sex_OptionButton_ItemSelected"]
+[connection signal="value_changed" from="Stats/PlayerHP" to="." method="_On_PlayerHP_SpinBox_ValueChanged"]
+[connection signal="value_changed" from="Stats/AdditionalHP" to="." method="_On_AdditionalHP_SpinBox_ValueChanged"]
+[connection signal="value_changed" from="Stats/Experience" to="." method="_On_Experience_SpinBox_ValueChanged"]
+[connection signal="value_changed" from="Stats/Level" to="." method="_On_Level_SpinBox_ValueChanged"]
+[connection signal="value_changed" from="Stats/Hunger" to="." method="_On_Hunger_SpinBox_ValueChanged"]
+[connection signal="value_changed" from="Stats/Stamina" to="." method="_On_Stamina_SpinBox_ValueChanged"]
+[connection signal="value_changed" from="Stats/Attack" to="." method="_On_Attack_SpinBox_ValueChanged"]
+[connection signal="value_changed" from="Stats/Defence" to="." method="_On_Defence_SpinBox_ValueChanged"]
