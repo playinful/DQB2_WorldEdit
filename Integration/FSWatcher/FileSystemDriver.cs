@@ -29,6 +29,8 @@ sealed class FileSystemDriver : IDriver
 		this.watcher = new FileSystemWatcher(driverFile.Directory.FullName);
 		watcher.Filter = driverFile.Name;
 		watcher.Changed += Watcher_Changed;
+		watcher.Created += Watcher_Changed;
+		watcher.Renamed += Watcher_Changed;
 		watcher.EnableRaisingEvents = true;
 		world = Reload(FSWatcher.World.Empty(), driverFile);
 	}
@@ -55,36 +57,33 @@ sealed class FileSystemDriver : IDriver
 
 	private void Watcher_Changed(object sender, FileSystemEventArgs e)
 	{
-		if (e.ChangeType == WatcherChangeTypes.Changed)
+		lock (reloadLockObject)
 		{
-			lock (reloadLockObject)
+			int retries = 0;
+			bool giveUp = false;
+
+			WorldUpdatedEventArgs args;
+			while (!TryReload(out args) && !giveUp)
 			{
-				int retries = 0;
-				bool giveUp = false;
-
-				WorldUpdatedEventArgs args;
-				while (!TryReload(out args) && !giveUp)
+				retries++;
+				if (retries > 3)
 				{
-					retries++;
-					if (retries > 3)
-					{
-						giveUp = true;
-					}
-					else
-					{
-						const int milliseconds = 500;
-						System.Threading.Thread.Sleep(milliseconds);
-					}
-				}
-
-				if (giveUp)
-				{
-					GD.PrintErr("File still locked, giving up!");
+					giveUp = true;
 				}
 				else
 				{
-					WorldUpdated?.Invoke(this, args);
+					const int milliseconds = 500;
+					System.Threading.Thread.Sleep(milliseconds);
 				}
+			}
+
+			if (giveUp)
+			{
+				GD.PrintErr("File still locked, giving up!");
+			}
+			else
+			{
+				WorldUpdated?.Invoke(this, args);
 			}
 		}
 	}
