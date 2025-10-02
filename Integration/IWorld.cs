@@ -24,5 +24,5 @@ interface IWorld
 	/// the center of the island, but it would be slightly confusing for an
 	/// integration to have to know this and adjust to put its build near 1024,1024.
 	/// </remarks>
-	Vector3I InitialCameraPosition { get; }
+	Vector3I? InitialCameraPosition { get; }
 }

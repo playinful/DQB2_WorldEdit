@@ -75,9 +75,9 @@ public partial class IntegrationWorldEditor : Node3D
 	#region Scene setup
 	internal void LoadWorld(IWorld stageData)
 	{
-		if (_StageData == null)
+		if (stageData.InitialCameraPosition.HasValue)
 		{
-			_CameraController.Position = stageData.InitialCameraPosition;
+			_CameraController.Position = stageData.InitialCameraPosition.Value;
 		}
 		_StageData = stageData;
 
