@@ -17,7 +17,10 @@ sealed class World : IWorld
 	private readonly IReadOnlyList<IReadOnlyList<Chunk>> chunkGrid;
 	public int ChunkCount { get; }
 
-	public static World Empty() => new World(new List<List<Chunk>>());
+	public static World Empty() => new World(new List<List<Chunk>>())
+	{
+		InitialCameraPosition = new Vector3I(0, 96, 0),
+	};
 
 	private World(IReadOnlyList<IReadOnlyList<Chunk>> chunkGrid)
 	{
@@ -25,7 +28,7 @@ sealed class World : IWorld
 		ChunkCount = chunkGrid.SelectMany(x => x).Where((Chunk c) => c != null).Count();
 	}
 
-	public Vector3I InitialCameraPosition => new Vector3I(0, 96, 0);
+	public required Vector3I? InitialCameraPosition { get; init; }
 
 	private Chunk GetChunkOrNull(ChunkLocation loc)
 	{
@@ -153,7 +156,13 @@ sealed class World : IWorld
 			column[loc.Z32] = chunk;
 		}
 
-		return new World(newGrid);
+		Vector3I? initialCameraPosition = null;
+		if (content.SetCameraX.HasValue && content.SetCameraZ.HasValue)
+		{
+			initialCameraPosition = new Vector3I(content.SetCameraX.Value, 96, content.SetCameraZ.Value);
+		}
+
+		return new World(newGrid) { InitialCameraPosition = initialCameraPosition };
 	}
 
 	private bool CanReuseExistingChunk(DriverFileContent.FileChunkInfo chunkInfo, string directory, out Chunk existingChunk)

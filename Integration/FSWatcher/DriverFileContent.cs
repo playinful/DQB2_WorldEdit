@@ -13,6 +13,18 @@ sealed class DriverFileContent : DriverFileContentBase
 {
 	public IReadOnlyList<FileChunkInfo> ChunkInfos { get; init; }
 
+	/// <summary>
+	/// If this and <see cref="SetCameraZ"/> are present, the camera will move
+	/// to the specified XZ coordinate on reload.
+	/// </summary>
+	public int? SetCameraX { get; init; }
+
+	/// <summary>
+	/// If this and <see cref="SetCameraX"/> are present, the camera will move
+	/// to the specified XZ coordinate on reload.
+	/// </summary>
+	public int? SetCameraZ { get; init; }
+
 	public sealed record FileChunkInfo
 	{
 		/// <summary>
