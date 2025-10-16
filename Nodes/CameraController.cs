@@ -17,7 +17,7 @@ namespace EyeOfRubiss.Nodes
 
 		private float SpeedMultiplier = 1;
 
-		public bool Enabled { get; set; }
+		[Export] public bool Enabled { get; set; }
 
         // Called every frame. 'delta' is the elapsed time since the previous frame.
         public override void _Process(double delta)
@@ -44,12 +44,21 @@ namespace EyeOfRubiss.Nodes
 			Position += positionChangeVector * (float)delta * Speed * SpeedMultiplier;
 		}
 
-        public override void _Input(InputEvent @event)
+        public override void _UnhandledInput(InputEvent @event)
         {
 			if (!Enabled)
 				return;
 
-            if (@event is InputEventMouseMotion mouseMotion)
+			if (@event.IsActionPressed(Constants.Controls.CAMERA_HOLD_TO_MOVE) || @event.IsActionPressed(Constants.Controls.CURSOR_CAPTURE))
+			{
+				Input.MouseMode = Input.MouseModeEnum.Captured;
+			}
+			if (@event.IsActionReleased(Constants.Controls.CAMERA_HOLD_TO_MOVE) || @event.IsActionPressed(Constants.Controls.CURSOR_RELEASE))
+			{
+				Input.MouseMode = Input.MouseModeEnum.Visible;
+			}
+
+            if (@event is InputEventMouseMotion mouseMotion && (Input.IsActionPressed(Constants.Controls.CAMERA_HOLD_TO_MOVE) || Input.MouseMode == Input.MouseModeEnum.Captured))
 			{
 				var motion = mouseMotion.Relative;
 

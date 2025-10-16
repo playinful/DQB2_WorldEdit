@@ -25,6 +25,7 @@ namespace EyeOfRubiss.Scenes
 		[Export] private WorldEditorScene _WorldEditorScene;
 		[Export] private FileDialog _FileDialog;
 		[Export] private Window _UnsavedChanges_Window;
+		[Export] private Label _UnsavedChanges_Label;
 
 		[Export] private PopupMenu _File_PopupMenu;
 		[Export] private PopupMenu _File_SaveSingleFile_PopupMenu;
@@ -71,6 +72,9 @@ namespace EyeOfRubiss.Scenes
 
 		public string WorkingDirectory { get; set; } = null;
 
+		private SaveData PendingChangesSaveData;
+		private Queue<SaveData> CloseQueue = [];
+		private Queue<string> OpenQueue = [];
 		private bool WantsToQuit = false;
 
 		public override void _Ready()
@@ -185,55 +189,61 @@ namespace EyeOfRubiss.Scenes
 			_Player_Button.Disabled = !CommonData.HasInstance();
 		}
 
-		public void ShowItemSelector(Vector2 position)
-		{
-			_ItemSelector_Panel.Position = position;
-			_ItemSelector_Panel.Show();
-		}
-		public void ConnectItemSelector(StringName signal, Callable callable)
-		{
-
-		}
-		public void HideItemSelector()
-		{
-			_ItemSelector_Panel.Hide();
-			_ItemSelector.DisconnectAll(ItemButtonSelector.SignalName.ItemSelected);
-		}
+        public override void _Input(InputEvent @event)
+        {
+            
+        }
 
 		#region I/O Operations
+		// These don't check for unsaved changes
 		public static void SaveAll()
 		{
 			CommonData.Instance?.Save();
 			StageData.Instance?.Save();
 			ScreenshotData.Instance?.Save();
 		}
-		public void CloseAll()
+		public void TrySaveFolder(string path)
 		{
-			CommonData.Close();
-			StageData.Close();
-			ScreenshotData.Close();
-			_WorldEditorScene.UnloadWorld();
+			// TODO
 		}
 
-		public bool TryCloseFile()
+		public void OpenFile(string path)
 		{
-			if ((CommonData.HasInstance() && CommonData.Instance.UnsavedChanges) || (StageData.HasInstance() && StageData.Instance.UnsavedChanges) || (ScreenshotData.HasInstance() && ScreenshotData.Instance.UnsavedChanges))
+			if (StageData.IsStageDataFile(path))
 			{
-				_UnsavedChanges_Window.PopupCentered();
-				return false;
+				if (StageData.TryLoadAndSet(path) is StageData stageData)
+				{
+					_WorldEditorScene.LoadWorld(stageData);
+					UpdateLoadedData();
+					UpdateMenuButtons();
+				}
+			}
+			else if (CommonData.IsCommonDataFile(path))
+			{
+				if (CommonData.TryLoadAndSet(path) is CommonData commonData)
+				{
+					_WorldEditorScene.LoadCommonData(commonData);
+					UpdateLoadedData();
+					UpdateMenuButtons();
+				}
+			}
+			else if (ScreenshotData.IsScreenshotDataFile(path))
+			{
+				if (ScreenshotData.TryLoadAndSet(path) is ScreenshotData screenshotData)
+				{
+					UpdateLoadedData();
+					UpdateMenuButtons();
+				}
 			}
 			else
 			{
-				CloseAll();
-				return true;
+				GD.Print($"COULDN'T OPEN FILE {path}");
 			}
 		}
-
-		public bool TryLoadFolder(string path)
+		public void OpenFolder(string path)
 		{
-			CloseAll(); // TODO handle
 			if (CommonData.TryLoadAndSet(Path.Join(path, "CMNDAT.BIN")) is null)
-				return false;
+				return;
 
 			ScreenshotData.TryLoadAndSet(Path.Join(path, "SCSHDAT.BIN"));
 
@@ -241,40 +251,134 @@ namespace EyeOfRubiss.Scenes
 
 			UpdateLoadedData();
 			UpdateMenuButtons();
-
-			return true;
 			// TODO
 		}
-		public bool TryLoadFile(string path)
+		public void CloseFile(SaveData saveData)
 		{
-			if (CommonData.TryLoadAndSet(path) is not null)
+			if (saveData is CommonData)
 			{
-				UpdateLoadedData();
-				UpdateMenuButtons();
-				_WorldEditorScene.CreateResidents(CommonData.Instance);
-				return true;
+				_WorldEditorScene.UnloadCommonData();
+				CommonData.Close();
 			}
-			if (StageData.TryLoadAndSet(path) is not null)
+			else if (saveData is StageData)
 			{
-				UpdateLoadedData();
-				UpdateMenuButtons();
 				_WorldEditorScene.UnloadWorld();
-				_WorldEditorScene.LoadWorld(StageData.Instance);
-				return true;
+				StageData.Close();
 			}
-			if (ScreenshotData.TryLoadAndSet(path) is not null)
+			else if (saveData is ScreenshotData)
 			{
-				UpdateLoadedData();
-				UpdateMenuButtons();
-				return true;
+				ScreenshotData.Close();
 			}
 
-			return false;
+			UpdateLoadedData();
 		}
-		public void TrySaveFolder(string path)
+		public void CloseAll()
 		{
-			// TODO
+			CloseFile(CommonData.Instance);
+			CloseFile(StageData.Instance);
+			CloseFile(ScreenshotData.Instance);
+			WorkingDirectory = null;
 		}
+
+		public void TryOpenFile(string path)
+		{
+			// TODO handle unsaved changes
+			OpenFile(path);
+			// OpenQueue.Enqueue(path);
+			// DoCloseOpenQueue();
+		}
+		public void TryOpenFolder(string path)
+		{
+			// TODO handle unsaved changes
+			OpenFolder(path);
+			// OpenQueue.Enqueue(path);
+			// DoCloseOpenQueue();
+		}
+		public void TryCloseFile(SaveData saveData)
+		{
+			// TODO handle unsaved changes
+			CloseFile(saveData);
+			// CloseQueue.Enqueue(saveData);
+			// DoCloseOpenQueue();
+		}
+		public void TryCloseAll()
+		{
+			// TODO handle unsaved changes
+			CloseAll();
+			// CloseQueue.Clear();
+			// CloseQueue.Enqueue(StageData.Instance);
+			// CloseQueue.Enqueue(CommonData.Instance);
+			// CloseQueue.Enqueue(ScreenshotData.Instance);
+			// DoCloseOpenQueue();
+		}
+
+		public void UnsavedChangesPopup(string message)
+		{
+			_UnsavedChanges_Label.Text = message;
+			_UnsavedChanges_Window.PopupCentered();
+		}
+
+		/*public void DoCloseOpenQueue()
+		{
+			// Close queue
+			while (CloseQueue.Count > 0)
+			{
+				SaveData saveData = CloseQueue.Peek();
+				if (HasUnsavedChanges(saveData))
+				{
+					UnsavedChangesPopup($"{saveData.GetFileName()} has unsaved changes.\nWhat would you like to do?");
+					return;
+				}
+				else
+				{
+					CloseFile(CloseQueue.Dequeue());
+				}
+			}
+
+			if (WantsToQuit)
+				GetTree().Quit();
+
+			// Open queue
+			while (OpenQueue.Count > 0)
+			{
+				string path = OpenQueue.Peek();
+
+				if (DirAccess.DirExistsAbsolute(path))
+				{
+					if (AnyIsLoaded())
+					{
+						CloseQueue.Enqueue(StageData.Instance);
+						CloseQueue.Enqueue(CommonData.Instance);
+						CloseQueue.Enqueue(ScreenshotData.Instance);
+						DoCloseOpenQueue();
+						return;
+					}
+
+					OpenFolder(path);
+				}
+				if (StageData.IsStageDataFile(path) && StageData.HasInstance())
+				{
+					CloseQueue.Enqueue(StageData.Instance);
+					DoCloseOpenQueue();
+					return;
+				}
+				if (CommonData.IsCommonDataFile(path) && CommonData.HasInstance())
+				{
+					CloseQueue.Enqueue(CommonData.Instance);
+					DoCloseOpenQueue();
+					return;
+				}
+				if (ScreenshotData.IsScreenshotDataFile(path) && ScreenshotData.HasInstance())
+				{
+					CloseQueue.Enqueue(ScreenshotData.Instance);
+					DoCloseOpenQueue();
+					return;
+				}
+
+                OpenFile(OpenQueue.Dequeue());
+			}
+
+		}*/
 
 		public static string GetDQB2Path()
 		{
@@ -288,6 +392,10 @@ namespace EyeOfRubiss.Scenes
 		{
 			return CommonData.HasInstance() || StageData.HasInstance() || ScreenshotData.HasInstance();
 		}
+		public static bool HasUnsavedChanges(SaveData saveData)
+		{
+			return saveData is not null && saveData.IsLoaded && saveData.UnsavedChanges;
+		}
 		#endregion
 
 		#region Callbacks
@@ -299,6 +407,7 @@ namespace EyeOfRubiss.Scenes
 					_FileDialog.FileMode = FileDialog.FileModeEnum.OpenDir;
 					_FileDialogState = FileDialogStateEnum.OpenDirectory;
 					_FileDialog.Title = "Open a folder";
+					_FileDialog.CurrentFile = "";
 					_FileDialog.PopupCentered();
 					break;
 				case 1: // Open File...
@@ -318,7 +427,7 @@ namespace EyeOfRubiss.Scenes
 					_FileDialog.PopupCentered();
 					break;
 				case 8: // Close
-					TryCloseFile();
+					TryCloseAll(); // TODO handle unsaved changes
 					break;
 				case 9: // Quit
 					_On_Root_CloseRequested();
@@ -491,13 +600,13 @@ namespace EyeOfRubiss.Scenes
 			switch (_FileDialogState)
 			{
 				case FileDialogStateEnum.OpenDirectory:
-					TryLoadFolder(path);
+					TryOpenFolder(path);
 					break;
 				case FileDialogStateEnum.SaveDirectory:
 					TrySaveFolder(path);
 					break;
 				case FileDialogStateEnum.OpenFile:
-					TryLoadFile(path);
+					TryOpenFile(path);
 					break;
 				case FileDialogStateEnum.SaveCMNDAT:
 					CommonData.Instance?.Save(path);
@@ -534,22 +643,38 @@ namespace EyeOfRubiss.Scenes
 		public void _On_UnsavedChanges_Window_Save_Button_Pressed()
 		{
 			_UnsavedChanges_Window.Hide();
-			SaveAll();
-			CloseAll();
-			if (WantsToQuit)
-				GetTree().Quit();
+			// TODO
 		}
 		public void _On_UnsavedChanges_Window_DontSave_Button_Pressed()
 		{
 			_UnsavedChanges_Window.Hide();
-			CloseAll();
-			if (WantsToQuit)
-				GetTree().Quit();
+			// TODO
 		}
 		public void _On_UnsavedChanges_Window_Cancel_Button_Pressed()
 		{
 			_UnsavedChanges_Window.Hide();
 			WantsToQuit = false;
+			// TODO
+		}
+
+		public void _On_IslandSelectorButton_ItemSelected(int index)
+		{
+			if (string.IsNullOrEmpty(WorkingDirectory))
+				return;
+
+			int id = _IslandSelector_Button.GetItemId(index);
+
+			if (id <= 0)
+			{
+				if (StageData.HasInstance())
+					TryCloseFile(StageData.Instance);
+			}
+			else
+
+			if (Godot.FileAccess.FileExists(Path.Join(WorkingDirectory, $"STGDAT{id:D2}.BIN")))
+			{
+				TryOpenFile(Path.Join(WorkingDirectory, $"STGDAT{id:D2}.BIN"));
+			}
 		}
 
 		public void _On_Gratitude_SpinBox_ValueChanged(float value)
@@ -569,9 +694,11 @@ namespace EyeOfRubiss.Scenes
 
 		public void _On_Root_CloseRequested()
 		{
-			WantsToQuit = true;
-			if (TryCloseFile())
-				GetTree().Quit();
+			// TODO Handle unsaved changes
+			GetTree().Quit();
+
+			//WantsToQuit = true;
+			//TryCloseAll();
 		}
 		#endregion
 

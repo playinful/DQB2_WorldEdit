@@ -1,3 +1,6 @@
+connecting window rotation
+crop delineation
+
 weather selection
 
 clothes editing

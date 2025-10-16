@@ -31,6 +31,9 @@ namespace EyeOfRubiss
         /// <summary> Static class holding string identifiers for program controls. </summary>
         public static class Controls
         {
+            public const string BRUSH_PRIMARY = "brush_primary";
+            public const string BRUSH_SECONDARY = "brush_secondary";
+            public const string BRUSH_TERTIARY = "brush_tertiary";
             public const string CAMERA_LEFT = "camera_left";
             public const string CAMERA_RIGHT = "camera_right";
             public const string CAMERA_FORWARD = "camera_forward";
@@ -39,8 +42,14 @@ namespace EyeOfRubiss
             public const string CAMERA_DOWN = "camera_down";
             public const string CAMERA_SPEED_UP = "camera_speed_up";
             public const string CAMERA_SPEED_DOWN = "camera_speed_down";
-            public const string CURSOR_RELEASE = "cursor_release";
             public const string RESET_CAMERA = "reset_camera";
+            public const string CURSOR_CAPTURE = "cursor_capture";
+            public const string CURSOR_RELEASE = "cursor_release";
+            public const string CAMERA_HOLD_TO_MOVE = "camera_hold_to_move";
+
+            public const string TEST1 = "test_1";
+            public const string TEST2 = "test_2";
+            public const string TEST3 = "test_3";
         }
     }
 }

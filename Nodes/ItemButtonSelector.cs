@@ -28,7 +28,7 @@ namespace EyeOfRubiss.Nodes
                 Select(InitialSelection);
         }
 
-        public void AddButton(int id, string name = "", int iconIndex = 0, int rarity = 0, bool connecting = false, int colour = 0)
+        public ItemButton AddButton(int id, string name = "", int iconIndex = 0, int rarity = 0, bool connecting = false, int colour = 0)
         {
             PackedScene itemButtonScene = ResourceLoader.Load<PackedScene>(ItemButtonScenePath);
 
@@ -39,8 +39,9 @@ namespace EyeOfRubiss.Nodes
             button.Pressed += () => _On_Button_Pressed(id);
 
             AddChild(button);
+            return button;
         }
-        public void AddButton(int id, BlockInfo blockInfo, int? count = null)
+        public ItemButton AddButton(int id, BlockInfo blockInfo, int? count = null)
         {
             PackedScene itemButtonScene = ResourceLoader.Load<PackedScene>(ItemButtonScenePath);
 
@@ -51,8 +52,9 @@ namespace EyeOfRubiss.Nodes
             button.Pressed += () => _On_Button_Pressed(id);
 
             AddChild(button);
+            return button;
         }
-        public void AddButton(int id, ItemInfo itemInfo, int? count = null)
+        public ItemButton AddButton(int id, ItemInfo itemInfo, int? count = null)
         {
             PackedScene itemButtonScene = ResourceLoader.Load<PackedScene>(ItemButtonScenePath);
 
@@ -63,6 +65,7 @@ namespace EyeOfRubiss.Nodes
             button.Pressed += () => _On_Button_Pressed(id);
 
             AddChild(button);
+            return button;
         }
 
         public void Sort(Comparison<int> comparison = null)

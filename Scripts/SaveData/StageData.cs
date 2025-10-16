@@ -60,6 +60,27 @@ namespace EyeOfRubiss
         public ushort ChunkCount { get => GetUInt16(0x1451AF); set => SetUInt16(0x1451AF, value); }
         public int PropCount { get => GetInt32(0x24E7CD); set => SetInt32(0x24E7CD, value); }
 
+        public static bool IsStageDataFile(string path)
+        {
+            if (!Godot.FileAccess.FileExists(path))
+                return false;
+
+            using Godot.FileAccess file = Godot.FileAccess.Open(path, Godot.FileAccess.ModeFlags.Read);
+            {
+                if (file.GetLength() < 6)
+                    return false;
+
+                byte[] header = file.GetBuffer(6);
+                return
+                    header[0] == 0x61 &&
+                    header[1] == 0x65 &&
+                    header[2] == 0x72 &&
+                    header[3] == 0x43 &&
+                    header[4] == 0xDD &&
+                    header[5] == 0x00;
+            }
+        }
+
         public static StageData TryLoadAndSet(string path)
         {
             if (TryLoad(path) is StageData stageData)
@@ -73,9 +94,14 @@ namespace EyeOfRubiss
             StageData stageData = new();
             if (stageData._TryLoad(path, HEADER_LENGTH))
             {
+                stageData.CreatePropPositionDictionary();
                 return stageData;
             }
             else return null;
+        }
+        public static void SetInstance(StageData stageData)
+        {
+            Instance = stageData;
         }
 
         public override void Save(string path = null)
@@ -86,8 +112,12 @@ namespace EyeOfRubiss
 
         public static void Close()
         {
+            Instance.IsLoaded = false;
+            Instance.UnsavedChanges = false;
             Instance = null;
         }
+
+
 
         #region General methods
         public static bool PositionIsInBounds(Vector3I position)
@@ -522,12 +552,58 @@ namespace EyeOfRubiss
             public ushort Chunk { get { return (ushort)SaveData.GetNumberBitwise(GetMetadataAddress(), 0, 12); } set { SaveData.SetNumberBitwise(GetMetadataAddress(), 0, 12, value); } }
             public uint DataIndex { get { return SaveData.GetNumberBitwise(GetMetadataAddress(), 12, 20); } set { SaveData.SetNumberBitwise(GetMetadataAddress(), 12, 20, value); } }
 
-            public ushort PropID { get { return (ushort)SaveData.GetNumberBitwise(GetAddress() + 8, 0, 13); } set { SaveData.SetNumberBitwise(GetAddress() + 8, 0, 13, value); } }
+            public ushort PropID
+            {
+                get { return (ushort)SaveData.GetNumberBitwise(GetAddress() + 8, 0, 13); }
+                set
+                {
+                    SaveData.RemovePropFromPositionDictionary(this);
+                    SaveData.SetNumberBitwise(GetAddress() + 8, 0, 13, value);
+                    SaveData.AddPropToPositionDictionary(this);
+                }
+            }
 
-            public byte X { get { return (byte)SaveData.GetNumberBitwise(GetAddress() + 9, 5, 5); } set { SaveData.SetNumberBitwise(GetAddress() + 9, 5, 5, value); } }
-            public byte Y { get { return (byte)SaveData.GetNumberBitwise(GetAddress() + 10, 2, 7); } set { SaveData.SetNumberBitwise(GetAddress() + 10, 2, 7, value); } }
-            public byte Z { get { return (byte)SaveData.GetNumberBitwise(GetAddress() + 11, 1, 5); } set { SaveData.SetNumberBitwise(GetAddress() + 11, 1, 5, value); } }
-            public byte Rotation { get { return (byte)SaveData.GetNumberBitwise(GetAddress() + 11, 6, 2); } set { SaveData.SetNumberBitwise(GetAddress() + 11, 6, 2, value); } }
+            public byte X
+            {
+                get { return (byte)SaveData.GetNumberBitwise(GetAddress() + 9, 5, 5); }
+                set
+                {
+                    SaveData.RemovePropFromPositionDictionary(this);
+                    SaveData.SetNumberBitwise(GetAddress() + 9, 5, 5, value);
+                    SaveData.AddPropToPositionDictionary(this);
+                }
+            }
+            public byte Y
+            {
+                get { return (byte)SaveData.GetNumberBitwise(GetAddress() + 10, 2, 7); }
+                set
+                {
+                    SaveData.RemovePropFromPositionDictionary(this);
+                    SaveData.SetNumberBitwise(GetAddress() + 10, 2, 7, value);
+                    SaveData.AddPropToPositionDictionary(this);
+                }
+            }
+            public byte Z
+            {
+                get { return (byte)SaveData.GetNumberBitwise(GetAddress() + 11, 1, 5); }
+                set
+                {
+                    SaveData.RemovePropFromPositionDictionary(this);
+                    SaveData.SetNumberBitwise(GetAddress() + 11, 1, 5, value);
+                    SaveData.AddPropToPositionDictionary(this);
+                }
+            }
+            // 0 = North | 1 = West | 2 = South | 3 = East
+            public byte Rotation
+            {
+                get { return (byte)SaveData.GetNumberBitwise(GetAddress() + 11, 6, 2); }
+                set
+                {
+                    SaveData.RemovePropFromPositionDictionary(this);
+                    SaveData.SetNumberBitwise(GetAddress() + 11, 6, 2, value);
+                    SaveData.AddPropToPositionDictionary(this);
+                }
+            }
 
             public Vector3I GetPosition() => new(X + Chunk % 64 * 32, Y, Z + Chunk / 64 * 32);
 
@@ -537,6 +613,45 @@ namespace EyeOfRubiss
             public PropInfo GetInfo() => PropInfo.Get(PropID);
 
             public bool Exists() => Chunk != 0xFFF && PropID != 0 && DataIndex < SaveData.PropCount;
+
+            public Tuple<Vector3I, Vector3I> GetBounds()
+            {
+                Vector3I dimensions = Vector3I.Zero;
+                if (GetInfo() is PropInfo info)
+                    dimensions = info.GetDimensions() - Vector3I.One;
+
+                Vector3I position = GetPosition();
+                int x1 = position.X;
+                int y1 = position.Y;
+                int z1 = position.Z;
+                int y2 = y1 + dimensions.Y;
+                int x2 = x1;
+                int z2 = z1;
+                switch (Rotation)
+                {
+                    case 0:
+                        x2 += dimensions.X;
+                        z2 -= dimensions.Z;
+                        break;
+                    case 1:
+                        x2 -= dimensions.Z;
+                        z2 -= dimensions.X;
+                        break;
+                    case 2:
+                        x2 -= dimensions.X;
+                        z2 += dimensions.Z;
+                        break;
+                    case 3:
+                        x2 += dimensions.Z;
+                        z2 += dimensions.X;
+                        break;
+                }
+
+                return new(
+                    new Vector3I(Math.Min(x1, x2), Math.Min(y1, y2), Math.Min(z1, z2)),
+                    new Vector3I(Math.Max(x1, x2), Math.Max(y1, y2), Math.Max(z1, z2))
+                );
+            }
 
             public int GetGridMapRotation()
             {
@@ -554,6 +669,74 @@ namespace EyeOfRubiss
                 Chunk = 0xFFF;
                 SaveData.Fill(0, GetAddress(), LENGTH);
                 MagicNumberSixteen = DataIndex * 16;
+                SaveData.RemovePropFromPositionDictionary(this);
+            }
+        }
+
+        private Dictionary<Vector3I, List<int>> _PropPositionDictionary;
+        public void CreatePropPositionDictionary()
+        {
+            _PropPositionDictionary = [];
+            foreach (Prop prop in GetProps())
+            {
+                AddPropToPositionDictionary(prop);
+            }
+        }
+        public void AddPropToPositionDictionary(Prop prop)
+        {
+            if (!prop.Exists())
+                return;
+
+            (Vector3I start, Vector3I end) = prop.GetBounds();
+            for (int x = start.X; x <= end.X; x++)
+            {
+                for (int y = start.Y; y <= end.Y; y++)
+                {
+                    for (int z = start.Z; z <= end.Z; z++)
+                    {
+                        Vector3I position = new(x, y, z);
+                        if (_PropPositionDictionary.ContainsKey(position))
+                        {
+                            List<int> propList = _PropPositionDictionary[position];
+                            propList.Add(prop.Index);
+                        }
+                        else
+                        {
+                            _PropPositionDictionary.Add(position, [prop.Index]);
+                        }
+                    }
+                }
+            }
+        }
+        public void RemovePropFromPositionDictionary(Prop prop)
+        {
+            (Vector3I start, Vector3I end) = prop.GetBounds();
+            for (int x = start.X; x <= end.X; x++)
+            {
+                for (int y = start.Y; y <= end.Y; y++)
+                {
+                    for (int z = start.Z; z <= end.Z; z++)
+                    {
+                        if (_PropPositionDictionary.TryGetValue(new Vector3I(x, y, z), out List<int> propIdxs) && propIdxs.Contains(prop.Index))
+                        {
+                            propIdxs.Remove(prop.Index);
+                        }
+                    }
+                }
+            }
+        }
+        public Prop GetOverlappingProp(Vector3I position)
+        {
+            return GetOverlappingProps(position).FirstOrDefault();
+        }
+        public IEnumerable<Prop> GetOverlappingProps(Vector3I position)
+        {
+            if (_PropPositionDictionary.TryGetValue(position, out List<int> propIdxs))
+            {
+                foreach (int propIdx in propIdxs)
+                {
+                    yield return GetProp(propIdx);
+                }
             }
         }
 
@@ -569,7 +752,7 @@ namespace EyeOfRubiss
             if (index < 0 || index >= Prop.MAXIMUM)
                 throw new IndexOutOfRangeException();
 
-            for (int i = 0; i < count && i + index < Prop.MAXIMUM; i++)
+            for (int i = 0; i < count && i + index < Prop.MAXIMUM && i + index < PropCount; i++)
                 yield return GetProp(i + index);
         }
 
@@ -731,8 +914,8 @@ namespace EyeOfRubiss
         public class MagnetBlock(StageData saveData, int address) : BlockEntity(saveData)
         {
             public const int START_ADDRESS = 0x1310D;
-            public const int Length = 9;
-            public const int Maximum = 256;
+            public const int LENGTH = 9;
+            public const int MAXIMUM = 256;
 
             public readonly int Address = address;
 
@@ -745,6 +928,20 @@ namespace EyeOfRubiss
             public bool Active { get { return SaveData.GetByte(Address + 6) == 1; } set { SaveData.SetByte(Address + 6, (byte)(value ? 1 : 0)); } }
 
             // NOTE: If last bit of Address + 8 is 0, and Camouflage > 0, block is invisible
+        }
+        public class Crop(StageData saveData, int address) : BlockEntity(saveData)
+        {
+            public const int START_ADDRESS = 0xB560;
+            public const int LENGTH = 0x10;
+            public const int MAXIMUM = 1024;
+
+            public readonly int Address = address;
+
+            public override ushort X { get { return SaveData.GetUInt16(Address + 4); } set { SaveData.SetUInt16(Address + 4, value); } }
+            public override byte Y { get { return SaveData.GetByte(Address + 8); } set { SaveData.SetUInt16(Address + 8, value); } }
+            public override ushort Z { get { return SaveData.GetUInt16(Address + 6); } set { SaveData.SetUInt16(Address + 6, value); } }
+
+            public DQB2Crop CropType { get { return (DQB2Crop)SaveData.GetByte(Address + 9); } set { SaveData.SetByte(Address + 9, (byte)value); } }
         }
         public class Scarecrow(StageData saveData, int address) : BlockEntity(saveData)
         {
@@ -760,7 +957,7 @@ namespace EyeOfRubiss
 
             public bool Active { get { return SaveData.GetByte(Address + 6) == 1; } set { SaveData.SetByte(Address + 6, (byte)(value ? 1 : 0)); } }
 
-            public DQB2Crop Crop { get { return (DQB2Crop)SaveData.GetByte(Address + 5); } set { SaveData.SetByte(Address + 5, (byte)value); } }
+            public DQB2Crop CropType { get { return (DQB2Crop)SaveData.GetByte(Address + 5); } set { SaveData.SetByte(Address + 5, (byte)value); } }
 
             // See also 0x2CA3E
             // I think fields are 0xC bytes long
@@ -829,6 +1026,22 @@ namespace EyeOfRubiss
 
             for (int i = 0; i < count && i + index < SalutationStation.MAXIMUM; i++)
                 yield return GetSalutationStation(i + index);
+        }
+
+        public Crop GetCrop(int index)
+        {
+            if (index < 0 || index >= Crop.MAXIMUM)
+                throw new IndexOutOfRangeException();
+
+            return new Crop(this, Crop.START_ADDRESS + index * Crop.LENGTH);
+        }
+        public IEnumerable<Crop> GetCrops(int index = 0, int count = Crop.MAXIMUM)
+        {
+            if (index < 0 || index >= Crop.MAXIMUM)
+                throw new IndexOutOfRangeException();
+
+            for (int i = 0; i < count && i + index < Crop.MAXIMUM; i++)
+                yield return GetCrop(i + index);
         }
 
         public Scarecrow GetScarecrow(int index)

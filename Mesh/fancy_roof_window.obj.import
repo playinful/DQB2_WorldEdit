@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bm24787ca6g0c"
+path="res://.godot/imported/fancy_roof_window.obj-fd7bd90a092a38aa1231db1f3fe57cce.mesh"
+
+[deps]
+
+files=["res://.godot/imported/fancy_roof_window.obj-fd7bd90a092a38aa1231db1f3fe57cce.mesh"]
+
+source_file="res://Mesh/fancy_roof_window.obj"
+dest_files=["res://.godot/imported/fancy_roof_window.obj-fd7bd90a092a38aa1231db1f3fe57cce.mesh", "res://.godot/imported/fancy_roof_window.obj-fd7bd90a092a38aa1231db1f3fe57cce.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

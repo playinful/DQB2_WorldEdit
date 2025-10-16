@@ -1,3 +1,4 @@
+using EyeOfRubiss.Info;
 using EyeOfRubiss.Scenes;
 using Godot;
 using System;
@@ -77,7 +78,7 @@ namespace EyeOfRubiss.Nodes
                         List<ushort> layers = [];
                         foreach (string arg in superflat_args)
                         {
-                            int count;
+                           int count;
                             ushort blockId;
                             if (arg.Contains('*'))
                             {
@@ -104,7 +105,7 @@ namespace EyeOfRubiss.Nodes
                             hotbar_item.Count = (short)command_parts[3].ToInt();
                         else if (hotbar_item.Count == 0)
                             hotbar_item.Count = 1;
-                        break;
+                        break; 
                     case "setbagitem":
                         InventoryItem bag_item = CommonData.Instance.GetBagItem(command_parts[1].ToInt());
                         bag_item.ItemID = (ushort)command_parts[2].ToInt();
@@ -112,6 +113,48 @@ namespace EyeOfRubiss.Nodes
                             bag_item.Count = (short)command_parts[3].ToInt();
                         else if (bag_item.Count == 0)
                             bag_item.Count = 1;
+                        break;
+                    case "clearbag":
+                        foreach (InventoryItem item in CommonData.Instance.GetBagItems())
+                        {
+                            item.Count = 0;
+                            item.ItemID = 0;
+                        }
+                        break;
+                    case "dyetest":
+                        int q = 0;
+                        foreach (ItemInfo item in ItemInfo.GetAll())
+                        {
+                            if (item.Name.Contains("White") || item.Name.Contains("Black") || item.Name.Contains("Purple") || item.Name.Contains("Pink") || item.Name.Contains("Red") || item.Name.Contains("Green") || item.Name.Contains("Yellow") || item.Name.Contains("Blue"))
+                            {
+                                InventoryItem inventoryItem = CommonData.Instance.GetBagItem(q);
+                                inventoryItem.Count = 1;
+                                inventoryItem.ItemID = item.ID;
+                                q++;
+                                if (q >= 420)
+                                    break;
+                            }
+                        }
+                        break;
+                    case "testworkbench":
+                        foreach (InventoryItem item in CommonData.Instance.GetBagItems())
+                        {
+                            item.Count = 0;
+                            item.ItemID = 0;
+                        }
+                        int r = 0;
+                        foreach (ItemInfo item in ItemInfo.GetAll())
+                        {
+                            if (item.Name.Contains("Workbench"))
+                            {
+                                InventoryItem inventoryItem = CommonData.Instance.GetBagItem(r);
+                                inventoryItem.Count = 1;
+                                inventoryItem.ItemID = item.ID;
+                                r++;
+                                if (r >= 420)
+                                    break;
+                            }
+                        }
                         break;
 
                     case "propdata":

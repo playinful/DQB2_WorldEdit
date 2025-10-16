@@ -1,5 +1,6 @@
 using EyeOfRubiss.Info;
 using EyeOfRubiss.Nodes;
+using Gizmo3DPlugin;
 using Godot;
 using System;
 using System.Collections.Generic;
@@ -22,14 +23,18 @@ namespace EyeOfRubiss.Scenes
 		private VoxelTool _VoxelTool_PropShells;
 		[Export] private Node3D _ResidentLayer;
 		[Export] private PropGridHacky _PropGrid;
+		[Export] private NPCSprite _PlayerDisplay;
 
 		[Export] private CameraController _CameraController;
+
+		[Export] private Gizmo3D _Gizmo;
 
 		[Export] private CanvasItem _DebugInfoContainer;
 		[Export] private FPSLabel _FPSLabel;
 		[Export] private Label _PointedVoxelLabel;
 		[Export] private StatusLabel _StatusLabel;
 		[Export] private LineEdit _CommandParser;
+		[Export] private AnimationPlayer _LoadingAnimationPlayer;
 
 		[ExportGroup("Settings")]
 		[Export] public bool AutomaticallyGenerateBedrock = true;
@@ -50,7 +55,11 @@ namespace EyeOfRubiss.Scenes
 		public bool ShowNPCs { get; set; } = true;
 		public bool ShowPlayer { get; set; } = true;
 
+		private bool _Loaded = false;
+		private Thread _LoadingThread;
 		private bool _PropsLoaded = false;
+
+		private NPCSprite _SelectedNPCSprite;
 
 		public override void _Ready()
 		{
@@ -69,10 +78,36 @@ namespace EyeOfRubiss.Scenes
 
 		public VoxelRaycastResult GetPointedVoxel()
 		{
+			if (!_Loaded)
+				return null;
+
 			Vector3 origin = _CameraController.GlobalTransform.Origin;
-			Vector3 forward = -_CameraController.Transform.Basis.Z.Normalized();
+			Vector3 forward = (Input.MouseMode == Input.MouseModeEnum.Captured) ?
+				-_CameraController.Transform.Basis.Z.Normalized() : // Cast directly forward from camera if mouse is captured
+				_CameraController.ProjectRayNormal(GetViewport().GetMousePosition()); // Otherwise cast by mouse position
+			
+			// Old code
+			//Vector3 origin = _CameraController.GlobalTransform.Origin;
+			//Vector3 forward = -_CameraController.Transform.Basis.Z.Normalized();
 			VoxelRaycastResult hit = _VoxelTool.Raycast(origin, forward, 4096);
 			return hit;
+		}
+		public Node3D GetPointedObject()
+		{
+			Vector3 origin = _CameraController.GlobalTransform.Origin;
+			Vector3 forward = (Input.MouseMode == Input.MouseModeEnum.Captured) ?
+				-_CameraController.Transform.Basis.Z.Normalized() : // Cast directly forward from camera if mouse is captured
+				_CameraController.ProjectRayNormal(GetViewport().GetMousePosition()); // Otherwise cast by mouse position
+			var result = GetWorld3D().DirectSpaceState.IntersectRay(new PhysicsRayQueryParameters3D()
+			{
+				From = origin,
+				To = origin + forward * 4096.0f
+			});
+			if (result.Count == 0)
+				return null;
+			
+			Node collider = (Node) result["collider"];
+			return collider.GetParent().GetParent<Node3D>();
 		}
 		private void UpdatePointedVoxelLabel()
 		{
@@ -128,7 +163,7 @@ namespace EyeOfRubiss.Scenes
 		public void ChangePlayerDisplay(bool show)
 		{
 			ShowPlayer = show;
-			throw new NotImplementedException();// TODO
+			_PlayerDisplay.Visible = show && _StageData is not null && _StageData.IsLoaded && CommonData.HasInstance() && _StageData.IslandID == CommonData.Instance.ToIsland;
 		}
 		public void ChangePropDisplay(bool show)
 		{
@@ -147,40 +182,88 @@ namespace EyeOfRubiss.Scenes
 		#region Scene setup
 		public void LoadWorld(StageData stageData)
 		{
+			if (_LoadingThread is not null && _LoadingThread.IsAlive)
+			{
+				//_LoadingThread.Join();
+				return;
+			}
+
 			UnloadWorld();
+
+			LoadWorldThreaded(stageData); // TODO make this actually threaded
+			//_LoadingThread = new Thread(() => LoadWorldThreaded(stageData));
+			//_LoadingThread.Start();
+
+			_LoadingAnimationPlayer.Play("Loading");
+
+			/*
 			_StageData = stageData;
 
 			if (ShowTerrain)
 				_VoxelTerrain.Stream = new VoxelStreamDQB2(stageData);
 			if (ShowPropShells)
 				_VoxelTerrain_PropShells.Stream = new VoxelStreamDQB2(stageData, propsOnly: true);
-
-			// TEST
-			/*foreach (StageData.Prop prop in stageData.Props)
-			{
-				if (!prop.Exists() || prop.ChunkIndex < 64 * 32)
-					continue;
-
-                _VoxelTerrain.AddChild(new Label3D()
-				{
-					Text = $"{prop.PropID}",
-					Position = prop.GetPosition() + Vector3.One * 0.5f,
-					Billboard = BaseMaterial3D.BillboardModeEnum.Enabled,
-					NoDepthTest = true
-                });
-			}*/
 			if (ShowProps)
 				CreateProps(stageData);
 
 			if (CommonData.Instance is not null && CommonData.Instance.IsLoaded)
-				CreateResidents(CommonData.Instance);
+				LoadCommonData(CommonData.Instance);
+			*/
 		}
 		public void UnloadWorld()
 		{
+			_Loaded = false;
 			_VoxelTerrain.Stream = null;
 			_VoxelTerrain_PropShells.Stream = null;
-			DestroyResidents();
+			_Gizmo.ClearSelection();
 			DestroyProps();
+			DestroyResidents();
+			_PlayerDisplay.Hide();
+			_StageData = null;
+		}
+
+		private void LoadWorldThreaded(StageData stageData)
+		{
+			_StageData = stageData;
+
+			if (ShowProps)
+			{
+				CreateProps(stageData);
+			}
+			if (ShowPropShells)
+			{
+				_VoxelTerrain_PropShells.Stream = new VoxelStreamDQB2(stageData, propsOnly: true);
+			}
+			if (ShowTerrain)
+			{
+				_VoxelTerrain.SetDeferred(VoxelNode.PropertyName.Stream, new VoxelStreamDQB2(stageData));
+			}
+
+			if (CommonData.Instance is not null && CommonData.Instance.IsLoaded)
+			{
+				LoadCommonData(CommonData.Instance);
+			}
+
+			_Loaded = true;
+			_LoadingAnimationPlayer?.CallDeferred(AnimationPlayer.MethodName.Play, "RESET");
+		}
+
+		public void LoadCommonData(CommonData commonData)
+		{
+			if (_StageData is null || !_StageData.IsLoaded)
+				return;
+
+			CreateResidents(commonData);
+
+			_PlayerDisplay.SetNPCName(CommonData.Instance.PlayerName);
+			_PlayerDisplay.Position = commonData.GetPlayerPosition();
+			_PlayerDisplay.Rotation = Vector3.Up * commonData.PlayerRotation;
+			_PlayerDisplay.Visible = ShowPlayer && commonData.ToIsland == _StageData.IslandID;
+		}
+		public void UnloadCommonData()
+		{
+			DestroyResidents();
+			_PlayerDisplay.Hide();
 		}
 
 		public void CreateProps(StageData stageData)
@@ -260,43 +343,26 @@ namespace EyeOfRubiss.Scenes
 		#endregion
 
 		#region Control handling
-		public override void _Input(InputEvent @event)
+		public override void _UnhandledInput(InputEvent @event)
 		{
-			if (@event.IsActionPressed(Constants.Controls.CURSOR_RELEASE))
-				ReleaseCursor();
-
-			if (_CameraController.Enabled)
-			{
-				if (@event.IsPressed() && @event is InputEventMouseButton mouseButtonEvent) // TODO probably change this to action
-				{
-					if (mouseButtonEvent.ButtonIndex == MouseButton.Left)
-						DoBrush(GetPointedVoxel(), BrushPrimary);
-					if (mouseButtonEvent.ButtonIndex == MouseButton.Right)
-						DoBrush(GetPointedVoxel(), BrushSecondary);
-					if (mouseButtonEvent.ButtonIndex == MouseButton.Middle)
-						DoBrush(GetPointedVoxel(), BrushTertiary);
-				}
-			}
-
-			if (@event.IsPressed() && @event is InputEventMouseButton mouseButtonEvent2 && mouseButtonEvent2.ButtonIndex == MouseButton.Left) // TODO probably change this to action
-				CaptureCursor();
+			if (_Gizmo.Editing)
+				return;
 
 			if (@event.IsActionPressed(Constants.Controls.RESET_CAMERA))
 			{
 				_CameraController.Position = Vector3.Up * 96;
 				_CameraController.Rotation = Vector3.Zero;
 			}
-		}
 
-		public void CaptureCursor()
-		{
-			Input.MouseMode = Input.MouseModeEnum.Captured;
-			_CameraController.Enabled = true;
-		}
-		public void ReleaseCursor()
-		{
-			Input.MouseMode = Input.MouseModeEnum.Visible;
-			_CameraController.Enabled = false;
+			if (!_Loaded)
+				return;
+
+			if (@event.IsActionPressed(Constants.Controls.BRUSH_PRIMARY))
+				DoBrush(GetPointedVoxel(), BrushPrimary);
+			if (@event.IsActionPressed(Constants.Controls.BRUSH_SECONDARY))
+				DoBrush(GetPointedVoxel(), BrushSecondary);
+			if (@event.IsActionPressed(Constants.Controls.BRUSH_TERTIARY))
+				DoBrush(GetPointedVoxel(), BrushTertiary);
 		}
 
 		public void MoveCamera(Vector3 target)
@@ -306,7 +372,7 @@ namespace EyeOfRubiss.Scenes
 		#endregion
 
 		#region Stage editing
-		public void SetBlock(Vector3I position, ushort blockId, StageData.BlockInstance.ChiselType? chiselType = null, bool? playerPlaced = null)
+		public void SetBlock(Vector3I position, ushort blockId, StageData.BlockInstance.ChiselType? chiselType = null, bool? playerPlaced = null, bool destroyProps = true)
 		{
 			if (_StageData is null || !_StageData.IsLoaded)
 				return;
@@ -327,7 +393,7 @@ namespace EyeOfRubiss.Scenes
 					_VoxelTerrain_PropShells.GetVoxelTool().SetVoxel(position, voxelId);
 				}
 
-				if (blockInfo.GetPropShell() == PropShell.None)
+				if (destroyProps && blockInfo.GetPropShell() == PropShell.None)
 				{
 					DeleteProp(position);
 				}
@@ -392,7 +458,40 @@ namespace EyeOfRubiss.Scenes
 		}
 		public void DeleteProp(Vector3I position)
 		{
-			// TODO
+			foreach (StageData.Prop prop in _StageData.GetOverlappingProps(position))
+			{
+				(Vector3I start, Vector3I end) = prop.GetBounds();
+				_PropGrid.ClearCellItem(prop.GetPosition());
+				prop.Clear();
+
+				for (int x = start.X; x <= end.X; x++)
+				{
+					for (int y = start.Y; y <= end.Y; y++)
+					{
+						for (int z = start.Z; z <= end.Z; z++)
+						{
+							Vector3I otherPosition = new(x, y, z);
+							if (_StageData.GetOverlappingProp(otherPosition) is StageData.Prop otherProp)
+							{
+								ChangePropShell(otherPosition, prop.GetInfo().PropShell);
+							}
+							else
+							{
+								ChangePropShell(otherPosition, PropShell.None);
+							}
+						}
+					}
+				}
+			}
+		}
+
+		public void ChangePropShell(Vector3I position, PropShell propShell)
+		{
+			// TEST, TODO
+			if (propShell == PropShell.None)
+			{
+				SetBlock(position, Constants.BLOCK_AIR, destroyProps: false);
+			}
 		}
 
 		public void Builderize()
@@ -437,6 +536,8 @@ namespace EyeOfRubiss.Scenes
 		#region Brushes
 		public enum BrushType : int
 		{
+			None = -1,
+			Pointer = 8,
 			Erase = 0,
 			Pencil = 1,
 			Fill = 2,
@@ -491,6 +592,17 @@ namespace EyeOfRubiss.Scenes
 				case BrushType.PropMaker:
 					CreateProp(result.PreviousPosition, BrushProp);
 					break;
+				case BrushType.Pointer:
+					DoSelect();
+					break;
+			}
+		}
+		public void DoSelect()
+		{
+			Node3D pointedObject = GetPointedObject();
+			if (pointedObject is NPCSprite npc)
+			{
+				SelectNPC(npc);
 			}
 		}
 		public void DoEyedropper(Vector3I position)
@@ -499,6 +611,38 @@ namespace EyeOfRubiss.Scenes
 			{
 				SetBrushBlock(block.BlockID);
 				GD.Print($"Set brush block to {BlockInfo.Get(block.BlockID).Name} ({block.BlockID})");
+			}
+		}
+		#endregion
+
+		#region Gizmo functions
+		public void SelectNPC(NPCSprite npc)
+		{
+			_Gizmo.ClearSelection();
+			_Gizmo.Select(npc);
+			_SelectedNPCSprite = npc;
+		}
+
+		public void _On_Gizmo3D_TransformEnd()
+		{
+			if (!CommonData.HasInstance())
+				return;
+
+			if (_SelectedNPCSprite == _PlayerDisplay)
+			{
+				CommonData.Instance.PlayerPositionX = _SelectedNPCSprite.Position.X;
+				CommonData.Instance.PlayerPositionY = _SelectedNPCSprite.Position.Y;
+				CommonData.Instance.PlayerPositionZ = _SelectedNPCSprite.Position.Z;
+
+				CommonData.Instance.PlayerRotation = _SelectedNPCSprite.Rotation.Y;
+			}
+			else
+			{
+				_SelectedNPCSprite.Resident.PositionX = _SelectedNPCSprite.Position.X;
+				_SelectedNPCSprite.Resident.PositionY = _SelectedNPCSprite.Position.Y;
+				_SelectedNPCSprite.Resident.PositionZ = _SelectedNPCSprite.Position.Z;
+
+				_SelectedNPCSprite.Resident.Rotation = _SelectedNPCSprite.Rotation.Y;
 			}
 		}
 		#endregion
@@ -544,16 +688,49 @@ namespace EyeOfRubiss.Scenes
 
 		public void TEST_DoPropChecker(Vector3I position)
 		{
-			if (_StageData.GetPropAtPosition(position) is StageData.Prop prop)
+			IEnumerable<StageData.Prop> props = _StageData.GetOverlappingProps(position);
+			if (!props.Any())
+			{
+				_StatusLabel.PrintMessage($"No prop found at ({position})");
+				return;
+			}
+
+			foreach (StageData.Prop prop in props)
+			{
+				_StatusLabel.PrintMessage(
+					$"Prop {prop.DataIndex} @ [{prop.GetAddress()}] at position ({position}): {prop.GetInfo().Name} [{prop.PropID}] | Rotation: {(prop.Rotation == 0 ? "North" : (prop.Rotation == 1 ? "West" : (prop.Rotation == 2 ? "South" : "East")))}\n" +
+					$"Prop position: ({prop.GetPosition()}) | Prop bounds: ({prop.GetBounds().Item1}) - ({prop.GetBounds().Item2})"
+				);
+
+				DisplayServer.ClipboardSet(Convert.ToHexString(prop.GetBytes()));
+				Window propEditor = GetNode<Window>("%BasicPropEditor");
+
+				if (!propEditor.Visible)
+				{
+					//ReleaseCursor();
+					//propEditor.Show();
+				}
+
+				propEditor.GetNode<SpinBox>("VBoxContainer/HBoxContainer1/SpinBox").SetValueNoSignal(prop.PropID);
+				propEditor.GetNode<SpinBox>("VBoxContainer/HBoxContainer1/SpinBox2").SetValueNoSignal(prop.Rotation);
+				propEditor.GetNode<SpinBox>("VBoxContainer/HBoxContainer2/SpinBoxX").SetValueNoSignal(position.X);
+				propEditor.GetNode<SpinBox>("VBoxContainer/HBoxContainer2/SpinBoxY").SetValueNoSignal(position.Y);
+				propEditor.GetNode<SpinBox>("VBoxContainer/HBoxContainer2/SpinBoxZ").SetValueNoSignal(position.Z);
+
+				_TEST_selectedprop = prop;
+			}
+			// old
+			/*if (_StageData.GetPropAtPosition(position) is StageData.Prop prop)
 			{
 				_StatusLabel.PrintMessage($"Prop {prop.DataIndex} @ [{prop.GetAddress()}] at position ({position}): {prop.GetInfo().Name} [{prop.PropID}] | Rotation: {(prop.Rotation == 0 ? "North" : (prop.Rotation == 1 ? "West" : (prop.Rotation == 2 ? "South" : "East")))}");
+				DisplayServer.ClipboardSet(Convert.ToHexString(prop.GetBytes()));
 
 				Window propEditor = GetNode<Window>("%BasicPropEditor");
 
 				if (!propEditor.Visible)
 				{
 					//ReleaseCursor();
-					propEditor.Show();
+					//propEditor.Show();
 				}
 
 				propEditor.GetNode<SpinBox>("VBoxContainer/HBoxContainer1/SpinBox").SetValueNoSignal(prop.PropID);
@@ -566,7 +743,7 @@ namespace EyeOfRubiss.Scenes
 				_TEST_selectedprop = prop;
 			}
 			else
-				_StatusLabel.PrintMessage($"No prop found at ({position})");
+				_StatusLabel.PrintMessage($"No prop found at ({position})");*/
 		}
 		private StageData.Prop _TEST_selectedprop;
 		public void DoPropEditor(Vector3I position, ushort propId, byte rotation)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://d5ygrv1j2owh"]
+[gd_scene load_steps=19 format=3 uid="uid://d5ygrv1j2owh"]
 
 [ext_resource type="Theme" uid="uid://nd34kb5d40qb" path="res://Resources/DQB_Theme.tres" id="1_sua2j"]
 [ext_resource type="Script" uid="uid://dmw4aaodejfmb" path="res://Nodes/AutoSubmenu.cs" id="2_50glp"]
@@ -8,10 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://bas763qy7loid" path="res://Graphics/BrushIcon/pencil.png" id="8_grg3l"]
 [ext_resource type="Texture2D" uid="uid://blqdbmxjkghmx" path="res://Graphics/BrushIcon/swap.png" id="9_frkhe"]
 [ext_resource type="Texture2D" uid="uid://dqp6cufmisgap" path="res://Graphics/BrushIcon/bucket.png" id="10_1p5hy"]
-[ext_resource type="Texture2D" uid="uid://dksjirgdotgbq" path="res://Graphics/icon_isle12.png" id="10_sxkr1"]
 [ext_resource type="PackedScene" uid="uid://chekdrqr80s3n" path="res://Scenes/WorldEditor.tscn" id="11_4kpch"]
 [ext_resource type="Texture2D" uid="uid://nvo001dadd0e" path="res://Graphics/BrushIcon/select.png" id="11_346fj"]
-[ext_resource type="Texture2D" uid="uid://diyestt7o7ejn" path="res://Graphics/icon_isle14.png" id="11_fq0cl"]
 [ext_resource type="Texture2D" uid="uid://bukeminmeelvv" path="res://Graphics/BrushIcon/copy.png" id="12_0sclb"]
 [ext_resource type="PackedScene" uid="uid://c8ji32ohm06et" path="res://Scenes/InventoryEditor.tscn" id="12_grg3l"]
 [ext_resource type="PackedScene" uid="uid://o3d56yqxtw7o" path="res://Scenes/PlayerEditor.tscn" id="13_frkhe"]
@@ -19,8 +17,9 @@
 [ext_resource type="Script" uid="uid://blmw2vekf34is" path="res://Nodes/ItemButtonSelector.cs" id="14_1p5hy"]
 [ext_resource type="Texture2D" uid="uid://bq58vaml02jo5" path="res://Graphics/BrushIcon/paste.png" id="14_fq0cl"]
 [ext_resource type="Script" uid="uid://4b1u3e3eyj1n" path="res://Nodes/InventoryItemSelector.cs" id="19_0sclb"]
+[ext_resource type="Script" uid="uid://dpxr4rncvxjdx" path="res://Scenes/ItemSelectorTest.cs" id="20_sxkr1"]
 
-[node name="Main" type="Control" node_paths=PackedStringArray("_WorldEditorScene", "_FileDialog", "_UnsavedChanges_Window", "_File_PopupMenu", "_File_SaveSingleFile_PopupMenu", "_File_SaveAsSingleFile_PopupMenu", "_File_Export_PopupMenu", "_File_Import_PopupMenu", "_Settings_PopupMenu", "_View_PopupMenu", "_Inventory_Button", "_Player_Button", "_IslandSelector_Button", "_Gratitude_SpinBox", "_Time_SpinBox", "_Weather_OptionButton", "_Block_ItemButtonSelector", "_Prop_ItemButtonSelector", "_Fluid_ItemButtonSelector", "_Inventory_Panel", "_ItemSelector_Panel", "_ItemSelector")]
+[node name="Main" type="Control" node_paths=PackedStringArray("_WorldEditorScene", "_FileDialog", "_UnsavedChanges_Window", "_UnsavedChanges_Label", "_File_PopupMenu", "_File_SaveSingleFile_PopupMenu", "_File_SaveAsSingleFile_PopupMenu", "_File_Export_PopupMenu", "_File_Import_PopupMenu", "_Settings_PopupMenu", "_View_PopupMenu", "_Inventory_Button", "_Player_Button", "_IslandSelector_Button", "_Gratitude_SpinBox", "_Time_SpinBox", "_Weather_OptionButton", "_Block_ItemButtonSelector", "_Prop_ItemButtonSelector", "_Fluid_ItemButtonSelector", "_Inventory_Panel", "_ItemSelector")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -32,6 +31,7 @@ script = ExtResource("2_vy5pj")
 _WorldEditorScene = NodePath("Toolbar/VBoxContainer/HSplitContainer/WorldEditorContainer/SubViewport/WorldEditor")
 _FileDialog = NodePath("Popups/FileDialog")
 _UnsavedChanges_Window = NodePath("Popups/UnsavedChangesWindow")
+_UnsavedChanges_Label = NodePath("Popups/UnsavedChangesWindow/Label")
 _File_PopupMenu = NodePath("Toolbar/VBoxContainer/MenuBar_Main/MenuBar/FileMenu")
 _File_SaveSingleFile_PopupMenu = NodePath("Toolbar/VBoxContainer/MenuBar_Main/MenuBar/FileMenu/SaveSingleFileMenu")
 _File_SaveAsSingleFile_PopupMenu = NodePath("Toolbar/VBoxContainer/MenuBar_Main/MenuBar/FileMenu/SaveAsSingleFileMenu")
@@ -49,7 +49,6 @@ _Block_ItemButtonSelector = NodePath("Toolbar/VBoxContainer/HSplitContainer/Cont
 _Prop_ItemButtonSelector = NodePath("Toolbar/VBoxContainer/HSplitContainer/Control/TabContainer/Props/PropSelector")
 _Fluid_ItemButtonSelector = NodePath("Toolbar/VBoxContainer/HSplitContainer/Control/TabContainer/Liquids/FluidSelector")
 _Inventory_Panel = NodePath("InventoryEditor")
-_ItemSelector_Panel = NodePath("ItemSelectorPanel")
 _ItemSelector = NodePath("ItemSelectorPanel/ItemSelector")
 metadata/_edit_lock_ = true
 
@@ -260,10 +259,8 @@ popup/item_8/id = 12
 popup/item_9/text = "Buildertopia Beta"
 popup/item_9/id = 13
 popup/item_10/text = "Buildertopia Gamma"
-popup/item_10/icon = ExtResource("10_sxkr1")
 popup/item_10/id = 16
 popup/item_11/text = "Battle Atoll"
-popup/item_11/icon = ExtResource("11_fq0cl")
 popup/item_11/id = 14
 
 [node name="Weather_Label" type="Label" parent="Toolbar/VBoxContainer/MenuBar_Stage"]
@@ -362,6 +359,12 @@ max_value = 1200.0
 [node name="MenuBar_Tools" type="HBoxContainer" parent="Toolbar/VBoxContainer"]
 layout_mode = 2
 
+[node name="Select" type="Button" parent="Toolbar/VBoxContainer/MenuBar_Tools"]
+layout_mode = 2
+toggle_mode = true
+button_group = ExtResource("4_v1gob")
+text = "Select"
+
 [node name="Pencil" type="Button" parent="Toolbar/VBoxContainer/MenuBar_Tools"]
 layout_mode = 2
 toggle_mode = true
@@ -399,7 +402,7 @@ toggle_mode = true
 button_group = ExtResource("4_v1gob")
 text = "AddProp"
 
-[node name="Select" type="Button" parent="Toolbar/VBoxContainer/MenuBar_Tools"]
+[node name="SelectArea" type="Button" parent="Toolbar/VBoxContainer/MenuBar_Tools"]
 layout_mode = 2
 toggle_mode = true
 button_group = ExtResource("4_v1gob")
@@ -441,6 +444,7 @@ render_target_update_mode = 4
 
 [node name="WorldEditor" parent="Toolbar/VBoxContainer/HSplitContainer/WorldEditorContainer/SubViewport" instance=ExtResource("11_4kpch")]
 unique_name_in_owner = true
+BrushSecondary = -1
 
 [node name="Control" type="Control" parent="Toolbar/VBoxContainer/HSplitContainer"]
 layout_mode = 2
@@ -838,7 +842,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 text = "Execute"
 
-[node name="InventoryEditor" parent="." node_paths=PackedStringArray("_InventoryItemSelector") instance=ExtResource("12_grg3l")]
+[node name="InventoryEditor" parent="." node_paths=PackedStringArray("_InventoryItemSelector", "_ItemSelectorTest") instance=ExtResource("12_grg3l")]
 visible = false
 layout_mode = 1
 anchor_left = 0.0381944
@@ -850,6 +854,7 @@ offset_bottom = 0.0
 grow_horizontal = 1
 grow_vertical = 1
 _InventoryItemSelector = NodePath("../ItemSelectorPanel/ItemSelector")
+_ItemSelectorTest = NodePath("../ItemSelectorTest")
 metadata/_edit_use_anchors_ = true
 
 [node name="PlayerEditor" parent="." instance=ExtResource("13_frkhe")]
@@ -862,22 +867,37 @@ anchor_bottom = 0.859568
 grow_horizontal = 1
 grow_vertical = 1
 
-[node name="ItemSelectorPanel" type="Panel" parent="."]
-visible = false
-layout_mode = 0
-offset_left = 695.0
-offset_top = 124.0
-offset_right = 995.0
-offset_bottom = 599.0
+[node name="ItemSelectorPanel" type="PopupPanel" parent="."]
+size = Vector2i(260, 460)
 
 [node name="ItemSelector" type="HFlowContainer" parent="ItemSelectorPanel"]
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 256.0
+offset_bottom = 456.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("19_0sclb")
+
+[node name="ItemSelectorTest" type="Window" parent="."]
+initial_position = 1
+script = ExtResource("20_sxkr1")
+
+[node name="SpinBox" type="SpinBox" parent="ItemSelectorTest"]
+offset_left = 7.0
+offset_top = 12.0
+offset_right = 89.0
+offset_bottom = 42.0
+
+[node name="Button" type="Button" parent="ItemSelectorTest"]
+offset_left = 9.0
+offset_top = 53.0
+offset_right = 83.0
+offset_bottom = 84.0
+text = "ok"
 
 [connection signal="id_pressed" from="Toolbar/VBoxContainer/MenuBar_Main/MenuBar/FileMenu" to="." method="_On_File_PopupMenu_IdPressed"]
 [connection signal="id_pressed" from="Toolbar/VBoxContainer/MenuBar_Main/MenuBar/FileMenu/SaveSingleFileMenu" to="." method="_On_SaveSingleFile_PopupMenu_IdPressed"]
@@ -890,6 +910,8 @@ script = ExtResource("19_0sclb")
 [connection signal="pressed" from="Toolbar/VBoxContainer/MenuBar_Main/InventoryButton" to="." method="_On_Inventory_Button_Pressed"]
 [connection signal="pressed" from="Toolbar/VBoxContainer/MenuBar_Main/PlayerButton" to="PlayerEditor" method="show"]
 [connection signal="pressed" from="Toolbar/VBoxContainer/MenuBar_Main/AboutButton" to="Popups/AboutDialog" method="show"]
+[connection signal="item_selected" from="Toolbar/VBoxContainer/MenuBar_Stage/IslandSelectorButton" to="." method="_On_IslandSelectorButton_ItemSelected"]
+[connection signal="pressed" from="Toolbar/VBoxContainer/MenuBar_Tools/Select" to="Toolbar/VBoxContainer/HSplitContainer/WorldEditorContainer/SubViewport/WorldEditor" method="SetBrushPrimary" binds= [8]]
 [connection signal="pressed" from="Toolbar/VBoxContainer/MenuBar_Tools/Pencil" to="Toolbar/VBoxContainer/HSplitContainer/WorldEditorContainer/SubViewport/WorldEditor" method="SetBrushPrimary" binds= [1]]
 [connection signal="pressed" from="Toolbar/VBoxContainer/MenuBar_Tools/Swap" to="Toolbar/VBoxContainer/HSplitContainer/WorldEditorContainer/SubViewport/WorldEditor" method="SetBrushPrimary" binds= [3]]
 [connection signal="pressed" from="Toolbar/VBoxContainer/MenuBar_Tools/Eraser" to="Toolbar/VBoxContainer/HSplitContainer/WorldEditorContainer/SubViewport/WorldEditor" method="SetBrushPrimary" binds= [0]]
@@ -909,3 +931,4 @@ script = ExtResource("19_0sclb")
 [connection signal="pressed" from="BasicPropEditor/VBoxContainer/Button" to="." method="BasicPropEditor"]
 [connection signal="visibility_changed" from="InventoryEditor" to="InventoryEditor" method="Initialize"]
 [connection signal="visibility_changed" from="PlayerEditor" to="PlayerEditor" method="UpdateAll"]
+[connection signal="pressed" from="ItemSelectorTest/Button" to="ItemSelectorTest" method="_On_Button_Pressed"]

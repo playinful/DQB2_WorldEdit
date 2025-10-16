@@ -1,3 +1,14 @@
-[gd_scene format=3 uid="uid://d0cfwkih6w2xq"]
+[gd_scene load_steps=3 format=3 uid="uid://d0cfwkih6w2xq"]
+
+[ext_resource type="ArrayMesh" uid="uid://cy8s1g1n705k1" path="res://Mesh/oversized_shrub.obj" id="1_5g2qp"]
+[ext_resource type="ArrayMesh" uid="uid://c1c5bkrur16e3" path="res://Mesh/blossoming_shrub.obj" id="2_bucqn"]
 
 [node name="ModelTest" type="Node3D"]
+
+[node name="3118" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 2)
+mesh = ExtResource("1_5g2qp")
+
+[node name="3230" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 4)
+mesh = ExtResource("2_bucqn")

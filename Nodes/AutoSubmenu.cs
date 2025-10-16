@@ -13,14 +13,14 @@ namespace EyeOfRubiss.Nodes
 		{
 			if (SubmenuIndex < 0)
 				return;
-
+			
+			if (GetParent() is MenuButton parentMenuButton)
+			{
+				Reparent(parentMenuButton.GetPopup());
+			}
 			if (GetParent() is PopupMenu parentPopupMenu)
 			{
 				parentPopupMenu.SetItemSubmenuNode(SubmenuIndex, this);
-			}
-			if (GetParent() is MenuButton parentMenuButton)
-			{
-				parentMenuButton.GetPopup().SetItemSubmenuNode(SubmenuIndex, this);
 			}
 		}
 	}

@@ -7,14 +7,7 @@ namespace EyeOfRubiss.Nodes
 {
     public partial class InventoryItemSelector : ItemButtonSelector
     {
-        private Control _Parent;
-
-        public override void _Ready()
-        {
-            base._Ready();
-            if (GetParent() is Control parent)
-                _Parent = parent;
-        }
+        [Export] private Control _Panel;
 
         public void Populate()
         {
@@ -31,13 +24,13 @@ namespace EyeOfRubiss.Nodes
             if (_Buttons is null || _Buttons.Count <= 0)
                 Populate();
 
-            _Parent.GlobalPosition = position;
-            _Parent.Show();
+            _Panel.GlobalPosition = position;
+            _Panel.Show();
         }
         public void Disengage()
         {
             //this.DisconnectAll(ItemButtonSelector.SignalName.ItemSelected);
-            _Parent.Hide();
+            _Panel.Hide();
         }
     }
 }

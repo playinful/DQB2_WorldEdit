@@ -157,7 +157,15 @@ namespace EyeOfRubiss.Info
         public DQB2Color Color { get; set; } = DQB2Color.Plain;
 
         public int? MeshID { get; set; }
-        public Vector3I Dimensions { get; set; } = Vector3I.One;
+
+        public int DimensionX { get; set; } = 1;
+        public int DimensionY { get; set; } = 1;
+        public int DimensionZ { get; set; } = 1;
+        public Vector3I GetDimensions()
+        {
+            return new Vector3I(DimensionX, DimensionY, DimensionZ);
+        }
+
         public PropShell PropShell { get; set; } = PropShell.Generic;
 
         public float SortIndex { get; set; } = float.MaxValue;

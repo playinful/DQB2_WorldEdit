@@ -278,5 +278,5 @@ position = Vector2(1332, 88)
 texture = ExtResource("6_ba6dv")
 
 [node name="PopupPanel" type="PopupPanel" parent="."]
-position = Vector2i(835, 970)
+position = Vector2i(835, 443)
 visible = true

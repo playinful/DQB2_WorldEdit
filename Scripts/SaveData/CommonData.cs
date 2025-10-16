@@ -11,6 +11,7 @@ using System.Threading;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq.Expressions;
+using System.IO;
 
 namespace EyeOfRubiss
 {
@@ -133,7 +134,28 @@ namespace EyeOfRubiss
         public float PlayerPositionY { get { return GetSingle(0x6A866 + 0x1A); } set { SetSingle(0x6A866 + 0x1A, value); } }
         public float PlayerPositionZ { get { return GetSingle(0x6A866 + 0x1E); } set { SetSingle(0x6A866 + 0x1E, value); } }
         public float PlayerRotation { get { return GetSingle(0x6A866 + 0x24); } set { SetSingle(0x6A866 + 0x24, value); } }
-        public Vector3 GetPlayerPosition => new(PlayerPositionX, PlayerPositionY, PlayerPositionZ);
+        public Vector3 GetPlayerPosition() => new(PlayerPositionX, PlayerPositionY, PlayerPositionZ);
+
+        public static bool IsCommonDataFile(string path)
+        {
+            if (!Godot.FileAccess.FileExists(path))
+                return false;
+
+            using Godot.FileAccess file = Godot.FileAccess.Open(path, Godot.FileAccess.ModeFlags.Read);
+            {
+                if (file.GetLength() < 6)
+                    return false;
+
+                byte[] header = file.GetBuffer(6);
+                return
+                    header[0] == 0x61 &&
+                    header[1] == 0x65 &&
+                    header[2] == 0x72 &&
+                    header[3] == 0x43 &&
+                    header[4] == 0x02 &&
+                    header[5] == 0x01;
+            }
+        }
 
         public static CommonData TryLoadAndSet(string path)
         {
@@ -161,9 +183,15 @@ namespace EyeOfRubiss
             }
             else return null;
         }
+        public static void SetInstance(CommonData commonData)
+        {
+            Instance = commonData;
+        }
 
         public static void Close()
         {
+            Instance.IsLoaded = false;
+            Instance.UnsavedChanges = false;
             Instance = null;
         }
 

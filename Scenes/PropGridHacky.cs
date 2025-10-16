@@ -21,18 +21,18 @@ public partial class PropGridHacky : GridMap
             SetupLibraries();
 
         if (item <= 1269)
-            SetCellItem(position, item, orientation);
+            CallDeferred(GridMap.MethodName.SetCellItem, position, item, orientation);
         else
-            SubGrid.SetCellItem(position, item, orientation);
+            SubGrid.CallDeferred(GridMap.MethodName.SetCellItem, position, item, orientation);
     }
 
     public void ClearCellItem(Vector3I position)
     {
-        SetCellItem(position, -1);
-        SubGrid.SetCellItem(position, -1);
+        CallDeferred(GridMap.MethodName.SetCellItem, position, -1);
+        SubGrid.CallDeferred(GridMap.MethodName.SetCellItem, position, -1);
     }
     public void ClearSubGrid()
     {
-        SubGrid.Clear();
+        SubGrid.CallDeferred(GridMap.MethodName.Clear);
     }
 }

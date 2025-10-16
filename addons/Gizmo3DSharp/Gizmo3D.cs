@@ -530,6 +530,14 @@ public partial class Gizmo3D : Node3D
 
     void InitGizmoInstance()
     {
+        // playinful: Replaces init instance to only draw one axis
+        /*RotateGizmoInstance[1] = InstanceCreate();
+        InstanceSetBase(RotateGizmoInstance[1], RotateGizmo[1].GetRid());
+        InstanceSetScenario(RotateGizmoInstance[1], GetWorld3D().Scenario);
+        InstanceGeometrySetCastShadowsSetting(RotateGizmoInstance[1], ShadowCastingSetting.Off);
+        InstanceSetLayerMask(RotateGizmoInstance[1], Layers);
+        InstanceGeometrySetFlag(RotateGizmoInstance[1], InstanceFlags.IgnoreOcclusionCulling, true);
+        InstanceGeometrySetFlag(RotateGizmoInstance[1], InstanceFlags.UseBakedLight, false);*/
         for (int i = 0; i < 3; i++)
         {
             MoveGizmoInstance[i] = InstanceCreate();
@@ -993,7 +1001,7 @@ void fragment() {
             InstanceSetTransform(MovePlaneGizmoInstance[i], axisAngle);
             InstanceSetVisible(MovePlaneGizmoInstance[i], (Mode & ToolMode.Move) == ToolMode.Move);
             InstanceSetTransform(RotateGizmoInstance[i], axisAngle);
-            InstanceSetVisible(RotateGizmoInstance[i], (Mode & ToolMode.Rotate) == ToolMode.Rotate);
+            InstanceSetVisible(RotateGizmoInstance[i], (Mode & ToolMode.Rotate) == ToolMode.Rotate && i == 1);
             InstanceSetTransform(ScaleGizmoInstance[i], axisAngle);
             InstanceSetVisible(ScaleGizmoInstance[i], (Mode & ToolMode.Scale) == ToolMode.Scale);
             InstanceSetTransform(ScalePlaneGizmoInstance[i], axisAngle);
@@ -1308,7 +1316,8 @@ void fragment() {
                 }
             }
 
-            if (colAxis != -1)
+            //if (colAxis != -1)
+            if (colAxis == 1) // playinful: Only do rotation along axis 1
             {
                 if (highlightOnly)
                 {

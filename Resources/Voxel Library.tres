@@ -8200,6 +8200,9 @@ tile_front = Vector2i(31, 17)
 
 [sub_resource type="VoxelBlockyModelCube" id="VoxelBlockyModelCube_6glof"]
 resource_name = "Water"
+color = Color(1, 1, 1, 0.501961)
+transparency_index = 1
+lod_skirts_enabled = false
 atlas_size_in_tiles = Vector2i(32, 32)
 tile_left = Vector2i(0, 23)
 tile_right = Vector2i(0, 23)
@@ -8210,6 +8213,9 @@ tile_front = Vector2i(0, 23)
 
 [sub_resource type="VoxelBlockyModelCube" id="VoxelBlockyModelCube_ds648"]
 resource_name = "Seawater"
+color = Color(1, 1, 1, 0.501961)
+transparency_index = 1
+lod_skirts_enabled = false
 atlas_size_in_tiles = Vector2i(32, 32)
 tile_left = Vector2i(1, 23)
 tile_right = Vector2i(1, 23)
@@ -8220,6 +8226,9 @@ tile_front = Vector2i(1, 23)
 
 [sub_resource type="VoxelBlockyModelCube" id="VoxelBlockyModelCube_50p34"]
 resource_name = "Muddy Water"
+color = Color(1, 1, 1, 0.501961)
+transparency_index = 1
+lod_skirts_enabled = false
 atlas_size_in_tiles = Vector2i(32, 32)
 tile_left = Vector2i(2, 23)
 tile_right = Vector2i(2, 23)
@@ -8230,6 +8239,9 @@ tile_front = Vector2i(2, 23)
 
 [sub_resource type="VoxelBlockyModelCube" id="VoxelBlockyModelCube_p7ypk"]
 resource_name = "Deadly Water"
+color = Color(1, 1, 1, 0.501961)
+transparency_index = 1
+lod_skirts_enabled = false
 atlas_size_in_tiles = Vector2i(32, 32)
 tile_left = Vector2i(3, 23)
 tile_right = Vector2i(3, 23)
@@ -8240,6 +8252,9 @@ tile_front = Vector2i(3, 23)
 
 [sub_resource type="VoxelBlockyModelCube" id="VoxelBlockyModelCube_24j8k"]
 resource_name = "Hot Water"
+color = Color(1, 1, 1, 0.501961)
+transparency_index = 1
+lod_skirts_enabled = false
 atlas_size_in_tiles = Vector2i(32, 32)
 tile_left = Vector2i(4, 23)
 tile_right = Vector2i(4, 23)
@@ -8250,6 +8265,9 @@ tile_front = Vector2i(4, 23)
 
 [sub_resource type="VoxelBlockyModelCube" id="VoxelBlockyModelCube_uyge0"]
 resource_name = "Poison"
+color = Color(1, 1, 1, 0.501961)
+transparency_index = 1
+lod_skirts_enabled = false
 atlas_size_in_tiles = Vector2i(32, 32)
 tile_left = Vector2i(5, 23)
 tile_right = Vector2i(5, 23)
@@ -8260,6 +8278,9 @@ tile_front = Vector2i(5, 23)
 
 [sub_resource type="VoxelBlockyModelCube" id="VoxelBlockyModelCube_bp1jm"]
 resource_name = "Plasma"
+color = Color(1, 1, 1, 0.501961)
+transparency_index = 1
+lod_skirts_enabled = false
 atlas_size_in_tiles = Vector2i(32, 32)
 tile_left = Vector2i(6, 23)
 tile_right = Vector2i(6, 23)
@@ -8270,6 +8291,9 @@ tile_front = Vector2i(6, 23)
 
 [sub_resource type="VoxelBlockyModelCube" id="VoxelBlockyModelCube_eoyei"]
 resource_name = "Lava"
+color = Color(1, 1, 1, 0.501961)
+transparency_index = 1
+lod_skirts_enabled = false
 atlas_size_in_tiles = Vector2i(32, 32)
 tile_left = Vector2i(7, 23)
 tile_right = Vector2i(7, 23)
