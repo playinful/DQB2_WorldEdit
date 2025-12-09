@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://chekdrqr80s3n"]
+[gd_scene load_steps=34 format=3 uid="uid://chekdrqr80s3n"]
 
 [ext_resource type="Texture2D" uid="uid://b5wcgwa3elvlc" path="res://Graphics/blocks.png" id="1_djn2n"]
 [ext_resource type="VoxelBlockyLibrary" uid="uid://ds0n7xj6hqhdx" path="res://Resources/Voxel Library.tres" id="1_ec1xm"]
@@ -61,6 +61,9 @@ texture_filter = 0
 vertex_color_use_as_albedo = true
 albedo_color = Color(0.501961, 0, 0, 1)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bgrrh"]
+albedo_color = Color(0.905882, 0.682353, 0.0784314, 1)
+
 [sub_resource type="Animation" id="Animation_33hxh"]
 length = 0.001
 tracks/0/type = "value"
@@ -96,45 +99,6 @@ tracks/0/keys = {
 _data = {
 &"RESET": SubResource("Animation_33hxh"),
 &"fadeout": SubResource("Animation_o1mxb")
-}
-
-[sub_resource type="Animation" id="Animation_phghj"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("BookAnim:visible")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Loading:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("BookAnim:frame")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
 }
 
 [sub_resource type="Animation" id="Animation_qm6sn"]
@@ -178,13 +142,52 @@ tracks/2/keys = {
 "values": [0, 5]
 }
 
+[sub_resource type="Animation" id="Animation_phghj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BookAnim:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Loading:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BookAnim:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_3qk7n"]
 _data = {
 &"Loading": SubResource("Animation_qm6sn"),
 &"RESET": SubResource("Animation_phghj")
 }
 
-[node name="WorldEditor" type="Node3D" node_paths=PackedStringArray("_VoxelTerrain", "_VoxelTerrain_PropShells", "_ResidentLayer", "_PropGrid", "_PlayerDisplay", "_CameraController", "_Gizmo", "_DebugInfoContainer", "_FPSLabel", "_PointedVoxelLabel", "_StatusLabel", "_CommandParser", "_LoadingAnimationPlayer")]
+[node name="WorldEditor" type="Node3D" node_paths=PackedStringArray("_VoxelTerrain", "_VoxelTerrain_PropShells", "_ResidentLayer", "_PropGrid", "_PlayerDisplay", "_CameraController", "_Gizmo", "_SelectionBox", "_DebugInfoContainer", "_FPSLabel", "_PointedVoxelLabel", "_StatusLabel", "_CommandParser", "_LoadingAnimationPlayer")]
 script = ExtResource("1_kqags")
 _VoxelTerrain = NodePath("VoxelTerrain")
 _VoxelTerrain_PropShells = NodePath("VoxelTerrain_PropShells")
@@ -193,6 +196,7 @@ _PropGrid = NodePath("PropGrid")
 _PlayerDisplay = NodePath("Player")
 _CameraController = NodePath("Camera3D")
 _Gizmo = NodePath("Gizmo3D")
+_SelectionBox = NodePath("SelectionBoxMesh")
 _DebugInfoContainer = NodePath("HUD/DebugInfo")
 _FPSLabel = NodePath("HUD/FPSLabel")
 _PointedVoxelLabel = NodePath("HUD/DebugInfo/PointedVoxelLabel")
@@ -281,6 +285,10 @@ view_distance = 88888
 script = ExtResource("8_wt1c1")
 Mode = 3
 ShowSelectionBox = false
+
+[node name="SelectionBoxMesh" type="MeshInstance3D" parent="."]
+visible = false
+material_override = SubResource("StandardMaterial3D_bgrrh")
 
 [node name="HUD" type="Control" parent="."]
 layout_mode = 3

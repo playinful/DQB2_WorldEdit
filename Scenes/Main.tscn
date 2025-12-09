@@ -214,14 +214,17 @@ item_2/checked = true
 item_2/id = 2
 
 [node name="InventoryButton" type="Button" parent="Toolbar/VBoxContainer/MenuBar_Main"]
+visible = false
 layout_mode = 2
 text = "Inventory"
 
 [node name="PlayerButton" type="Button" parent="Toolbar/VBoxContainer/MenuBar_Main"]
+visible = false
 layout_mode = 2
 text = "Player"
 
 [node name="ResidentsButton" type="Button" parent="Toolbar/VBoxContainer/MenuBar_Main"]
+visible = false
 layout_mode = 2
 text = "Residents"
 
@@ -391,6 +394,7 @@ button_group = ExtResource("4_v1gob")
 icon = ExtResource("10_1p5hy")
 
 [node name="PropChecker" type="Button" parent="Toolbar/VBoxContainer/MenuBar_Tools"]
+visible = false
 layout_mode = 2
 toggle_mode = true
 button_group = ExtResource("4_v1gob")
@@ -403,24 +407,28 @@ button_group = ExtResource("4_v1gob")
 text = "AddProp"
 
 [node name="SelectArea" type="Button" parent="Toolbar/VBoxContainer/MenuBar_Tools"]
+visible = false
 layout_mode = 2
 toggle_mode = true
 button_group = ExtResource("4_v1gob")
 icon = ExtResource("11_346fj")
 
 [node name="Copy" type="Button" parent="Toolbar/VBoxContainer/MenuBar_Tools"]
+visible = false
 layout_mode = 2
 toggle_mode = true
 button_group = ExtResource("4_v1gob")
 icon = ExtResource("12_0sclb")
 
 [node name="Cut" type="Button" parent="Toolbar/VBoxContainer/MenuBar_Tools"]
+visible = false
 layout_mode = 2
 toggle_mode = true
 button_group = ExtResource("4_v1gob")
 icon = ExtResource("13_sxkr1")
 
 [node name="Paste" type="Button" parent="Toolbar/VBoxContainer/MenuBar_Tools"]
+visible = false
 layout_mode = 2
 toggle_mode = true
 button_group = ExtResource("4_v1gob")
@@ -884,6 +892,7 @@ script = ExtResource("19_0sclb")
 
 [node name="ItemSelectorTest" type="Window" parent="."]
 initial_position = 1
+visible = false
 script = ExtResource("20_sxkr1")
 
 [node name="SpinBox" type="SpinBox" parent="ItemSelectorTest"]
@@ -911,6 +920,8 @@ text = "ok"
 [connection signal="pressed" from="Toolbar/VBoxContainer/MenuBar_Main/PlayerButton" to="PlayerEditor" method="show"]
 [connection signal="pressed" from="Toolbar/VBoxContainer/MenuBar_Main/AboutButton" to="Popups/AboutDialog" method="show"]
 [connection signal="item_selected" from="Toolbar/VBoxContainer/MenuBar_Stage/IslandSelectorButton" to="." method="_On_IslandSelectorButton_ItemSelected"]
+[connection signal="value_changed" from="Toolbar/VBoxContainer/MenuBar_Stage/GratitudeBox" to="." method="_On_Gratitude_SpinBox_ValueChanged"]
+[connection signal="value_changed" from="Toolbar/VBoxContainer/MenuBar_Stage/TimeBox" to="." method="_On_Time_SpinBox_ValueChanged"]
 [connection signal="pressed" from="Toolbar/VBoxContainer/MenuBar_Tools/Select" to="Toolbar/VBoxContainer/HSplitContainer/WorldEditorContainer/SubViewport/WorldEditor" method="SetBrushPrimary" binds= [8]]
 [connection signal="pressed" from="Toolbar/VBoxContainer/MenuBar_Tools/Pencil" to="Toolbar/VBoxContainer/HSplitContainer/WorldEditorContainer/SubViewport/WorldEditor" method="SetBrushPrimary" binds= [1]]
 [connection signal="pressed" from="Toolbar/VBoxContainer/MenuBar_Tools/Swap" to="Toolbar/VBoxContainer/HSplitContainer/WorldEditorContainer/SubViewport/WorldEditor" method="SetBrushPrimary" binds= [3]]

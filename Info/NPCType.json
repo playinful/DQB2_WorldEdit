@@ -7687,7 +7687,7 @@
 		"Name": "",
 		"Icon": "fish_goldfish",
 		"Image": "fish_goldfish"
-		"AppearOnRegister": false,
+		,"AppearOnRegister": false,
 		"IsAnimal": true,
 		"IsMonster": false
 	},
@@ -7696,7 +7696,7 @@
 		"Name": "",
 		"Icon": "fish_angelfish",
 		"Image": "fish_angelfish"
-		"AppearOnRegister": false,
+		,"AppearOnRegister": false,
 		"IsAnimal": true,
 		"IsMonster": false
 	},
@@ -7705,7 +7705,7 @@
 		"Name": "",
 		"Icon": "fish_bluebetta",
 		"Image": "fish_bluebetta"
-		"AppearOnRegister": false,
+		,"AppearOnRegister": false,
 		"IsAnimal": true,
 		"IsMonster": false
 	},
@@ -7714,7 +7714,7 @@
 		"Name": "",
 		"Icon": "fish_redbetta",
 		"Image": "fish_redbetta"
-		"AppearOnRegister": false,
+		,"AppearOnRegister": false,
 		"IsAnimal": true,
 		"IsMonster": false
 	},
@@ -7723,7 +7723,7 @@
 		"Name": "",
 		"Icon": "fish_neontetra",
 		"Image": "fish_neontetra"
-		"AppearOnRegister": false,
+		,"AppearOnRegister": false,
 		"IsAnimal": true,
 		"IsMonster": false
 	},
@@ -7732,7 +7732,7 @@
 		"Name": "",
 		"Icon": "fish_piranha",
 		"Image": "fish_piranha"
-		"AppearOnRegister": false,
+		,"AppearOnRegister": false,
 		"IsAnimal": true,
 		"IsMonster": false
 	},
@@ -7741,7 +7741,7 @@
 		"Name": "",
 		"Icon": "fish_lemontail",
 		"Image": "fish_lemontail"
-		"AppearOnRegister": false,
+		,"AppearOnRegister": false,
 		"IsAnimal": true,
 		"IsMonster": false
 	},
@@ -7750,7 +7750,7 @@
 		"Name": "",
 		"Icon": "fish_rainbowtrout",
 		"Image": "fish_rainbowtrout"
-		"AppearOnRegister": false,
+		,"AppearOnRegister": false,
 		"IsAnimal": true,
 		"IsMonster": false
 	},
@@ -7759,7 +7759,7 @@
 		"Name": "",
 		"Icon": "fish_bass",
 		"Image": "fish_bass"
-		"AppearOnRegister": false,
+		,"AppearOnRegister": false,
 		"IsAnimal": true,
 		"IsMonster": false
 	},
@@ -7768,7 +7768,7 @@
 		"Name": "",
 		"Icon": "fish_carp",
 		"Image": "fish_carp"
-		"AppearOnRegister": false,
+		,"AppearOnRegister": false,
 		"IsAnimal": true,
 		"IsMonster": false
 	},
@@ -7777,7 +7777,7 @@
 		"Name": "",
 		"Icon": "fish_colourfulcarp",
 		"Image": "fish_colourfulcarp"
-		"AppearOnRegister": false,
+		,"AppearOnRegister": false,
 		"IsAnimal": true,
 		"IsMonster": false
 	},
@@ -7786,7 +7786,7 @@
 		"Name": "",
 		"Icon": "fish_salmon",
 		"Image": "fish_salmon"
-		"AppearOnRegister": false,
+		,"AppearOnRegister": false,
 		"IsAnimal": true,
 		"IsMonster": false
 	},
@@ -7795,7 +7795,7 @@
 		"Name": "",
 		"Icon": "fish_laketrout",
 		"Image": "fish_laketrout"
-		"AppearOnRegister": false,
+		,"AppearOnRegister": false,
 		"IsAnimal": true,
 		"IsMonster": false
 	},
@@ -7804,7 +7804,7 @@
 		"Name": "",
 		"Icon": "fish_stripysalmon",
 		"Image": "fish_stripysalmon"
-		"AppearOnRegister": false,
+		,"AppearOnRegister": false,
 		"IsAnimal": true,
 		"IsMonster": false
 	},
@@ -7813,7 +7813,7 @@
 		"Name": "",
 		"Icon": "fish_kingsalmon",
 		"Image": "fish_kingsalmon"
-		"AppearOnRegister": false,
+		,"AppearOnRegister": false,
 		"IsAnimal": true,
 		"IsMonster": false
 	},
@@ -7822,7 +7822,7 @@
 		"Name": "",
 		"Icon": "fish_arowana",
 		"Image": "fish_arowana"
-		"AppearOnRegister": false,
+		,"AppearOnRegister": false,
 		"IsAnimal": true,
 		"IsMonster": false
 	},
@@ -7831,7 +7831,7 @@
 		"Name": "",
 		"Icon": "fish_clownfish",
 		"Image": "fish_clownfish"
-		"AppearOnRegister": false,
+		,"AppearOnRegister": false,
 		"IsAnimal": true,
 		"IsMonster": false
 	},
@@ -7840,7 +7840,7 @@
 		"Name": "",
 		"Icon": "fish_pinkqueen",
 		"Image": "fish_pinkqueen"
-		"AppearOnRegister": false,
+		,"AppearOnRegister": false,
 		"IsAnimal": true,
 		"IsMonster": false
 	},
@@ -7849,7 +7849,7 @@
 		"Name": "",
 		"Icon": "fish_bluequeen",
 		"Image": "fish_bluequeen"
-		"AppearOnRegister": false,
+		,"AppearOnRegister": false,
 		"IsAnimal": true,
 		"IsMonster": false
 	},
@@ -7858,7 +7858,7 @@
 		"Name": "",
 		"Icon": "fish_bluetang",
 		"Image": "fish_bluetang"
-		"AppearOnRegister": false,
+		,"AppearOnRegister": false,
 		"IsAnimal": true,
 		"IsMonster": false
 	},
@@ -7867,7 +7867,7 @@
 		"Name": "",
 		"Icon": "fish_stripedbeakfish",
 		"Image": "fish_stripedbeakfish"
-		"AppearOnRegister": false,
+		,"AppearOnRegister": false,
 		"IsAnimal": true,
 		"IsMonster": false
 	},
@@ -7876,7 +7876,7 @@
 		"Name": "",
 		"Icon": "fish_redsnapper",
 		"Image": "fish_redsnapper"
-		"AppearOnRegister": false,
+		,"AppearOnRegister": false,
 		"IsAnimal": true,
 		"IsMonster": false
 	},
@@ -7885,7 +7885,7 @@
 		"Name": "",
 		"Icon": "fish_mackerel",
 		"Image": "fish_mackerel"
-		"AppearOnRegister": false,
+		,"AppearOnRegister": false,
 		"IsAnimal": true,
 		"IsMonster": false
 	},
@@ -7894,7 +7894,7 @@
 		"Name": "",
 		"Icon": "fish_tuna",
 		"Image": "fish_tuna"
-		"AppearOnRegister": false,
+		,"AppearOnRegister": false,
 		"IsAnimal": true,
 		"IsMonster": false
 	},
@@ -7903,7 +7903,7 @@
 		"Name": "",
 		"Icon": "fish_rockfish",
 		"Image": "fish_rockfish"
-		"AppearOnRegister": false,
+		,"AppearOnRegister": false,
 		"IsAnimal": true,
 		"IsMonster": false
 	},
@@ -7912,7 +7912,7 @@
 		"Name": "",
 		"Icon": "fish_flounder",
 		"Image": "fish_flounder"
-		"AppearOnRegister": false,
+		,"AppearOnRegister": false,
 		"IsAnimal": true,
 		"IsMonster": false
 	},
@@ -7921,7 +7921,7 @@
 		"Name": "",
 		"Icon": "fish_halibut",
 		"Image": "fish_halibut"
-		"AppearOnRegister": false,
+		,"AppearOnRegister": false,
 		"IsAnimal": true,
 		"IsMonster": false
 	},
@@ -7930,7 +7930,7 @@
 		"Name": "",
 		"Icon": "fish_blowfish",
 		"Image": "fish_blowfish"
-		"AppearOnRegister": false,
+		,"AppearOnRegister": false,
 		"IsAnimal": true,
 		"IsMonster": false
 	},
@@ -7939,7 +7939,7 @@
 		"Name": "",
 		"Icon": "fish_seahorse",
 		"Image": "fish_seahorse"
-		"AppearOnRegister": false,
+		,"AppearOnRegister": false,
 		"IsAnimal": true,
 		"IsMonster": false
 	},
@@ -7948,7 +7948,7 @@
 		"Name": "",
 		"Icon": "fish_squid",
 		"Image": "fish_squid"
-		"AppearOnRegister": false,
+		,"AppearOnRegister": false,
 		"IsAnimal": true,
 		"IsMonster": false
 	},
@@ -7957,7 +7957,7 @@
 		"Name": "",
 		"Icon": "fish_jellyfish",
 		"Image": "fish_jellyfish"
-		"AppearOnRegister": false,
+		,"AppearOnRegister": false,
 		"IsAnimal": true,
 		"IsMonster": false
 	},
@@ -7966,7 +7966,7 @@
 		"Name": "",
 		"Icon": "fish_sunfish",
 		"Image": "fish_sunfish"
-		"AppearOnRegister": false,
+		,"AppearOnRegister": false,
 		"IsAnimal": true,
 		"IsMonster": false
 	},
@@ -7975,7 +7975,7 @@
 		"Name": "",
 		"Icon": "fish_moonfish",
 		"Image": "fish_moonfish"
-		"AppearOnRegister": false,
+		,"AppearOnRegister": false,
 		"IsAnimal": true,
 		"IsMonster": false
 	},
@@ -7984,7 +7984,7 @@
 		"Name": "",
 		"Icon": "fish_humpheadwrasse",
 		"Image": "fish_humpheadwrasse"
-		"AppearOnRegister": false,
+		,"AppearOnRegister": false,
 		"IsAnimal": true,
 		"IsMonster": false
 	},
@@ -7993,7 +7993,7 @@
 		"Name": "",
 		"Icon": "fish_anglerfish",
 		"Image": "fish_anglerfish"
-		"AppearOnRegister": false,
+		,"AppearOnRegister": false,
 		"IsAnimal": true,
 		"IsMonster": false
 	},
@@ -8002,7 +8002,7 @@
 		"Name": "",
 		"Icon": "fish_marlin",
 		"Image": "fish_marlin"
-		"AppearOnRegister": false,
+		,"AppearOnRegister": false,
 		"IsAnimal": true,
 		"IsMonster": false
 	},
@@ -8011,7 +8011,7 @@
 		"Name": "",
 		"Icon": "fish_whaleshark",
 		"Image": "fish_whaleshark"
-		"AppearOnRegister": false,
+		,"AppearOnRegister": false,
 		"IsAnimal": true,
 		"IsMonster": false
 	},
@@ -8020,7 +8020,7 @@
 		"Name": "",
 		"Icon": "fish_mantaray",
 		"Image": "fish_mantaray"
-		"AppearOnRegister": false,
+		,"AppearOnRegister": false,
 		"IsAnimal": true,
 		"IsMonster": false
 	},
@@ -8029,7 +8029,7 @@
 		"Name": "",
 		"Icon": "fish_nautilus",
 		"Image": "fish_nautilus"
-		"AppearOnRegister": false,
+		,"AppearOnRegister": false,
 		"IsAnimal": true,
 		"IsMonster": false
 	},
@@ -8038,7 +8038,7 @@
 		"Name": "",
 		"Icon": "fish_coelacanth",
 		"Image": "fish_coelacanth"
-		"AppearOnRegister": false,
+		,"AppearOnRegister": false,
 		"IsAnimal": true,
 		"IsMonster": false
 	}

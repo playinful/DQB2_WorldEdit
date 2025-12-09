@@ -4,6 +4,7 @@ using Gizmo3DPlugin;
 using Godot;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Reflection.Metadata;
@@ -28,6 +29,8 @@ namespace EyeOfRubiss.Scenes
 		[Export] private CameraController _CameraController;
 
 		[Export] private Gizmo3D _Gizmo;
+
+		[Export] private MeshInstance3D _SelectionBox;
 
 		[Export] private CanvasItem _DebugInfoContainer;
 		[Export] private FPSLabel _FPSLabel;
@@ -65,15 +68,16 @@ namespace EyeOfRubiss.Scenes
 		{
 			_VoxelTool = _VoxelTerrain.GetVoxelTool();
 			_VoxelTool_PropShells = _VoxelTerrain_PropShells.GetVoxelTool();
+			CreateSelectionBox();
 		}
 
 		public override void _Process(double delta)
 		{
-
+			
 		}
 		public override void _PhysicsProcess(double delta)
 		{
-			UpdatePointedVoxelLabel();
+			UpdatePointedVoxel();
 		}
 
 		public VoxelRaycastResult GetPointedVoxel()
@@ -109,11 +113,8 @@ namespace EyeOfRubiss.Scenes
 			Node collider = (Node) result["collider"];
 			return collider.GetParent().GetParent<Node3D>();
 		}
-		private void UpdatePointedVoxelLabel()
+		private void UpdatePointedVoxel()
 		{
-			if (_PointedVoxelLabel is null)
-				return;
-
 			VoxelRaycastResult result = GetPointedVoxel();
 			if (result is not null)
 			{
@@ -129,10 +130,12 @@ namespace EyeOfRubiss.Scenes
 					//$"Chunk: {indexPos.X}, Layer: {indexPos.Y}, Tile: {indexPos.Z}\n" +
 					$"Placed by Builder: {block.PlayerPlaced}" +
 					$"\nShape: {block.Chisel}";
+				ShowSelectionBox(result.Position + _VoxelTerrain.Position);
 			}
 			else
 			{
 				_PointedVoxelLabel.Text = "Targeted block: None";
+				HideSelectionBox();
 			}
 		}
 
@@ -369,6 +372,14 @@ namespace EyeOfRubiss.Scenes
 		{
 			_CameraController.Position = target;
 		}
+		
+		public byte GetFacingDirection()
+        {
+			int rotation = (int)Math.Round(_CameraController.Rotation.Y / (Math.PI / 2)) % 4;
+			if (rotation < 0)
+				rotation += 4;
+			return (byte)rotation;
+        }
 		#endregion
 
 		#region Stage editing
@@ -449,16 +460,28 @@ namespace EyeOfRubiss.Scenes
 			if (_StageData is null || !_StageData.IsLoaded)
 				return;
 
-			// TODO replace with genuine prop shell
-			SetBlock(position, 2047, StageData.BlockInstance.ChiselType.FullBlock, playerPlaced: false);
-			_StageData.AddProp(position, propId);
-
 			PropInfo propInfo = PropInfo.Get(propId);
-			_PropGrid.SetCellItemDelegated(position, propInfo.MeshID ?? -1);
+			
+			StageData.Prop prop = _StageData.AddProp(position, propId, GetFacingDirection()); // TODO enum for fixed rotations
+			
+			(Vector3I start, Vector3I end) = prop.GetBounds();
+			for (int x = start.X; x <= end.X; x++)
+            {
+                for (int y = start.Y; y <= end.Y; y++)
+                {
+                    for (int z = start.Z; z <= end.Z; z++)
+                    {
+                        ChangePropShell(new Vector3I(x, y, z), propInfo.PropShell);
+                    }
+                }
+            }
+
+			_PropGrid.SetCellItemDelegated(position, propInfo.MeshID ?? -1, prop.GetGridMapRotation());
 		}
 		public void DeleteProp(Vector3I position)
 		{
-			foreach (StageData.Prop prop in _StageData.GetOverlappingProps(position))
+			List<StageData.Prop> props = _StageData.GetOverlappingProps(position).ToList();
+			foreach (StageData.Prop prop in props)
 			{
 				(Vector3I start, Vector3I end) = prop.GetBounds();
 				_PropGrid.ClearCellItem(prop.GetPosition());
@@ -473,7 +496,8 @@ namespace EyeOfRubiss.Scenes
 							Vector3I otherPosition = new(x, y, z);
 							if (_StageData.GetOverlappingProp(otherPosition) is StageData.Prop otherProp)
 							{
-								ChangePropShell(otherPosition, prop.GetInfo().PropShell);
+								GD.Print(otherProp);
+								ChangePropShell(otherPosition, otherProp.GetInfo().PropShell);
 							}
 							else
 							{
@@ -487,11 +511,9 @@ namespace EyeOfRubiss.Scenes
 
 		public void ChangePropShell(Vector3I position, PropShell propShell)
 		{
-			// TEST, TODO
-			if (propShell == PropShell.None)
-			{
-				SetBlock(position, Constants.BLOCK_AIR, destroyProps: false);
-			}
+			// TEST
+			BlockInfo blockInfo = _StageData.GetBlockAtPosition(position).GetInfo();
+			SetBlock(position, FluidConverter.Convert(blockInfo.FluidType, blockInfo.FluidLevel, propShell));
 		}
 
 		public void Builderize()
@@ -531,6 +553,61 @@ namespace EyeOfRubiss.Scenes
 			_StageData.MakeSuperflat(layers);
 			Reload();// TODO
 		}
+		
+		public void CreateSelectionBox()
+        {
+        	SurfaceTool st = new();
+			st.Begin(Mesh.PrimitiveType.Lines);
+
+			st.AddVertex(new Vector3(1,0,0));
+			st.AddVertex(new Vector3(0,0,0));
+
+			st.AddVertex(new Vector3(1,0,1));
+			st.AddVertex(new Vector3(1,0,0));
+
+			st.AddVertex(new Vector3(0,0,1));
+			st.AddVertex(new Vector3(1,0,1));
+
+			st.AddVertex(new Vector3(0,0,0));
+			st.AddVertex(new Vector3(0,0,1));
+
+			st.AddVertex(new Vector3(0,1,0));
+			st.AddVertex(new Vector3(1,1,0));
+
+			st.AddVertex(new Vector3(1,1,0));
+			st.AddVertex(new Vector3(1,1,1));
+
+			st.AddVertex(new Vector3(1,1,1));
+			st.AddVertex(new Vector3(0,1,1));
+
+			st.AddVertex(new Vector3(0,1,1));
+			st.AddVertex(new Vector3(0,1,0));
+
+			st.AddVertex(new Vector3(0,0,1));
+			st.AddVertex(new Vector3(0,1,1));
+
+			st.AddVertex(new Vector3(0,0,0));
+			st.AddVertex(new Vector3(0,1,0));
+
+			st.AddVertex(new Vector3(1,0,0));
+			st.AddVertex(new Vector3(1,1,0));
+
+			st.AddVertex(new Vector3(1,0,1));
+			st.AddVertex(new Vector3(1,1,1));
+
+			ArrayMesh mesh = st.Commit();
+			_SelectionBox.Mesh = mesh;
+        }
+		public void ShowSelectionBox(Vector3 position)
+        {
+            _SelectionBox.Show();
+			_SelectionBox.Position = position;
+			_SelectionBox.Scale = Vector3.One * 1.01f;
+        }
+		public void HideSelectionBox()
+        {
+            _SelectionBox.Hide();
+        }
 		#endregion
 
 		#region Brushes

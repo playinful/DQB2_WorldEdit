@@ -57,11 +57,16 @@ namespace EyeOfRubiss
                 parent.RemoveChild(node);
             }
         }
+        // This code doesn't work for binds with extra arguments, But I don't think I need to use any of those so it's probably fine
         public static void DisconnectAll(this GodotObject @object, StringName signal)
         {
             foreach (Godot.Collections.Dictionary dic in @object.GetSignalConnectionList(signal))
 			{
-				@object.Disconnect(signal, (Callable)dic["callable"]);
+                if (dic["callable"].As<Callable>() is Callable callable)
+                {
+                    if (@object.IsConnected(signal, callable))
+                        @object.Disconnect(signal, callable);
+                }
 			}
         }
     }

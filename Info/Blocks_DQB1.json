@@ -1,0 +1,2142 @@
+[
+	{
+		"ID": 0,
+		"JLabel": "",
+		"Name": "air",
+		"NameJP": "空気",
+		"ImageID": 1927,
+		"VoxelID": 0,
+		"Fanciness": 0,
+		"SortIndex": 0
+	},
+	{
+		"ID": 1,
+		"JLabel": "絶対岩盤",
+		"Name": "bedrock",
+		"NameJP": "岩盤",
+		"ImageID": 80,
+		"VoxelID": 8,
+		"Fanciness": 0,
+		"SortIndex": 9999
+	},
+	{
+		"ID": 2,
+		"JLabel": "土",
+		"Name": "earth",
+		"NameJP": "土",
+		"ImageID": 2,
+		"VoxelID": 10,
+		"Fanciness": 0,
+		"SortIndex": 10000
+	},
+	{
+		"ID": 3,
+		"JLabel": "土上面草",
+		"Name": "grassy earth",
+		"NameJP": "草原の土",
+		"ImageID": 3,
+		"VoxelID": 11,
+		"Fanciness": 0,
+		"SortIndex": 60000
+	},
+	{
+		"ID": 4,
+		"JLabel": "土上面濃草",
+		"Name": "limegrassy earth",
+		"NameJP": "草原の土",
+		"ImageID": 4,
+		"VoxelID": 12,
+		"Fanciness": 0,
+		"SortIndex": 60010
+	},
+	{
+		"ID": 5,
+		"JLabel": "土上面畑",
+		"Name": "tilled soil",
+		"NameJP": "畑",
+		"ImageID": 5,
+		"VoxelID": 13,
+		"Fanciness": 0,
+		"SortIndex": 60020
+	},
+	{
+		"ID": 6,
+		"JLabel": "土アクセント砂利",
+		"Name": "clay",
+		"NameJP": "粘土",
+		"ImageID": 6,
+		"VoxelID": 14,
+		"Fanciness": 0,
+		"SortIndex": 10010
+	},
+	{
+		"ID": 7,
+		"JLabel": "土アクセント植物",
+		"Name": "mossy earth",
+		"NameJP": "苔むした土",
+		"ImageID": 7,
+		"VoxelID": 15,
+		"Fanciness": 0,
+		"SortIndex": 10020
+	},
+	{
+		"ID": 8,
+		"JLabel": "岩",
+		"Name": "chalk",
+		"NameJP": "白い岩",
+		"ImageID": 8,
+		"VoxelID": 16,
+		"Fanciness": 0,
+		"SortIndex": 10030
+	},
+	{
+		"ID": 9,
+		"JLabel": "岩アクセント砂利",
+		"Name": "pebblestone",
+		"NameJP": "つぶつぶ岩",
+		"ImageID": 9,
+		"VoxelID": 17,
+		"Fanciness": 0,
+		"SortIndex": 10040
+	},
+	{
+		"ID": 10,
+		"JLabel": "固い岩",
+		"Name": "obsidian",
+		"NameJP": "黒い岩",
+		"ImageID": 10,
+		"VoxelID": 18,
+		"Fanciness": 0,
+		"SortIndex": 10050
+	},
+	{
+		"ID": 11,
+		"JLabel": "砂",
+		"Name": "sand",
+		"NameJP": "砂",
+		"ImageID": 11,
+		"VoxelID": 19,
+		"Fanciness": 0,
+		"SortIndex": 10060
+	},
+	{
+		"ID": 12,
+		"JLabel": "砂岩",
+		"Name": "sandstone",
+		"NameJP": "マーブル岩",
+		"ImageID": 13,
+		"VoxelID": 20,
+		"Fanciness": 0,
+		"SortIndex": 10070
+	},
+	{
+		"ID": 13,
+		"JLabel": "砂岩上面砂",
+		"Name": "sandy sandstone",
+		"NameJP": "砂マーブル岩",
+		"ImageID": 12,
+		"VoxelID": 21,
+		"Fanciness": 0,
+		"SortIndex": 10080
+	},
+	{
+		"ID": 14,
+		"JLabel": "鮮血岩",
+		"Name": "bloodstone",
+		"NameJP": "血色岩",
+		"ImageID": 14,
+		"VoxelID": 22,
+		"Fanciness": 0,
+		"SortIndex": 10090
+	},
+	{
+		"ID": 15,
+		"JLabel": "灰骨岩",
+		"Name": "ash",
+		"NameJP": "灰岩",
+		"ImageID": 15,
+		"VoxelID": 23,
+		"Fanciness": 0,
+		"SortIndex": 10100
+	},
+	{
+		"ID": 16,
+		"JLabel": "毒沼",
+		"Name": "swamp",
+		"NameJP": "毒沼",
+		"ImageID": 16,
+		"VoxelID": 587,
+		"Fanciness": 0,
+		"SortIndex": 60030
+	},
+	{
+		"ID": 17,
+		"JLabel": "毒沼土",
+		"Name": "poisonous peat",
+		"NameJP": "毒沼の土",
+		"ImageID": 17,
+		"VoxelID": 25,
+		"Fanciness": 0,
+		"SortIndex": 10110
+	},
+	{
+		"ID": 18,
+		"JLabel": "雪板",
+		"Name": "powder snow",
+		"NameJP": "雪板",
+		"ImageID": 18,
+		"VoxelID": 26,
+		"Fanciness": 0,
+		"SortIndex": 60040
+	},
+	{
+		"ID": 19,
+		"JLabel": "雪",
+		"Name": "snow",
+		"NameJP": "雪",
+		"ImageID": 19,
+		"VoxelID": 27,
+		"Fanciness": 0,
+		"SortIndex": 10120
+	},
+	{
+		"ID": 20,
+		"JLabel": "氷",
+		"Name": "ice",
+		"NameJP": "氷",
+		"ImageID": 20,
+		"VoxelID": 28,
+		"Fanciness": 0,
+		"SortIndex": 10130
+	},
+	{
+		"ID": 21,
+		"JLabel": "洞窟岩",
+		"Name": "clodstone",
+		"NameJP": "土岩",
+		"ImageID": 21,
+		"VoxelID": 29,
+		"Fanciness": 0,
+		"SortIndex": 10140
+	},
+	{
+		"ID": 22,
+		"JLabel": "洞窟岩ひび",
+		"Name": "crumbly clodstone",
+		"NameJP": "ひびわれ土岩",
+		"ImageID": 22,
+		"VoxelID": 30,
+		"Fanciness": 0,
+		"SortIndex": 10150
+	},
+	{
+		"ID": 23,
+		"JLabel": "黒曜岩",
+		"Name": "basalt",
+		"NameJP": "黒よう岩",
+		"ImageID": 23,
+		"VoxelID": 31,
+		"Fanciness": 0,
+		"SortIndex": 10160
+	},
+	{
+		"ID": 24,
+		"JLabel": "マグマ",
+		"Name": "magma",
+		"NameJP": "溶岩",
+		"ImageID": 24,
+		"VoxelID": 589,
+		"Fanciness": 0,
+		"SortIndex": 60050
+	},
+	{
+		"ID": 25,
+		"JLabel": "凝固マグマ",
+		"Name": "lava",
+		"NameJP": "マグマ岩",
+		"ImageID": 25,
+		"VoxelID": 33,
+		"Fanciness": 0,
+		"SortIndex": 10170
+	},
+	{
+		"ID": 26,
+		"JLabel": "人工洞窟壁",
+		"Name": "vault wall",
+		"NameJP": "遺跡のカベ",
+		"ImageID": 26,
+		"VoxelID": 34,
+		"Fanciness": 10,
+		"SortIndex": 10180
+	},
+	{
+		"ID": 27,
+		"JLabel": "人工洞窟壁草付",
+		"Name": "viny vault wall",
+		"NameJP": "遺跡の草カベ",
+		"ImageID": 27,
+		"VoxelID": 35,
+		"Fanciness": 10,
+		"SortIndex": 10190
+	},
+	{
+		"ID": 28,
+		"JLabel": "人工洞窟壁ひび",
+		"Name": "cracked vault wall",
+		"NameJP": "遺跡のひびカベ",
+		"ImageID": 28,
+		"VoxelID": 36,
+		"Fanciness": 10,
+		"SortIndex": 10200
+	},
+	{
+		"ID": 29,
+		"JLabel": "レンガ",
+		"Name": "brick wall",
+		"NameJP": "レンガ",
+		"ImageID": 29,
+		"VoxelID": 37,
+		"Fanciness": 5,
+		"SortIndex": 10220
+	},
+	{
+		"ID": 30,
+		"JLabel": "街壁下",
+		"Name": "timbered foundation",
+		"NameJP": "おしゃれカベ・地",
+		"ImageID": 30,
+		"VoxelID": 38,
+		"Fanciness": 10,
+		"SortIndex": 10400
+	},
+	{
+		"ID": 31,
+		"JLabel": "街壁中",
+		"Name": "timbered wall",
+		"NameJP": "おしゃれカベ",
+		"ImageID": 31,
+		"VoxelID": 39,
+		"Fanciness": 10,
+		"SortIndex": 10410
+	},
+	{
+		"ID": 32,
+		"JLabel": "街壁上",
+		"Name": "timbered capital",
+		"NameJP": "おしゃれカベ・天",
+		"ImageID": 32,
+		"VoxelID": 40,
+		"Fanciness": 10,
+		"SortIndex": 10420
+	},
+	{
+		"ID": 33,
+		"JLabel": "街柱下",
+		"Name": "hardwood pedestal",
+		"NameJP": "おしゃれ柱・地",
+		"ImageID": 33,
+		"VoxelID": 41,
+		"Fanciness": 10,
+		"SortIndex": 10430
+	},
+	{
+		"ID": 34,
+		"JLabel": "街柱中",
+		"Name": "hardwood column",
+		"NameJP": "おしゃれ柱",
+		"ImageID": 34,
+		"VoxelID": 42,
+		"Fanciness": 10,
+		"SortIndex": 10440
+	},
+	{
+		"ID": 35,
+		"JLabel": "街柱上",
+		"Name": "hardwood capital",
+		"NameJP": "おしゃれ柱・天",
+		"ImageID": 35,
+		"VoxelID": 43,
+		"Fanciness": 10,
+		"SortIndex": 10450
+	},
+	{
+		"ID": 36,
+		"JLabel": "石垣下",
+		"Name": "stone foundation",
+		"NameJP": "石垣・地",
+		"ImageID": 36,
+		"VoxelID": 44,
+		"Fanciness": 10,
+		"SortIndex": 10230
+	},
+	{
+		"ID": 37,
+		"JLabel": "石垣中",
+		"Name": "stone wall",
+		"NameJP": "石垣",
+		"ImageID": 37,
+		"VoxelID": 45,
+		"Fanciness": 10,
+		"SortIndex": 10240
+	},
+	{
+		"ID": 38,
+		"JLabel": "石垣上",
+		"Name": "stone capital (not used)",
+		"NameJP": "未使用・石垣天",
+		"ImageID": 2,
+		"VoxelID": 591,
+		"Fanciness": 10,
+		"SortIndex": 60060
+	},
+	{
+		"ID": 39,
+		"JLabel": "城壁下",
+		"Name": "castle foundation",
+		"NameJP": "城のカベ・地",
+		"ImageID": 40,
+		"VoxelID": 46,
+		"Fanciness": 10,
+		"SortIndex": 10320
+	},
+	{
+		"ID": 40,
+		"JLabel": "城壁中",
+		"Name": "castle wall",
+		"NameJP": "城のカベ",
+		"ImageID": 39,
+		"VoxelID": 47,
+		"Fanciness": 10,
+		"SortIndex": 10330
+	},
+	{
+		"ID": 41,
+		"JLabel": "城壁上1",
+		"Name": "castle crenellation",
+		"NameJP": "城のカベ・天Ａ",
+		"ImageID": 41,
+		"VoxelID": 48,
+		"Fanciness": 10,
+		"SortIndex": 10340
+	},
+	{
+		"ID": 42,
+		"JLabel": "城壁上2",
+		"Name": "castle battlement",
+		"NameJP": "城のカベ・天Ｂ",
+		"ImageID": 42,
+		"VoxelID": 49,
+		"Fanciness": 10,
+		"SortIndex": 10350
+	},
+	{
+		"ID": 43,
+		"JLabel": "木材壁",
+		"Name": "wooden wall",
+		"NameJP": "木のカベ",
+		"ImageID": 43,
+		"VoxelID": 50,
+		"Fanciness": 10,
+		"SortIndex": 10290
+	},
+	{
+		"ID": 44,
+		"JLabel": "木材",
+		"Name": "plumberry lumber",
+		"NameJP": "ブナ原木",
+		"ImageID": 44,
+		"VoxelID": 51,
+		"Fanciness": 5,
+		"SortIndex": 10260
+	},
+	{
+		"ID": 45,
+		"JLabel": "石垣床",
+		"Name": "flagstone",
+		"NameJP": "床石",
+		"ImageID": 45,
+		"VoxelID": 52,
+		"Fanciness": 10,
+		"SortIndex": 10250
+	},
+	{
+		"ID": 46,
+		"JLabel": "ござ床",
+		"Name": "straw floor",
+		"NameJP": "わら床",
+		"ImageID": 46,
+		"VoxelID": 53,
+		"Fanciness": 5,
+		"SortIndex": 10210
+	},
+	{
+		"ID": 47,
+		"JLabel": "木材床",
+		"Name": "wooden floor",
+		"NameJP": "木の床",
+		"ImageID": 47,
+		"VoxelID": 54,
+		"Fanciness": 10,
+		"SortIndex": 10300
+	},
+	{
+		"ID": 48,
+		"JLabel": "木材ふち床",
+		"Name": "hardwood tile",
+		"NameJP": "木のかざり床",
+		"ImageID": 48,
+		"VoxelID": 55,
+		"Fanciness": 10,
+		"SortIndex": 10310
+	},
+	{
+		"ID": 49,
+		"JLabel": "街床赤",
+		"Name": "purple flagstone",
+		"NameJP": "赤い床石",
+		"ImageID": 49,
+		"VoxelID": 56,
+		"Fanciness": 10,
+		"SortIndex": 10480
+	},
+	{
+		"ID": 50,
+		"JLabel": "街床青",
+		"Name": "blue flagstone",
+		"NameJP": "青い床石",
+		"ImageID": 50,
+		"VoxelID": 57,
+		"Fanciness": 10,
+		"SortIndex": 10490
+	},
+	{
+		"ID": 51,
+		"JLabel": "絨毯",
+		"Name": "red carpet",
+		"NameJP": "じゅうたん",
+		"ImageID": 51,
+		"VoxelID": 58,
+		"Fanciness": 10,
+		"SortIndex": 10460
+	},
+	{
+		"ID": 52,
+		"JLabel": "絨毯柄",
+		"Name": "fancy carpet",
+		"NameJP": "ガラじゅうたん",
+		"ImageID": 52,
+		"VoxelID": 59,
+		"Fanciness": 10,
+		"SortIndex": 10470
+	},
+	{
+		"ID": 53,
+		"JLabel": "城床",
+		"Name": "castle tile",
+		"NameJP": "城の床",
+		"ImageID": 53,
+		"VoxelID": 60,
+		"Fanciness": 10,
+		"SortIndex": 10360
+	},
+	{
+		"ID": 54,
+		"JLabel": "城床かざり",
+		"Name": "carved castle tile",
+		"NameJP": "城のかざり床",
+		"ImageID": 54,
+		"VoxelID": 61,
+		"Fanciness": 10,
+		"SortIndex": 10370
+	},
+	{
+		"ID": 55,
+		"JLabel": "屋根",
+		"Name": "not used",
+		"NameJP": "屋根・未使用",
+		"ImageID": 2,
+		"VoxelID": 105,
+		"Fanciness": 0,
+		"SortIndex": 60070
+	},
+	{
+		"ID": 56,
+		"JLabel": "えんとつ",
+		"Name": "not used",
+		"NameJP": "えんとつ・未使用",
+		"ImageID": 204,
+		"VoxelID": 591,
+		"Fanciness": 0,
+		"SortIndex": 60080
+	},
+	{
+		"ID": 57,
+		"JLabel": "人工洞床黒",
+		"Name": "bronze temple tile",
+		"NameJP": "ほこらの黒床石",
+		"ImageID": 57,
+		"VoxelID": 62,
+		"Fanciness": 10,
+		"SortIndex": 10390
+	},
+	{
+		"ID": 58,
+		"JLabel": "人口洞床青",
+		"Name": "blue temple tile",
+		"NameJP": "ほこらの青床石",
+		"ImageID": 58,
+		"VoxelID": 63,
+		"Fanciness": 10,
+		"SortIndex": 10380
+	},
+	{
+		"ID": 59,
+		"JLabel": "バリアー",
+		"Name": "not used",
+		"NameJP": "バリアー未使用",
+		"ImageID": 59,
+		"VoxelID": 591,
+		"Fanciness": 0,
+		"SortIndex": 60090
+	},
+	{
+		"ID": 60,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 61,
+		"JLabel": "温泉",
+		"Name": "hot water",
+		"NameJP": "温泉",
+		"ImageID": 798,
+		"VoxelID": 586,
+		"Fanciness": 0,
+		"SortIndex": 60210
+	},
+	{
+		"ID": 62,
+		"JLabel": "燃料入り",
+		"Name": "coal vein",
+		"NameJP": "石炭鉱脈",
+		"ImageID": 62,
+		"VoxelID": 65,
+		"Fanciness": 0,
+		"SortIndex": 10520
+	},
+	{
+		"ID": 63,
+		"JLabel": "銅鉱石入り",
+		"Name": "copper vein",
+		"NameJP": "銅鉱脈",
+		"ImageID": 63,
+		"VoxelID": 66,
+		"Fanciness": 0,
+		"SortIndex": 10530
+	},
+	{
+		"ID": 64,
+		"JLabel": "鉄鉱石入り",
+		"Name": "iron vein",
+		"NameJP": "鉄鉱脈",
+		"ImageID": 64,
+		"VoxelID": 67,
+		"Fanciness": 0,
+		"SortIndex": 10540
+	},
+	{
+		"ID": 65,
+		"JLabel": "銀鉱石入り",
+		"Name": "silver vein",
+		"NameJP": "銀鉱脈",
+		"ImageID": 65,
+		"VoxelID": 590,
+		"Fanciness": 0,
+		"SortIndex": 10550
+	},
+	{
+		"ID": 66,
+		"JLabel": "金鉱石入り",
+		"Name": "gold vein",
+		"NameJP": "金鉱脈",
+		"ImageID": 66,
+		"VoxelID": 591,
+		"Fanciness": 0,
+		"SortIndex": 10560
+	},
+	{
+		"ID": 67,
+		"JLabel": "青宝石入り",
+		"Name": "zenithium vein",
+		"NameJP": "ブルーメタル鉱脈",
+		"ImageID": 67,
+		"VoxelID": 70,
+		"Fanciness": 0,
+		"SortIndex": 10570
+	},
+	{
+		"ID": 68,
+		"JLabel": "赤宝石入り",
+		"Name": "ruby vein",
+		"NameJP": "赤石鉱脈",
+		"ImageID": 68,
+		"VoxelID": 71,
+		"Fanciness": 0,
+		"SortIndex": 10580
+	},
+	{
+		"ID": 69,
+		"JLabel": "ミスリル入り",
+		"Name": "mythril vein",
+		"NameJP": "ミスリル鉱脈",
+		"ImageID": 69,
+		"VoxelID": 72,
+		"Fanciness": 0,
+		"SortIndex": 10590
+	},
+	{
+		"ID": 70,
+		"JLabel": "オリハルコン入り",
+		"Name": "orichalcum vein",
+		"NameJP": "オリハルコン鉱脈",
+		"ImageID": 70,
+		"VoxelID": 73,
+		"Fanciness": 0,
+		"SortIndex": 10600
+	},
+	{
+		"ID": 71,
+		"JLabel": "命の鉱石",
+		"Name": "vein of life",
+		"NameJP": "命鉱脈・未使用",
+		"ImageID": 774,
+		"VoxelID": 592,
+		"Fanciness": 0,
+		"SortIndex": 60100
+	},
+	{
+		"ID": 72,
+		"JLabel": "聖なる種がうまる土",
+		"Name": "sacred soil",
+		"NameJP": "聖なる土・未使用",
+		"ImageID": 75,
+		"VoxelID": 593,
+		"Fanciness": 0,
+		"SortIndex": 60110
+	},
+	{
+		"ID": 73,
+		"JLabel": "ゴーレム岩",
+		"Name": "golemite",
+		"NameJP": "ゴーレム岩",
+		"ImageID": 71,
+		"VoxelID": 64,
+		"Fanciness": 10,
+		"SortIndex": 10610
+	},
+	{
+		"ID": 74,
+		"JLabel": "木材ヤシ",
+		"Name": "palm lumber",
+		"NameJP": "ヤシ原木",
+		"ImageID": 56,
+		"VoxelID": 74,
+		"Fanciness": 5,
+		"SortIndex": 10270
+	},
+	{
+		"ID": 75,
+		"JLabel": "木材針葉樹",
+		"Name": "cedar lumber",
+		"NameJP": "スギ原木",
+		"ImageID": 55,
+		"VoxelID": 75,
+		"Fanciness": 5,
+		"SortIndex": 10280
+	},
+	{
+		"ID": 76,
+		"JLabel": "FC草原ブロック",
+		"Name": "time-honoured turf",
+		"NameJP": "ドット草原",
+		"ImageID": 792,
+		"VoxelID": 76,
+		"Fanciness": 0,
+		"SortIndex": 10850
+	},
+	{
+		"ID": 77,
+		"JLabel": "FCレンガブロック",
+		"Name": "8-bit brick",
+		"NameJP": "ドットレンガ",
+		"ImageID": 793,
+		"VoxelID": 77,
+		"Fanciness": 0,
+		"SortIndex": 10860
+	},
+	{
+		"ID": 78,
+		"JLabel": "FC壁ブロック",
+		"Name": "olde worlde wall",
+		"NameJP": "ドットカベ",
+		"ImageID": 794,
+		"VoxelID": 78,
+		"Fanciness": 0,
+		"SortIndex": 10870
+	},
+	{
+		"ID": 79,
+		"JLabel": "マモノの目ブロック",
+		"Name": "eyewall",
+		"NameJP": "おおきな目",
+		"ImageID": 795,
+		"VoxelID": 79,
+		"Fanciness": 0,
+		"SortIndex": 10830
+	},
+	{
+		"ID": 80,
+		"JLabel": "水",
+		"Name": "water",
+		"NameJP": "水",
+		"ImageID": 73,
+		"VoxelID": 582,
+		"Fanciness": 0,
+		"SortIndex": 60220
+	},
+	{
+		"ID": 81,
+		"JLabel": "土上面枯れ草",
+		"Name": "witchgrassy earth",
+		"NameJP": "枯れ草原の土",
+		"ImageID": 74,
+		"VoxelID": 80,
+		"Fanciness": 0,
+		"SortIndex": 60130
+	},
+	{
+		"ID": 82,
+		"JLabel": "土上面黄色草",
+		"Name": "lemongrassy earth",
+		"NameJP": "南国草原の土",
+		"ImageID": 76,
+		"VoxelID": 81,
+		"Fanciness": 0,
+		"SortIndex": 60140
+	},
+	{
+		"ID": 83,
+		"JLabel": "硫黄ブロック",
+		"Name": "sulphur vein",
+		"NameJP": "イオウ鉱脈",
+		"ImageID": 72,
+		"VoxelID": 82,
+		"Fanciness": 0,
+		"SortIndex": 60150
+	},
+	{
+		"ID": 84,
+		"JLabel": "雲ブロック",
+		"Name": "not used",
+		"NameJP": "雲ブロック・未使用",
+		"ImageID": 73,
+		"VoxelID": 591,
+		"Fanciness": 0,
+		"SortIndex": 60160
+	},
+	{
+		"ID": 85,
+		"JLabel": "属性変化石・変化前",
+		"Name": "magic sand",
+		"NameJP": "まほうの砂",
+		"ImageID": 77,
+		"VoxelID": 83,
+		"Fanciness": 0,
+		"SortIndex": 60170
+	},
+	{
+		"ID": 86,
+		"JLabel": "属性変化石（炎）",
+		"Name": "flame sand",
+		"NameJP": "まほうの砂・炎",
+		"ImageID": 78,
+		"VoxelID": 84,
+		"Fanciness": 0,
+		"SortIndex": 60180
+	},
+	{
+		"ID": 87,
+		"JLabel": "属性変化石（氷）",
+		"Name": "frost sand",
+		"NameJP": "まほうの砂・氷",
+		"ImageID": 79,
+		"VoxelID": 85,
+		"Fanciness": 0,
+		"SortIndex": 60190
+	},
+	{
+		"ID": 88,
+		"JLabel": "アクセント灰ブロ",
+		"Name": "bonestone",
+		"NameJP": "骨岩",
+		"ImageID": 60,
+		"VoxelID": 86,
+		"Fanciness": 0,
+		"SortIndex": 10650
+	},
+	{
+		"ID": 89,
+		"JLabel": "呪い壁",
+		"Name": "dragonstone",
+		"NameJP": "竜紋岩",
+		"ImageID": 61,
+		"VoxelID": 5,
+		"Fanciness": 0,
+		"SortIndex": 60200
+	},
+	{
+		"ID": 90,
+		"JLabel": "スライム柄ブロック",
+		"Name": "slimy block",
+		"NameJP": "スライムのカベ",
+		"ImageID": 796,
+		"VoxelID": 87,
+		"Fanciness": 0,
+		"SortIndex": 10840
+	},
+	{
+		"ID": 91,
+		"JLabel": "柄ブロック（Ｖの字）",
+		"Name": "retro roof",
+		"NameJP": "ドット屋根",
+		"ImageID": 797,
+		"VoxelID": 88,
+		"Fanciness": 0,
+		"SortIndex": 10880
+	},
+	{
+		"ID": 92,
+		"JLabel": "ドットブロック1（black）",
+		"Name": "black block",
+		"NameJP": "ブラックブロック",
+		"ImageID": 775,
+		"VoxelID": 89,
+		"Fanciness": 0,
+		"SortIndex": 10660
+	},
+	{
+		"ID": 93,
+		"JLabel": "ドットブロック2（gray）",
+		"Name": "grey block",
+		"NameJP": "グレーブロック",
+		"ImageID": 776,
+		"VoxelID": 90,
+		"Fanciness": 0,
+		"SortIndex": 10670
+	},
+	{
+		"ID": 94,
+		"JLabel": "ドットブロック3（white）",
+		"Name": "white block",
+		"NameJP": "ホワイトブロック",
+		"ImageID": 777,
+		"VoxelID": 91,
+		"Fanciness": 0,
+		"SortIndex": 10680
+	},
+	{
+		"ID": 95,
+		"JLabel": "ドットブロック4（maroon）",
+		"Name": "burgundy block",
+		"NameJP": "マロンブロック",
+		"ImageID": 778,
+		"VoxelID": 92,
+		"Fanciness": 0,
+		"SortIndex": 10690
+	},
+	{
+		"ID": 96,
+		"JLabel": "ドットブロック5（red）",
+		"Name": "red block",
+		"NameJP": "レッドブロック",
+		"ImageID": 779,
+		"VoxelID": 93,
+		"Fanciness": 0,
+		"SortIndex": 10700
+	},
+	{
+		"ID": 97,
+		"JLabel": "ドットブロック6（purple）",
+		"Name": "purple block",
+		"NameJP": "パープルブロック",
+		"ImageID": 780,
+		"VoxelID": 94,
+		"Fanciness": 0,
+		"SortIndex": 10710
+	},
+	{
+		"ID": 98,
+		"JLabel": "ドットブロック7（fuchsia）",
+		"Name": "pink block",
+		"NameJP": "ピンクブロック",
+		"ImageID": 781,
+		"VoxelID": 95,
+		"Fanciness": 0,
+		"SortIndex": 10720
+	},
+	{
+		"ID": 99,
+		"JLabel": "ドットブロック8（green）",
+		"Name": "green block",
+		"NameJP": "グリーンブロック",
+		"ImageID": 782,
+		"VoxelID": 96,
+		"Fanciness": 0,
+		"SortIndex": 10730
+	},
+	{
+		"ID": 100,
+		"JLabel": "ドットブロック9（lime）",
+		"Name": "lime-green block",
+		"NameJP": "ライムブロック",
+		"ImageID": 783,
+		"VoxelID": 97,
+		"Fanciness": 0,
+		"SortIndex": 10740
+	},
+	{
+		"ID": 101,
+		"JLabel": "ドットブロック10（orange）",
+		"Name": "orange block",
+		"NameJP": "オレンジブロック",
+		"ImageID": 784,
+		"VoxelID": 98,
+		"Fanciness": 0,
+		"SortIndex": 10750
+	},
+	{
+		"ID": 102,
+		"JLabel": "ドットブロック11（yellow）",
+		"Name": "yellow block",
+		"NameJP": "イエローブロック",
+		"ImageID": 785,
+		"VoxelID": 99,
+		"Fanciness": 0,
+		"SortIndex": 10760
+	},
+	{
+		"ID": 103,
+		"JLabel": "ドットブロック12（navy）",
+		"Name": "navy block",
+		"NameJP": "ネイビーブロック",
+		"ImageID": 786,
+		"VoxelID": 100,
+		"Fanciness": 0,
+		"SortIndex": 10770
+	},
+	{
+		"ID": 104,
+		"JLabel": "ドットブロック13（blue）",
+		"Name": "blue block",
+		"NameJP": "ブルーブロック",
+		"ImageID": 787,
+		"VoxelID": 101,
+		"Fanciness": 0,
+		"SortIndex": 10780
+	},
+	{
+		"ID": 105,
+		"JLabel": "ドットブロック14（skin）",
+		"Name": "beige block",
+		"NameJP": "ベージュブロック",
+		"ImageID": 788,
+		"VoxelID": 102,
+		"Fanciness": 0,
+		"SortIndex": 10790
+	},
+	{
+		"ID": 106,
+		"JLabel": "ドットブロック15（aqua）",
+		"Name": "cyan block",
+		"NameJP": "アクアブロック",
+		"ImageID": 789,
+		"VoxelID": 103,
+		"Fanciness": 0,
+		"SortIndex": 10800
+	},
+	{
+		"ID": 107,
+		"JLabel": "ドットブロック16（silver）",
+		"Name": "silver block",
+		"NameJP": "シルバーブロック",
+		"ImageID": 790,
+		"VoxelID": 104,
+		"Fanciness": 0,
+		"SortIndex": 10810
+	},
+	{
+		"ID": 108,
+		"JLabel": "ドットブロック17（gold）",
+		"Name": "gold block",
+		"NameJP": "ゴールドブロック",
+		"ImageID": 791,
+		"VoxelID": 105,
+		"Fanciness": 0,
+		"SortIndex": 10820
+	},
+	{
+		"ID": 109,
+		"JLabel": "魔物城壁下",
+		"Name": "fortress foundation",
+		"NameJP": "魔城のカベ・地",
+		"ImageID": 799,
+		"VoxelID": 106,
+		"Fanciness": 5,
+		"SortIndex": 10620
+	},
+	{
+		"ID": 110,
+		"JLabel": "魔物城壁中",
+		"Name": "fortress wall",
+		"NameJP": "魔城のカベ",
+		"ImageID": 800,
+		"VoxelID": 107,
+		"Fanciness": 5,
+		"SortIndex": 10630
+	},
+	{
+		"ID": 111,
+		"JLabel": "魔物城壁上",
+		"Name": "fortress battlement",
+		"NameJP": "魔城のカベ・天",
+		"ImageID": 801,
+		"VoxelID": 108,
+		"Fanciness": 5,
+		"SortIndex": 10640
+	},
+	{
+		"ID": 112,
+		"JLabel": "竜王城壁下",
+		"Name": "fortress foundation (indestructible)",
+		"NameJP": "",
+		"ImageID": 799, "VoxelID": 106
+	},
+	{
+		"ID": 113,
+		"JLabel": "竜王城壁中",
+		"Name": "fortress wall (indestructible)",
+		"NameJP": "",
+		"ImageID": 800, "VoxelID": 107
+	},
+	{
+		"ID": 114,
+		"JLabel": "竜王城壁上",
+		"Name": "fortress battlement (indestructible)",
+		"NameJP": "",
+		"ImageID": 801, "VoxelID": 108
+	},
+	{
+		"ID": 115,
+		"JLabel": "洞窟岩(破壊不可)",
+		"Name": "clodstone (indestructible)",
+		"NameJP": "",
+		"ImageID": 21, "VoxelID": 29
+	},
+	{
+		"ID": 116,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 117,
+		"JLabel": "DQ1:カウンター",
+		"Name": "classic counter",
+		"NameJP": "ドットカウンター",
+		"ImageID": 2469,
+		"VoxelID": 594,
+		"Fanciness": 0,
+		"SortIndex": 10890
+	},
+	{
+		"ID": 118,
+		"JLabel": "DQ1:ダメージ床",
+		"Name": "traditional trap tile",
+		"NameJP": "ドットダメージ床",
+		"ImageID": 2470,
+		"VoxelID": 595,
+		"Fanciness": 0,
+		"SortIndex": 10900
+	},
+	{
+		"ID": 119,
+		"JLabel": "DQ1:砂地",
+		"Name": "dated desert",
+		"NameJP": "ドット砂地",
+		"ImageID": 2471,
+		"VoxelID": 596,
+		"Fanciness": 0,
+		"SortIndex": 10910
+	},
+	{
+		"ID": 120,
+		"JLabel": "DQ1:水面",
+		"Name": "old-school ocean",
+		"NameJP": "ドット水面",
+		"ImageID": 2472,
+		"VoxelID": 597,
+		"Fanciness": 0,
+		"SortIndex": 10920
+	},
+	{
+		"ID": 121,
+		"JLabel": "DQ1:毒沼",
+		"Name": "bygone bog",
+		"NameJP": "ドット毒沼",
+		"ImageID": 2473,
+		"VoxelID": 598,
+		"Fanciness": 0,
+		"SortIndex": 10930
+	},
+	{
+		"ID": 122,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 123,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 124,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 125,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 126,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 127,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 128,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 129,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 130,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 131,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 132,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 133,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 134,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 135,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 136,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 137,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 138,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 139,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 140,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 141,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 142,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 143,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 144,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 145,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 146,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 147,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 148,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 149,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 150,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 151,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 152,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 153,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 154,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 155,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 156,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 157,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 158,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 159,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 160,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 161,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 162,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 163,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 164,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 165,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 166,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 167,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 168,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 169,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 170,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 171,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 172,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 173,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 174,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 175,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 176,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 177,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 178,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 179,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 180,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 181,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 182,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 183,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 184,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 185,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 186,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 187,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 188,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 189,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 190,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 191,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 192,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 193,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 194,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 195,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 196,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 197,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 198,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 199,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 200,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 201,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 202,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 203,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 204,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 205,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 206,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 207,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 208,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 209,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 210,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 211,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 212,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 213,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 214,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 215,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 216,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 217,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 218,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 219,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 220,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 221,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 222,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 223,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 224,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 225,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 226,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 227,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 228,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 229,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 230,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 231,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 232,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 233,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 234,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 235,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 236,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 237,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 238,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 239,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 240,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 241,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 242,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 243,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 244,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 245,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 246,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 247,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 248,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 249,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 250,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 251,
+		"JLabel": "",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 252,
+		"JLabel": "草C",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 253,
+		"JLabel": "草D",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 254,
+		"JLabel": "草A",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1, "VoxelID": 7
+	},
+	{
+		"ID": 255,
+		"JLabel": "草B",
+		"Name": "",
+		"NameJP": "",
+		"ImageID": -1
+	}
+]

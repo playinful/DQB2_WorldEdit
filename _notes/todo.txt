@@ -1,6 +1,8 @@
 connecting window rotation
 crop delineation
 
+research nameplates
+
 weather selection
 
 clothes editing
@@ -10,25 +12,20 @@ npc editing
 npcs editable on map
 
 connecting tiles
-liquids
-props showing on map
 map editing
 time editor
 file select
 sign editor
 chest editor
 slope edges tool
-scarecrow implementation (limit = 64)
 loading visualizer
 Make tools their own object??
 blueprints
 backups
 mass move residents
-buildability flags on IoA
 undo feature
 chisel shapes
 magic pencil BlockEntity
-dropped loots
 
 Chisel Tool
 Fill Tool

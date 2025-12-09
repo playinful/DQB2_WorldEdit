@@ -12,6 +12,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.IO;
+using System.Runtime.Serialization;
 
 namespace EyeOfRubiss
 {
@@ -67,6 +68,10 @@ namespace EyeOfRubiss
         public bool CarFly { get => GetBit(0x506, 6); set => SetBit(0x506, 6, value); }
         public bool CarBeam { get => GetBit(0x506, 7); set => SetBit(0x506, 7, value); }
         public bool CarLight { get => GetBit(0x506, 5); set => SetBit(0x506, 5, value); }
+
+        public bool GreenGardensBuildable { get => GetBit(0x682, 1); set => SetBit(0x682, 1, value); }
+        public bool ScaletSandsBuildable { get => GetBit(0x682, 2); set => SetBit(0x682, 2, value); }
+        public bool CeruleanSteppeBuildable { get => GetBit(0x682, 3); set => SetBit(0x682, 3, value); }
         
         public bool Transform { get => GetBit(0x500, 6); set => SetBit(0x500, 6, value); } // TODO: What does this do?
         public bool Expression { get => GetBit(0x501, 1); set => SetBit(0x501, 1, value); } // TODO: What does this do?
@@ -103,9 +108,9 @@ namespace EyeOfRubiss
         public byte Buildertopia2Size { get => GetByte(0x52A6D3); set => SetByte(0x52A6D3, value); }
         public byte Buildertopia3Size { get => GetByte(0x52A70B); set => SetByte(0x52A70B, value); }
 
-        public byte Buildertopia1Gratitude { get => throw new NotImplementedException(); set => throw new NotImplementedException(); } // TODO
-        public byte Buildertopia2Gratitude { get => throw new NotImplementedException(); set => throw new NotImplementedException(); } // TODO 52A74B
-        public byte Buildertopia3Gratitude { get => throw new NotImplementedException(); set => throw new NotImplementedException(); } // TODO
+        public int Buildertopia1Gratitude { get => GetInt32(0x52A747); set => SetInt32(0x52A747, value); }
+        public int Buildertopia2Gratitude { get => GetInt32(0x52A74B); set => SetInt32(0x52A74B, value); }
+        public int Buildertopia3Gratitude { get => GetInt32(0x52A74F); set => SetInt32(0x52A74F, value); }
 
         public InventoryItem PlayerWeapon => new(this, 0x55B959);
         public InventoryItem PlayerArmour => new(this, 0x55B989);
@@ -397,22 +402,60 @@ namespace EyeOfRubiss
         }
         #endregion
 
+        #region Blueprints
         public class Blueprint(CommonData saveData, int index)
         {
-            private const int START_ADDRESS = 0x136DE8;
-            private const int LENGTH = 0x30008;
+            public const int START_ADDRESS = 0x136DE8;
+            public const int LENGTH = 0x30008;
+            public const int MAXIMUM = 5;
 
             public readonly CommonData SaveData = saveData;
             public readonly int Index = index;
 
             public int GetAddress() => START_ADDRESS + Index * LENGTH;
 
+            public Span<byte> GetBytes() => SaveData.GetBytes(GetAddress(), LENGTH);
+
             public ushort Width { get { return SaveData.GetUInt16(GetAddress() + 0x30000); } set { SaveData.SetUInt16(GetAddress() + 0x30000, value); } }
             public ushort Height { get { return SaveData.GetUInt16(GetAddress() + 0x30002); } set { SaveData.SetUInt16(GetAddress() + 0x30002, value); } }
             public ushort Depth { get { return SaveData.GetUInt16(GetAddress() + 0x30004); } set { SaveData.SetUInt16(GetAddress() + 0x30004, value); } }
+
+            public bool Exists { get { return SaveData.GetByte(GetAddress() + 0x30006) == 1; } set { SaveData.SetByte(GetAddress() + 0x30006, (byte)(value ? 1 : 0)); } }
+
+            public void CopyTo(Blueprint destination)
+            {
+                GetBytes().CopyTo(destination.GetBytes());
+            }
+
+            public BlueprintBlockInstance GetBlock(Vector3I position)
+            {
+                if (position.X < 0 || position.X >= Width || position.Y < 0 || position.Y >= Height || position.Z < 0 || position.Z >= Depth)
+                    return null;
+                
+                return new BlueprintBlockInstance(SaveData, (position.Z * Height * Width + position.X * Height + position.Y) * BlueprintBlockInstance.LENGTH);
+            }
+            public class BlueprintBlockInstance(CommonData saveData, int address)
+            {
+                public const int LENGTH = 6;
+
+                public readonly CommonData SaveData = saveData;
+                public readonly int Address = address;
+
+                public ushort PropID { get { return SaveData.GetUInt16(Address); } set { SaveData.SetUInt16(Address, value); } }
+                public ushort BlockID { get { return SaveData.GetUInt16(Address + 2); } set { SaveData.SetUInt16(Address + 2, value); } }
+                public byte Rotation { get { return SaveData.GetByte(Address + 4); } set { SaveData.SetByte(Address + 4, value); } }
+            }
         }
 
-        /// <summary> TODO </summary>
+        public Blueprint GetBlueprint(int index)
+        {
+            if (index < 0 || index >= Blueprint.MAXIMUM)
+                throw new IndexOutOfRangeException();
+            
+            return new Blueprint(this, index);
+        }
+        #endregion
+
         public class Craft(CommonData saveData, int address, uint id)
         {
             public CommonData SaveData = saveData;
@@ -428,7 +471,6 @@ namespace EyeOfRubiss
             public bool Infinite { get { return SaveData.GetBit(GetAddress(), 4); } set { SaveData.SetBit(GetAddress(), 4, value); } }
         }
 
-        /// <summary> TODO </summary>
         public class Crop(CommonData saveData, int address, uint id)
         {
             public CommonData SaveData = saveData;
@@ -443,7 +485,6 @@ namespace EyeOfRubiss
             public bool Growth { get { return SaveData.GetBit(GetAddress() + 4, 3); } set { SaveData.SetBit(GetAddress() + 4, 3, value); } }
         }
 
-        /// <summary> TODO </summary>
         public class MaterialIsland(CommonData saveData, int address, uint id)
         {
             public CommonData SaveData = saveData;
@@ -472,7 +513,6 @@ namespace EyeOfRubiss
             public byte State { get { return (byte)SaveData.GetNumberBitwise(GetAddress() + 6, 1, 2); } set { SaveData.SetNumberBitwise(GetAddress() + 6, 1, 2, value); } }
         }
 
-        /// <summary> TODO </summary>
         public class PartyMember(CommonData saveData, int address)
         {
             public CommonData SaveData = saveData;
@@ -485,7 +525,6 @@ namespace EyeOfRubiss
             public ushort Type { get { return SaveData.GetUInt16(GetAddress() + 2); } set { SaveData.SetUInt16(GetAddress() + 2, value); } }
         }
 
-        /// <summary> TODO </summary>
         public class Scenery(CommonData saveData, int address)
         {
             public CommonData SaveData = saveData;
@@ -496,7 +535,6 @@ namespace EyeOfRubiss
             public bool Visit { get { return SaveData.GetByte(GetAddress()) == 1; } set { SaveData.SetByte(GetAddress(), (byte)(value ? 1 : 0)); } }
         }
 
-        /// <summary> TODO </summary>
         public class StoryIsland(CommonData saveData, int address)
         {
             public CommonData SaveData = saveData;

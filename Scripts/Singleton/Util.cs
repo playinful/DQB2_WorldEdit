@@ -52,5 +52,17 @@ namespace EyeOfRubiss
 			output = output.Replace("{Blue}", $"[color={Constants.Colors.BLUE}]■[/color]");
 			return output;
 		}
+		
+		public static int GridMapRotationFromDirection(int direction)
+        {
+            return direction switch
+            {
+                1 => 16,
+                2 => 10,
+                3 => 22,
+                _ => 0,
+            };
+        }
+
 	}
 }

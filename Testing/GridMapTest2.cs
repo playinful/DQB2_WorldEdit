@@ -1,4 +1,4 @@
-using Godot;
+/*using Godot;
 using System;
 
 [Tool]
@@ -14,3 +14,4 @@ public partial class GridMapTest2 : EditorScript
 		}
 	}
 }
+*/

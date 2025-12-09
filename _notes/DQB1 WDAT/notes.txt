@@ -1,0 +1,12 @@
+Notes from sapphire:
+WDAT is STGDAT basically
+No header
+
+To adapt it to read DQB1 files:
+-> Chunk grid is at offset 0
+-> Chunk grid is 48x48 
+-> After that is the blocks
+-> Blocks are 1 byte long
+-> Chunks are 32x32x32
+Block IDs are the 99% the same across both games
+0xFF is item shell

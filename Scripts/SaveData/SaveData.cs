@@ -84,6 +84,7 @@ namespace EyeOfRubiss
         public virtual void Save(string path = null)
         {
             path ??= Path;
+            Path = path;
 
             byte[] data = [.. _Header, .. Compress(_Buffer, System.IO.Compression.CompressionLevel.Fastest)];
             byte[] size = BitConverter.GetBytes(data.Length);

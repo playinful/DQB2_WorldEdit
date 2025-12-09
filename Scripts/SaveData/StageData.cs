@@ -653,23 +653,14 @@ namespace EyeOfRubiss
                 );
             }
 
-            public int GetGridMapRotation()
-            {
-                return Rotation switch
-                {
-                    1 => 16,
-                    2 => 10,
-                    3 => 22,
-                    _ => 0,
-                };
-            }
+            public int GetGridMapRotation() => Util.GridMapRotationFromDirection(Rotation);
 
             public void Clear()
             {
+                SaveData.RemovePropFromPositionDictionary(this);
                 Chunk = 0xFFF;
                 SaveData.Fill(0, GetAddress(), LENGTH);
                 MagicNumberSixteen = DataIndex * 16;
-                SaveData.RemovePropFromPositionDictionary(this);
             }
         }
 
@@ -761,22 +752,31 @@ namespace EyeOfRubiss
             return GetProps().FirstOrDefault(prop => { return prop.Exists() && prop.GetPosition() == position; });
         }
 
-        public void AddProp(Vector3I position, ushort propId)
+        public Prop AddProp(Vector3I position, ushort propId, byte rotation = 0)
         {
             Prop prop = GetFirstUnusedProp();
-            prop.PropID = propId;
-            prop.X = (byte)(position.X % 32);
-            prop.Y = (byte)position.Y;
-            prop.Z = (byte)(position.Z % 32);
-
-            prop.Chunk = PositionToChunkIndex(position);
 
             if (prop.DataIndex >= PropCount)
                 PropCount = (int)prop.DataIndex + 1;
+            
+            prop.Chunk = PositionToChunkIndex(position);
+            prop.X = (byte)(position.X % 32);
+            prop.Y = (byte)position.Y;
+            prop.Z = (byte)(position.Z % 32);
+            prop.Rotation = rotation;
+            prop.PropID = propId;
+
+            return prop;
         }
         public Prop GetFirstUnusedProp()
         {
-            return GetProps().FirstOrDefault(prop => prop.Index > 0 && !prop.Exists());
+            Prop prop = GetProps().FirstOrDefault(prop => prop.Index > 0 && !prop.Exists());
+            if (prop is null)
+            {
+                PropCount++;
+                return GetProp(PropCount - 1);
+            }
+            else return prop;
         }
 
         public void DeleteAllProps()
@@ -995,6 +995,20 @@ namespace EyeOfRubiss
             public bool IsPlaying() => Song > 0;
             public bool Exists() => !SaveData.GetBytes(Address, LENGTH).ToArray().All(b => b == 0);
         }
+        public class MagicPencil(StageData saveData, int address) : BlockEntity(saveData)
+        {
+            public const int START_ADDRESS = 0x13DB5;
+            public const int LENGTH = 7;
+            public const int MAXIMUM = 2;
+
+            public readonly int Address = address;
+
+            public override ushort X { get => SaveData.GetUInt16(Address); set => SaveData.SetUInt16(Address, value); }
+            public override byte Y { get => SaveData.GetByte(Address + 2); set => SaveData.SetByte(Address + 2, value); }  
+            public override ushort Z { get => SaveData.GetUInt16(Address + 4); set => SaveData.SetUInt16(Address + 4, value); }
+
+            public bool Exists { get => SaveData.GetByte(Address + 6) == 1; set => SaveData.SetByte(Address + 6, (byte)(value ? 1 : 0)); }
+        }
 
         public Signpost GetSignpost(int index)
         {
@@ -1107,22 +1121,6 @@ namespace EyeOfRubiss
         #endregion
 
         #region Other Classes
-        public class Blueprint(StageData saveData, int address)
-        {
-            public const int START_ADDRESS = 0x2CA3C;
-            public const int LENGTH = 12;
-            public const int MAXIMUM = 5;
-
-            public readonly StageData SaveData = saveData;
-            public readonly int Address = address;
-
-            public ushort ID { get { return SaveData.GetUInt16(Address); } set { SaveData.SetUInt16(Address, value); } } // TODO: Make list of blueprint IDs
-
-            public ushort X { get { return SaveData.GetUInt16(Address + 2); } set { SaveData.SetUInt16(Address + 2, value); } }
-            public ushort Z { get { return SaveData.GetUInt16(Address + 4); } set { SaveData.SetUInt16(Address + 4, value); } }
-            public byte Y { get { return SaveData.GetByte(Address + 6); } set { SaveData.SetUInt16(Address + 6, value); } }
-            // No clue what determines the pivot point.....
-        }
         public class Room(StageData saveData, int address)
         {
             public const int START_ADDRESS = 0x10;
@@ -1152,6 +1150,22 @@ namespace EyeOfRubiss
             public ushort Cheekiness { get => SaveData.GetUInt16(Address + 0x10); set => SaveData.SetUInt16(Address + 0x10, value); }
             public ushort Normalness { get => SaveData.GetUInt16(Address + 0x12); set => SaveData.SetUInt16(Address + 0x12, value); }
         }
+        public class Blueprint(StageData saveData, int address)
+        {
+            public const int START_ADDRESS = 0x2CA3C;
+            public const int LENGTH = 12;
+            public const int MAXIMUM = 5;
+
+            public readonly StageData SaveData = saveData;
+            public readonly int Address = address;
+
+            public ushort ID { get { return SaveData.GetUInt16(Address); } set { SaveData.SetUInt16(Address, value); } } // TODO: Make list of blueprint IDs
+
+            public ushort X { get { return SaveData.GetUInt16(Address + 2); } set { SaveData.SetUInt16(Address + 2, value); } }
+            public ushort Z { get { return SaveData.GetUInt16(Address + 4); } set { SaveData.SetUInt16(Address + 4, value); } }
+            public byte Y { get { return SaveData.GetByte(Address + 6); } set { SaveData.SetUInt16(Address + 6, value); } }
+            // No clue what determines the pivot point.....
+        }
         public class Field(StageData saveData, int address)
         {
             public const int START_ADDRESS = 0x2CA9C;
@@ -1173,6 +1187,48 @@ namespace EyeOfRubiss
 
             public ushort Crop { get { return SaveData.GetUInt16(Address + 0xC); } set { SaveData.SetUInt16(Address + 0xC, value); } }
         }
+        public class Drop(StageData saveData, int address)
+        {
+            public const int START_ADDRESS = 0x24334C;
+            public const int LENGTH = 0x15;
+            public const int MAXIMUM = 500;
+
+            public readonly StageData SaveData = saveData;
+            public readonly int Address = address;
+
+            public InventoryItem Item { get { return new InventoryItem(SaveData, Address); } }
+
+            public float X { get { return SaveData.GetSingle(Address + 0x4); } set { SaveData.SetSingle(Address + 0x4, value); } }
+            public float Y { get { return SaveData.GetSingle(Address + 0x8); } set { SaveData.SetSingle(Address + 0x8, value); } }
+            public float Z { get { return SaveData.GetSingle(Address + 0xC); } set { SaveData.SetSingle(Address + 0xC, value); } }
+
+            public void Clear()
+            {
+                InventoryItem item = Item;
+                item.ItemID = 0;
+                item.Count = 0;
+            }
+        }
+        public class Fish(StageData saveData, int address)
+        {
+            public const int START_ADDRESS = 0x28DEC;
+            public const int LENGTH = 0x10;
+            public const int MAXIMUM = 50;
+
+            public readonly StageData SaveData = saveData;
+            public readonly int Address = address;
+
+            public ushort FishType { get { return SaveData.GetUInt16(Address); } set { SaveData.SetUInt16(Address, value); } }
+
+            public float X { get { return SaveData.GetSingle(Address + 2); } set { SaveData.SetSingle(Address + 2, value); } }
+            public float Y { get { return SaveData.GetSingle(Address + 6); } set { SaveData.SetSingle(Address + 6, value); } }
+            public float Z { get { return SaveData.GetSingle(Address + 10); } set { SaveData.SetSingle(Address + 10, value); } }
+
+            public void Clear()
+            {
+                SaveData.Fill(0, Address, LENGTH);
+            }
+        }
 
         public Room GetRoom(int index)
         {
@@ -1189,14 +1245,6 @@ namespace EyeOfRubiss
             for (int i = 0; i < count && i + index < Room.MAXIMUM; i++)
                 yield return GetRoom(i + index);
         }
-
-        // Dropped items at 0x24334C
-        // ID: +0
-        // Count: +2
-        // X: +4
-        // Y: +8
-        // Z: +12
-        // Length is like 0x15
         #endregion
     }
 }

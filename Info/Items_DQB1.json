@@ -1,0 +1,9670 @@
+[
+	{
+		"ID": 0,
+		"JLabel": "",
+		"Name": "none",
+		"NameJP": "無し",
+		"Icon": -1,
+		"Sort": 0,
+		"Category": "None"
+	},
+	{
+		"ID": 1,
+		"JLabel": "やくそう",
+		"Name": "healing cream",
+		"NameJP": "きずぐすり",
+		"Icon": 620,
+		"Sort": 1010,
+		"Category": "Consumable"
+	},
+	{
+		"ID": 2,
+		"JLabel": "上やくそう",
+		"Name": "medicinal herb",
+		"NameJP": "やくそう",
+		"Icon": 359,
+		"Sort": 1020,
+		"Category": "Consumable"
+	},
+	{
+		"ID": 3,
+		"JLabel": "特やくそう",
+		"Name": "not used",
+		"NameJP": "特やくそう・未使用",
+		"Icon": 359,
+		"Sort": 60850,
+		"Category": "Other",
+		"Note": "Special medicine"
+	},
+	{
+		"ID": 4,
+		"JLabel": "特上やくそう",
+		"Name": "not used",
+		"NameJP": "特上やくそう・未使用",
+		"Icon": 359,
+		"Sort": 60860,
+		"Category": "Other"
+	},
+	{
+		"ID": 5,
+		"JLabel": "世界樹のしずく",
+		"Name": "divine draught",
+		"NameJP": "聖なるしずく",
+		"Icon": 436,
+		"Sort": 8020,
+		"Category": "ImportantItems"
+	},
+	{
+		"ID": 6,
+		"JLabel": "どくけし草",
+		"Name": "antidotal herb",
+		"NameJP": "どくけしそう",
+		"Icon": 437,
+		"Sort": 1050,
+		"Category": "Consumable"
+	},
+	{
+		"ID": 7,
+		"JLabel": "万能薬",
+		"Name": "not used",
+		"NameJP": "ばんのう薬・未使用",
+		"Icon": 438,
+		"Sort": 60870,
+		"Category": "Other",
+		"Note": "Panacea"
+	},
+	{
+		"ID": 8,
+		"JLabel": "鎮静剤",
+		"Name": "not used",
+		"NameJP": "鎮静剤・未使用",
+		"Icon": 2,
+		"Sort": 60880,
+		"Category": "Other"
+	},
+	{
+		"ID": 9,
+		"JLabel": "せいすい",
+		"Name": "holy water",
+		"NameJP": "せいすい",
+		"Icon": 621,
+		"Sort": 1270,
+		"Category": "Consumable"
+	},
+	{
+		"ID": 11,
+		"JLabel": "キメラのつばさ",
+		"Name": "chimaera wing",
+		"NameJP": "キメラのつばさ",
+		"Icon": 424,
+		"Sort": 1090,
+		"Category": "Consumable"
+	},
+	{
+		"ID": 13,
+		"JLabel": "いのちのきのみ",
+		"Name": "seed of life",
+		"NameJP": "いのちのきのみ",
+		"Icon": 386,
+		"Sort": 1040,
+		"Category": "Consumable"
+	},
+	{
+		"ID": 16,
+		"JLabel": "こんらんの薬",
+		"Name": "Defuddle drops",
+		"NameJP": "天使の気つけやく",
+		"Icon": 438,
+		"Sort": 1070,
+		"Category": "Consumable"
+	},
+	{
+		"ID": 17,
+		"JLabel": "まひの薬",
+		"Name": "Tingle tablet",
+		"NameJP": "まんげつ丸",
+		"Icon": 439,
+		"Sort": 1060,
+		"Category": "Consumable"
+	},
+	{
+		"ID": 20,
+		"JLabel": "石つぶて",
+		"Name": "throwing stone",
+		"NameJP": "石つぶて",
+		"Icon": 312,
+		"Sort": 1110,
+		"Category": "Consumable"
+	},
+	{
+		"ID": 21,
+		"JLabel": "ブーメラン",
+		"Name": "not used",
+		"NameJP": "ブーメラン・未使用",
+		"Icon": 313,
+		"Sort": 60890,
+		"Category": "Other"
+	},
+	{
+		"ID": 22,
+		"JLabel": "どくばり",
+		"Name": "not used",
+		"NameJP": "どくばり・未使用",
+		"Icon": 314,
+		"Sort": 60900,
+		"Category": "Other"
+	},
+	{
+		"ID": 23,
+		"JLabel": "なげナイフ",
+		"Name": "not used",
+		"NameJP": "なげナイフ・未使用",
+		"Icon": 315,
+		"Sort": 60910,
+		"Category": "Other"
+	},
+	{
+		"ID": 24,
+		"JLabel": "聖なるなげナイフ",
+		"Name": "divine dagger",
+		"NameJP": "聖なるナイフ",
+		"Icon": 316,
+		"Sort": 1120,
+		"Category": "Consumable"
+	},
+	{
+		"ID": 26,
+		"JLabel": "バケツ1",
+		"Name": "not used",
+		"NameJP": "銅バケツ・未使用",
+		"Icon": 423,
+		"Sort": 60920,
+		"Category": "Other"
+	},
+	{
+		"ID": 27,
+		"JLabel": "バケツ2",
+		"Name": "not used",
+		"NameJP": "鉄バケツ・未使用",
+		"Icon": 443,
+		"Sort": 60930,
+		"Category": "Other"
+	},
+	{
+		"ID": 28,
+		"JLabel": "黒曜石バケツ",
+		"Name": "not used",
+		"NameJP": "黒曜バケツ・未使用",
+		"Icon": 767,
+		"Sort": 60940,
+		"Category": "Other"
+	},
+	{
+		"ID": 29,
+		"JLabel": "くまで",
+		"Name": "rake",
+		"NameJP": "くまで",
+		"Icon": 444,
+		"Sort": 3030,
+		"Category": "Items"
+	},
+	{
+		"ID": 30,
+		"JLabel": "草の種",
+		"Name": "not used",
+		"NameJP": "草原のたね・未使用",
+		"Icon": 536,
+		"Sort": 60950,
+		"Category": "Other"
+	},
+	{
+		"ID": 31,
+		"JLabel": "木のバケツ",
+		"Name": "bucket",
+		"NameJP": "木のバケツ",
+		"Icon": 442,
+		"Sort": 3000,
+		"Category": "Items"
+	},
+	{
+		"ID": 32,
+		"JLabel": "つりざお",
+		"Name": "fishing rod",
+		"NameJP": "つりざお",
+		"Icon": 768,
+		"Sort": 3020,
+		"Category": "Items"
+	},
+	{
+		"ID": 33,
+		"JLabel": "溶岩弾",
+		"Name": "Sizz shot",
+		"NameJP": "ほのおの弾丸",
+		"Icon": 660,
+		"Sort": 1130,
+		"Category": "Consumable"
+	},
+	{
+		"ID": 34,
+		"JLabel": "氷河弾",
+		"Name": "Crack shot",
+		"NameJP": "こおりの弾丸",
+		"Icon": 661,
+		"Sort": 1140,
+		"Category": "Consumable"
+	},
+	{
+		"ID": 35,
+		"JLabel": "まほうのかぎ",
+		"Name": "key",
+		"NameJP": "かぎ",
+		"Icon": 769,
+		"Sort": 1300,
+		"Category": "Consumable"
+	},
+	{
+		"ID": 36,
+		"JLabel": "さいごのかぎ",
+		"Name": "ultimate key",
+		"NameJP": "さいごのかぎ",
+		"Icon": 623,
+		"Sort": 8110,
+		"Category": "ImportantItems"
+	},
+	{
+		"ID": 37,
+		"JLabel": "虹のしずく",
+		"Name": "Rainbow Drop",
+		"NameJP": "虹のしずく",
+		"Icon": 760,
+		"Sort": 8120,
+		"Category": "ImportantItems"
+	},
+	{
+		"ID": 38,
+		"JLabel": "イオナズン弾",
+		"Name": "Kaboom shot",
+		"NameJP": "イオナズンの弾丸",
+		"Icon": 761,
+		"Sort": 1150,
+		"Category": "Consumable"
+	},
+	{
+		"ID": 39,
+		"JLabel": "黄金のかけら",
+		"Name": "tarnished token",
+		"NameJP": "さびたメダル",
+		"Icon": 376,
+		"Sort": 8030,
+		"Category": "ImportantItems"
+	},
+	{
+		"ID": 40,
+		"JLabel": "あまぐものかけら",
+		"Name": "storm stone",
+		"NameJP": "あまぐものかざり",
+		"Icon": 579,
+		"Sort": 8040,
+		"Category": "ImportantItems"
+	},
+	{
+		"ID": 41,
+		"JLabel": "たいようのかけら",
+		"Name": "cracked crystal",
+		"NameJP": "くだけた宝玉",
+		"Icon": 522,
+		"Sort": 8050,
+		"Category": "ImportantItems"
+	},
+	{
+		"ID": 44,
+		"JLabel": "あまぐものつえ",
+		"Name": "Staff of Rain",
+		"NameJP": "あまぐものつえ",
+		"Icon": 759,
+		"Sort": 8070,
+		"Category": "ImportantItems"
+	},
+	{
+		"ID": 45,
+		"JLabel": "たいようのいし",
+		"Name": "Sunstone",
+		"NameJP": "たいようのいし",
+		"Icon": 521,
+		"Sort": 8080,
+		"Category": "ImportantItems"
+	},
+	{
+		"ID": 47,
+		"JLabel": "(仮)自動復活アイテム",
+		"Name": "Yggdrasil essence",
+		"NameJP": "せかいじゅの薬",
+		"Icon": 625,
+		"Sort": 1030,
+		"Category": "Consumable"
+	},
+	{
+		"ID": 48,
+		"JLabel": "バケツ4",
+		"Name": "horn-rimmed bucket",
+		"NameJP": "ホネ組みバケツ",
+		"Icon": 442,
+		"Sort": 3010,
+		"Category": "Items"
+	},
+	{
+		"ID": 50,
+		"JLabel": "かいじゅの薬",
+		"Name": "Sheen salts",
+		"NameJP": "シャナクの薬",
+		"Icon": 441,
+		"Sort": 1080,
+		"Category": "Consumable"
+	},
+	{
+		"ID": 52,
+		"JLabel": "世界地図",
+		"Name": "world map",
+		"NameJP": "世界地図",
+		"Icon": 637,
+		"Sort": 8000,
+		"Category": "ImportantItems"
+	},
+	{
+		"ID": 54,
+		"JLabel": "小麦の種",
+		"Name": "wheat seed",
+		"NameJP": "小麦のたね",
+		"Icon": 632,
+		"Sort": 1210,
+		"Category": "Consumable"
+	},
+	{
+		"ID": 55,
+		"JLabel": "種芋",
+		"Name": "potato sprout",
+		"NameJP": "たねイモ",
+		"Icon": 633,
+		"Sort": 1220,
+		"Category": "Consumable"
+	},
+	{
+		"ID": 56,
+		"JLabel": "トマトの種",
+		"Name": "heartfruit seed",
+		"NameJP": "ハートのたね",
+		"Icon": 634,
+		"Sort": 1230,
+		"Category": "Consumable"
+	},
+	{
+		"ID": 57,
+		"JLabel": "さとうきびの苗木",
+		"Name": "sugar cane seedling",
+		"NameJP": "あまきびの苗",
+		"Icon": 635,
+		"Sort": 1240,
+		"Category": "Consumable"
+	},
+	{
+		"ID": 58,
+		"JLabel": "大豆の芽",
+		"Name": "butterbean sprout",
+		"NameJP": "大豆の芽",
+		"Icon": 636,
+		"Sort": 1200,
+		"Category": "Consumable"
+	},
+	{
+		"ID": 59,
+		"JLabel": "肥料",
+		"Name": "faerie fertiliser",
+		"NameJP": "まほうのこやし",
+		"Icon": 588,
+		"Sort": 1260,
+		"Category": "Consumable"
+	},
+	{
+		"ID": 61,
+		"JLabel": "やみのたま",
+		"Name": "Sphere of Darkness",
+		"NameJP": "やみのたま",
+		"Icon": 590,
+		"Sort": 60960,
+		"Category": "Other"
+	},
+	{
+		"ID": 62,
+		"JLabel": "ひかりのたま",
+		"Name": "Sphere of Light",
+		"NameJP": "ひかりのたま",
+		"Icon": 622,
+		"Sort": 8500,
+		"Category": "ImportantItems"
+	},
+	{
+		"ID": 64,
+		"JLabel": "腐朽液",
+		"Name": "not used",
+		"NameJP": "腐朽液・未使用",
+		"Icon": 436,
+		"Sort": 60970,
+		"Category": "Other"
+	},
+	{
+		"ID": 65,
+		"JLabel": "黄金のメダル（ステージ４用）",
+		"Name": "Ancient Emblem",
+		"NameJP": "いにしえのメダル",
+		"Icon": 378,
+		"Sort": 8061,
+		"Category": "ImportantItems"
+	},
+	{
+		"ID": 66,
+		"JLabel": "あまぐものつえ（ステージ４用）",
+		"Name": "Staff of Rain",
+		"NameJP": "あまぐものつえ",
+		"Icon": 759,
+		"Sort": 8071,
+		"Category": "ImportantItems"
+	},
+	{
+		"ID": 67,
+		"JLabel": "たいようのいし（ステージ４用）",
+		"Name": "Sunstone",
+		"NameJP": "たいようのいし",
+		"Icon": 521,
+		"Sort": 8081,
+		"Category": "ImportantItems"
+	},
+	{
+		"ID": 68,
+		"JLabel": "おうじょのあい",
+		"Name": "not used",
+		"NameJP": "おうじょのあい・未使用",
+		"Icon": 2493,
+		"Sort": 60980,
+		"Category": "Other"
+	},
+	{
+		"ID": 69,
+		"JLabel": "かみふぶき",
+		"Name": "confetti",
+		"NameJP": "かみふぶき",
+		"Icon": 742,
+		"Sort": 3381,
+		"Category": "Items"
+	},
+	{
+		"ID": 70,
+		"JLabel": "ウェーブチケット1",
+		"Name": "slimy tussle ticket",
+		"NameJP": "バトル小手調べＡ",
+		"Icon": 756,
+		"Sort": 19000,
+		"Category": "BattleTickets"
+	},
+	{
+		"ID": 71,
+		"JLabel": "ウェーブチケット2",
+		"Name": "flattened tussle ticket",
+		"NameJP": "バトル小手調べＢ",
+		"Icon": 756,
+		"Sort": 19010,
+		"Category": "BattleTickets"
+	},
+	{
+		"ID": 72,
+		"JLabel": "ウェーブチケット3",
+		"Name": "poisonous tussle ticket",
+		"NameJP": "バトル小手調べＣ",
+		"Icon": 756,
+		"Sort": 19020,
+		"Category": "BattleTickets"
+	},
+	{
+		"ID": 73,
+		"JLabel": "ウェーブチケット4",
+		"Name": "roughed-up tussle ticket",
+		"NameJP": "バトル小手調べＤ",
+		"Icon": 756,
+		"Sort": 19030,
+		"Category": "BattleTickets"
+	},
+	{
+		"ID": 74,
+		"JLabel": "ウェーブチケット5",
+		"Name": "torrid tussle ticket",
+		"NameJP": "バトル小手調べＥ",
+		"Icon": 756,
+		"Sort": 19040,
+		"Category": "BattleTickets"
+	},
+	{
+		"ID": 75,
+		"JLabel": "ウェーブチケット6",
+		"Name": "magical tussle ticket",
+		"NameJP": "バトル小手調べＦ",
+		"Icon": 756,
+		"Sort": 19050,
+		"Category": "BattleTickets"
+	},
+	{
+		"ID": 76,
+		"JLabel": "ウェーブチケット7",
+		"Name": "bloody tussle ticket",
+		"NameJP": "バトル小手調べＧ",
+		"Icon": 756,
+		"Sort": 19060,
+		"Category": "BattleTickets"
+	},
+	{
+		"ID": 77,
+		"JLabel": "ウェーブチケット8",
+		"Name": "demonic tussle ticket",
+		"NameJP": "バトル小手調べＨ",
+		"Icon": 756,
+		"Sort": 19070,
+		"Category": "BattleTickets"
+	},
+	{
+		"ID": 78,
+		"JLabel": "ウェーブチケット9",
+		"Name": "skeletal trouble ticket",
+		"NameJP": "バトル肩ならしＡ",
+		"Icon": 757,
+		"Sort": 19080,
+		"Category": "BattleTickets"
+	},
+	{
+		"ID": 79,
+		"JLabel": "ウェーブチケット10",
+		"Name": "feathery trouble ticket",
+		"NameJP": "バトル肩ならしＢ",
+		"Icon": 757,
+		"Sort": 19090,
+		"Category": "BattleTickets"
+	},
+	{
+		"ID": 80,
+		"JLabel": "ウェーブチケット11",
+		"Name": "prickly trouble ticket",
+		"NameJP": "バトル肩ならしＣ",
+		"Icon": 757,
+		"Sort": 19100,
+		"Category": "BattleTickets"
+	},
+	{
+		"ID": 81,
+		"JLabel": "ウェーブチケット12",
+		"Name": "rotten trouble ticket",
+		"NameJP": "バトル肩ならしＤ",
+		"Icon": 757,
+		"Sort": 19110,
+		"Category": "BattleTickets"
+	},
+	{
+		"ID": 82,
+		"JLabel": "ウェーブチケット13",
+		"Name": "tricky trouble ticket",
+		"NameJP": "バトル肩ならしＥ",
+		"Icon": 757,
+		"Sort": 19120,
+		"Category": "BattleTickets"
+	},
+	{
+		"ID": 83,
+		"JLabel": "ウェーブチケット14",
+		"Name": "metallic trouble ticket",
+		"NameJP": "バトル肩ならしＦ",
+		"Icon": 757,
+		"Sort": 19130,
+		"Category": "BattleTickets"
+	},
+	{
+		"ID": 84,
+		"JLabel": "ウェーブチケット15",
+		"Name": "baleful trouble ticket",
+		"NameJP": "バトル肩ならしＧ",
+		"Icon": 757,
+		"Sort": 19140,
+		"Category": "BattleTickets"
+	},
+	{
+		"ID": 85,
+		"JLabel": "ウェーブチケット16",
+		"Name": "deadly trouble ticket",
+		"NameJP": "バトル肩ならしＨ",
+		"Icon": 757,
+		"Sort": 19150,
+		"Category": "BattleTickets"
+	},
+	{
+		"ID": 86,
+		"JLabel": "ウェーブチケット17",
+		"Name": "stony trauma ticket",
+		"NameJP": "バトル腕だめしＡ",
+		"Icon": 758,
+		"Sort": 19160,
+		"Category": "BattleTickets"
+	},
+	{
+		"ID": 87,
+		"JLabel": "ウェーブチケット18",
+		"Name": "frightening trauma ticket",
+		"NameJP": "バトル腕だめしＢ",
+		"Icon": 758,
+		"Sort": 19170,
+		"Category": "BattleTickets"
+	},
+	{
+		"ID": 88,
+		"JLabel": "ウェーブチケット19",
+		"Name": "piercing trauma ticket",
+		"NameJP": "バトル腕だめしＣ",
+		"Icon": 758,
+		"Sort": 19180,
+		"Category": "BattleTickets"
+	},
+	{
+		"ID": 89,
+		"JLabel": "ウェーブチケット20",
+		"Name": "resplendent trauma ticket",
+		"NameJP": "バトル腕だめしＤ",
+		"Icon": 758,
+		"Sort": 19190,
+		"Category": "BattleTickets"
+	},
+	{
+		"ID": 90,
+		"JLabel": "ウェーブチケット21",
+		"Name": "towering trauma ticket",
+		"NameJP": "バトル腕だめしＥ",
+		"Icon": 758,
+		"Sort": 19200,
+		"Category": "BattleTickets"
+	},
+	{
+		"ID": 91,
+		"JLabel": "ウェーブチケット22",
+		"Name": "mechanical trauma ticket",
+		"NameJP": "バトル腕だめしＦ",
+		"Icon": 758,
+		"Sort": 19210,
+		"Category": "BattleTickets"
+	},
+	{
+		"ID": 92,
+		"JLabel": "ウェーブチケット23",
+		"Name": "burning trauma ticket",
+		"NameJP": "バトル腕だめしＧ",
+		"Icon": 758,
+		"Sort": 19220,
+		"Category": "BattleTickets"
+	},
+	{
+		"ID": 93,
+		"JLabel": "ウェーブチケット24",
+		"Name": "dreadful trauma ticket",
+		"NameJP": "バトル腕だめしＨ",
+		"Icon": 758,
+		"Sort": 19230,
+		"Category": "BattleTickets"
+	},
+	{
+		"ID": 94,
+		"JLabel": "ウェーブチケット25",
+		"Name": "All-Knighter ticket",
+		"NameJP": "よろいの戦士たち",
+		"Icon": 758,
+		"Sort": 19240,
+		"Category": "BattleTickets"
+	},
+	{
+		"ID": 95,
+		"JLabel": "ウェーブチケット26",
+		"Name": "Full Metal ticket",
+		"NameJP": "マシンアーミーズ",
+		"Icon": 758,
+		"Sort": 19250,
+		"Category": "BattleTickets"
+	},
+	{
+		"ID": 96,
+		"JLabel": "ウェーブチケット27",
+		"Name": "Gold Rush ticket",
+		"NameJP": "黄金にひかれし者",
+		"Icon": 758,
+		"Sort": 19260,
+		"Category": "BattleTickets"
+	},
+	{
+		"ID": 97,
+		"JLabel": "ウェーブチケット28",
+		"Name": "Furry Fury ticket",
+		"NameJP": "瞬間移動マジック",
+		"Icon": 758,
+		"Sort": 19270,
+		"Category": "BattleTickets"
+	},
+	{
+		"ID": 98,
+		"JLabel": "ウェーブチケット29",
+		"Name": "Mager League ticket",
+		"NameJP": "ギラギラまほう団",
+		"Icon": 758,
+		"Sort": 19280,
+		"Category": "BattleTickets"
+	},
+	{
+		"ID": 99,
+		"JLabel": "ウェーブチケット30",
+		"Name": "Blackened Blooze ticket",
+		"NameJP": "たちはだかる者",
+		"Icon": 758,
+		"Sort": 19290,
+		"Category": "BattleTickets"
+	},
+	{
+		"ID": 100,
+		"JLabel": "ウェーブカプセル",
+		"Name": "blank ticket",
+		"NameJP": "白紙のチケット",
+		"Icon": 758,
+		"Sort": 18000,
+		"Category": "Materials2"
+	},
+	{
+		"ID": 101,
+		"JLabel": "どんぐり",
+		"Name": "not used",
+		"NameJP": "どんぐり・未使用",
+		"Icon": 387,
+		"Sort": 60990,
+		"Category": "Other"
+	},
+	{
+		"ID": 102,
+		"JLabel": "サラダ",
+		"Name": "fruit salad",
+		"NameJP": "森のサラダ",
+		"Icon": 388,
+		"Sort": 2160,
+		"Category": "Food"
+	},
+	{
+		"ID": 103,
+		"JLabel": "りんご",
+		"Name": "not used",
+		"NameJP": "りんご・未使用",
+		"Icon": 389,
+		"Sort": 61000,
+		"Category": "Other"
+	},
+	{
+		"ID": 104,
+		"JLabel": "恵みのステーキ",
+		"Name": "not used",
+		"NameJP": "ばつぐんステーキ・未使用",
+		"Icon": 373,
+		"Sort": 61010,
+		"Category": "Other"
+	},
+	{
+		"ID": 105,
+		"JLabel": "ステーキ",
+		"Name": "not used",
+		"NameJP": "うさぎステーキ・未使用",
+		"Icon": 373,
+		"Sort": 61020,
+		"Category": "Other"
+	},
+	{
+		"ID": 106,
+		"JLabel": "かたいパン",
+		"Name": "not used",
+		"NameJP": "かたいパン・未使用",
+		"Icon": 427,
+		"Sort": 61030,
+		"Category": "Other"
+	},
+	{
+		"ID": 107,
+		"JLabel": "ドロルのつぼ焼き",
+		"Name": "not used",
+		"NameJP": "ドロルのつぼ焼き・未使用",
+		"Icon": 24,
+		"Sort": 61040,
+		"Category": "Other"
+	},
+	{
+		"ID": 108,
+		"JLabel": "タン・ステーキ",
+		"Name": "not used",
+		"NameJP": "タン・ステーキ・未使用",
+		"Icon": 24,
+		"Sort": 61050,
+		"Category": "Other"
+	},
+	{
+		"ID": 109,
+		"JLabel": "やわらかいパン",
+		"Name": "not used",
+		"NameJP": "やわらかいパン・未使用",
+		"Icon": 24,
+		"Sort": 61060,
+		"Category": "Other"
+	},
+	{
+		"ID": 110,
+		"JLabel": "焼きモモガキ",
+		"Name": "not used",
+		"NameJP": "焼きモモガキ・未使用",
+		"Icon": 654,
+		"Sort": 61070,
+		"Category": "Other"
+	},
+	{
+		"ID": 111,
+		"JLabel": "焼きキノコ",
+		"Name": "shrooms-on-a-stick",
+		"NameJP": "焼きキノコ",
+		"Icon": 446,
+		"Sort": 2030,
+		"Category": "Food"
+	},
+	{
+		"ID": 112,
+		"JLabel": "サボテンステーキ",
+		"Name": "cactus steak",
+		"NameJP": "サボテンステーキ",
+		"Icon": 447,
+		"Sort": 2100,
+		"Category": "Food"
+	},
+	{
+		"ID": 114,
+		"JLabel": "スライム串",
+		"Name": "not used",
+		"NameJP": "スライム串・未使用",
+		"Icon": 24,
+		"Sort": 61080,
+		"Category": "Other"
+	},
+	{
+		"ID": 115,
+		"JLabel": "さそりミソ",
+		"Name": "not used",
+		"NameJP": "さそりみそ・未使用",
+		"Icon": 24,
+		"Sort": 61090,
+		"Category": "Other"
+	},
+	{
+		"ID": 116,
+		"JLabel": "焼き魚",
+		"Name": "sardine-on-a-stick",
+		"NameJP": "イワシの炭焼き",
+		"Icon": 455,
+		"Sort": 2060,
+		"Category": "Food"
+	},
+	{
+		"ID": 117,
+		"JLabel": "魚のムニエル",
+		"Name": "sautéed salmon",
+		"NameJP": "サケのムニエル",
+		"Icon": 469,
+		"Sort": 2310,
+		"Category": "Food"
+	},
+	{
+		"ID": 118,
+		"JLabel": "モモガキジュース",
+		"Name": "not used",
+		"NameJP": "モモガキジュース・未使用",
+		"Icon": 656,
+		"Sort": 61100,
+		"Category": "Other"
+	},
+	{
+		"ID": 119,
+		"JLabel": "かき氷",
+		"Name": "snow cone",
+		"NameJP": "かき氷",
+		"Icon": 448,
+		"Sort": 2360,
+		"Category": "Food"
+	},
+	{
+		"ID": 121,
+		"JLabel": "サソリのから揚げ",
+		"Name": "not used",
+		"NameJP": "サソリのから揚げ・未使用",
+		"Icon": 655,
+		"Sort": 61110,
+		"Category": "Other"
+	},
+	{
+		"ID": 122,
+		"JLabel": "魚介スープ",
+		"Name": "bouillabaisse",
+		"NameJP": "ブイヤベース",
+		"Icon": 646,
+		"Sort": 2270,
+		"Category": "Food"
+	},
+	{
+		"ID": 123,
+		"JLabel": "枝豆",
+		"Name": "boiled butterbeans",
+		"NameJP": "えだまめ",
+		"Icon": 641,
+		"Sort": 2150,
+		"Category": "Food"
+	},
+	{
+		"ID": 124,
+		"JLabel": "モモガキの実",
+		"Name": "plumberry",
+		"NameJP": "モモガキの実",
+		"Icon": 734,
+		"Sort": 2000,
+		"Category": "Food"
+	},
+	{
+		"ID": 126,
+		"JLabel": "モモガキのジャム",
+		"Name": "plumberry jam",
+		"NameJP": "モモガキジャム",
+		"Icon": 626,
+		"Sort": 61120,
+		"Category": "Other"
+	},
+	{
+		"ID": 127,
+		"JLabel": "パン",
+		"Name": "bread",
+		"NameJP": "パン",
+		"Icon": 427,
+		"Sort": 2170,
+		"Category": "Food"
+	},
+	{
+		"ID": 128,
+		"JLabel": "ジャムパン",
+		"Name": "jam doughnuts",
+		"NameJP": "ジャムパン",
+		"Icon": 627,
+		"Sort": 61130,
+		"Category": "Other"
+	},
+	{
+		"ID": 130,
+		"JLabel": "ウサギのステーキ",
+		"Name": "bunicorn steak",
+		"NameJP": "ウサギステーキ",
+		"Icon": 373,
+		"Sort": 2110,
+		"Category": "Food"
+	},
+	{
+		"ID": 131,
+		"JLabel": "ハンバーガー",
+		"Name": "bunny burger",
+		"NameJP": "ハンバーガー",
+		"Icon": 657,
+		"Sort": 2180,
+		"Category": "Food"
+	},
+	{
+		"ID": 132,
+		"JLabel": "ポテトサラダ",
+		"Name": "potato salad",
+		"NameJP": "ポテトサラダ",
+		"Icon": 445,
+		"Sort": 2220,
+		"Category": "Food"
+	},
+	{
+		"ID": 133,
+		"JLabel": "もりあわせサラダ",
+		"Name": "super salad",
+		"NameJP": "もりもりサラダ",
+		"Icon": 643,
+		"Sort": 2230,
+		"Category": "Food"
+	},
+	{
+		"ID": 134,
+		"JLabel": "会心のバーガー",
+		"Name": "beany bunny burger",
+		"NameJP": "うさまめバーガー",
+		"Icon": 658,
+		"Sort": 2190,
+		"Category": "Food"
+	},
+	{
+		"ID": 136,
+		"JLabel": "肉の甘辛煮",
+		"Name": "bunny bits",
+		"NameJP": "肉のヒリヒリ煮",
+		"Icon": 451,
+		"Sort": 61140,
+		"Category": "Other"
+	},
+	{
+		"ID": 137,
+		"JLabel": "溶岩焼き",
+		"Name": "black and blue steak",
+		"NameJP": "ジュワジュワ焼き",
+		"Icon": 452,
+		"Sort": 61150,
+		"Category": "Other"
+	},
+	{
+		"ID": 138,
+		"JLabel": "溶岩鍋",
+		"Name": "searing steak",
+		"NameJP": "溶岩ステーキ",
+		"Icon": 644,
+		"Sort": 2120,
+		"Category": "Food"
+	},
+	{
+		"ID": 139,
+		"JLabel": "温泉卵",
+		"Name": "coddled egg",
+		"NameJP": "温泉たまご",
+		"Icon": 456,
+		"Sort": 2090,
+		"Category": "Food"
+	},
+	{
+		"ID": 140,
+		"JLabel": "目玉焼き",
+		"Name": "fried egg",
+		"NameJP": "めだま焼き",
+		"Icon": 458,
+		"Sort": 2080,
+		"Category": "Food"
+	},
+	{
+		"ID": 142,
+		"JLabel": "アイスクリーム",
+		"Name": "ice cream",
+		"NameJP": "アイスクリーム",
+		"Icon": 449,
+		"Sort": 2350,
+		"Category": "Food"
+	},
+	{
+		"ID": 143,
+		"JLabel": "焼きカエル",
+		"Name": "fried frog meat",
+		"NameJP": "焼きガエル",
+		"Icon": 728,
+		"Sort": 2070,
+		"Category": "Food"
+	},
+	{
+		"ID": 144,
+		"JLabel": "焼きキノコ１個",
+		"Name": "fried frogstool",
+		"NameJP": "ニガきのこ焼き",
+		"Icon": 617,
+		"Sort": 2040,
+		"Category": "Food"
+	},
+	{
+		"ID": 150,
+		"JLabel": "レンガ壁キット",
+		"Name": "brick cladding",
+		"NameJP": "レンガウォール",
+		"Icon": 614,
+		"Sort": 9060,
+		"Category": "BlockModifiers"
+	},
+	{
+		"ID": 151,
+		"JLabel": "石垣床キット",
+		"Name": "flagstone flooring",
+		"NameJP": "石だたみセット",
+		"Icon": 601,
+		"Sort": 9070,
+		"Category": "BlockModifiers"
+	},
+	{
+		"ID": 152,
+		"JLabel": "石垣壁キット",
+		"Name": "stone cladding",
+		"NameJP": "石垣づみのカベ",
+		"Icon": 600,
+		"Sort": 9080,
+		"Category": "BlockModifiers"
+	},
+	{
+		"ID": 153,
+		"JLabel": "ござ床キット",
+		"Name": "straw flooring",
+		"NameJP": "しきわらセット",
+		"Icon": 605,
+		"Sort": 9050,
+		"Category": "BlockModifiers"
+	},
+	{
+		"ID": 154,
+		"JLabel": "木材壁キット",
+		"Name": "wooden cladding",
+		"NameJP": "ウッドウォール",
+		"Icon": 604,
+		"Sort": 9100,
+		"Category": "BlockModifiers"
+	},
+	{
+		"ID": 155,
+		"JLabel": "木材床キット",
+		"Name": "wooden flooring",
+		"NameJP": "フローリング",
+		"Icon": 606,
+		"Sort": 9090,
+		"Category": "BlockModifiers"
+	},
+	{
+		"ID": 156,
+		"JLabel": "桜キット",
+		"Name": "springtide sprinkles",
+		"NameJP": "はなさかの灰",
+		"Icon": 771,
+		"Sort": 1280,
+		"Category": "Consumable"
+	},
+	{
+		"ID": 157,
+		"JLabel": "街壁キット",
+		"Name": "timbered cladding",
+		"NameJP": "おしゃれウォール",
+		"Icon": 602,
+		"Sort": 9130,
+		"Category": "BlockModifiers"
+	},
+	{
+		"ID": 158,
+		"JLabel": "城壁キット",
+		"Name": "castle cladding",
+		"NameJP": "じょうへきセット",
+		"Icon": 603,
+		"Sort": 9110,
+		"Category": "BlockModifiers"
+	},
+	{
+		"ID": 159,
+		"JLabel": "街床赤キット",
+		"Name": "purple flagstone flooring",
+		"NameJP": "赤い石だたみ",
+		"Icon": 608,
+		"Sort": 9150,
+		"Category": "BlockModifiers"
+	},
+	{
+		"ID": 160,
+		"JLabel": "街床青キット",
+		"Name": "blue flagstone flooring",
+		"NameJP": "青い石だたみ",
+		"Icon": 609,
+		"Sort": 9160,
+		"Category": "BlockModifiers"
+	},
+	{
+		"ID": 161,
+		"JLabel": "絨毯キット",
+		"Name": "red carpeting",
+		"NameJP": "じゅうたんセット",
+		"Icon": 610,
+		"Sort": 9140,
+		"Category": "BlockModifiers"
+	},
+	{
+		"ID": 162,
+		"JLabel": "城床キット",
+		"Name": "castle tiling",
+		"NameJP": "城の床セット",
+		"Icon": 612,
+		"Sort": 9120,
+		"Category": "BlockModifiers"
+	},
+	{
+		"ID": 163,
+		"JLabel": "土上面草キット",
+		"Name": "grass seed",
+		"NameJP": "草原のたね",
+		"Icon": 738,
+		"Sort": 9000,
+		"Category": "BlockModifiers"
+	},
+	{
+		"ID": 164,
+		"JLabel": "土上面濃草キット",
+		"Name": "limegrass seed",
+		"NameJP": "芝生のたね",
+		"Icon": 740,
+		"Sort": 9010,
+		"Category": "BlockModifiers"
+	},
+	{
+		"ID": 165,
+		"JLabel": "土アクセント植物キット",
+		"Name": "lichen limb",
+		"NameJP": "うごめく枝",
+		"Icon": 687,
+		"Sort": 9020,
+		"Category": "BlockModifiers"
+	},
+	{
+		"ID": 166,
+		"JLabel": "土上面枯れ草キット",
+		"Name": "witchgrass seed",
+		"NameJP": "枯れ草のたね",
+		"Icon": 739,
+		"Sort": 9030,
+		"Category": "BlockModifiers"
+	},
+	{
+		"ID": 167,
+		"JLabel": "土上面黄色草キット",
+		"Name": "lemongrass seed",
+		"NameJP": "南国草のたね",
+		"Icon": 737,
+		"Sort": 9040,
+		"Category": "BlockModifiers"
+	},
+	{
+		"ID": 170,
+		"JLabel": "ケーキ",
+		"Name": "hearty cream cake",
+		"NameJP": "乙女ケーキ",
+		"Icon": 450,
+		"Sort": 2340,
+		"Category": "Food"
+	},
+	{
+		"ID": 171,
+		"JLabel": "海鮮鍋",
+		"Name": "sailor's stew",
+		"NameJP": "海鮮鍋",
+		"Icon": 463,
+		"Sort": 2280,
+		"Category": "Food"
+	},
+	{
+		"ID": 172,
+		"JLabel": "麦粥",
+		"Name": "porridge",
+		"NameJP": "麦がゆ",
+		"Icon": 629,
+		"Sort": 2140,
+		"Category": "Food"
+	},
+	{
+		"ID": 173,
+		"JLabel": "薬膳鍋",
+		"Name": "hell broth",
+		"NameJP": "やくぜん鍋",
+		"Icon": 630,
+		"Sort": 2290,
+		"Category": "Food"
+	},
+	{
+		"ID": 174,
+		"JLabel": "きのこスープ",
+		"Name": "cream of marshroom soup",
+		"NameJP": "きのこ豆乳スープ",
+		"Icon": 638,
+		"Sort": 2260,
+		"Category": "Food"
+	},
+	{
+		"ID": 175,
+		"JLabel": "フライドポテト",
+		"Name": "fries",
+		"NameJP": "フライドポテト",
+		"Icon": 639,
+		"Sort": 2210,
+		"Category": "Food"
+	},
+	{
+		"ID": 176,
+		"JLabel": "刺身盛り合わせ",
+		"Name": "fresh fish feast",
+		"NameJP": "刺身もりもり",
+		"Icon": 647,
+		"Sort": 2300,
+		"Category": "Food"
+	},
+	{
+		"ID": 177,
+		"JLabel": "イカ焼き",
+		"Name": "squid-on-a-stick",
+		"NameJP": "焼きイカ",
+		"Icon": 648,
+		"Sort": 2050,
+		"Category": "Food"
+	},
+	{
+		"ID": 178,
+		"JLabel": "ボイルかに",
+		"Name": "cooked crab claw",
+		"NameJP": "ゆでガニ",
+		"Icon": 649,
+		"Sort": 2240,
+		"Category": "Food"
+	},
+	{
+		"ID": 179,
+		"JLabel": "バケット",
+		"Name": "baguette",
+		"NameJP": "バゲット",
+		"Icon": 653,
+		"Sort": 2200,
+		"Category": "Food"
+	},
+	{
+		"ID": 180,
+		"JLabel": "豆乳",
+		"Name": "buttermilk",
+		"NameJP": "豆乳",
+		"Icon": 495,
+		"Sort": 2250,
+		"Category": "Food"
+	},
+	{
+		"ID": 181,
+		"JLabel": "ほねつき肉",
+		"Name": "bony steak",
+		"NameJP": "ほねつき焼肉",
+		"Icon": 457,
+		"Sort": 2130,
+		"Category": "Food"
+	},
+	{
+		"ID": 200,
+		"JLabel": "テスト：状態変化",
+		"Name": "test: change status effect",
+		"NameJP": "テスト：状態変化",
+		"Icon": 359,
+		"Sort": 0,
+		"Category": "None"
+	},
+	{
+		"ID": 301,
+		"JLabel": "こんぼう",
+		"Name": "oaken club",
+		"NameJP": "こんぼう",
+		"Icon": 285,
+		"Sort": 4010,
+		"Category": "Weapons"
+	},
+	{
+		"ID": 302,
+		"JLabel": "どうのつるぎ",
+		"Name": "copper sword",
+		"NameJP": "どうのつるぎ",
+		"Icon": 286,
+		"Sort": 4030,
+		"Category": "Weapons"
+	},
+	{
+		"ID": 303,
+		"JLabel": "てつのつるぎ",
+		"Name": "iron broadsword",
+		"NameJP": "てつのつるぎ",
+		"Icon": 287,
+		"Sort": 4040,
+		"Category": "Weapons"
+	},
+	{
+		"ID": 304,
+		"JLabel": "はがねのつるぎ",
+		"Name": "steel broadsword",
+		"NameJP": "はがねのつるぎ",
+		"Icon": 288,
+		"Sort": 4050,
+		"Category": "Weapons"
+	},
+	{
+		"ID": 305,
+		"JLabel": "ひかりのつるぎ",
+		"Name": "aurora blade",
+		"NameJP": "ひかりのつるぎ",
+		"Icon": 289,
+		"Sort": 4070,
+		"Category": "Weapons"
+	},
+	{
+		"ID": 306,
+		"JLabel": "ほのおのつるぎ",
+		"Name": "fire blade",
+		"NameJP": "ほのおのつるぎ",
+		"Icon": 290,
+		"Sort": 4060,
+		"Category": "Weapons"
+	},
+	{
+		"ID": 307,
+		"JLabel": "おうじゃのけん",
+		"Name": "Sword of Kings",
+		"NameJP": "おうじゃのけん",
+		"Icon": 291,
+		"Sort": 4090,
+		"Category": "Weapons"
+	},
+	{
+		"ID": 308,
+		"JLabel": "はやぶさのけん",
+		"Name": "falcon blade",
+		"NameJP": "はやぶさのけん",
+		"Icon": 292,
+		"Sort": 4080,
+		"Category": "Weapons"
+	},
+	{
+		"ID": 309,
+		"JLabel": "はかいのつるぎ",
+		"Name": "sword of ruin",
+		"NameJP": "はかいのつるぎ",
+		"Icon": 293,
+		"Sort": 4110,
+		"Category": "Weapons"
+	},
+	{
+		"ID": 310,
+		"JLabel": "ひのきのぼう",
+		"Name": "cypress stick",
+		"NameJP": "ひのきのぼう",
+		"Icon": 283,
+		"Sort": 4000,
+		"Category": "Weapons"
+	},
+	{
+		"ID": 311,
+		"JLabel": "いしのつるぎ",
+		"Name": "stone sword",
+		"NameJP": "いしのつるぎ",
+		"Icon": 294,
+		"Sort": 4020,
+		"Category": "Weapons"
+	},
+	{
+		"ID": 312,
+		"JLabel": "ロトのつるぎ",
+		"Name": "Erdrick's sword",
+		"NameJP": "ロトのつるぎ",
+		"Icon": 284,
+		"Sort": 4100,
+		"Category": "Weapons"
+	},
+	{
+		"ID": 313,
+		"JLabel": "どうのつるぎ：バディ用",
+		"Name": "copper sword",
+		"NameJP": "どうのつるぎ",
+		"Icon": 286,
+		"Sort": 60510,
+		"Category": "Other"
+	},
+	{
+		"ID": 314,
+		"JLabel": "てつのつるぎ：バディ用",
+		"Name": "iron broadsword",
+		"NameJP": "てつのつるぎ",
+		"Icon": 287,
+		"Sort": 60520,
+		"Category": "Other"
+	},
+	{
+		"ID": 315,
+		"JLabel": "ひかりのつるぎ：バディ用",
+		"Name": "aurora blade",
+		"NameJP": "ひかりのつるぎ",
+		"Icon": 289,
+		"Sort": 60530,
+		"Category": "Other"
+	},
+	{
+		"ID": 316,
+		"JLabel": "おおきづち",
+		"Name": "giant mallet",
+		"NameJP": "おおきづち",
+		"Icon": 295,
+		"Sort": 5000,
+		"Category": "Tools"
+	},
+	{
+		"ID": 317,
+		"JLabel": "おおかなづち",
+		"Name": "sledgehammer",
+		"NameJP": "おおかなづち",
+		"Icon": 296,
+		"Sort": 5010,
+		"Category": "Tools"
+	},
+	{
+		"ID": 318,
+		"JLabel": "ウォーハンマー",
+		"Name": "war hammer",
+		"NameJP": "ウォーハンマー",
+		"Icon": 297,
+		"Sort": 5020,
+		"Category": "Tools"
+	},
+	{
+		"ID": 319,
+		"JLabel": "まじんのかなづち",
+		"Name": "Hela's hammer",
+		"NameJP": "まじんのかなづち",
+		"Icon": 298,
+		"Sort": 5030,
+		"Category": "Tools"
+	},
+	{
+		"ID": 320,
+		"JLabel": "最強のハンマー",
+		"Name": "Hammer of the Builder",
+		"NameJP": "ビルダーハンマー",
+		"Icon": 299,
+		"Sort": 5040,
+		"Category": "Tools"
+	},
+	{
+		"ID": 321,
+		"JLabel": "緊急用おおきづち",
+		"Name": "not used",
+		"NameJP": "緊急用おおきづち・未使用",
+		"Icon": 295,
+		"Sort": 61160,
+		"Category": "Other"
+	},
+	{
+		"ID": 322,
+		"JLabel": "おおきづち：バディ用",
+		"Name": "giant mallet",
+		"NameJP": "おおきづち",
+		"Icon": 295,
+		"Sort": 60540,
+		"Category": "Other"
+	},
+	{
+		"ID": 323,
+		"JLabel": "おおかなづち：バディ用",
+		"Name": "sledgehammer",
+		"NameJP": "おおかなづち",
+		"Icon": 296,
+		"Sort": 60550,
+		"Category": "Other"
+	},
+	{
+		"ID": 324,
+		"JLabel": "まじんのかなづち：バディ用",
+		"Name": "Hela's hammer",
+		"NameJP": "まじんのかなづち",
+		"Icon": 298,
+		"Sort": 60560,
+		"Category": "Other"
+	},
+	{
+		"ID": 325,
+		"JLabel": "ウォーハンマー：バディ用",
+		"Name": "war hammer",
+		"NameJP": "ウォーハンマー",
+		"Icon": 297,
+		"Sort": 60570,
+		"Category": "Other"
+	},
+	{
+		"ID": 326,
+		"JLabel": "いしのおの",
+		"Name": "stone axe",
+		"NameJP": "いしのおの",
+		"Icon": 300,
+		"Sort": 5050,
+		"Category": "Tools"
+	},
+	{
+		"ID": 327,
+		"JLabel": "てつのおの",
+		"Name": "iron axe",
+		"NameJP": "てつのおの",
+		"Icon": 301,
+		"Sort": 5060,
+		"Category": "Tools"
+	},
+	{
+		"ID": 328,
+		"JLabel": "バトルアックス",
+		"Name": "battleaxe",
+		"NameJP": "バトルアックス",
+		"Icon": 302,
+		"Sort": 5070,
+		"Category": "Tools"
+	},
+	{
+		"ID": 329,
+		"JLabel": "まじんのおの",
+		"Name": "headsman's axe",
+		"NameJP": "まじんのおの",
+		"Icon": 303,
+		"Sort": 61170,
+		"Category": "Other"
+	},
+	{
+		"ID": 330,
+		"JLabel": "最強のおの",
+		"Name": "Axe of the Builder",
+		"NameJP": "ビルダーアックス",
+		"Icon": 304,
+		"Sort": 61180,
+		"Category": "Other"
+	},
+	{
+		"ID": 331,
+		"JLabel": "ヤシ斬りのおの",
+		"Name": "not used",
+		"NameJP": "ヤシ斬りのおの・未使用",
+		"Icon": 300,
+		"Sort": 61190,
+		"Category": "Other"
+	},
+	{
+		"ID": 333,
+		"JLabel": "石つぶてNPC用",
+		"Name": "throwing stone",
+		"NameJP": "石つぶて",
+		"Icon": 312,
+		"Sort": 62220,
+		"Category": "Other"
+	},
+	{
+		"ID": 334,
+		"JLabel": "聖なるなげナイフNPC用",
+		"Name": "divine dagger",
+		"NameJP": "聖なるナイフ",
+		"Icon": 316,
+		"Sort": 62230,
+		"Category": "Other"
+	},
+	{
+		"ID": 337,
+		"JLabel": "かわのたて",
+		"Name": "leather shield",
+		"NameJP": "かわのたて",
+		"Icon": 305,
+		"Sort": 6000,
+		"Category": "Armour"
+	},
+	{
+		"ID": 338,
+		"JLabel": "てつのたて",
+		"Name": "iron shield",
+		"NameJP": "てつのたて",
+		"Icon": 306,
+		"Sort": 6010,
+		"Category": "Armour"
+	},
+	{
+		"ID": 339,
+		"JLabel": "はがねのたて",
+		"Name": "steel shield",
+		"NameJP": "はがねのたて",
+		"Icon": 307,
+		"Sort": 6020,
+		"Category": "Armour"
+	},
+	{
+		"ID": 340,
+		"JLabel": "まほうのたて",
+		"Name": "magic shield",
+		"NameJP": "まほうのたて",
+		"Icon": 308,
+		"Sort": 6030,
+		"Category": "Armour"
+	},
+	{
+		"ID": 341,
+		"JLabel": "みかがみのたて",
+		"Name": "silver shield",
+		"NameJP": "みかがみのたて",
+		"Icon": 309,
+		"Sort": 6040,
+		"Category": "Armour"
+	},
+	{
+		"ID": 342,
+		"JLabel": "ゆうしゃのたて",
+		"Name": "hero's shield",
+		"NameJP": "ゆうしゃのたて",
+		"Icon": 310,
+		"Sort": 6050,
+		"Category": "Armour"
+	},
+	{
+		"ID": 343,
+		"JLabel": "しにがみのたて",
+		"Name": "Thanatos' shield",
+		"NameJP": "しにがみのたて",
+		"Icon": 311,
+		"Sort": 6060,
+		"Category": "Armour"
+	},
+	{
+		"ID": 349,
+		"JLabel": "たびびとのふく",
+		"Name": "wayfarer's clothes",
+		"NameJP": "たびびとのふく",
+		"Icon": 321,
+		"Sort": 6090,
+		"Category": "Armour"
+	},
+	{
+		"ID": 350,
+		"JLabel": "けいこぎ",
+		"Name": "training togs",
+		"NameJP": "けいこぎ",
+		"Icon": 323,
+		"Sort": 6110,
+		"Category": "Armour"
+	},
+	{
+		"ID": 351,
+		"JLabel": "みかわしのふく",
+		"Name": "cloak of evasion",
+		"NameJP": "みかわしのふく",
+		"Icon": 324,
+		"Sort": 6150,
+		"Category": "Armour"
+	},
+	{
+		"ID": 352,
+		"JLabel": "くさりかたびら",
+		"Name": "chain mail",
+		"NameJP": "くさりかたびら",
+		"Icon": 325,
+		"Sort": 6120,
+		"Category": "Armour"
+	},
+	{
+		"ID": 353,
+		"JLabel": "みずのはごろも",
+		"Name": "flowing dress",
+		"NameJP": "みずのはごろも",
+		"Icon": 326,
+		"Sort": 6140,
+		"Category": "Armour"
+	},
+	{
+		"ID": 354,
+		"JLabel": "ぬののふく",
+		"Name": "plain clothes",
+		"NameJP": "ぬののふく",
+		"Icon": 322,
+		"Sort": 6080,
+		"Category": "Armour"
+	},
+	{
+		"ID": 355,
+		"JLabel": "ボロのふく",
+		"Name": "ragged rags",
+		"NameJP": "ボロのふく",
+		"Icon": 335,
+		"Sort": 6070,
+		"Category": "Armour"
+	},
+	{
+		"ID": 361,
+		"JLabel": "かわのよろい",
+		"Name": "leather armour",
+		"NameJP": "かわのよろい",
+		"Icon": 327,
+		"Sort": 6100,
+		"Category": "Armour"
+	},
+	{
+		"ID": 362,
+		"JLabel": "てつのよろい",
+		"Name": "iron armour",
+		"NameJP": "てつのよろい",
+		"Icon": 328,
+		"Sort": 6130,
+		"Category": "Armour"
+	},
+	{
+		"ID": 363,
+		"JLabel": "はがねのよろい",
+		"Name": "full plate armour",
+		"NameJP": "はがねのよろい",
+		"Icon": 329,
+		"Sort": 6180,
+		"Category": "Armour"
+	},
+	{
+		"ID": 364,
+		"JLabel": "やいばのよろい",
+		"Name": "spiked armour",
+		"NameJP": "やいばのよろい",
+		"Icon": 330,
+		"Sort": 6160,
+		"Category": "Armour"
+	},
+	{
+		"ID": 365,
+		"JLabel": "まほうのよろい",
+		"Name": "magic armour",
+		"NameJP": "まほうのよろい",
+		"Icon": 331,
+		"Sort": 6170,
+		"Category": "Armour"
+	},
+	{
+		"ID": 366,
+		"JLabel": "ひかりのよろい",
+		"Name": "auroral armour",
+		"NameJP": "ひかりのよろい",
+		"Icon": 332,
+		"Sort": 6190,
+		"Category": "Armour"
+	},
+	{
+		"ID": 367,
+		"JLabel": "あくまのよろい",
+		"Name": "wailer's mail",
+		"NameJP": "あくまのよろい",
+		"Icon": 333,
+		"Sort": 6200,
+		"Category": "Armour"
+	},
+	{
+		"ID": 368,
+		"JLabel": "あぶないみずぎ",
+		"Name": "scandalous swimsuit",
+		"NameJP": "あぶないみずぎ",
+		"Icon": 334,
+		"Sort": 6210,
+		"Category": "Armour"
+	},
+	{
+		"ID": 374,
+		"JLabel": "ほしふるうでわ",
+		"Name": "meteorite bracer",
+		"NameJP": "ほしふるうでわ",
+		"Icon": 2474,
+		"Sort": 7120,
+		"Category": "Accessories"
+	},
+	{
+		"ID": 375,
+		"JLabel": "そらとぶくつ",
+		"Name": "talaria",
+		"NameJP": "そらとぶくつ",
+		"Icon": 2475,
+		"Sort": 7130,
+		"Category": "Accessories"
+	},
+	{
+		"ID": 376,
+		"JLabel": "きんのゆびわ",
+		"Name": "gold ring",
+		"NameJP": "きんのゆびわ",
+		"Icon": 2476,
+		"Sort": 7020,
+		"Category": "Accessories"
+	},
+	{
+		"ID": 377,
+		"JLabel": "ちからのゆびわ",
+		"Name": "strength ring",
+		"NameJP": "ちからのゆびわ",
+		"Icon": 2477,
+		"Sort": 7000,
+		"Category": "Accessories"
+	},
+	{
+		"ID": 378,
+		"JLabel": "りゅうのうろこ",
+		"Name": "dragon scale",
+		"NameJP": "りゅうのうろこ",
+		"Icon": 2478,
+		"Sort": 7010,
+		"Category": "Accessories"
+	},
+	{
+		"ID": 379,
+		"JLabel": "会心の指輪",
+		"Name": "ring of criticality",
+		"NameJP": "かいしんのゆびわ",
+		"Icon": 2479,
+		"Sort": 7140,
+		"Category": "Accessories"
+	},
+	{
+		"ID": 380,
+		"JLabel": "破毒のリング",
+		"Name": "ring of immunity",
+		"NameJP": "破毒のリング",
+		"Icon": 2480,
+		"Sort": 7030,
+		"Category": "Accessories"
+	},
+	{
+		"ID": 381,
+		"JLabel": "満月のリング",
+		"Name": "full moon ring",
+		"NameJP": "満月のリング",
+		"Icon": 2481,
+		"Sort": 7040,
+		"Category": "Accessories"
+	},
+	{
+		"ID": 382,
+		"JLabel": "目覚ましリング",
+		"Name": "ring of awakening",
+		"NameJP": "目覚ましリング",
+		"Icon": 2482,
+		"Sort": 7060,
+		"Category": "Accessories"
+	},
+	{
+		"ID": 383,
+		"JLabel": "理性のリング",
+		"Name": "ring of clarity",
+		"NameJP": "理性のリング",
+		"Icon": 2483,
+		"Sort": 7050,
+		"Category": "Accessories"
+	},
+	{
+		"ID": 384,
+		"JLabel": "スーパーリング",
+		"Name": "catholicon ring",
+		"NameJP": "スーパーリング",
+		"Icon": 2484,
+		"Sort": 7070,
+		"Category": "Accessories"
+	},
+	{
+		"ID": 385,
+		"JLabel": "まもりのルビー",
+		"Name": "ruby of protection",
+		"NameJP": "まもりのルビー",
+		"Icon": 2485,
+		"Sort": 7080,
+		"Category": "Accessories"
+	},
+	{
+		"ID": 387,
+		"JLabel": "まんぷくベルト",
+		"Name": "gourmand's girdle",
+		"NameJP": "まんぷくベルト",
+		"Icon": 2487,
+		"Sort": 7110,
+		"Category": "Accessories"
+	},
+	{
+		"ID": 388,
+		"JLabel": "はがねのグリーブ",
+		"Name": "steel sabatons",
+		"NameJP": "はがねのグリーブ",
+		"Icon": 2488,
+		"Sort": 7090,
+		"Category": "Accessories"
+	},
+	{
+		"ID": 389,
+		"JLabel": "メルキドグリーブ",
+		"Name": "featherfall footwear",
+		"NameJP": "メルキドグリーブ",
+		"Icon": 2489,
+		"Sort": 7100,
+		"Category": "Accessories"
+	},
+	{
+		"ID": 395,
+		"JLabel": "スコップ",
+		"Name": "shovel",
+		"NameJP": "草花スコップ",
+		"Icon": 317,
+		"Sort": 3025,
+		"Category": "Items"
+	},
+	{
+		"ID": 401,
+		"JLabel": "丸太",
+		"Name": "not used",
+		"NameJP": "恵みの木・未使用",
+		"Icon": 396,
+		"Sort": 61200,
+		"Category": "Other"
+	},
+	{
+		"ID": 402,
+		"JLabel": "バンテージ",
+		"Name": "not used",
+		"NameJP": "ほつれた布きれ・未使用",
+		"Icon": 397,
+		"Sort": 61210,
+		"Category": "Other"
+	},
+	{
+		"ID": 403,
+		"JLabel": "草切れ",
+		"Name": "not used",
+		"NameJP": "草切れ・未使用",
+		"Icon": 392,
+		"Sort": 61220,
+		"Category": "Other"
+	},
+	{
+		"ID": 404,
+		"JLabel": "石材",
+		"Name": "stone",
+		"NameJP": "石材",
+		"Icon": 364,
+		"Sort": 18140,
+		"Category": "Materials2"
+	},
+	{
+		"ID": 405,
+		"JLabel": "じょうぶな草",
+		"Name": "grassy leaves",
+		"NameJP": "じょうぶな草",
+		"Icon": 1765,
+		"Sort": 18010,
+		"Category": "Materials2"
+	},
+	{
+		"ID": 406,
+		"JLabel": "花のみつ",
+		"Name": "white petals",
+		"NameJP": "白い花びら",
+		"Icon": 1768,
+		"Sort": 18090,
+		"Category": "Materials2"
+	},
+	{
+		"ID": 407,
+		"JLabel": "角材",
+		"Name": "wood",
+		"NameJP": "木材",
+		"Icon": 362,
+		"Sort": 17000,
+		"Category": "Materials"
+	},
+	{
+		"ID": 408,
+		"JLabel": "細い角材",
+		"Name": "not used",
+		"NameJP": "木材（未使用）",
+		"Icon": 363,
+		"Sort": 61230,
+		"Category": "Other"
+	},
+	{
+		"ID": 410,
+		"JLabel": "糸",
+		"Name": "cord",
+		"NameJP": "ひも",
+		"Icon": 406,
+		"Sort": 17010,
+		"Category": "Materials"
+	},
+	{
+		"ID": 412,
+		"JLabel": "礫岩",
+		"Name": "not used",
+		"NameJP": "礫岩・未使用",
+		"Icon": 2172,
+		"Sort": 61240,
+		"Category": "Other"
+	},
+	{
+		"ID": 413,
+		"JLabel": "麦の実",
+		"Name": "not used",
+		"NameJP": "麦の実・未使用",
+		"Icon": 405,
+		"Sort": 61250,
+		"Category": "Other"
+	},
+	{
+		"ID": 414,
+		"JLabel": "水（素材）",
+		"Name": "water",
+		"NameJP": "水",
+		"Icon": 395,
+		"Sort": 60120,
+		"Category": "Other"
+	},
+	{
+		"ID": 415,
+		"JLabel": "微細な石材",
+		"Name": "pumice pieces",
+		"NameJP": "じゃり石",
+		"Icon": 408,
+		"Sort": 18130,
+		"Category": "Materials2"
+	},
+	{
+		"ID": 416,
+		"JLabel": "ロープ",
+		"Name": "not used",
+		"NameJP": "ロープ・未使用",
+		"Icon": 406,
+		"Sort": 61260,
+		"Category": "Other"
+	},
+	{
+		"ID": 417,
+		"JLabel": "小麦粉",
+		"Name": "flour",
+		"NameJP": "小麦粉",
+		"Icon": 410,
+		"Sort": 61270,
+		"Category": "Other"
+	},
+	{
+		"ID": 418,
+		"JLabel": "なめし革",
+		"Name": "not used",
+		"NameJP": "なめし革・未使用",
+		"Icon": 411,
+		"Sort": 61280,
+		"Category": "Other"
+	},
+	{
+		"ID": 419,
+		"JLabel": "サボテン果肉",
+		"Name": "cactus cutlet",
+		"NameJP": "サボテン果肉",
+		"Icon": 431,
+		"Sort": 16030,
+		"Category": "Food2"
+	},
+	{
+		"ID": 422,
+		"JLabel": "ガラス",
+		"Name": "glass",
+		"NameJP": "ガラス",
+		"Icon": 432,
+		"Sort": 17090,
+		"Category": "Materials"
+	},
+	{
+		"ID": 423,
+		"JLabel": "ばね",
+		"Name": "spring",
+		"NameJP": "ばね",
+		"Icon": 471,
+		"Sort": 17100,
+		"Category": "Materials"
+	},
+	{
+		"ID": 425,
+		"JLabel": "石炭",
+		"Name": "coal",
+		"NameJP": "石炭",
+		"Icon": 379,
+		"Sort": 18200,
+		"Category": "Materials2"
+	},
+	{
+		"ID": 426,
+		"JLabel": "銅",
+		"Name": "copper",
+		"NameJP": "銅",
+		"Icon": 365,
+		"Sort": 18210,
+		"Category": "Materials2"
+	},
+	{
+		"ID": 427,
+		"JLabel": "鉄",
+		"Name": "iron",
+		"NameJP": "鉄",
+		"Icon": 366,
+		"Sort": 18220,
+		"Category": "Materials2"
+	},
+	{
+		"ID": 431,
+		"JLabel": "銅のインゴット",
+		"Name": "copper ingot",
+		"NameJP": "銅のインゴット",
+		"Icon": 368,
+		"Sort": 17040,
+		"Category": "Materials"
+	},
+	{
+		"ID": 432,
+		"JLabel": "鉄のインゴット",
+		"Name": "iron ingot",
+		"NameJP": "鉄のインゴット",
+		"Icon": 369,
+		"Sort": 17050,
+		"Category": "Materials"
+	},
+	{
+		"ID": 433,
+		"JLabel": "鋼のインゴット",
+		"Name": "steel ingot",
+		"NameJP": "はがねインゴット",
+		"Icon": 370,
+		"Sort": 17060,
+		"Category": "Materials"
+	},
+	{
+		"ID": 435,
+		"JLabel": "質のいい古木",
+		"Name": "not used",
+		"NameJP": "古びた木材・未使用",
+		"Icon": 2,
+		"Sort": 61290,
+		"Category": "Other"
+	},
+	{
+		"ID": 436,
+		"JLabel": "木の根",
+		"Name": "not used",
+		"NameJP": "木の根・未使用",
+		"Icon": 398,
+		"Sort": 61300,
+		"Category": "Other"
+	},
+	{
+		"ID": 437,
+		"JLabel": "青い染料",
+		"Name": "not used",
+		"NameJP": "青い染料・未使用",
+		"Icon": 2493,
+		"Sort": 61310,
+		"Category": "Other"
+	},
+	{
+		"ID": 438,
+		"JLabel": "木の枝",
+		"Name": "broken branch",
+		"NameJP": "ふとい枝",
+		"Icon": 496,
+		"Sort": 18120,
+		"Category": "Materials2"
+	},
+	{
+		"ID": 439,
+		"JLabel": "赤い実",
+		"Name": "not used",
+		"NameJP": "赤い実・未使用",
+		"Icon": 2,
+		"Sort": 61320,
+		"Category": "Other"
+	},
+	{
+		"ID": 440,
+		"JLabel": "砂利",
+		"Name": "not used",
+		"NameJP": "砂利・未使用",
+		"Icon": 408,
+		"Sort": 61330,
+		"Category": "Other"
+	},
+	{
+		"ID": 442,
+		"JLabel": "銅まじりの土",
+		"Name": "not used",
+		"NameJP": "銅まじりの土・未使用",
+		"Icon": 2170,
+		"Sort": 61340,
+		"Category": "Other"
+	},
+	{
+		"ID": 443,
+		"JLabel": "鉄まじりの土",
+		"Name": "not used",
+		"NameJP": "鉄まじりの土・未使用",
+		"Icon": 2171,
+		"Sort": 61350,
+		"Category": "Other"
+	},
+	{
+		"ID": 444,
+		"JLabel": "銅のかけら",
+		"Name": "not used",
+		"NameJP": "銅のかけら・未使用",
+		"Icon": 412,
+		"Sort": 61360,
+		"Category": "Other"
+	},
+	{
+		"ID": 445,
+		"JLabel": "鉄のかけら",
+		"Name": "not used",
+		"NameJP": "鉄のかけら・未使用",
+		"Icon": 413,
+		"Sort": 61370,
+		"Category": "Other"
+	},
+	{
+		"ID": 446,
+		"JLabel": "みがき砂",
+		"Name": "super cement",
+		"NameJP": "高級石工材",
+		"Icon": 421,
+		"Sort": 61380,
+		"Category": "Other"
+	},
+	{
+		"ID": 447,
+		"JLabel": "石灰まじりの土",
+		"Name": "not used",
+		"NameJP": "石灰まじりの土・未使用",
+		"Icon": 2174,
+		"Sort": 61390,
+		"Category": "Other"
+	},
+	{
+		"ID": 448,
+		"JLabel": "石灰",
+		"Name": "not used",
+		"NameJP": "石灰・未使用",
+		"Icon": 770,
+		"Sort": 61400,
+		"Category": "Other"
+	},
+	{
+		"ID": 449,
+		"JLabel": "鉄板",
+		"Name": "not used",
+		"NameJP": "鉄板・未使用",
+		"Icon": 418,
+		"Sort": 61410,
+		"Category": "Other"
+	},
+	{
+		"ID": 450,
+		"JLabel": "鉄のノミ",
+		"Name": "not used",
+		"NameJP": "鉄のノミ・未使用",
+		"Icon": 2,
+		"Sort": 61420,
+		"Category": "Other"
+	},
+	{
+		"ID": 451,
+		"JLabel": "赤い染料",
+		"Name": "not used",
+		"NameJP": "赤い染料・未使用",
+		"Icon": 2,
+		"Sort": 61430,
+		"Category": "Other"
+	},
+	{
+		"ID": 452,
+		"JLabel": "金まじりの土",
+		"Name": "not used",
+		"NameJP": "金まじりの土・未使用",
+		"Icon": 2175,
+		"Sort": 61440,
+		"Category": "Other"
+	},
+	{
+		"ID": 453,
+		"JLabel": "砂金",
+		"Name": "not used",
+		"NameJP": "砂金・未使用",
+		"Icon": 417,
+		"Sort": 61450,
+		"Category": "Other"
+	},
+	{
+		"ID": 454,
+		"JLabel": "鋼のノミ",
+		"Name": "not used",
+		"NameJP": "鋼のノミ・未使用",
+		"Icon": 2,
+		"Sort": 61460,
+		"Category": "Other"
+	},
+	{
+		"ID": 455,
+		"JLabel": "かがやく鉱石",
+		"Name": "not used",
+		"NameJP": "かがやく鉱石・未使用",
+		"Icon": 2176,
+		"Sort": 61470,
+		"Category": "Other"
+	},
+	{
+		"ID": 456,
+		"JLabel": "とがった石材",
+		"Name": "not used",
+		"NameJP": "とがった石・未使用",
+		"Icon": 208,
+		"Sort": 61480,
+		"Category": "Other"
+	},
+	{
+		"ID": 457,
+		"JLabel": "上質な小麦粉",
+		"Name": "not used",
+		"NameJP": "上質な小麦粉・未使用",
+		"Icon": 410,
+		"Sort": 61490,
+		"Category": "Other"
+	},
+	{
+		"ID": 458,
+		"JLabel": "肉厚なサボテン",
+		"Name": "prickly peach",
+		"NameJP": "サボテンフルーツ",
+		"Icon": 478,
+		"Sort": 2010,
+		"Category": "Food"
+	},
+	{
+		"ID": 459,
+		"JLabel": "ウーツ鉱石",
+		"Name": "not used",
+		"NameJP": "ウーツ鉱石・未使用",
+		"Icon": 2,
+		"Sort": 61500,
+		"Category": "Other"
+	},
+	{
+		"ID": 460,
+		"JLabel": "メルキド大鉄球",
+		"Name": "not used",
+		"NameJP": "メルキド大鉄球・未使用",
+		"Icon": 2,
+		"Sort": 61510,
+		"Category": "Other"
+	},
+	{
+		"ID": 461,
+		"JLabel": "金",
+		"Name": "gold",
+		"NameJP": "金",
+		"Icon": 381,
+		"Sort": 18240,
+		"Category": "Materials2"
+	},
+	{
+		"ID": 462,
+		"JLabel": "ダボ",
+		"Name": "dowelling",
+		"NameJP": "高級木工材",
+		"Icon": 426,
+		"Sort": 61520,
+		"Category": "Other"
+	},
+	{
+		"ID": 463,
+		"JLabel": "砂の草切れ",
+		"Name": "sandgrass",
+		"NameJP": "砂の草切れ",
+		"Icon": 596,
+		"Sort": 18070,
+		"Category": "Materials2"
+	},
+	{
+		"ID": 466,
+		"JLabel": "ピンクの花",
+		"Name": "pink petals",
+		"NameJP": "ピンクの花びら",
+		"Icon": 731,
+		"Sort": 18110,
+		"Category": "Materials2"
+	},
+	{
+		"ID": 467,
+		"JLabel": "抗毒草",
+		"Name": "yellow petals",
+		"NameJP": "きいろの花びら",
+		"Icon": 730,
+		"Sort": 18100,
+		"Category": "Materials2"
+	},
+	{
+		"ID": 469,
+		"JLabel": "青の石版",
+		"Name": "blue tablet fragments",
+		"NameJP": "青の石版",
+		"Icon": 564,
+		"Sort": 8170,
+		"Category": "ImportantItems"
+	},
+	{
+		"ID": 470,
+		"JLabel": "毒の草切れ",
+		"Name": "strong stalks",
+		"NameJP": "しっかりした草",
+		"Icon": 554,
+		"Sort": 18030,
+		"Category": "Materials2"
+	},
+	{
+		"ID": 475,
+		"JLabel": "綿毛",
+		"Name": "cotton",
+		"NameJP": "綿毛",
+		"Icon": 585,
+		"Sort": 18040,
+		"Category": "Materials2"
+	},
+	{
+		"ID": 481,
+		"JLabel": "きれいな水",
+		"Name": "pure water",
+		"NameJP": "きれいな水",
+		"Icon": 547,
+		"Sort": 18160,
+		"Category": "Materials2"
+	},
+	{
+		"ID": 484,
+		"JLabel": "ごわごわした草",
+		"Name": "fibrous frond",
+		"NameJP": "ごわごわした草",
+		"Icon": 541,
+		"Sort": 18050,
+		"Category": "Materials2"
+	},
+	{
+		"ID": 485,
+		"JLabel": "しっかりした布",
+		"Name": "fibrous fabric",
+		"NameJP": "しっかりした布",
+		"Icon": 542,
+		"Sort": 17020,
+		"Category": "Materials"
+	},
+	{
+		"ID": 490,
+		"JLabel": "小さな魚",
+		"Name": "sardine",
+		"NameJP": "イワシ",
+		"Icon": 497,
+		"Sort": 16050,
+		"Category": "Food2"
+	},
+	{
+		"ID": 491,
+		"JLabel": "サケ",
+		"Name": "salmon",
+		"NameJP": "サケ",
+		"Icon": 498,
+		"Sort": 16080,
+		"Category": "Food2"
+	},
+	{
+		"ID": 492,
+		"JLabel": "マグロ",
+		"Name": "tuna",
+		"NameJP": "マグロ",
+		"Icon": 499,
+		"Sort": 16100,
+		"Category": "Food2"
+	},
+	{
+		"ID": 497,
+		"JLabel": "ととのえた布",
+		"Name": "shot silk",
+		"NameJP": "ととのえた布",
+		"Icon": 528,
+		"Sort": 18170,
+		"Category": "Materials2"
+	},
+	{
+		"ID": 500,
+		"JLabel": "硫黄",
+		"Name": "sulphur",
+		"NameJP": "硫黄",
+		"Icon": 568,
+		"Sort": 61530,
+		"Category": "Other"
+	},
+	{
+		"ID": 505,
+		"JLabel": "マシンパーツ",
+		"Name": "vulcovoltaic magimotor",
+		"NameJP": "マシンパーツ",
+		"Icon": 491,
+		"Sort": 8300,
+		"Category": "ImportantItems"
+	},
+	{
+		"ID": 506,
+		"JLabel": "マグマ電池",
+		"Name": "thermobattery",
+		"NameJP": "マグマ電池",
+		"Icon": 490,
+		"Sort": 17110,
+		"Category": "Materials"
+	},
+	{
+		"ID": 507,
+		"JLabel": "メルキド鋼",
+		"Name": "orichalcum",
+		"NameJP": "オリハルコン",
+		"Icon": 385,
+		"Sort": 18250,
+		"Category": "Materials2"
+	},
+	{
+		"ID": 510,
+		"JLabel": "聖なる草の種",
+		"Name": "holyhock seed",
+		"NameJP": "聖なる草のたね",
+		"Icon": 543,
+		"Sort": 1250,
+		"Category": "Consumable"
+	},
+	{
+		"ID": 511,
+		"JLabel": "聖なる草",
+		"Name": "holyhock",
+		"NameJP": "聖なる草",
+		"Icon": 252,
+		"Sort": 8010,
+		"Category": "ImportantItems"
+	},
+	{
+		"ID": 518,
+		"JLabel": "輝くポール",
+		"Name": "not used",
+		"NameJP": "輝くポール・未使用",
+		"Icon": 378,
+		"Sort": 61540,
+		"Category": "Other"
+	},
+	{
+		"ID": 519,
+		"JLabel": "黄金のメダル",
+		"Name": "Ancient Emblem",
+		"NameJP": "いにしえのメダル",
+		"Icon": 378,
+		"Sort": 8060,
+		"Category": "ImportantItems"
+	},
+	{
+		"ID": 521,
+		"JLabel": "ミスリル",
+		"Name": "mythril",
+		"NameJP": "ミスリル",
+		"Icon": 384,
+		"Sort": 18260,
+		"Category": "Materials2"
+	},
+	{
+		"ID": 522,
+		"JLabel": "ミスリルのインゴット",
+		"Name": "magic ingot",
+		"NameJP": "まほうインゴット",
+		"Icon": 520,
+		"Sort": 17080,
+		"Category": "Materials"
+	},
+	{
+		"ID": 527,
+		"JLabel": "銀遊魚",
+		"Name": "cod",
+		"NameJP": "銀遊魚",
+		"Icon": 533,
+		"Sort": 18320,
+		"Category": "Materials2"
+	},
+	{
+		"ID": 530,
+		"JLabel": "魔力の結晶",
+		"Name": "prismatic crystal",
+		"NameJP": "魔力の結晶",
+		"Icon": 591,
+		"Sort": 8320,
+		"Category": "ImportantItems"
+	},
+	{
+		"ID": 531,
+		"JLabel": "エッチなほん",
+		"Name": "Architects Exposed",
+		"NameJP": "エッチなほん",
+		"Icon": 714,
+		"Sort": 13910,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 532,
+		"JLabel": "さいごのかぎの破片A",
+		"Name": "float-o-copper",
+		"NameJP": "マネマネ金属",
+		"Icon": 589,
+		"Sort": 8090,
+		"Category": "ImportantItems"
+	},
+	{
+		"ID": 533,
+		"JLabel": "さいごのかぎの破片B",
+		"Name": "keystone",
+		"NameJP": "ふしぎな宝石",
+		"Icon": 586,
+		"Sort": 8100,
+		"Category": "ImportantItems"
+	},
+	{
+		"ID": 538,
+		"JLabel": "染料",
+		"Name": "magic dye",
+		"NameJP": "染料",
+		"Icon": 472,
+		"Sort": 17030,
+		"Category": "Materials"
+	},
+	{
+		"ID": 539,
+		"JLabel": "おおきな綿",
+		"Name": "cumbersome cotton",
+		"NameJP": "おおきな綿",
+		"Icon": 585,
+		"Sort": 61550,
+		"Category": "Other"
+	},
+	{
+		"ID": 540,
+		"JLabel": "おおきづちのぬい針",
+		"Name": "whopping needle",
+		"NameJP": "おおきづちのぬい針",
+		"Icon": 684,
+		"Sort": 18180,
+		"Category": "Materials2"
+	},
+	{
+		"ID": 547,
+		"JLabel": "長靴",
+		"Name": "welly",
+		"NameJP": "長靴",
+		"Icon": 548,
+		"Sort": 18330,
+		"Category": "Materials2"
+	},
+	{
+		"ID": 548,
+		"JLabel": "海藻",
+		"Name": "seaweed",
+		"NameJP": "海藻",
+		"Icon": 549,
+		"Sort": 61560,
+		"Category": "Other"
+	},
+	{
+		"ID": 549,
+		"JLabel": "タイ",
+		"Name": "red snapper",
+		"NameJP": "タイ",
+		"Icon": 550,
+		"Sort": 16090,
+		"Category": "Food2"
+	},
+	{
+		"ID": 550,
+		"JLabel": "イカ",
+		"Name": "squid",
+		"NameJP": "イカ",
+		"Icon": 551,
+		"Sort": 16060,
+		"Category": "Food2"
+	},
+	{
+		"ID": 551,
+		"JLabel": "ラフレシアの葉",
+		"Name": "pongsettia leaf",
+		"NameJP": "ラフレシアの葉",
+		"Icon": 552,
+		"Sort": 61570,
+		"Category": "Other"
+	},
+	{
+		"ID": 552,
+		"JLabel": "温泉水",
+		"Name": "hot water",
+		"NameJP": "温泉水",
+		"Icon": 510,
+		"Sort": 16040,
+		"Category": "Food2"
+	},
+	{
+		"ID": 554,
+		"JLabel": "マグマ（素材）",
+		"Name": "magma",
+		"NameJP": "マグマ",
+		"Icon": 509,
+		"Sort": 61580,
+		"Category": "Other"
+	},
+	{
+		"ID": 556,
+		"JLabel": "あまつゆの糸",
+		"Name": "celestial skein",
+		"NameJP": "あまつゆの糸",
+		"Icon": 513,
+		"Sort": 18190,
+		"Category": "Materials2"
+	},
+	{
+		"ID": 564,
+		"JLabel": "ハスの葉",
+		"Name": "lily pad",
+		"NameJP": "ハスの葉",
+		"Icon": 580,
+		"Sort": 61590,
+		"Category": "Other"
+	},
+	{
+		"ID": 565,
+		"JLabel": "くすりの葉",
+		"Name": "medicinal leaf",
+		"NameJP": "くすりの葉",
+		"Icon": 504,
+		"Sort": 18020,
+		"Category": "Materials2"
+	},
+	{
+		"ID": 568,
+		"JLabel": "からくりパーツ",
+		"Name": "curious contraption",
+		"NameJP": "からくりパーツ",
+		"Icon": 519,
+		"Sort": 8310,
+		"Category": "ImportantItems"
+	},
+	{
+		"ID": 569,
+		"JLabel": "パルプ",
+		"Name": "freezia flower",
+		"NameJP": "パルプ",
+		"Icon": 754,
+		"Sort": 18080,
+		"Category": "Materials2"
+	},
+	{
+		"ID": 570,
+		"JLabel": "メタルハンター金属",
+		"Name": "mechrochip",
+		"NameJP": "ハンター回路",
+		"Icon": 418,
+		"Sort": 18310,
+		"Category": "Materials2"
+	},
+	{
+		"ID": 571,
+		"JLabel": "エネルギー物質",
+		"Name": "power crystal",
+		"NameJP": "エネルギー物質",
+		"Icon": 487,
+		"Sort": 17120,
+		"Category": "Materials"
+	},
+	{
+		"ID": 575,
+		"JLabel": "密林の葉",
+		"Name": "bigonia leaf",
+		"NameJP": "密林の葉",
+		"Icon": 535,
+		"Sort": 18060,
+		"Category": "Materials2"
+	},
+	{
+		"ID": 576,
+		"JLabel": "金のインゴット",
+		"Name": "gold ingot",
+		"NameJP": "金のインゴット",
+		"Icon": 391,
+		"Sort": 61600,
+		"Category": "Other"
+	},
+	{
+		"ID": 577,
+		"JLabel": "青い宝石",
+		"Name": "zenithium",
+		"NameJP": "ブルーメタル",
+		"Icon": 576,
+		"Sort": 18280,
+		"Category": "Materials2"
+	},
+	{
+		"ID": 578,
+		"JLabel": "赤い宝石",
+		"Name": "ruby",
+		"NameJP": "赤い宝石",
+		"Icon": 383,
+		"Sort": 18270,
+		"Category": "Materials2"
+	},
+	{
+		"ID": 580,
+		"JLabel": "まゆ",
+		"Name": "silky cocoon",
+		"NameJP": "まゆ",
+		"Icon": 526,
+		"Sort": 61610,
+		"Category": "Other"
+	},
+	{
+		"ID": 581,
+		"JLabel": "シルク",
+		"Name": "silk",
+		"NameJP": "シルク",
+		"Icon": 525,
+		"Sort": 61620,
+		"Category": "Other"
+	},
+	{
+		"ID": 582,
+		"JLabel": "さびた剣",
+		"Name": "rusty nuggets",
+		"NameJP": "さびた金属",
+		"Icon": 413,
+		"Sort": 18290,
+		"Category": "Materials2"
+	},
+	{
+		"ID": 583,
+		"JLabel": "液体銀",
+		"Name": "liquid silver",
+		"NameJP": "液体銀",
+		"Icon": 773,
+		"Sort": 17070,
+		"Category": "Materials"
+	},
+	{
+		"ID": 584,
+		"JLabel": "銀",
+		"Name": "silver",
+		"NameJP": "銀",
+		"Icon": 380,
+		"Sort": 18230,
+		"Category": "Materials2"
+	},
+	{
+		"ID": 585,
+		"JLabel": "手紙",
+		"Name": "Gerontius's letter",
+		"NameJP": "ゲンローワの手紙",
+		"Icon": 743,
+		"Sort": 8220,
+		"Category": "ImportantItems"
+	},
+	{
+		"ID": 586,
+		"JLabel": "手紙２",
+		"Name": "Illius's thesis",
+		"NameJP": "ウルスの手紙",
+		"Icon": 744,
+		"Sort": 8230,
+		"Category": "ImportantItems"
+	},
+	{
+		"ID": 587,
+		"JLabel": "壊れた銀の竪琴",
+		"Name": "broken lyre",
+		"NameJP": "壊れた銀の竪琴",
+		"Icon": 735,
+		"Sort": 8260,
+		"Category": "ImportantItems"
+	},
+	{
+		"ID": 588,
+		"JLabel": "太古の記録",
+		"Name": "the Farmer Sutra",
+		"NameJP": "農業の記録",
+		"Icon": 743,
+		"Sort": 8210,
+		"Category": "ImportantItems"
+	},
+	{
+		"ID": 589,
+		"JLabel": "ギガンテスの棍棒",
+		"Name": "gigantes' club",
+		"NameJP": "ギガンテスの棍棒",
+		"Icon": 724,
+		"Sort": 61630,
+		"Category": "Other"
+	},
+	{
+		"ID": 590,
+		"JLabel": "ロウのかたまり",
+		"Name": "sludgestone",
+		"NameJP": "ドロドロ石",
+		"Icon": 593,
+		"Sort": 18520,
+		"Category": "Materials2"
+	},
+	{
+		"ID": 591,
+		"JLabel": "カエル",
+		"Name": "frog",
+		"NameJP": "カエル",
+		"Icon": 727,
+		"Sort": 16070,
+		"Category": "Food2"
+	},
+	{
+		"ID": 592,
+		"JLabel": "竪琴修理アイテム",
+		"Name": "lyre string",
+		"NameJP": "おもいでの弦",
+		"Icon": 741,
+		"Sort": 8270,
+		"Category": "ImportantItems"
+	},
+	{
+		"ID": 593,
+		"JLabel": "ガライの研究メモ",
+		"Name": "Galeleo's research records",
+		"NameJP": "ラライの研究記録",
+		"Icon": 744,
+		"Sort": 8250,
+		"Category": "ImportantItems"
+	},
+	{
+		"ID": 594,
+		"JLabel": "スーパー工具",
+		"Name": "super tool",
+		"NameJP": "スーパー工具",
+		"Icon": 2493,
+		"Sort": 61640,
+		"Category": "Other"
+	},
+	{
+		"ID": 596,
+		"JLabel": "銀の竪琴",
+		"Name": "Lyre of Ire",
+		"NameJP": "銀の竪琴",
+		"Icon": 736,
+		"Sort": 8280,
+		"Category": "ImportantItems"
+	},
+	{
+		"ID": 597,
+		"JLabel": "マシンメーカーのメモ",
+		"Name": "design documents",
+		"NameJP": "発明メモ",
+		"Icon": 743,
+		"Sort": 8240,
+		"Category": "ImportantItems"
+	},
+	{
+		"ID": 598,
+		"JLabel": "マシンパーツのメモ",
+		"Name": "prototype plans",
+		"NameJP": "マシンパーツのメモ",
+		"Icon": 743,
+		"Sort": 8290,
+		"Category": "ImportantItems"
+	},
+	{
+		"ID": 600,
+		"JLabel": "小麦（素材）",
+		"Name": "wheat",
+		"NameJP": "小麦",
+		"Icon": 405,
+		"Sort": 16120,
+		"Category": "Food2"
+	},
+	{
+		"ID": 601,
+		"JLabel": "じゃがいも（素材）",
+		"Name": "potato",
+		"NameJP": "じゃがいも",
+		"Icon": 651,
+		"Sort": 16130,
+		"Category": "Food2"
+	},
+	{
+		"ID": 602,
+		"JLabel": "トマト（素材）",
+		"Name": "heartfruit",
+		"NameJP": "ハートフルーツ",
+		"Icon": 755,
+		"Sort": 2020,
+		"Category": "Food"
+	},
+	{
+		"ID": 603,
+		"JLabel": "まめ（素材）",
+		"Name": "butterbeans",
+		"NameJP": "まめ",
+		"Icon": 650,
+		"Sort": 16110,
+		"Category": "Food2"
+	},
+	{
+		"ID": 604,
+		"JLabel": "さとうきび（素材）",
+		"Name": "sugar cane",
+		"NameJP": "あまきび",
+		"Icon": 652,
+		"Sort": 16140,
+		"Category": "Food2"
+	},
+	{
+		"ID": 606,
+		"JLabel": "荒野のこころ",
+		"Name": "clouded memory",
+		"NameJP": "荒野のこころ",
+		"Icon": 729,
+		"Sort": 8330,
+		"Category": "ImportantItems"
+	},
+	{
+		"ID": 607,
+		"JLabel": "緑のおもいで",
+		"Name": "verdant vision",
+		"NameJP": "緑のおもいで",
+		"Icon": 506,
+		"Sort": 8340,
+		"Category": "ImportantItems"
+	},
+	{
+		"ID": 609,
+		"JLabel": "古びた紙片",
+		"Name": "defensive designs",
+		"NameJP": "石のまもりの記録",
+		"Icon": 744,
+		"Sort": 8190,
+		"Category": "ImportantItems"
+	},
+	{
+		"ID": 612,
+		"JLabel": "砂糖",
+		"Name": "sugar",
+		"NameJP": "砂糖",
+		"Icon": 493,
+		"Sort": 61650,
+		"Category": "Other"
+	},
+	{
+		"ID": 613,
+		"JLabel": "パンケーキ",
+		"Name": "pancakes",
+		"NameJP": "ホットケーキ",
+		"Icon": 468,
+		"Sort": 2330,
+		"Category": "Food"
+	},
+	{
+		"ID": 614,
+		"JLabel": "スライムサブレ",
+		"Name": "gungerbread",
+		"NameJP": "クッキー",
+		"Icon": 460,
+		"Sort": 2320,
+		"Category": "Food"
+	},
+	{
+		"ID": 616,
+		"JLabel": "瓦材",
+		"Name": "slate",
+		"NameJP": "瓦材",
+		"Icon": 2493,
+		"Sort": 61660,
+		"Category": "Other"
+	},
+	{
+		"ID": 701,
+		"JLabel": "スライムゼリー",
+		"Name": "blue goo",
+		"NameJP": "あおい油",
+		"Icon": 374,
+		"Sort": 18350,
+		"Category": "Materials2"
+	},
+	{
+		"ID": 703,
+		"JLabel": "花の種",
+		"Name": "milkblossom bud",
+		"NameJP": "しろいつぼみ",
+		"Icon": 762,
+		"Sort": 1160,
+		"Category": "Consumable"
+	},
+	{
+		"ID": 705,
+		"JLabel": "毛皮",
+		"Name": "fur",
+		"NameJP": "毛皮",
+		"Icon": 375,
+		"Sort": 18400,
+		"Category": "Materials2"
+	},
+	{
+		"ID": 706,
+		"JLabel": "生肉",
+		"Name": "meat",
+		"NameJP": "生肉",
+		"Icon": 372,
+		"Sort": 16180,
+		"Category": "Food2"
+	},
+	{
+		"ID": 708,
+		"JLabel": "さそりの甲殻",
+		"Name": "scorpion armour",
+		"NameJP": "さそりの甲殻",
+		"Icon": 403,
+		"Sort": 61670,
+		"Category": "Other"
+	},
+	{
+		"ID": 709,
+		"JLabel": "スライムベスゼリー",
+		"Name": "orange oil",
+		"NameJP": "あかい油",
+		"Icon": 404,
+		"Sort": 18360,
+		"Category": "Materials2"
+	},
+	{
+		"ID": 711,
+		"JLabel": "キメラのはね",
+		"Name": "chimaera feather",
+		"NameJP": "キメラのはね",
+		"Icon": 407,
+		"Sort": 18340,
+		"Category": "Materials2"
+	},
+	{
+		"ID": 712,
+		"JLabel": "スライムの皮",
+		"Name": "slime skin",
+		"NameJP": "スライムゴム",
+		"Icon": 428,
+		"Sort": 18370,
+		"Category": "Materials2"
+	},
+	{
+		"ID": 713,
+		"JLabel": "スライムベスの皮",
+		"Name": "she-slime skin",
+		"NameJP": "スライムベスの皮",
+		"Icon": 429,
+		"Sort": 61680,
+		"Category": "Other"
+	},
+	{
+		"ID": 714,
+		"JLabel": "ボロぬの",
+		"Name": "coarse cloth",
+		"NameJP": "ボロきれ",
+		"Icon": 720,
+		"Sort": 18390,
+		"Category": "Materials2"
+	},
+	{
+		"ID": 715,
+		"JLabel": "黒ヤモリ",
+		"Name": "newt",
+		"NameJP": "黒ヤモリ肉",
+		"Icon": 666,
+		"Sort": 16210,
+		"Category": "Food2"
+	},
+	{
+		"ID": 716,
+		"JLabel": "ドロルの殻",
+		"Name": "drohl shell",
+		"NameJP": "ドロルの殻",
+		"Icon": 677,
+		"Sort": 61690,
+		"Category": "Other"
+	},
+	{
+		"ID": 718,
+		"JLabel": "骸灰",
+		"Name": "burnt bone",
+		"NameJP": "灰骨",
+		"Icon": 430,
+		"Sort": 61700,
+		"Category": "Other"
+	},
+	{
+		"ID": 720,
+		"JLabel": "メタルゼリー",
+		"Name": "silvery sludge",
+		"NameJP": "メタルゼリー",
+		"Icon": 662,
+		"Sort": 18380,
+		"Category": "Materials2"
+	},
+	{
+		"ID": 727,
+		"JLabel": "分厚い肉",
+		"Name": "hareloin steak",
+		"NameJP": "ぶあつい肉",
+		"Icon": 753,
+		"Sort": 16190,
+		"Category": "Food2"
+	},
+	{
+		"ID": 728,
+		"JLabel": "フレイムドロップ",
+		"Name": "flame orb",
+		"NameJP": "フレイムドロップ",
+		"Icon": 697,
+		"Sort": 18490,
+		"Category": "Materials2"
+	},
+	{
+		"ID": 729,
+		"JLabel": "ブリザードロップ",
+		"Name": "frost orb",
+		"NameJP": "ブリザードロップ",
+		"Icon": 698,
+		"Sort": 18500,
+		"Category": "Materials2"
+	},
+	{
+		"ID": 730,
+		"JLabel": "イエティの毛皮",
+		"Name": "powie yowie fur",
+		"NameJP": "イエティの毛皮",
+		"Icon": 691,
+		"Sort": 18430,
+		"Category": "Materials2"
+	},
+	{
+		"ID": 734,
+		"JLabel": "毒の病原体",
+		"Name": "heart of darkness",
+		"NameJP": "毒の病原体",
+		"Icon": 598,
+		"Sort": 8200,
+		"Category": "ImportantItems"
+	},
+	{
+		"ID": 735,
+		"JLabel": "豆乳バター",
+		"Name": "dracky butter",
+		"NameJP": "ドラキーバター",
+		"Icon": 530,
+		"Sort": 16150,
+		"Category": "Food2"
+	},
+	{
+		"ID": 737,
+		"JLabel": "上質な毛皮",
+		"Name": "finest fur",
+		"NameJP": "上質な毛皮",
+		"Icon": 558,
+		"Sort": 18410,
+		"Category": "Materials2"
+	},
+	{
+		"ID": 738,
+		"JLabel": "てつのさそりの角",
+		"Name": "scorpion horn",
+		"NameJP": "さそりの角",
+		"Icon": 669,
+		"Sort": 18440,
+		"Category": "Materials2"
+	},
+	{
+		"ID": 740,
+		"JLabel": "きょうらんのツメ",
+		"Name": "confusing claw",
+		"NameJP": "きょうらんのツメ",
+		"Icon": 673,
+		"Sort": 18480,
+		"Category": "Materials2"
+	},
+	{
+		"ID": 741,
+		"JLabel": "ばくだんいし",
+		"Name": "rockbomb shard",
+		"NameJP": "ばくだんいし",
+		"Icon": 683,
+		"Sort": 18450,
+		"Category": "Materials2"
+	},
+	{
+		"ID": 742,
+		"JLabel": "ほねつき生肉",
+		"Name": "meaty bone",
+		"NameJP": "ほねつき生肉",
+		"Icon": 511,
+		"Sort": 16200,
+		"Category": "Food2"
+	},
+	{
+		"ID": 744,
+		"JLabel": "モンスターの卵",
+		"Name": "monster egg",
+		"NameJP": "モンスターの卵",
+		"Icon": 481,
+		"Sort": 16160,
+		"Category": "Food2"
+	},
+	{
+		"ID": 745,
+		"JLabel": "ギガンテスのツノ",
+		"Name": "gigantes horn",
+		"NameJP": "ギガンテスのツノ",
+		"Icon": 707,
+		"Sort": 61710,
+		"Category": "Other"
+	},
+	{
+		"ID": 746,
+		"JLabel": "ようがんのかけら",
+		"Name": "flame fragment",
+		"NameJP": "ようがんのかけら",
+		"Icon": 718,
+		"Sort": 61720,
+		"Category": "Other"
+	},
+	{
+		"ID": 747,
+		"JLabel": "ひょうがのかけら",
+		"Name": "frost fragment",
+		"NameJP": "ひょうがのかけら",
+		"Icon": 719,
+		"Sort": 61730,
+		"Category": "Other"
+	},
+	{
+		"ID": 749,
+		"JLabel": "マヒ針",
+		"Name": "paralystinger",
+		"NameJP": "マヒ針",
+		"Icon": 706,
+		"Sort": 18470,
+		"Category": "Materials2"
+	},
+	{
+		"ID": 750,
+		"JLabel": "カニの爪",
+		"Name": "crab claw",
+		"NameJP": "カニの爪",
+		"Icon": 689,
+		"Sort": 16170,
+		"Category": "Food2"
+	},
+	{
+		"ID": 752,
+		"JLabel": "マンドラゴラ",
+		"Name": "scare root",
+		"NameJP": "マンドラゴラ",
+		"Icon": 686,
+		"Sort": 18530,
+		"Category": "Materials2"
+	},
+	{
+		"ID": 754,
+		"JLabel": "ねばつく液体",
+		"Name": "sticky liquid",
+		"NameJP": "ねばつく液体",
+		"Icon": 555,
+		"Sort": 18460,
+		"Category": "Materials2"
+	},
+	{
+		"ID": 755,
+		"JLabel": "よろいのかけら",
+		"Name": "face guard fragment",
+		"NameJP": "よろいのかけら",
+		"Icon": 679,
+		"Sort": 18510,
+		"Category": "Materials2"
+	},
+	{
+		"ID": 758,
+		"JLabel": "スライムの王冠",
+		"Name": "crown goowels",
+		"NameJP": "スライムの王冠",
+		"Icon": 713,
+		"Sort": 8180,
+		"Category": "ImportantItems"
+	},
+	{
+		"ID": 759,
+		"JLabel": "リカントマムルの毛皮",
+		"Name": "bewarewolf pelt",
+		"NameJP": "リカントの毛皮",
+		"Icon": 674,
+		"Sort": 18420,
+		"Category": "Materials2"
+	},
+	{
+		"ID": 784,
+		"JLabel": "花の種２",
+		"Name": "coralily bud",
+		"NameJP": "ももいろのつぼみ",
+		"Icon": 764,
+		"Sort": 1170,
+		"Category": "Consumable"
+	},
+	{
+		"ID": 785,
+		"JLabel": "花の種３",
+		"Name": "daffodaisy bud",
+		"NameJP": "きいろのつぼみ",
+		"Icon": 763,
+		"Sort": 1180,
+		"Category": "Consumable"
+	},
+	{
+		"ID": 786,
+		"JLabel": "花の種４",
+		"Name": "tingleweed bud",
+		"NameJP": "マヒ花のつぼみ",
+		"Icon": 765,
+		"Sort": 1190,
+		"Category": "Consumable"
+	},
+	{
+		"ID": 787,
+		"JLabel": "青い秘石",
+		"Name": "sapphire",
+		"NameJP": "青い秘石",
+		"Icon": 382,
+		"Sort": 18300,
+		"Category": "Materials2"
+	},
+	{
+		"ID": 1001,
+		"JLabel": "土",
+		"Name": "earth",
+		"NameJP": "土",
+		"Icon": 2,
+		"Sort": 10000,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1002,
+		"JLabel": "土上面草",
+		"Name": "grassy earth",
+		"NameJP": "草原の土",
+		"Icon": 3,
+		"Sort": 60000,
+		"Category": "Other"
+	},
+	{
+		"ID": 1003,
+		"JLabel": "土上面濃草",
+		"Name": "grassy earth",
+		"NameJP": "草原の土",
+		"Icon": 4,
+		"Sort": 60010,
+		"Category": "Other"
+	},
+	{
+		"ID": 1004,
+		"JLabel": "土上面畑",
+		"Name": "tilled soil",
+		"NameJP": "畑",
+		"Icon": 5,
+		"Sort": 60020,
+		"Category": "Other"
+	},
+	{
+		"ID": 1005,
+		"JLabel": "土アクセント砂利",
+		"Name": "clay",
+		"NameJP": "粘土",
+		"Icon": 6,
+		"Sort": 10010,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1006,
+		"JLabel": "土アクセント植物",
+		"Name": "mossy earth",
+		"NameJP": "苔むした土",
+		"Icon": 7,
+		"Sort": 10020,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1007,
+		"JLabel": "岩",
+		"Name": "chalk",
+		"NameJP": "白い岩",
+		"Icon": 8,
+		"Sort": 10030,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1008,
+		"JLabel": "岩アクセント砂利",
+		"Name": "pebblestone",
+		"NameJP": "つぶつぶ岩",
+		"Icon": 9,
+		"Sort": 10040,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1009,
+		"JLabel": "固い岩",
+		"Name": "obsidian",
+		"NameJP": "黒い岩",
+		"Icon": 10,
+		"Sort": 10050,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1010,
+		"JLabel": "砂",
+		"Name": "sand",
+		"NameJP": "砂",
+		"Icon": 11,
+		"Sort": 10060,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1011,
+		"JLabel": "砂岩",
+		"Name": "sandstone",
+		"NameJP": "マーブル岩",
+		"Icon": 13,
+		"Sort": 10070,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1012,
+		"JLabel": "砂岩上面砂",
+		"Name": "sandy sandstone",
+		"NameJP": "砂マーブル岩",
+		"Icon": 12,
+		"Sort": 10080,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1013,
+		"JLabel": "鮮血岩",
+		"Name": "bloodstone",
+		"NameJP": "血色岩",
+		"Icon": 14,
+		"Sort": 10090,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1014,
+		"JLabel": "灰骨岩",
+		"Name": "ash",
+		"NameJP": "灰岩",
+		"Icon": 15,
+		"Sort": 10100,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1015,
+		"JLabel": "毒沼",
+		"Name": "swamp (cannot be collected)",
+		"NameJP": "毒沼・所持不可",
+		"Icon": 16,
+		"Sort": 60030,
+		"Category": "Other"
+	},
+	{
+		"ID": 1016,
+		"JLabel": "毒沼土",
+		"Name": "poisonous peat",
+		"NameJP": "毒沼の土",
+		"Icon": 17,
+		"Sort": 10110,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1017,
+		"JLabel": "雪板",
+		"Name": "powder snow",
+		"NameJP": "雪板",
+		"Icon": 18,
+		"Sort": 60040,
+		"Category": "Other"
+	},
+	{
+		"ID": 1018,
+		"JLabel": "雪",
+		"Name": "snow",
+		"NameJP": "雪",
+		"Icon": 19,
+		"Sort": 10120,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1019,
+		"JLabel": "氷",
+		"Name": "ice",
+		"NameJP": "氷",
+		"Icon": 20,
+		"Sort": 10130,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1020,
+		"JLabel": "洞窟岩",
+		"Name": "clodstone",
+		"NameJP": "土岩",
+		"Icon": 21,
+		"Sort": 10140,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1021,
+		"JLabel": "洞窟岩ひび",
+		"Name": "crumbly clodstone",
+		"NameJP": "ひびわれ土岩",
+		"Icon": 22,
+		"Sort": 10150,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1022,
+		"JLabel": "黒曜岩",
+		"Name": "basalt",
+		"NameJP": "黒よう岩",
+		"Icon": 23,
+		"Sort": 10160,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1023,
+		"JLabel": "マグマ",
+		"Name": "magma (cannot be collected)",
+		"NameJP": "溶岩・所持不可",
+		"Icon": 24,
+		"Sort": 60050,
+		"Category": "Other"
+	},
+	{
+		"ID": 1024,
+		"JLabel": "凝固マグマ",
+		"Name": "lava",
+		"NameJP": "マグマ岩",
+		"Icon": 25,
+		"Sort": 10170,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1025,
+		"JLabel": "人工洞窟壁",
+		"Name": "vault wall",
+		"NameJP": "遺跡のカベ",
+		"Icon": 26,
+		"Sort": 10180,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1026,
+		"JLabel": "人工洞窟壁草付",
+		"Name": "viny vault wall",
+		"NameJP": "遺跡の草カベ",
+		"Icon": 27,
+		"Sort": 10190,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1027,
+		"JLabel": "人工洞窟壁ひび",
+		"Name": "cracked vault wall",
+		"NameJP": "遺跡のひびカベ",
+		"Icon": 28,
+		"Sort": 10200,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1028,
+		"JLabel": "レンガ",
+		"Name": "brick wall",
+		"NameJP": "レンガ",
+		"Icon": 29,
+		"Sort": 10220,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1029,
+		"JLabel": "街壁下",
+		"Name": "timbered foundation",
+		"NameJP": "おしゃれカベ・地",
+		"Icon": 30,
+		"Sort": 10400,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1030,
+		"JLabel": "街壁中",
+		"Name": "timbered wall",
+		"NameJP": "おしゃれカベ",
+		"Icon": 31,
+		"Sort": 10410,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1031,
+		"JLabel": "街壁上",
+		"Name": "timbered capital",
+		"NameJP": "おしゃれカベ・天",
+		"Icon": 32,
+		"Sort": 10420,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1032,
+		"JLabel": "街柱下",
+		"Name": "hardwood pedestal",
+		"NameJP": "おしゃれ柱・地",
+		"Icon": 33,
+		"Sort": 10430,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1033,
+		"JLabel": "街柱中",
+		"Name": "hardwood column",
+		"NameJP": "おしゃれ柱",
+		"Icon": 34,
+		"Sort": 10440,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1034,
+		"JLabel": "街柱上",
+		"Name": "hardwood capital",
+		"NameJP": "おしゃれ柱・天",
+		"Icon": 35,
+		"Sort": 10450,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1035,
+		"JLabel": "石垣下",
+		"Name": "stone foundation",
+		"NameJP": "石垣・地",
+		"Icon": 36,
+		"Sort": 10230,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1036,
+		"JLabel": "石垣中",
+		"Name": "stone wall",
+		"NameJP": "石垣",
+		"Icon": 37,
+		"Sort": 10240,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1037,
+		"JLabel": "石垣上",
+		"Name": "stone capital (not used)",
+		"NameJP": "未使用・石垣天",
+		"Icon": 2,
+		"Sort": 60060,
+		"Category": "Other"
+	},
+	{
+		"ID": 1038,
+		"JLabel": "城壁下",
+		"Name": "castle foundation",
+		"NameJP": "城のカベ・地",
+		"Icon": 40,
+		"Sort": 10320,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1039,
+		"JLabel": "城壁中",
+		"Name": "castle wall",
+		"NameJP": "城のカベ",
+		"Icon": 39,
+		"Sort": 10330,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1040,
+		"JLabel": "城壁上1",
+		"Name": "castle crenellation",
+		"NameJP": "城のカベ・天Ａ",
+		"Icon": 41,
+		"Sort": 10340,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1041,
+		"JLabel": "城壁上2",
+		"Name": "castle battlement",
+		"NameJP": "城のカベ・天Ｂ",
+		"Icon": 42,
+		"Sort": 10350,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1042,
+		"JLabel": "木材壁",
+		"Name": "wooden wall",
+		"NameJP": "木のカベ",
+		"Icon": 43,
+		"Sort": 10290,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1043,
+		"JLabel": "木材",
+		"Name": "plumberry lumber",
+		"NameJP": "ブナ原木",
+		"Icon": 44,
+		"Sort": 10260,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1044,
+		"JLabel": "石垣床",
+		"Name": "flagstone",
+		"NameJP": "床石",
+		"Icon": 45,
+		"Sort": 10250,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1045,
+		"JLabel": "ござ床",
+		"Name": "straw floor",
+		"NameJP": "わら床",
+		"Icon": 46,
+		"Sort": 10210,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1046,
+		"JLabel": "木材床",
+		"Name": "wooden floor",
+		"NameJP": "木の床",
+		"Icon": 47,
+		"Sort": 10300,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1047,
+		"JLabel": "木材ふち床",
+		"Name": "hardwood tile",
+		"NameJP": "木のかざり床",
+		"Icon": 48,
+		"Sort": 10310,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1048,
+		"JLabel": "街床赤",
+		"Name": "purple flagstone",
+		"NameJP": "赤い床石",
+		"Icon": 49,
+		"Sort": 10480,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1049,
+		"JLabel": "街床青",
+		"Name": "blue flagstone",
+		"NameJP": "青い床石",
+		"Icon": 50,
+		"Sort": 10490,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1050,
+		"JLabel": "絨毯",
+		"Name": "red carpet",
+		"NameJP": "じゅうたん",
+		"Icon": 51,
+		"Sort": 10460,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1051,
+		"JLabel": "絨毯柄",
+		"Name": "fancy carpet",
+		"NameJP": "ガラじゅうたん",
+		"Icon": 52,
+		"Sort": 10470,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1052,
+		"JLabel": "城床",
+		"Name": "castle tile",
+		"NameJP": "城の床",
+		"Icon": 53,
+		"Sort": 10360,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1053,
+		"JLabel": "城床かざり",
+		"Name": "carved castle tile",
+		"NameJP": "城のかざり床",
+		"Icon": 54,
+		"Sort": 10370,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1054,
+		"JLabel": "屋根",
+		"Name": "not used",
+		"NameJP": "屋根・未使用",
+		"Icon": 2,
+		"Sort": 60070,
+		"Category": "Other"
+	},
+	{
+		"ID": 1055,
+		"JLabel": "えんとつ",
+		"Name": "not used",
+		"NameJP": "えんとつ・未使用",
+		"Icon": 204,
+		"Sort": 60080,
+		"Category": "Other"
+	},
+	{
+		"ID": 1056,
+		"JLabel": "人工洞床黒",
+		"Name": "bronze temple tile",
+		"NameJP": "ほこらの黒床石",
+		"Icon": 57,
+		"Sort": 10390,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1057,
+		"JLabel": "人口洞床青",
+		"Name": "blue temple tile",
+		"NameJP": "ほこらの青床石",
+		"Icon": 58,
+		"Sort": 10380,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1058,
+		"JLabel": "バリアー",
+		"Name": "not used",
+		"NameJP": "バリアー未使用",
+		"Icon": 59,
+		"Sort": 60090,
+		"Category": "Other"
+	},
+	{
+		"ID": 1059,
+		"JLabel": "水源鉱石",
+		"Name": "water crystal",
+		"NameJP": "水わく青石",
+		"Icon": 807,
+		"Sort": 10500,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1060,
+		"JLabel": "温泉",
+		"Name": "hot water crystal",
+		"NameJP": "湯わく赤石",
+		"Icon": 808,
+		"Sort": 10510,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1061,
+		"JLabel": "燃料入り",
+		"Name": "coal vein",
+		"NameJP": "石炭鉱脈",
+		"Icon": 62,
+		"Sort": 10520,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1062,
+		"JLabel": "銅鉱石入り",
+		"Name": "copper vein",
+		"NameJP": "銅鉱脈",
+		"Icon": 63,
+		"Sort": 10530,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1063,
+		"JLabel": "鉄鉱石入り",
+		"Name": "iron vein",
+		"NameJP": "鉄鉱脈",
+		"Icon": 64,
+		"Sort": 10540,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1064,
+		"JLabel": "銀鉱石入り",
+		"Name": "silver vein",
+		"NameJP": "銀鉱脈",
+		"Icon": 65,
+		"Sort": 10550,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1065,
+		"JLabel": "金鉱石入り",
+		"Name": "gold vein",
+		"NameJP": "金鉱脈",
+		"Icon": 66,
+		"Sort": 10560,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1066,
+		"JLabel": "青宝石入り",
+		"Name": "zenithium vein",
+		"NameJP": "ブルーメタル鉱脈",
+		"Icon": 67,
+		"Sort": 10570,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1067,
+		"JLabel": "赤宝石入り",
+		"Name": "ruby vein",
+		"NameJP": "赤石鉱脈",
+		"Icon": 68,
+		"Sort": 10580,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1068,
+		"JLabel": "ミスリル入り",
+		"Name": "mythril vein",
+		"NameJP": "ミスリル鉱脈",
+		"Icon": 69,
+		"Sort": 10590,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1069,
+		"JLabel": "オリハルコン入り",
+		"Name": "orichalcum vein",
+		"NameJP": "オリハルコン鉱脈",
+		"Icon": 70,
+		"Sort": 10600,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1070,
+		"JLabel": "命の鉱石",
+		"Name": "not used",
+		"NameJP": "命鉱脈・未使用",
+		"Icon": 774,
+		"Sort": 60100,
+		"Category": "Other"
+	},
+	{
+		"ID": 1071,
+		"JLabel": "聖なる種がうまる土",
+		"Name": "not used",
+		"NameJP": "聖なる土・未使用",
+		"Icon": 75,
+		"Sort": 60110,
+		"Category": "Other"
+	},
+	{
+		"ID": 1072,
+		"JLabel": "ゴーレム岩",
+		"Name": "golemite",
+		"NameJP": "ゴーレム岩",
+		"Icon": 71,
+		"Sort": 10610,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1073,
+		"JLabel": "木材ヤシ",
+		"Name": "palm lumber",
+		"NameJP": "ヤシ原木",
+		"Icon": 56,
+		"Sort": 10270,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1074,
+		"JLabel": "木材針葉樹",
+		"Name": "cedar lumber",
+		"NameJP": "スギ原木",
+		"Icon": 55,
+		"Sort": 10280,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1075,
+		"JLabel": "FC草原ブロック",
+		"Name": "time-honoured turf",
+		"NameJP": "ドット草原",
+		"Icon": 792,
+		"Sort": 10850,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1076,
+		"JLabel": "FCレンガブロック",
+		"Name": "8-bit brick",
+		"NameJP": "ドットレンガ",
+		"Icon": 793,
+		"Sort": 10860,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1077,
+		"JLabel": "FC壁ブロック",
+		"Name": "olde worlde wall",
+		"NameJP": "ドットカベ",
+		"Icon": 794,
+		"Sort": 10870,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1078,
+		"JLabel": "マモノの目ブロック",
+		"Name": "eyewall",
+		"NameJP": "おおきな目",
+		"Icon": 795,
+		"Sort": 10830,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1079,
+		"JLabel": "水",
+		"Name": "water",
+		"NameJP": "水",
+		"Icon": 395,
+		"Sort": 18150,
+		"Category": "Materials2"
+	},
+	{
+		"ID": 1080,
+		"JLabel": "土上面枯れ草",
+		"Name": "witchgrassy earth",
+		"NameJP": "枯れ草原の土",
+		"Icon": 74,
+		"Sort": 60130,
+		"Category": "Other"
+	},
+	{
+		"ID": 1081,
+		"JLabel": "土上面黄色草",
+		"Name": "lemongrassy earth",
+		"NameJP": "南国草原の土",
+		"Icon": 76,
+		"Sort": 60140,
+		"Category": "Other"
+	},
+	{
+		"ID": 1082,
+		"JLabel": "硫黄ブロック",
+		"Name": "sulphur vein",
+		"NameJP": "イオウ鉱脈",
+		"Icon": 72,
+		"Sort": 60150,
+		"Category": "Other"
+	},
+	{
+		"ID": 1083,
+		"JLabel": "雲ブロック",
+		"Name": "not used",
+		"NameJP": "雲ブロック・未使用",
+		"Icon": 73,
+		"Sort": 60160,
+		"Category": "Other"
+	},
+	{
+		"ID": 1084,
+		"JLabel": "属性変化石・変化前",
+		"Name": "magic sand",
+		"NameJP": "まほうの砂",
+		"Icon": 77,
+		"Sort": 60170,
+		"Category": "Other"
+	},
+	{
+		"ID": 1085,
+		"JLabel": "属性変化石（炎）",
+		"Name": "flame sand",
+		"NameJP": "まほうの砂・炎",
+		"Icon": 78,
+		"Sort": 60180,
+		"Category": "Other"
+	},
+	{
+		"ID": 1086,
+		"JLabel": "属性変化石（氷）",
+		"Name": "frost sand",
+		"NameJP": "まほうの砂・氷",
+		"Icon": 79,
+		"Sort": 60190,
+		"Category": "Other"
+	},
+	{
+		"ID": 1087,
+		"JLabel": "ステージ４用アクセント灰ブロ",
+		"Name": "bonestone",
+		"NameJP": "骨岩",
+		"Icon": 60,
+		"Sort": 10650,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1088,
+		"JLabel": "ステージ４用呪い壁",
+		"Name": "dragonstone",
+		"NameJP": "竜紋岩",
+		"Icon": 61,
+		"Sort": 60200,
+		"Category": "Other"
+	},
+	{
+		"ID": 1089,
+		"JLabel": "ドットブロック1（black）",
+		"Name": "black block",
+		"NameJP": "ブラックブロック",
+		"Icon": 775,
+		"Sort": 10660,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1090,
+		"JLabel": "ドットブロック2（gray）",
+		"Name": "grey block",
+		"NameJP": "グレーブロック",
+		"Icon": 776,
+		"Sort": 10670,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1091,
+		"JLabel": "ドットブロック3（white）",
+		"Name": "white block",
+		"NameJP": "ホワイトブロック",
+		"Icon": 777,
+		"Sort": 10680,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1092,
+		"JLabel": "ドットブロック4（maroon）",
+		"Name": "burgundy block",
+		"NameJP": "マロンブロック",
+		"Icon": 778,
+		"Sort": 10690,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1093,
+		"JLabel": "ドットブロック5（red）",
+		"Name": "red block",
+		"NameJP": "レッドブロック",
+		"Icon": 779,
+		"Sort": 10700,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1094,
+		"JLabel": "ドットブロック6（purple）",
+		"Name": "purple block",
+		"NameJP": "パープルブロック",
+		"Icon": 780,
+		"Sort": 10710,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1095,
+		"JLabel": "ドットブロック7（fuchsia）",
+		"Name": "pink block",
+		"NameJP": "ピンクブロック",
+		"Icon": 781,
+		"Sort": 10720,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1096,
+		"JLabel": "ドットブロック8（green）",
+		"Name": "green block",
+		"NameJP": "グリーンブロック",
+		"Icon": 782,
+		"Sort": 10730,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1097,
+		"JLabel": "ドットブロック9（lime）",
+		"Name": "lime-green block",
+		"NameJP": "ライムブロック",
+		"Icon": 783,
+		"Sort": 10740,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1098,
+		"JLabel": "ドットブロック10（orange）",
+		"Name": "orange block",
+		"NameJP": "オレンジブロック",
+		"Icon": 784,
+		"Sort": 10750,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1099,
+		"JLabel": "ドットブロック11（yellow）",
+		"Name": "yellow block",
+		"NameJP": "イエローブロック",
+		"Icon": 785,
+		"Sort": 10760,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1100,
+		"JLabel": "ドットブロック12（navy）",
+		"Name": "navy block",
+		"NameJP": "ネイビーブロック",
+		"Icon": 786,
+		"Sort": 10770,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1101,
+		"JLabel": "ドットブロック13（blue）",
+		"Name": "blue block",
+		"NameJP": "ブルーブロック",
+		"Icon": 787,
+		"Sort": 10780,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1102,
+		"JLabel": "ドットブロック14（skin）",
+		"Name": "beige block",
+		"NameJP": "ベージュブロック",
+		"Icon": 788,
+		"Sort": 10790,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1103,
+		"JLabel": "ドットブロック15（aqua）",
+		"Name": "cyan block",
+		"NameJP": "アクアブロック",
+		"Icon": 789,
+		"Sort": 10800,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1104,
+		"JLabel": "ドットブロック16（silver）",
+		"Name": "silver block",
+		"NameJP": "シルバーブロック",
+		"Icon": 790,
+		"Sort": 10810,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1105,
+		"JLabel": "ドットブロック17（gold）",
+		"Name": "gold block",
+		"NameJP": "ゴールドブロック",
+		"Icon": 791,
+		"Sort": 10820,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1106,
+		"JLabel": "スライム柄ブロック",
+		"Name": "slimy block",
+		"NameJP": "スライムのカベ",
+		"Icon": 796,
+		"Sort": 10840,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1107,
+		"JLabel": "柄ブロック（Ｖの字）",
+		"Name": "retro roof",
+		"NameJP": "ドット屋根",
+		"Icon": 797,
+		"Sort": 10880,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1108,
+		"JLabel": "温泉（ブロック）",
+		"Name": "block of hot water",
+		"NameJP": "温泉ブロックの量",
+		"Icon": 798,
+		"Sort": 60210,
+		"Category": "Other"
+	},
+	{
+		"ID": 1109,
+		"JLabel": "魔物城壁下",
+		"Name": "fortress foundation",
+		"NameJP": "魔城のカベ・地",
+		"Icon": 799,
+		"Sort": 10620,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1110,
+		"JLabel": "魔物城壁中",
+		"Name": "fortress wall",
+		"NameJP": "魔城のカベ",
+		"Icon": 800,
+		"Sort": 10630,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1111,
+		"JLabel": "魔物城壁上",
+		"Name": "fortress battlement",
+		"NameJP": "魔城のカベ・天",
+		"Icon": 801,
+		"Sort": 10640,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1112,
+		"JLabel": "水（ブロック）",
+		"Name": "block of water",
+		"NameJP": "水ブロックの量",
+		"Icon": 73,
+		"Sort": 60220,
+		"Category": "Other"
+	},
+	{
+		"ID": 1201,
+		"JLabel": "下草",
+		"Name": "grass",
+		"NameJP": "ちいさな草",
+		"Icon": 81,
+		"Sort": 15000,
+		"Category": "Plants"
+	},
+	{
+		"ID": 1202,
+		"JLabel": "立体草",
+		"Name": "stalwort",
+		"NameJP": "ぬの草",
+		"Icon": 82,
+		"Sort": 15010,
+		"Category": "Plants"
+	},
+	{
+		"ID": 1203,
+		"JLabel": "しげみ",
+		"Name": "medicinal shrub",
+		"NameJP": "いやし葉のしげみ",
+		"Icon": 83,
+		"Sort": 15040,
+		"Category": "Plants"
+	},
+	{
+		"ID": 1204,
+		"JLabel": "花ピンク",
+		"Name": "coralily",
+		"NameJP": "ももいろの花",
+		"Icon": 84,
+		"Sort": 15310,
+		"Category": "Plants"
+	},
+	{
+		"ID": 1205,
+		"JLabel": "花オレンジ",
+		"Name": "daffodaisy",
+		"NameJP": "きいろの花",
+		"Icon": 85,
+		"Sort": 15320,
+		"Category": "Plants"
+	},
+	{
+		"ID": 1206,
+		"JLabel": "花ホワイト",
+		"Name": "milkblossom",
+		"NameJP": "しろい花",
+		"Icon": 86,
+		"Sort": 15300,
+		"Category": "Plants"
+	},
+	{
+		"ID": 1207,
+		"JLabel": "ツタ",
+		"Name": "ivy",
+		"NameJP": "ツタ",
+		"Icon": 87,
+		"Sort": 15050,
+		"Category": "Plants"
+	},
+	{
+		"ID": 1208,
+		"JLabel": "森花",
+		"Name": "tingleweed",
+		"NameJP": "マヒ花",
+		"Icon": 88,
+		"Sort": 15330,
+		"Category": "Plants"
+	},
+	{
+		"ID": 1209,
+		"JLabel": "森草",
+		"Name": "cotton plant",
+		"NameJP": "わたげ草",
+		"Icon": 89,
+		"Sort": 15070,
+		"Category": "Plants"
+	},
+	{
+		"ID": 1210,
+		"JLabel": "森きのこ",
+		"Name": "marshrooms",
+		"NameJP": "キノコ",
+		"Icon": 90,
+		"Sort": 16000,
+		"Category": "Food2"
+	},
+	{
+		"ID": 1211,
+		"JLabel": "ハス",
+		"Name": "water lily",
+		"NameJP": "ハス",
+		"Icon": 91,
+		"Sort": 60230,
+		"Category": "Other"
+	},
+	{
+		"ID": 1212,
+		"JLabel": "密林シダ草",
+		"Name": "fibrous fern",
+		"NameJP": "大きなシダ草",
+		"Icon": 92,
+		"Sort": 15080,
+		"Category": "Plants"
+	},
+	{
+		"ID": 1213,
+		"JLabel": "密林大草",
+		"Name": "bigonia",
+		"NameJP": "ジャングル草",
+		"Icon": 93,
+		"Sort": 15090,
+		"Category": "Plants"
+	},
+	{
+		"ID": 1214,
+		"JLabel": "ラフレシア",
+		"Name": "pongsettia",
+		"NameJP": "ラフレシア",
+		"Icon": 94,
+		"Sort": 15340,
+		"Category": "Plants"
+	},
+	{
+		"ID": 1215,
+		"JLabel": "砂地草",
+		"Name": "sandwort",
+		"NameJP": "さばく草",
+		"Icon": 95,
+		"Sort": 15100,
+		"Category": "Plants"
+	},
+	{
+		"ID": 1216,
+		"JLabel": "丸サボテン",
+		"Name": "prickly peach cactus",
+		"NameJP": "花サボテン",
+		"Icon": 96,
+		"Sort": 15110,
+		"Category": "Plants"
+	},
+	{
+		"ID": 1217,
+		"JLabel": "縦サボテン頭",
+		"Name": "cactus crown",
+		"NameJP": "柱サボテンの頭",
+		"Icon": 97,
+		"Sort": 15120,
+		"Category": "Plants"
+	},
+	{
+		"ID": 1218,
+		"JLabel": "縦サボテン体",
+		"Name": "cactus trunk",
+		"NameJP": "柱サボテン",
+		"Icon": 98,
+		"Sort": 15130,
+		"Category": "Plants"
+	},
+	{
+		"ID": 1219,
+		"JLabel": "毒下草",
+		"Name": "witchgrass",
+		"NameJP": "むらさきの草",
+		"Icon": 99,
+		"Sort": 15140,
+		"Category": "Plants"
+	},
+	{
+		"ID": 1220,
+		"JLabel": "毒草",
+		"Name": "bogwort",
+		"NameJP": "青ウニ草",
+		"Icon": 100,
+		"Sort": 15150,
+		"Category": "Plants"
+	},
+	{
+		"ID": 1221,
+		"JLabel": "毒きのこ",
+		"Name": "frogstool",
+		"NameJP": "ニガキノコ",
+		"Icon": 101,
+		"Sort": 16010,
+		"Category": "Food2"
+	},
+	{
+		"ID": 1222,
+		"JLabel": "毒枯れ木",
+		"Name": "tainted tree",
+		"NameJP": "沼枯れの木",
+		"Icon": 102,
+		"Sort": 15160,
+		"Category": "Plants"
+	},
+	{
+		"ID": 1223,
+		"JLabel": "毒倒木",
+		"Name": "twisted tree trunk",
+		"NameJP": "たおれた巨木",
+		"Icon": 103,
+		"Sort": 15170,
+		"Category": "Plants"
+	},
+	{
+		"ID": 1224,
+		"JLabel": "雪草",
+		"Name": "freezia",
+		"NameJP": "白雪草",
+		"Icon": 104,
+		"Sort": 15350,
+		"Category": "Plants"
+	},
+	{
+		"ID": 1225,
+		"JLabel": "影草",
+		"Name": "septic shrub",
+		"NameJP": "のろい葉のしげみ",
+		"Icon": 105,
+		"Sort": 15190,
+		"Category": "Plants"
+	},
+	{
+		"ID": 1226,
+		"JLabel": "影横草",
+		"Name": "shadowgrass",
+		"NameJP": "かげ草",
+		"Icon": 106,
+		"Sort": 15200,
+		"Category": "Plants"
+	},
+	{
+		"ID": 1227,
+		"JLabel": "広葉樹（苗木）",
+		"Name": "plumberry seedling",
+		"NameJP": "ブナの苗",
+		"Icon": 107,
+		"Sort": 15210,
+		"Category": "Plants"
+	},
+	{
+		"ID": 1228,
+		"JLabel": "広葉樹（若木）",
+		"Name": "plumberry sapling",
+		"NameJP": "ブナの若木",
+		"Icon": 108,
+		"Sort": 15220,
+		"Category": "Plants"
+	},
+	{
+		"ID": 1229,
+		"JLabel": "広葉樹（中成木）",
+		"Name": "plumberry tree",
+		"NameJP": "ブナの木",
+		"Icon": 109,
+		"Sort": 60240,
+		"Category": "Other"
+	},
+	{
+		"ID": 1230,
+		"JLabel": "広葉樹（切り株）",
+		"Name": "plumberry stump",
+		"NameJP": "ブナのきりかぶ",
+		"Icon": 110,
+		"Sort": 60250,
+		"Category": "Other"
+	},
+	{
+		"ID": 1231,
+		"JLabel": "広葉樹（大成木）",
+		"Name": "big plumberry tree",
+		"NameJP": "ブナの大木",
+		"Icon": 111,
+		"Sort": 15230,
+		"Category": "Plants"
+	},
+	{
+		"ID": 1232,
+		"JLabel": "ヤシの木（苗木）",
+		"Name": "palm seedling",
+		"NameJP": "ヤシの苗",
+		"Icon": 112,
+		"Sort": 15240,
+		"Category": "Plants"
+	},
+	{
+		"ID": 1233,
+		"JLabel": "ヤシの木（若木）",
+		"Name": "palm sapling",
+		"NameJP": "ヤシの若木",
+		"Icon": 113,
+		"Sort": 15250,
+		"Category": "Plants"
+	},
+	{
+		"ID": 1234,
+		"JLabel": "ヤシの木（成木）",
+		"Name": "palm tree",
+		"NameJP": "ヤシの木",
+		"Icon": 114,
+		"Sort": 60260,
+		"Category": "Other"
+	},
+	{
+		"ID": 1235,
+		"JLabel": "ヤシの木（切り株）",
+		"Name": "palm tree stump",
+		"NameJP": "ヤシのきりかぶ",
+		"Icon": 115,
+		"Sort": 60270,
+		"Category": "Other"
+	},
+	{
+		"ID": 1236,
+		"JLabel": "針葉樹（苗木）",
+		"Name": "cedar seedling",
+		"NameJP": "スギの苗",
+		"Icon": 116,
+		"Sort": 15260,
+		"Category": "Plants"
+	},
+	{
+		"ID": 1237,
+		"JLabel": "針葉樹（若木）",
+		"Name": "cedar sapling",
+		"NameJP": "スギの若木",
+		"Icon": 117,
+		"Sort": 15270,
+		"Category": "Plants"
+	},
+	{
+		"ID": 1238,
+		"JLabel": "針葉樹（成木）",
+		"Name": "cedar tree",
+		"NameJP": "スギの木",
+		"Icon": 118,
+		"Sort": 60280,
+		"Category": "Other"
+	},
+	{
+		"ID": 1239,
+		"JLabel": "針葉樹（切り株）",
+		"Name": "cedar stump",
+		"NameJP": "スギのきりかぶ",
+		"Icon": 120,
+		"Sort": 60290,
+		"Category": "Other"
+	},
+	{
+		"ID": 1240,
+		"JLabel": "針葉樹（雪成木）",
+		"Name": "snowy cedar",
+		"NameJP": "雪のスギ木",
+		"Icon": 119,
+		"Sort": 15280,
+		"Category": "Plants"
+	},
+	{
+		"ID": 1241,
+		"JLabel": "塊岩",
+		"Name": "pumice",
+		"NameJP": "丸石",
+		"Icon": 121,
+		"Sort": 13010,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1242,
+		"JLabel": "枯れ木",
+		"Name": "dead tree",
+		"NameJP": "枯れ木",
+		"Icon": 122,
+		"Sort": 15180,
+		"Category": "Plants"
+	},
+	{
+		"ID": 1243,
+		"JLabel": "シンボル墓",
+		"Name": "metal memorial",
+		"NameJP": "鉄のぼひょう",
+		"Icon": 123,
+		"Sort": 13060,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1244,
+		"JLabel": "大ツノ骨",
+		"Name": "huge horn",
+		"NameJP": "巨大なツノ",
+		"Icon": 124,
+		"Sort": 13820,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1245,
+		"JLabel": "木の墓",
+		"Name": "wooden memorial",
+		"NameJP": "木の墓",
+		"Icon": 125,
+		"Sort": 13040,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1246,
+		"JLabel": "石の墓",
+		"Name": "gravestone",
+		"NameJP": "石の墓",
+		"Icon": 126,
+		"Sort": 13050,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1247,
+		"JLabel": "壊れ木箱",
+		"Name": "dilapidated crate",
+		"NameJP": "ふるびた木箱",
+		"Icon": 127,
+		"Sort": 13070,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1248,
+		"JLabel": "壊れレンガ",
+		"Name": "broken brickwork",
+		"NameJP": "くだけたレンガ",
+		"Icon": 128,
+		"Sort": 13080,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1249,
+		"JLabel": "折れ旗",
+		"Name": "tattered standard",
+		"NameJP": "負け戦のはた",
+		"Icon": 129,
+		"Sort": 13090,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1250,
+		"JLabel": "壊れ柵",
+		"Name": "broken barricade",
+		"NameJP": "くちたバリケード",
+		"Icon": 130,
+		"Sort": 13100,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1251,
+		"JLabel": "壊れテント",
+		"Name": "tattered tent",
+		"NameJP": "おんぼろテント",
+		"Icon": 131,
+		"Sort": 13110,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1252,
+		"JLabel": "木箱",
+		"Name": "crate",
+		"NameJP": "木箱",
+		"Icon": 132,
+		"Sort": 13330,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1253,
+		"JLabel": "樽",
+		"Name": "barrel",
+		"NameJP": "タル",
+		"Icon": 133,
+		"Sort": 13130,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1254,
+		"JLabel": "ツボ",
+		"Name": "pot",
+		"NameJP": "ツボ",
+		"Icon": 134,
+		"Sort": 13340,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1255,
+		"JLabel": "皮袋",
+		"Name": "leather sack",
+		"NameJP": "革ぶくろ",
+		"Icon": 135,
+		"Sort": 13350,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1256,
+		"JLabel": "水おけ",
+		"Name": "washtub",
+		"NameJP": "たらい",
+		"Icon": 136,
+		"Sort": 13360,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1257,
+		"JLabel": "立て看板",
+		"Name": "signpost",
+		"NameJP": "かんばん",
+		"Icon": 137,
+		"Sort": 3040,
+		"Category": "Items"
+	},
+	{
+		"ID": 1258,
+		"JLabel": "木囲い",
+		"Name": "fencing",
+		"NameJP": "木のさく",
+		"Icon": 138,
+		"Sort": 11180,
+		"Category": "BuildingMaterials"
+	},
+	{
+		"ID": 1259,
+		"JLabel": "大柵",
+		"Name": "barricade",
+		"NameJP": "バリケード",
+		"Icon": 139,
+		"Sort": 11190,
+		"Category": "BuildingMaterials"
+	},
+	{
+		"ID": 1260,
+		"JLabel": "はしご",
+		"Name": "ladder",
+		"NameJP": "はしご",
+		"Icon": 140,
+		"Sort": 11240,
+		"Category": "BuildingMaterials"
+	},
+	{
+		"ID": 1261,
+		"JLabel": "階段",
+		"Name": "stone steps",
+		"NameJP": "石のかいだん",
+		"Icon": 141,
+		"Sort": 11000,
+		"Category": "BuildingMaterials"
+	},
+	{
+		"ID": 1262,
+		"JLabel": "武器看板",
+		"Name": "armourer's sign",
+		"NameJP": "武器屋のカベかけ",
+		"Icon": 142,
+		"Sort": 13310,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1263,
+		"JLabel": "道具看板",
+		"Name": "shop sign",
+		"NameJP": "道具屋のカベかけ",
+		"Icon": 143,
+		"Sort": 13290,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1264,
+		"JLabel": "宿看板",
+		"Name": "inn sign",
+		"NameJP": "宿屋のカベかけ",
+		"Icon": 144,
+		"Sort": 13300,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1265,
+		"JLabel": "受付看板",
+		"Name": "not used",
+		"NameJP": "ビルダーシンボル・未使用",
+		"Icon": 145,
+		"Sort": 60300,
+		"Category": "Other"
+	},
+	{
+		"ID": 1266,
+		"JLabel": "木窓1",
+		"Name": "porched window",
+		"NameJP": "木のまどＡ",
+		"Icon": 146,
+		"Sort": 11090,
+		"Category": "BuildingMaterials"
+	},
+	{
+		"ID": 1267,
+		"JLabel": "木窓2",
+		"Name": "arched window",
+		"NameJP": "木のまどＢ",
+		"Icon": 147,
+		"Sort": 11100,
+		"Category": "BuildingMaterials"
+	},
+	{
+		"ID": 1268,
+		"JLabel": "石窓",
+		"Name": "stone window",
+		"NameJP": "石のまど",
+		"Icon": 148,
+		"Sort": 11110,
+		"Category": "BuildingMaterials"
+	},
+	{
+		"ID": 1269,
+		"JLabel": "木の扉",
+		"Name": "wooden door",
+		"NameJP": "木のとびら",
+		"Icon": 149,
+		"Sort": 11130,
+		"Category": "BuildingMaterials"
+	},
+	{
+		"ID": 1270,
+		"JLabel": "魔法の扉",
+		"Name": "magic door",
+		"NameJP": "まほうのとびら",
+		"Icon": 150,
+		"Sort": 11150,
+		"Category": "BuildingMaterials"
+	},
+	{
+		"ID": 1271,
+		"JLabel": "牢扉",
+		"Name": "cell door",
+		"NameJP": "ろうやのとびら",
+		"Icon": 151,
+		"Sort": 11140,
+		"Category": "BuildingMaterials"
+	},
+	{
+		"ID": 1272,
+		"JLabel": "大扉",
+		"Name": "steel doors",
+		"NameJP": "はがねの大とびら",
+		"Icon": 152,
+		"Sort": 11160,
+		"Category": "BuildingMaterials"
+	},
+	{
+		"ID": 1273,
+		"JLabel": "フェンスゲート",
+		"Name": "saloon door",
+		"NameJP": "フェンス",
+		"Icon": 153,
+		"Sort": 11170,
+		"Category": "BuildingMaterials"
+	},
+	{
+		"ID": 1274,
+		"JLabel": "錠前",
+		"Name": "padlock",
+		"NameJP": "錠前",
+		"Icon": 154,
+		"Sort": 60310,
+		"Category": "Other"
+	},
+	{
+		"ID": 1275,
+		"JLabel": "丸石アクセント",
+		"Name": "buttress",
+		"NameJP": "石垣かざり",
+		"Icon": 155,
+		"Sort": 11200,
+		"Category": "BuildingMaterials"
+	},
+	{
+		"ID": 1276,
+		"JLabel": "屋根トップ",
+		"Name": "ridge tiling",
+		"NameJP": "屋根かざり",
+		"Icon": 156,
+		"Sort": 11020,
+		"Category": "BuildingMaterials"
+	},
+	{
+		"ID": 1277,
+		"JLabel": "井戸",
+		"Name": "well",
+		"NameJP": "井戸",
+		"Icon": 157,
+		"Sort": 13370,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1278,
+		"JLabel": "松明",
+		"Name": "torch",
+		"NameJP": "たいまつ",
+		"Icon": 158,
+		"Sort": 12000,
+		"Category": "LightSources"
+	},
+	{
+		"ID": 1279,
+		"JLabel": "壁松明",
+		"Name": "sconce",
+		"NameJP": "カベかけ松明",
+		"Icon": 159,
+		"Sort": 12020,
+		"Category": "LightSources"
+	},
+	{
+		"ID": 1280,
+		"JLabel": "キャンプ",
+		"Name": "bonfire",
+		"NameJP": "たき火",
+		"Icon": 160,
+		"Sort": 12010,
+		"Category": "LightSources"
+	},
+	{
+		"ID": 1281,
+		"JLabel": "鍋つきキャンプ",
+		"Name": "cookfire",
+		"NameJP": "料理用たき火",
+		"Icon": 161,
+		"Sort": 14020,
+		"Category": "CraftingStations"
+	},
+	{
+		"ID": 1282,
+		"JLabel": "ランプ",
+		"Name": "lantern",
+		"NameJP": "カベかけランプ",
+		"Icon": 162,
+		"Sort": 12060,
+		"Category": "LightSources"
+	},
+	{
+		"ID": 1283,
+		"JLabel": "燭台",
+		"Name": "candlestick",
+		"NameJP": "しょく台",
+		"Icon": 163,
+		"Sort": 12040,
+		"Category": "LightSources"
+	},
+	{
+		"ID": 1284,
+		"JLabel": "壁燭台",
+		"Name": "candelabrum",
+		"NameJP": "カベしょく台",
+		"Icon": 164,
+		"Sort": 12050,
+		"Category": "LightSources"
+	},
+	{
+		"ID": 1285,
+		"JLabel": "トーチ",
+		"Name": "brazier",
+		"NameJP": "かがり火",
+		"Icon": 165,
+		"Sort": 12030,
+		"Category": "LightSources"
+	},
+	{
+		"ID": 1286,
+		"JLabel": "花活け",
+		"Name": "pot plant",
+		"NameJP": "いけ花",
+		"Icon": 166,
+		"Sort": 13000,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1287,
+		"JLabel": "飲料瓶",
+		"Name": "bottles",
+		"NameJP": "ガラスびん",
+		"Icon": 167,
+		"Sort": 13730,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1288,
+		"JLabel": "食器",
+		"Name": "crockery",
+		"NameJP": "食器",
+		"Icon": 168,
+		"Sort": 13720,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1289,
+		"JLabel": "鏡台",
+		"Name": "dressing table",
+		"NameJP": "ドレッサー",
+		"Icon": 169,
+		"Sort": 13380,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1290,
+		"JLabel": "角机",
+		"Name": "small table",
+		"NameJP": "木の机",
+		"Icon": 170,
+		"Sort": 13140,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1291,
+		"JLabel": "長机",
+		"Name": "big table",
+		"NameJP": "木のテーブル",
+		"Icon": 171,
+		"Sort": 13160,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1292,
+		"JLabel": "石机",
+		"Name": "stone table",
+		"NameJP": "石のテーブル",
+		"Icon": 172,
+		"Sort": 13170,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1293,
+		"JLabel": "丸机",
+		"Name": "dining table",
+		"NameJP": "おしゃれテーブル",
+		"Icon": 173,
+		"Sort": 13150,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1294,
+		"JLabel": "椅子LV1",
+		"Name": "wooden stool",
+		"NameJP": "木のいす",
+		"Icon": 174,
+		"Sort": 13210,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1295,
+		"JLabel": "椅子LV2",
+		"Name": "comfy stool",
+		"NameJP": "クッションいす",
+		"Icon": 175,
+		"Sort": 13220,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1296,
+		"JLabel": "玉座",
+		"Name": "throne",
+		"NameJP": "玉座",
+		"Icon": 176,
+		"Sort": 13270,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1297,
+		"JLabel": "わらベッド",
+		"Name": "straw mattress",
+		"NameJP": "わらベッド",
+		"Icon": 177,
+		"Sort": 3130,
+		"Category": "Items"
+	},
+	{
+		"ID": 1298,
+		"JLabel": "木ベッド",
+		"Name": "simple bed",
+		"NameJP": "木のベッド",
+		"Icon": 178,
+		"Sort": 3140,
+		"Category": "Items"
+	},
+	{
+		"ID": 1299,
+		"JLabel": "高級ベッド",
+		"Name": "king-sized bed",
+		"NameJP": "キングベッド",
+		"Icon": 179,
+		"Sort": 3150,
+		"Category": "Items"
+	},
+	{
+		"ID": 1300,
+		"JLabel": "タオル",
+		"Name": "towel rail",
+		"NameJP": "カベかけタオル",
+		"Icon": 180,
+		"Sort": 13390,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1301,
+		"JLabel": "本棚",
+		"Name": "bookcase",
+		"NameJP": "本だな",
+		"Icon": 181,
+		"Sort": 13400,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1302,
+		"JLabel": "キャビネット",
+		"Name": "chest of drawers",
+		"NameJP": "キャビネット",
+		"Icon": 182,
+		"Sort": 13410,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1303,
+		"JLabel": "タンス",
+		"Name": "wardrobe",
+		"NameJP": "タンス",
+		"Icon": 183,
+		"Sort": 13420,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1304,
+		"JLabel": "時計",
+		"Name": "grandfather clock",
+		"NameJP": "大きな時計",
+		"Icon": 184,
+		"Sort": 13430,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1305,
+		"JLabel": "武器飾り",
+		"Name": "ornamental swords",
+		"NameJP": "剣のカベかけ",
+		"Icon": 185,
+		"Sort": 13440,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1306,
+		"JLabel": "鎧飾り",
+		"Name": "ornamental armour",
+		"NameJP": "よろいの置きもの",
+		"Icon": 186,
+		"Sort": 13450,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1307,
+		"JLabel": "かまど",
+		"Name": "stove",
+		"NameJP": "かまど",
+		"Icon": 187,
+		"Sort": 12070,
+		"Category": "LightSources"
+	},
+	{
+		"ID": 1308,
+		"JLabel": "シンク",
+		"Name": "sink",
+		"NameJP": "シンク",
+		"Icon": 188,
+		"Sort": 13460,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1309,
+		"JLabel": "風呂",
+		"Name": "bathtub",
+		"NameJP": "バスタブ",
+		"Icon": 189,
+		"Sort": 13800,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1310,
+		"JLabel": "女神像",
+		"Name": "Goddess statue",
+		"NameJP": "女神像",
+		"Icon": 190,
+		"Sort": 13470,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1311,
+		"JLabel": "壁レリーフ小",
+		"Name": "clover carving",
+		"NameJP": "石のレリーフ",
+		"Icon": 191,
+		"Sort": 13480,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1312,
+		"JLabel": "展示台",
+		"Name": "item display stand",
+		"NameJP": "展示台",
+		"Icon": 192,
+		"Sort": 3200,
+		"Category": "Items"
+	},
+	{
+		"ID": 1313,
+		"JLabel": "宝箱",
+		"Name": "treasure chest",
+		"NameJP": "宝箱",
+		"Icon": 193,
+		"Sort": 13490,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1314,
+		"JLabel": "垂れ幕",
+		"Name": "decorative drapery",
+		"NameJP": "カベかけ布かざり",
+		"Icon": 194,
+		"Sort": 13500,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1315,
+		"JLabel": "タペストリ小",
+		"Name": "bold banner",
+		"NameJP": "タペストリ",
+		"Icon": 195,
+		"Sort": 13510,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1316,
+		"JLabel": "タペストリ大",
+		"Name": "big bold banner",
+		"NameJP": "大きなタペストリ",
+		"Icon": 196,
+		"Sort": 13520,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1317,
+		"JLabel": "柱小",
+		"Name": "pretty pillar",
+		"NameJP": "石の柱",
+		"Icon": 197,
+		"Sort": 13530,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1318,
+		"JLabel": "柱大",
+		"Name": "column",
+		"NameJP": "城の大柱",
+		"Icon": 198,
+		"Sort": 13540,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1319,
+		"JLabel": "城系囲い（線）",
+		"Name": "stone coping",
+		"NameJP": "石の床かざりＡ",
+		"Icon": 200,
+		"Sort": 11210,
+		"Category": "BuildingMaterials"
+	},
+	{
+		"ID": 1320,
+		"JLabel": "城系囲い（角）",
+		"Name": "stone capping",
+		"NameJP": "石の床かざりＢ",
+		"Icon": 199,
+		"Sort": 11220,
+		"Category": "BuildingMaterials"
+	},
+	{
+		"ID": 1321,
+		"JLabel": "壁レリーフ大",
+		"Name": "decorative shield",
+		"NameJP": "大きなカベかざり",
+		"Icon": 201,
+		"Sort": 13550,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1322,
+		"JLabel": "洞窟崩落岩小",
+		"Name": "small stones",
+		"NameJP": "小石",
+		"Icon": 209,
+		"Sort": 13020,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1323,
+		"JLabel": "洞窟崩落岩大",
+		"Name": "big rock",
+		"NameJP": "大きな石",
+		"Icon": 208,
+		"Sort": 13030,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1324,
+		"JLabel": "人骨",
+		"Name": "bones",
+		"NameJP": "骨",
+		"Icon": 210,
+		"Sort": 13830,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1325,
+		"JLabel": "竜骨",
+		"Name": "dragon bones",
+		"NameJP": "竜族の骨",
+		"Icon": 211,
+		"Sort": 13840,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1326,
+		"JLabel": "壁鎖",
+		"Name": "chains",
+		"NameJP": "ほりょのくさり",
+		"Icon": 212,
+		"Sort": 13810,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1327,
+		"JLabel": "魔物の旗",
+		"Name": "Dragonlord's standard",
+		"NameJP": "竜王軍のはた",
+		"Icon": 213,
+		"Sort": 13850,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1328,
+		"JLabel": "魔物の床",
+		"Name": "vile tile",
+		"NameJP": "魔物の床かざり",
+		"Icon": 214,
+		"Sort": 13860,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1329,
+		"JLabel": "床ロト",
+		"Name": "seal of Erdrick",
+		"NameJP": "ロトの床かざり",
+		"Icon": 215,
+		"Sort": 13560,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1330,
+		"JLabel": "竜の柱",
+		"Name": "draconic column",
+		"NameJP": "ドラゴンの柱",
+		"Icon": 216,
+		"Sort": 13870,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1331,
+		"JLabel": "魔物の顔像",
+		"Name": "vile visage",
+		"NameJP": "悪魔のカベかざり",
+		"Icon": 217,
+		"Sort": 13880,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1332,
+		"JLabel": "魔物の彫像",
+		"Name": "evil idol",
+		"NameJP": "火をふく石像",
+		"Icon": 218,
+		"Sort": 3360,
+		"Category": "Items"
+	},
+	{
+		"ID": 1333,
+		"JLabel": "魔物の生れる穴1",
+		"Name": "beastly burrow",
+		"NameJP": "土の巣穴",
+		"Icon": 219,
+		"Sort": 13890,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1334,
+		"JLabel": "魔物の生れる穴2",
+		"Name": "helliportal",
+		"NameJP": "魔物のよびだし床",
+		"Icon": 220,
+		"Sort": 13900,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1335,
+		"JLabel": "トゲ床",
+		"Name": "spike trap",
+		"NameJP": "トゲわな",
+		"Icon": 221,
+		"Sort": 3230,
+		"Category": "Items"
+	},
+	{
+		"ID": 1336,
+		"JLabel": "竜王の玉座",
+		"Name": "Dragonlord's throne",
+		"NameJP": "竜王の玉座",
+		"Icon": 222,
+		"Sort": 60320,
+		"Category": "Other"
+	},
+	{
+		"ID": 1337,
+		"JLabel": "モモガキ",
+		"Name": "pristine plumberry",
+		"NameJP": "モモガキの実",
+		"Icon": 733,
+		"Sort": 15360,
+		"Category": "Plants"
+	},
+	{
+		"ID": 1338,
+		"JLabel": "とうがらし",
+		"Name": "chilli peppers",
+		"NameJP": "とうがらし",
+		"Icon": 224,
+		"Sort": 16020,
+		"Category": "Food2"
+	},
+	{
+		"ID": 1339,
+		"JLabel": "小麦",
+		"Name": "wheat",
+		"NameJP": "小麦",
+		"Icon": 225,
+		"Sort": 60330,
+		"Category": "Other"
+	},
+	{
+		"ID": 1340,
+		"JLabel": "じゃがいも",
+		"Name": "potato",
+		"NameJP": "じゃがいも",
+		"Icon": 226,
+		"Sort": 60340,
+		"Category": "Other"
+	},
+	{
+		"ID": 1341,
+		"JLabel": "トマト",
+		"Name": "heartfruit",
+		"NameJP": "ハートフルーツ",
+		"Icon": 227,
+		"Sort": 60350,
+		"Category": "Other"
+	},
+	{
+		"ID": 1342,
+		"JLabel": "酒舟石",
+		"Name": "transmutation table",
+		"NameJP": "いにしえの調合台",
+		"Icon": 245,
+		"Sort": 14090,
+		"Category": "CraftingStations"
+	},
+	{
+		"ID": 1343,
+		"JLabel": "ライオンヘッド",
+		"Name": "fierce fountain",
+		"NameJP": "獅子の湯かざり",
+		"Icon": 258,
+		"Sort": 13570,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1344,
+		"JLabel": "聖なる祠",
+		"Name": "ancient altar",
+		"NameJP": "聖なるほこら",
+		"Icon": 247,
+		"Sort": 14130,
+		"Category": "CraftingStations"
+	},
+	{
+		"ID": 1345,
+		"JLabel": "粗末な作業台",
+		"Name": "tree stump",
+		"NameJP": "きりかぶ作業台",
+		"Icon": 246,
+		"Sort": 14000,
+		"Category": "CraftingStations"
+	},
+	{
+		"ID": 1346,
+		"JLabel": "スライム風船",
+		"Name": "slime balloons",
+		"NameJP": "スライム風船",
+		"Icon": 847,
+		"Sort": 13580,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1347,
+		"JLabel": "石切台",
+		"Name": "mason's workstation",
+		"NameJP": "石の作業台",
+		"Icon": 230,
+		"Sort": 14010,
+		"Category": "CraftingStations"
+	},
+	{
+		"ID": 1348,
+		"JLabel": "作業台",
+		"Name": "carpenter's workstation",
+		"NameJP": "木の作業台",
+		"Icon": 231,
+		"Sort": 14060,
+		"Category": "CraftingStations"
+	},
+	{
+		"ID": 1349,
+		"JLabel": "大作業台",
+		"Name": "Builder's workbench",
+		"NameJP": "万能作業台",
+		"Icon": 232,
+		"Sort": 14140,
+		"Category": "CraftingStations"
+	},
+	{
+		"ID": 1350,
+		"JLabel": "ミル",
+		"Name": "colour wheel",
+		"NameJP": "ドットデコーダー",
+		"Icon": 2467,
+		"Sort": 60360,
+		"Category": "Other"
+	},
+	{
+		"ID": 1351,
+		"JLabel": "炉",
+		"Name": "forge",
+		"NameJP": "炉と金床",
+		"Icon": 234,
+		"Sort": 14030,
+		"Category": "CraftingStations"
+	},
+	{
+		"ID": 1352,
+		"JLabel": "武器看板2",
+		"Name": "Hela's hammer sign",
+		"NameJP": "まじんのカベかけ",
+		"Icon": 235,
+		"Sort": 13320,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1353,
+		"JLabel": "キッチン",
+		"Name": "brick barbecue",
+		"NameJP": "レンガ料理台",
+		"Icon": 236,
+		"Sort": 14040,
+		"Category": "CraftingStations"
+	},
+	{
+		"ID": 1354,
+		"JLabel": "ふるい",
+		"Name": "miner's refiner",
+		"NameJP": "鉄の作業台",
+		"Icon": 237,
+		"Sort": 14100,
+		"Category": "CraftingStations"
+	},
+	{
+		"ID": 1355,
+		"JLabel": "仕立て台",
+		"Name": "sewing station",
+		"NameJP": "仕立て台",
+		"Icon": 238,
+		"Sort": 14080,
+		"Category": "CraftingStations"
+	},
+	{
+		"ID": 1356,
+		"JLabel": "薬壺",
+		"Name": "herbalist's cauldron",
+		"NameJP": "調合ツボ",
+		"Icon": 239,
+		"Sort": 14070,
+		"Category": "CraftingStations"
+	},
+	{
+		"ID": 1357,
+		"JLabel": "金属加工台",
+		"Name": "machinist's workbench",
+		"NameJP": "超マシンメーカー",
+		"Icon": 240,
+		"Sort": 14150,
+		"Category": "CraftingStations"
+	},
+	{
+		"ID": 1358,
+		"JLabel": "溶接台",
+		"Name": "welder's workbench",
+		"NameJP": "マシンメーカー",
+		"Icon": 241,
+		"Sort": 14110,
+		"Category": "CraftingStations"
+	},
+	{
+		"ID": 1359,
+		"JLabel": "祭壇",
+		"Name": "diviner's altar",
+		"NameJP": "シャナク魔法台",
+		"Icon": 242,
+		"Sort": 14120,
+		"Category": "CraftingStations"
+	},
+	{
+		"ID": 1360,
+		"JLabel": "魔物の錬成壺",
+		"Name": "forbidden altar",
+		"NameJP": "禁断の合成ツボ",
+		"Icon": 243,
+		"Sort": 14160,
+		"Category": "CraftingStations"
+	},
+	{
+		"ID": 1361,
+		"JLabel": "神鉄炉",
+		"Name": "furnace",
+		"NameJP": "神鉄炉と金床",
+		"Icon": 244,
+		"Sort": 14050,
+		"Category": "CraftingStations"
+	},
+	{
+		"ID": 1362,
+		"JLabel": "本",
+		"Name": "book",
+		"NameJP": "本",
+		"Icon": 248,
+		"Sort": 13590,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1363,
+		"JLabel": "メモ帳",
+		"Name": "note",
+		"NameJP": "メモ",
+		"Icon": 249,
+		"Sort": 13600,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1364,
+		"JLabel": "スーパーカー",
+		"Name": "Bashmobile",
+		"NameJP": "超げきとつマシン",
+		"Icon": 250,
+		"Sort": 3310,
+		"Category": "Items"
+	},
+	{
+		"ID": 1365,
+		"JLabel": "メルキドシールド",
+		"Name": "Cantlin shield",
+		"NameJP": "メルキドシールド",
+		"Icon": 251,
+		"Sort": 3240,
+		"Category": "Items"
+	},
+	{
+		"ID": 1366,
+		"JLabel": "聖なる成長草",
+		"Name": "holyhock seedling",
+		"NameJP": "アミダ草",
+		"Icon": 252,
+		"Sort": 60370,
+		"Category": "Other"
+	},
+	{
+		"ID": 1367,
+		"JLabel": "フリー用ロト床",
+		"Name": "Erdrick's emblem (for free build mode)",
+		"NameJP": "フリー用ロト床",
+		"Icon": 215,
+		"Sort": 60380,
+		"Category": "Other"
+	},
+	{
+		"ID": 1368,
+		"JLabel": "ツタ（影）",
+		"Name": "infernal ivy",
+		"NameJP": "やみのツタ",
+		"Icon": 254,
+		"Sort": 15060,
+		"Category": "Plants"
+	},
+	{
+		"ID": 1369,
+		"JLabel": "大砲",
+		"Name": "cannon",
+		"NameJP": "大砲",
+		"Icon": 802,
+		"Sort": 3290,
+		"Category": "Items"
+	},
+	{
+		"ID": 1370,
+		"JLabel": "ピストン",
+		"Name": "piston",
+		"NameJP": "ピストン",
+		"Icon": 259,
+		"Sort": 3260,
+		"Category": "Items"
+	},
+	{
+		"ID": 1371,
+		"JLabel": "床スイッチ",
+		"Name": "pressure plate",
+		"NameJP": "床用スイッチ",
+		"Icon": 260,
+		"Sort": 3270,
+		"Category": "Items"
+	},
+	{
+		"ID": 1372,
+		"JLabel": "壁スイッチ",
+		"Name": "button",
+		"NameJP": "カベ用スイッチ",
+		"Icon": 261,
+		"Sort": 3280,
+		"Category": "Items"
+	},
+	{
+		"ID": 1373,
+		"JLabel": "弓バリスタ",
+		"Name": "ballista",
+		"NameJP": "大弓",
+		"Icon": 262,
+		"Sort": 3250,
+		"Category": "Items"
+	},
+	{
+		"ID": 1374,
+		"JLabel": "イオナズン大砲",
+		"Name": "magic cannon",
+		"NameJP": "まほうの大砲",
+		"Icon": 263,
+		"Sort": 3300,
+		"Category": "Items"
+	},
+	{
+		"ID": 1375,
+		"JLabel": "屋根薄板",
+		"Name": "roof tiling",
+		"NameJP": "屋根・天板",
+		"Icon": 816,
+		"Sort": 11030,
+		"Category": "BuildingMaterials"
+	},
+	{
+		"ID": 1376,
+		"JLabel": "屋根ななめ",
+		"Name": "pitched tiling",
+		"NameJP": "屋根・ななめ板",
+		"Icon": 817,
+		"Sort": 11040,
+		"Category": "BuildingMaterials"
+	},
+	{
+		"ID": 1377,
+		"JLabel": "屋根凸",
+		"Name": "outer corner tiling",
+		"NameJP": "屋根・でっぱり角",
+		"Icon": 818,
+		"Sort": 11050,
+		"Category": "BuildingMaterials"
+	},
+	{
+		"ID": 1378,
+		"JLabel": "屋根凹",
+		"Name": "inner corner tiling",
+		"NameJP": "屋根・ひっこみ角",
+		"Icon": 819,
+		"Sort": 11060,
+		"Category": "BuildingMaterials"
+	},
+	{
+		"ID": 1379,
+		"JLabel": "拠点倉庫LV1",
+		"Name": "colossal coffer",
+		"NameJP": "大倉庫",
+		"Icon": 264,
+		"Sort": 3170,
+		"Category": "Items"
+	},
+	{
+		"ID": 1380,
+		"JLabel": "拠点倉庫LV2",
+		"Name": "armoire",
+		"NameJP": "石のクローゼット",
+		"Icon": 265,
+		"Sort": 13610,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1381,
+		"JLabel": "拠点倉庫LV3",
+		"Name": "colossal closet",
+		"NameJP": "知られざる大倉庫",
+		"Icon": 266,
+		"Sort": 3180,
+		"Category": "Items"
+	},
+	{
+		"ID": 1382,
+		"JLabel": "そうび展示台",
+		"Name": "equipment display stand",
+		"NameJP": "そうび展示台",
+		"Icon": 267,
+		"Sort": 3210,
+		"Category": "Items"
+	},
+	{
+		"ID": 1383,
+		"JLabel": "線路（直線）",
+		"Name": "straight track",
+		"NameJP": "線路・直線",
+		"Icon": 268,
+		"Sort": 3070,
+		"Category": "Items"
+	},
+	{
+		"ID": 1384,
+		"JLabel": "線路（カーブ）",
+		"Name": "curved track",
+		"NameJP": "線路・カーブ",
+		"Icon": 269,
+		"Sort": 3080,
+		"Category": "Items"
+	},
+	{
+		"ID": 1385,
+		"JLabel": "線路（勾配）",
+		"Name": "sloped track",
+		"NameJP": "線路・こうばい",
+		"Icon": 270,
+		"Sort": 3090,
+		"Category": "Items"
+	},
+	{
+		"ID": 1386,
+		"JLabel": "線路（駅）",
+		"Name": "end-of-the-line sign",
+		"NameJP": "トロッコ停止板",
+		"Icon": 271,
+		"Sort": 3100,
+		"Category": "Items"
+	},
+	{
+		"ID": 1387,
+		"JLabel": "木トロッコ",
+		"Name": "wooden minecart",
+		"NameJP": "木のトロッコ",
+		"Icon": 272,
+		"Sort": 3050,
+		"Category": "Items"
+	},
+	{
+		"ID": 1388,
+		"JLabel": "鉄トロッコ",
+		"Name": "metal minecart",
+		"NameJP": "鉄のトロッコ",
+		"Icon": 273,
+		"Sort": 3060,
+		"Category": "Items"
+	},
+	{
+		"ID": 1389,
+		"JLabel": "旗ステージ1（台座）",
+		"Name": "chapter 1 banner (pedestal)",
+		"NameJP": "旗ステージ1（台座）",
+		"Icon": 274,
+		"Sort": 60390,
+		"Category": "Other"
+	},
+	{
+		"ID": 1390,
+		"JLabel": "旗ステージ2（台座）",
+		"Name": "chapter 1 banner (pedestal)",
+		"NameJP": "旗ステージ2（台座）",
+		"Icon": 275,
+		"Sort": 60400,
+		"Category": "Other"
+	},
+	{
+		"ID": 1391,
+		"JLabel": "旗ステージ3（台座）",
+		"Name": "chapter 1 banner (pedestal)",
+		"NameJP": "旗ステージ3（台座）",
+		"Icon": 276,
+		"Sort": 60410,
+		"Category": "Other"
+	},
+	{
+		"ID": 1392,
+		"JLabel": "旗ステージ4（台座）",
+		"Name": "chapter 1 banner (pedestal)",
+		"NameJP": "旗ステージ4（台座）",
+		"Icon": 277,
+		"Sort": 60420,
+		"Category": "Other"
+	},
+	{
+		"ID": 1393,
+		"JLabel": "旅の扉（青）",
+		"Name": "yellow teleportal",
+		"NameJP": "旅のとびら・黄",
+		"Icon": 809,
+		"Sort": 8130,
+		"Category": "ImportantItems"
+	},
+	{
+		"ID": 1394,
+		"JLabel": "導きの玉（赤）",
+		"Name": "red naviglobe",
+		"NameJP": "みちびきの玉・赤",
+		"Icon": 279,
+		"Sort": 3330,
+		"Category": "Items"
+	},
+	{
+		"ID": 1395,
+		"JLabel": "導きの玉（緑）",
+		"Name": "green naviglobe",
+		"NameJP": "みちびきの玉・緑",
+		"Icon": 280,
+		"Sort": 3340,
+		"Category": "Items"
+	},
+	{
+		"ID": 1396,
+		"JLabel": "導きの玉（青）",
+		"Name": "blue naviglobe",
+		"NameJP": "みちびきの玉・青",
+		"Icon": 281,
+		"Sort": 3320,
+		"Category": "Items"
+	},
+	{
+		"ID": 1397,
+		"JLabel": "魔法の玉",
+		"Name": "wrecking ball",
+		"NameJP": "まほうの玉",
+		"Icon": 282,
+		"Sort": 1100,
+		"Category": "Consumable"
+	},
+	{
+		"ID": 1398,
+		"JLabel": "壁掛け枠",
+		"Name": "portrait of a lady",
+		"NameJP": "女性の肖像画",
+		"Icon": 805,
+		"Sort": 13620,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1399,
+		"JLabel": "噴水",
+		"Name": "fountain",
+		"NameJP": "ふんすい",
+		"Icon": 806,
+		"Sort": 13630,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1400,
+		"JLabel": "旅の扉（黄）",
+		"Name": "blue teleportal",
+		"NameJP": "旅のとびら・青",
+		"Icon": 278,
+		"Sort": 8140,
+		"Category": "ImportantItems"
+	},
+	{
+		"ID": 1401,
+		"JLabel": "旅の扉（赤）",
+		"Name": "red teleportal",
+		"NameJP": "旅のとびら・赤",
+		"Icon": 810,
+		"Sort": 8150,
+		"Category": "ImportantItems"
+	},
+	{
+		"ID": 1402,
+		"JLabel": "旅の扉（緑）",
+		"Name": "green teleportal",
+		"NameJP": "旅のとびら・緑",
+		"Icon": 811,
+		"Sort": 8160,
+		"Category": "ImportantItems"
+	},
+	{
+		"ID": 1403,
+		"JLabel": "旗手持ち用",
+		"Name": "Banner of Hope",
+		"NameJP": "希望のはた",
+		"Icon": 274,
+		"Sort": 8350,
+		"Category": "ImportantItems"
+	},
+	{
+		"ID": 1404,
+		"JLabel": "そまつな扉",
+		"Name": "straw door",
+		"NameJP": "わらのとびら",
+		"Icon": 202,
+		"Sort": 11120,
+		"Category": "BuildingMaterials"
+	},
+	{
+		"ID": 1405,
+		"JLabel": "木階段",
+		"Name": "wooden steps",
+		"NameJP": "木のかいだん",
+		"Icon": 203,
+		"Sort": 11010,
+		"Category": "BuildingMaterials"
+	},
+	{
+		"ID": 1406,
+		"JLabel": "えんとつ２",
+		"Name": "chimney",
+		"NameJP": "えんとつ",
+		"Icon": 204,
+		"Sort": 13120,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1407,
+		"JLabel": "石の椅子",
+		"Name": "stone stool",
+		"NameJP": "石のいす",
+		"Icon": 205,
+		"Sort": 13230,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1408,
+		"JLabel": "収納箱",
+		"Name": "chest",
+		"NameJP": "収納箱",
+		"Icon": 206,
+		"Sort": 3190,
+		"Category": "Items"
+	},
+	{
+		"ID": 1409,
+		"JLabel": "透明壁",
+		"Name": "window",
+		"NameJP": "ガラスまど",
+		"Icon": 207,
+		"Sort": 11080,
+		"Category": "BuildingMaterials"
+	},
+	{
+		"ID": 1410,
+		"JLabel": "まめ",
+		"Name": "butterbeans",
+		"NameJP": "まめ",
+		"Icon": 228,
+		"Sort": 60430,
+		"Category": "Other"
+	},
+	{
+		"ID": 1411,
+		"JLabel": "さとうきび",
+		"Name": "sugar cane",
+		"NameJP": "あまきび",
+		"Icon": 229,
+		"Sort": 60440,
+		"Category": "Other"
+	},
+	{
+		"ID": 1412,
+		"JLabel": "濾過装置",
+		"Name": "filter fountain",
+		"NameJP": "浄化のふんすい",
+		"Icon": 256,
+		"Sort": 3220,
+		"Category": "Items"
+	},
+	{
+		"ID": 1413,
+		"JLabel": "邪悪な宝箱",
+		"Name": "hexed chest",
+		"NameJP": "魔物の宝箱",
+		"Icon": 257,
+		"Sort": 60450,
+		"Category": "Other"
+	},
+	{
+		"ID": 1414,
+		"JLabel": "古代の大旅の扉",
+		"Name": "ancient teleportal",
+		"NameJP": "古代のとびら",
+		"Icon": 812,
+		"Sort": 60460,
+		"Category": "Other"
+	},
+	{
+		"ID": 1415,
+		"JLabel": "建築エリア看板（自分用）",
+		"Name": "sharing stone",
+		"NameJP": "じぶんのビルド石",
+		"Icon": 813,
+		"Sort": 3370,
+		"Category": "Items"
+	},
+	{
+		"ID": 1416,
+		"JLabel": "建築エリア看板（他人用）",
+		"Name": "summoning stone",
+		"NameJP": "みんなのビルド石",
+		"Icon": 814,
+		"Sort": 3380,
+		"Category": "Items"
+	},
+	{
+		"ID": 1417,
+		"JLabel": "地名石標",
+		"Name": "puzzlepost",
+		"NameJP": "地名石標",
+		"Icon": 815,
+		"Sort": 60470,
+		"Category": "Other"
+	},
+	{
+		"ID": 1418,
+		"JLabel": "屋根窓",
+		"Name": "tiled window",
+		"NameJP": "屋根・窓かざり",
+		"Icon": 820,
+		"Sort": 11070,
+		"Category": "BuildingMaterials"
+	},
+	{
+		"ID": 1419,
+		"JLabel": "木枝",
+		"Name": "branch",
+		"NameJP": "木の枝",
+		"Icon": 821,
+		"Sort": 15020,
+		"Category": "Plants"
+	},
+	{
+		"ID": 1420,
+		"JLabel": "城壁キャップ",
+		"Name": "mini merlon",
+		"NameJP": "城のカベかざり",
+		"Icon": 823,
+		"Sort": 11230,
+		"Category": "BuildingMaterials"
+	},
+	{
+		"ID": 1421,
+		"JLabel": "石像ローラ",
+		"Name": "princess statue",
+		"NameJP": "美しい女性の石像",
+		"Icon": 2,
+		"Sort": 60480,
+		"Category": "Other"
+	},
+	{
+		"ID": 1422,
+		"JLabel": "男性用看板",
+		"Name": "gentleman sign",
+		"NameJP": "男のカベかけ",
+		"Icon": 824,
+		"Sort": 3110,
+		"Category": "Items"
+	},
+	{
+		"ID": 1423,
+		"JLabel": "女性用看板",
+		"Name": "lady sign",
+		"NameJP": "女のカベかけ",
+		"Icon": 825,
+		"Sort": 3120,
+		"Category": "Items"
+	},
+	{
+		"ID": 1424,
+		"JLabel": "ベンチ",
+		"Name": "bench",
+		"NameJP": "ベンチ",
+		"Icon": 826,
+		"Sort": 13250,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1425,
+		"JLabel": "バーカウンター",
+		"Name": "bar counter",
+		"NameJP": "バーカウンター",
+		"Icon": 827,
+		"Sort": 13180,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1426,
+		"JLabel": "豪華な椅子",
+		"Name": "chic chair",
+		"NameJP": "きぞくのいす",
+		"Icon": 828,
+		"Sort": 13240,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1427,
+		"JLabel": "酒ダル",
+		"Name": "beer barrel",
+		"NameJP": "酒ダル",
+		"Icon": 829,
+		"Sort": 13640,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1428,
+		"JLabel": "ハート壁かけライト",
+		"Name": "naughty night light",
+		"NameJP": "えっちなライト",
+		"Icon": 830,
+		"Sort": 12090,
+		"Category": "LightSources"
+	},
+	{
+		"ID": 1429,
+		"JLabel": "２シーターソファ",
+		"Name": "comfy sofa",
+		"NameJP": "くつろぎソファ",
+		"Icon": 831,
+		"Sort": 13260,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1430,
+		"JLabel": "天蓋つきベッド",
+		"Name": "princess-sized bed",
+		"NameJP": "王女のベッド",
+		"Icon": 832,
+		"Sort": 3160,
+		"Category": "Items"
+	},
+	{
+		"ID": 1431,
+		"JLabel": "豪華木製大テーブル",
+		"Name": "extravagant table",
+		"NameJP": "スクエアテーブル",
+		"Icon": 833,
+		"Sort": 13190,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1432,
+		"JLabel": "豪華石製大テーブル",
+		"Name": "round table",
+		"NameJP": "ラウンドテーブル",
+		"Icon": 834,
+		"Sort": 13200,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1433,
+		"JLabel": "暖炉",
+		"Name": "fireplace",
+		"NameJP": "だんろ",
+		"Icon": 835,
+		"Sort": 12080,
+		"Category": "LightSources"
+	},
+	{
+		"ID": 1434,
+		"JLabel": "プランターツボ",
+		"Name": "plant pot",
+		"NameJP": "うえきばち",
+		"Icon": 836,
+		"Sort": 13650,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1435,
+		"JLabel": "なつかしのたてごと",
+		"Name": "lyre of slime immemorial",
+		"NameJP": "なつかしの竪琴",
+		"Icon": 2468,
+		"Sort": 3350,
+		"Category": "Items"
+	},
+	{
+		"ID": 1436,
+		"JLabel": "ダンベル",
+		"Name": "dumb-bells",
+		"NameJP": "ダンベル",
+		"Icon": 838,
+		"Sort": 13660,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1437,
+		"JLabel": "文房具",
+		"Name": "stationery",
+		"NameJP": "文房具",
+		"Icon": 839,
+		"Sort": 13670,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1438,
+		"JLabel": "水差し",
+		"Name": "water jug",
+		"NameJP": "水さし",
+		"Icon": 840,
+		"Sort": 13740,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1439,
+		"JLabel": "ケーキセット",
+		"Name": "tea service",
+		"NameJP": "ケーキセット",
+		"Icon": 841,
+		"Sort": 13790,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1440,
+		"JLabel": "野菜料理",
+		"Name": "salad plate",
+		"NameJP": "サラダプレート",
+		"Icon": 842,
+		"Sort": 13770,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1441,
+		"JLabel": "魚料理",
+		"Name": "fish dish",
+		"NameJP": "魚料理プレート",
+		"Icon": 843,
+		"Sort": 13780,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1442,
+		"JLabel": "パンとカゴ",
+		"Name": "bread basket",
+		"NameJP": "パンとカゴ",
+		"Icon": 844,
+		"Sort": 13750,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1443,
+		"JLabel": "肉料理",
+		"Name": "meat feast",
+		"NameJP": "肉料理プレート",
+		"Icon": 845,
+		"Sort": 13760,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1444,
+		"JLabel": "すごろくセット",
+		"Name": "Treasures 'n' Trapdoors",
+		"NameJP": "すごろくかざり",
+		"Icon": 846,
+		"Sort": 13680,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1445,
+		"JLabel": "おおきづちのぬいぐるみ",
+		"Name": "stuffed hammerhood",
+		"NameJP": "おおきづち人形",
+		"Icon": 848,
+		"Sort": 13690,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1446,
+		"JLabel": "イエティラグ",
+		"Name": "powie yowie rug",
+		"NameJP": "イエティラグ",
+		"Icon": 849,
+		"Sort": 13700,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1447,
+		"JLabel": "桜の木",
+		"Name": "cherry blossom tree",
+		"NameJP": "桜の木",
+		"Icon": 850,
+		"Sort": 15290,
+		"Category": "Plants"
+	},
+	{
+		"ID": 1448,
+		"JLabel": "ホミロンの彫像",
+		"Name": "Healix the Hero",
+		"NameJP": "ホミロンの像",
+		"Icon": 851,
+		"Sort": 13710,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1449,
+		"JLabel": "錠前2",
+		"Name": "lock 2 - for dev use",
+		"NameJP": "錠前2・開発用",
+		"Icon": 154,
+		"Sort": 60490,
+		"Category": "Other"
+	},
+	{
+		"ID": 1450,
+		"JLabel": "折れ旗2",
+		"Name": "broken flag 2 - for dev use",
+		"NameJP": "折れ旗2・開発用",
+		"Icon": 129,
+		"Sort": 60500,
+		"Category": "Other"
+	},
+	{
+		"ID": 1451,
+		"JLabel": "木枝（影）",
+		"Name": "blighted branch",
+		"NameJP": "やみの木の枝",
+		"Icon": 804,
+		"Sort": 15030,
+		"Category": "Plants"
+	},
+	{
+		"ID": 1452,
+		"JLabel": "旗手持ち用ステージ2",
+		"Name": "Banner of Hope",
+		"NameJP": "希望のはた",
+		"Icon": 275,
+		"Sort": 8360,
+		"Category": "ImportantItems"
+	},
+	{
+		"ID": 1453,
+		"JLabel": "旗手持ち用ステージ3",
+		"Name": "Banner of Hope",
+		"NameJP": "希望のはた",
+		"Icon": 276,
+		"Sort": 8370,
+		"Category": "ImportantItems"
+	},
+	{
+		"ID": 1454,
+		"JLabel": "旗手持ち用ステージ4",
+		"Name": "Banner of Hope",
+		"NameJP": "希望のはた",
+		"Icon": 277,
+		"Sort": 8380,
+		"Category": "ImportantItems"
+	},
+	{
+		"ID": 1455,
+		"JLabel": "竜王の玉座（破壊可能）",
+		"Name": "Dragonlord's throne",
+		"NameJP": "竜王の玉座",
+		"Icon": 222,
+		"Sort": 13280,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1460,
+		"JLabel": "ピクセル",
+		"Name": "pixel",
+		"NameJP": "ドット",
+		"Icon": 2554,
+		"Sort": 18540,
+		"Category": "Materials2"
+	},
+	{
+		"ID": 1461,
+		"JLabel": "DQ1:カウンター",
+		"Name": "classic counter",
+		"NameJP": "ドットカウンター",
+		"Icon": 2469,
+		"Sort": 10890,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1462,
+		"JLabel": "DQ1:ダメージ床",
+		"Name": "traditional trap tile",
+		"NameJP": "ドットダメージ床",
+		"Icon": 2470,
+		"Sort": 10900,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1463,
+		"JLabel": "DQ1:砂地",
+		"Name": "dated desert",
+		"NameJP": "ドット砂地",
+		"Icon": 2471,
+		"Sort": 10910,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1464,
+		"JLabel": "DQ1:水面",
+		"Name": "old-school ocean",
+		"NameJP": "ドット水面",
+		"Icon": 2472,
+		"Sort": 10920,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1465,
+		"JLabel": "DQ1:毒沼",
+		"Name": "bygone bog",
+		"NameJP": "ドット毒沼",
+		"Icon": 2473,
+		"Sort": 10930,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1466,
+		"JLabel": "DQ1:扉",
+		"Name": "door sprite",
+		"NameJP": "ドット扉",
+		"Icon": 2503,
+		"Sort": 21000,
+		"Category": "Pixels"
+	},
+	{
+		"ID": 1467,
+		"JLabel": "DQ1:宝箱",
+		"Name": "treasure chest sprite",
+		"NameJP": "ドット宝箱",
+		"Icon": 2504,
+		"Sort": 21010,
+		"Category": "Pixels"
+	},
+	{
+		"ID": 1468,
+		"JLabel": "DQ1:宿屋看板",
+		"Name": "inn sign sprite",
+		"NameJP": "ドット宿屋",
+		"Icon": 2505,
+		"Sort": 21020,
+		"Category": "Pixels"
+	},
+	{
+		"ID": 1469,
+		"JLabel": "DQ1:店看板",
+		"Name": "shop sign sprite",
+		"NameJP": "ドット店看板",
+		"Icon": 2506,
+		"Sort": 21030,
+		"Category": "Pixels"
+	},
+	{
+		"ID": 1470,
+		"JLabel": "DQ1:階段上り",
+		"Name": "up stairs sprite",
+		"NameJP": "ドット階段上",
+		"Icon": 2507,
+		"Sort": 21040,
+		"Category": "Pixels"
+	},
+	{
+		"ID": 1471,
+		"JLabel": "DQ1:階段下り",
+		"Name": "down stairs sprite",
+		"NameJP": "ドット階段下",
+		"Icon": 2508,
+		"Sort": 21050,
+		"Category": "Pixels"
+	},
+	{
+		"ID": 1472,
+		"JLabel": "DQ1:橋",
+		"Name": "bridge sprite",
+		"NameJP": "ドット橋",
+		"Icon": 2509,
+		"Sort": 21060,
+		"Category": "Pixels"
+	},
+	{
+		"ID": 1473,
+		"JLabel": "DQ1:木",
+		"Name": "forest sprite",
+		"NameJP": "ドット木",
+		"Icon": 2510,
+		"Sort": 21070,
+		"Category": "Pixels"
+	},
+	{
+		"ID": 1474,
+		"JLabel": "DQ1:町",
+		"Name": "town sprite",
+		"NameJP": "ドット町",
+		"Icon": 2511,
+		"Sort": 21080,
+		"Category": "Pixels"
+	},
+	{
+		"ID": 1475,
+		"JLabel": "DQ1:城",
+		"Name": "castle sprite",
+		"NameJP": "ドット城",
+		"Icon": 2512,
+		"Sort": 21090,
+		"Category": "Pixels"
+	},
+	{
+		"ID": 1476,
+		"JLabel": "DQ1:洞窟",
+		"Name": "cave sprite",
+		"NameJP": "ドット洞窟",
+		"Icon": 2513,
+		"Sort": 21100,
+		"Category": "Pixels"
+	},
+	{
+		"ID": 1477,
+		"JLabel": "DQ1:山",
+		"Name": "hill sprite",
+		"NameJP": "ドット山",
+		"Icon": 2514,
+		"Sort": 21110,
+		"Category": "Pixels"
+	},
+	{
+		"ID": 1478,
+		"JLabel": "DQ1:高い山",
+		"Name": "mountain sprite",
+		"NameJP": "ドット高い山",
+		"Icon": 2515,
+		"Sort": 21120,
+		"Category": "Pixels"
+	},
+	{
+		"ID": 1479,
+		"JLabel": "DQ1:お姫様",
+		"Name": "princess sprite",
+		"NameJP": "ドットお姫様",
+		"Icon": 2516,
+		"Sort": 21130,
+		"Category": "Pixels"
+	},
+	{
+		"ID": 1480,
+		"JLabel": "DQ1:主人公",
+		"Name": "hero sprite",
+		"NameJP": "ドット主人公",
+		"Icon": 2517,
+		"Sort": 21140,
+		"Category": "Pixels"
+	},
+	{
+		"ID": 1481,
+		"JLabel": "DQ1:王様",
+		"Name": "king sprite",
+		"NameJP": "ドット王様",
+		"Icon": 2518,
+		"Sort": 21150,
+		"Category": "Pixels"
+	},
+	{
+		"ID": 1482,
+		"JLabel": "DQ1:竜王",
+		"Name": "Dragonlord sprite",
+		"NameJP": "ドット竜王",
+		"Icon": 2519,
+		"Sort": 21160,
+		"Category": "Pixels"
+	},
+	{
+		"ID": 1483,
+		"JLabel": "DQ1:魔法使い",
+		"Name": "wizard sprite",
+		"NameJP": "ドット魔法",
+		"Icon": 2520,
+		"Sort": 21170,
+		"Category": "Pixels"
+	},
+	{
+		"ID": 1484,
+		"JLabel": "DQ1:商人",
+		"Name": "shopkeeper sprite",
+		"NameJP": "ドット商人",
+		"Icon": 2521,
+		"Sort": 21180,
+		"Category": "Pixels"
+	},
+	{
+		"ID": 1485,
+		"JLabel": "DQ1:戦士",
+		"Name": "warrior sprite",
+		"NameJP": "ドット戦士",
+		"Icon": 2522,
+		"Sort": 21190,
+		"Category": "Pixels"
+	},
+	{
+		"ID": 1486,
+		"JLabel": "DQ1:兵士",
+		"Name": "soldier sprite",
+		"NameJP": "ドット兵士",
+		"Icon": 2523,
+		"Sort": 21200,
+		"Category": "Pixels"
+	},
+	{
+		"ID": 1487,
+		"JLabel": "DQ1:男",
+		"Name": "gentleman sprite",
+		"NameJP": "ドット町人男",
+		"Icon": 2524,
+		"Sort": 21210,
+		"Category": "Pixels"
+	},
+	{
+		"ID": 1488,
+		"JLabel": "DQ1:女",
+		"Name": "lady sprite",
+		"NameJP": "ドット町人女",
+		"Icon": 2525,
+		"Sort": 21220,
+		"Category": "Pixels"
+	},
+	{
+		"ID": 1489,
+		"JLabel": "DQ1:お姫様抱っこ",
+		"Name": "saviour sprite",
+		"NameJP": "ドット抱っこ",
+		"Icon": 2526,
+		"Sort": 21230,
+		"Category": "Pixels"
+	},
+	{
+		"ID": 1490,
+		"JLabel": "DQ1:ラッパ吹き",
+		"Name": "herald sprite",
+		"NameJP": "ドットラッパ",
+		"Icon": 2527,
+		"Sort": 21240,
+		"Category": "Pixels"
+	},
+	{
+		"ID": 1491,
+		"JLabel": "DQ1:扉（横）",
+		"Name": "flat door sprite",
+		"NameJP": "ドット扉・床",
+		"Icon": 2529,
+		"Sort": 21250,
+		"Category": "Pixels"
+	},
+	{
+		"ID": 1492,
+		"JLabel": "DQ1:宝箱（横）",
+		"Name": "flat treasure chest sprite",
+		"NameJP": "ドット宝箱・床",
+		"Icon": 2530,
+		"Sort": 21260,
+		"Category": "Pixels"
+	},
+	{
+		"ID": 1493,
+		"JLabel": "DQ1:宿屋看板（横）",
+		"Name": "flat inn sign sprite",
+		"NameJP": "ドット宿屋・床",
+		"Icon": 2531,
+		"Sort": 21270,
+		"Category": "Pixels"
+	},
+	{
+		"ID": 1494,
+		"JLabel": "DQ1:店看板（横）",
+		"Name": "flat shop sign sprite",
+		"NameJP": "ドット店看板・床",
+		"Icon": 2532,
+		"Sort": 21280,
+		"Category": "Pixels"
+	},
+	{
+		"ID": 1495,
+		"JLabel": "DQ1:階段上り（横）",
+		"Name": "flat up stairs sprite",
+		"NameJP": "ドット階段上・床",
+		"Icon": 2533,
+		"Sort": 21290,
+		"Category": "Pixels"
+	},
+	{
+		"ID": 1496,
+		"JLabel": "DQ1:階段下り（横）",
+		"Name": "flat down stairs sprite",
+		"NameJP": "ドット階段下・床",
+		"Icon": 2534,
+		"Sort": 21300,
+		"Category": "Pixels"
+	},
+	{
+		"ID": 1497,
+		"JLabel": "DQ1:橋（横）",
+		"Name": "flat bridge sprite",
+		"NameJP": "ドット橋・床",
+		"Icon": 2535,
+		"Sort": 21310,
+		"Category": "Pixels"
+	},
+	{
+		"ID": 1498,
+		"JLabel": "DQ1:木（横）",
+		"Name": "flat forest sprite",
+		"NameJP": "ドット木・床",
+		"Icon": 2536,
+		"Sort": 21320,
+		"Category": "Pixels"
+	},
+	{
+		"ID": 1499,
+		"JLabel": "DQ1:町（横）",
+		"Name": "flat town sprite",
+		"NameJP": "ドット町・床",
+		"Icon": 2537,
+		"Sort": 21330,
+		"Category": "Pixels"
+	},
+	{
+		"ID": 1500,
+		"JLabel": "DQ1:城（横）",
+		"Name": "flat castle sprite",
+		"NameJP": "ドット城・床",
+		"Icon": 2538,
+		"Sort": 21340,
+		"Category": "Pixels"
+	},
+	{
+		"ID": 1501,
+		"JLabel": "DQ1:洞窟（横）",
+		"Name": "flat cave sprite",
+		"NameJP": "ドット洞窟・床",
+		"Icon": 2539,
+		"Sort": 21350,
+		"Category": "Pixels"
+	},
+	{
+		"ID": 1502,
+		"JLabel": "DQ1:山（横）",
+		"Name": "flat hill sprite",
+		"NameJP": "ドット山・床",
+		"Icon": 2540,
+		"Sort": 21360,
+		"Category": "Pixels"
+	},
+	{
+		"ID": 1503,
+		"JLabel": "DQ1:高い山（横）",
+		"Name": "flat mountain sprite",
+		"NameJP": "ドット高い山・床",
+		"Icon": 2541,
+		"Sort": 21370,
+		"Category": "Pixels"
+	},
+	{
+		"ID": 1504,
+		"JLabel": "DQ1:お姫様（横）",
+		"Name": "flat princess sprite",
+		"NameJP": "ドットお姫様・床",
+		"Icon": 2542,
+		"Sort": 21380,
+		"Category": "Pixels"
+	},
+	{
+		"ID": 1505,
+		"JLabel": "DQ1:主人公（横）",
+		"Name": "flat hero sprite",
+		"NameJP": "ドット主人公・床",
+		"Icon": 2543,
+		"Sort": 21390,
+		"Category": "Pixels"
+	},
+	{
+		"ID": 1506,
+		"JLabel": "DQ1:王様（横）",
+		"Name": "flat king sprite",
+		"NameJP": "ドット王様・床",
+		"Icon": 2544,
+		"Sort": 21400,
+		"Category": "Pixels"
+	},
+	{
+		"ID": 1507,
+		"JLabel": "DQ1:竜王（横）",
+		"Name": "flat Dragonlord sprite",
+		"NameJP": "ドット竜王・床",
+		"Icon": 2545,
+		"Sort": 21410,
+		"Category": "Pixels"
+	},
+	{
+		"ID": 1508,
+		"JLabel": "DQ1:魔法使い（横）",
+		"Name": "flat wizard sprite",
+		"NameJP": "ドット魔法・床",
+		"Icon": 2546,
+		"Sort": 21420,
+		"Category": "Pixels"
+	},
+	{
+		"ID": 1509,
+		"JLabel": "DQ1:商人（横）",
+		"Name": "flat shopkeeper sprite",
+		"NameJP": "ドット商人・床",
+		"Icon": 2547,
+		"Sort": 21430,
+		"Category": "Pixels"
+	},
+	{
+		"ID": 1510,
+		"JLabel": "DQ1:戦士（横）",
+		"Name": "flat warrior sprite",
+		"NameJP": "ドット戦士・床",
+		"Icon": 2548,
+		"Sort": 21440,
+		"Category": "Pixels"
+	},
+	{
+		"ID": 1511,
+		"JLabel": "DQ1:兵士（横）",
+		"Name": "flat soldier sprite",
+		"NameJP": "ドット兵士・床",
+		"Icon": 2549,
+		"Sort": 21450,
+		"Category": "Pixels"
+	},
+	{
+		"ID": 1512,
+		"JLabel": "DQ1:男（横）",
+		"Name": "flat gentleman sprite",
+		"NameJP": "ドット町人男・床",
+		"Icon": 2550,
+		"Sort": 21460,
+		"Category": "Pixels"
+	},
+	{
+		"ID": 1513,
+		"JLabel": "DQ1:女（横）",
+		"Name": "flat lady sprite",
+		"NameJP": "ドット町人女・床",
+		"Icon": 2551,
+		"Sort": 21470,
+		"Category": "Pixels"
+	},
+	{
+		"ID": 1514,
+		"JLabel": "DQ1:お姫様抱っこ（横）",
+		"Name": "flat saviour sprite",
+		"NameJP": "ドット抱っこ・床",
+		"Icon": 2552,
+		"Sort": 21480,
+		"Category": "Pixels"
+	},
+	{
+		"ID": 1515,
+		"JLabel": "DQ1:ラッパ吹き（横）",
+		"Name": "flat herald sprite",
+		"NameJP": "ドットラッパ・床",
+		"Icon": 2553,
+		"Sort": 21490,
+		"Category": "Pixels"
+	},
+	{
+		"ID": 1516,
+		"JLabel": "DQ1:ドラクエカセット",
+		"Name": "Dragon Quest Game Pak",
+		"NameJP": "ドラクエカセット",
+		"Icon": 2528,
+		"Sort": 14170,
+		"Category": "CraftingStations"
+	},
+	{
+		"ID": 1520,
+		"JLabel": "(仮）テスト用設計図",
+		"Name": "(provisional) test blueprint",
+		"NameJP": "(仮）テスト用設計図",
+		"Icon": 2490,
+		"Sort": 61740,
+		"Category": "Other"
+	},
+	{
+		"ID": 1521,
+		"JLabel": "設計図1-1",
+		"Name": "not used",
+		"NameJP": "みはり台（未使用）",
+		"Icon": 2490,
+		"Sort": 61750,
+		"Category": "Other"
+	},
+	{
+		"ID": 1522,
+		"JLabel": "設計図1-2",
+		"Name": "not used",
+		"NameJP": "ロロンドの望み（未使用）",
+		"Icon": 2490,
+		"Sort": 61760,
+		"Category": "Other"
+	},
+	{
+		"ID": 1523,
+		"JLabel": "設計図1-3",
+		"Name": "not used",
+		"NameJP": "そまつな寝室（未使用）",
+		"Icon": 2490,
+		"Sort": 61770,
+		"Category": "Other"
+	},
+	{
+		"ID": 1524,
+		"JLabel": "設計図1-4",
+		"Name": "not used",
+		"NameJP": "小さな寝室Ｂ （未使用）",
+		"Icon": 2490,
+		"Sort": 61780,
+		"Category": "Other"
+	},
+	{
+		"ID": 1525,
+		"JLabel": "設計図1-5",
+		"Name": "not used",
+		"NameJP": "メルキド大広間（未使用）",
+		"Icon": 2490,
+		"Sort": 61790,
+		"Category": "Other"
+	},
+	{
+		"ID": 1526,
+		"JLabel": "設計図1-6",
+		"Name": "Hammerton hothouse",
+		"NameJP": "おおきづち庭園",
+		"Icon": 2490,
+		"Sort": 20050,
+		"Category": "Blueprints"
+	},
+	{
+		"ID": 1527,
+		"JLabel": "設計図1-7",
+		"Name": "not used",
+		"NameJP": "メルキド大門（未使用）",
+		"Icon": 2490,
+		"Sort": 61800,
+		"Category": "Other"
+	},
+	{
+		"ID": 1528,
+		"JLabel": "設計図1-8",
+		"Name": "not used",
+		"NameJP": "石づくりの寝室（未使用）",
+		"Icon": 2490,
+		"Sort": 61810,
+		"Category": "Other"
+	},
+	{
+		"ID": 1529,
+		"JLabel": "設計図1-9",
+		"Name": "not used",
+		"NameJP": "台所（未使用）",
+		"Icon": 2490,
+		"Sort": 61820,
+		"Category": "Other"
+	},
+	{
+		"ID": 1530,
+		"JLabel": "設計図1-10",
+		"Name": "not used",
+		"NameJP": "バリケード（未使用）",
+		"Icon": 2490,
+		"Sort": 61830,
+		"Category": "Other"
+	},
+	{
+		"ID": 1531,
+		"JLabel": "設計図1-11",
+		"Name": "not used",
+		"NameJP": "はじめての部屋（未使用）",
+		"Icon": 2490,
+		"Sort": 61840,
+		"Category": "Other"
+	},
+	{
+		"ID": 1532,
+		"JLabel": "設計図1-12",
+		"Name": "not used",
+		"NameJP": "はじめての寝室（未使用）",
+		"Icon": 2490,
+		"Sort": 61850,
+		"Category": "Other"
+	},
+	{
+		"ID": 1533,
+		"JLabel": "設計図1-13",
+		"Name": "stone stockade",
+		"NameJP": "石のまもり",
+		"Icon": 2490,
+		"Sort": 20010,
+		"Category": "Blueprints"
+	},
+	{
+		"ID": 1534,
+		"JLabel": "設計図1-14",
+		"Name": "not used",
+		"NameJP": "鉄の守り（未使用）",
+		"Icon": 2490,
+		"Sort": 61860,
+		"Category": "Other"
+	},
+	{
+		"ID": 1535,
+		"JLabel": "設計図1-15",
+		"Name": "steel stockade",
+		"NameJP": "はがねのまもり",
+		"Icon": 2490,
+		"Sort": 20030,
+		"Category": "Blueprints"
+	},
+	{
+		"ID": 1536,
+		"JLabel": "設計図2-1",
+		"Name": "Elle's blueprint",
+		"NameJP": "エルの設計図",
+		"Icon": 2490,
+		"Sort": 20060,
+		"Category": "Blueprints"
+	},
+	{
+		"ID": 1537,
+		"JLabel": "設計図2-2",
+		"Name": "Nosh's blueprint",
+		"NameJP": "ノリンの設計図",
+		"Icon": 2490,
+		"Sort": 20070,
+		"Category": "Blueprints"
+	},
+	{
+		"ID": 1538,
+		"JLabel": "設計図2-3",
+		"Name": "not used",
+		"NameJP": "毒温室（未使用）",
+		"Icon": 2490,
+		"Sort": 61870,
+		"Category": "Other"
+	},
+	{
+		"ID": 1539,
+		"JLabel": "設計図2-4",
+		"Name": "turret",
+		"NameJP": "ターレット",
+		"Icon": 2490,
+		"Sort": 61880,
+		"Category": "Other"
+	},
+	{
+		"ID": 1540,
+		"JLabel": "設計図2-5",
+		"Name": "Gerontius's blueprint",
+		"NameJP": "薬師の設計図",
+		"Icon": 2490,
+		"Sort": 20080,
+		"Category": "Blueprints"
+	},
+	{
+		"ID": 1541,
+		"JLabel": "設計図2-6",
+		"Name": "veggie patch",
+		"NameJP": "農業のめざめ",
+		"Icon": 2490,
+		"Sort": 20090,
+		"Category": "Blueprints"
+	},
+	{
+		"ID": 1542,
+		"JLabel": "設計図2-7",
+		"Name": "tribute to a missing maker",
+		"NameJP": "亡き主の墓標",
+		"Icon": 2490,
+		"Sort": 20110,
+		"Category": "Blueprints"
+	},
+	{
+		"ID": 1543,
+		"JLabel": "設計図2-8",
+		"Name": "not used",
+		"NameJP": "豆畑（未使用）",
+		"Icon": 2490,
+		"Sort": 61890,
+		"Category": "Other"
+	},
+	{
+		"ID": 1544,
+		"JLabel": "設計図2-9",
+		"Name": "blueprint 2-9",
+		"NameJP": "設計図2-9",
+		"Icon": 2490,
+		"Sort": 61900,
+		"Category": "Other"
+	},
+	{
+		"ID": 1545,
+		"JLabel": "設計図2-10",
+		"Name": "level area 2 debug",
+		"NameJP": "レベルエリア２デバッグ",
+		"Icon": 2490,
+		"Sort": 61910,
+		"Category": "Other"
+	},
+	{
+		"ID": 1546,
+		"JLabel": "設計図2-11",
+		"Name": "haberdashery",
+		"NameJP": "すてきな衣装部屋",
+		"Icon": 2490,
+		"Sort": 20100,
+		"Category": "Blueprints"
+	},
+	{
+		"ID": 1547,
+		"JLabel": "設計図2-12",
+		"Name": "blueprint 2-12",
+		"NameJP": "設計図2-12",
+		"Icon": 2490,
+		"Sort": 61920,
+		"Category": "Other"
+	},
+	{
+		"ID": 1548,
+		"JLabel": "設計図2-13",
+		"Name": "blueprint 2-13",
+		"NameJP": "設計図2-13",
+		"Icon": 2490,
+		"Sort": 61930,
+		"Category": "Other"
+	},
+	{
+		"ID": 1549,
+		"JLabel": "設計図2-14",
+		"Name": "blueprint 2-14",
+		"NameJP": "設計図2-14",
+		"Icon": 2490,
+		"Sort": 61940,
+		"Category": "Other"
+	},
+	{
+		"ID": 1550,
+		"JLabel": "設計図2-15",
+		"Name": "blueprint 2-15",
+		"NameJP": "設計図2-15",
+		"Icon": 2490,
+		"Sort": 61950,
+		"Category": "Other"
+	},
+	{
+		"ID": 1551,
+		"JLabel": "設計図3-1",
+		"Name": "Barbella's Blueprint",
+		"NameJP": "アメルダの設計図",
+		"Icon": 2490,
+		"Sort": 20130,
+		"Category": "Blueprints"
+	},
+	{
+		"ID": 1552,
+		"JLabel": "設計図3-2",
+		"Name": "bodybuilders' kitchen",
+		"NameJP": "あらくれキッチン",
+		"Icon": 2490,
+		"Sort": 61960,
+		"Category": "Other"
+	},
+	{
+		"ID": 1553,
+		"JLabel": "設計図3-3",
+		"Name": "double-barrelled bombard",
+		"NameJP": "二連砲台",
+		"Icon": 2490,
+		"Sort": 20120,
+		"Category": "Blueprints"
+	},
+	{
+		"ID": 1554,
+		"JLabel": "設計図3-4",
+		"Name": "not used",
+		"NameJP": "温泉に飛び込め（未使用）",
+		"Icon": 2490,
+		"Sort": 61970,
+		"Category": "Other"
+	},
+	{
+		"ID": 1555,
+		"JLabel": "設計図3-5",
+		"Name": "not used",
+		"NameJP": "ジェットコースター（未使用）",
+		"Icon": 2490,
+		"Sort": 61980,
+		"Category": "Other"
+	},
+	{
+		"ID": 1556,
+		"JLabel": "設計図3-6",
+		"Name": "Glutimus's blueprint",
+		"NameJP": "ガロンの設計図",
+		"Icon": 2490,
+		"Sort": 20150,
+		"Category": "Blueprints"
+	},
+	{
+		"ID": 1557,
+		"JLabel": "設計図3-7",
+		"Name": "bodybuilders' camp",
+		"NameJP": "あらくれキャンプ",
+		"Icon": 2490,
+		"Sort": 61990,
+		"Category": "Other"
+	},
+	{
+		"ID": 1558,
+		"JLabel": "設計図3-8",
+		"Name": "piston palisade",
+		"NameJP": "ピストンバリア",
+		"Icon": 2490,
+		"Sort": 20140,
+		"Category": "Blueprints"
+	},
+	{
+		"ID": 1559,
+		"JLabel": "設計図3-9",
+		"Name": "blueprint 3-9",
+		"NameJP": "設計図3-9",
+		"Icon": 2490,
+		"Sort": 62000,
+		"Category": "Other"
+	},
+	{
+		"ID": 1560,
+		"JLabel": "設計図3-10",
+		"Name": "blueprint 3-10",
+		"NameJP": "設計図3-10",
+		"Icon": 2490,
+		"Sort": 62010,
+		"Category": "Other"
+	},
+	{
+		"ID": 1561,
+		"JLabel": "設計図3-11",
+		"Name": "fancy private room",
+		"NameJP": "あこがれの個室",
+		"Icon": 2490,
+		"Sort": 62020,
+		"Category": "Other"
+	},
+	{
+		"ID": 1562,
+		"JLabel": "設計図3-12",
+		"Name": "Roller Kol-ster",
+		"NameJP": "温泉スライダー",
+		"Icon": 2490,
+		"Sort": 20160,
+		"Category": "Blueprints"
+	},
+	{
+		"ID": 1563,
+		"JLabel": "設計図3-13",
+		"Name": "spectacular spa",
+		"NameJP": "あこがれの秘湯",
+		"Icon": 2490,
+		"Sort": 20170,
+		"Category": "Blueprints"
+	},
+	{
+		"ID": 1564,
+		"JLabel": "設計図3-14",
+		"Name": "blueprint 3-14",
+		"NameJP": "設計図3-14",
+		"Icon": 2490,
+		"Sort": 62030,
+		"Category": "Other"
+	},
+	{
+		"ID": 1565,
+		"JLabel": "設計図3-15",
+		"Name": "blueprint 3-15",
+		"NameJP": "設計図3-15",
+		"Icon": 2490,
+		"Sort": 62040,
+		"Category": "Other"
+	},
+	{
+		"ID": 1566,
+		"JLabel": "設計図4-1",
+		"Name": "Myrlund's blueprint",
+		"NameJP": "ムツヘタの設計図",
+		"Icon": 2490,
+		"Sort": 20190,
+		"Category": "Blueprints"
+	},
+	{
+		"ID": 1567,
+		"JLabel": "設計図4-2",
+		"Name": "guard room",
+		"NameJP": "防衛の間",
+		"Icon": 2490,
+		"Sort": 62050,
+		"Category": "Other"
+	},
+	{
+		"ID": 1568,
+		"JLabel": "設計図4-3",
+		"Name": "Tantegel throne room",
+		"NameJP": "玉座の間の設計図",
+		"Icon": 2490,
+		"Sort": 20180,
+		"Category": "Blueprints"
+	},
+	{
+		"ID": 1569,
+		"JLabel": "設計図4-4",
+		"Name": "Sanctum",
+		"NameJP": "さいだんの設計図",
+		"Icon": 2490,
+		"Sort": 20210,
+		"Category": "Blueprints"
+	},
+	{
+		"ID": 1570,
+		"JLabel": "設計図4-5",
+		"Name": "hall",
+		"NameJP": "ホール",
+		"Icon": 2490,
+		"Sort": 62060,
+		"Category": "Other"
+	},
+	{
+		"ID": 1571,
+		"JLabel": "設計図4-6",
+		"Name": "holy hostel",
+		"NameJP": "教会の設計図",
+		"Icon": 2490,
+		"Sort": 20200,
+		"Category": "Blueprints"
+	},
+	{
+		"ID": 1572,
+		"JLabel": "設計図4-7",
+		"Name": "workshop (test)",
+		"NameJP": "工房（テスト）",
+		"Icon": 2490,
+		"Sort": 62070,
+		"Category": "Other"
+	},
+	{
+		"ID": 1573,
+		"JLabel": "設計図4-8",
+		"Name": "blueprint 4-8",
+		"NameJP": "設計図4-8",
+		"Icon": 2490,
+		"Sort": 62080,
+		"Category": "Other"
+	},
+	{
+		"ID": 1574,
+		"JLabel": "設計図4-9",
+		"Name": "blueprint 4-9",
+		"NameJP": "設計図4-9",
+		"Icon": 2490,
+		"Sort": 62090,
+		"Category": "Other"
+	},
+	{
+		"ID": 1575,
+		"JLabel": "設計図4-10",
+		"Name": "blueprint 4-10",
+		"NameJP": "設計図4-10",
+		"Icon": 2490,
+		"Sort": 62100,
+		"Category": "Other"
+	},
+	{
+		"ID": 1576,
+		"JLabel": "設計図4-11",
+		"Name": "blueprint 4-11",
+		"NameJP": "設計図4-11",
+		"Icon": 2490,
+		"Sort": 62110,
+		"Category": "Other"
+	},
+	{
+		"ID": 1577,
+		"JLabel": "設計図4-12",
+		"Name": "blueprint 4-12",
+		"NameJP": "設計図4-12",
+		"Icon": 2490,
+		"Sort": 62120,
+		"Category": "Other"
+	},
+	{
+		"ID": 1578,
+		"JLabel": "設計図4-13",
+		"Name": "blueprint 4-13",
+		"NameJP": "設計図4-13",
+		"Icon": 2490,
+		"Sort": 62130,
+		"Category": "Other"
+	},
+	{
+		"ID": 1579,
+		"JLabel": "設計図4-14",
+		"Name": "blueprint 4-14",
+		"NameJP": "設計図4-14",
+		"Icon": 2490,
+		"Sort": 62140,
+		"Category": "Other"
+	},
+	{
+		"ID": 1580,
+		"JLabel": "設計図4-15",
+		"Name": "blueprint 4-15",
+		"NameJP": "設計図4-15",
+		"Icon": 2490,
+		"Sort": 62150,
+		"Category": "Other"
+	},
+	{
+		"ID": 1582,
+		"JLabel": "設計図1-16",
+		"Name": "Pippa's picture",
+		"NameJP": "ピリンの設計図",
+		"Icon": 2490,
+		"Sort": 20000,
+		"Category": "Blueprints"
+	},
+	{
+		"ID": 1583,
+		"JLabel": "設計図1-17",
+		"Name": "dressing room",
+		"NameJP": "はじめての衣装部屋",
+		"Icon": 2490,
+		"Sort": 62160,
+		"Category": "Other"
+	},
+	{
+		"ID": 1584,
+		"JLabel": "設計図1-18",
+		"Name": "the Greasy Mallet",
+		"NameJP": "おおきづちの台所",
+		"Icon": 2490,
+		"Sort": 20040,
+		"Category": "Blueprints"
+	},
+	{
+		"ID": 1585,
+		"JLabel": "設計図1-19",
+		"Name": "artisan's workroom",
+		"NameJP": "効率的な作業部屋",
+		"Icon": 2490,
+		"Sort": 62170,
+		"Category": "Other"
+	},
+	{
+		"ID": 1586,
+		"JLabel": "設計図1-20",
+		"Name": "lumber yard",
+		"NameJP": "木材貯蔵庫",
+		"Icon": 2490,
+		"Sort": 62180,
+		"Category": "Other"
+	},
+	{
+		"ID": 1587,
+		"JLabel": "設計図1-21",
+		"Name": "born-again bedroom",
+		"NameJP": "生まれ変わる寝室",
+		"Icon": 2490,
+		"Sort": 62190,
+		"Category": "Other"
+	},
+	{
+		"ID": 1588,
+		"JLabel": "設計図1-22",
+		"Name": "ancestral workshop",
+		"NameJP": "先祖の工房",
+		"Icon": 2490,
+		"Sort": 62200,
+		"Category": "Other"
+	},
+	{
+		"ID": 1589,
+		"JLabel": "設計図1-23",
+		"Name": "steelworker's workshop",
+		"NameJP": "神鉄工房",
+		"Icon": 2490,
+		"Sort": 62210,
+		"Category": "Other"
+	},
+	{
+		"ID": 1590,
+		"JLabel": "設計図1-24",
+		"Name": "watchtower blueprint",
+		"NameJP": "見張り台",
+		"Icon": 2490,
+		"Sort": 20020,
+		"Category": "Blueprints"
+	},
+	{
+		"ID": 1592,
+		"JLabel": "魔法使いの壁画",
+		"Name": "mage blueprint",
+		"NameJP": "魔法使いの壁画",
+		"Icon": 2490,
+		"Sort": 20220,
+		"Category": "Blueprints"
+	},
+	{
+		"ID": 1593,
+		"JLabel": "女賢者の壁画",
+		"Name": "sage blueprint",
+		"NameJP": "賢者の壁画",
+		"Icon": 2490,
+		"Sort": 20230,
+		"Category": "Blueprints"
+	},
+	{
+		"ID": 1594,
+		"JLabel": "賢者の壁画",
+		"Name": "priest blueprint",
+		"NameJP": "僧侶の壁画",
+		"Icon": 2490,
+		"Sort": 20240,
+		"Category": "Blueprints"
+	},
+	{
+		"ID": 1595,
+		"JLabel": "女ぶとうかの壁画",
+		"Name": "martial artist blueprint",
+		"NameJP": "ぶとうかの壁画",
+		"Icon": 2490,
+		"Sort": 20250,
+		"Category": "Blueprints"
+	},
+	{
+		"ID": 1596,
+		"JLabel": "女戦士の壁画",
+		"Name": "warrior blueprint",
+		"NameJP": "戦士の壁画",
+		"Icon": 2490,
+		"Sort": 20260,
+		"Category": "Blueprints"
+	},
+	{
+		"ID": 1597,
+		"JLabel": "勇者の壁画",
+		"Name": "hero blueprint",
+		"NameJP": "勇者の壁画",
+		"Icon": 2490,
+		"Sort": 20270,
+		"Category": "Blueprints"
+	},
+	{
+		"ID": 1601,
+		"JLabel": "ロロンドの服１",
+		"Name": "Rollo's clothes 1",
+		"NameJP": "ロロンドの服１",
+		"Icon": 2,
+		"Sort": 60580,
+		"Category": "Other"
+	},
+	{
+		"ID": 1602,
+		"JLabel": "ロロンドの服２",
+		"Name": "Rollo's clothes 2",
+		"NameJP": "ロロンドの服２",
+		"Icon": 2,
+		"Sort": 60590,
+		"Category": "Other"
+	},
+	{
+		"ID": 1603,
+		"JLabel": "ゆきのへの服１",
+		"Name": "Magnus's clothes 1",
+		"NameJP": "ゆきのへの服１",
+		"Icon": 2,
+		"Sort": 60600,
+		"Category": "Other"
+	},
+	{
+		"ID": 1604,
+		"JLabel": "ゆきのへの服２",
+		"Name": "Magnus's clothes 2",
+		"NameJP": "ゆきのへの服２",
+		"Icon": 2,
+		"Sort": 60610,
+		"Category": "Other"
+	},
+	{
+		"ID": 1605,
+		"JLabel": "ゲンローワの服１",
+		"Name": "Gerontius's clothes 1",
+		"NameJP": "ゲンローワの服１",
+		"Icon": 2,
+		"Sort": 60620,
+		"Category": "Other"
+	},
+	{
+		"ID": 1606,
+		"JLabel": "ゲンローワの服２",
+		"Name": "Gerontius's clothes 2",
+		"NameJP": "ゲンローワの服２",
+		"Icon": 2,
+		"Sort": 60630,
+		"Category": "Other"
+	},
+	{
+		"ID": 1607,
+		"JLabel": "シスター女の服１",
+		"Name": "Elle's clothes 1",
+		"NameJP": "シスターの服１",
+		"Icon": 2,
+		"Sort": 60640,
+		"Category": "Other"
+	},
+	{
+		"ID": 1608,
+		"JLabel": "シスター女の服２",
+		"Name": "Elle's clothes 2",
+		"NameJP": "シスターの服２",
+		"Icon": 2,
+		"Sort": 60650,
+		"Category": "Other"
+	},
+	{
+		"ID": 1609,
+		"JLabel": "アルメダ１",
+		"Name": "Barbella 1",
+		"NameJP": "アルメダ１",
+		"Icon": 2,
+		"Sort": 60660,
+		"Category": "Other"
+	},
+	{
+		"ID": 1610,
+		"JLabel": "アルメダ２",
+		"Name": "Barbella 2",
+		"NameJP": "アルメダ２",
+		"Icon": 2,
+		"Sort": 60670,
+		"Category": "Other"
+	},
+	{
+		"ID": 1611,
+		"JLabel": "ムツヘタ１",
+		"Name": "Myrlund 1",
+		"NameJP": "ムツヘタ１",
+		"Icon": 2,
+		"Sort": 60680,
+		"Category": "Other"
+	},
+	{
+		"ID": 1612,
+		"JLabel": "ムツヘタ２",
+		"Name": "Myrlund 2",
+		"NameJP": "ムツヘタ２",
+		"Icon": 2,
+		"Sort": 60690,
+		"Category": "Other"
+	},
+	{
+		"ID": 1613,
+		"JLabel": "ローラ姫１",
+		"Name": "Princess 1",
+		"NameJP": "姫１",
+		"Icon": 2,
+		"Sort": 60700,
+		"Category": "Other"
+	},
+	{
+		"ID": 1614,
+		"JLabel": "ローラ姫２",
+		"Name": "Princess 2",
+		"NameJP": "姫２",
+		"Icon": 2,
+		"Sort": 60710,
+		"Category": "Other"
+	},
+	{
+		"ID": 1615,
+		"JLabel": "町人１",
+		"Name": "Townsperson 1",
+		"NameJP": "町人１",
+		"Icon": 2,
+		"Sort": 60720,
+		"Category": "Other"
+	},
+	{
+		"ID": 1616,
+		"JLabel": "町人２",
+		"Name": "Townsperson 2",
+		"NameJP": "町人２",
+		"Icon": 2,
+		"Sort": 60730,
+		"Category": "Other"
+	},
+	{
+		"ID": 1617,
+		"JLabel": "あらくれ１",
+		"Name": "Toughie 1",
+		"NameJP": "あらくれ１",
+		"Icon": 2,
+		"Sort": 60740,
+		"Category": "Other"
+	},
+	{
+		"ID": 1618,
+		"JLabel": "あらくれ２",
+		"Name": "Toughie 2",
+		"NameJP": "あらくれ２",
+		"Icon": 2,
+		"Sort": 60750,
+		"Category": "Other"
+	},
+	{
+		"ID": 1619,
+		"JLabel": "衛兵１",
+		"Name": "Guard 1",
+		"NameJP": "衛兵１",
+		"Icon": 2,
+		"Sort": 60760,
+		"Category": "Other"
+	},
+	{
+		"ID": 1620,
+		"JLabel": "衛兵2",
+		"Name": "Guard 2",
+		"NameJP": "衛兵2",
+		"Icon": 2,
+		"Sort": 60770,
+		"Category": "Other"
+	},
+	{
+		"ID": 1621,
+		"JLabel": "商人１",
+		"Name": "Merchant 1",
+		"NameJP": "商人１",
+		"Icon": 2,
+		"Sort": 60780,
+		"Category": "Other"
+	},
+	{
+		"ID": 1622,
+		"JLabel": "商人２",
+		"Name": "Merchant 2",
+		"NameJP": "商人２",
+		"Icon": 2,
+		"Sort": 60790,
+		"Category": "Other"
+	},
+	{
+		"ID": 1623,
+		"JLabel": "詩人１",
+		"Name": "Bard 1",
+		"NameJP": "詩人１",
+		"Icon": 2,
+		"Sort": 60800,
+		"Category": "Other"
+	},
+	{
+		"ID": 1624,
+		"JLabel": "詩人２",
+		"Name": "Bard 2",
+		"NameJP": "詩人２",
+		"Icon": 2,
+		"Sort": 60810,
+		"Category": "Other"
+	},
+	{
+		"ID": 1625,
+		"JLabel": "町人３",
+		"Name": "Townsperson 3",
+		"NameJP": "町人３",
+		"Icon": 2,
+		"Sort": 60820,
+		"Category": "Other"
+	},
+	{
+		"ID": 1626,
+		"JLabel": "あらくれ３",
+		"Name": "Toughie 2",
+		"NameJP": "あらくれ２",
+		"Icon": 2,
+		"Sort": 60830,
+		"Category": "Other"
+	},
+	{
+		"ID": 1627,
+		"JLabel": "アルメダ３",
+		"Name": "Barbella 2",
+		"NameJP": "アルメダ２",
+		"Icon": 2,
+		"Sort": 60840,
+		"Category": "Other"
+	},
+	{
+		"ID": 1630,
+		"JLabel": "プレイヤー兵士服",
+		"Name": "guard's garb",
+		"NameJP": "へいしのふく",
+		"Icon": 354,
+		"Sort": 6220,
+		"Category": "Armour"
+	},
+	{
+		"ID": 1631,
+		"JLabel": "プレイヤー町人服",
+		"Name": "villager's vesture",
+		"NameJP": "まちびとのふく",
+		"Icon": 352,
+		"Sort": 6230,
+		"Category": "Armour"
+	},
+	{
+		"ID": 1632,
+		"JLabel": "プレイヤー商人服",
+		"Name": "trader's tunic",
+		"NameJP": "しょうにんのふく",
+		"Icon": 353,
+		"Sort": 6240,
+		"Category": "Armour"
+	},
+	{
+		"ID": 1640,
+		"JLabel": "NX:スライムランプ（１）",
+		"Name": "slime light",
+		"NameJP": "スライムランプ",
+		"Icon": 1353,
+		"Sort": 12100,
+		"Category": "LightSources"
+	},
+	{
+		"ID": 1641,
+		"JLabel": "NX:スライムランプ（２）",
+		"Name": "king slime light",
+		"NameJP": "キングＳランプ",
+		"Icon": 1354,
+		"Sort": 12110,
+		"Category": "LightSources"
+	},
+	{
+		"ID": 1642,
+		"JLabel": "NX:スライム口",
+		"Name": "slimy mouth",
+		"NameJP": "スライムの口",
+		"Icon": 1356,
+		"Sort": 13920,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1643,
+		"JLabel": "NX:スライム目",
+		"Name": "slimy eye",
+		"NameJP": "スライムの目",
+		"Icon": 1355,
+		"Sort": 13930,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1646,
+		"JLabel": "追加アイテム：エルのくすり",
+		"Name": "Elle's cure",
+		"NameJP": "エルのくすり",
+		"Icon": 2619,
+		"Sort": 1025,
+		"Category": "Consumable"
+	},
+	{
+		"ID": 1648,
+		"JLabel": "実装用テンプレデータ",
+		"Name": "motion test",
+		"NameJP": "モーションテスト用",
+		"Icon": 2,
+		"Sort": 90000,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1701,
+		"JLabel": "まほうのじゅうたん",
+		"Name": "magic carpet",
+		"NameJP": "魔法のじゅうたん",
+		"Icon": 2555,
+		"Sort": 3390,
+		"Category": "Items"
+	},
+	{
+		"ID": 1801,
+		"JLabel": "DLC天体オブジェ・陽",
+		"Name": "sun sphere",
+		"NameJP": "天体オブジェ・陽",
+		"Icon": 890,
+		"Sort": 13940,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1802,
+		"JLabel": "DLC天体オブジェ・水",
+		"Name": "Mercury sphere",
+		"NameJP": "天体オブジェ・水",
+		"Icon": 891,
+		"Sort": 13941,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1803,
+		"JLabel": "DLC天体オブジェ・金",
+		"Name": "Venus sphere",
+		"NameJP": "天体オブジェ・金",
+		"Icon": 892,
+		"Sort": 13942,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1804,
+		"JLabel": "DLC天体オブジェ・地",
+		"Name": "Earth sphere",
+		"NameJP": "天体オブジェ・地",
+		"Icon": 893,
+		"Sort": 13943,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1805,
+		"JLabel": "DLC天体オブジェ・火",
+		"Name": "Mars sphere",
+		"NameJP": "天体オブジェ・火",
+		"Icon": 894,
+		"Sort": 13944,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1806,
+		"JLabel": "DLC天体オブジェ・木",
+		"Name": "Jupiter sphere",
+		"NameJP": "天体オブジェ・木",
+		"Icon": 895,
+		"Sort": 13945,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1807,
+		"JLabel": "DLC天体オブジェ・土",
+		"Name": "Saturn sphere",
+		"NameJP": "天体オブジェ・土",
+		"Icon": 896,
+		"Sort": 13946,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1808,
+		"JLabel": "DLC天体オブジェ・天",
+		"Name": "Uranus sphere",
+		"NameJP": "天体オブジェ・天",
+		"Icon": 897,
+		"Sort": 13947,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1809,
+		"JLabel": "DLC天体オブジェ・海",
+		"Name": "Neptune sphere",
+		"NameJP": "天体オブジェ・海",
+		"Icon": 898,
+		"Sort": 13948,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1810,
+		"JLabel": "DLC天体オブジェ・月",
+		"Name": "moon sphere",
+		"NameJP": "天体オブジェ・月",
+		"Icon": 899,
+		"Sort": 13949,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1811,
+		"JLabel": "DLCモンスター像GR",
+		"Name": "golem",
+		"NameJP": "ゴーレム",
+		"Icon": 2556,
+		"Sort": 22110,
+		"Category": "Figurines"
+	},
+	{
+		"ID": 1812,
+		"JLabel": "DLCモンスター像ST",
+		"Name": "stone golem",
+		"NameJP": "ストーンマン",
+		"Icon": 2557,
+		"Sort": 22120,
+		"Category": "Figurines"
+	},
+	{
+		"ID": 1813,
+		"JLabel": "DLCモンスター像GM",
+		"Name": "gold golem",
+		"NameJP": "ゴールドマン",
+		"Icon": 2558,
+		"Sort": 22130,
+		"Category": "Figurines"
+	},
+	{
+		"ID": 1814,
+		"JLabel": "DLCモンスター像DR",
+		"Name": "green dragon",
+		"NameJP": "ドラゴン",
+		"Icon": 2559,
+		"Sort": 22170,
+		"Category": "Figurines"
+	},
+	{
+		"ID": 1815,
+		"JLabel": "DLCモンスター像KD",
+		"Name": "blue dragon",
+		"NameJP": "キースドラゴン",
+		"Icon": 2560,
+		"Sort": 22180,
+		"Category": "Figurines"
+	},
+	{
+		"ID": 1816,
+		"JLabel": "DLCモンスター像DD",
+		"Name": "dread dragon",
+		"NameJP": "ダースドラゴン",
+		"Icon": 2561,
+		"Sort": 22190,
+		"Category": "Figurines"
+	},
+	{
+		"ID": 1817,
+		"JLabel": "DLCモンスター像GS",
+		"Name": "ghost",
+		"NameJP": "ゴースト",
+		"Icon": 2562,
+		"Sort": 22030,
+		"Category": "Figurines"
+	},
+	{
+		"ID": 1818,
+		"JLabel": "DLCモンスター像MG",
+		"Name": "fightgeist",
+		"NameJP": "メトロゴースト",
+		"Icon": 2563,
+		"Sort": 22040,
+		"Category": "Figurines"
+	},
+	{
+		"ID": 1819,
+		"JLabel": "DLCモンスター像HG",
+		"Name": "spitegeist",
+		"NameJP": "ヘルゴースト",
+		"Icon": 2564,
+		"Sort": 22050,
+		"Category": "Figurines"
+	},
+	{
+		"ID": 1820,
+		"JLabel": "DLCモンスター像KS",
+		"Name": "walking corpse",
+		"NameJP": "くさったしたい",
+		"Icon": 2565,
+		"Sort": 22080,
+		"Category": "Figurines"
+	},
+	{
+		"ID": 1821,
+		"JLabel": "DLCモンスター像LD",
+		"Name": "corpse corporal",
+		"NameJP": "リビングデッド",
+		"Icon": 2566,
+		"Sort": 22090,
+		"Category": "Figurines"
+	},
+	{
+		"ID": 1822,
+		"JLabel": "DLCモンスター像GH",
+		"Name": "ghoul",
+		"NameJP": "グール",
+		"Icon": 2567,
+		"Sort": 22100,
+		"Category": "Figurines"
+	},
+	{
+		"ID": 1823,
+		"JLabel": "DLCモンスター像SL",
+		"Name": "slime",
+		"NameJP": "スライム",
+		"Icon": 2568,
+		"Sort": 22000,
+		"Category": "Figurines"
+	},
+	{
+		"ID": 1824,
+		"JLabel": "DLCモンスター像SB",
+		"Name": "she-slime",
+		"NameJP": "スライムベス",
+		"Icon": 2569,
+		"Sort": 22010,
+		"Category": "Figurines"
+	},
+	{
+		"ID": 1825,
+		"JLabel": "DLCモンスター像MS",
+		"Name": "metal slime",
+		"NameJP": "メタルスライム",
+		"Icon": 2570,
+		"Sort": 22020,
+		"Category": "Figurines"
+	},
+	{
+		"ID": 1826,
+		"JLabel": "DLCモンスター像YK",
+		"Name": "knight errant",
+		"NameJP": "よろいのきし",
+		"Icon": 2571,
+		"Sort": 22140,
+		"Category": "Figurines"
+	},
+	{
+		"ID": 1827,
+		"JLabel": "DLCモンスター像AK",
+		"Name": "knight aberrant",
+		"NameJP": "あくまのきし",
+		"Icon": 2572,
+		"Sort": 22150,
+		"Category": "Figurines"
+	},
+	{
+		"ID": 1828,
+		"JLabel": "DLCモンスター像SK",
+		"Name": "knight abhorrent",
+		"NameJP": "しにがみのきし",
+		"Icon": 2573,
+		"Sort": 22160,
+		"Category": "Figurines"
+	},
+	{
+		"ID": 1829,
+		"JLabel": "DLCモンスター像OK",
+		"Name": "hammerhood",
+		"NameJP": "おおきづち",
+		"Icon": 2574,
+		"Sort": 22060,
+		"Category": "Figurines"
+	},
+	{
+		"ID": 1830,
+		"JLabel": "DLCモンスター像BR",
+		"Name": "brownie",
+		"NameJP": "ブラウニー",
+		"Icon": 2575,
+		"Sort": 22070,
+		"Category": "Figurines"
+	},
+	{
+		"ID": 1831,
+		"JLabel": "DLCモンスター像RY",
+		"Name": "Dragonlord (S)",
+		"NameJP": "りゅうおうS",
+		"Icon": 2576,
+		"Sort": 22280,
+		"Category": "Figurines"
+	},
+	{
+		"ID": 1832,
+		"JLabel": "DLCモンスター像RO",
+		"Name": "Dragonlord (L)",
+		"NameJP": "りゅうおうL",
+		"Icon": 2577,
+		"Sort": 22290,
+		"Category": "Figurines"
+	},
+	{
+		"ID": 1833,
+		"JLabel": "DLCモンスター像HC",
+		"Name": "Hades condor (L)",
+		"NameJP": "ヘルコンドルL",
+		"Icon": 2578,
+		"Sort": 22210,
+		"Category": "Figurines"
+	},
+	{
+		"ID": 1834,
+		"JLabel": "DLCモンスター像YM",
+		"Name": "magmalice (L)",
+		"NameJP": "ようがんまじんL",
+		"Icon": 2579,
+		"Sort": 22220,
+		"Category": "Figurines"
+	},
+	{
+		"ID": 1835,
+		"JLabel": "DLCモンスター像HM",
+		"Name": "firn fiend (L)",
+		"NameJP": "ひょうがまじんL",
+		"Icon": 2580,
+		"Sort": 22240,
+		"Category": "Figurines"
+	},
+	{
+		"ID": 1836,
+		"JLabel": "DLCモンスター像GA",
+		"Name": "hostile merger (L)",
+		"NameJP": "がったいまじんL",
+		"Icon": 2581,
+		"Sort": 22260,
+		"Category": "Figurines"
+	},
+	{
+		"ID": 1837,
+		"JLabel": "DLC住人像PRN",
+		"Name": "Pippa figurine",
+		"NameJP": "ピリンの像",
+		"Icon": 900,
+		"Sort": 22390,
+		"Category": "Figurines"
+	},
+	{
+		"ID": 1838,
+		"JLabel": "DLC住人像ELL",
+		"Name": "Elle figurine",
+		"NameJP": "エルの像",
+		"Icon": 901,
+		"Sort": 22400,
+		"Category": "Figurines"
+	},
+	{
+		"ID": 1839,
+		"JLabel": "DLC住人像AME",
+		"Name": "Barbella figurine",
+		"NameJP": "アメルダの像",
+		"Icon": 902,
+		"Sort": 22410,
+		"Category": "Figurines"
+	},
+	{
+		"ID": 1840,
+		"JLabel": "DLC住人像PRI",
+		"Name": "Princess figurine",
+		"NameJP": "姫の像",
+		"Icon": 903,
+		"Sort": 22420,
+		"Category": "Figurines"
+	},
+	{
+		"ID": 1841,
+		"JLabel": "DLC住人像ROL",
+		"Name": "Rollo figurine",
+		"NameJP": "ロロンドの像",
+		"Icon": 904,
+		"Sort": 22430,
+		"Category": "Figurines"
+	},
+	{
+		"ID": 1842,
+		"JLabel": "DLC住人像YUK",
+		"Name": "Magnus figurine",
+		"NameJP": "ゆきのへの像",
+		"Icon": 905,
+		"Sort": 22440,
+		"Category": "Figurines"
+	},
+	{
+		"ID": 1843,
+		"JLabel": "DLC住人像GEN",
+		"Name": "Gerontius figurine",
+		"NameJP": "ゲンローワの像",
+		"Icon": 906,
+		"Sort": 22450,
+		"Category": "Figurines"
+	},
+	{
+		"ID": 1844,
+		"JLabel": "DLC住人像MUT",
+		"Name": "Myrlund figurine",
+		"NameJP": "ムツヘタの像",
+		"Icon": 907,
+		"Sort": 22460,
+		"Category": "Figurines"
+	},
+	{
+		"ID": 1845,
+		"JLabel": "DLC住人像SOLA",
+		"Name": "soldier A figurine",
+		"NameJP": "へいしの像A",
+		"Icon": 908,
+		"Sort": 22470,
+		"Category": "Figurines"
+	},
+	{
+		"ID": 1846,
+		"JLabel": "DLC住人像SOLB",
+		"Name": "soldier B figurine",
+		"NameJP": "へいしの像B",
+		"Icon": 909,
+		"Sort": 22480,
+		"Category": "Figurines"
+	},
+	{
+		"ID": 1847,
+		"JLabel": "DLC住人像MERA",
+		"Name": "merchant A figurine",
+		"NameJP": "しょうにんの像A",
+		"Icon": 910,
+		"Sort": 22490,
+		"Category": "Figurines"
+	},
+	{
+		"ID": 1848,
+		"JLabel": "DLC住人像MERB",
+		"Name": "merchant B figurine",
+		"NameJP": "しょうにんの像B",
+		"Icon": 911,
+		"Sort": 22500,
+		"Category": "Figurines"
+	},
+	{
+		"ID": 1849,
+		"JLabel": "DLC住人像CITA",
+		"Name": "townsperson A figurine",
+		"NameJP": "まちびとの像A",
+		"Icon": 912,
+		"Sort": 22510,
+		"Category": "Figurines"
+	},
+	{
+		"ID": 1850,
+		"JLabel": "DLC住人像CITB",
+		"Name": "townsperson B figurine",
+		"NameJP": "まちびとの像B",
+		"Icon": 913,
+		"Sort": 22520,
+		"Category": "Figurines"
+	},
+	{
+		"ID": 1851,
+		"JLabel": "DLC住人像ROW",
+		"Name": "toughie figurine",
+		"NameJP": "あらくれの像",
+		"Icon": 914,
+		"Sort": 22530,
+		"Category": "Figurines"
+	},
+	{
+		"ID": 1854,
+		"JLabel": "DLCドットのゆびわ",
+		"Name": "pixel ring",
+		"NameJP": "ドットのゆびわ",
+		"Icon": 954,
+		"Sort": 7150,
+		"Category": "Accessories"
+	},
+	{
+		"ID": 1855,
+		"JLabel": "DLCあまかけるくつ",
+		"Name": "Pegasus boots",
+		"NameJP": "あまかけるくつ",
+		"Icon": 2595,
+		"Sort": 7160,
+		"Category": "Accessories"
+	},
+	{
+		"ID": 1856,
+		"JLabel": "DLCさくれつの書",
+		"Name": "Liber Destructica",
+		"NameJP": "さくれつの書",
+		"Icon": 2597,
+		"Sort": 7170,
+		"Category": "Accessories"
+	},
+	{
+		"ID": 1857,
+		"JLabel": "DLCグローブ",
+		"Name": "gloves",
+		"NameJP": "グローブ",
+		"Icon": 2598,
+		"Sort": 3400,
+		"Category": "Items"
+	},
+	{
+		"ID": 1858,
+		"JLabel": "DLC高速トロッコ",
+		"Name": "mega minecart",
+		"NameJP": "高速トロッコ",
+		"Icon": 2599,
+		"Sort": 3061,
+		"Category": "Items"
+	},
+	{
+		"ID": 1859,
+		"JLabel": "DLC流星のくつ",
+		"Name": "meteorite shoes",
+		"NameJP": "流星のくつ",
+		"Icon": 2600,
+		"Sort": 7180,
+		"Category": "Accessories"
+	},
+	{
+		"ID": 1860,
+		"JLabel": "DLCつばさの巻物",
+		"Name": "chimaera scroll",
+		"NameJP": "つばさの巻物",
+		"Icon": 2596,
+		"Sort": 3430,
+		"Category": "Items"
+	},
+	{
+		"ID": 1861,
+		"JLabel": "DLC線路・逆カーブ",
+		"Name": "reverse curved rail track",
+		"NameJP": "線路・逆カーブ",
+		"Icon": 2620,
+		"Sort": 3081,
+		"Category": "Items"
+	},
+	{
+		"ID": 1862,
+		"JLabel": "DLCカメラフレーム1",
+		"Name": "camera frame 1",
+		"NameJP": "カメラフレーム1",
+		"Icon": 1106,
+		"Sort": 3440,
+		"Category": "Items"
+	},
+	{
+		"ID": 1863,
+		"JLabel": "DLCカメラフレーム2",
+		"Name": "camera frame 2",
+		"NameJP": "カメラフレーム2",
+		"Icon": 1107,
+		"Sort": 3450,
+		"Category": "Items"
+	},
+	{
+		"ID": 1864,
+		"JLabel": "DLCカメラフレーム3",
+		"Name": "camera frame 3",
+		"NameJP": "カメラフレーム3",
+		"Icon": 1108,
+		"Sort": 3460,
+		"Category": "Items"
+	},
+	{
+		"ID": 1865,
+		"JLabel": "DLCカメラフレーム4",
+		"Name": "camera frame 4",
+		"NameJP": "カメラフレーム4",
+		"Icon": 1109,
+		"Sort": 3470,
+		"Category": "Items"
+	},
+	{
+		"ID": 1866,
+		"JLabel": "DLCカメラフレーム5",
+		"Name": "camera frame 5",
+		"NameJP": "カメラフレーム5",
+		"Icon": 1110,
+		"Sort": 3480,
+		"Category": "Items"
+	},
+	{
+		"ID": 1867,
+		"JLabel": "DLCカメラフレーム6",
+		"Name": "camera frame 6",
+		"NameJP": "カメラフレーム6",
+		"Icon": 1111,
+		"Sort": 3490,
+		"Category": "Items"
+	},
+	{
+		"ID": 1868,
+		"JLabel": "DLCカメラフレーム7",
+		"Name": "camera frame 7",
+		"NameJP": "カメラフレーム7",
+		"Icon": 1112,
+		"Sort": 3500,
+		"Category": "Items"
+	},
+	{
+		"ID": 1869,
+		"JLabel": "DLCカメラフレーム8",
+		"Name": "camera frame 8",
+		"NameJP": "カメラフレーム8",
+		"Icon": 1113,
+		"Sort": 3510,
+		"Category": "Items"
+	},
+	{
+		"ID": 1870,
+		"JLabel": "DLCカメラフレーム9",
+		"Name": "camera frame 9",
+		"NameJP": "カメラフレーム9",
+		"Icon": 1114,
+		"Sort": 3520,
+		"Category": "Items"
+	},
+	{
+		"ID": 1871,
+		"JLabel": "DLCカメラフレーム10",
+		"Name": "camera frame 10",
+		"NameJP": "カメラフレーム10",
+		"Icon": 1115,
+		"Sort": 3530,
+		"Category": "Items"
+	},
+	{
+		"ID": 1872,
+		"JLabel": "DLCドット・敵1",
+		"Name": "slime sprite",
+		"NameJP": "ドット・敵1",
+		"Icon": 1116,
+		"Sort": 21500,
+		"Category": "Pixels"
+	},
+	{
+		"ID": 1873,
+		"JLabel": "DLCドット・敵2",
+		"Name": "she-slime sprite",
+		"NameJP": "ドット・敵2",
+		"Icon": 1117,
+		"Sort": 21510,
+		"Category": "Pixels"
+	},
+	{
+		"ID": 1874,
+		"JLabel": "DLCドット・敵3",
+		"Name": "metal slime sprite",
+		"NameJP": "ドット・敵3",
+		"Icon": 1118,
+		"Sort": 21520,
+		"Category": "Pixels"
+	},
+	{
+		"ID": 1875,
+		"JLabel": "DLCドット・敵4",
+		"Name": "dracky sprite",
+		"NameJP": "ドット・敵4",
+		"Icon": 1119,
+		"Sort": 21530,
+		"Category": "Pixels"
+	},
+	{
+		"ID": 1876,
+		"JLabel": "DLCドット・敵5",
+		"Name": "drackolyte sprite",
+		"NameJP": "ドット・敵5",
+		"Icon": 1120,
+		"Sort": 21540,
+		"Category": "Pixels"
+	},
+	{
+		"ID": 1877,
+		"JLabel": "DLCドット・敵6",
+		"Name": "drackyma sprite",
+		"NameJP": "ドット・敵6",
+		"Icon": 915,
+		"Sort": 21550,
+		"Category": "Pixels"
+	},
+	{
+		"ID": 1878,
+		"JLabel": "DLCドット・敵7",
+		"Name": "ghost sprite",
+		"NameJP": "ドット・敵7",
+		"Icon": 916,
+		"Sort": 21560,
+		"Category": "Pixels"
+	},
+	{
+		"ID": 1879,
+		"JLabel": "DLCドット・敵8",
+		"Name": "fightgeist sprite",
+		"NameJP": "ドット・敵8",
+		"Icon": 917,
+		"Sort": 21570,
+		"Category": "Pixels"
+	},
+	{
+		"ID": 1880,
+		"JLabel": "DLCドット・敵9",
+		"Name": "spitegeist sprite",
+		"NameJP": "ドット・敵9",
+		"Icon": 918,
+		"Sort": 21580,
+		"Category": "Pixels"
+	},
+	{
+		"ID": 1881,
+		"JLabel": "DLCドット・敵10",
+		"Name": "chimaera sprite",
+		"NameJP": "ドット・敵10",
+		"Icon": 919,
+		"Sort": 21590,
+		"Category": "Pixels"
+	},
+	{
+		"ID": 1882,
+		"JLabel": "DLCドット・敵11",
+		"Name": "hocus chimaera sprite",
+		"NameJP": "ドット・敵11",
+		"Icon": 920,
+		"Sort": 21600,
+		"Category": "Pixels"
+	},
+	{
+		"ID": 1883,
+		"JLabel": "DLCドット・敵12",
+		"Name": "cosmic chimaera sprite",
+		"NameJP": "ドット・敵12",
+		"Icon": 921,
+		"Sort": 21610,
+		"Category": "Pixels"
+	},
+	{
+		"ID": 1884,
+		"JLabel": "DLCドット・敵13",
+		"Name": "green dragon sprite",
+		"NameJP": "ドット・敵13",
+		"Icon": 922,
+		"Sort": 21620,
+		"Category": "Pixels"
+	},
+	{
+		"ID": 1885,
+		"JLabel": "DLCドット・敵14",
+		"Name": "blue dragon sprite",
+		"NameJP": "ドット・敵14",
+		"Icon": 923,
+		"Sort": 21630,
+		"Category": "Pixels"
+	},
+	{
+		"ID": 1886,
+		"JLabel": "DLCドット・敵15",
+		"Name": "dread dragon sprite",
+		"NameJP": "ドット・敵15",
+		"Icon": 924,
+		"Sort": 21640,
+		"Category": "Pixels"
+	},
+	{
+		"ID": 1887,
+		"JLabel": "DLCドット・敵16",
+		"Name": "golem sprite",
+		"NameJP": "ドット・敵16",
+		"Icon": 925,
+		"Sort": 21650,
+		"Category": "Pixels"
+	},
+	{
+		"ID": 1888,
+		"JLabel": "DLCドット・敵17",
+		"Name": "stone golem sprite",
+		"NameJP": "ドット・敵17",
+		"Icon": 926,
+		"Sort": 21660,
+		"Category": "Pixels"
+	},
+	{
+		"ID": 1889,
+		"JLabel": "DLCドット・敵18",
+		"Name": "gold golem sprite",
+		"NameJP": "ドット・敵18",
+		"Icon": 927,
+		"Sort": 21670,
+		"Category": "Pixels"
+	},
+	{
+		"ID": 1890,
+		"JLabel": "DLCドット・敵19",
+		"Name": "knight errant sprite",
+		"NameJP": "ドット・敵19",
+		"Icon": 928,
+		"Sort": 21680,
+		"Category": "Pixels"
+	},
+	{
+		"ID": 1891,
+		"JLabel": "DLCドット・敵20",
+		"Name": "knight aberrant sprite",
+		"NameJP": "ドット・敵20",
+		"Icon": 929,
+		"Sort": 21690,
+		"Category": "Pixels"
+	},
+	{
+		"ID": 1892,
+		"JLabel": "DLCドット・敵21",
+		"Name": "knight abhorrent sprite",
+		"NameJP": "ドット・敵21",
+		"Icon": 2382,
+		"Sort": 21700,
+		"Category": "Pixels"
+	},
+	{
+		"ID": 1893,
+		"JLabel": "DLCドット・敵22",
+		"Name": "King of Darkness sprite",
+		"NameJP": "ドット・敵22",
+		"Icon": 2383,
+		"Sort": 21710,
+		"Category": "Pixels"
+	},
+	{
+		"ID": 1894,
+		"JLabel": "DLC天気カード・晴れ",
+		"Name": "sunny card",
+		"NameJP": "天気カード・晴れ",
+		"Icon": 2384,
+		"Sort": 3540,
+		"Category": "Items"
+	},
+	{
+		"ID": 1895,
+		"JLabel": "DLC天気カード・曇り",
+		"Name": "cloudy card",
+		"NameJP": "天気カード・曇り",
+		"Icon": 2385,
+		"Sort": 3550,
+		"Category": "Items"
+	},
+	{
+		"ID": 1896,
+		"JLabel": "DLC天気カード・雨",
+		"Name": "rainy card",
+		"NameJP": "天気カード・雨",
+		"Icon": 2386,
+		"Sort": 3560,
+		"Category": "Items"
+	},
+	{
+		"ID": 1897,
+		"JLabel": "DLC天気カード・毒雨",
+		"Name": "poison rain card",
+		"NameJP": "天気カード・毒雨",
+		"Icon": 2387,
+		"Sort": 3570,
+		"Category": "Items"
+	},
+	{
+		"ID": 1898,
+		"JLabel": "DLC天気カード・火",
+		"Name": "fire sparks card",
+		"NameJP": "天気カード・火",
+		"Icon": 2388,
+		"Sort": 3580,
+		"Category": "Items"
+	},
+	{
+		"ID": 1899,
+		"JLabel": "DLC天気カード・雪",
+		"Name": "snowy card",
+		"NameJP": "天気カード・雪",
+		"Icon": 2389,
+		"Sort": 3590,
+		"Category": "Items"
+	},
+	{
+		"ID": 1900,
+		"JLabel": "DLC天気カード・暗黒",
+		"Name": "darkness card",
+		"NameJP": "天気カード・暗黒",
+		"Icon": 2390,
+		"Sort": 3600,
+		"Category": "Items"
+	},
+	{
+		"ID": 1901,
+		"JLabel": "DLC天気カード・灰",
+		"Name": "ashy card",
+		"NameJP": "天気カード・灰",
+		"Icon": 2391,
+		"Sort": 3610,
+		"Category": "Items"
+	},
+	{
+		"ID": 1902,
+		"JLabel": "DLCぬりかえコテ",
+		"Name": "Transform-O-Trowel",
+		"NameJP": "ぬりかえコテ",
+		"Icon": 2392,
+		"Sort": 3410,
+		"Category": "Items"
+	},
+	{
+		"ID": 1903,
+		"JLabel": "DLCまとめ置きコテ",
+		"Name": "Transform-O-Trowel Upgrade",
+		"NameJP": "まとめ置きコテ",
+		"Icon": 2393,
+		"Sort": 3420,
+		"Category": "Items"
+	},
+	{
+		"ID": 1906,
+		"JLabel": "DLCモンスター像YR",
+		"Name": "magmalice's hand (L)",
+		"NameJP": "ようがんの腕L",
+		"Icon": 2582,
+		"Sort": 22230,
+		"Category": "Figurines"
+	},
+	{
+		"ID": 1907,
+		"JLabel": "DLCモンスター像HR",
+		"Name": "firn fiend's hand (L)",
+		"NameJP": "ひょうがの腕L",
+		"Icon": 2583,
+		"Sort": 22250,
+		"Category": "Figurines"
+	},
+	{
+		"ID": 1908,
+		"JLabel": "DLCモンスター像GL",
+		"Name": "monster's hand (L)",
+		"NameJP": "まじんの腕L",
+		"Icon": 2584,
+		"Sort": 22270,
+		"Category": "Figurines"
+	},
+	{
+		"ID": 1909,
+		"JLabel": "DLCモンスター像BG",
+		"Name": "golem (L)",
+		"NameJP": "ゴーレムL",
+		"Icon": 2585,
+		"Sort": 22200,
+		"Category": "Figurines"
+	},
+	{
+		"ID": 1911,
+		"JLabel": "DLCモンスター像SG",
+		"Name": "golem (M)",
+		"NameJP": "ゴーレムM",
+		"Icon": 2586,
+		"Sort": 22300,
+		"Category": "Figurines"
+	},
+	{
+		"ID": 1912,
+		"JLabel": "DLCモンスター像SH",
+		"Name": "Hades condor (M)",
+		"NameJP": "ヘルコンドルM",
+		"Icon": 2587,
+		"Sort": 22310,
+		"Category": "Figurines"
+	},
+	{
+		"ID": 1913,
+		"JLabel": "DLCモンスター像SY",
+		"Name": "magmalice (M)",
+		"NameJP": "ようがんまじんM",
+		"Icon": 2588,
+		"Sort": 22320,
+		"Category": "Figurines"
+	},
+	{
+		"ID": 1914,
+		"JLabel": "DLCモンスター像SI",
+		"Name": "firn fiend (M)",
+		"NameJP": "ひょうがまじんM",
+		"Icon": 2589,
+		"Sort": 22340,
+		"Category": "Figurines"
+	},
+	{
+		"ID": 1915,
+		"JLabel": "DLCモンスター像SU",
+		"Name": "hostile merger (M)",
+		"NameJP": "がったいまじんM",
+		"Icon": 2590,
+		"Sort": 22360,
+		"Category": "Figurines"
+	},
+	{
+		"ID": 1916,
+		"JLabel": "DLCモンスター像YS",
+		"Name": "magmalice's hand (M)",
+		"NameJP": "ようがんの腕M",
+		"Icon": 2591,
+		"Sort": 22330,
+		"Category": "Figurines"
+	},
+	{
+		"ID": 1917,
+		"JLabel": "DLCモンスター像IS",
+		"Name": "firn fiend's hand (M)",
+		"NameJP": "ひょうがの腕M",
+		"Icon": 2592,
+		"Sort": 22350,
+		"Category": "Figurines"
+	},
+	{
+		"ID": 1918,
+		"JLabel": "DLCモンスター像US",
+		"Name": "monster's hand (M)",
+		"NameJP": "まじんの腕M",
+		"Icon": 2593,
+		"Sort": 22370,
+		"Category": "Figurines"
+	},
+	{
+		"ID": 1919,
+		"JLabel": "DLCモンスター像SR",
+		"Name": "Dragonlord (M)",
+		"NameJP": "りゅうおうM",
+		"Icon": 2594,
+		"Sort": 22380,
+		"Category": "Figurines"
+	},
+	{
+		"ID": 1920,
+		"JLabel": "無限・木材",
+		"Name": "infinite supply of wood",
+		"NameJP": "木材∞",
+		"Icon": 743,
+		"Sort": 17001,
+		"Category": "Materials"
+	},
+	{
+		"ID": 1921,
+		"JLabel": "無限・石材",
+		"Name": "infinite supply of stone",
+		"NameJP": "石材∞",
+		"Icon": 743,
+		"Sort": 18141,
+		"Category": "Materials2"
+	},
+	{
+		"ID": 1922,
+		"JLabel": "無限・ひも",
+		"Name": "infinite supply of cord",
+		"NameJP": "ひも∞",
+		"Icon": 743,
+		"Sort": 17011,
+		"Category": "Materials"
+	},
+	{
+		"ID": 1923,
+		"JLabel": "無限・石炭",
+		"Name": "infinite supply of coal",
+		"NameJP": "石炭∞",
+		"Icon": 743,
+		"Sort": 18201,
+		"Category": "Materials2"
+	},
+	{
+		"ID": 1924,
+		"JLabel": "無限・ふとい枝",
+		"Name": "infinite supply of broken branches",
+		"NameJP": "ふとい枝∞",
+		"Icon": 743,
+		"Sort": 18121,
+		"Category": "Materials2"
+	},
+	{
+		"ID": 1925,
+		"JLabel": "無限・白い岩",
+		"Name": "infinite supply of chalk",
+		"NameJP": "白い岩∞",
+		"Icon": 743,
+		"Sort": 10031,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1926,
+		"JLabel": "無限・あおい油",
+		"Name": "infinite supply of blue goo",
+		"NameJP": "あおい油∞",
+		"Icon": 743,
+		"Sort": 18351,
+		"Category": "Materials2"
+	},
+	{
+		"ID": 1927,
+		"JLabel": "無限・あかい油",
+		"Name": "infinite supply of orange oil",
+		"NameJP": "あかい油∞",
+		"Icon": 743,
+		"Sort": 18361,
+		"Category": "Materials2"
+	},
+	{
+		"ID": 1928,
+		"JLabel": "無限・毛皮",
+		"Name": "infinite supply of fur",
+		"NameJP": "毛皮∞",
+		"Icon": 743,
+		"Sort": 18401,
+		"Category": "Materials2"
+	},
+	{
+		"ID": 1929,
+		"JLabel": "無限・ボロきれ",
+		"Name": "infinite supply of coarse cloth",
+		"NameJP": "ボロきれ∞",
+		"Icon": 743,
+		"Sort": 18391,
+		"Category": "Materials2"
+	},
+	{
+		"ID": 1930,
+		"JLabel": "無限・モンスターの卵",
+		"Name": "infinite supply of monster eggs",
+		"NameJP": "モンスターの卵∞",
+		"Icon": 743,
+		"Sort": 16161,
+		"Category": "Food2"
+	},
+	{
+		"ID": 1931,
+		"JLabel": "無限・ととのえた布",
+		"Name": "infinite supply of shot silk",
+		"NameJP": "ととのえた布∞",
+		"Icon": 743,
+		"Sort": 18171,
+		"Category": "Materials2"
+	},
+	{
+		"ID": 1932,
+		"JLabel": "無限・上質な毛皮",
+		"Name": "infinite supply of finest fur",
+		"NameJP": "上質な毛皮∞",
+		"Icon": 743,
+		"Sort": 18411,
+		"Category": "Materials2"
+	},
+	{
+		"ID": 1933,
+		"JLabel": "無限・綿毛",
+		"Name": "infinite supply of cotton",
+		"NameJP": "綿毛∞",
+		"Icon": 743,
+		"Sort": 18041,
+		"Category": "Materials2"
+	},
+	{
+		"ID": 1934,
+		"JLabel": "無限・土",
+		"Name": "infinite supply of earth",
+		"NameJP": "土∞",
+		"Icon": 743,
+		"Sort": 10001,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1935,
+		"JLabel": "無限・マグマ岩",
+		"Name": "infinite supply of lava",
+		"NameJP": "マグマ岩∞",
+		"Icon": 743,
+		"Sort": 10171,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1936,
+		"JLabel": "無限・パルプ",
+		"Name": "infinite supply of freezia flowers",
+		"NameJP": "パルプ∞",
+		"Icon": 743,
+		"Sort": 18081,
+		"Category": "Materials2"
+	},
+	{
+		"ID": 1937,
+		"JLabel": "無限・じょうぶな草",
+		"Name": "infinite supply of grassy leaves",
+		"NameJP": "じょうぶな草∞",
+		"Icon": 743,
+		"Sort": 18011,
+		"Category": "Materials2"
+	},
+	{
+		"ID": 1938,
+		"JLabel": "無限・粘土",
+		"Name": "infinite supply of clay",
+		"NameJP": "粘土∞",
+		"Icon": 743,
+		"Sort": 10011,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1939,
+		"JLabel": "無限・骨",
+		"Name": "infinite supply of bone",
+		"NameJP": "骨∞",
+		"Icon": 743,
+		"Sort": 13831,
+		"Category": "Furniture"
+	},
+	{
+		"ID": 1940,
+		"JLabel": "無限・銅",
+		"Name": "infinite supply of copper",
+		"NameJP": "銅∞",
+		"Icon": 743,
+		"Sort": 18211,
+		"Category": "Materials2"
+	},
+	{
+		"ID": 1941,
+		"JLabel": "無限・砂",
+		"Name": "infinite supply of sand",
+		"NameJP": "砂∞",
+		"Icon": 743,
+		"Sort": 10061,
+		"Category": "Blocks"
+	},
+	{
+		"ID": 1942,
+		"JLabel": "無限・鉄",
+		"Name": "infinite supply of iron",
+		"NameJP": "鉄∞",
+		"Icon": 743,
+		"Sort": 18221,
+		"Category": "Materials2"
+	},
+	{
+		"ID": 1946,
+		"JLabel": "DLCモンスター像NY",
+		"Name": "King of Darkness",
+		"NameJP": "やみのせんし",
+		"Icon": 2595,
+		"Sort": 22275,
+		"Category": "Figurines"
+	},
+	{
+		"ID": 1947,
+		"JLabel": "モンスター像キングスライム",
+		"Name": "king slime",
+		"NameJP": "キングスライム",
+		"Icon": 2596,
+		"Sort": 22195,
+		"Category": "Figurines"
+	},
+	{
+		"ID": 2000,
+		"JLabel": "モーションテスト用",
+		"Name": "",
+		"NameJP": "",
+		"Icon": 2,
+		"Sort": 0,
+		"Category": "None"
+	}
+]

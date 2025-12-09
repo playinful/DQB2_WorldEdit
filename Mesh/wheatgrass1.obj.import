@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dukan5cpcs8na"
+path="res://.godot/imported/wheatgrass1.obj-370ef3f4282fb260d62da81cced55428.mesh"
+
+[deps]
+
+files=["res://.godot/imported/wheatgrass1.obj-370ef3f4282fb260d62da81cced55428.mesh"]
+
+source_file="res://Mesh/wheatgrass1.obj"
+dest_files=["res://.godot/imported/wheatgrass1.obj-370ef3f4282fb260d62da81cced55428.mesh", "res://.godot/imported/wheatgrass1.obj-370ef3f4282fb260d62da81cced55428.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

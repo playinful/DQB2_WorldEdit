@@ -1,4 +1,4 @@
-//#if TOOLS
+/*//#if TOOLS
 using Godot;
 
 namespace Gizmo3DPlugin;
@@ -20,4 +20,4 @@ public partial class GizmoLoader : EditorPlugin
 		RemoveCustomType("Gizmo3D");
 	}
 }
-//#endif
+//#endif*/

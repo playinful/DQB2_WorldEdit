@@ -142,11 +142,39 @@ namespace EyeOfRubiss.Scenes
 
 			if (StageData.HasInstance())
 			{
-				_Gratitude_SpinBox.SetValueNoSignal(StageData.Instance.Gratitude);
-				_Gratitude_SpinBox.Editable = true;
+				if (StageData.Instance.IslandID == 12 || StageData.Instance.IslandID == 13 || StageData.Instance.IslandID == 16)
+                {
+                    if (CommonData.HasInstance())
+                    {
+                        switch (StageData.Instance.IslandID)
+                        {
+                            case 12:
+								_Gratitude_SpinBox.SetValueNoSignal(CommonData.Instance.Buildertopia1Gratitude);
+								break;
+							case 13:
+								_Gratitude_SpinBox.SetValueNoSignal(CommonData.Instance.Buildertopia2Gratitude);
+								break;
+							case 16:
+								_Gratitude_SpinBox.SetValueNoSignal(CommonData.Instance.Buildertopia3Gratitude);
+								break;
+                        }
+						_Gratitude_SpinBox.Editable = true;
+                    }
+					else
+                    {
+                        
+						_Gratitude_SpinBox.SetValueNoSignal(0);
+						_Gratitude_SpinBox.Editable = false;   
+                    }
+                }
+				else
+                {
+					_Gratitude_SpinBox.SetValueNoSignal(StageData.Instance.Gratitude);
+					_Gratitude_SpinBox.Editable = true;
+                }
 				_Time_SpinBox.SetValueNoSignal(StageData.Instance.Time);
 				_Time_SpinBox.Editable = true;
-				_Weather_OptionButton.Select((int)StageData.Instance.Weather);
+				_Weather_OptionButton.Select(StageData.Instance.Weather);
 				_Weather_OptionButton.Disabled = false;
 			}
 			else
@@ -204,7 +232,32 @@ namespace EyeOfRubiss.Scenes
 		}
 		public void TrySaveFolder(string path)
 		{
-			// TODO
+			if (!DirAccess.DirExistsAbsolute(path))
+			{
+				DirAccess.MakeDirRecursiveAbsolute(path);
+			}
+
+			if (!string.IsNullOrEmpty(WorkingDirectory))
+			{
+				DirAccess dir = DirAccess.Open(WorkingDirectory);
+				while (dir.GetNext() is string next && !string.IsNullOrEmpty(next))
+				{
+					if (next.ToLower().EndsWith(".BIN"))
+					{
+						DirAccess.CopyAbsolute(Path.Join(WorkingDirectory, next), Path.Join(path, next));
+					}
+				}
+			}
+
+			CommonData.Instance?.Save(Path.Join(path, "CMNDAT.BIN"));
+			ScreenshotData.Instance?.Save(Path.Join(path, "SCSHDAT.BIN"));
+
+			if (StageData.HasInstance())
+			{
+				StageData.Instance.Save(Path.Join(path, StageData.Instance.GetFileName()));
+			}
+
+			WorkingDirectory = path;
 		}
 
 		public void OpenFile(string path)
@@ -271,6 +324,7 @@ namespace EyeOfRubiss.Scenes
 			}
 
 			UpdateLoadedData();
+			UpdateMenuButtons();
 		}
 		public void CloseAll()
 		{
@@ -680,11 +734,35 @@ namespace EyeOfRubiss.Scenes
 		public void _On_Gratitude_SpinBox_ValueChanged(float value)
 		{
 			if (StageData.HasInstance())
+            {
 				StageData.Instance.Gratitude = (int)value;
+
+				if (CommonData.HasInstance())
+                {
+                    switch (StageData.Instance.IslandID)
+                    {
+                        case 12:
+							CommonData.Instance.Buildertopia1Gratitude = (int)value;
+							break;
+						case 13:
+							CommonData.Instance.Buildertopia2Gratitude = (int)value;
+							break;
+						case 16:
+							CommonData.Instance.Buildertopia3Gratitude = (int)value;
+							break;
+                    }
+                }
+            }
 		}
+		public void _On_Time_SpinBox_ValueChanged(float value)
+        {
+            if (StageData.HasInstance())
+				StageData.Instance.Time = value;
+        }
 		public void _On_Weather_OptionButton_ItemSelected(int index)
 		{
-			StageData.Instance.Weather = (byte)index;
+			if (StageData.HasInstance())
+				StageData.Instance.Weather = (byte)index;
 		}
 
 		public void _On_Inventory_Button_Pressed()

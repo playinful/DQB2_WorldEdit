@@ -1,0 +1,38 @@
+[gd_scene load_steps=2 format=3 uid="uid://bd4mjukn0j8c6"]
+
+[ext_resource type="Script" uid="uid://h3cqib0s1aw3" path="res://Testing/SignalConnectTest.cs" id="1_xfm5x"]
+
+[node name="SignalConnectTest" type="Node2D"]
+script = ExtResource("1_xfm5x")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 273.0
+offset_top = 412.0
+offset_right = 470.0
+offset_bottom = 488.0
+text = "dummy button"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 132.0
+offset_top = 177.0
+offset_right = 369.0
+offset_bottom = 288.0
+text = "some text 1"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 722.0
+offset_top = 170.0
+offset_right = 959.0
+offset_bottom = 281.0
+text = "some text 2"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 680.0
+offset_top = 398.0
+offset_right = 852.0
+offset_bottom = 502.0
+text = "disconnect"
+
+[connection signal="pressed" from="Button" to="Label2" method="hide" flags=6]
+[connection signal="pressed" from="Button" to="Label" method="set_text" binds= ["six shooter"]]
+[connection signal="pressed" from="Button2" to="." method="TryDisconnectAll"]
