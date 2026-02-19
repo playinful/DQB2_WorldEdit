@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://xwh45pcglpaq"]
 
 [ext_resource type="Theme" uid="uid://nd34kb5d40qb" path="res://Resources/DQB_Theme.tres" id="1_sujs8"]
-[ext_resource type="Texture2D" uid="uid://ca3k45qgrcjgq" path="res://Graphics/placeholder_thumb.png" id="2_1fced"]
+[ext_resource type="Texture2D" uid="uid://ca3k45qgrcjgq" path="res://Resources/Graphics/placeholder_thumb.png" id="2_1fced"]
 
 [node name="Dqb2SavePreview" type="Button"]
 offset_left = 170.0

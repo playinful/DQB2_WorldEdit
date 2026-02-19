@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://upiwwqf6070f"
+path="res://.godot/imported/drum_kit.obj-eee3ee7a5e05f3930cb1736addb78f96.mesh"
+
+[deps]
+
+files=["res://.godot/imported/drum_kit.obj-eee3ee7a5e05f3930cb1736addb78f96.mesh"]
+
+source_file="res://Resources/Mesh/BGParts/drum_kit/drum_kit.obj"
+dest_files=["res://.godot/imported/drum_kit.obj-eee3ee7a5e05f3930cb1736addb78f96.mesh", "res://.godot/imported/drum_kit.obj-eee3ee7a5e05f3930cb1736addb78f96.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

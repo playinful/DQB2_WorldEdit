@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://p5vjpexaq7ak"
+path="res://.godot/imported/flat_wooden_roofing.obj-3a08dce4f2455c96fc4f7b5c9bc6b33b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/flat_wooden_roofing.obj-3a08dce4f2455c96fc4f7b5c9bc6b33b.mesh"]
+
+source_file="res://Resources/Mesh/BGParts/wooden_roofing/flat_wooden_roofing.obj"
+dest_files=["res://.godot/imported/flat_wooden_roofing.obj-3a08dce4f2455c96fc4f7b5c9bc6b33b.mesh", "res://.godot/imported/flat_wooden_roofing.obj-3a08dce4f2455c96fc4f7b5c9bc6b33b.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

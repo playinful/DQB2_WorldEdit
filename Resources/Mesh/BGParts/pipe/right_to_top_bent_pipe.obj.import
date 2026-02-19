@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ijn36nmoyyec"
+path="res://.godot/imported/right_to_top_bent_pipe.obj-c566e58a3ff2cc9f2e7d28984e6c8ec5.mesh"
+
+[deps]
+
+files=["res://.godot/imported/right_to_top_bent_pipe.obj-c566e58a3ff2cc9f2e7d28984e6c8ec5.mesh"]
+
+source_file="res://Resources/Mesh/BGParts/pipe/right_to_top_bent_pipe.obj"
+dest_files=["res://.godot/imported/right_to_top_bent_pipe.obj-c566e58a3ff2cc9f2e7d28984e6c8ec5.mesh", "res://.godot/imported/right_to_top_bent_pipe.obj-c566e58a3ff2cc9f2e7d28984e6c8ec5.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

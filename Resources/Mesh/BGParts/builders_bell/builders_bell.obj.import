@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bqnvxiu0y8jgs"
+path="res://.godot/imported/builders_bell.obj-6d4aad9f5be9103543b2bf4711b5c62f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/builders_bell.obj-6d4aad9f5be9103543b2bf4711b5c62f.mesh"]
+
+source_file="res://Resources/Mesh/BGParts/builders_bell/builders_bell.obj"
+dest_files=["res://.godot/imported/builders_bell.obj-6d4aad9f5be9103543b2bf4711b5c62f.mesh", "res://.godot/imported/builders_bell.obj-6d4aad9f5be9103543b2bf4711b5c62f.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

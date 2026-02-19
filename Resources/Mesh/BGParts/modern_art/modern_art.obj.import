@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://wrw2ei3oj7mi"
+path="res://.godot/imported/modern_art.obj-8fcffac4f77cd994da36f2a591ab79b7.mesh"
+
+[deps]
+
+files=["res://.godot/imported/modern_art.obj-8fcffac4f77cd994da36f2a591ab79b7.mesh"]
+
+source_file="res://Resources/Mesh/BGParts/modern_art/modern_art.obj"
+dest_files=["res://.godot/imported/modern_art.obj-8fcffac4f77cd994da36f2a591ab79b7.mesh", "res://.godot/imported/modern_art.obj-8fcffac4f77cd994da36f2a591ab79b7.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

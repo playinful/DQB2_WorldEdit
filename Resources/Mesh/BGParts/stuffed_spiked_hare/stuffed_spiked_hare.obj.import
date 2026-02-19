@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cne23qt0c5cwf"
+path="res://.godot/imported/stuffed_spiked_hare.obj-7562415b54bcb7f39d1f4a57ff5e5ac0.mesh"
+
+[deps]
+
+files=["res://.godot/imported/stuffed_spiked_hare.obj-7562415b54bcb7f39d1f4a57ff5e5ac0.mesh"]
+
+source_file="res://Resources/Mesh/BGParts/stuffed_spiked_hare/stuffed_spiked_hare.obj"
+dest_files=["res://.godot/imported/stuffed_spiked_hare.obj-7562415b54bcb7f39d1f4a57ff5e5ac0.mesh", "res://.godot/imported/stuffed_spiked_hare.obj-7562415b54bcb7f39d1f4a57ff5e5ac0.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

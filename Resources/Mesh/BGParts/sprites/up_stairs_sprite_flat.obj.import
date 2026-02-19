@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://u3soti3fu0ns"
+path="res://.godot/imported/up_stairs_sprite_flat.obj-f82bdb5fa00c4ca24786b9d8d1f824cf.mesh"
+
+[deps]
+
+files=["res://.godot/imported/up_stairs_sprite_flat.obj-f82bdb5fa00c4ca24786b9d8d1f824cf.mesh"]
+
+source_file="res://Resources/Mesh/BGParts/sprites/up_stairs_sprite_flat.obj"
+dest_files=["res://.godot/imported/up_stairs_sprite_flat.obj-f82bdb5fa00c4ca24786b9d8d1f824cf.mesh", "res://.godot/imported/up_stairs_sprite_flat.obj-f82bdb5fa00c4ca24786b9d8d1f824cf.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cvbapsukrjokj"
+path="res://.godot/imported/firework_cannon.obj-dfcff107211e4fc568edc4b31173111b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/firework_cannon.obj-dfcff107211e4fc568edc4b31173111b.mesh"]
+
+source_file="res://Resources/Mesh/BGParts/firework_cannon/firework_cannon.obj"
+dest_files=["res://.godot/imported/firework_cannon.obj-dfcff107211e4fc568edc4b31173111b.mesh", "res://.godot/imported/firework_cannon.obj-dfcff107211e4fc568edc4b31173111b.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

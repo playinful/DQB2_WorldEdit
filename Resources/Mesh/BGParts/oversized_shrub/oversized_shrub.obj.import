@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cy8s1g1n705k1"
+path="res://.godot/imported/oversized_shrub.obj-4b0705ca90229dbb96b796532d9bdf84.mesh"
+
+[deps]
+
+files=["res://.godot/imported/oversized_shrub.obj-4b0705ca90229dbb96b796532d9bdf84.mesh"]
+
+source_file="res://Resources/Mesh/BGParts/oversized_shrub/oversized_shrub.obj"
+dest_files=["res://.godot/imported/oversized_shrub.obj-4b0705ca90229dbb96b796532d9bdf84.mesh", "res://.godot/imported/oversized_shrub.obj-4b0705ca90229dbb96b796532d9bdf84.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

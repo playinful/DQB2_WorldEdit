@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://7pxkqy144bl0"
+path="res://.godot/imported/gold_trophy.obj-1ef2ced939850b6f2c3edda8bce4e23f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/gold_trophy.obj-1ef2ced939850b6f2c3edda8bce4e23f.mesh"]
+
+source_file="res://Resources/Mesh/BGParts/trophy/gold_trophy.obj"
+dest_files=["res://.godot/imported/gold_trophy.obj-1ef2ced939850b6f2c3edda8bce4e23f.mesh", "res://.godot/imported/gold_trophy.obj-1ef2ced939850b6f2c3edda8bce4e23f.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

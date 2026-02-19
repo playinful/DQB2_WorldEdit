@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cpmmhx0kvs02m"
+path="res://.godot/imported/tattered_banner_of_erdrick.obj-802a0ed410252d8e7c678211cf8d08a6.mesh"
+
+[deps]
+
+files=["res://.godot/imported/tattered_banner_of_erdrick.obj-802a0ed410252d8e7c678211cf8d08a6.mesh"]
+
+source_file="res://Resources/Mesh/BGParts/tattered_banner_of_erdrick/tattered_banner_of_erdrick.obj"
+dest_files=["res://.godot/imported/tattered_banner_of_erdrick.obj-802a0ed410252d8e7c678211cf8d08a6.mesh", "res://.godot/imported/tattered_banner_of_erdrick.obj-802a0ed410252d8e7c678211cf8d08a6.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

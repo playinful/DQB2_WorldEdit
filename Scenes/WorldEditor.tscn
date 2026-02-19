@@ -1,33 +1,27 @@
-[gd_scene load_steps=34 format=3 uid="uid://chekdrqr80s3n"]
+[gd_scene load_steps=33 format=3 uid="uid://chekdrqr80s3n"]
 
-[ext_resource type="Texture2D" uid="uid://b5wcgwa3elvlc" path="res://Graphics/blocks.png" id="1_djn2n"]
-[ext_resource type="VoxelBlockyLibrary" uid="uid://ds0n7xj6hqhdx" path="res://Resources/Voxel Library.tres" id="1_ec1xm"]
+[ext_resource type="Texture2D" uid="uid://b5wcgwa3elvlc" path="res://Resources/Graphics/blocks.png" id="1_djn2n"]
+[ext_resource type="VoxelBlockyLibrary" uid="uid://ds0n7xj6hqhdx" path="res://Resources/voxel_library_terrain.tres" id="1_ec1xm"]
 [ext_resource type="Script" uid="uid://da6gt5x2hlsns" path="res://Scenes/WorldEditorScene.cs" id="1_kqags"]
-[ext_resource type="VoxelBlockyLibrary" uid="uid://dkixrdmtruusw" path="res://Resources/Voxel Library Props.tres" id="2_mua0n"]
+[ext_resource type="VoxelBlockyLibrary" uid="uid://dkixrdmtruusw" path="res://Resources/voxel_library_partsblock.tres" id="2_mua0n"]
 [ext_resource type="Script" uid="uid://bgg687qn5fg8" path="res://Nodes/CameraController.cs" id="4_drl5t"]
 [ext_resource type="Script" uid="uid://dbareqhst8tgr" path="res://Scenes/PropGridHacky.cs" id="5_1olrm"]
 [ext_resource type="Theme" uid="uid://nd34kb5d40qb" path="res://Resources/DQB_Theme.tres" id="5_reqmc"]
-[ext_resource type="VoxelBlockyLibrary" uid="uid://dh12d5k2twag0" path="res://Resources/Voxel Library Liquid.tres" id="5_wt1c1"]
 [ext_resource type="Script" uid="uid://c8d5ejfxksjcm" path="res://Nodes/FPSLabel.cs" id="6_rkejf"]
 [ext_resource type="PackedScene" uid="uid://cstxeedhnt2f3" path="res://Nodes/NPCSprite.tscn" id="6_s7pme"]
-[ext_resource type="Texture2D" uid="uid://b44a5on8vq3cx" path="res://Graphics/crosshair.png" id="7_sgdhm"]
+[ext_resource type="Texture2D" uid="uid://b44a5on8vq3cx" path="res://Resources/Graphics/crosshair.png" id="7_sgdhm"]
 [ext_resource type="Script" uid="uid://cef171jih3wvg" path="res://Scenes/PositionLabel.cs" id="8_o1mxb"]
 [ext_resource type="Script" uid="uid://cqcskock8m7ht" path="res://addons/Gizmo3DSharp/Gizmo3D.cs" id="8_wt1c1"]
 [ext_resource type="Script" uid="uid://b8l5wycxi2gqt" path="res://Nodes/StatusLabel.cs" id="9_33hxh"]
+[ext_resource type="Script" uid="uid://bvj6tbn5nm3rp" path="res://Nodes/SelectionBox.cs" id="9_phghj"]
+[ext_resource type="ArrayMesh" uid="uid://dewt8degmaf0g" path="res://Resources/Mesh/selection_box_corner.obj" id="10_qm6sn"]
+[ext_resource type="ArrayMesh" uid="uid://desfufrgy1b3h" path="res://Resources/Mesh/boundary_corner.obj" id="11_3qk7n"]
+[ext_resource type="ArrayMesh" uid="uid://bm5n1ynt2y8xw" path="res://Resources/Mesh/boundary_side.obj" id="12_un6sg"]
 [ext_resource type="Script" uid="uid://bhfgnuw7cwaqp" path="res://Nodes/CommandParser.cs" id="15_s7pme"]
-[ext_resource type="Texture2D" uid="uid://cbb8yw8yhn31g" path="res://Graphics/book_anim.png" id="16_bgrrh"]
-[ext_resource type="Texture2D" uid="uid://c2j7dpdpg1qv4" path="res://Graphics/loading.png" id="17_phghj"]
-
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_amqqt"]
-sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
-ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
-
-[sub_resource type="Sky" id="Sky_1jypa"]
-sky_material = SubResource("ProceduralSkyMaterial_amqqt")
+[ext_resource type="Texture2D" uid="uid://cbb8yw8yhn31g" path="res://Resources/Graphics/book_anim.png" id="16_bgrrh"]
+[ext_resource type="Texture2D" uid="uid://c2j7dpdpg1qv4" path="res://Resources/Graphics/loading.png" id="17_phghj"]
 
 [sub_resource type="Environment" id="Environment_nmm71"]
-background_mode = 2
-sky = SubResource("Sky_1jypa")
 ambient_light_source = 2
 ambient_light_color = Color(1, 1, 1, 1)
 ambient_light_energy = 0.5
@@ -47,21 +41,12 @@ texture_filter = 0
 [sub_resource type="VoxelMesherBlocky" id="VoxelMesherBlocky_jut71"]
 library = ExtResource("2_mua0n")
 
-[sub_resource type="VoxelMesherBlocky" id="VoxelMesherBlocky_wt1c1"]
-library = ExtResource("5_wt1c1")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jut71"]
-transparency = 1
-depth_draw_mode = 1
-vertex_color_use_as_albedo = true
-albedo_texture = ExtResource("1_djn2n")
-texture_filter = 0
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s7pme"]
 vertex_color_use_as_albedo = true
 albedo_color = Color(0.501961, 0, 0, 1)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bgrrh"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3qk7n"]
+shading_mode = 0
 albedo_color = Color(0.905882, 0.682353, 0.0784314, 1)
 
 [sub_resource type="Animation" id="Animation_33hxh"]
@@ -187,16 +172,17 @@ _data = {
 &"RESET": SubResource("Animation_phghj")
 }
 
-[node name="WorldEditor" type="Node3D" node_paths=PackedStringArray("_VoxelTerrain", "_VoxelTerrain_PropShells", "_ResidentLayer", "_PropGrid", "_PlayerDisplay", "_CameraController", "_Gizmo", "_SelectionBox", "_DebugInfoContainer", "_FPSLabel", "_PointedVoxelLabel", "_StatusLabel", "_CommandParser", "_LoadingAnimationPlayer")]
+[node name="WorldEditor" type="Node3D" node_paths=PackedStringArray("_VoxelTerrain", "_VoxelTerrain_PropShells", "_ResidentLayer", "_BGPartsGrid", "_PlayerDisplay", "_CameraController", "_Gizmo", "_SelectionBox", "_BoundaryBox", "_DebugInfoContainer", "_FPSLabel", "_PointedVoxelLabel", "_StatusLabel", "_CommandParser", "_LoadingAnimationPlayer")]
 script = ExtResource("1_kqags")
 _VoxelTerrain = NodePath("VoxelTerrain")
-_VoxelTerrain_PropShells = NodePath("VoxelTerrain_PropShells")
+_VoxelTerrain_PropShells = NodePath("VoxelTerrain_PartsBlock")
 _ResidentLayer = NodePath("ResidentLayer")
-_PropGrid = NodePath("PropGrid")
+_BGPartsGrid = NodePath("BGPartsGrid")
 _PlayerDisplay = NodePath("Player")
 _CameraController = NodePath("Camera3D")
 _Gizmo = NodePath("Gizmo3D")
-_SelectionBox = NodePath("SelectionBoxMesh")
+_SelectionBox = NodePath("SelectionBox")
+_BoundaryBox = NodePath("BoundaryBox")
 _DebugInfoContainer = NodePath("HUD/DebugInfo")
 _FPSLabel = NodePath("HUD/FPSLabel")
 _PointedVoxelLabel = NodePath("HUD/DebugInfo/PointedVoxelLabel")
@@ -214,33 +200,21 @@ environment = SubResource("Environment_nmm71")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1024, 0, -1024)
 mesher = SubResource("VoxelMesherBlocky_yg1cn")
 cast_shadow = 0
-bounds = AABB(-5.36871e+08, -16, -5.36871e+08, 1.07374e+09, 144, 1.07374e+09)
+bounds = AABB(-536870900, -16, -536870900, 1073739970, 144, 1073739970)
 generate_collisions = false
 material_override = SubResource("StandardMaterial3D_sq1al")
 run_stream_in_editor = false
 
-[node name="VoxelTerrain_PropShells" type="VoxelTerrain" parent="."]
+[node name="VoxelTerrain_PartsBlock" type="VoxelTerrain" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1024, 0, -1024)
 mesher = SubResource("VoxelMesherBlocky_jut71")
 cast_shadow = 0
 render_layers_mask = 2
-bounds = AABB(-5.36871e+08, -16, -5.36871e+08, 1.07374e+09, 144, 1.07374e+09)
+bounds = AABB(-536870900, -16, -536870900, 1073739970, 144, 1073739970)
 generate_collisions = false
 collision_layer = 2
 collision_mask = 2
 material_override = SubResource("StandardMaterial3D_sq1al")
-run_stream_in_editor = false
-
-[node name="VoxelTerrain_Liquids" type="VoxelTerrain" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1024, 0, -1024)
-mesher = SubResource("VoxelMesherBlocky_wt1c1")
-cast_shadow = 0
-render_layers_mask = 2
-bounds = AABB(-5.36871e+08, -16, -5.36871e+08, 1.07374e+09, 144, 1.07374e+09)
-generate_collisions = false
-collision_layer = 4
-collision_mask = 4
-material_override = SubResource("StandardMaterial3D_jut71")
 run_stream_in_editor = false
 
 [node name="ResidentLayer" type="Node3D" parent="."]
@@ -252,18 +226,15 @@ _Name = "Player"
 [node name="Character" parent="Player" index="0"]
 material_override = SubResource("StandardMaterial3D_s7pme")
 
-[node name="PropGrid" type="GridMap" parent="." node_paths=PackedStringArray("SubGrid")]
+[node name="BGPartsGrid" type="GridMap" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1024, 0, -1024)
 cell_size = Vector3(1, 1, 1)
 cell_center_y = false
 collision_layer = 4
 collision_mask = 0
 script = ExtResource("5_1olrm")
-SubGrid = NodePath("PropGridB")
-_MeshLibraryA = "uid://d245o52jja65n"
-_MeshLibraryB = "uid://cy8hdrxgofc1o"
 
-[node name="PropGridB" type="GridMap" parent="PropGrid"]
+[node name="PropGridB" type="GridMap" parent="BGPartsGrid"]
 cell_size = Vector3(1, 1, 1)
 cell_center_y = false
 collision_layer = 4
@@ -272,6 +243,7 @@ collision_mask = 0
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 96, 0)
 current = true
+size = 41.667
 script = ExtResource("4_drl5t")
 Speed = 20.0
 MaxSpeedMultiplier = 4.0
@@ -286,9 +258,18 @@ script = ExtResource("8_wt1c1")
 Mode = 3
 ShowSelectionBox = false
 
-[node name="SelectionBoxMesh" type="MeshInstance3D" parent="."]
+[node name="SelectionBox" type="Node3D" parent="."]
 visible = false
-material_override = SubResource("StandardMaterial3D_bgrrh")
+script = ExtResource("9_phghj")
+CornerMesh = ExtResource("10_qm6sn")
+MaterialOverride = SubResource("StandardMaterial3D_3qk7n")
+
+[node name="BoundaryBox" type="Node3D" parent="."]
+visible = false
+script = ExtResource("9_phghj")
+CornerMesh = ExtResource("11_3qk7n")
+SideMesh = ExtResource("12_un6sg")
+MaterialOverride = SubResource("StandardMaterial3D_3qk7n")
 
 [node name="HUD" type="Control" parent="."]
 layout_mode = 3
@@ -331,10 +312,12 @@ offset_right = -15.0
 offset_bottom = 41.0
 grow_horizontal = 0
 theme_override_constants/outline_size = 5
-text = "Camera position: %s"
+text = "Camera position: %s
+Facing: Weast"
 horizontal_alignment = 2
 script = ExtResource("8_o1mxb")
-DisplayText = "Camera position: %s"
+DisplayText = "Camera position: %s
+Facing: %t"
 Target = NodePath("../../../Camera3D")
 
 [node name="PointedVoxelLabel" type="Label" parent="HUD/DebugInfo"]
@@ -343,9 +326,9 @@ anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
 offset_left = -259.0
-offset_top = 42.0
+offset_top = 65.0
 offset_right = -15.0
-offset_bottom = 114.0
+offset_bottom = 137.0
 grow_horizontal = 0
 theme_override_constants/outline_size = 5
 text = "Targeted block: None

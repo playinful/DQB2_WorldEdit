@@ -1,0 +1,35 @@
+[gd_scene load_steps=7 format=3 uid="uid://jln61nshac6v"]
+
+[ext_resource type="Script" uid="uid://bvj6tbn5nm3rp" path="res://Nodes/SelectionBox.cs" id="1_jxylv"]
+[ext_resource type="Script" uid="uid://bgg687qn5fg8" path="res://Nodes/CameraController.cs" id="2_jxylv"]
+[ext_resource type="ArrayMesh" uid="uid://desfufrgy1b3h" path="res://Resources/Mesh/boundary_corner.obj" id="2_q1pfg"]
+[ext_resource type="ArrayMesh" uid="uid://bm5n1ynt2y8xw" path="res://Resources/Mesh/boundary_side.obj" id="3_72b8i"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n7ykc"]
+shading_mode = 0
+albedo_color = Color(0.905882, 0.682353, 0.0784314, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_n7ykc"]
+
+[node name="3Dcursortest" type="Node3D"]
+
+[node name="SelectionBox" type="Node3D" parent="."]
+script = ExtResource("1_jxylv")
+CornerMesh = ExtResource("2_q1pfg")
+SideMesh = ExtResource("3_72b8i")
+MaterialOverride = SubResource("StandardMaterial3D_n7ykc")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+current = true
+size = 41.667
+script = ExtResource("2_jxylv")
+Speed = 20.0
+MaxSpeedMultiplier = 4.0
+MouseSensitivity = 0.2
+Enabled = true
+
+[node name="Cube" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.5, 0.5)
+visible = false
+mesh = SubResource("BoxMesh_n7ykc")

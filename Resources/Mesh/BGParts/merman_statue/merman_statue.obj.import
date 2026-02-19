@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bucw4ypaid2ms"
+path="res://.godot/imported/merman_statue.obj-52bd55a7b6df51a95f5e362f72ca16ac.mesh"
+
+[deps]
+
+files=["res://.godot/imported/merman_statue.obj-52bd55a7b6df51a95f5e362f72ca16ac.mesh"]
+
+source_file="res://Resources/Mesh/BGParts/merman_statue/merman_statue.obj"
+dest_files=["res://.godot/imported/merman_statue.obj-52bd55a7b6df51a95f5e362f72ca16ac.mesh", "res://.godot/imported/merman_statue.obj-52bd55a7b6df51a95f5e362f72ca16ac.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

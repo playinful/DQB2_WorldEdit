@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://p8vp52tmkqno"
+path="res://.godot/imported/rubber_ring.obj-5f1c5a67cb3b7861baa925b877f74dde.mesh"
+
+[deps]
+
+files=["res://.godot/imported/rubber_ring.obj-5f1c5a67cb3b7861baa925b877f74dde.mesh"]
+
+source_file="res://Resources/Mesh/BGParts/rubber_ring/rubber_ring.obj"
+dest_files=["res://.godot/imported/rubber_ring.obj-5f1c5a67cb3b7861baa925b877f74dde.mesh", "res://.godot/imported/rubber_ring.obj-5f1c5a67cb3b7861baa925b877f74dde.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

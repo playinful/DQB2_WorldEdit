@@ -41,7 +41,7 @@ namespace EyeOfRubiss.Nodes
             AddChild(button);
             return button;
         }
-        public ItemButton AddButton(int id, BlockInfo blockInfo, int? count = null)
+        public ItemButton AddButton(int id, Info.DQB2.BlockInfo blockInfo, int? count = null)
         {
             PackedScene itemButtonScene = ResourceLoader.Load<PackedScene>(ItemButtonScenePath);
 
@@ -54,7 +54,7 @@ namespace EyeOfRubiss.Nodes
             AddChild(button);
             return button;
         }
-        public ItemButton AddButton(int id, ItemInfo itemInfo, int? count = null)
+        public ItemButton AddButton(int id, Info.DQB2.ItemInfo itemInfo, int? count = null)
         {
             PackedScene itemButtonScene = ResourceLoader.Load<PackedScene>(ItemButtonScenePath);
 

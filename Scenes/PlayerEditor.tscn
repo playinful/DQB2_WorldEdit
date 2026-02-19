@@ -3,9 +3,9 @@
 [ext_resource type="Theme" uid="uid://nd34kb5d40qb" path="res://Resources/DQB_Theme.tres" id="1_lyj0w"]
 [ext_resource type="Script" uid="uid://w37rdvawu7r0" path="res://Scenes/PlayerEditor.cs" id="2_olm4b"]
 [ext_resource type="PackedScene" uid="uid://mgvg4mys85bh" path="res://Nodes/ItemButton.tscn" id="2_qfrg7"]
-[ext_resource type="Texture2D" uid="uid://boya06dwpnc0h" path="res://Graphics/text_hair.png" id="3_olm4b"]
-[ext_resource type="Texture2D" uid="uid://ws84sw6rau4t" path="res://Graphics/text_skin.png" id="4_yrtxl"]
-[ext_resource type="Texture2D" uid="uid://dt6qfccvt0np4" path="res://Graphics/text_eyes.png" id="5_8n7u0"]
+[ext_resource type="Texture2D" uid="uid://boya06dwpnc0h" path="res://Resources/Graphics/text_hair.png" id="3_olm4b"]
+[ext_resource type="Texture2D" uid="uid://ws84sw6rau4t" path="res://Resources/Graphics/text_skin.png" id="4_yrtxl"]
+[ext_resource type="Texture2D" uid="uid://dt6qfccvt0np4" path="res://Resources/Graphics/text_eyes.png" id="5_8n7u0"]
 
 [node name="PlayerEditor" type="Panel" node_paths=PackedStringArray("_PlayerName_LineEdit", "_HP_SpinBox", "_AdditionalHP_SpinBox", "_Experience_SpinBox", "_Level_SpinBox", "_Hunger_SpinBox", "_Stamina_SpinBox", "_Attack_SpinBox", "_Defence_SpinBox", "_Sex_OptionButton", "_HairColor_Button", "_SkinColor_Button", "_EyeColor_Button", "_Weapon_ItemButton", "_Shield_ItemButton", "_Armor_ItemButton", "_Hammer_ItemButton", "_Gloves_ItemButton", "_BottomlessPot_ItemButton", "_EchoFlute_ItemButton", "_TransformOTrowel_ItemButton", "_MagicPencil_ItemButton", "_Chisel_ItemButton", "_FishingRod_ItemButton", "_Glamour_Weapon_ItemButton", "_Glamour_Shield_ItemButton", "_Glamour_Armor_ItemButton", "_Glamour_Hammer_ItemButton", "_Glamour_Headwear_ItemButton", "_Glamour_Accessory1_ItemButton", "_Glamour_Accessory2_ItemButton", "_Glamour_Accessory3_ItemButton")]
 anchors_preset = -1

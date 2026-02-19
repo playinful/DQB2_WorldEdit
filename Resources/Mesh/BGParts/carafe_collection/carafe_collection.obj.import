@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bmn54aeohgmav"
+path="res://.godot/imported/carafe_collection.obj-79b1a87ada196a1d3ad1b4ac9b176e31.mesh"
+
+[deps]
+
+files=["res://.godot/imported/carafe_collection.obj-79b1a87ada196a1d3ad1b4ac9b176e31.mesh"]
+
+source_file="res://Resources/Mesh/BGParts/carafe_collection/carafe_collection.obj"
+dest_files=["res://.godot/imported/carafe_collection.obj-79b1a87ada196a1d3ad1b4ac9b176e31.mesh", "res://.godot/imported/carafe_collection.obj-79b1a87ada196a1d3ad1b4ac9b176e31.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

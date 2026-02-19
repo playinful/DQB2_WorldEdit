@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dr76jotvj3wqx"
+path="res://.godot/imported/colossal_coffer.obj-ac55621d78cd8dfe0b72e2142c0863d0.mesh"
+
+[deps]
+
+files=["res://.godot/imported/colossal_coffer.obj-ac55621d78cd8dfe0b72e2142c0863d0.mesh"]
+
+source_file="res://Resources/Mesh/BGParts/colossal_coffer/colossal_coffer.obj"
+dest_files=["res://.godot/imported/colossal_coffer.obj-ac55621d78cd8dfe0b72e2142c0863d0.mesh", "res://.godot/imported/colossal_coffer.obj-ac55621d78cd8dfe0b72e2142c0863d0.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

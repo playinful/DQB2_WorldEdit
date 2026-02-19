@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cm38at3abn2jm"
+path="res://.godot/imported/machinists_workbench.obj-c9335f52ac82941de6b0eaf15d3aeb9b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/machinists_workbench.obj-c9335f52ac82941de6b0eaf15d3aeb9b.mesh"]
+
+source_file="res://Resources/Mesh/BGParts/machinists_workbench/machinists_workbench.obj"
+dest_files=["res://.godot/imported/machinists_workbench.obj-c9335f52ac82941de6b0eaf15d3aeb9b.mesh", "res://.godot/imported/machinists_workbench.obj-c9335f52ac82941de6b0eaf15d3aeb9b.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

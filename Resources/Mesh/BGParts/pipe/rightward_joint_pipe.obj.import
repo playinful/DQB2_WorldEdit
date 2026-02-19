@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://hp3yyt0fc4ls"
+path="res://.godot/imported/rightward_joint_pipe.obj-297d3aff7e0994cfb4010f1a2291e41c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/rightward_joint_pipe.obj-297d3aff7e0994cfb4010f1a2291e41c.mesh"]
+
+source_file="res://Resources/Mesh/BGParts/pipe/rightward_joint_pipe.obj"
+dest_files=["res://.godot/imported/rightward_joint_pipe.obj-297d3aff7e0994cfb4010f1a2291e41c.mesh", "res://.godot/imported/rightward_joint_pipe.obj-297d3aff7e0994cfb4010f1a2291e41c.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

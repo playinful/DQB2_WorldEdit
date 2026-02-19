@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dal1i7iu6x2tl"
+path="res://.godot/imported/stained_glass_window_unused_arch.obj-669434fbcdc75d23ac7d1aa7d8c335ca.mesh"
+
+[deps]
+
+files=["res://.godot/imported/stained_glass_window_unused_arch.obj-669434fbcdc75d23ac7d1aa7d8c335ca.mesh"]
+
+source_file="res://Resources/Mesh/BGParts/stained_glass_window_unused/stained_glass_window_unused_arch.obj"
+dest_files=["res://.godot/imported/stained_glass_window_unused_arch.obj-669434fbcdc75d23ac7d1aa7d8c335ca.mesh", "res://.godot/imported/stained_glass_window_unused_arch.obj-669434fbcdc75d23ac7d1aa7d8c335ca.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

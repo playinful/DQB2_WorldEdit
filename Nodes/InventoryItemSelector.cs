@@ -1,4 +1,4 @@
-using EyeOfRubiss.Info;
+using EyeOfRubiss.Info.DQB2;
 using Godot;
 using System;
 using System.Linq;

@@ -1,0 +1,70 @@
+[gd_scene load_steps=3 format=3 uid="uid://wr3w7yc20c3a"]
+
+[ext_resource type="Script" uid="uid://blkxg5imlc7oo" path="res://Testing/BlockSelectorRetry.cs" id="1_6xp84"]
+
+[sub_resource type="Theme" id="Theme_6xp84"]
+ItemList/colors/guide_color = Color(0.7, 0.7, 0.7, 0)
+
+[node name="BlockSelectorRetry" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6xp84")
+
+[node name="Blocks_ItemList" type="ItemList" parent="."]
+layout_mode = 0
+offset_left = 211.0
+offset_top = 51.0
+offset_right = 500.0
+offset_bottom = 413.0
+theme = SubResource("Theme_6xp84")
+item_count = 5
+max_columns = 1410065407
+same_column_width = true
+fixed_icon_size = Vector2i(64, 64)
+item_0/text = "tewst"
+item_1/text = "tat"
+item_2/text = "astsat"
+item_3/text = "stasta"
+item_4/text = "satsat"
+
+[node name="Props_ItemList" type="ItemList" parent="."]
+layout_mode = 0
+offset_left = 663.0
+offset_top = 48.0
+offset_right = 952.0
+offset_bottom = 410.0
+item_count = 5
+max_columns = 4
+same_column_width = true
+icon_mode = 0
+fixed_icon_size = Vector2i(32, 32)
+item_0/text = "test"
+item_1/text = "test2"
+item_2/text = "test3"
+item_3/text = "test4"
+item_4/text = "test5"
+
+[node name="ReloadBlocks_Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 290.0
+offset_top = 499.0
+offset_right = 418.0
+offset_bottom = 560.0
+text = "Reload Blocks"
+
+[node name="ReloadProps_Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 738.0
+offset_top = 501.0
+offset_right = 866.0
+offset_bottom = 562.0
+text = "Reload Props"
+
+[connection signal="item_selected" from="Blocks_ItemList" to="." method="_On_Blocks_ItemList_ItemSelected"]
+[connection signal="item_selected" from="Props_ItemList" to="." method="_On_Props_ItemList_ItemSelected"]
+[connection signal="pressed" from="ReloadBlocks_Button" to="." method="_On_ReloadBlocks_Button_Pressed"]
+[connection signal="pressed" from="ReloadProps_Button" to="." method="_On_ReloadProps_Button_Pressed"]

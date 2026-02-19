@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bn7jevq1sxgyl"
+path="res://.godot/imported/ridge_tiling.obj-72239b94caa50d0cbf1c7d01bd8e1a8e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/ridge_tiling.obj-72239b94caa50d0cbf1c7d01bd8e1a8e.mesh"]
+
+source_file="res://Resources/Mesh/BGParts/roof_tiling/ridge_tiling.obj"
+dest_files=["res://.godot/imported/ridge_tiling.obj-72239b94caa50d0cbf1c7d01bd8e1a8e.mesh", "res://.godot/imported/ridge_tiling.obj-72239b94caa50d0cbf1c7d01bd8e1a8e.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

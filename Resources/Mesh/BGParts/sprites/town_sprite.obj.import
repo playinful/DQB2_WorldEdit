@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dgsod5h7xblbi"
+path="res://.godot/imported/town_sprite.obj-f3c5b96979b03b3ff5bccc6b5f22b395.mesh"
+
+[deps]
+
+files=["res://.godot/imported/town_sprite.obj-f3c5b96979b03b3ff5bccc6b5f22b395.mesh"]
+
+source_file="res://Resources/Mesh/BGParts/sprites/town_sprite.obj"
+dest_files=["res://.godot/imported/town_sprite.obj-f3c5b96979b03b3ff5bccc6b5f22b395.mesh", "res://.godot/imported/town_sprite.obj-f3c5b96979b03b3ff5bccc6b5f22b395.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

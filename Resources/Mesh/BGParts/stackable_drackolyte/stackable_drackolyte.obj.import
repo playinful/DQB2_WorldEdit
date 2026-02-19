@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cpfdixd2xlsfu"
+path="res://.godot/imported/stackable_drackolyte.obj-faabe4cff771b319f58e9b0ba0cc683f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/stackable_drackolyte.obj-faabe4cff771b319f58e9b0ba0cc683f.mesh"]
+
+source_file="res://Resources/Mesh/BGParts/stackable_drackolyte/stackable_drackolyte.obj"
+dest_files=["res://.godot/imported/stackable_drackolyte.obj-faabe4cff771b319f58e9b0ba0cc683f.mesh", "res://.godot/imported/stackable_drackolyte.obj-faabe4cff771b319f58e9b0ba0cc683f.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

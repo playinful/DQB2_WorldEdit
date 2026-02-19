@@ -15,8 +15,6 @@ namespace EyeOfRubiss
     /// <summary> Base class for loading DQB2 .BIN files. </summary>
     public class SaveData
     {
-        private readonly byte[] ExpectedFileHeader = [ 0x61, 0x65, 0x72, 0x43 ];
-
         public string Path { get; set; }
         public string GetFileName() => System.IO.Path.GetFileName(Path);
 
@@ -27,7 +25,7 @@ namespace EyeOfRubiss
 
         public bool UnsavedChanges { get; set; } = false;
 
-        protected bool _TryLoad(string path, int headerLength)
+        protected bool _TryLoad(string path, int headerLength, bool decompress = true)
         {
             if (!Godot.FileAccess.FileExists(path))
                 return false;
@@ -36,16 +34,17 @@ namespace EyeOfRubiss
             {
                 using Godot.FileAccess fileAccess = Godot.FileAccess.Open(path, Godot.FileAccess.ModeFlags.ReadWrite);
                 {
-                    if (!ExpectedFileHeader.SequenceEqual(fileAccess.GetBuffer(4)))
-                        return false;
-
                     fileAccess.Seek(0);
                     _Header = fileAccess.GetBuffer(headerLength);
-                    _Buffer = Decompress(fileAccess.GetBuffer((long)fileAccess.GetLength() - headerLength));
+                    if (decompress)
+                        _Buffer = Util.Decompress(fileAccess.GetBuffer((long)fileAccess.GetLength() - headerLength));
+                    else
+                        _Buffer = fileAccess.GetBuffer((long)fileAccess.GetLength() - headerLength);
                 }
             }
-            catch
+            catch (Exception ex)
             {
+                GD.PrintErr(ex);
                 return false;
             }
 
@@ -63,12 +62,8 @@ namespace EyeOfRubiss
             {
                 using Godot.FileAccess fileAccess = Godot.FileAccess.Open(path, Godot.FileAccess.ModeFlags.ReadWrite);
                 {
-                    if (!ExpectedFileHeader.SequenceEqual(fileAccess.GetBuffer(4)))
-                        return false;
-
                     fileAccess.Seek(0);
                     _Header = fileAccess.GetBuffer(headerLength);
-                    //_Buffer = Decompress(fileAccess.GetBuffer((long)fileAccess.GetLength() - headerLength));
                 }
             }
             catch
@@ -86,7 +81,7 @@ namespace EyeOfRubiss
             path ??= Path;
             Path = path;
 
-            byte[] data = [.. _Header, .. Compress(_Buffer, System.IO.Compression.CompressionLevel.Fastest)];
+            byte[] data = [.. _Header, .. Util.Compress(_Buffer, System.IO.Compression.CompressionLevel.Fastest)];
             byte[] size = BitConverter.GetBytes(data.Length);
             Array.Copy(size, 0, data, 0x10, size.Length);
 
@@ -105,28 +100,6 @@ namespace EyeOfRubiss
             // TODO: Error handling maybe
             byte[] fileBytes = Godot.FileAccess.GetFileAsBytes(path);
             _Buffer = fileBytes;
-        }
-
-        public static byte[] Decompress(byte[] data)
-        {
-            using var input = new MemoryStream(data);
-            using var zlib = new System.IO.Compression.ZLibStream(input, System.IO.Compression.CompressionMode.Decompress);
-            using var output = new MemoryStream();
-            zlib.CopyTo(output);
-
-            output.Flush();
-            return output.ToArray();
-        }
-        public static byte[] Compress(byte[] data, System.IO.Compression.CompressionLevel compressionLevel)
-        {
-            using var input = new MemoryStream(data);
-            using var output = new MemoryStream();
-            using (var zlib = new System.IO.Compression.ZLibStream(output, compressionLevel))
-            {
-                input.CopyTo(zlib);
-                zlib.Flush();
-            }
-            return output.ToArray();
         }
 
         public void SetBuffer(byte[] newBuffer) => _Buffer = newBuffer;

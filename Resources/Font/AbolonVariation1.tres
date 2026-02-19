@@ -1,0 +1,7 @@
+[gd_resource type="FontVariation" load_steps=2 format=3 uid="uid://cc8u6p7xikihw"]
+
+[ext_resource type="FontFile" uid="uid://cbn0ax1s46bqu" path="res://Resources/Font/FOT-Abolon.otf" id="1_72d4p"]
+
+[resource]
+base_font = ExtResource("1_72d4p")
+spacing_top = 4

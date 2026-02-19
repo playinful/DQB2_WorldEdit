@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bv76sr4ka615i"
+path="res://.godot/imported/ras_mirror.obj-4015748cf2177530a97875256e994c4f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/ras_mirror.obj-4015748cf2177530a97875256e994c4f.mesh"]
+
+source_file="res://Resources/Mesh/BGParts/ras_mirror/ras_mirror.obj"
+dest_files=["res://.godot/imported/ras_mirror.obj-4015748cf2177530a97875256e994c4f.mesh", "res://.godot/imported/ras_mirror.obj-4015748cf2177530a97875256e994c4f.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

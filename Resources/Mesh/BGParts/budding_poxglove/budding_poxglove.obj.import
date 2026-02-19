@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cvlo2fx2fhgrd"
+path="res://.godot/imported/budding_poxglove.obj-e1460e1c00a9e8b0d03e20d1b490f2ad.mesh"
+
+[deps]
+
+files=["res://.godot/imported/budding_poxglove.obj-e1460e1c00a9e8b0d03e20d1b490f2ad.mesh"]
+
+source_file="res://Resources/Mesh/BGParts/budding_poxglove/budding_poxglove.obj"
+dest_files=["res://.godot/imported/budding_poxglove.obj-e1460e1c00a9e8b0d03e20d1b490f2ad.mesh", "res://.godot/imported/budding_poxglove.obj-e1460e1c00a9e8b0d03e20d1b490f2ad.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

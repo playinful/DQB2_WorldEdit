@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://4ckiqfudvtc2"
+path="res://.godot/imported/pitched_wooden_roofing.obj-1731752ef22383d41e051c772bc39014.mesh"
+
+[deps]
+
+files=["res://.godot/imported/pitched_wooden_roofing.obj-1731752ef22383d41e051c772bc39014.mesh"]
+
+source_file="res://Resources/Mesh/BGParts/wooden_roofing/pitched_wooden_roofing.obj"
+dest_files=["res://.godot/imported/pitched_wooden_roofing.obj-1731752ef22383d41e051c772bc39014.mesh", "res://.godot/imported/pitched_wooden_roofing.obj-1731752ef22383d41e051c772bc39014.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

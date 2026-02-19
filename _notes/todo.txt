@@ -1,7 +1,6 @@
 connecting window rotation
 crop delineation
 
-research nameplates
 
 weather selection
 
@@ -37,3 +36,19 @@ Raise/Lower Entire Island Tool
 Biome Brush
  - Convert Existing props toggle
  - Place new props toggle
+
+Research:
+Break user-locked saves
+Find the time-stop byte
+
+Basic:
+Make liquids toggle work, by adding a bool to the VoxelGenerator
+Rewrite DQB2 block get function to be more elegant
+
+UI:
+Rotation for props
+
+Fully new system required:
+Completely rework prop thing
+Click on signs
+Click on chests

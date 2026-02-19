@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dn2f23pkp82uo"
+path="res://.godot/imported/moreberry.obj-cba3f354e1cb1b25f0a4e561dd5df05c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/moreberry.obj-cba3f354e1cb1b25f0a4e561dd5df05c.mesh"]
+
+source_file="res://Resources/Mesh/BGParts/strawberry/moreberry.obj"
+dest_files=["res://.godot/imported/moreberry.obj-cba3f354e1cb1b25f0a4e561dd5df05c.mesh", "res://.godot/imported/moreberry.obj-cba3f354e1cb1b25f0a4e561dd5df05c.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

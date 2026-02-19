@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bcv30sad3iw6"
+path="res://.godot/imported/first_aid_kit.obj-855973669104790bafc1aa7d8ae6db67.mesh"
+
+[deps]
+
+files=["res://.godot/imported/first_aid_kit.obj-855973669104790bafc1aa7d8ae6db67.mesh"]
+
+source_file="res://Resources/Mesh/BGParts/first_aid_kit/first_aid_kit.obj"
+dest_files=["res://.godot/imported/first_aid_kit.obj-855973669104790bafc1aa7d8ae6db67.mesh", "res://.godot/imported/first_aid_kit.obj-855973669104790bafc1aa7d8ae6db67.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

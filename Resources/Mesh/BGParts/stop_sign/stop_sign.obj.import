@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dva5ghb8hbqem"
+path="res://.godot/imported/stop_sign.obj-f0469312af2d1367b4ee5a89edaa31af.mesh"
+
+[deps]
+
+files=["res://.godot/imported/stop_sign.obj-f0469312af2d1367b4ee5a89edaa31af.mesh"]
+
+source_file="res://Resources/Mesh/BGParts/stop_sign/stop_sign.obj"
+dest_files=["res://.godot/imported/stop_sign.obj-f0469312af2d1367b4ee5a89edaa31af.mesh", "res://.godot/imported/stop_sign.obj-f0469312af2d1367b4ee5a89edaa31af.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

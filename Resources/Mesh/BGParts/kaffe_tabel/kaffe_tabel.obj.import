@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bjpxotdsuvb2l"
+path="res://.godot/imported/kaffe_tabel.obj-ce9d2852d4656da4a18f5242d1866446.mesh"
+
+[deps]
+
+files=["res://.godot/imported/kaffe_tabel.obj-ce9d2852d4656da4a18f5242d1866446.mesh"]
+
+source_file="res://Resources/Mesh/BGParts/kaffe_tabel/kaffe_tabel.obj"
+dest_files=["res://.godot/imported/kaffe_tabel.obj-ce9d2852d4656da4a18f5242d1866446.mesh", "res://.godot/imported/kaffe_tabel.obj-ce9d2852d4656da4a18f5242d1866446.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

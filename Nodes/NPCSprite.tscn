@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://cstxeedhnt2f3"]
 
 [ext_resource type="Script" uid="uid://dsc7lx6tw0x6r" path="res://Nodes/NPCSprite.cs" id="1_fc2s8"]
-[ext_resource type="Texture2D" uid="uid://t3p6x1vqx3c7" path="res://Graphics/Resident.png" id="2_fc2s8"]
-[ext_resource type="ArrayMesh" uid="uid://cv41v5rmi7a3u" path="res://Mesh/character1.obj" id="3_a8ufv"]
+[ext_resource type="Texture2D" uid="uid://t3p6x1vqx3c7" path="res://Resources/Graphics/Resident.png" id="2_fc2s8"]
+[ext_resource type="ArrayMesh" uid="uid://cv41v5rmi7a3u" path="res://Resources/Mesh/character1.obj" id="3_a8ufv"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_a8ufv"]
 radius = 0.375

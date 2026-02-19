@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://drrxry7og5kfa"
+path="res://.godot/imported/lyre_of_slime_immemorial.obj-cdd87ebbe4af9b839ccc58f951bf8d94.mesh"
+
+[deps]
+
+files=["res://.godot/imported/lyre_of_slime_immemorial.obj-cdd87ebbe4af9b839ccc58f951bf8d94.mesh"]
+
+source_file="res://Resources/Mesh/BGParts/lyre_of_slime_immemorial/lyre_of_slime_immemorial.obj"
+dest_files=["res://.godot/imported/lyre_of_slime_immemorial.obj-cdd87ebbe4af9b839ccc58f951bf8d94.mesh", "res://.godot/imported/lyre_of_slime_immemorial.obj-cdd87ebbe4af9b839ccc58f951bf8d94.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

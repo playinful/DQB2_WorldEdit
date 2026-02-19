@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dipsxo6l474jf"
+path="res://.godot/imported/choo_choo_train_engine.obj-327a76a6e241aa41517578b7d1c815b9.mesh"
+
+[deps]
+
+files=["res://.godot/imported/choo_choo_train_engine.obj-327a76a6e241aa41517578b7d1c815b9.mesh"]
+
+source_file="res://Resources/Mesh/BGParts/choo_choo_train/choo_choo_train_engine.obj"
+dest_files=["res://.godot/imported/choo_choo_train_engine.obj-327a76a6e241aa41517578b7d1c815b9.mesh", "res://.godot/imported/choo_choo_train_engine.obj-327a76a6e241aa41517578b7d1c815b9.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

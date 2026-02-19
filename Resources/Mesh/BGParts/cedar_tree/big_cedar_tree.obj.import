@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bhoi3irqfd6o5"
+path="res://.godot/imported/big_cedar_tree.obj-d9dbf8eae056e9ca60502672d00cb6b9.mesh"
+
+[deps]
+
+files=["res://.godot/imported/big_cedar_tree.obj-d9dbf8eae056e9ca60502672d00cb6b9.mesh"]
+
+source_file="res://Resources/Mesh/BGParts/cedar_tree/big_cedar_tree.obj"
+dest_files=["res://.godot/imported/big_cedar_tree.obj-d9dbf8eae056e9ca60502672d00cb6b9.mesh", "res://.godot/imported/big_cedar_tree.obj-d9dbf8eae056e9ca60502672d00cb6b9.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

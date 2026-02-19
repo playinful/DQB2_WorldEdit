@@ -1,8 +1,8 @@
 [gd_scene load_steps=11 format=3 uid="uid://d2xkenenlv46v"]
 
-[ext_resource type="Script" uid="uid://kyu3uug6ts02" path="res://Scenes/PropLoaderTest.cs" id="1_3wuhr"]
+[ext_resource type="Script" path="res://Scenes/PropLoaderTest.cs" id="1_3wuhr"]
 [ext_resource type="Script" uid="uid://bgg687qn5fg8" path="res://Nodes/CameraController.cs" id="2_in1ov"]
-[ext_resource type="ArrayMesh" uid="uid://bx2jmogwvtxr1" path="res://Mesh/unknown.obj" id="3_cbqkw"]
+[ext_resource type="ArrayMesh" uid="uid://bx2jmogwvtxr1" path="res://Resources/Mesh/BGParts/question_mark/question_mark.obj" id="3_cbqkw"]
 [ext_resource type="Theme" uid="uid://nd34kb5d40qb" path="res://Resources/DQB_Theme.tres" id="4_ty84a"]
 [ext_resource type="Script" uid="uid://c8d5ejfxksjcm" path="res://Nodes/FPSLabel.cs" id="5_u5yfv"]
 

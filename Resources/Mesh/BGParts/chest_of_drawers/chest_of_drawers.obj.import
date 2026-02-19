@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bcvbauacjylr8"
+path="res://.godot/imported/chest_of_drawers.obj-5caf75cd82cec53aed8455afcb96d3db.mesh"
+
+[deps]
+
+files=["res://.godot/imported/chest_of_drawers.obj-5caf75cd82cec53aed8455afcb96d3db.mesh"]
+
+source_file="res://Resources/Mesh/BGParts/chest_of_drawers/chest_of_drawers.obj"
+dest_files=["res://.godot/imported/chest_of_drawers.obj-5caf75cd82cec53aed8455afcb96d3db.mesh", "res://.godot/imported/chest_of_drawers.obj-5caf75cd82cec53aed8455afcb96d3db.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

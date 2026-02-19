@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dtsca0uco40ow"
+path="res://.godot/imported/fancy_futon.obj-6991a15e58fa8bb1436a489a96fa0c40.mesh"
+
+[deps]
+
+files=["res://.godot/imported/fancy_futon.obj-6991a15e58fa8bb1436a489a96fa0c40.mesh"]
+
+source_file="res://Resources/Mesh/BGParts/fancy_futon/fancy_futon.obj"
+dest_files=["res://.godot/imported/fancy_futon.obj-6991a15e58fa8bb1436a489a96fa0c40.mesh", "res://.godot/imported/fancy_futon.obj-6991a15e58fa8bb1436a489a96fa0c40.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

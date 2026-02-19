@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ghbnqrmvgly"
+path="res://.godot/imported/selection_concave.obj-33e24bb60947c2d9e573396ece041987.mesh"
+
+[deps]
+
+files=["res://.godot/imported/selection_concave.obj-33e24bb60947c2d9e573396ece041987.mesh"]
+
+source_file="res://Resources/Mesh/selection_concave.obj"
+dest_files=["res://.godot/imported/selection_concave.obj-33e24bb60947c2d9e573396ece041987.mesh", "res://.godot/imported/selection_concave.obj-33e24bb60947c2d9e573396ece041987.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://lwovx84q3phu"
+path="res://.godot/imported/naughty_night_light.obj-a7bf3d8f255c6084110938a870a395be.mesh"
+
+[deps]
+
+files=["res://.godot/imported/naughty_night_light.obj-a7bf3d8f255c6084110938a870a395be.mesh"]
+
+source_file="res://Resources/Mesh/BGParts/naughty_night_light/naughty_night_light.obj"
+dest_files=["res://.godot/imported/naughty_night_light.obj-a7bf3d8f255c6084110938a870a395be.mesh", "res://.godot/imported/naughty_night_light.obj-a7bf3d8f255c6084110938a870a395be.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b26fqy0wfdh5w"
+path="res://.godot/imported/small_scale_soldier.obj-73b073cfa1743cdc3a50e0e330a7e2de.mesh"
+
+[deps]
+
+files=["res://.godot/imported/small_scale_soldier.obj-73b073cfa1743cdc3a50e0e330a7e2de.mesh"]
+
+source_file="res://Resources/Mesh/BGParts/small_scale_soldier/small_scale_soldier.obj"
+dest_files=["res://.godot/imported/small_scale_soldier.obj-73b073cfa1743cdc3a50e0e330a7e2de.mesh", "res://.godot/imported/small_scale_soldier.obj-73b073cfa1743cdc3a50e0e330a7e2de.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

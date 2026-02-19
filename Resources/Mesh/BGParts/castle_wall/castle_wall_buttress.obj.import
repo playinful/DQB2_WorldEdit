@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ccka3tiwvounw"
+path="res://.godot/imported/castle_wall_buttress.obj-b5cd28e5e05bd320fb38404f4ec5f32d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/castle_wall_buttress.obj-b5cd28e5e05bd320fb38404f4ec5f32d.mesh"]
+
+source_file="res://Resources/Mesh/BGParts/castle_wall/castle_wall_buttress.obj"
+dest_files=["res://.godot/imported/castle_wall_buttress.obj-b5cd28e5e05bd320fb38404f4ec5f32d.mesh", "res://.godot/imported/castle_wall_buttress.obj-b5cd28e5e05bd320fb38404f4ec5f32d.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

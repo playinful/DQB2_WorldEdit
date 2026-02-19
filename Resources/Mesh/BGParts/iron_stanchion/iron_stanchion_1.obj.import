@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dfk6a4l3bjria"
+path="res://.godot/imported/iron_stanchion_1.obj-e0ad7d7b7edf783eb08975a524722435.mesh"
+
+[deps]
+
+files=["res://.godot/imported/iron_stanchion_1.obj-e0ad7d7b7edf783eb08975a524722435.mesh"]
+
+source_file="res://Resources/Mesh/BGParts/iron_stanchion/iron_stanchion_1.obj"
+dest_files=["res://.godot/imported/iron_stanchion_1.obj-e0ad7d7b7edf783eb08975a524722435.mesh", "res://.godot/imported/iron_stanchion_1.obj-e0ad7d7b7edf783eb08975a524722435.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

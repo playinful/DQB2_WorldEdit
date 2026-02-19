@@ -27,7 +27,7 @@ public partial class InventoryEditor : Control
 
     private bool _HotbarSelected = false;
     private int _SelectedItem = -1;
-
+/*
     public void Initialize()
     {
         if (!CommonData.HasInstance())
@@ -161,4 +161,4 @@ public partial class InventoryEditor : Control
                 break;
         }
     }
-}
+*/}

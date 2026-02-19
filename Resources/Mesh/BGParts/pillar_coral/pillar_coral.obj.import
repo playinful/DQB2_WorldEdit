@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://gpu6hbtnuee8"
+path="res://.godot/imported/pillar_coral.obj-bc1bb0a5b00d6e946e8c1f5df0e809df.mesh"
+
+[deps]
+
+files=["res://.godot/imported/pillar_coral.obj-bc1bb0a5b00d6e946e8c1f5df0e809df.mesh"]
+
+source_file="res://Resources/Mesh/BGParts/pillar_coral/pillar_coral.obj"
+dest_files=["res://.godot/imported/pillar_coral.obj-bc1bb0a5b00d6e946e8c1f5df0e809df.mesh", "res://.godot/imported/pillar_coral.obj-bc1bb0a5b00d6e946e8c1f5df0e809df.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

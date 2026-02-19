@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cb85rm7enh658"
+path="res://.godot/imported/cactus_crown.obj-69ee0b01564169e3b5f8e861fbad1f14.mesh"
+
+[deps]
+
+files=["res://.godot/imported/cactus_crown.obj-69ee0b01564169e3b5f8e861fbad1f14.mesh"]
+
+source_file="res://Resources/Mesh/BGParts/cactus_crown/cactus_crown.obj"
+dest_files=["res://.godot/imported/cactus_crown.obj-69ee0b01564169e3b5f8e861fbad1f14.mesh", "res://.godot/imported/cactus_crown.obj-69ee0b01564169e3b5f8e861fbad1f14.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

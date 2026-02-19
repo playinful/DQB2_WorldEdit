@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c3w5l8n03q0wm"
+path="res://.godot/imported/picket_fence_1.obj-5d8ed2baa95dcd9e210c3655c153b2e0.mesh"
+
+[deps]
+
+files=["res://.godot/imported/picket_fence_1.obj-5d8ed2baa95dcd9e210c3655c153b2e0.mesh"]
+
+source_file="res://Resources/Mesh/BGParts/picket_fence/picket_fence_1.obj"
+dest_files=["res://.godot/imported/picket_fence_1.obj-5d8ed2baa95dcd9e210c3655c153b2e0.mesh", "res://.godot/imported/picket_fence_1.obj-5d8ed2baa95dcd9e210c3655c153b2e0.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

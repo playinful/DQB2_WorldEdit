@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cr1artompruni"
+path="res://.godot/imported/palm_tree.obj-7c22d8a4d354f04c722b3025c674aeac.mesh"
+
+[deps]
+
+files=["res://.godot/imported/palm_tree.obj-7c22d8a4d354f04c722b3025c674aeac.mesh"]
+
+source_file="res://Resources/Mesh/BGParts/palm_tree/palm_tree.obj"
+dest_files=["res://.godot/imported/palm_tree.obj-7c22d8a4d354f04c722b3025c674aeac.mesh", "res://.godot/imported/palm_tree.obj-7c22d8a4d354f04c722b3025c674aeac.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

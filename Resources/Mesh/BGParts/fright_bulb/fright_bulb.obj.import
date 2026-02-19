@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bte3n67ijabnl"
+path="res://.godot/imported/fright_bulb.obj-66db6d039479b7902b7819b822af0163.mesh"
+
+[deps]
+
+files=["res://.godot/imported/fright_bulb.obj-66db6d039479b7902b7819b822af0163.mesh"]
+
+source_file="res://Resources/Mesh/BGParts/fright_bulb/fright_bulb.obj"
+dest_files=["res://.godot/imported/fright_bulb.obj-66db6d039479b7902b7819b822af0163.mesh", "res://.godot/imported/fright_bulb.obj-66db6d039479b7902b7819b822af0163.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://jvrd0jpkfr54"
+path="res://.godot/imported/spa_spout.obj-70f09309330b2ed99e581df0ddd3b732.mesh"
+
+[deps]
+
+files=["res://.godot/imported/spa_spout.obj-70f09309330b2ed99e581df0ddd3b732.mesh"]
+
+source_file="res://Resources/Mesh/BGParts/spa_spout/spa_spout.obj"
+dest_files=["res://.godot/imported/spa_spout.obj-70f09309330b2ed99e581df0ddd3b732.mesh", "res://.godot/imported/spa_spout.obj-70f09309330b2ed99e581df0ddd3b732.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

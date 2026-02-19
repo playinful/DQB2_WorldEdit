@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://24gjwimoltw7"
+path="res://.godot/imported/small_stones.obj-98f85ac9679c4b041d965de64644a42b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/small_stones.obj-98f85ac9679c4b041d965de64644a42b.mesh"]
+
+source_file="res://Resources/Mesh/BGParts/small_stones/small_stones.obj"
+dest_files=["res://.godot/imported/small_stones.obj-98f85ac9679c4b041d965de64644a42b.mesh", "res://.godot/imported/small_stones.obj-98f85ac9679c4b041d965de64644a42b.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

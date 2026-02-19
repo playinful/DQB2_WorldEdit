@@ -5,7 +5,7 @@ namespace EyeOfRubiss.Nodes
 {
     public partial class PositionLabel : Label
     {
-        [Export] string DisplayText { get; set; } = "Current position: %s";
+        [Export(PropertyHint.MultilineText)] string DisplayText { get; set; } = "Current position: %s\nFacing: %t";
         [Export] Node Target { get; set; }
         [Export] bool UseGlobalPosition { get; set;} = false;
 
@@ -20,12 +20,25 @@ namespace EyeOfRubiss.Nodes
             }
             else if (Target is Node3D target3D)
             {
-                Text = DisplayText.Replace("%s", UseGlobalPosition ? target3D.GlobalPosition.ToString() : target3D.Position.ToString());
+                Text = DisplayText.Replace("%s", UseGlobalPosition ? target3D.GlobalPosition.ToString() : target3D.Position.ToString())
+                    .Replace("%t", _GetDirectionString(target3D.GetFacingDirection(UseGlobalPosition)));
             }
             else
             {
                 Text = "Error: Target object not found.";
             }
+        }
+
+        private string _GetDirectionString(byte direction)
+        {
+            return direction switch
+            {
+                0 => "North",
+				1 => "West",
+				2 => "South",
+				3 => "East",
+				_ => "UNKNOWN"
+            };
         }
     }
 }

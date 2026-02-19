@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cpvocy3vjwh3b"
+path="res://.godot/imported/spiked_metal_minecart.obj-bed6d0abbbc94469d7fcde37d75ec82a.mesh"
+
+[deps]
+
+files=["res://.godot/imported/spiked_metal_minecart.obj-bed6d0abbbc94469d7fcde37d75ec82a.mesh"]
+
+source_file="res://Resources/Mesh/BGParts/metal_minecart/spiked_metal_minecart.obj"
+dest_files=["res://.godot/imported/spiked_metal_minecart.obj-bed6d0abbbc94469d7fcde37d75ec82a.mesh", "res://.godot/imported/spiked_metal_minecart.obj-bed6d0abbbc94469d7fcde37d75ec82a.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

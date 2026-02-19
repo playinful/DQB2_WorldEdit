@@ -1,10 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://b4ert4voacqma"]
+[gd_scene load_steps=10 format=3 uid="uid://b4ert4voacqma"]
 
-[ext_resource type="VoxelBlockyLibrary" uid="uid://ds0n7xj6hqhdx" path="res://Resources/Voxel Library.tres" id="1_ksbdl"]
+[ext_resource type="VoxelBlockyLibrary" uid="uid://ds0n7xj6hqhdx" path="res://Resources/voxel_library_terrain.tres" id="1_ksbdl"]
 [ext_resource type="Script" uid="uid://dsufes7tykggm" path="res://Testing/DQB1DioramaTest.cs" id="1_x0na3"]
-[ext_resource type="Texture2D" uid="uid://b5wcgwa3elvlc" path="res://Graphics/blocks.png" id="2_h7g7q"]
+[ext_resource type="Texture2D" uid="uid://b5wcgwa3elvlc" path="res://Resources/Graphics/blocks.png" id="2_h7g7q"]
 [ext_resource type="Script" uid="uid://bgg687qn5fg8" path="res://Nodes/CameraController.cs" id="3_h7g7q"]
-[ext_resource type="Script" uid="uid://dbareqhst8tgr" path="res://Scenes/PropGridHacky.cs" id="5_jabph"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_x0na3"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -57,22 +56,6 @@ Enabled = true
 
 [node name="VoxelViewer" type="VoxelViewer" parent="Camera3D"]
 view_distance = 88888
-
-[node name="PropGrid" type="GridMap" parent="." node_paths=PackedStringArray("SubGrid")]
-cell_size = Vector3(1, 1, 1)
-cell_center_y = false
-collision_layer = 4
-collision_mask = 0
-script = ExtResource("5_jabph")
-SubGrid = NodePath("PropGridB")
-_MeshLibraryA = "uid://d245o52jja65n"
-_MeshLibraryB = "uid://cy8hdrxgofc1o"
-
-[node name="PropGridB" type="GridMap" parent="PropGrid"]
-cell_size = Vector3(1, 1, 1)
-cell_center_y = false
-collision_layer = 4
-collision_mask = 0
 
 [node name="Window" type="Window" parent="."]
 oversampling_override = 1.0

@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cx7xno35wucde"
+path="res://.godot/imported/furnace_dqb2.obj-a8c8a0d9061a70478aac9e09944f602e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/furnace_dqb2.obj-a8c8a0d9061a70478aac9e09944f602e.mesh"]
+
+source_file="res://Resources/Mesh/BGParts/furnace/furnace_dqb2.obj"
+dest_files=["res://.godot/imported/furnace_dqb2.obj-a8c8a0d9061a70478aac9e09944f602e.mesh", "res://.godot/imported/furnace_dqb2.obj-a8c8a0d9061a70478aac9e09944f602e.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

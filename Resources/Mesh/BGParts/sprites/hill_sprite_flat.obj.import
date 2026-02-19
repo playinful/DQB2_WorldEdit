@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://d21vofe1jp2qv"
+path="res://.godot/imported/hill_sprite_flat.obj-e1b2c3e2aa726f6f34f70948d8596c4a.mesh"
+
+[deps]
+
+files=["res://.godot/imported/hill_sprite_flat.obj-e1b2c3e2aa726f6f34f70948d8596c4a.mesh"]
+
+source_file="res://Resources/Mesh/BGParts/sprites/hill_sprite_flat.obj"
+dest_files=["res://.godot/imported/hill_sprite_flat.obj-e1b2c3e2aa726f6f34f70948d8596c4a.mesh", "res://.godot/imported/hill_sprite_flat.obj-e1b2c3e2aa726f6f34f70948d8596c4a.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

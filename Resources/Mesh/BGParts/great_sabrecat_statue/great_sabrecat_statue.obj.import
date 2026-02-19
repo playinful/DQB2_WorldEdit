@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://djt1vjenggi1h"
+path="res://.godot/imported/great_sabrecat_statue.obj-97304cb8f191270898b4c1b3f60950df.mesh"
+
+[deps]
+
+files=["res://.godot/imported/great_sabrecat_statue.obj-97304cb8f191270898b4c1b3f60950df.mesh"]
+
+source_file="res://Resources/Mesh/BGParts/great_sabrecat_statue/great_sabrecat_statue.obj"
+dest_files=["res://.godot/imported/great_sabrecat_statue.obj-97304cb8f191270898b4c1b3f60950df.mesh", "res://.godot/imported/great_sabrecat_statue.obj-97304cb8f191270898b4c1b3f60950df.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

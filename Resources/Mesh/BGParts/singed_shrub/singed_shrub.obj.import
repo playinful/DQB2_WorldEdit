@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b8myw5b0llqyi"
+path="res://.godot/imported/singed_shrub.obj-27ccab4f55a4aca26f233971e97a4280.mesh"
+
+[deps]
+
+files=["res://.godot/imported/singed_shrub.obj-27ccab4f55a4aca26f233971e97a4280.mesh"]
+
+source_file="res://Resources/Mesh/BGParts/singed_shrub/singed_shrub.obj"
+dest_files=["res://.godot/imported/singed_shrub.obj-27ccab4f55a4aca26f233971e97a4280.mesh", "res://.godot/imported/singed_shrub.obj-27ccab4f55a4aca26f233971e97a4280.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

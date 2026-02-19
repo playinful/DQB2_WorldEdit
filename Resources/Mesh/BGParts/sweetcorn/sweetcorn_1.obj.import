@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://de6hf04h4gyi7"
+path="res://.godot/imported/sweetcorn_1.obj-b05d531d990b2f6cb5d615cc31a7fcc5.mesh"
+
+[deps]
+
+files=["res://.godot/imported/sweetcorn_1.obj-b05d531d990b2f6cb5d615cc31a7fcc5.mesh"]
+
+source_file="res://Resources/Mesh/BGParts/sweetcorn/sweetcorn_1.obj"
+dest_files=["res://.godot/imported/sweetcorn_1.obj-b05d531d990b2f6cb5d615cc31a7fcc5.mesh", "res://.godot/imported/sweetcorn_1.obj-b05d531d990b2f6cb5d615cc31a7fcc5.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

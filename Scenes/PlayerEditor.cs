@@ -45,6 +45,7 @@ namespace EyeOfRubiss.Scenes
         [Export] private ItemButton _Glamour_Accessory2_ItemButton;
         [Export] private ItemButton _Glamour_Accessory3_ItemButton;
 
+        /*
         public void UpdateAll()
         {
             if (!CommonData.HasInstance())
@@ -248,5 +249,6 @@ namespace EyeOfRubiss.Scenes
                     break;
             }
         }
+    */
     }
 }

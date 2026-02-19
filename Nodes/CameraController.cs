@@ -14,6 +14,7 @@ namespace EyeOfRubiss.Nodes
 		[Export] float MouseSensitivity = 0.4f;
 		[Export] float MaxAngle = 90;
 		[Export] float MinAngle = -90;
+		[Export] float SizeStep = 1.0f;
 
 		private float SpeedMultiplier = 1;
 
@@ -42,6 +43,45 @@ namespace EyeOfRubiss.Nodes
 
 			positionChangeVector = positionChangeVector.Normalized().Rotated(Vector3.Up, Rotation.Y);
 			Position += positionChangeVector * (float)delta * Speed * SpeedMultiplier;
+
+			if (Input.IsActionPressed(Constants.Controls.CAMERA_FOV_UP))
+            {
+				if (Size + SizeStep > 100)
+                {
+                    Size = 100.0f;
+                }
+				else
+                {
+                    Size += SizeStep;
+                }
+				if (Size * 1.8f > 179)
+                {
+                    Fov = 179.0f;
+                }
+				else
+                {
+                    Fov = Size * 1.8f;
+                }
+            }
+			if (Input.IsActionPressed(Constants.Controls.CAMERA_FOV_DOWN))
+            {
+				if (Size - SizeStep < 1)
+                {
+                    Size = 1.0f;
+                }
+				else
+                {
+                    Size -= SizeStep;
+                }
+				if (Size * 1.8f < 1)
+                {
+                    Fov = 1.0f;
+                }
+				else
+                {
+                    Fov = Size * 1.8f;
+                }
+            }
 		}
 
         public override void _UnhandledInput(InputEvent @event)
@@ -82,6 +122,11 @@ namespace EyeOfRubiss.Nodes
 				if (SpeedMultiplier < MinSpeedMultiplier)
 					SpeedMultiplier = MinSpeedMultiplier;
 			}
+
+			if (@event.IsActionPressed(Constants.Controls.CAMERA_ISOMETRIC))
+            {
+                Projection = (Projection == ProjectionType.Perspective) ? ProjectionType.Orthogonal : ProjectionType.Perspective;
+            }
         }
 
 		public void Enable()

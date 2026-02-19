@@ -1,6 +1,6 @@
 [gd_resource type="Theme" load_steps=2 format=3 uid="uid://nd34kb5d40qb"]
 
-[ext_resource type="FontVariation" uid="uid://cc8u6p7xikihw" path="res://Resources/AbolonVariation1.tres" id="2_eo3b1"]
+[ext_resource type="FontVariation" uid="uid://cc8u6p7xikihw" path="res://Resources/Font/AbolonVariation1.tres" id="2_eo3b1"]
 
 [resource]
 default_font_size = 20

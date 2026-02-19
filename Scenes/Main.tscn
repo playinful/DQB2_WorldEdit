@@ -1,25 +1,36 @@
-[gd_scene load_steps=19 format=3 uid="uid://d5ygrv1j2owh"]
+[gd_scene load_steps=24 format=3 uid="uid://d5ygrv1j2owh"]
 
 [ext_resource type="Theme" uid="uid://nd34kb5d40qb" path="res://Resources/DQB_Theme.tres" id="1_sua2j"]
-[ext_resource type="Script" uid="uid://dmw4aaodejfmb" path="res://Nodes/AutoSubmenu.cs" id="2_50glp"]
 [ext_resource type="Script" uid="uid://o1l3wpft1cmb" path="res://Scenes/Main.cs" id="2_vy5pj"]
+[ext_resource type="Script" uid="uid://cm07nj3jmfybr" path="res://Nodes/TimeSpinBox.cs" id="4_fq0cl"]
 [ext_resource type="ButtonGroup" uid="uid://iilnu3cspndh" path="res://Resources/ToolSelectorButtonGroup.tres" id="4_v1gob"]
-[ext_resource type="Texture2D" uid="uid://b342q8jhhuatw" path="res://Graphics/icon_gratitude.png" id="6_vy5pj"]
-[ext_resource type="Texture2D" uid="uid://bas763qy7loid" path="res://Graphics/BrushIcon/pencil.png" id="8_grg3l"]
-[ext_resource type="Texture2D" uid="uid://blqdbmxjkghmx" path="res://Graphics/BrushIcon/swap.png" id="9_frkhe"]
-[ext_resource type="Texture2D" uid="uid://dqp6cufmisgap" path="res://Graphics/BrushIcon/bucket.png" id="10_1p5hy"]
+[ext_resource type="Texture2D" uid="uid://bmak3ka2hrwkp" path="res://Resources/Graphics/BrushIcon/cursor.png" id="6_sxkr1"]
+[ext_resource type="Texture2D" uid="uid://b342q8jhhuatw" path="res://Resources/Graphics/icon_gratitude.png" id="6_vy5pj"]
+[ext_resource type="Texture2D" uid="uid://dnfqj68wjy48s" path="res://Resources/Graphics/BrushIcon/eraser.png" id="8_0sclb"]
+[ext_resource type="Texture2D" uid="uid://bas763qy7loid" path="res://Resources/Graphics/BrushIcon/pencil.png" id="8_grg3l"]
+[ext_resource type="Texture2D" uid="uid://blqdbmxjkghmx" path="res://Resources/Graphics/BrushIcon/swap.png" id="9_frkhe"]
+[ext_resource type="Texture2D" uid="uid://dqp6cufmisgap" path="res://Resources/Graphics/BrushIcon/bucket.png" id="10_1p5hy"]
 [ext_resource type="PackedScene" uid="uid://chekdrqr80s3n" path="res://Scenes/WorldEditor.tscn" id="11_4kpch"]
-[ext_resource type="Texture2D" uid="uid://nvo001dadd0e" path="res://Graphics/BrushIcon/select.png" id="11_346fj"]
-[ext_resource type="Texture2D" uid="uid://bukeminmeelvv" path="res://Graphics/BrushIcon/copy.png" id="12_0sclb"]
+[ext_resource type="Texture2D" uid="uid://nvo001dadd0e" path="res://Resources/Graphics/BrushIcon/select.png" id="11_346fj"]
+[ext_resource type="Texture2D" uid="uid://kmsbwwu6fo81" path="res://Resources/Graphics/BrushIcon/chisel.png" id="11_fq0cl"]
+[ext_resource type="Texture2D" uid="uid://bukeminmeelvv" path="res://Resources/Graphics/BrushIcon/copy.png" id="12_0sclb"]
 [ext_resource type="PackedScene" uid="uid://c8ji32ohm06et" path="res://Scenes/InventoryEditor.tscn" id="12_grg3l"]
 [ext_resource type="PackedScene" uid="uid://o3d56yqxtw7o" path="res://Scenes/PlayerEditor.tscn" id="13_frkhe"]
-[ext_resource type="Texture2D" uid="uid://bv0k7sacwx5k4" path="res://Graphics/BrushIcon/cut.png" id="13_sxkr1"]
+[ext_resource type="Texture2D" uid="uid://bv0k7sacwx5k4" path="res://Resources/Graphics/BrushIcon/cut.png" id="13_sxkr1"]
 [ext_resource type="Script" uid="uid://blmw2vekf34is" path="res://Nodes/ItemButtonSelector.cs" id="14_1p5hy"]
-[ext_resource type="Texture2D" uid="uid://bq58vaml02jo5" path="res://Graphics/BrushIcon/paste.png" id="14_fq0cl"]
+[ext_resource type="Texture2D" uid="uid://bq58vaml02jo5" path="res://Resources/Graphics/BrushIcon/paste.png" id="14_fq0cl"]
 [ext_resource type="Script" uid="uid://4b1u3e3eyj1n" path="res://Nodes/InventoryItemSelector.cs" id="19_0sclb"]
 [ext_resource type="Script" uid="uid://dpxr4rncvxjdx" path="res://Scenes/ItemSelectorTest.cs" id="20_sxkr1"]
 
-[node name="Main" type="Control" node_paths=PackedStringArray("_WorldEditorScene", "_FileDialog", "_UnsavedChanges_Window", "_UnsavedChanges_Label", "_File_PopupMenu", "_File_SaveSingleFile_PopupMenu", "_File_SaveAsSingleFile_PopupMenu", "_File_Export_PopupMenu", "_File_Import_PopupMenu", "_Settings_PopupMenu", "_View_PopupMenu", "_Inventory_Button", "_Player_Button", "_IslandSelector_Button", "_Gratitude_SpinBox", "_Time_SpinBox", "_Weather_OptionButton", "_Block_ItemButtonSelector", "_Prop_ItemButtonSelector", "_Fluid_ItemButtonSelector", "_Inventory_Panel", "_ItemSelector")]
+[sub_resource type="InputEventKey" id="InputEventKey_sxkr1"]
+device = -1
+ctrl_pressed = true
+keycode = 86
+
+[sub_resource type="Shortcut" id="Shortcut_fq0cl"]
+events = [SubResource("InputEventKey_sxkr1")]
+
+[node name="Main" type="Control" node_paths=PackedStringArray("_WorldEditorScene", "_FileDialog", "_UnsavedChanges_Window", "_UnsavedChanges_Label", "_File_PopupMenu", "_Settings_PopupMenu", "_Inventory_Button", "_Player_Button", "_IslandSelector_Button", "_Gratitude_SpinBox", "_Time_SpinBox", "_Weather_OptionButton", "_Block_ItemButtonSelector", "_BGParts_ItemButtonSelector", "_Fluid_ItemButtonSelector", "_Inventory_Panel", "_ItemSelector")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -33,12 +44,7 @@ _FileDialog = NodePath("Popups/FileDialog")
 _UnsavedChanges_Window = NodePath("Popups/UnsavedChangesWindow")
 _UnsavedChanges_Label = NodePath("Popups/UnsavedChangesWindow/Label")
 _File_PopupMenu = NodePath("Toolbar/VBoxContainer/MenuBar_Main/MenuBar/FileMenu")
-_File_SaveSingleFile_PopupMenu = NodePath("Toolbar/VBoxContainer/MenuBar_Main/MenuBar/FileMenu/SaveSingleFileMenu")
-_File_SaveAsSingleFile_PopupMenu = NodePath("Toolbar/VBoxContainer/MenuBar_Main/MenuBar/FileMenu/SaveAsSingleFileMenu")
-_File_Export_PopupMenu = NodePath("Toolbar/VBoxContainer/MenuBar_Main/MenuBar/FileMenu/ExportMenu")
-_File_Import_PopupMenu = NodePath("Toolbar/VBoxContainer/MenuBar_Main/MenuBar/FileMenu/ImportMenu")
-_Settings_PopupMenu = NodePath("Toolbar/VBoxContainer/MenuBar_Main/MenuBar/SettingsMenu")
-_View_PopupMenu = NodePath("Toolbar/VBoxContainer/MenuBar_Main/MenuBar/ViewMenu")
+_Settings_PopupMenu = NodePath("Toolbar/VBoxContainer/MenuBar_Main/MenuBar/Hidden/SettingsMenu")
 _Inventory_Button = NodePath("Toolbar/VBoxContainer/MenuBar_Main/InventoryButton")
 _Player_Button = NodePath("Toolbar/VBoxContainer/MenuBar_Main/PlayerButton")
 _IslandSelector_Button = NodePath("Toolbar/VBoxContainer/MenuBar_Stage/IslandSelectorButton")
@@ -46,7 +52,7 @@ _Gratitude_SpinBox = NodePath("Toolbar/VBoxContainer/MenuBar_Stage/GratitudeBox"
 _Time_SpinBox = NodePath("Toolbar/VBoxContainer/MenuBar_Stage/TimeBox")
 _Weather_OptionButton = NodePath("Toolbar/VBoxContainer/MenuBar_Stage/SimpleWeatherSelect")
 _Block_ItemButtonSelector = NodePath("Toolbar/VBoxContainer/HSplitContainer/Control/TabContainer/Blocks/BlockSelector")
-_Prop_ItemButtonSelector = NodePath("Toolbar/VBoxContainer/HSplitContainer/Control/TabContainer/Props/PropSelector")
+_BGParts_ItemButtonSelector = NodePath("Toolbar/VBoxContainer/HSplitContainer/Control/TabContainer/Props/PropSelector")
 _Fluid_ItemButtonSelector = NodePath("Toolbar/VBoxContainer/HSplitContainer/Control/TabContainer/Liquids/FluidSelector")
 _Inventory_Panel = NodePath("InventoryEditor")
 _ItemSelector = NodePath("ItemSelectorPanel/ItemSelector")
@@ -80,138 +86,78 @@ title = "File"
 size = Vector2i(259, 302)
 theme = ExtResource("1_sua2j")
 allow_search = false
-item_count = 13
+item_count = 7
 item_0/text = "Open Folder..."
 item_0/id = 0
 item_1/text = "Open File..."
 item_1/id = 1
-item_2/id = 999
+item_2/id = 99999
 item_2/separator = true
 item_3/text = "Save All"
 item_3/id = 2
-item_4/text = "Save All As..."
+item_4/text = "Close All"
 item_4/id = 3
-item_5/text = "Save File"
-item_5/id = 4
-item_6/text = "Save File As"
-item_6/id = 5
-item_7/id = 999
-item_7/separator = true
-item_8/text = "Export"
-item_8/id = 10
-item_9/text = "Import"
-item_9/id = 11
-item_10/id = 999
-item_10/separator = true
-item_11/text = "Close"
-item_11/id = 8
-item_12/text = "Quit"
-item_12/id = 9
-
-[node name="SaveSingleFileMenu" type="PopupMenu" parent="Toolbar/VBoxContainer/MenuBar_Main/MenuBar/FileMenu"]
-auto_translate_mode = 1
-allow_search = false
-item_count = 3
-item_0/text = "Save CMNDAT"
-item_0/id = 0
-item_1/text = "Save STGDAT"
-item_1/id = 1
-item_2/text = "Save SCSHDAT"
-item_2/id = 2
-script = ExtResource("2_50glp")
-SubmenuIndex = 5
-
-[node name="SaveAsSingleFileMenu" type="PopupMenu" parent="Toolbar/VBoxContainer/MenuBar_Main/MenuBar/FileMenu"]
-auto_translate_mode = 1
-allow_search = false
-item_count = 3
-item_0/text = "Save CMNDAT As..."
-item_0/id = 0
-item_1/text = "Save STGDAT As..."
-item_1/id = 1
-item_2/text = "Save SCSHDAT As..."
-item_2/id = 2
-script = ExtResource("2_50glp")
-SubmenuIndex = 6
-
-[node name="ExportMenu" type="PopupMenu" parent="Toolbar/VBoxContainer/MenuBar_Main/MenuBar/FileMenu"]
-auto_translate_mode = 1
-allow_search = false
-item_count = 3
-item_0/text = "Export CMNDAT..."
-item_0/id = 0
-item_1/text = "Export STGDAT..."
-item_1/id = 1
-item_2/text = "Export SCSHDAT..."
-item_2/id = 2
-script = ExtResource("2_50glp")
-SubmenuIndex = 8
-
-[node name="ImportMenu" type="PopupMenu" parent="Toolbar/VBoxContainer/MenuBar_Main/MenuBar/FileMenu"]
-auto_translate_mode = 1
-allow_search = false
-item_count = 3
-item_0/text = "Import CMNDAT..."
-item_0/id = 0
-item_1/text = "Import STGDAT..."
-item_1/id = 1
-item_2/text = "Import SCSHDAT..."
-item_2/id = 2
-script = ExtResource("2_50glp")
-SubmenuIndex = 9
+item_5/id = 99999
+item_5/separator = true
+item_6/text = "Quit"
+item_6/id = 4
 
 [node name="EditMenu" type="PopupMenu" parent="Toolbar/VBoxContainer/MenuBar_Main/MenuBar"]
 auto_translate_mode = 1
 title = "Edit"
 size = Vector2i(189, 100)
 item_count = 3
-item_0/text = "Make Superflat..."
-item_0/id = 0
-item_1/text = "Delete All Props"
-item_1/id = 1
-item_2/text = "Very Basic Copier"
-item_2/id = 2
+item_0/text = "Cut"
+item_0/id = 4
+item_1/text = "Copy"
+item_1/id = 3
+item_2/text = "Fill"
+item_2/id = 6
 
 [node name="ViewMenu" type="PopupMenu" parent="Toolbar/VBoxContainer/MenuBar_Main/MenuBar"]
 auto_translate_mode = 1
 title = "View"
 size = Vector2i(189, 100)
-item_count = 5
-item_0/text = "Terrain"
+item_count = 8
+item_0/text = "FPS"
 item_0/checkable = 1
 item_0/checked = true
-item_0/id = 0
-item_1/text = "Props"
+item_0/id = 6
+item_1/text = "Debug Info"
 item_1/checkable = 1
 item_1/checked = true
-item_1/id = 1
-item_2/text = "Prop Shells"
-item_2/checkable = 1
-item_2/id = 2
-item_3/text = "Residents"
+item_1/id = 7
+item_2/id = 5
+item_2/separator = true
+item_3/text = "Terrain"
 item_3/checkable = 1
 item_3/checked = true
-item_3/id = 3
-item_4/text = "Player"
+item_3/id = 0
+item_4/text = "Props"
 item_4/checkable = 1
 item_4/checked = true
-item_4/id = 4
+item_4/id = 1
+item_5/text = "Prop Shells"
+item_5/checkable = 1
+item_5/id = 2
+item_6/text = "Residents"
+item_6/checkable = 1
+item_6/checked = true
+item_6/id = 3
+item_7/text = "Player"
+item_7/checkable = 1
+item_7/checked = true
+item_7/id = 4
 
-[node name="SettingsMenu" type="PopupMenu" parent="Toolbar/VBoxContainer/MenuBar_Main/MenuBar"]
+[node name="Hidden" type="Node" parent="Toolbar/VBoxContainer/MenuBar_Main/MenuBar"]
+
+[node name="SettingsMenu" type="PopupMenu" parent="Toolbar/VBoxContainer/MenuBar_Main/MenuBar/Hidden"]
 title = "Settings"
 size = Vector2i(189, 100)
-item_count = 3
+item_count = 1
 item_0/text = "Advanced Mode (TODO)"
 item_0/checkable = 1
 item_0/id = 0
-item_1/text = "Show FPS"
-item_1/checkable = 1
-item_1/checked = true
-item_1/id = 1
-item_2/text = "Show Debug Info"
-item_2/checkable = 1
-item_2/checked = true
-item_2/id = 2
 
 [node name="InventoryButton" type="Button" parent="Toolbar/VBoxContainer/MenuBar_Main"]
 visible = false
@@ -357,19 +303,25 @@ text = "Time:"
 
 [node name="TimeBox" type="SpinBox" parent="Toolbar/VBoxContainer/MenuBar_Stage"]
 layout_mode = 2
-max_value = 1200.0
+tooltip_text = "Current time on the stage. 24-hour clock, day begins at 0:00 at sunrise."
+max_value = 1440.0
+step = 0.001
+custom_arrow_step = 1.0
+script = ExtResource("4_fq0cl")
 
 [node name="MenuBar_Tools" type="HBoxContainer" parent="Toolbar/VBoxContainer"]
 layout_mode = 2
 
-[node name="Select" type="Button" parent="Toolbar/VBoxContainer/MenuBar_Tools"]
+[node name="Cursor" type="Button" parent="Toolbar/VBoxContainer/MenuBar_Tools"]
 layout_mode = 2
+tooltip_text = "Cursor"
 toggle_mode = true
 button_group = ExtResource("4_v1gob")
-text = "Select"
+icon = ExtResource("6_sxkr1")
 
 [node name="Pencil" type="Button" parent="Toolbar/VBoxContainer/MenuBar_Tools"]
 layout_mode = 2
+tooltip_text = "Pencil"
 toggle_mode = true
 button_pressed = true
 button_group = ExtResource("4_v1gob")
@@ -377,61 +329,55 @@ icon = ExtResource("8_grg3l")
 
 [node name="Swap" type="Button" parent="Toolbar/VBoxContainer/MenuBar_Tools"]
 layout_mode = 2
+tooltip_text = "Swap"
 toggle_mode = true
 button_group = ExtResource("4_v1gob")
 icon = ExtResource("9_frkhe")
 
 [node name="Eraser" type="Button" parent="Toolbar/VBoxContainer/MenuBar_Tools"]
 layout_mode = 2
+tooltip_text = "Eraser"
 toggle_mode = true
 button_group = ExtResource("4_v1gob")
-text = "Eraser"
+icon = ExtResource("8_0sclb")
 
 [node name="Bucket" type="Button" parent="Toolbar/VBoxContainer/MenuBar_Tools"]
 layout_mode = 2
+tooltip_text = "Flood Fill"
 toggle_mode = true
 button_group = ExtResource("4_v1gob")
 icon = ExtResource("10_1p5hy")
 
-[node name="PropChecker" type="Button" parent="Toolbar/VBoxContainer/MenuBar_Tools"]
-visible = false
+[node name="Chisel" type="Button" parent="Toolbar/VBoxContainer/MenuBar_Tools"]
 layout_mode = 2
+tooltip_text = "Chisel"
 toggle_mode = true
 button_group = ExtResource("4_v1gob")
-text = "PropChecker"
-
-[node name="PropAdder" type="Button" parent="Toolbar/VBoxContainer/MenuBar_Tools"]
-layout_mode = 2
-toggle_mode = true
-button_group = ExtResource("4_v1gob")
-text = "AddProp"
+icon = ExtResource("11_fq0cl")
 
 [node name="SelectArea" type="Button" parent="Toolbar/VBoxContainer/MenuBar_Tools"]
-visible = false
 layout_mode = 2
+tooltip_text = "Select Area"
 toggle_mode = true
 button_group = ExtResource("4_v1gob")
 icon = ExtResource("11_346fj")
 
-[node name="Copy" type="Button" parent="Toolbar/VBoxContainer/MenuBar_Tools"]
+[node name="Copy_NotUsed" type="Button" parent="Toolbar/VBoxContainer/MenuBar_Tools"]
 visible = false
 layout_mode = 2
-toggle_mode = true
-button_group = ExtResource("4_v1gob")
 icon = ExtResource("12_0sclb")
 
-[node name="Cut" type="Button" parent="Toolbar/VBoxContainer/MenuBar_Tools"]
+[node name="Cut_NotUsed" type="Button" parent="Toolbar/VBoxContainer/MenuBar_Tools"]
 visible = false
 layout_mode = 2
-toggle_mode = true
-button_group = ExtResource("4_v1gob")
 icon = ExtResource("13_sxkr1")
 
 [node name="Paste" type="Button" parent="Toolbar/VBoxContainer/MenuBar_Tools"]
-visible = false
 layout_mode = 2
+tooltip_text = "Paste"
 toggle_mode = true
 button_group = ExtResource("4_v1gob")
+shortcut = SubResource("Shortcut_fq0cl")
 icon = ExtResource("14_fq0cl")
 
 [node name="HSplitContainer" type="HSplitContainer" parent="Toolbar/VBoxContainer"]
@@ -447,12 +393,15 @@ metadata/_edit_lock_ = true
 
 [node name="SubViewport" type="SubViewport" parent="Toolbar/VBoxContainer/HSplitContainer/WorldEditorContainer"]
 handle_input_locally = false
-size = Vector2i(860, 546)
+size = Vector2i(860, 548)
 render_target_update_mode = 4
 
-[node name="WorldEditor" parent="Toolbar/VBoxContainer/HSplitContainer/WorldEditorContainer/SubViewport" instance=ExtResource("11_4kpch")]
+[node name="WorldEditor" parent="Toolbar/VBoxContainer/HSplitContainer/WorldEditorContainer/SubViewport" node_paths=PackedStringArray("_View_PopupMenu", "_Edit_PopupMenu", "_ChiselButton", "_PasteButton") instance=ExtResource("11_4kpch")]
 unique_name_in_owner = true
-BrushSecondary = -1
+_View_PopupMenu = NodePath("../../../../MenuBar_Main/MenuBar/ViewMenu")
+_Edit_PopupMenu = NodePath("../../../../MenuBar_Main/MenuBar/EditMenu")
+_ChiselButton = NodePath("../../../../MenuBar_Tools/Chisel")
+_PasteButton = NodePath("../../../../MenuBar_Tools/Paste")
 
 [node name="Control" type="Control" parent="Toolbar/VBoxContainer/HSplitContainer"]
 layout_mode = 2
@@ -909,30 +858,32 @@ offset_bottom = 84.0
 text = "ok"
 
 [connection signal="id_pressed" from="Toolbar/VBoxContainer/MenuBar_Main/MenuBar/FileMenu" to="." method="_On_File_PopupMenu_IdPressed"]
-[connection signal="id_pressed" from="Toolbar/VBoxContainer/MenuBar_Main/MenuBar/FileMenu/SaveSingleFileMenu" to="." method="_On_SaveSingleFile_PopupMenu_IdPressed"]
-[connection signal="id_pressed" from="Toolbar/VBoxContainer/MenuBar_Main/MenuBar/FileMenu/SaveAsSingleFileMenu" to="." method="_On_SaveAsSingleFile_PopupMenu_IdPressed"]
-[connection signal="id_pressed" from="Toolbar/VBoxContainer/MenuBar_Main/MenuBar/FileMenu/ExportMenu" to="." method="_On_Export_PopupMenu_IdPressed"]
-[connection signal="id_pressed" from="Toolbar/VBoxContainer/MenuBar_Main/MenuBar/FileMenu/ImportMenu" to="." method="_On_Import_PopupMenu_IdPressed"]
-[connection signal="id_pressed" from="Toolbar/VBoxContainer/MenuBar_Main/MenuBar/EditMenu" to="." method="_On_Edit_PopupMenu_IdPressed"]
-[connection signal="id_pressed" from="Toolbar/VBoxContainer/MenuBar_Main/MenuBar/ViewMenu" to="." method="_On_View_PopupMenu_IdPressed"]
-[connection signal="id_pressed" from="Toolbar/VBoxContainer/MenuBar_Main/MenuBar/SettingsMenu" to="." method="_On_Settings_PopupMenu_IdPressed"]
+[connection signal="id_pressed" from="Toolbar/VBoxContainer/MenuBar_Main/MenuBar/EditMenu" to="Toolbar/VBoxContainer/HSplitContainer/WorldEditorContainer/SubViewport/WorldEditor" method="_On_Edit_PopupMenu_IdPressed"]
+[connection signal="id_pressed" from="Toolbar/VBoxContainer/MenuBar_Main/MenuBar/ViewMenu" to="Toolbar/VBoxContainer/HSplitContainer/WorldEditorContainer/SubViewport/WorldEditor" method="_On_View_PopupMenu_IdPressed"]
+[connection signal="id_pressed" from="Toolbar/VBoxContainer/MenuBar_Main/MenuBar/Hidden/SettingsMenu" to="." method="_On_Settings_PopupMenu_IdPressed"]
 [connection signal="pressed" from="Toolbar/VBoxContainer/MenuBar_Main/InventoryButton" to="." method="_On_Inventory_Button_Pressed"]
 [connection signal="pressed" from="Toolbar/VBoxContainer/MenuBar_Main/PlayerButton" to="PlayerEditor" method="show"]
+[connection signal="pressed" from="Toolbar/VBoxContainer/MenuBar_Main/ResidentsButton" to="." method="_On_Residents_Button_Pressed"]
 [connection signal="pressed" from="Toolbar/VBoxContainer/MenuBar_Main/AboutButton" to="Popups/AboutDialog" method="show"]
 [connection signal="item_selected" from="Toolbar/VBoxContainer/MenuBar_Stage/IslandSelectorButton" to="." method="_On_IslandSelectorButton_ItemSelected"]
 [connection signal="value_changed" from="Toolbar/VBoxContainer/MenuBar_Stage/GratitudeBox" to="." method="_On_Gratitude_SpinBox_ValueChanged"]
 [connection signal="value_changed" from="Toolbar/VBoxContainer/MenuBar_Stage/TimeBox" to="." method="_On_Time_SpinBox_ValueChanged"]
-[connection signal="pressed" from="Toolbar/VBoxContainer/MenuBar_Tools/Select" to="Toolbar/VBoxContainer/HSplitContainer/WorldEditorContainer/SubViewport/WorldEditor" method="SetBrushPrimary" binds= [8]]
+[connection signal="pressed" from="Toolbar/VBoxContainer/MenuBar_Tools/Cursor" to="Toolbar/VBoxContainer/HSplitContainer/WorldEditorContainer/SubViewport/WorldEditor" method="SetBrushPrimary" binds= [8]]
 [connection signal="pressed" from="Toolbar/VBoxContainer/MenuBar_Tools/Pencil" to="Toolbar/VBoxContainer/HSplitContainer/WorldEditorContainer/SubViewport/WorldEditor" method="SetBrushPrimary" binds= [1]]
 [connection signal="pressed" from="Toolbar/VBoxContainer/MenuBar_Tools/Swap" to="Toolbar/VBoxContainer/HSplitContainer/WorldEditorContainer/SubViewport/WorldEditor" method="SetBrushPrimary" binds= [3]]
 [connection signal="pressed" from="Toolbar/VBoxContainer/MenuBar_Tools/Eraser" to="Toolbar/VBoxContainer/HSplitContainer/WorldEditorContainer/SubViewport/WorldEditor" method="SetBrushPrimary" binds= [0]]
 [connection signal="pressed" from="Toolbar/VBoxContainer/MenuBar_Tools/Bucket" to="Toolbar/VBoxContainer/HSplitContainer/WorldEditorContainer/SubViewport/WorldEditor" method="SetBrushPrimary" binds= [2]]
-[connection signal="pressed" from="Toolbar/VBoxContainer/MenuBar_Tools/PropChecker" to="Toolbar/VBoxContainer/HSplitContainer/WorldEditorContainer/SubViewport/WorldEditor" method="SetBrushPrimary" binds= [6]]
-[connection signal="pressed" from="Toolbar/VBoxContainer/MenuBar_Tools/PropAdder" to="Toolbar/VBoxContainer/HSplitContainer/WorldEditorContainer/SubViewport/WorldEditor" method="SetBrushPrimary" binds= [7]]
+[connection signal="pressed" from="Toolbar/VBoxContainer/MenuBar_Tools/Chisel" to="Toolbar/VBoxContainer/HSplitContainer/WorldEditorContainer/SubViewport/WorldEditor" method="SetBrushPrimary" binds= [9]]
+[connection signal="pressed" from="Toolbar/VBoxContainer/MenuBar_Tools/SelectArea" to="Toolbar/VBoxContainer/HSplitContainer/WorldEditorContainer/SubViewport/WorldEditor" method="SetBrushPrimary" binds= [10]]
+[connection signal="pressed" from="Toolbar/VBoxContainer/MenuBar_Tools/Copy_NotUsed" to="Toolbar/VBoxContainer/HSplitContainer/WorldEditorContainer/SubViewport/WorldEditor" method="DoCopy"]
+[connection signal="pressed" from="Toolbar/VBoxContainer/MenuBar_Tools/Cut_NotUsed" to="Toolbar/VBoxContainer/HSplitContainer/WorldEditorContainer/SubViewport/WorldEditor" method="DoCut"]
+[connection signal="pressed" from="Toolbar/VBoxContainer/MenuBar_Tools/Paste" to="Toolbar/VBoxContainer/HSplitContainer/WorldEditorContainer/SubViewport/WorldEditor" method="SetBrushPrimary" binds= [11]]
 [connection signal="ItemSelected" from="Toolbar/VBoxContainer/HSplitContainer/Control/TabContainer/Blocks/BlockSelector" to="Toolbar/VBoxContainer/HSplitContainer/WorldEditorContainer/SubViewport/WorldEditor" method="SetBrushBlock"]
-[connection signal="ItemSelected" from="Toolbar/VBoxContainer/HSplitContainer/Control/TabContainer/Props/PropSelector" to="Toolbar/VBoxContainer/HSplitContainer/WorldEditorContainer/SubViewport/WorldEditor" method="SetBrushProp"]
+[connection signal="ItemSelected" from="Toolbar/VBoxContainer/HSplitContainer/Control/TabContainer/Props/PropSelector" to="Toolbar/VBoxContainer/HSplitContainer/WorldEditorContainer/SubViewport/WorldEditor" method="SetBrushBGParts"]
+[connection signal="ItemSelected" from="Toolbar/VBoxContainer/HSplitContainer/Control/TabContainer/Liquids/FluidSelector" to="Toolbar/VBoxContainer/HSplitContainer/WorldEditorContainer/SubViewport/WorldEditor" method="SetBrushFluid"]
 [connection signal="dir_selected" from="Popups/FileDialog" to="." method="_On_FileDialog_FileSelected"]
 [connection signal="file_selected" from="Popups/FileDialog" to="." method="_On_FileDialog_FileSelected"]
+[connection signal="files_selected" from="Popups/FileDialog" to="." method="_On_FileDialog_FilesSelected"]
 [connection signal="close_requested" from="Popups/UnsavedChangesWindow" to="." method="_On_UnsavedChanges_Window_Cancel_Button_Pressed"]
 [connection signal="pressed" from="Popups/UnsavedChangesWindow/HBoxContainer/SaveButton" to="." method="_On_UnsavedChanges_Window_Save_Button_Pressed"]
 [connection signal="pressed" from="Popups/UnsavedChangesWindow/HBoxContainer/DontSaveButton" to="." method="_On_UnsavedChanges_Window_DontSave_Button_Pressed"]

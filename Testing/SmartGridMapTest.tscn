@@ -1,0 +1,100 @@
+[gd_scene load_steps=6 format=3 uid="uid://cpufmtpeiwyx1"]
+
+[ext_resource type="Script" uid="uid://bgg687qn5fg8" path="res://Nodes/CameraController.cs" id="1_x5xns"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_3jbfj"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_1hi1g"]
+sky_material = SubResource("ProceduralSkyMaterial_3jbfj")
+
+[sub_resource type="Environment" id="Environment_ea5c7"]
+background_mode = 2
+sky = SubResource("Sky_1hi1g")
+tonemap_mode = 2
+
+[sub_resource type="CSharpScript" id="CSharpScript_x5xns"]
+script/source = "using Godot;
+using System;
+using System.Linq;
+
+public partial class SmartGridMap : GridMap
+{
+	// Called when the node enters the scene tree for the first time.
+	public override void _Ready()
+	{
+	}
+
+	// Called every frame. 'delta' is the elapsed time since the previous frame.
+	public override void _Process(double delta)
+	{
+	}
+
+	new public void SetCellItem(Vector3I position, int item, int orientation = 0)
+    {
+		MeshLibrary ??= new MeshLibrary();
+		
+		if (!MeshLibrary.GetItemList().Contains(item))
+        {
+			MeshLibrary.CreateItem(item);
+			ArrayMesh mesh = ResourceLoader.Load<ArrayMesh>(\"res://Mesh/pixelated_protagonist.obj\").Duplicate() as ArrayMesh;
+            MeshLibrary.SetItemMesh(item, mesh);
+			mesh.SurfaceSetMaterial(0,
+				new StandardMaterial3D{
+					AlbedoTexture = ResourceLoader.Load<Texture2D>(\"res://Mesh/pixelated_protagonists.png\"),
+					AlbedoColor = (item % 2 == 1) ? new Color(255, 255, 255) : new Color(255, 0, 0)
+				}
+			);
+        }
+
+        base.SetCellItem(position, item, orientation);
+    }
+
+	int testint = 0;
+	public void _On_Button_Pressed()
+	{
+		SetCellItem(Vector3I.Right * 2 * testint, testint);
+		testint++;
+	}
+}
+"
+
+[node name="SmartGridMapTest" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+directional_shadow_max_distance = 1.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_ea5c7")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 4)
+current = true
+size = 41.667
+script = ExtResource("1_x5xns")
+Speed = 20.0
+MaxSpeedMultiplier = 4.0
+MouseSensitivity = 0.2
+Enabled = true
+
+[node name="SmartGridMap" type="GridMap" parent="."]
+script = SubResource("CSharpScript_x5xns")
+
+[node name="Button" type="Button" parent="."]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -159.0
+offset_top = -80.0
+offset_right = -64.0
+offset_bottom = -37.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "press"
+
+[connection signal="pressed" from="Button" to="SmartGridMap" method="_On_Button_Pressed"]

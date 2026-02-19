@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://borx51r5klqiy"
+path="res://.godot/imported/huge_horn.obj-c0ddc94a3772d04eab135e96efc9370d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/huge_horn.obj-c0ddc94a3772d04eab135e96efc9370d.mesh"]
+
+source_file="res://Resources/Mesh/BGParts/huge_horn/huge_horn.obj"
+dest_files=["res://.godot/imported/huge_horn.obj-c0ddc94a3772d04eab135e96efc9370d.mesh", "res://.godot/imported/huge_horn.obj-c0ddc94a3772d04eab135e96efc9370d.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

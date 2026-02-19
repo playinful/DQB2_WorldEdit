@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dka3lar0rsyf2"
+path="res://.godot/imported/silver_birch_tree.obj-3f82610c1fb85fa8f4f2dc4627b41e5a.mesh"
+
+[deps]
+
+files=["res://.godot/imported/silver_birch_tree.obj-3f82610c1fb85fa8f4f2dc4627b41e5a.mesh"]
+
+source_file="res://Resources/Mesh/BGParts/silver_birch_tree/silver_birch_tree.obj"
+dest_files=["res://.godot/imported/silver_birch_tree.obj-3f82610c1fb85fa8f4f2dc4627b41e5a.mesh", "res://.godot/imported/silver_birch_tree.obj-3f82610c1fb85fa8f4f2dc4627b41e5a.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

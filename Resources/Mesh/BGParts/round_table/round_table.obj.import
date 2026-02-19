@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dw1d8mgdflx15"
+path="res://.godot/imported/round_table.obj-a1598a5711c9f387a013a39de3b5ed90.mesh"
+
+[deps]
+
+files=["res://.godot/imported/round_table.obj-a1598a5711c9f387a013a39de3b5ed90.mesh"]
+
+source_file="res://Resources/Mesh/BGParts/round_table/round_table.obj"
+dest_files=["res://.godot/imported/round_table.obj-a1598a5711c9f387a013a39de3b5ed90.mesh", "res://.godot/imported/round_table.obj-a1598a5711c9f387a013a39de3b5ed90.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

@@ -23,6 +23,7 @@ namespace EyeOfRubiss.Nodes
 			}
         }
 
+        /*
         public void _On_TextSubmitted(string new_text)
         {
             Text = "";
@@ -172,6 +173,6 @@ namespace EyeOfRubiss.Nodes
             }
 
             Hide();
-        }
+        }*/
     }
 }

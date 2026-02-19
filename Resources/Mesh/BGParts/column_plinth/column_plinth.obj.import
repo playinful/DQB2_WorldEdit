@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cgk3i61pvj5nt"
+path="res://.godot/imported/column_plinth.obj-6a40ab067315d0754a0d241c07e39c06.mesh"
+
+[deps]
+
+files=["res://.godot/imported/column_plinth.obj-6a40ab067315d0754a0d241c07e39c06.mesh"]
+
+source_file="res://Resources/Mesh/BGParts/column_plinth/column_plinth.obj"
+dest_files=["res://.godot/imported/column_plinth.obj-6a40ab067315d0754a0d241c07e39c06.mesh", "res://.godot/imported/column_plinth.obj-6a40ab067315d0754a0d241c07e39c06.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bkjckqosv7em8"
+path="res://.godot/imported/buttress.obj-a516628df1612ab67fcd064425fb425a.mesh"
+
+[deps]
+
+files=["res://.godot/imported/buttress.obj-a516628df1612ab67fcd064425fb425a.mesh"]
+
+source_file="res://Resources/Mesh/BGParts/buttress/buttress.obj"
+dest_files=["res://.godot/imported/buttress.obj-a516628df1612ab67fcd064425fb425a.mesh", "res://.godot/imported/buttress.obj-a516628df1612ab67fcd064425fb425a.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://45wn5t7mnpl8"
+path="res://.godot/imported/castle_window_sill.obj-2309a3b9a02d4a4a3d41b241dd89521c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/castle_window_sill.obj-2309a3b9a02d4a4a3d41b241dd89521c.mesh"]
+
+source_file="res://Resources/Mesh/BGParts/castle_window/castle_window_sill.obj"
+dest_files=["res://.godot/imported/castle_window_sill.obj-2309a3b9a02d4a4a3d41b241dd89521c.mesh", "res://.godot/imported/castle_window_sill.obj-2309a3b9a02d4a4a3d41b241dd89521c.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

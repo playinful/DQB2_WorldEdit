@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dhb5rtip5l5dl"
+path="res://.godot/imported/seedling.obj-b93b543f2887d0f792a1a9783b911579.mesh"
+
+[deps]
+
+files=["res://.godot/imported/seedling.obj-b93b543f2887d0f792a1a9783b911579.mesh"]
+
+source_file="res://Resources/Mesh/BGParts/seedling/seedling.obj"
+dest_files=["res://.godot/imported/seedling.obj-b93b543f2887d0f792a1a9783b911579.mesh", "res://.godot/imported/seedling.obj-b93b543f2887d0f792a1a9783b911579.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

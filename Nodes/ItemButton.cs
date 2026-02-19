@@ -30,14 +30,14 @@ namespace EyeOfRubiss.Nodes
 			Colour_ColorRect = GetNode<ColorRect>("ColorRect");
 		}
 
-		public void SetItem(ItemInfo itemInfo, int? count = null)
+		public void SetItem(Info.DQB2.ItemInfo itemInfo, int? count = null)
 		{
-			SetItem(itemInfo.Name, itemInfo.Image, itemInfo.Rarity, itemInfo.Connecting, 0, count);
+			SetItem(itemInfo.Name, itemInfo.Icon, itemInfo.Rarity, itemInfo.Connecting, 0, count);
 			//SetItem(Util.ToRichText(itemInfo.Name), itemInfo.ImageID, itemInfo.Rarity, itemInfo.Connecting, 0);
 		}
-		public void SetBlock(BlockInfo blockInfo, int? count = null)
+		public void SetBlock(Info.DQB2.BlockInfo blockInfo, int? count = null)
 		{
-			SetItem(blockInfo.Name, blockInfo.ImageID, 0, false, 0, count);
+			SetItem(blockInfo.Name, blockInfo.Icon, 0, false, 0, count);
 			//SetItem(Util.ToRichText(blockInfo.Name), blockInfo.ImageID, 0, false, 0);
 		}
 
@@ -51,15 +51,15 @@ namespace EyeOfRubiss.Nodes
 			{
 				case 1:
 					Rarity_TextureRect.Show();
-					Rarity_TextureRect.Texture = ResourceLoader.Load<Texture2D>("res://Graphics/BlockModifier/1star.png");
+					Rarity_TextureRect.Texture = ResourceLoader.Load<Texture2D>("res://Resources/Graphics/BlockModifier/1star.png");
 					break;
 				case 2:
 					Rarity_TextureRect.Show();
-					Rarity_TextureRect.Texture = ResourceLoader.Load<Texture2D>("res://Graphics/BlockModifier/2star.png");
+					Rarity_TextureRect.Texture = ResourceLoader.Load<Texture2D>("res://Resources/Graphics/BlockModifier/2star.png");
 					break;
 				case 3:
 					Rarity_TextureRect.Show();
-					Rarity_TextureRect.Texture = ResourceLoader.Load<Texture2D>("res://Graphics/BlockModifier/3star.png");
+					Rarity_TextureRect.Texture = ResourceLoader.Load<Texture2D>("res://Resources/Graphics/BlockModifier/3star.png");
 					break;
 				default:
 					Rarity_TextureRect.Hide();

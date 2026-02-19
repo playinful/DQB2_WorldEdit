@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://1804pkjfakys"
+path="res://.godot/imported/smashing_sign.obj-034e00b8535e354dacdf287efe434d0f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/smashing_sign.obj-034e00b8535e354dacdf287efe434d0f.mesh"]
+
+source_file="res://Resources/Mesh/BGParts/smashing_sign/smashing_sign.obj"
+dest_files=["res://.godot/imported/smashing_sign.obj-034e00b8535e354dacdf287efe434d0f.mesh", "res://.godot/imported/smashing_sign.obj-034e00b8535e354dacdf287efe434d0f.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

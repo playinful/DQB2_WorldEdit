@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dyr80enbrlomr"
+path="res://.godot/imported/storage_bay.obj-a5a87e0599e8a2d01b1cba21fd7b764c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/storage_bay.obj-a5a87e0599e8a2d01b1cba21fd7b764c.mesh"]
+
+source_file="res://Resources/Mesh/BGParts/storage_bay/storage_bay.obj"
+dest_files=["res://.godot/imported/storage_bay.obj-a5a87e0599e8a2d01b1cba21fd7b764c.mesh", "res://.godot/imported/storage_bay.obj-a5a87e0599e8a2d01b1cba21fd7b764c.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

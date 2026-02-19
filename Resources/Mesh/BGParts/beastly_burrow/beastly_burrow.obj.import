@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bu5tvc3b0iahp"
+path="res://.godot/imported/beastly_burrow.obj-12f2cf1c759629e891f2e5684b343d05.mesh"
+
+[deps]
+
+files=["res://.godot/imported/beastly_burrow.obj-12f2cf1c759629e891f2e5684b343d05.mesh"]
+
+source_file="res://Resources/Mesh/BGParts/beastly_burrow/beastly_burrow.obj"
+dest_files=["res://.godot/imported/beastly_burrow.obj-12f2cf1c759629e891f2e5684b343d05.mesh", "res://.godot/imported/beastly_burrow.obj-12f2cf1c759629e891f2e5684b343d05.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

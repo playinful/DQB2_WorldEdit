@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://d6pwb3avybf1"
+path="res://.godot/imported/pumpkin_5.obj-4a70f2fb10d1c90ab88e334425974058.mesh"
+
+[deps]
+
+files=["res://.godot/imported/pumpkin_5.obj-4a70f2fb10d1c90ab88e334425974058.mesh"]
+
+source_file="res://Resources/Mesh/BGParts/pumpkin/pumpkin_5.obj"
+dest_files=["res://.godot/imported/pumpkin_5.obj-4a70f2fb10d1c90ab88e334425974058.mesh", "res://.godot/imported/pumpkin_5.obj-4a70f2fb10d1c90ab88e334425974058.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

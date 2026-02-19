@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cic7uox6psbg3"
+path="res://.godot/imported/mud_brick_wall_rubble.obj-92299aa34fa09b8dd51915ea136f5c67.mesh"
+
+[deps]
+
+files=["res://.godot/imported/mud_brick_wall_rubble.obj-92299aa34fa09b8dd51915ea136f5c67.mesh"]
+
+source_file="res://Resources/Mesh/BGParts/broken_brickwork/mud_brick_wall_rubble.obj"
+dest_files=["res://.godot/imported/mud_brick_wall_rubble.obj-92299aa34fa09b8dd51915ea136f5c67.mesh", "res://.godot/imported/mud_brick_wall_rubble.obj-92299aa34fa09b8dd51915ea136f5c67.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cyawq0ec8kx2c"
+path="res://.godot/imported/large_lily_pad.obj-997f2410c56fed71d2b8113964baaebb.mesh"
+
+[deps]
+
+files=["res://.godot/imported/large_lily_pad.obj-997f2410c56fed71d2b8113964baaebb.mesh"]
+
+source_file="res://Resources/Mesh/BGParts/large_lily_pad/large_lily_pad.obj"
+dest_files=["res://.godot/imported/large_lily_pad.obj-997f2410c56fed71d2b8113964baaebb.mesh", "res://.godot/imported/large_lily_pad.obj-997f2410c56fed71d2b8113964baaebb.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false
