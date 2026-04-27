@@ -2,6 +2,7 @@ using System.Linq;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using Godot;
+using System.Collections.Generic;
 
 namespace EyeOfRubiss.Info.DQB1
 {
@@ -14,6 +15,9 @@ namespace EyeOfRubiss.Info.DQB1
         public byte ID { get; set; }
         public string Name { get; set; } = "";
         public int Icon { get; set; } = -1;
+
+        public PartsType PartsType { get; set; } = PartsType.None;
+        public ushort DQB2Block { get; set; } = 0;
 
         public float Sort { get; set; } = float.MaxValue;
 
@@ -50,6 +54,22 @@ namespace EyeOfRubiss.Info.DQB1
                 LoadDatabase();
 
             return _Database;
+        }
+
+        public static IEnumerable<BlockInfo> SearchByText(string text)
+        {
+            if (_Database is null)
+                LoadDatabase();
+            
+            if (string.IsNullOrEmpty(text))
+                return GetAll();
+            
+            string searchText = text.ToLowerInvariant().Trim().Replace(" ", "");
+            return _Database.Where(info =>
+            {
+                string nameKey = info.Name.ToLowerInvariant().Trim().Replace(" ", "");
+                return nameKey.Contains(searchText);
+            });
         }
 
         public AtlasTexture GetIcon() => Util.GetItemIcon(Icon);

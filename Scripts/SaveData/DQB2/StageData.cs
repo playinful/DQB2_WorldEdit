@@ -12,6 +12,7 @@ using System.Threading;
 using System.Security.Cryptography.X509Certificates;
 using EyeOfRubiss.Info.DQB2;
 using System.Data.SqlTypes;
+using System.Runtime.CompilerServices;
 
 namespace EyeOfRubiss
 {
@@ -35,6 +36,9 @@ namespace EyeOfRubiss
                 BlockAddress + (ChunkSize * {ID})
             For chunks without block data, their ID is instead set to 0xFFFF.
         */
+
+        public const int CHUNK_SIZE = 32;
+        public const int WORLD_HEIGHT_BLOCKS = 96;
 
         /*
             Blocks are a series of 16-bit values laid out in order, broken up by chunk.
@@ -62,6 +66,7 @@ namespace EyeOfRubiss
             StageData stageData = new();
             if (stageData._TryLoad(path, HEADER_LENGTH))
             {
+                stageData.CreateBGPartsPositionDictionary();
                 stageData.CreateBGPartsOverlapDictionary();
                 result = stageData;
                 return true;
@@ -118,7 +123,7 @@ namespace EyeOfRubiss
 
             return chunk.GetBlock(blockPosition.Y, blockPosition.Z);
         }
-        public bool SetBlockAtPosition(Vector3I position, ushort blockId, BlockInstance.ChiselType? chisel = null, bool? playerPlaced = null, bool createChunk = false)
+        public bool SetBlockAtPosition(Vector3I position, ushort blockId, ChiselShape? chisel = null, bool? playerPlaced = null, bool createChunk = false)
         {
             if (!PositionIsInBounds(position))
                 return false;
@@ -136,7 +141,7 @@ namespace EyeOfRubiss
 
             BlockInstance block = GetBlockAtPosition(position);
             block.BlockID = blockId;
-            if (chisel is BlockInstance.ChiselType _chisel)
+            if (chisel is ChiselShape _chisel)
                 block.Chisel = _chisel;
             if (playerPlaced is bool _playerPlaced)
                 block.PlayerPlaced = _playerPlaced;
@@ -274,13 +279,21 @@ namespace EyeOfRubiss
             {
                 return GetBlock(layer * LAYER_LENGTH / 2 + tile);
             }
+            public BlockInstance GetBlock(Vector3I position)
+            {
+                if (position.X < 0 || position.X >= CHUNK_SIZE || position.Y < 0 || position.Y >= WORLD_HEIGHT_BLOCKS || position.Z < 0 || position.Z >= CHUNK_SIZE)
+                    return null;
+
+                int tile = (position.Y * CHUNK_SIZE * CHUNK_SIZE) + (position.Z * CHUNK_SIZE) + position.X;
+                return GetBlock(tile);
+            }
             public IEnumerable<BlockInstance> GetAllBlocks()
             {
-                for (int i = 0; i * BlockInstance.LENGTH < LAYER_LENGTH; i++)
+                for (int i = 0; i < BlockInstance.COUNT; i++)
                     yield return GetBlock(i);
             }
 
-            public void SetBlock(int layer, int tile, ushort blockId, bool? playerPlaced = null, BlockInstance.ChiselType? chisel = null)
+            public void SetBlock(int layer, int tile, ushort blockId, bool? playerPlaced = null, ChiselShape? chisel = null)
             {
                 if (!IsUsed())
                     return;
@@ -290,7 +303,7 @@ namespace EyeOfRubiss
                 if (playerPlaced is not null)
                     block.PlayerPlaced = (bool)playerPlaced;
                 if (chisel is not null)
-                    block.Chisel = (BlockInstance.ChiselType)chisel;
+                    block.Chisel = (ChiselShape)chisel;
             }
             public void SetLayer(int layer, ushort block)
             {
@@ -311,35 +324,17 @@ namespace EyeOfRubiss
         public class BlockInstance(StageData saveData, int address)
         {
             public const int LENGTH = 2;
+            public const int COUNT = 32 * 32 * 96;
 
             public readonly StageData SaveData = saveData;
             public readonly int Address = address;
 
+            public ushort Value { get => SaveData.GetUInt16(Address); set => SaveData.SetUInt16(Address, value); }
             public ushort BlockID { get => (ushort)SaveData.GetNumberBitwise(Address, 0, 11); set => SaveData.SetNumberBitwise(Address, 0, 11, value); }
             public bool PlayerPlaced { get => SaveData.GetBit(Address + 1, 3); set => SaveData.SetBit(Address + 1, 3, value); }
-            public ChiselType Chisel { get => (ChiselType)SaveData.GetNumberBitwise(Address + 1, 4, 4); set => SaveData.SetNumberBitwise(Address + 1, 4, 4, (byte)value); }
+            public ChiselShape Chisel { get => (ChiselShape)SaveData.GetNumberBitwise(Address + 1, 4, 4); set => SaveData.SetNumberBitwise(Address + 1, 4, 4, (byte)value); }
 
             public BlockInfo GetInfo() => BlockInfo.Get(BlockID);
-
-            public enum ChiselType : byte
-            {
-                FullBlock = 0,
-                DiagonalNorth = 1,
-                DiagonalNorthwest = 2,
-                DiagonalWest = 3,
-                DiagonalSouthwest = 4,
-                DiagonalSouth = 5,
-                DiagonalSoutheast = 6,
-                DiagonalEast = 7,
-                DiagonalNortheast = 8,
-                ConcaveNorthwest = 9,
-                ConcaveSouthwest = 10,
-                ConcaveSoutheast = 11,
-                ConcaveNortheast = 12,
-                TopHalf = 13,
-                BottomHalf = 14,
-                UNDEFINED = 15
-            }
         }
 
         public Chunk GetChunk(int index)
@@ -485,7 +480,7 @@ namespace EyeOfRubiss
         }
         #endregion
 
-        #region Props
+        #region BGParts
         public class BGParts(StageData saveData, int index)
         {
             // NOTE: seems like first (0th) prop is unused
@@ -498,7 +493,7 @@ namespace EyeOfRubiss
             public const int MAXIMUM = 0xC8000;
 
             public StageData SaveData { get; set; } = saveData;
-            public int Index { get; set; } = index; // todo fix
+            public int Index { get; set; } = index;
 
             public int GetAddress() => START_ADDRESS + (int)DataIndex * LENGTH;
             public int GetMetadataAddress() => START_ADDRESS_METADATA + Index * LENGTH_METADATA;
@@ -513,8 +508,10 @@ namespace EyeOfRubiss
                 get { return (ushort)SaveData.GetNumberBitwise(GetAddress() + 8, 0, 13); }
                 set
                 {
+                    SaveData.RemoveBGPartsFromPositionDictionary(this);
                     SaveData.RemoveBGPartsFromOverlapDictionary(this);
                     SaveData.SetNumberBitwise(GetAddress() + 8, 0, 13, value);
+                    SaveData.AddBGPartsToPositionDictionary(this);
                     SaveData.AddBGPartsToOverlapDictionary(this);
                 }
             }
@@ -524,8 +521,10 @@ namespace EyeOfRubiss
                 get { return (byte)SaveData.GetNumberBitwise(GetAddress() + 9, 5, 5); }
                 set
                 {
+                    SaveData.RemoveBGPartsFromPositionDictionary(this);
                     SaveData.RemoveBGPartsFromOverlapDictionary(this);
                     SaveData.SetNumberBitwise(GetAddress() + 9, 5, 5, value);
+                    SaveData.AddBGPartsToPositionDictionary(this);
                     SaveData.AddBGPartsToOverlapDictionary(this);
                 }
             }
@@ -534,8 +533,10 @@ namespace EyeOfRubiss
                 get { return (byte)SaveData.GetNumberBitwise(GetAddress() + 10, 2, 7); }
                 set
                 {
+                    SaveData.RemoveBGPartsFromPositionDictionary(this);
                     SaveData.RemoveBGPartsFromOverlapDictionary(this);
                     SaveData.SetNumberBitwise(GetAddress() + 10, 2, 7, value);
+                    SaveData.AddBGPartsToPositionDictionary(this);
                     SaveData.AddBGPartsToOverlapDictionary(this);
                 }
             }
@@ -544,8 +545,10 @@ namespace EyeOfRubiss
                 get { return (byte)SaveData.GetNumberBitwise(GetAddress() + 11, 1, 5); }
                 set
                 {
+                    SaveData.RemoveBGPartsFromPositionDictionary(this);
                     SaveData.RemoveBGPartsFromOverlapDictionary(this);
                     SaveData.SetNumberBitwise(GetAddress() + 11, 1, 5, value);
+                    SaveData.AddBGPartsToPositionDictionary(this);
                     SaveData.AddBGPartsToOverlapDictionary(this);
                 }
             }
@@ -555,11 +558,18 @@ namespace EyeOfRubiss
                 get { return (byte)SaveData.GetNumberBitwise(GetAddress() + 11, 6, 2); }
                 set
                 {
+                    SaveData.RemoveBGPartsFromPositionDictionary(this);
                     SaveData.RemoveBGPartsFromOverlapDictionary(this);
                     SaveData.SetNumberBitwise(GetAddress() + 11, 6, 2, value);
+                    SaveData.AddBGPartsToPositionDictionary(this);
                     SaveData.AddBGPartsToOverlapDictionary(this);
                 }
             }
+
+            public bool Collision { get { return SaveData.GetBit(GetAddress() + 0xC, 1); } set { SaveData.SetBit(GetAddress() + 0xC, 1, value); } }
+            public bool Effects { get { return SaveData.GetBit(GetAddress() + 0xF, 7); } set { SaveData.SetBit(GetAddress() + 0xF, 7, value); } }
+
+            public byte ConnectingWindowRotation { get { return (byte)SaveData.GetNumberBitwise(GetAddress() + 15, 2, 2); } set { SaveData.SetNumberBitwise(GetAddress() + 15, 2, 2, value); } }
 
             public Vector3I GetPosition() => new(X + Chunk % 64 * 32, Y, Z + Chunk / 64 * 32);
 
@@ -609,10 +619,11 @@ namespace EyeOfRubiss
                 );
             }
 
-            public int GetGridMapRotation() => Util.GridMapRotationFromDirection(Direction);
+            public int GetGridMapRotation() => Util.GridMapRotationFromDirection(Direction, ConnectingWindowRotation);
 
             public void Clear()
             {
+                SaveData.RemoveBGPartsFromPositionDictionary(this);
                 SaveData.RemoveBGPartsFromOverlapDictionary(this);
                 Chunk = 0xFFF;
                 SaveData.Fill(0, GetAddress(), LENGTH);
@@ -620,21 +631,67 @@ namespace EyeOfRubiss
             }
         }
 
+        private Dictionary<Vector3I, List<int>> _BGPartsPositionDictionary;
+        public void CreateBGPartsPositionDictionary()
+        {
+            _BGPartsPositionDictionary = [];
+            foreach (BGParts bgParts in GetBGParts())
+            {
+                AddBGPartsToPositionDictionary(bgParts);
+            }
+        }
+        public void AddBGPartsToPositionDictionary(BGParts bgParts)
+        {
+            if (!bgParts.Exists())
+                return;
+
+            Vector3I position = bgParts.GetPosition();
+            if (_BGPartsPositionDictionary.TryGetValue(position, out List<int> propList))
+            {
+                propList.Add(bgParts.Index);
+            }
+            else
+            {
+                _BGPartsPositionDictionary.Add(position, [bgParts.Index]);
+            }
+        }
+        public void RemoveBGPartsFromPositionDictionary(BGParts bgParts)
+        {
+            if (_BGPartsPositionDictionary.TryGetValue(bgParts.GetPosition(), out List<int> propIdxs))
+            {
+                propIdxs.Remove(bgParts.Index);
+            }
+        }
+        public BGParts GetBGPartsAtPosition(Vector3I position)
+        {
+            return GetAllBGPartsAtPosition(position).First();
+        }
+        public IEnumerable<BGParts> GetAllBGPartsAtPosition(Vector3I position)
+        {
+            if (_BGPartsPositionDictionary.TryGetValue(position, out List<int> propIdxs))
+            {
+                foreach (int propIdx in propIdxs)
+                {
+                    yield return GetProp(propIdx);
+                }
+            }
+        }
+
         private Dictionary<Vector3I, List<int>> _BGPartsOverlapDictionary;
         public void CreateBGPartsOverlapDictionary()
         {
             _BGPartsOverlapDictionary = [];
-            foreach (BGParts prop in GetProps())
+            foreach (BGParts prop in GetBGParts())
             {
                 AddBGPartsToOverlapDictionary(prop);
             }
         }
-        public void AddBGPartsToOverlapDictionary(BGParts prop)
+        public void AddBGPartsToOverlapDictionary(BGParts bgParts)
         {
-            if (!prop.Exists())
+            if (!bgParts.Exists())
                 return;
 
-            (Vector3I start, Vector3I end) = prop.GetBounds();
+            (Vector3I start, Vector3I end) = bgParts.GetBounds();
             for (int x = start.X; x <= end.X; x++)
             {
                 for (int y = start.Y; y <= end.Y; y++)
@@ -645,28 +702,28 @@ namespace EyeOfRubiss
                         if (_BGPartsOverlapDictionary.ContainsKey(position))
                         {
                             List<int> propList = _BGPartsOverlapDictionary[position];
-                            propList.Add(prop.Index);
+                            propList.Add(bgParts.Index);
                         }
                         else
                         {
-                            _BGPartsOverlapDictionary.Add(position, [prop.Index]);
+                            _BGPartsOverlapDictionary.Add(position, [bgParts.Index]);
                         }
                     }
                 }
             }
         }
-        public void RemoveBGPartsFromOverlapDictionary(BGParts prop)
+        public void RemoveBGPartsFromOverlapDictionary(BGParts bgParts)
         {
-            (Vector3I start, Vector3I end) = prop.GetBounds();
+            (Vector3I start, Vector3I end) = bgParts.GetBounds();
             for (int x = start.X; x <= end.X; x++)
             {
                 for (int y = start.Y; y <= end.Y; y++)
                 {
                     for (int z = start.Z; z <= end.Z; z++)
                     {
-                        if (_BGPartsOverlapDictionary.TryGetValue(new Vector3I(x, y, z), out List<int> propIdxs) && propIdxs.Contains(prop.Index))
+                        if (_BGPartsOverlapDictionary.TryGetValue(new Vector3I(x, y, z), out List<int> propIdxs))
                         {
-                            propIdxs.Remove(prop.Index);
+                            propIdxs.Remove(bgParts.Index);
                         }
                     }
                 }
@@ -674,9 +731,9 @@ namespace EyeOfRubiss
         }
         public BGParts GetOverlappingBGParts(Vector3I position)
         {
-            return GetAllOverlappingProps(position).FirstOrDefault();
+            return GetAllOverlappingBGParts(position).FirstOrDefault();
         }
-        public IEnumerable<BGParts> GetAllOverlappingProps(Vector3I position)
+        public IEnumerable<BGParts> GetAllOverlappingBGParts(Vector3I position)
         {
             if (_BGPartsOverlapDictionary.TryGetValue(position, out List<int> propIdxs))
             {
@@ -694,7 +751,7 @@ namespace EyeOfRubiss
 
             return new BGParts(this, index);
         }
-        public IEnumerable<BGParts> GetProps(int index = 0, int count = BGParts.MAXIMUM)
+        public IEnumerable<BGParts> GetBGParts(int index = 0, int count = BGParts.MAXIMUM)
         {
             if (index < 0 || index >= BGParts.MAXIMUM)
                 throw new IndexOutOfRangeException();
@@ -721,7 +778,7 @@ namespace EyeOfRubiss
         }
         public BGParts GetFirstUnusedBGParts()
         {
-            BGParts prop = GetProps().FirstOrDefault(prop => prop.Index > 0 && !prop.Exists());
+            BGParts prop = GetBGParts().FirstOrDefault(prop => prop.Index > 0 && !prop.Exists());
             if (prop is null)
             {
                 PropCount++;
@@ -734,7 +791,7 @@ namespace EyeOfRubiss
         {
             SetNumberBitwise(0x24E7CD, 0, 12, 1); // I don't know why this is required.
 
-            foreach (BGParts prop in GetProps())
+            foreach (BGParts prop in GetBGParts())
             {
                 prop.Clear();
             }

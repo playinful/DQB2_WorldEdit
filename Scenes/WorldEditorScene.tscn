@@ -1,0 +1,418 @@
+[gd_scene load_steps=33 format=3 uid="uid://chekdrqr80s3n"]
+
+[ext_resource type="Texture2D" uid="uid://b5wcgwa3elvlc" path="res://Resources/Graphics/blocks.png" id="1_djn2n"]
+[ext_resource type="VoxelBlockyLibrary" uid="uid://ds0n7xj6hqhdx" path="res://Resources/voxel_library_terrain.tres" id="1_ec1xm"]
+[ext_resource type="Script" uid="uid://da6gt5x2hlsns" path="res://Scenes/WorldEditorScene.cs" id="1_kqags"]
+[ext_resource type="VoxelBlockyLibrary" uid="uid://dkixrdmtruusw" path="res://Resources/voxel_library_partsblock.tres" id="2_mua0n"]
+[ext_resource type="Script" uid="uid://bgg687qn5fg8" path="res://Nodes/CameraController.cs" id="4_drl5t"]
+[ext_resource type="Theme" uid="uid://nd34kb5d40qb" path="res://Resources/DQB_Theme.tres" id="5_reqmc"]
+[ext_resource type="Script" uid="uid://c8d5ejfxksjcm" path="res://Nodes/FPSLabel.cs" id="6_rkejf"]
+[ext_resource type="PackedScene" uid="uid://cstxeedhnt2f3" path="res://Nodes/NPCSprite.tscn" id="6_s7pme"]
+[ext_resource type="Script" uid="uid://dhq5ccay2sljd" path="res://Nodes/BGPartsGridManager.cs" id="6_un6sg"]
+[ext_resource type="Texture2D" uid="uid://b44a5on8vq3cx" path="res://Resources/Graphics/crosshair.png" id="7_sgdhm"]
+[ext_resource type="Script" uid="uid://cef171jih3wvg" path="res://Nodes/PositionLabel.cs" id="8_o1mxb"]
+[ext_resource type="Script" uid="uid://cqcskock8m7ht" path="res://addons/Gizmo3DSharp/Gizmo3D.cs" id="8_wt1c1"]
+[ext_resource type="Script" uid="uid://b8l5wycxi2gqt" path="res://Nodes/StatusLabel.cs" id="9_33hxh"]
+[ext_resource type="Script" uid="uid://bvj6tbn5nm3rp" path="res://Nodes/SelectionBox.cs" id="9_phghj"]
+[ext_resource type="ArrayMesh" uid="uid://dewt8degmaf0g" path="res://Resources/Mesh/selection_box_corner.obj" id="10_qm6sn"]
+[ext_resource type="ArrayMesh" uid="uid://desfufrgy1b3h" path="res://Resources/Mesh/boundary_corner.obj" id="11_3qk7n"]
+[ext_resource type="ArrayMesh" uid="uid://bm5n1ynt2y8xw" path="res://Resources/Mesh/boundary_side.obj" id="12_un6sg"]
+[ext_resource type="Script" uid="uid://bhfgnuw7cwaqp" path="res://Nodes/CommandParser.cs" id="15_s7pme"]
+[ext_resource type="Texture2D" uid="uid://cbb8yw8yhn31g" path="res://Resources/Graphics/book_anim.png" id="16_bgrrh"]
+[ext_resource type="Texture2D" uid="uid://c2j7dpdpg1qv4" path="res://Resources/Graphics/loading.png" id="17_phghj"]
+
+[sub_resource type="Environment" id="Environment_nmm71"]
+ambient_light_source = 2
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_energy = 0.5
+reflected_light_source = 1
+tonemap_mode = 2
+
+[sub_resource type="VoxelMesherBlocky" id="VoxelMesherBlocky_yg1cn"]
+library = ExtResource("1_ec1xm")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sq1al"]
+transparency = 1
+depth_draw_mode = 1
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_djn2n")
+texture_filter = 0
+
+[sub_resource type="VoxelMesherBlocky" id="VoxelMesherBlocky_jut71"]
+library = ExtResource("2_mua0n")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s7pme"]
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.501961, 0, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3qk7n"]
+shading_mode = 0
+albedo_color = Color(0.905882, 0.682353, 0.0784314, 1)
+
+[sub_resource type="Animation" id="Animation_33hxh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_o1mxb"]
+resource_name = "fadeout"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(2, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qfxig"]
+_data = {
+&"RESET": SubResource("Animation_33hxh"),
+&"fadeout": SubResource("Animation_o1mxb")
+}
+
+[sub_resource type="Animation" id="Animation_qm6sn"]
+resource_name = "Loading"
+length = 1.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BookAnim:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Loading:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BookAnim:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = false
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.03333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0, 5]
+}
+
+[sub_resource type="Animation" id="Animation_phghj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BookAnim:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Loading:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BookAnim:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3qk7n"]
+_data = {
+&"Loading": SubResource("Animation_qm6sn"),
+&"RESET": SubResource("Animation_phghj")
+}
+
+[node name="WorldEditor" type="Node3D" node_paths=PackedStringArray("_VoxelTerrain", "_VoxelTerrain_PropShells", "_ResidentLayer", "_BGPartsGridManager", "_PlayerDisplay", "_CameraController", "_Gizmo", "_SelectionBox", "_BoundaryBox", "_DebugInfoContainer", "_FPSLabel", "_PointedVoxelLabel", "_StatusLabel", "_CommandParser", "_LoadingAnimationPlayer")]
+script = ExtResource("1_kqags")
+_VoxelTerrain = NodePath("VoxelTerrain")
+_VoxelTerrain_PropShells = NodePath("VoxelTerrain_PartsBlock")
+_ResidentLayer = NodePath("ResidentLayer")
+_BGPartsGridManager = NodePath("BGPartsGridManager")
+_PlayerDisplay = NodePath("Player")
+_CameraController = NodePath("Camera3D")
+_Gizmo = NodePath("Gizmo3D")
+_SelectionBox = NodePath("SelectionBox")
+_BoundaryBox = NodePath("BoundaryBox")
+_DebugInfoContainer = NodePath("HUD/DebugInfo")
+_FPSLabel = NodePath("HUD/FPSLabel")
+_PointedVoxelLabel = NodePath("HUD/DebugInfo/PointedVoxelLabel")
+_StatusLabel = NodePath("HUD/StatusLabel")
+_CommandParser = NodePath("HUD/CommandParser")
+_LoadingAnimationPlayer = NodePath("HUD/Control/AnimationPlayer")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866024, -0.433016, 0.250001, 0, 0.499998, 0.866026, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_nmm71")
+
+[node name="VoxelTerrain" type="VoxelTerrain" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1024, 0, -1024)
+mesher = SubResource("VoxelMesherBlocky_yg1cn")
+cast_shadow = 0
+bounds = AABB(-536870900, -16, -536870900, 1073739970, 144, 1073739970)
+generate_collisions = false
+material_override = SubResource("StandardMaterial3D_sq1al")
+run_stream_in_editor = false
+
+[node name="VoxelTerrain_PartsBlock" type="VoxelTerrain" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1024, 0, -1024)
+visible = false
+mesher = SubResource("VoxelMesherBlocky_jut71")
+cast_shadow = 0
+render_layers_mask = 2
+bounds = AABB(-536870900, -16, -536870900, 1073739970, 144, 1073739970)
+generate_collisions = false
+collision_layer = 2
+collision_mask = 2
+material_override = SubResource("StandardMaterial3D_sq1al")
+run_stream_in_editor = false
+
+[node name="ResidentLayer" type="Node3D" parent="."]
+
+[node name="Player" parent="." instance=ExtResource("6_s7pme")]
+visible = false
+_Name = "Player"
+
+[node name="Character" parent="Player" index="0"]
+material_override = SubResource("StandardMaterial3D_s7pme")
+
+[node name="BGPartsGridManager" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1024, 0, -1024)
+script = ExtResource("6_un6sg")
+GridMapsMaximum = 10
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 96, 0)
+current = true
+size = 41.667
+script = ExtResource("4_drl5t")
+Speed = 20.0
+MaxSpeedMultiplier = 4.0
+MouseSensitivity = 0.2
+Enabled = true
+
+[node name="VoxelViewer" type="VoxelViewer" parent="Camera3D"]
+view_distance = 88888
+
+[node name="Gizmo3D" type="Node3D" parent="."]
+script = ExtResource("8_wt1c1")
+Mode = 3
+ShowSelectionBox = false
+
+[node name="SelectionBox" type="Node3D" parent="."]
+visible = false
+script = ExtResource("9_phghj")
+CornerMesh = ExtResource("10_qm6sn")
+MaterialOverride = SubResource("StandardMaterial3D_3qk7n")
+
+[node name="BoundaryBox" type="Node3D" parent="."]
+visible = false
+script = ExtResource("9_phghj")
+CornerMesh = ExtResource("11_3qk7n")
+SideMesh = ExtResource("12_un6sg")
+MaterialOverride = SubResource("StandardMaterial3D_3qk7n")
+
+[node name="HUD" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("5_reqmc")
+
+[node name="FPSLabel" type="Label" parent="HUD"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 15.0
+offset_right = 72.0
+offset_bottom = 41.0
+theme = ExtResource("5_reqmc")
+theme_override_constants/outline_size = 5
+text = "FPS: 0"
+script = ExtResource("6_rkejf")
+
+[node name="DebugInfo" type="Control" parent="HUD"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="WorldPositionLabel" type="Label" parent="HUD/DebugInfo" node_paths=PackedStringArray("Target")]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -219.0
+offset_top = 15.0
+offset_right = -15.0
+offset_bottom = 41.0
+grow_horizontal = 0
+theme_override_constants/outline_size = 5
+text = "Camera position: %s
+Facing: Weast"
+horizontal_alignment = 2
+script = ExtResource("8_o1mxb")
+DisplayText = "Camera position: %s
+Facing: %t"
+Target = NodePath("../../../Camera3D")
+
+[node name="PointedVoxelLabel" type="Label" parent="HUD/DebugInfo"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -259.0
+offset_top = 65.0
+offset_right = -15.0
+offset_bottom = 137.0
+grow_horizontal = 0
+theme_override_constants/outline_size = 5
+text = "Targeted block: None
+X: 0, Y: 0, Z: 0
+Chunk: 0, Layer: 0, Tile: 0"
+horizontal_alignment = 2
+
+[node name="TextureRect" type="TextureRect" parent="HUD"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 32.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("7_sgdhm")
+stretch_mode = 3
+
+[node name="StatusLabel" type="Label" parent="HUD"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_top = -36.0
+offset_right = 236.0
+offset_bottom = -10.0
+grow_vertical = 0
+theme_override_constants/outline_size = 5
+text = "This is the status bar."
+script = ExtResource("9_33hxh")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="HUD/StatusLabel"]
+libraries = {
+&"": SubResource("AnimationLibrary_qfxig")
+}
+
+[node name="CommandParser" type="LineEdit" parent="HUD" node_paths=PackedStringArray("_WorldEditorScene", "_StatusLabel")]
+visible = false
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -39.0
+offset_bottom = -9.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("15_s7pme")
+_WorldEditorScene = NodePath("../..")
+_StatusLabel = NodePath("../StatusLabel")
+
+[node name="Control" type="Control" parent="HUD"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -151.0
+offset_top = -152.0
+offset_right = -9.0
+offset_bottom = -12.0
+grow_horizontal = 0
+grow_vertical = 0
+metadata/_edit_group_ = true
+
+[node name="BookAnim" type="Sprite2D" parent="HUD/Control"]
+visible = false
+texture = ExtResource("16_bgrrh")
+centered = false
+hframes = 6
+
+[node name="Loading" type="Sprite2D" parent="HUD/Control"]
+visible = false
+position = Vector2(6, 104)
+texture = ExtResource("17_phghj")
+centered = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="HUD/Control"]
+libraries = {
+&"": SubResource("AnimationLibrary_3qk7n")
+}
+
+[connection signal="TransformEnd" from="Gizmo3D" to="." method="_On_Gizmo3D_TransformEnd" unbinds=1]
+[connection signal="text_submitted" from="HUD/CommandParser" to="HUD/CommandParser" method="_On_TextSubmitted"]
+
+[editable path="Player"]

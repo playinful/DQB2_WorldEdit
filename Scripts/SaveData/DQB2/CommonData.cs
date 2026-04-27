@@ -292,7 +292,7 @@ namespace EyeOfRubiss
 
                 return new InventoryItem(SaveData, GetAddress() + 0x20 + index * 4);
             }
-            public IEnumerable<InventoryItem> GetInventory(int index = 0, int count = INVENTORY_COUNT)
+            public IEnumerable<InventoryItem> GetInventoryItems(int index = 0, int count = INVENTORY_COUNT)
             {
                 if (index < 0 || index >= INVENTORY_COUNT)
                     throw new IndexOutOfRangeException();

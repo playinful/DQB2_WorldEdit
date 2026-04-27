@@ -25,10 +25,28 @@ namespace EyeOfRubiss.Info.DQB1
         public int SizeX { get; set; } = 1;
         public int SizeY { get; set; } = 1;
         public int SizeZ { get; set; } = 1;
-        public Vector3I GetSize()
+        public Vector3I GetDimensions()
         {
             return new Vector3I(SizeX, SizeY, SizeZ);
         }
+
+        public PartsType Block { get; set; } = PartsType.Generic;
+        public byte GetPartsBlockID() => GetPartsBlockID(Block);
+        public static byte GetPartsBlockID(PartsType partsType) => partsType switch
+        {
+            PartsType.Roof     => 249,
+            PartsType.Table    => 250,
+            PartsType.Lighting => 251,
+            PartsType.Fixture  => 252,
+            PartsType.Door     => 253,
+            PartsType.Unknown  => 254,
+            PartsType.Generic  => 255,
+            _ => 0
+        };
+        public ushort DQB2BGParts { get; set; } = 0;
+
+        public bool Collision { get; set; } = false;
+        public bool Effects { get; set; } = false;
 
         public float Sort { get; set; } = float.MaxValue;
 
@@ -65,6 +83,22 @@ namespace EyeOfRubiss.Info.DQB1
                 LoadDatabase();
 
             return _Database;
+        }
+        
+        public static IEnumerable<BGPartsInfo> SearchByText(string text)
+        {
+            if (_Database is null)
+                LoadDatabase();
+            
+            if (string.IsNullOrEmpty(text))
+                return GetAll();
+            
+            string searchText = text.ToLowerInvariant().Trim().Replace(" ", "");
+            return _Database.Where(info =>
+            {
+                string nameKey = info.Name.ToLowerInvariant().Trim().Replace(" ", "");
+                return nameKey.Contains(searchText);
+            });
         }
     }
 }

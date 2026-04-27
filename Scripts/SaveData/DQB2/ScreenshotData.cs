@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Text;
 using Godot;
 using System.Runtime.CompilerServices;
+using System.IO;
 
 namespace EyeOfRubiss
 {
@@ -30,24 +31,34 @@ namespace EyeOfRubiss
         public Image GetImage(int index)
         {
             Image image = new();
-            image.LoadJpgFromBuffer(GetBytes(IMAGE_ADDRESS + IMAGE_SIZE * index, IMAGE_SIZE).ToArray());
+
+            Span<byte> bytes = GetBytes(IMAGE_ADDRESS + IMAGE_SIZE * index, IMAGE_SIZE);
+            if (!(bytes[0] == 0xFF && bytes[1] == 0xD8))
+                return null;
+
+            image.LoadJpgFromBuffer(bytes.ToArray());
             return image;
         }
-        public void SetImage(int index, string filename)
+        public bool TrySetImage(int index, string filename)
         {
-            Image image = new();
-            image.Load(filename);
-
-            byte[] imageData = image.GetData();
+            byte[] imageData = Godot.FileAccess.GetFileAsBytes(filename);
 
             if (!(imageData[0] == 0xFF && imageData[1] == 0xD8))
-                return;
+            {
+                GD.Print("JPG header does not match.");
+                return false;
+            }
             if (imageData.Length > IMAGE_SIZE)
-                return;
+            {
+                GD.Print($"Image too large to fit. Expected size: < {IMAGE_SIZE}, provided image size: {imageData.Length}");
+                return false;
+            }
 
             Fill(0, IMAGE_ADDRESS + IMAGE_SIZE * index, IMAGE_SIZE);
 
             SetBytes(IMAGE_ADDRESS + IMAGE_SIZE * index, imageData);
+
+            return true;
         }
     }
 }

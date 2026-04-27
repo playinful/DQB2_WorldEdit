@@ -1,4 +1,6 @@
 using System;
+using System.ComponentModel.DataAnnotations;
+using System.Data.Common;
 using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -73,11 +75,18 @@ namespace EyeOfRubiss
 					
 					if (header[0] == 0x78 && (header[1] == 0x01 || header[1] == 0x5E || header[1] == 0x9C || header[1] == 0xDA))
                     {
-						return FileType.DQB1_WorldData;
-                    }
-					else
-                    {
-                        GD.Print(header[0], " ", header[1]);
+						file.Seek(0);
+						byte[] compressed = file.GetBuffer((long)file.GetLength());
+						byte[] data = Decompress(compressed);
+
+						if (data[0] == 0x04 && data[1] == 0x02 && data[2] == 0x00 && data[3] == 0x01)
+						{
+							return FileType.DQB1_ParamData;
+						}
+						else
+						{
+							return FileType.DQB1_WorldData;
+						}
                     }
                 }
 				
@@ -94,6 +103,10 @@ namespace EyeOfRubiss
 						if (pathId == 1781583903654961094)
 							return FileType.DQB1_DioramaAssetData;
                     }
+					if (json.RootElement.TryGetProperty("SourceGame", out JsonElement sourceGameElement) && sourceGameElement.TryGetByte(out byte sourceGame) && (sourceGame == 1 || sourceGame == 2))
+					{
+						return FileType.EyeOfRubissStructure;
+					}
                 }
 				catch {}
             }
@@ -127,14 +140,14 @@ namespace EyeOfRubiss
         public static string ToRichText(string input)
 		{
 			string output = input;
-			output = output.Replace("{White}", $"[color={Constants.Colors.WHITE}]■[/color]");
-			output = output.Replace("{Black}", $"[color={Constants.Colors.BLACK}]■[/color]");
-			output = output.Replace("{Purple}", $"[color={Constants.Colors.PURPLE}]■[/color]");
-			output = output.Replace("{Pink}", $"[color={Constants.Colors.PINK}]■[/color]");
-			output = output.Replace("{Red}", $"[color={Constants.Colors.RED}]■[/color]");
-			output = output.Replace("{Green}", $"[color={Constants.Colors.GREEN}]■[/color]");
-			output = output.Replace("{Yellow}", $"[color={Constants.Colors.YELLOW}]■[/color]");
-			output = output.Replace("{Blue}", $"[color={Constants.Colors.BLUE}]■[/color]");
+			output = output.Replace("{white}", $"[color={Constants.Colors.WHITE}]■[/color]");
+			output = output.Replace("{black}", $"[color={Constants.Colors.BLACK}]■[/color]");
+			output = output.Replace("{purple}", $"[color={Constants.Colors.PURPLE}]■[/color]");
+			output = output.Replace("{pink}", $"[color={Constants.Colors.PINK}]■[/color]");
+			output = output.Replace("{red}", $"[color={Constants.Colors.RED}]■[/color]");
+			output = output.Replace("{green}", $"[color={Constants.Colors.GREEN}]■[/color]");
+			output = output.Replace("{yellow}", $"[color={Constants.Colors.YELLOW}]■[/color]");
+			output = output.Replace("{blue}", $"[color={Constants.Colors.BLUE}]■[/color]");
 			return output;
 		}
 		public static string DirectionToString(int direction)
@@ -149,15 +162,39 @@ namespace EyeOfRubiss
 			};
 		}
 
-		public static int GridMapRotationFromDirection(int direction)
+		public static int GridMapRotationFromDirection(byte direction, byte secondaryRotation = 0)
         {
-            return direction switch
-            {
-                1 => 16,
-                2 => 10,
-                3 => 22,
-                _ => 0,
-            };
+            return secondaryRotation switch
+			{
+				1 => direction switch
+				{
+					1 => 5,
+					2 => 9,
+					3 => 13,
+					_ => 1
+				},
+				2 => direction switch
+				{
+					1 => 20,
+					2 => 8,
+					3 => 18,
+					_ => 2
+				},
+				3 => direction switch
+				{
+					1 => 15,
+					2 => 11,
+					3 => 7,
+					_ => 3
+				},
+				_ => direction switch
+            	{
+                	1 => 16,
+                	2 => 10,
+	                3 => 22,
+	                _ => 0,
+            	}
+			};
         }
 	}
 }

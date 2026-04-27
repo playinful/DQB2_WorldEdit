@@ -1,0 +1,914 @@
+[
+    {
+        "ID": 0,
+        "JLabel": "",
+        "Name": "",
+        "NameJP": "",
+        "Sex": 0,
+        "Chapter": 0
+    },
+    {
+        "ID": 10000,
+        "JLabel": "町人：始端",
+        "Name": "",
+        "NameJP": "",
+        "Sex": 0,
+        "Chapter": 0
+    },
+    {
+        "ID": 10001,
+        "JLabel": "(デバッグ)男",
+        "Name": "",
+        "NameJP": "",
+        "Sex": 0,
+        "Chapter": 0
+    },
+    {
+        "ID": 10002,
+        "JLabel": "(デバッグ)女0",
+        "Name": "",
+        "NameJP": "",
+        "Sex": 0,
+        "Chapter": 0
+    },
+    {
+        "ID": 10003,
+        "JLabel": "ロロンド",
+        "Name": "Rollo",
+        "NameJP": "ロロンド",
+        "Sex": 0,
+        "Chapter": 1
+    },
+    {
+        "ID": 10004,
+        "JLabel": "ゆきのへ",
+        "Name": "Magnus",
+        "NameJP": "ゆきのへ",
+        "Sex": 0,
+        "Chapter": 1
+    },
+    {
+        "ID": 10005,
+        "JLabel": "ピリン",
+        "Name": "Pippa",
+        "NameJP": "ピリン",
+        "Sex": 1,
+        "Chapter": 1
+    },
+    {
+        "ID": 10006,
+        "JLabel": "ケッパー",
+        "Name": "Kenelm",
+        "NameJP": "ケッパー",
+        "Sex": 0,
+        "Chapter": 1
+    },
+    {
+        "ID": 10007,
+        "JLabel": "ロッシ",
+        "Name": "Larouche",
+        "NameJP": "ロッシ",
+        "Sex": 0,
+        "Chapter": 1
+    },
+    {
+        "ID": 10008,
+        "JLabel": "ショーター",
+        "Name": "Sheridon",
+        "NameJP": "ショーター",
+        "Sex": 0,
+        "Chapter": 1
+    },
+    {
+        "ID": 10009,
+        "JLabel": "ガンダル",
+        "Name": "Cherie",
+        "NameJP": "チェリコ",
+        "Sex": 1,
+        "Chapter": 1
+    },
+    {
+        "ID": 10010,
+        "JLabel": "ゴレムス",
+        "Name": "Splatrick",
+        "NameJP": "スラタン",
+        "Sex": 1,
+        "Chapter": 1
+    },
+    {
+        "ID": 10014,
+        "JLabel": "リタ",
+        "Name": "Elle",
+        "NameJP": "エル",
+        "Sex": 1,
+        "Chapter": 2
+    },
+    {
+        "ID": 10015,
+        "JLabel": "ホリン",
+        "Name": "Nosh",
+        "NameJP": "ノリン",
+        "Sex": 0,
+        "Chapter": 2
+    },
+    {
+        "ID": 10016,
+        "JLabel": "ケン",
+        "Name": "Kean",
+        "NameJP": "ケン",
+        "Sex": 0,
+        "Chapter": 2
+    },
+    {
+        "ID": 10017,
+        "JLabel": "エディ",
+        "Name": "Edsel",
+        "NameJP": "エディ",
+        "Sex": 0,
+        "Chapter": 2
+    },
+    {
+        "ID": 10018,
+        "JLabel": "ケーシー",
+        "Name": "Casey",
+        "NameJP": "ケーシー",
+        "Sex": 1,
+        "Chapter": 2
+    },
+    {
+        "ID": 10019,
+        "JLabel": "ゲンローワ",
+        "Name": "Gerontius",
+        "NameJP": "ゲンローワ",
+        "Sex": 0,
+        "Chapter": 2
+    },
+    {
+        "ID": 10020,
+        "JLabel": "イルマ",
+        "Name": "Irvyn",
+        "NameJP": "イルマ",
+        "Sex": 0,
+        "Chapter": 2
+    },
+    {
+        "ID": 10021,
+        "JLabel": "ホーク",
+        "Name": "Hawk",
+        "NameJP": "ホーク",
+        "Sex": 0,
+        "Chapter": 2
+    },
+    {
+        "ID": 10022,
+        "JLabel": "ミノリ",
+        "Name": "Mildred",
+        "NameJP": "ミノリ",
+        "Sex": 1,
+        "Chapter": 2
+    },
+    {
+        "ID": 10023,
+        "JLabel": "ザッコ",
+        "Name": "Jacob",
+        "NameJP": "ザッコ",
+        "Sex": 0,
+        "Chapter": 2
+    },
+    {
+        "ID": 10024,
+        "JLabel": "マルワン",
+        "Name": "Marvin",
+        "NameJP": "マルワン",
+        "Sex": 0,
+        "Chapter": 2
+    },
+    {
+        "ID": 10025,
+        "JLabel": "ヘイザン",
+        "Name": "Hazel",
+        "NameJP": "ヘイザン",
+        "Sex": 1,
+        "Chapter": 2
+    },
+    {
+        "ID": 10026,
+        "JLabel": "＊＊＊13",
+        "Name": "",
+        "NameJP": "",
+        "Sex": 0,
+        "Chapter": 0
+    },
+    {
+        "ID": 10027,
+        "JLabel": "ガロン",
+        "Name": "Glutimus",
+        "NameJP": "ガロン",
+        "Sex": 0,
+        "Chapter": 3
+    },
+    {
+        "ID": 10028,
+        "JLabel": "ベイパー",
+        "Name": "Burley",
+        "NameJP": "ベイパー",
+        "Sex": 0,
+        "Chapter": 3
+    },
+    {
+        "ID": 10029,
+        "JLabel": "アメルダ",
+        "Name": "Barbella",
+        "NameJP": "アメルダ",
+        "Sex": 1,
+        "Chapter": 3
+    },
+    {
+        "ID": 10030,
+        "JLabel": "ギエラ",
+        "Name": "Maxi",
+        "NameJP": "ギエラ",
+        "Sex": 0,
+        "Chapter": 3
+    },
+    {
+        "ID": 10031,
+        "JLabel": "ボックル（未使用）",
+        "Name": "Bockle",
+        "NameJP": "ボックル",
+        "Sex": 0,
+        "Chapter": 3
+    },
+    {
+        "ID": 10032,
+        "JLabel": "コルト",
+        "Name": "Baird",
+        "NameJP": "コルト",
+        "Sex": 0,
+        "Chapter": 3
+    },
+    {
+        "ID": 10033,
+        "JLabel": "シェネリ",
+        "Name": "Cecille",
+        "NameJP": "シェネリ",
+        "Sex": 1,
+        "Chapter": 3
+    },
+    {
+        "ID": 10035,
+        "JLabel": "まほうのじゅうたん",
+        "Name": "great sabrecub",
+        "NameJP": "ベビーパンサー",
+        "Sex": 0,
+        "Chapter": 0
+    },
+    {
+        "ID": 10040,
+        "JLabel": "ムツヘタ",
+        "Name": "Myrlund",
+        "NameJP": "ムツヘタ",
+        "Sex": 0,
+        "Chapter": 4
+    },
+    {
+        "ID": 10041,
+        "JLabel": "ローラ",
+        "Name": "Princess",
+        "NameJP": "姫",
+        "Sex": 1,
+        "Chapter": 4
+    },
+    {
+        "ID": 10042,
+        "JLabel": "ゆきのへ４面",
+        "Name": "Rollo",
+        "NameJP": "ロロンド",
+        "Sex": 0,
+        "Chapter": 4
+    },
+    {
+        "ID": 10043,
+        "JLabel": "アメルダ４面",
+        "Name": "Barbella",
+        "NameJP": "アメルダ",
+        "Sex": 1,
+        "Chapter": 4
+    },
+    {
+        "ID": 10044,
+        "JLabel": "リタ４面",
+        "Name": "Elle",
+        "NameJP": "エル",
+        "Sex": 1,
+        "Chapter": 4
+    },
+    {
+        "ID": 10045,
+        "JLabel": "ラスタン",
+        "Name": "Launce",
+        "NameJP": "ラスタン",
+        "Sex": 0,
+        "Chapter": 4
+    },
+    {
+        "ID": 10046,
+        "JLabel": "オーレン",
+        "Name": "Trystian",
+        "NameJP": "オーレン",
+        "Sex": 0,
+        "Chapter": 4
+    },
+    {
+        "ID": 10047,
+        "JLabel": "チョビ",
+        "Name": "Androoo",
+        "NameJP": "チョビ",
+        "Sex": 0,
+        "Chapter": 4
+    },
+    {
+        "ID": 10048,
+        "JLabel": "％％％9",
+        "Name": "",
+        "NameJP": "",
+        "Sex": 0,
+        "Chapter": 0
+    },
+    {
+        "ID": 10049,
+        "JLabel": "％％％10",
+        "Name": "",
+        "NameJP": "",
+        "Sex": 0,
+        "Chapter": 0
+    },
+    {
+        "ID": 10050,
+        "JLabel": "％％％11",
+        "Name": "",
+        "NameJP": "",
+        "Sex": 0,
+        "Chapter": 0
+    },
+    {
+        "ID": 10051,
+        "JLabel": "％％％12",
+        "Name": "",
+        "NameJP": "",
+        "Sex": 0,
+        "Chapter": 0
+    },
+    {
+        "ID": 10052,
+        "JLabel": "％％％13",
+        "Name": "",
+        "NameJP": "",
+        "Sex": 0,
+        "Chapter": 0
+    },
+    {
+        "ID": 10053,
+        "JLabel": "フリークラフト枠1",
+        "Name": "",
+        "NameJP": "",
+        "Sex": 0,
+        "Chapter": 5
+    },
+    {
+        "ID": 10054,
+        "JLabel": "フリークラフト枠2",
+        "Name": "",
+        "NameJP": "",
+        "Sex": 0,
+        "Chapter": 5
+    },
+    {
+        "ID": 10055,
+        "JLabel": "フリークラフト枠3",
+        "Name": "",
+        "NameJP": "",
+        "Sex": 0,
+        "Chapter": 5
+    },
+    {
+        "ID": 10056,
+        "JLabel": "フリークラフト枠4",
+        "Name": "",
+        "NameJP": "",
+        "Sex": 0,
+        "Chapter": 5
+    },
+    {
+        "ID": 10057,
+        "JLabel": "フリークラフト枠5",
+        "Name": "",
+        "NameJP": "",
+        "Sex": 0,
+        "Chapter": 5
+    },
+    {
+        "ID": 10058,
+        "JLabel": "フリークラフト枠6",
+        "Name": "",
+        "NameJP": "",
+        "Sex": 0,
+        "Chapter": 5
+    },
+    {
+        "ID": 10059,
+        "JLabel": "フリークラフト枠7",
+        "Name": "",
+        "NameJP": "",
+        "Sex": 0,
+        "Chapter": 5
+    },
+    {
+        "ID": 10060,
+        "JLabel": "フリークラフト枠8",
+        "Name": "",
+        "NameJP": "",
+        "Sex": 0,
+        "Chapter": 5
+    },
+    {
+        "ID": 10061,
+        "JLabel": "フリークラフト枠9",
+        "Name": "",
+        "NameJP": "",
+        "Sex": 0,
+        "Chapter": 5
+    },
+    {
+        "ID": 10062,
+        "JLabel": "フリークラフト枠10",
+        "Name": "",
+        "NameJP": "",
+        "Sex": 0,
+        "Chapter": 5
+    },
+    {
+        "ID": 10063,
+        "JLabel": "フリークラフト枠11",
+        "Name": "",
+        "NameJP": "",
+        "Sex": 0,
+        "Chapter": 5
+    },
+    {
+        "ID": 10064,
+        "JLabel": "フリークラフト枠12",
+        "Name": "",
+        "NameJP": "",
+        "Sex": 0,
+        "Chapter": 5
+    },
+    {
+        "ID": 10065,
+        "JLabel": "フリークラフト枠13",
+        "Name": "",
+        "NameJP": "",
+        "Sex": 0,
+        "Chapter": 5
+    },
+    {
+        "ID": 10066,
+        "JLabel": "フリークラフト人型1",
+        "Name": "likely lad",
+        "NameJP": "若い男",
+        "Sex": 0,
+        "Chapter": 0
+    },
+    {
+        "ID": 10067,
+        "JLabel": "フリークラフト人型2",
+        "Name": "masked muscleman",
+        "NameJP": "マスクの男",
+        "Sex": 0,
+        "Chapter": 0
+    },
+    {
+        "ID": 10068,
+        "JLabel": "フリークラフト人型3",
+        "Name": "dandy gentleman",
+        "NameJP": "実はできる優男",
+        "Sex": 0,
+        "Chapter": 0
+    },
+    {
+        "ID": 10069,
+        "JLabel": "フリークラフト人型4",
+        "Name": "military man",
+        "NameJP": "衛兵風の男",
+        "Sex": 0,
+        "Chapter": 0
+    },
+    {
+        "ID": 10070,
+        "JLabel": "フリークラフト人型5",
+        "Name": "bright-eyed boy",
+        "NameJP": "少年",
+        "Sex": 0,
+        "Chapter": 0
+    },
+    {
+        "ID": 10071,
+        "JLabel": "フリークラフト人型6",
+        "Name": "bobby girl",
+        "NameJP": "おかっぱ",
+        "Sex": 1,
+        "Chapter": 0
+    },
+    {
+        "ID": 10072,
+        "JLabel": "フリークラフト人型7",
+        "Name": "cool girl",
+        "NameJP": "クールな女",
+        "Sex": 1,
+        "Chapter": 0
+    },
+    {
+        "ID": 10073,
+        "JLabel": "フリークラフト人型8",
+        "Name": "hazel-haired lady",
+        "NameJP": "茶髪の娘",
+        "Sex": 1,
+        "Chapter": 0
+    },
+    {
+        "ID": 10074,
+        "JLabel": "フリークラフト人型9",
+        "Name": "hatted lass",
+        "NameJP": "帽子の女",
+        "Sex": 1,
+        "Chapter": 0
+    },
+    {
+        "ID": 10075,
+        "JLabel": "フリークラフト人型10",
+        "Name": "martial maiden",
+        "NameJP": "衛兵風の女",
+        "Sex": 1,
+        "Chapter": 0
+    },
+    {
+        "ID": 10076,
+        "JLabel": "バディスライム1",
+        "Name": "phlegmatic slime",
+        "NameJP": "おとなしいスライム",
+        "Sex": 0,
+        "Chapter": 0
+    },
+    {
+        "ID": 10077,
+        "JLabel": "バディスライム2",
+        "Name": "couragooze slime",
+        "NameJP": "たくましいスライム",
+        "Sex": 0,
+        "Chapter": 0
+    },
+    {
+        "ID": 10078,
+        "JLabel": "スライムベス",
+        "Name": "she-slime",
+        "NameJP": "スライムベス",
+        "Sex": 0,
+        "Chapter": 0
+    },
+    {
+        "ID": 10079,
+        "JLabel": "いっかくうさぎ",
+        "Name": "bunicorn",
+        "NameJP": "いっかくうさぎ",
+        "Sex": 0,
+        "Chapter": 0
+    },
+    {
+        "ID": 10080,
+        "JLabel": "アルミラージ",
+        "Name": "spiked hare",
+        "NameJP": "アルミラージ",
+        "Sex": 0,
+        "Chapter": 0
+    },
+    {
+        "ID": 10081,
+        "JLabel": "ドラキー",
+        "Name": "dracky",
+        "NameJP": "ドラキー",
+        "Sex": 0,
+        "Chapter": 0
+    },
+    {
+        "ID": 10082,
+        "JLabel": "まほうつかい",
+        "Name": "prestidigitator",
+        "NameJP": "まほうつかい",
+        "Sex": 0,
+        "Chapter": 0
+    },
+    {
+        "ID": 10083,
+        "JLabel": "おおさそり",
+        "Name": "scorpion",
+        "NameJP": "おおさそり",
+        "Sex": 0,
+        "Chapter": 0
+    },
+    {
+        "ID": 10084,
+        "JLabel": "がいこつ",
+        "Name": "skeleton",
+        "NameJP": "がいこつ",
+        "Sex": 0,
+        "Chapter": 0
+    },
+    {
+        "ID": 10085,
+        "JLabel": "メーダ",
+        "Name": "lunatick",
+        "NameJP": "メーダ",
+        "Sex": 0,
+        "Chapter": 0
+    },
+    {
+        "ID": 10086,
+        "JLabel": "リカント",
+        "Name": "bewarewolf",
+        "NameJP": "リカント",
+        "Sex": 0,
+        "Chapter": 0
+    },
+    {
+        "ID": 10087,
+        "JLabel": "キメラ",
+        "Name": "chimaera",
+        "NameJP": "キメラ",
+        "Sex": 0,
+        "Chapter": 0
+    },
+    {
+        "ID": 10088,
+        "JLabel": "ドロル",
+        "Name": "drohl drone",
+        "NameJP": "ドロル",
+        "Sex": 0,
+        "Chapter": 0
+    },
+    {
+        "ID": 10089,
+        "JLabel": "よろいのきし",
+        "Name": "knight errant",
+        "NameJP": "よろいのきし",
+        "Sex": 0,
+        "Chapter": 0
+    },
+    {
+        "ID": 10090,
+        "JLabel": "ばくだんいわ",
+        "Name": "rockbomb",
+        "NameJP": "ばくだんいわ",
+        "Sex": 0,
+        "Chapter": 0
+    },
+    {
+        "ID": 10091,
+        "JLabel": "おおきづち",
+        "Name": "hammerhood",
+        "NameJP": "おおきづち",
+        "Sex": 0,
+        "Chapter": 0
+    },
+    {
+        "ID": 10092,
+        "JLabel": "じんめんじゅ",
+        "Name": "treeface",
+        "NameJP": "じんめんじゅ",
+        "Sex": 0,
+        "Chapter": 0
+    },
+    {
+        "ID": 10093,
+        "JLabel": "ひとくいばこ",
+        "Name": "cannibox",
+        "NameJP": "ひとくいばこ",
+        "Sex": 0,
+        "Chapter": 0
+    },
+    {
+        "ID": 10094,
+        "JLabel": "イエティ",
+        "Name": "powie yowie",
+        "NameJP": "イエティ",
+        "Sex": 0,
+        "Chapter": 0
+    },
+    {
+        "ID": 10095,
+        "JLabel": "キラーマシン",
+        "Name": "killing machine",
+        "NameJP": "キラーマシン",
+        "Sex": 0,
+        "Chapter": 0
+    },
+    {
+        "ID": 10096,
+        "JLabel": "マドハンド",
+        "Name": "muddy hand",
+        "NameJP": "マドハンド",
+        "Sex": 0,
+        "Chapter": 0
+    },
+    {
+        "ID": 10097,
+        "JLabel": "フレイム",
+        "Name": "dancing flame",
+        "NameJP": "フレイム",
+        "Sex": 0,
+        "Chapter": 0
+    },
+    {
+        "ID": 10098,
+        "JLabel": "リリパット",
+        "Name": "bodkin archer",
+        "NameJP": "リリパット",
+        "Sex": 0,
+        "Chapter": 0
+    },
+    {
+        "ID": 10099,
+        "JLabel": "ホークマン",
+        "Name": "hawk man",
+        "NameJP": "ホークマン",
+        "Sex": 0,
+        "Chapter": 0
+    },
+    {
+        "ID": 10100,
+        "JLabel": "メタルスライム",
+        "Name": "metal slime",
+        "NameJP": "メタルスライム",
+        "Sex": 0,
+        "Chapter": 0
+    },
+    {
+        "ID": 10101,
+        "JLabel": "キャタピラー",
+        "Name": "killerpillar",
+        "NameJP": "キャタピラー",
+        "Sex": 0,
+        "Chapter": 0
+    },
+    {
+        "ID": 10102,
+        "JLabel": "トロル",
+        "Name": "troll",
+        "NameJP": "トロル",
+        "Sex": 0,
+        "Chapter": 0
+    },
+    {
+        "ID": 10103,
+        "JLabel": "ゴーレム",
+        "Name": "golem",
+        "NameJP": "ゴーレム",
+        "Sex": 0,
+        "Chapter": 0
+    },
+    {
+        "ID": 10104,
+        "JLabel": "ブリザード",
+        "Name": "frostburn",
+        "NameJP": "ブリザード",
+        "Sex": 0,
+        "Chapter": 0
+    },
+    {
+        "ID": 10105,
+        "JLabel": "ゴースト",
+        "Name": "ghost",
+        "NameJP": "ゴースト",
+        "Sex": 0,
+        "Chapter": 0
+    },
+    {
+        "ID": 10106,
+        "JLabel": "ベビーパンサー",
+        "Name": "great sabrecub",
+        "NameJP": "ベビーパンサー",
+        "Sex": 0,
+        "Chapter": 0
+    },
+    {
+        "ID": 10107,
+        "JLabel": "フリークラフトモンスター型32",
+        "Name": "",
+        "NameJP": "",
+        "Sex": 0,
+        "Chapter": 0
+    },
+    {
+        "ID": 10108,
+        "JLabel": "フリークラフトモンスター型33",
+        "Name": "",
+        "NameJP": "",
+        "Sex": 0,
+        "Chapter": 0
+    },
+    {
+        "ID": 10109,
+        "JLabel": "フリークラフトモンスター型34",
+        "Name": "",
+        "NameJP": "",
+        "Sex": 0,
+        "Chapter": 0
+    },
+    {
+        "ID": 10110,
+        "JLabel": "フリークラフトモンスター型35",
+        "Name": "",
+        "NameJP": "",
+        "Sex": 0,
+        "Chapter": 0
+    },
+    {
+        "ID": 10111,
+        "JLabel": "フリークラフトモンスター型36",
+        "Name": "",
+        "NameJP": "",
+        "Sex": 0,
+        "Chapter": 0
+    },
+    {
+        "ID": 10112,
+        "JLabel": "フリークラフトモンスター型37",
+        "Name": "",
+        "NameJP": "",
+        "Sex": 0,
+        "Chapter": 0
+    },
+    {
+        "ID": 10113,
+        "JLabel": "フリークラフトモンスター型38",
+        "Name": "",
+        "NameJP": "",
+        "Sex": 0,
+        "Chapter": 0
+    },
+    {
+        "ID": 10114,
+        "JLabel": "フリークラフトモンスター型39",
+        "Name": "",
+        "NameJP": "",
+        "Sex": 0,
+        "Chapter": 0
+    },
+    {
+        "ID": 10115,
+        "JLabel": "フリークラフトモンスター型40",
+        "Name": "",
+        "NameJP": "",
+        "Sex": 0,
+        "Chapter": 0
+    },
+    {
+        "ID": 10116,
+        "JLabel": "フリークラフトモンスター型41",
+        "Name": "",
+        "NameJP": "",
+        "Sex": 0,
+        "Chapter": 0
+    },
+    {
+        "ID": 10117,
+        "JLabel": "フリークラフトモンスター型42",
+        "Name": "",
+        "NameJP": "",
+        "Sex": 0,
+        "Chapter": 0
+    },
+    {
+        "ID": 10118,
+        "JLabel": "フリークラフトモンスター型43",
+        "Name": "",
+        "NameJP": "",
+        "Sex": 0,
+        "Chapter": 0
+    },
+    {
+        "ID": 10119,
+        "JLabel": "フリークラフトモンスター型44",
+        "Name": "",
+        "NameJP": "",
+        "Sex": 0,
+        "Chapter": 0
+    },
+    {
+        "ID": 10120,
+        "JLabel": "フリークラフトモンスター型45",
+        "Name": "",
+        "NameJP": "",
+        "Sex": 0,
+        "Chapter": 0
+    }
+]

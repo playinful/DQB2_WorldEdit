@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Net;
 using System.Runtime.CompilerServices;
+using System.Security.Cryptography.X509Certificates;
 using Godot;
 
 namespace EyeOfRubiss
@@ -9,6 +11,37 @@ namespace EyeOfRubiss
     /// <summary> Static class holding extension methods. </summary>
     public static class Extensions
     {
+        public static ushort GetBlockID(this ushort value)
+        {
+            return (ushort)(value & 0b0000_0111_1111_1111);
+        }
+        public static ushort SetBlockID(this ushort value, ushort blockId)
+        {
+           blockId = blockId.GetBlockID();
+           value = (ushort)(value & 0b1111_1000_0000_0000);
+           return (ushort)(value | blockId);
+        }
+        public static ChiselShape GetChiselShape(this ushort value)
+        {
+            return (ChiselShape)(value >> 12);
+        }
+        public static ushort SetChiselShape(this ushort value, ChiselShape shape)
+        {
+            ushort shapeValue = (ushort)((ushort)shape << 12);
+            value = (ushort)(value & 0b0000_1111_1111_1111);
+            return (ushort)(value | shapeValue);
+        }
+        public static bool GetPlayerPlaced(this ushort value)
+        {
+            return (value & 0b0000_1000_0000_0000) != 0;
+        }
+        public static ushort SetPlayerPlaced(this ushort value, bool playerPlaced)
+        {
+            ushort playerPlacedValue = (ushort)((playerPlaced ? 1 : 0) << 11);
+            value = (ushort)(value & 0b1111_0111_1111_1111);
+            return (ushort)(value | playerPlacedValue);
+        }
+
         public static void SetCurrentDirRecursive(this FileDialog dialog, string path)
         {
             string[] directories = path.Split([Path.DirectorySeparatorChar, Path.AltDirectorySeparatorChar]);
@@ -24,6 +57,17 @@ namespace EyeOfRubiss
         {
             dialog.ClearFilters();
             dialog.AddFilter(filter, description);
+        }
+        public static void SetFilter(this FileDialog dialog, string[] filter, string[] description = null)
+        {
+            dialog.ClearFilters();
+            for (int i = 0; i < filter.Length; i++)
+            {
+                string desc = "";
+                if (description is not null && description.Length > i)
+                    desc = description[i];
+                dialog.AddFilter(filter[i], desc);
+            }
         }
 
         public static bool ToggleVisible(this CanvasItem node)

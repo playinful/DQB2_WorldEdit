@@ -1,14 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://d0cfwkih6w2xq"]
+[gd_scene load_steps=2 format=3 uid="uid://d0cfwkih6w2xq"]
 
-[ext_resource type="Texture2D" uid="uid://dtxctoyerfwlq" path="res://Resources/Mesh/BGParts/wooden_pillar/wooden_pillar_color.png" id="1_5g2qp"]
-[ext_resource type="ArrayMesh" uid="uid://mfeehr21mce4" path="res://Resources/Mesh/BGParts/wooden_pillar/wooden_pillar.obj" id="2_bucqn"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wyp7y"]
-albedo_texture = ExtResource("1_5g2qp")
+[ext_resource type="ArrayMesh" uid="uid://cp4vmnj84a6nf" path="res://Resources/Mesh/arrow.obj" id="1_pjy70"]
 
 [node name="ModelTest" type="Node3D"]
 
-[node name="WoodenPillar" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 4)
-material_override = SubResource("StandardMaterial3D_wyp7y")
-mesh = ExtResource("2_bucqn")
+[node name="Arrow" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+mesh = ExtResource("1_pjy70")

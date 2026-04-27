@@ -13,7 +13,7 @@ public class DioramaDataAssetDQB1
         [JsonPropertyName("posX")] public int X { get; set; }
         [JsonPropertyName("posY")] public int Y { get; set; }
         [JsonPropertyName("posZ")] public int Z { get; set; }
-        [JsonPropertyName("dir")] public int Direction { get; set; }
+        [JsonPropertyName("dir")] public byte Direction { get; set; }
         [JsonPropertyName("bgPartsId")] public ushort BGPartsID { get; set; }
     }
 }

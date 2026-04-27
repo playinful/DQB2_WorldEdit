@@ -1,13 +1,20 @@
 using EyeOfRubiss.Info;
 using Godot;
 using System;
+using System.Formats.Tar;
+using System.Reflection.Metadata;
 using System.Runtime.ExceptionServices;
+using System.Transactions;
 
 namespace EyeOfRubiss
 {
-    public partial class VoxelGeneratorDQB1(WorldData worldData) : VoxelGeneratorScript
+    public partial class VoxelGeneratorDQB1(WorldData worldData, bool showTerrain = true, bool showFluid = true, bool showPartsBlock = false) : VoxelGeneratorScript
     {
         private WorldData _WorldData { get; set; } = worldData;
+
+        public bool ShowTerrain { get; set; } = showTerrain;
+        public bool ShowFluid { get; set; } = showFluid;
+        public bool ShowPartsBlock { get; set; } = showPartsBlock;
 
         const int CHANNEL = (int)VoxelBuffer.ChannelId.ChannelType;
 
@@ -18,10 +25,15 @@ namespace EyeOfRubiss
             if (_WorldData is null)
                     return;
 
+            if (originInVoxels.Y < 0 && !ShowPartsBlock)
+            {
+                outBuffer.Fill(Constants.VOXEL_FLOOR_COLLISION);
+                return;
+            }
             Vector3I bufferSize = outBuffer.GetSize();
 
             //Step 1: check if inbounds
-            if (!StageData.PositionIsInBounds(originInVoxels))
+            if (!WorldData.PositionIsInBounds(originInVoxels))
                 return ;
 
             // Step 2: check if chunk exists
@@ -35,12 +47,49 @@ namespace EyeOfRubiss
                     for (int z = 0; z < bufferSize.Z; z++)
                     {
                         Vector3I coords = originInVoxels + new Vector3I(x, y, z);
-                        byte block = _WorldData.GetBlockAtPosition(coords);
-                        Info.DQB1.BlockInfo blockInfo = Info.DQB1.BlockInfo.Get(block);
-                        ulong voxelId = blockInfo.Voxel;
-                        outBuffer.SetVoxel(voxelId, x, y, z, CHANNEL);
+                        outBuffer.SetVoxel(GetVoxelAtPosition(_WorldData, coords, ShowTerrain, ShowFluid, ShowPartsBlock), x, y, z, CHANNEL);
                     }
                 }
+            }
+        }
+
+        public static ulong GetVoxelAtPosition(WorldData worldData, Vector3I position, bool showTerrain = true, bool showFluid = true, bool showPartsBlock = false)
+        {
+            byte block = worldData.GetBlockAtPosition(position);
+            Info.DQB1.BlockInfo blockInfo = Info.DQB1.BlockInfo.Get(block);
+
+            if (showPartsBlock)
+                return (ulong)blockInfo.PartsType;
+                
+            ulong voxelId = blockInfo.Voxel;
+
+            if (voxelId != Constants.VOXEL_AIR)
+                return showTerrain ? voxelId : Constants.VOXEL_TERRAIN_COLLISION;
+
+            PartsType partsType = blockInfo.PartsType;
+            FluidType fluid = worldData.GetFluidAtPosition(position);
+
+            if (partsType == PartsType.None)
+            {
+                return fluid switch
+                {
+                    FluidType.Water    => showFluid ? 640 : Constants.VOXEL_FLUID_COLLISION,
+                    FluidType.HotWater => showFluid ? 646 : Constants.VOXEL_FLUID_COLLISION,
+                    FluidType.Poison   => showFluid ? 652 : Constants.VOXEL_FLUID_COLLISION,
+                    FluidType.Lava     => showFluid ? 658 : Constants.VOXEL_FLUID_COLLISION,
+                    _ => Constants.VOXEL_AIR,
+                };
+            }
+            else
+            {
+                return fluid switch
+                {
+                    FluidType.Water    => showFluid ? 643 : Constants.VOXEL_FLUID_PARTSBLOCK_COLLISION,
+                    FluidType.HotWater => showFluid ? 649 : Constants.VOXEL_FLUID_PARTSBLOCK_COLLISION,
+                    FluidType.Poison   => showFluid ? 655 : Constants.VOXEL_FLUID_PARTSBLOCK_COLLISION,
+                    FluidType.Lava     => showFluid ? 661 : Constants.VOXEL_FLUID_PARTSBLOCK_COLLISION,
+                    _ => Constants.VOXEL_PARTSBLOCK,
+                };
             }
         }
     }

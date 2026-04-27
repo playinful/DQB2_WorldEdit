@@ -1,4 +1,5 @@
 using EyeOfRubiss.Info;
+using EyeOfRubiss.Info.DQB2;
 using EyeOfRubiss.Nodes;
 using Gizmo3DPlugin;
 using Godot;
@@ -8,6 +9,8 @@ using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Reflection.Metadata;
+using System.Runtime.CompilerServices;
+using System.Text.Json;
 using System.Text.RegularExpressions;
 using System.Threading;
 using System.Xml.XPath;
@@ -23,7 +26,7 @@ namespace EyeOfRubiss.Scenes
 		[Export] public VoxelTerrain _VoxelTerrain_PropShells;
 		public VoxelTool _VoxelTool_PropShells;
 		[Export] public Node3D _ResidentLayer;
-		[Export] public PropGridHacky _BGPartsGrid;
+		[Export] public BGPartsGridManager _BGPartsGridManager;
 		[Export] public NPCSprite _PlayerDisplay;
 
 		[Export] public CameraController _CameraController;
@@ -42,27 +45,38 @@ namespace EyeOfRubiss.Scenes
 
 		[Export] public PopupMenu _View_PopupMenu;
 		[Export] public PopupMenu _Edit_PopupMenu;
+		[Export] public PopupMenu _Collision_PopupMenu;
 
 		[Export] public Button _ChiselButton;
 		[Export] public Button _PasteButton;
 
+		[Export] public OptionButton _BGPartsBlock_OptionButton;
+
+		[Export] public OptionButton _FluidLevel_OptionButton;
+
+		[Export] private Window _Replace_Window;
+		[Export] private OptionButton _ReplaceWindow_OptionButton_Replace;
+		[Export] private OptionButton _ReplaceWindow_OptionButton_With;
+		[Export] private CheckBox _ReplaceWindow_CheckBox_InSelection;
+
+		[Export] private BGPartsEditor _Debug_PropEditor_Window;
+
 		[ExportGroup("Settings")]
 		[Export] public bool AutomaticallyGenerateBedrock = true;
 
-		private WorldHandler _WorldHandler;
+		[Signal] public delegate void ExportSelectionRequestedEventHandler();
 
-		public bool ShowDebugInfo { get; set; } = true;
-		public bool ShowFps { get; set; } = true;
-		public bool ShowTerrain { get; set; } = true;
-		public bool ShowPropShells { get; set; } = false;
-		public bool ShowBGParts { get; set; } = true;
-		public bool ShowNPCs { get; set; } = true;
-		public bool ShowPlayer { get; set; } = true;
+		private WorldHandler _WorldHandler;
 
 		private NPCSprite _SelectedNPCSprite;
 
 		private Vector3I? _AreaSelectionStart;
 		private Vector3I? _AreaSelectionEnd;
+
+		private bool _CollisionTerrain = true;
+		private bool _CollisionFluids = true;
+		private bool _CollisionBGParts = true;
+		private bool _CollisionFloor = false;
 
 		public override void _Ready()
 		{
@@ -72,10 +86,6 @@ namespace EyeOfRubiss.Scenes
 			_UpdateMenuButtons();
 		}
 
-		public override void _Process(double delta)
-		{
-			
-		}
 		public override void _PhysicsProcess(double delta)
 		{
 			UpdatePointedVoxel();
@@ -86,10 +96,23 @@ namespace EyeOfRubiss.Scenes
 			_Edit_PopupMenu?.SetItemDisabled(0, _AreaSelectionStart is null);
 			_Edit_PopupMenu?.SetItemDisabled(1, _AreaSelectionStart is null);
 			_Edit_PopupMenu?.SetItemDisabled(2, _AreaSelectionStart is null);
+			_Edit_PopupMenu?.SetItemDisabled(3, _AreaSelectionStart is null);
 
 			_PasteButton.Disabled = Clipboard is null;
 
-			_ChiselButton.Disabled = (_WorldHandler is not WorldHandlerDQB2) && (_WorldHandler is not WorldHandlerBlueprintDQB2);
+			int sourceGame = GetSourceGame();
+			_ChiselButton.Disabled = sourceGame == 1;
+
+			_Edit_PopupMenu?.SetItemDisabled(5, !(sourceGame == 1 || sourceGame == 2));
+
+			_BGPartsBlock_OptionButton.SetItemDisabled(8,  sourceGame == 1);
+			_BGPartsBlock_OptionButton.SetItemDisabled(9,  sourceGame == 1);
+			_BGPartsBlock_OptionButton.SetItemDisabled(10, sourceGame == 1);
+			if (sourceGame == 1 && (_BGPartsBlock_OptionButton.Selected == 8 || _BGPartsBlock_OptionButton.Selected == 9 || _BGPartsBlock_OptionButton.Selected == 10))
+			{
+				_BGPartsBlock_OptionButton.Select(0);
+				_BGPartsBlock = null;
+			}
 		}
 
 		public VoxelRaycastResult GetPointedVoxel()
@@ -99,8 +122,21 @@ namespace EyeOfRubiss.Scenes
 				-_CameraController.Transform.Basis.Z.Normalized() : // Cast directly forward from camera if mouse is captured
 				_CameraController.ProjectRayNormal(GetViewport().GetMousePosition()); // Otherwise cast by mouse position
 			
-			VoxelRaycastResult hit = _VoxelTool.Raycast(origin, forward, 4096);
+			VoxelRaycastResult hit = _VoxelTool.Raycast(origin, forward, 4096, collisionMask: GetCollisionMask());
 			return hit;
+		}
+		public uint GetCollisionMask()
+		{
+			uint collision = 0;
+			if (_CollisionTerrain)
+				collision |= 0b1;
+			if (_CollisionFluids)
+				collision |= 0b10;
+			if (_CollisionBGParts)
+				collision |= 0b100;
+			if (_CollisionFloor)
+				collision |= 0b1000;
+			return collision;
 		}
 		public Node3D GetPointedObject()
 		{
@@ -120,7 +156,7 @@ namespace EyeOfRubiss.Scenes
 			return collider.GetParent().GetParent<Node3D>();
 		}
 		private Vector3I? _LastPointedVoxel = null;
-		private void UpdatePointedVoxel()
+		private void UpdatePointedVoxel(bool forceUpdate = false)
 		{
 			VoxelRaycastResult result = GetPointedVoxel();
 			if (result is not null)
@@ -135,17 +171,14 @@ namespace EyeOfRubiss.Scenes
 				}
 				else if (BrushPrimary == BrushType.Paste)
 				{
-					if (Clipboard is not null)
-						ShowSelectionBox(result.PreviousPosition, Clipboard.Size);
-					else
-						ShowSelectionBox(result.PreviousPosition);
+					ShowSelectionBox(result.PreviousPosition);
 				}
 				else
 				{
 					ShowSelectionBox(result.Position);
 				}
 
-				if (_LastPointedVoxel == result.Position)
+				if ((!forceUpdate) && _LastPointedVoxel == result.Position)
 					return;
 				else
 					_LastPointedVoxel = result.Position;
@@ -161,9 +194,77 @@ namespace EyeOfRubiss.Scenes
 			}
 		}
 
+		private int GetSourceGame()
+		{
+			if (_WorldHandler is WorldHandlerDQB1)
+				return 1;
+			if (_WorldHandler is WorldHandlerDQB2)
+				return 2;
+			
+			if (_WorldHandler is WorldHandlerEyeOfRubissStructure wheors && wheors.Structure is EyeOfRubissStructure structure)
+			{
+				return structure.SourceGame;
+			}
 
+			return 0;
+		}
+
+
+
+		public void PopupReplaceWindow()
+		{
+			_Replace_Window.PopupCentered();
+
+			_ReplaceWindow_OptionButton_Replace.Clear();
+			_ReplaceWindow_OptionButton_With.Clear();
+
+			int sourceGame = GetSourceGame();
+			if (sourceGame == 1)
+			{
+				foreach (Info.DQB1.BlockInfo blockInfo in Info.DQB1.BlockInfo.GetAll().OrderBy(b => b.Sort))
+				{
+					_ReplaceWindow_OptionButton_Replace.AddItem(blockInfo.Name);
+					_ReplaceWindow_OptionButton_Replace.SetItemId(-1, blockInfo.ID);
+					_ReplaceWindow_OptionButton_With.AddItem(blockInfo.Name);
+					_ReplaceWindow_OptionButton_With.SetItemId(-1, blockInfo.ID);
+					_ReplaceWindow_OptionButton_Replace.Select(0);
+					_ReplaceWindow_OptionButton_With.Select(0);
+				}
+			}
+			else if (sourceGame == 2)
+			{
+				foreach (Info.DQB2.BlockInfo blockInfo in Info.DQB2.BlockInfo.GetAll().OrderBy(b => b.Sort))
+				{
+					_ReplaceWindow_OptionButton_Replace.AddItem(blockInfo.Name);
+					_ReplaceWindow_OptionButton_Replace.SetItemId(-1, blockInfo.ID);
+					_ReplaceWindow_OptionButton_With.AddItem(blockInfo.Name);
+					_ReplaceWindow_OptionButton_With.SetItemId(-1, blockInfo.ID);
+					_ReplaceWindow_OptionButton_Replace.Select(0);
+					_ReplaceWindow_OptionButton_With.Select(0);
+				}
+			}
+
+			if (_AreaSelectionStart is not null)
+			{
+				_ReplaceWindow_CheckBox_InSelection.Disabled = false;
+			}
+			else
+			{
+				_ReplaceWindow_CheckBox_InSelection.ButtonPressed = false;
+				_ReplaceWindow_CheckBox_InSelection.Disabled = true;
+			}
+		}
 
 		#region Input
+		public override void _Process(double delta)
+		{
+			if (Input.IsActionPressed(Constants.Controls.BRUSH_PRIMARY)   && BrushPrimary   == BrushType.Swap)
+				DoBrush(GetPointedVoxel(), BrushPrimary);
+			if (Input.IsActionPressed(Constants.Controls.BRUSH_SECONDARY) && BrushSecondary == BrushType.Swap)
+				DoBrush(GetPointedVoxel(), BrushSecondary);
+			if (Input.IsActionPressed(Constants.Controls.BRUSH_TERTIARY)  && BrushTertiary  == BrushType.Swap)
+				DoBrush(GetPointedVoxel(), BrushTertiary);
+		}
 		public override void _UnhandledInput(InputEvent @event)
 		{
 			if (_Gizmo.Editing)
@@ -174,6 +275,9 @@ namespace EyeOfRubiss.Scenes
                 ResetCamera();
             }
 
+			if (@event.IsActionPressed(Constants.Controls.SCREENSHOT))
+				TakeScreenshot();
+			
 			if (_WorldHandler is null)
 				return;
 
@@ -184,15 +288,24 @@ namespace EyeOfRubiss.Scenes
 			if (@event.IsActionPressed(Constants.Controls.BRUSH_TERTIARY))
 				DoBrush(GetPointedVoxel(), BrushTertiary);
 			
-			if (Input.IsActionPressed(Constants.Controls.DELETE))
+			if (@event.IsActionPressed(Constants.Controls.DELETE))
 				DeleteSelection();
-			if (Input.IsActionPressed(Constants.Controls.KEYBOARD_SHORTCUT_COPY))
+			if (@event.IsActionPressed(Constants.Controls.KEYBOARD_SHORTCUT_COPY))
 				DoCopy();
-			if (Input.IsActionPressed(Constants.Controls.KEYBOARD_SHORTCUT_CUT))
+			if (@event.IsActionPressed(Constants.Controls.KEYBOARD_SHORTCUT_CUT))
 				DoCut();
 
             if (@event.IsActionPressed(Constants.Controls.KEYBOARD_SHORTCUT_FILL))
 				FillSelection();
+			
+			if (OS.IsDebugBuild() && @event.IsActionPressed(Constants.Controls.PROP_EDITOR) && _WorldHandler is WorldHandlerDQB2 worldHandler && worldHandler._StageData is StageData stageData)
+			{
+				if (stageData.GetOverlappingBGParts(GetPointedVoxel().Position) is StageData.BGParts parts)
+				{
+					_Debug_PropEditor_Window.SetBGParts(parts);
+					_Debug_PropEditor_Window.PopupCentered();
+				}
+			}
 		}
 
 		public void ResetCamera()
@@ -202,22 +315,12 @@ namespace EyeOfRubiss.Scenes
 				_CameraController.Position = Vector3.Up * 32;
 				_CameraController.Rotation = Vector3.Zero;
 			}
-			else if (_WorldHandler is WorldHandlerBlueprintAssetDQB1)
-			{
-				_CameraController.Position = new Vector3(16, 8, -8);
-				_CameraController.Rotation = Vector3.Up * Mathf.Pi;
-			}
-			else if (_WorldHandler is WorldHandlerDioramaAssetDQB1)
-			{
-				_CameraController.Position = new Vector3(16, 8, -8);
-				_CameraController.Rotation = Vector3.Up * Mathf.Pi;
-			}
 			else if (_WorldHandler is WorldHandlerDQB2)
 			{
 				_CameraController.Position = Vector3.Up * 96;
 				_CameraController.Rotation = Vector3.Zero;
 			}
-			else if (_WorldHandler is WorldHandlerBlueprintDQB2)
+			else if (_WorldHandler is WorldHandlerEyeOfRubissStructure)
 			{
 				_CameraController.Position = new Vector3(16, 8, -8);
 				_CameraController.Rotation = Vector3.Up * Mathf.Pi;
@@ -233,12 +336,24 @@ namespace EyeOfRubiss.Scenes
 			_CameraController.Projection = Camera3D.ProjectionType.Perspective;
         }
 		
+		public void TakeScreenshot()
+		{
+			DateTime dateTime = DateTime.Now;
+			var path = Path.Join(System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyPictures), "Screenshot_" + dateTime.ToString("yyyy-MM-dd_HH-mm-ss.fff") + ".png");
+			GetViewport().GetTexture().GetImage().SavePng(path);
+		}
+
 		public byte GetBGPartsPlacementDirection()
         {
-			int rotation = (int)Math.Round(_CameraController.Rotation.Y / (Math.PI / 2)) % 4;
-			if (rotation < 0)
-				rotation += 4;
-			return (byte)rotation;
+			if (_BGPartsPlacementDirection >= 4)
+			{
+				int rotation = (int)Math.Round(_CameraController.Rotation.Y / (Math.PI / 2)) % 4;
+				if (rotation < 0)
+					rotation += 4;
+				return (byte)rotation;	
+			}
+			else
+				return _BGPartsPlacementDirection;
         }
 		#endregion
 
@@ -255,6 +370,13 @@ namespace EyeOfRubiss.Scenes
 					break;
 				case 6: // Fill
 					FillSelection();
+					break;
+				case 5: // Export Selection
+					EmitSignal(SignalName.ExportSelectionRequested);
+					break;
+
+				case 7: // Replace...
+					PopupReplaceWindow();
 					break;
 
 				case 0: // Make Superflat...
@@ -290,6 +412,11 @@ namespace EyeOfRubiss.Scenes
 					_View_PopupMenu.SetItemChecked(index, showTerrain);
 					ChangeTerrainDisplay(showTerrain);
 					break;
+				case 8: // Fluids
+					bool showFluids = !_View_PopupMenu.IsItemChecked(index);
+					_View_PopupMenu.SetItemChecked(index, showFluids);
+					ChangeFluidsDisplay(showFluids);
+					break;
 				case 1: // Props
 					bool showBGParts = !_View_PopupMenu.IsItemChecked(index);
 					_View_PopupMenu.SetItemChecked(index, showBGParts);
@@ -310,6 +437,89 @@ namespace EyeOfRubiss.Scenes
 					_View_PopupMenu.SetItemChecked(index, showPlayer);
 					ChangePlayerDisplay(showPlayer);
 					break;
+			}
+		}
+		public void _On_Collision_PopupMenu_IndexPressed(int index)
+		{
+			int id = _Collision_PopupMenu.GetItemId(index);
+			switch (id)
+			{
+				case 0: // Terrain
+					_CollisionTerrain = !_Collision_PopupMenu.IsItemChecked(index);
+					_Collision_PopupMenu.SetItemChecked(index, _CollisionTerrain);
+					break;
+				case 1: // Fluids
+					_CollisionFluids = !_Collision_PopupMenu.IsItemChecked(index);
+					_Collision_PopupMenu.SetItemChecked(index, _CollisionFluids);
+					break;
+				case 2: // PartsBlock
+					_CollisionBGParts = !_Collision_PopupMenu.IsItemChecked(index);
+					_Collision_PopupMenu.SetItemChecked(index, _CollisionBGParts);
+					break;
+				case 3: // Floor
+					_CollisionFloor = !_Collision_PopupMenu.IsItemChecked(index);
+					_Collision_PopupMenu.SetItemChecked(index, _CollisionFloor);
+					break;
+			}
+		}
+
+		public void _On_BGPartsPlacementDirection_OptionButton_ItemSelected(int index)
+		{
+			if (index <= 0)
+				_BGPartsPlacementDirection = 4;
+			else
+				_BGPartsPlacementDirection = (byte)(index - 1);
+		}
+		public void _On_BGPartsCollisionEnabled_Toggled(bool toggledOn)
+		{
+			_BGPartsCollisionEnabled = toggledOn;
+		}
+		public void _On_BGPartsEffectsEnabled_Toggled(bool toggledOn)
+		{
+			_BGPartsEffectsEnabled = toggledOn;
+		}
+		public void _On_BGPartsBlock_OptionButton_ItemSelected(int index)
+		{
+			int id = _BGPartsBlock_OptionButton.GetItemId(index);
+			int partsType = id - 1;
+			if (Enum.IsDefined(typeof(PartsType), partsType))
+			{
+				_BGPartsBlock = (PartsType)partsType;
+			}
+			else
+			{
+				_BGPartsBlock = null;
+			}
+		}
+
+		public void _On_FluidLevel_OptionButton_ItemSelected(int index)
+		{
+			int id = _FluidLevel_OptionButton.GetItemId(index);
+			_FluidLevel = id;
+		}
+		
+		public void _On_SelectArea_Mode_OptionButton_ItemSelected(int index)
+		{
+			_SelectArea_Mode = index;
+		}
+		public void _On_Paste_Air_CheckBox_Toggled(bool toggledOn)
+		{
+			_Paste_Air = toggledOn;
+		}
+
+		public void _On_ReplaceWindow_Button_Apply_Pressed()
+		{
+			int replace = _ReplaceWindow_OptionButton_Replace.GetItemId(_ReplaceWindow_OptionButton_Replace.Selected);
+			int with = _ReplaceWindow_OptionButton_With.GetItemId(_ReplaceWindow_OptionButton_With.Selected);
+
+			if (_ReplaceWindow_CheckBox_InSelection.ButtonPressed && _AreaSelectionStart is Vector3I from)
+			{
+				Vector3I to = _AreaSelectionEnd ?? from;
+				_WorldHandler?.ReplaceBlock(replace, with, from, to);
+			}
+			else
+			{
+				_WorldHandler?.ReplaceBlock(replace, with);
 			}
 		}
 		#endregion
@@ -346,86 +556,36 @@ namespace EyeOfRubiss.Scenes
             }
         }
 		
-		public void LoadBlueprintAssetDQB1(BlueprintAssetDQB1 blueprint)
+		public void LoadParamData(ParamData paramData)
 		{
-			WorldHandlerBlueprintAssetDQB1 worldHandler;
-            if (_WorldHandler is WorldHandlerBlueprintAssetDQB1)
+			WorldHandlerDQB1 worldHandler;
+            if (_WorldHandler is WorldHandlerDQB1)
             {
-                worldHandler = _WorldHandler as WorldHandlerBlueprintAssetDQB1;
+                worldHandler = _WorldHandler as WorldHandlerDQB1;
             }
 			else
             {
-                worldHandler = new WorldHandlerBlueprintAssetDQB1(this);
+                worldHandler = new WorldHandlerDQB1(this);
 				_WorldHandler = worldHandler;
 				ResetCamera();
             }
 
-			worldHandler.Load(blueprint);
-			TranslateTerrain(Vector3.Zero);
+			worldHandler.LoadParamData(paramData);
+			TranslateTerrain(new Vector3(-768, 0, -768));
+			//ResetCamera();
 			
 			_UpdateMenuButtons();
 		}
-		public void UnloadBlueprintAssetDQB1()
+		public void UnloadParamData()
 		{
-            if (_WorldHandler is WorldHandlerBlueprintAssetDQB1 worldHandler)
+            if (_WorldHandler is WorldHandlerDQB1 worldHandler)
             {
-                worldHandler.Unload();
-				UnselectArea();
+                worldHandler.UnloadParamData();
 			
 				_UpdateMenuButtons();
             }
 		}
 
-		public void LoadDioramaHeaderAssetDQB1(DioramaHeaderAssetDQB1 header)
-		{
-            if (_WorldHandler is not WorldHandlerDioramaAssetDQB1 worldHandler)
-            {
-                worldHandler = new WorldHandlerDioramaAssetDQB1(this);
-				_WorldHandler = worldHandler;
-				ResetCamera();
-            }
-
-			worldHandler.LoadHeader(header);
-			TranslateTerrain(Vector3.Zero);
-			
-			_UpdateMenuButtons();
-		}
-		public void UnloadDioramaHeaderAssetDQB1()
-		{
-			if (_WorldHandler is WorldHandlerDioramaAssetDQB1 worldHandler)
-			{
-				worldHandler.UnloadHeader();
-				UnselectArea();
-			
-				_UpdateMenuButtons();
-			}
-		}
-
-		public void LoadDioramaDataAssetDQB1(DioramaDataAssetDQB1 data)
-		{
-            if (_WorldHandler is not WorldHandlerDioramaAssetDQB1 worldHandler)
-            {
-                worldHandler = new WorldHandlerDioramaAssetDQB1(this);
-				_WorldHandler = worldHandler;
-				ResetCamera();
-            }
-
-			worldHandler.LoadData(data);
-			TranslateTerrain(Vector3.Zero);
-			
-			_UpdateMenuButtons();
-		}
-		public void UnloadDioramaDataAssetDQB1()
-		{
-			if (_WorldHandler is WorldHandlerDioramaAssetDQB1 worldHandler)
-			{
-				worldHandler.UnloadData();
-				UnselectArea();
-			
-				_UpdateMenuButtons();
-			}
-		}
-		
 		public void LoadStageData(StageData stageData)
         {
 			WorldHandlerDQB2 worldHandler;
@@ -485,17 +645,17 @@ namespace EyeOfRubiss.Scenes
             }
         }
 		
-		public void LoadBlueprintDQB2(Blueprint blueprint)
+		public void LoadEyeOfRubissStructure(EyeOfRubissStructure structure)
 		{
-			if (_WorldHandler is WorldHandlerBlueprintDQB2)
+			if (_WorldHandler is WorldHandlerEyeOfRubissStructure)
 			{
-				(_WorldHandler as WorldHandlerBlueprintDQB2).Load(blueprint);
+				(_WorldHandler as WorldHandlerEyeOfRubissStructure).Load(structure);
 			}
 			else
 			{
-				WorldHandlerBlueprintDQB2 worldHandler = new WorldHandlerBlueprintDQB2(this);
+				WorldHandlerEyeOfRubissStructure worldHandler = new WorldHandlerEyeOfRubissStructure(this);
 				_WorldHandler = worldHandler;
-				worldHandler.Load(blueprint);
+				worldHandler.Load(structure);
 				
 				ResetCamera();
 			}
@@ -504,9 +664,9 @@ namespace EyeOfRubiss.Scenes
 			
 			_UpdateMenuButtons();
 		}
-		public void UnloadBlueprintDQB2()
+		public void UnloadEyeOfRubissStructure()
 		{
-            if (_WorldHandler is WorldHandlerBlueprintDQB2 worldHandler)
+            if (_WorldHandler is WorldHandlerEyeOfRubissStructure worldHandler)
             {
                 worldHandler.Unload();
 				UnselectArea();
@@ -524,44 +684,64 @@ namespace EyeOfRubiss.Scenes
 		{
 			_VoxelTerrain.Position = position;
 			_VoxelTerrain_PropShells.Position = position;
-			_BGPartsGrid.Position = position;
+			_BGPartsGridManager.Position = position;
 		}
 		#endregion
 
 		#region Display options
+		public bool ShowFps { get; set; } = true;
 		public void ChangeFPSDisplay(bool show)
 		{
 			ShowFps = show;
 			_FPSLabel.Visible = show;
 		}
+		
+		public bool ShowDebugInfo { get; set; } = true;
 		public void ChangeDebugInfoDisplay(bool show)
 		{
 			ShowDebugInfo = show;
 			_DebugInfoContainer.Visible = show;
 		}
+		
+		public bool ShowTerrain { get; set; } = true;
 		public void ChangeTerrainDisplay(bool show)
 		{
 			ShowTerrain = show;
-			_VoxelTerrain.Visible = show;
 			_WorldHandler?.OnTerrainDisplayChanged(show);
 		}
+		
+		public bool ShowFluids { get; set; } = true;
+		public void ChangeFluidsDisplay(bool show)
+		{
+			ShowFluids = show;
+			_WorldHandler?.OnFluidsDisplayChanged(show);
+		}
+		
+		public bool ShowPropShells { get; set; } = false;
 		public void ChangePartsBlockDisplay(bool show)
 		{
 			ShowPropShells = show;
-			_WorldHandler?.OnPropShellsDisplayChanged(show);
+			_VoxelTerrain_PropShells.Visible = show;
+			_WorldHandler?.OnPartsBlockDisplayChanged(show);
 		}
+		
+		public bool ShowBGParts { get; set; } = true;
 		public void ChangeBGPartsDisplay(bool show)
 		{
 			ShowBGParts = show;
-			_BGPartsGrid.Visible = show;
-			_WorldHandler?.OnPropsDisplayChanged(show);
+			_BGPartsGridManager.Visible = show;
+			_WorldHandler?.OnBGPartsDisplayChanged(show);
 		}
+		
+		public bool ShowPlayer { get; set; } = true;
 		public void ChangePlayerDisplay(bool show)
 		{
 			ShowPlayer = show;
 			_PlayerDisplay.Visible = show;
 			_WorldHandler?.OnPlayerDisplayChanged(show);
 		}
+		
+		public bool ShowNPCs { get; set; } = true;
 		public void ChangeNPCDisplay(bool show)
 		{
 			ShowNPCs = show;
@@ -601,6 +781,17 @@ namespace EyeOfRubiss.Scenes
 		public BrushObjectModeEnum BrushObjectMode = BrushObjectModeEnum.Block;
 		public int BrushObject = 1;
 
+		private byte _BGPartsPlacementDirection = byte.MaxValue;
+		private bool _BGPartsCollisionEnabled = true;
+		private bool _BGPartsEffectsEnabled = true;
+		private PartsType? _BGPartsBlock = null;
+
+		private int _FluidLevel = (int)FluidLevel.Full;
+
+		private int _SelectArea_Mode = 0;
+
+		private bool _Paste_Air = false;
+
 		public void SetBrushPrimary(BrushType brush)
 		{
 			BrushPrimary = brush;
@@ -637,7 +828,7 @@ namespace EyeOfRubiss.Scenes
 					break;
 
 				case BrushType.Erase:
-					_WorldHandler.DoEraser(result.Position);
+					_WorldHandler?.DoEraser(result.Position);
 					break;
 
                 case BrushType.Pencil:
@@ -645,28 +836,23 @@ namespace EyeOfRubiss.Scenes
                     break;
 
                 case BrushType.Swap:
-					switch (BrushObjectMode)
-					{
-						case BrushObjectModeEnum.Block:
-							_WorldHandler.DoSetBlock(result.Position, BrushObject);
-							break;
-						case BrushObjectModeEnum.BGParts:
-							_WorldHandler.DoSetBGParts(result.Position, BrushObject);
-							break;
-						case BrushObjectModeEnum.Fluid:
-							_WorldHandler.DoSetFluid(result.Position, BrushObject);
-							break;
-					}
+					DoPencil(result.Position);
+					break;
+				
+				case BrushType.Paste:
+					_WorldHandler?.DoPaste(result.PreviousPosition, Clipboard, _Paste_Air);
 					break;
 
 				case BrushType.Eyedropper:
-					_WorldHandler.DoEyedropper(result.Position);
+					_WorldHandler?.DoEyedropper(result.Position);
 					break;
 				
 				case BrushType.SelectArea:
 					DoSelectArea(result.Position);
 					break;
 			}
+
+			UpdatePointedVoxel(true);
 		}
 
         private void DoPencil(Vector3I position)
@@ -674,32 +860,53 @@ namespace EyeOfRubiss.Scenes
             switch (BrushObjectMode)
             {
                 case BrushObjectModeEnum.Block:
-                    _WorldHandler.DoSetBlock(position, BrushObject);
+                    _WorldHandler?.DoSetBlock(position, BrushObject);
                     break;
                 case BrushObjectModeEnum.BGParts:
-                    _WorldHandler.DoSetBGParts(position, BrushObject);
+                    _WorldHandler?.DoSetBGParts(position, BrushObject, partsBlock: _BGPartsBlock, collision: _BGPartsCollisionEnabled, effects: _BGPartsEffectsEnabled);
                     break;
                 case BrushObjectModeEnum.Fluid:
-                    _WorldHandler.DoSetFluid(position, BrushObject);
+                    _WorldHandler?.DoSetFluid(position, BrushObject, _FluidLevel);
                     break;
             }
         }
 
         public void DoSelectArea(Vector3I position)
 		{
-			if (_AreaSelectionEnd is null && _AreaSelectionStart is Vector3I ass)
+			if (_SelectArea_Mode == 1)
 			{
-				Vector3I start = ass.Min(position);
-				Vector3I end = ass.Max(position);
-				_AreaSelectionStart = start;
-				_AreaSelectionEnd = end;
-				ShowBoundaryBox(start, end - start + Vector3I.One);
+				if (_AreaSelectionStart is Vector3I start)
+				{
+					Vector3I end = _AreaSelectionEnd ?? start;
+					Vector3I min = position.Min(start).Min(end);
+					Vector3I max = position.Max(start).Max(end);
+					_AreaSelectionStart = min;
+					_AreaSelectionEnd = max;
+					ShowBoundaryBox(min, max - min + Vector3I.One);
+				}
+				else
+				{
+					_AreaSelectionStart = position;
+					_AreaSelectionEnd = null;
+					ShowBoundaryBox(position);
+				}
 			}
 			else
 			{
-				_AreaSelectionStart = position;
-				_AreaSelectionEnd = null;
-				ShowBoundaryBox(position);
+				if (_AreaSelectionEnd is null && _AreaSelectionStart is Vector3I ass)
+				{
+					Vector3I start = ass.Min(position);
+					Vector3I end = ass.Max(position);
+					_AreaSelectionStart = start;
+					_AreaSelectionEnd = end;
+					ShowBoundaryBox(start, end - start + Vector3I.One);
+				}
+				else
+				{
+					_AreaSelectionStart = position;
+					_AreaSelectionEnd = null;
+					ShowBoundaryBox(position);
+				}
 			}
 
 			_UpdateMenuButtons();
@@ -786,7 +993,7 @@ namespace EyeOfRubiss.Scenes
 		#endregion
 
 		#region Copy and paste
-		public CopiedDataObject Clipboard;
+		public EyeOfRubissStructure Clipboard;
 
 		public void DoCopy()
 		{
@@ -797,21 +1004,46 @@ namespace EyeOfRubiss.Scenes
 			
 			Vector3I size = end - start + Vector3I.One;
 
-			Clipboard = new CopiedDataObject(size);
+			if (_WorldHandler is not null)
+			{
+				Clipboard = _WorldHandler.DoCopy(start, end);
+				Clipboard.SizeX = size.X;
+				Clipboard.SizeY = size.Y;
+				Clipboard.SizeZ = size.Z;
+				
+				_PasteButton.Disabled = false;
+			}
 		}
 		public void DoCut()
 		{
 			DoCopy();
 			DeleteSelection();
 		}
-
-		public class CopiedDataObject(Vector3I size)
+		
+		public void ExportSelection(string path)
 		{
-			public int DQB1orDQB2Source;
+			if (_AreaSelectionStart is not Vector3I start)
+				return;
+			if (_AreaSelectionEnd is not Vector3I end)
+				end = start;
+			
+			if (_WorldHandler is not null)
+			{
+				EyeOfRubissStructure structure = _WorldHandler.DoCopy(start, end);
 
-			public Vector3I Size = size;
-
-			public int[] Blocks;
+				if (structure is not null)
+				{
+					if (path.ToLower().EndsWith(".json"))
+					{
+						structure.Save(path);
+					}
+					else
+					{
+						BlueprintFileDQB2 blueprintFile = structure.ToBlueprint();
+						blueprintFile.Save(path);
+					}	
+				}
+			}
 		}
 		#endregion
 	}

@@ -10,19 +10,14 @@ using System.Collections.Generic;
 using System.Text.Json.Serialization;
 using System.Text.Json;
 using System.Collections;
+using System.ComponentModel;
+using System.Reflection.Metadata;
 
 namespace EyeOfRubiss.Scenes
 {
 	/// <summary> The project's main scene. </summary>
 	public partial class Main : Control
 	{
-		// TODO add backup functionality
-		// TODO handle overwriting open files
-		// TODO retake male body screenshots
-		// TODO monster, animal, fish screenshots
-		// TODO CMNDAT and SCSHDAT are CompressionLevel.Fastest, STGDAT is CompressionLevel.Optimal -- See if this has effect?
-		//   Hacky-ass solution: if _Header.Length == StageData.HeaderLength
-
 		/// References to scene elements
 		#region Scene elements
 		[ExportGroup("Scene Elements")]
@@ -35,35 +30,49 @@ namespace EyeOfRubiss.Scenes
 		[Export] private PopupMenu _Settings_PopupMenu;
 		[Export] private Button _Inventory_Button;
 		[Export] private Button _Player_Button;
+		[Export] private Button _Snapshots_Button;
 
 		[Export] private OptionButton _IslandSelector_Button;
 		[Export] private SpinBox _Gratitude_SpinBox;
 		[Export] private TimeSpinBox _Time_SpinBox;
 		[Export] private OptionButton _Weather_OptionButton;
+		[Export] private CheckBox _PassTime_CheckBox;
 
-		[Export] private ItemButtonSelector _Block_ItemButtonSelector;
-		[Export] private ItemButtonSelector _BGParts_ItemButtonSelector;
-		[Export] private ItemButtonSelector _Fluid_ItemButtonSelector;
-		
-		[Export] private Control _Inventory_Panel;
-		[Export] private PlayerEditor _PlayerEditor;
+		[Export] private TabContainer _BlockSelector_TabContainer;
+		[Export] private CustomItemList _Block_ItemList;
+		[Export] private CustomItemList _BGParts_ItemList;
+		[Export] private CustomItemList _Fluid_ItemList;
+		[Export] private LineEdit _Block_SearchBox;
+		[Export] private LineEdit _BGParts_SearchBox;
 
-		[Export] private Control _ItemSelector_Panel;
-		[Export] private ItemButtonSelector _ItemSelector;
+		[Export] private Window _New_Window;
+		[Export] private OptionButton _New_Window_Game_OptionButton;
+		[Export] private SpinBox _New_Window_X_SpinBox;
+		[Export] private SpinBox _New_Window_Z_SpinBox;
+
+		[Export] private ScreenshotEditor _ScreenshotEditor;
 		#endregion
 
 		public override void _Ready()
 		{
-			//_OnReadyVariables();
+			if (!OS.IsDebugBuild())
+			{
+				foreach (string arg in OS.GetCmdlineArgs())
+				{
+					if (Godot.FileAccess.FileExists(arg))
+					{
+						OpenFile(arg);
+					}
+				}	
+			}
+
+			GetTree().Root.FilesDropped += _On_Root_FilesDropped;
 
 			GetTree().AutoAcceptQuit = false;
 			GetTree().Root.CloseRequested += _On_Root_CloseRequested;
 
 			_InitializeFileDialogPath();
 			UpdateLoadedData();
-			UpdateMenuButtons();
-
-			_InitializeItemButtonSelectors_DQB2();
 		}
 		private void _InitializeFileDialogPath()
 		{
@@ -75,27 +84,90 @@ namespace EyeOfRubiss.Scenes
 			}
 			_FileDialog.SetCurrentDirRecursive(path);
 		}
-		private void _InitializeItemButtonSelectors_DQB2()
+		
+		private byte _ItemListMode = 0;
+		private void _InitializeItemLists_DQB1()
 		{
-			foreach (Info.DQB2.BlockInfo blockInfo in Info.DQB2.BlockInfo.GetAll()[..1158].Where(b => !b.Tags.Contains("noeditor") && b.FluidType == FluidType.Air).OrderBy(b => b.Sort))
-			{
-				_Block_ItemButtonSelector.AddButton(blockInfo.ID, blockInfo.Name, blockInfo.Icon, 0 /*TODO*/, false /*TODO*/, 0 /*TODO*/);
-			}
-			foreach (Info.DQB2.BGPartsInfo partsInfo in Info.DQB2.BGPartsInfo.GetAll().OrderBy(b => b.Sort))
-			{
-				_BGParts_ItemButtonSelector.AddButton(partsInfo.ID, partsInfo.Name, partsInfo.Icon, partsInfo.Rarity, false /*TODO*/, 0 /*TODO*/);
-			}
-			
-			_Fluid_ItemButtonSelector.AddButton((int)FluidType.Water,      "Water",         73);
-            _Fluid_ItemButtonSelector.AddButton((int)FluidType.Seawater,   "Seawater",    2131);
-            _Fluid_ItemButtonSelector.AddButton((int)FluidType.HotWater,   "Hot Water",    798);
-            _Fluid_ItemButtonSelector.AddButton((int)FluidType.MuddyWater, "Muddy Water", 2130);
-            _Fluid_ItemButtonSelector.AddButton((int)FluidType.SwampWater, "Swamp Water", 2130);
-            _Fluid_ItemButtonSelector.AddButton((int)FluidType.Poison,     "Poison",        16);
-            _Fluid_ItemButtonSelector.AddButton((int)FluidType.Lava,       "Liquid Lava",   24);
-            _Fluid_ItemButtonSelector.AddButton((int)FluidType.Plasma,     "Plasma",      2135);
+			PopulateBlockList();
+			PopulateBGPartsList();
 
-			_Block_ItemButtonSelector.Select(1); // Bedrock
+			_BlockSelector_TabContainer.CurrentTab = 0;
+			_BlockSelector_TabContainer.SetTabHidden(2, true);
+
+			_Block_ItemList.Select(1);
+
+			_Block_SearchBox.Clear();
+			_BGParts_SearchBox.Clear();
+
+			_ItemListMode = 1;
+		}
+		private void _InitializeItemLists_DQB2()
+		{
+			PopulateBlockList();
+			PopulateBGPartsList();
+			PopulateFluidsList();
+
+			_BlockSelector_TabContainer.CurrentTab = 0;
+			_BlockSelector_TabContainer.SetTabHidden(2, false);
+
+			_Block_ItemList.Select(1);
+
+			_Block_SearchBox.Clear();
+			_BGParts_SearchBox.Clear();
+
+			_ItemListMode = 2;
+		}
+
+		public void PopulateBlockList(string searchText = null)
+		{
+			_Block_ItemList.Clear();
+
+			if (_WorldData is not null || _ParamData is not null || _DioramaDataAssetDQB1 is not null || _DioramaHeaderAssetDQB1 is not null || (_EyeOfRubissStructure is not null && _EyeOfRubissStructure.SourceGame == 1))
+			{
+				foreach (Info.DQB1.BlockInfo blockInfo in Info.DQB1.BlockInfo.SearchByText(searchText).OrderBy(b => b.Sort))
+				{
+					_Block_ItemList.AddCustomItem(blockInfo.ID, blockInfo.Name, blockInfo.GetIcon());
+				}
+			}
+			else if (_CommonData is not null || _StageData is not null || _ScreenshotData is not null || (_EyeOfRubissStructure is not null && _EyeOfRubissStructure.SourceGame == 2))
+			{
+				foreach (Info.DQB2.BlockInfo blockInfo in Info.DQB2.BlockInfo.SearchByText(searchText).Where(b => !b.Tags.Contains("noeditor") && b.FluidType == FluidType.Air && b.ID < 1158).OrderBy(b => b.Sort))
+				{
+					_Block_ItemList.AddCustomItem(blockInfo.ID, blockInfo.Name, blockInfo.GetIcon(), rarity: blockInfo.Rarity, color: blockInfo.Color);
+				}
+			}
+		}
+		public void PopulateBGPartsList(string searchText = null)
+		{
+			_BGParts_ItemList.Clear();
+
+			if (_WorldData is not null || _ParamData is not null || _DioramaDataAssetDQB1 is not null || _DioramaHeaderAssetDQB1 is not null || (_EyeOfRubissStructure is not null && _EyeOfRubissStructure.SourceGame == 1))
+			{
+				foreach (Info.DQB1.BGPartsInfo partsInfo in Info.DQB1.BGPartsInfo.SearchByText(searchText).OrderBy(b => b.Sort))
+				{
+					_BGParts_ItemList.AddCustomItem(partsInfo.ID, partsInfo.Name, Util.GetItemIcon(partsInfo.Icon));
+				}
+			}
+			else if (_CommonData is not null || _StageData is not null || _ScreenshotData is not null || (_EyeOfRubissStructure is not null && _EyeOfRubissStructure.SourceGame == 2))
+			{
+				foreach (Info.DQB2.BGPartsInfo partsInfo in Info.DQB2.BGPartsInfo.SearchByText(searchText).OrderBy(b => b.Sort))
+				{
+					_BGParts_ItemList.AddCustomItem(partsInfo.ID, partsInfo.Name, Util.GetItemIcon(partsInfo.Icon), rarity: partsInfo.Rarity, connecting: partsInfo.Connecting, color: partsInfo.Color);
+				}	
+			}
+		}
+		public void PopulateFluidsList()
+		{
+			_Fluid_ItemList.Clear();
+
+			_Fluid_ItemList.AddCustomItem((int)FluidType.Water,      "Water",       Util.GetItemIcon(73));
+			_Fluid_ItemList.AddCustomItem((int)FluidType.Seawater,   "Seawater",    Util.GetItemIcon(2131));
+			_Fluid_ItemList.AddCustomItem((int)FluidType.HotWater,   "Hot Water",   Util.GetItemIcon(798));
+			_Fluid_ItemList.AddCustomItem((int)FluidType.MuddyWater, "Muddy Water", Util.GetItemIcon(2130));
+			_Fluid_ItemList.AddCustomItem((int)FluidType.SwampWater, "Swamp Water", Util.GetItemIcon(2130));
+			_Fluid_ItemList.AddCustomItem((int)FluidType.Poison,     "Poison",      Util.GetItemIcon(16));
+			_Fluid_ItemList.AddCustomItem((int)FluidType.Lava,       "Liquid Lava", Util.GetItemIcon(24));
+			_Fluid_ItemList.AddCustomItem((int)FluidType.Plasma,     "Plasma",      Util.GetItemIcon(2135));
 		}
 
 		private void _AddFileMenuButton(string text, int id)
@@ -106,48 +178,72 @@ namespace EyeOfRubiss.Scenes
 			_File_PopupMenu.RemoveItem(_File_PopupMenu.ItemCount - 1);
 			_File_PopupMenu.RemoveItem(_File_PopupMenu.ItemCount - 1);
 
-			if (_File_PopupMenu.ItemCount == 2)
+			if (_File_PopupMenu.ItemCount == 3)
 				_File_PopupMenu.AddSeparator();
 
 			_File_PopupMenu.AddItem(text, id);
 
 			PopupMenu newPopupMenu = new();
-			newPopupMenu.AddItem("Save",   0);
-			newPopupMenu.AddItem("Save As...",   3);
-			newPopupMenu.AddItem("Export...", 1);
-			newPopupMenu.AddItem("Import...", 4);
-			newPopupMenu.AddItem("Close",  2);
+			newPopupMenu.AddItem("Save",          0);
+			newPopupMenu.AddItem("Save As...",    3);
+			newPopupMenu.AddItem("Export...",     5);
+			newPopupMenu.AddItem("Export Raw...", 1);
+			newPopupMenu.AddItem("Import Raw...", 4);
+			newPopupMenu.AddItem("Close",         2);
 
 			switch (id)
 			{
+				case FILE_MENU_PARAM_DATA_ID:
+					newPopupMenu.SetItemDisabled(2, true);
+					break;
 				case FILE_MENU_WORLD_DATA_ID:
 					break;
+
 				case FILE_MENU_BLUEPRINT_ASSET_DQB1_ID:
 					newPopupMenu.SetItemDisabled(0, true);
 					newPopupMenu.SetItemDisabled(1, true);
 					newPopupMenu.SetItemDisabled(3, true);
+					newPopupMenu.SetItemDisabled(4, true);
 					break;
+
 				case FILE_MENU_DIORAMA_HEADER_ASSET_DQB1_ID:
 					newPopupMenu.SetItemDisabled(0, true);
 					newPopupMenu.SetItemDisabled(1, true);
+					newPopupMenu.SetItemDisabled(2, true);
 					newPopupMenu.SetItemDisabled(3, true);
+					newPopupMenu.SetItemDisabled(4, true);
 					break;
 				case FILE_MENU_DIORAMA_DATA_ASSET_DQB1_ID:
 					newPopupMenu.SetItemDisabled(0, true);
 					newPopupMenu.SetItemDisabled(1, true);
+					newPopupMenu.SetItemDisabled(2, true);
 					newPopupMenu.SetItemDisabled(3, true);
+					newPopupMenu.SetItemDisabled(4, true);
 					break;
+
+				case FILE_MENU_DIORAMA_ID:
+					newPopupMenu.SetItemDisabled(0, true);
+					newPopupMenu.SetItemDisabled(1, true);
+					newPopupMenu.SetItemDisabled(3, true);
+					newPopupMenu.SetItemDisabled(4, true);
+					break;
+
 				case FILE_MENU_COMMON_DATA_ID:
+					newPopupMenu.SetItemDisabled(2, true);
 					break;
 				case FILE_MENU_STAGE_DATA_ID:
 					break;
 				case FILE_MENU_SCREENSHOT_DATA_ID:
+					newPopupMenu.SetItemDisabled(2, true);
 					break;
+				
 				case FILE_MENU_BLUEPRINT_FILE_DQB2_ID:
 					newPopupMenu.SetItemDisabled(3, true);
+					newPopupMenu.SetItemDisabled(4, true);
 					break;
-				case FILE_MENU_EYE_OF_RUBISS_STRUCTURE_FILE_ID:
+				case FILE_MENU_EYE_OF_RUBISS_STRUCTURE_ID:
 					newPopupMenu.SetItemDisabled(3, true);
+					newPopupMenu.SetItemDisabled(4, true);
 					break;
 			}
 
@@ -171,14 +267,23 @@ namespace EyeOfRubiss.Scenes
 				_File_PopupMenu.RemoveItem(index);
 			}
 
-			if (_File_PopupMenu.ItemCount == 8)
+			if (_File_PopupMenu.ItemCount == 9)
 			{
-				_File_PopupMenu.RemoveItem(2);
+				_File_PopupMenu.RemoveItem(3);
 			}
 		}
 
 		public void UpdateLoadedData()
 		{
+			_File_PopupMenu?.SetItemDisabled(-4, !AnyIsLoaded()); // Save All
+			_File_PopupMenu?.SetItemDisabled(-3, !AnyIsLoaded()); // Close All
+
+			_Inventory_Button.Disabled = _CommonData is null;
+			_Player_Button.Disabled = _CommonData is null;
+			_Snapshots_Button.Disabled = _ScreenshotData is null;
+
+			_PassTime_CheckBox.Disabled = _CommonData is null;
+			
 			if (!string.IsNullOrEmpty(WorkingDirectory))
 			{
 				_IslandSelector_Button.Disabled = false;
@@ -227,8 +332,8 @@ namespace EyeOfRubiss.Scenes
 					_Gratitude_SpinBox.Editable = true;
                 }
 				_Time_SpinBox.SetValueNoSignal(_StageData.Time * 1.2);
-				_Time_SpinBox.Editable = true;
 				_Time_SpinBox.UpdateLineEdit();
+				_Time_SpinBox.Enable();
 				_Weather_OptionButton.Select(_StageData.Weather);
 				_Weather_OptionButton.Disabled = false;
 			}
@@ -237,18 +342,20 @@ namespace EyeOfRubiss.Scenes
 				_Gratitude_SpinBox.SetValueNoSignal(0);
 				_Gratitude_SpinBox.Editable = false;
 				_Time_SpinBox.SetValueNoSignal(0);
-				_Time_SpinBox.Editable = false;
+				_Time_SpinBox.UpdateLineEdit();
+				_Time_SpinBox.Disable();
 				_Weather_OptionButton.Select(0);
 				_Weather_OptionButton.Disabled = true;
 			}
-		}
-		public void UpdateMenuButtons()
-		{
-			_File_PopupMenu?.SetItemDisabled(-4, !AnyIsLoaded()); // Save All
-			_File_PopupMenu?.SetItemDisabled(-3, !AnyIsLoaded()); // Close All
 
-			_Inventory_Button.Disabled = _CommonData is null;
-			_Player_Button.Disabled = _CommonData is null;
+			if (_CommonData is not null)
+			{
+				_PassTime_CheckBox.ButtonPressed = _CommonData.TimeIsPassing;
+			}
+			else
+			{
+				_PassTime_CheckBox.ButtonPressed = false;
+			}
 		}
 
         public override void _UnhandledInput(InputEvent @event)
@@ -269,6 +376,11 @@ namespace EyeOfRubiss.Scenes
 			{
 				CloseAll();
 			}
+
+			// TEST
+			if (@event.IsActionPressed(Constants.Controls.TEST1))
+			{
+			}
         }
 
 		#region I/O Operations
@@ -282,29 +394,37 @@ namespace EyeOfRubiss.Scenes
 			OpenFile,
 
 			SaveWorldData,
+			ExportRawWorldData,
 			ExportWorldData,
 			ImportWorldData,
 
-			ExportBlueprintAssetDQB1,
-
-			ExportDioramaAssetDQB1,
+			SaveParamData,
+			ExportRawParamData,
+			ImportParamData,
 
 			SaveCommonData,
-			ExportCommonData,
+			ExportRawCommonData,
 			ImportCommonData,
 
 			SaveStageData,
+			ExportRawStageData,
 			ExportStageData,
 			ImportStageData,
 
 			SaveScreenshotData,
-			ExportScreenshotData,
+			ExportRawScreenshotData,
 			ImportScreenshotData,
 
-			ExportBlueprintFileDQB2,
+			SaveBlueprintFileDQB2,
 
 			SaveEyeOfRubissStructureFile,
-			ExportEyeOfRubissStructureFile
+			ExportEyeOfRubissStructureFile,
+
+			ExportSelection,
+
+			ExportSnapshot,
+			ImportSnapshot,
+			ExportAllSnapshots
 		}
 		private FileDialogStateEnum _FileDialogState = FileDialogStateEnum.Unknown;
 
@@ -327,8 +447,6 @@ namespace EyeOfRubiss.Scenes
 
 		public void OpenFile(string path)
 		{
-			GD.Print($"Path: {path}");
-
 			switch (Util.DetermineFileType(path))
             {
                 case FileType.Unknown:
@@ -337,6 +455,9 @@ namespace EyeOfRubiss.Scenes
 				
 				case FileType.DQB1_WorldData:
 					TryOpenWorldData(path);
+					break;
+				case FileType.DQB1_ParamData:
+					TryOpenParamData(path);
 					break;
 
                 case FileType.DQB1_BlueprintAsset:
@@ -362,42 +483,25 @@ namespace EyeOfRubiss.Scenes
                 case FileType.DQB2_Blueprint:
                     TryOpenBlueprintFileDQB2(path);
                     break;
+				
+				case FileType.EyeOfRubissStructure:
+					TryOpenEyeOfRubissStructure(path);
+					break;
             }
 			
 			UpdateLoadedData();
-			UpdateMenuButtons();
 		}
-		public void CloseFile(SaveData saveData)
-		{
-			if (saveData is CommonData)
-			{
-				_WorldEditorScene.UnloadCommonData();
-				_CommonData = null;
-			}
-			else if (saveData is StageData)
-			{
-				_WorldEditorScene.UnloadStageData();
-				_StageData = null;
-			}
-			else if (saveData is ScreenshotData)
-			{
-				_ScreenshotData = null;
-			}
 
-			UpdateLoadedData();
-			UpdateMenuButtons();
-		}
 		public void CloseAll()
 		{
 			CloseWorldData();
-			CloseBlueprintAssetDQB1();
+			CloseParamData();
 			CloseDioramaDataAssetDQB1();
 			CloseDioramaHeaderAssetDQB1();
 			CloseStageData();
 			CloseCommonData();
 			CloseScreenshotData();
-			CloseBlueprintFileDQB2();
-			CloseEyeOfRubissStructureFile();
+			CloseEyeOfRubissStructure();
 
 			WorkingDirectory = null;
 		}
@@ -412,16 +516,17 @@ namespace EyeOfRubiss.Scenes
             	CloseStageData();
             	CloseCommonData();
             	CloseScreenshotData();
-            	CloseBlueprintAssetDQB1();
 				CloseDioramaDataAssetDQB1();
 				CloseDioramaHeaderAssetDQB1();
-            	CloseBlueprintFileDQB2();
-				CloseEyeOfRubissStructureFile();
+				CloseEyeOfRubissStructure();
 
             	_WorldData = worldData;
             	_WorldEditorScene.LoadWorldData(worldData);
 
 				_AddFileMenuButton(Path.GetFileName(path), FILE_MENU_WORLD_DATA_ID);
+
+				if (_ItemListMode != 1)
+					_InitializeItemLists_DQB1();
 
 				return true;
             }
@@ -433,7 +538,13 @@ namespace EyeOfRubiss.Scenes
         }
 		private void SaveWorldData(string path = null)
 		{
+			_WorldData?.Save();
 			// TODO
+		}
+		private void ExportWorldData(string path)
+		{
+			EyeOfRubissStructure structure = EyeOfRubissStructure.From(_WorldData);
+			structure.Save(path);
 		}
 		private void CloseWorldData()
 		{
@@ -441,42 +552,80 @@ namespace EyeOfRubiss.Scenes
 			_WorldData = null;
 			_RemoveFileMenuButton(FILE_MENU_WORLD_DATA_ID);
 			UpdateLoadedData();
-			UpdateMenuButtons();
 		}
 
-		private BlueprintAssetDQB1 _BlueprintAssetDQB1;
-		private const int FILE_MENU_BLUEPRINT_ASSET_DQB1_ID = 110;
-        private bool TryOpenBlueprintAssetDQB1(string path)
+		private ParamData _ParamData;
+		private const int FILE_MENU_PARAM_DATA_ID = 101;
+        private bool TryOpenParamData(string path)
         {
-            try
+			if (ParamData.TryLoad(path, out ParamData paramData))
             {
-                _BlueprintAssetDQB1 = BlueprintAssetDQB1.Load(path);
+				CloseParamData();
+            	CloseStageData();
+            	CloseCommonData();
+            	CloseScreenshotData();
+				CloseDioramaDataAssetDQB1();
+				CloseDioramaHeaderAssetDQB1();
+				CloseEyeOfRubissStructure();
 
-				CloseAll();
+            	_ParamData = paramData;
+				_WorldEditorScene.LoadParamData(paramData);
 
-                _WorldEditorScene.LoadBlueprintAssetDQB1(_BlueprintAssetDQB1);
+				_AddFileMenuButton(Path.GetFileName(path), FILE_MENU_PARAM_DATA_ID);
 
-				_AddFileMenuButton(Path.GetFileName(path), FILE_MENU_BLUEPRINT_ASSET_DQB1_ID);
+				if (_ItemListMode != 1)
+					_InitializeItemLists_DQB1();
 
 				return true;
             }
-            catch
+            else
             {
                 GD.Print($"Could not open file {path}.");
 				return false;
             }
         }
-        private void CloseBlueprintAssetDQB1()
-        {
-			_WorldEditorScene.UnloadBlueprintAssetDQB1();
-            _BlueprintAssetDQB1 = null;
-			_RemoveFileMenuButton(FILE_MENU_BLUEPRINT_ASSET_DQB1_ID);
+		private void SaveParamData(string path = null)
+		{
+			_ParamData?.Save();
+		}
+		private void CloseParamData()
+		{
+			_WorldEditorScene.UnloadParamData();
+			_ParamData = null;
+			_RemoveFileMenuButton(FILE_MENU_PARAM_DATA_ID);
 			UpdateLoadedData();
-			UpdateMenuButtons();
+		}
+
+		private const int FILE_MENU_BLUEPRINT_ASSET_DQB1_ID = 110;
+        private bool TryOpenBlueprintAssetDQB1(string path)
+        {
+            try
+            {
+				CloseAll();
+
+                BlueprintAssetDQB1 blueprint = BlueprintAssetDQB1.Load(path);
+
+				_EyeOfRubissStructure = EyeOfRubissStructure.From(blueprint);
+                _WorldEditorScene.LoadEyeOfRubissStructure(_EyeOfRubissStructure);
+
+				_AddFileMenuButton(Path.GetFileName(path), FILE_MENU_BLUEPRINT_ASSET_DQB1_ID);
+
+				if (_ItemListMode != 1)
+					_InitializeItemLists_DQB1();
+
+				return true;
+            }
+            catch (Exception ex)
+            {
+                GD.Print($"Could not open file {path}.");
+				GD.PrintErr(ex);
+				return false;
+            }
         }
 
 		private DioramaHeaderAssetDQB1 _DioramaHeaderAssetDQB1;
 		private const int FILE_MENU_DIORAMA_HEADER_ASSET_DQB1_ID = 120;
+		private const int FILE_MENU_DIORAMA_ID = 122;
 		private bool TryOpenDioramaHeaderAssetDQB1(string path)
 		{
 			try
@@ -484,18 +633,31 @@ namespace EyeOfRubiss.Scenes
 				DioramaHeaderAssetDQB1 header = JsonSerializer.Deserialize<DioramaHeaderAssetDQB1>(Godot.FileAccess.GetFileAsString(path));
 
 				CloseWorldData();
-				CloseBlueprintAssetDQB1();
 				CloseDioramaHeaderAssetDQB1();
 				CloseStageData();
 				CloseCommonData();
 				CloseScreenshotData();
-				CloseBlueprintFileDQB2();
-				CloseEyeOfRubissStructureFile();
+				CloseEyeOfRubissStructure();
 
 				_DioramaHeaderAssetDQB1 = header;
-				_WorldEditorScene.LoadDioramaHeaderAssetDQB1(header);
 
 				_AddFileMenuButton(Path.GetFileName(path), FILE_MENU_DIORAMA_HEADER_ASSET_DQB1_ID);
+
+				if (_DioramaDataAssetDQB1 is not null)
+				{
+					_EyeOfRubissStructure = EyeOfRubissStructure.From(_DioramaHeaderAssetDQB1, _DioramaDataAssetDQB1);
+					_WorldEditorScene.LoadEyeOfRubissStructure(_EyeOfRubissStructure);
+
+					string name = _DioramaHeaderAssetDQB1.Name;
+
+					CloseDioramaHeaderAssetDQB1();
+					CloseDioramaDataAssetDQB1();
+
+					_AddFileMenuButton(name, FILE_MENU_DIORAMA_ID);
+				}
+
+				if (_ItemListMode != 1)
+					_InitializeItemLists_DQB1();
 
 				return true;
 			}
@@ -508,11 +670,9 @@ namespace EyeOfRubiss.Scenes
 		}
 		private void CloseDioramaHeaderAssetDQB1()
 		{
-			_WorldEditorScene.UnloadDioramaHeaderAssetDQB1();
 			_DioramaHeaderAssetDQB1 = null;
 			_RemoveFileMenuButton(FILE_MENU_DIORAMA_HEADER_ASSET_DQB1_ID);
 			UpdateLoadedData();
-			UpdateMenuButtons();
 		}
 
 		private DioramaDataAssetDQB1 _DioramaDataAssetDQB1;
@@ -524,18 +684,29 @@ namespace EyeOfRubiss.Scenes
 				DioramaDataAssetDQB1 data = JsonSerializer.Deserialize<DioramaDataAssetDQB1>(Godot.FileAccess.GetFileAsString(path));
 
 				CloseWorldData();
-				CloseBlueprintAssetDQB1();
 				CloseDioramaDataAssetDQB1();
 				CloseStageData();
 				CloseCommonData();
 				CloseScreenshotData();
-				CloseBlueprintFileDQB2();
-				CloseEyeOfRubissStructureFile();
+				CloseEyeOfRubissStructure();
 
 				_DioramaDataAssetDQB1 = data;
-				_WorldEditorScene.LoadDioramaDataAssetDQB1(data);
 
 				_AddFileMenuButton(Path.GetFileName(path), FILE_MENU_DIORAMA_DATA_ASSET_DQB1_ID);
+
+				if (_DioramaHeaderAssetDQB1 is not null)
+				{
+					_EyeOfRubissStructure = EyeOfRubissStructure.From(_DioramaHeaderAssetDQB1, _DioramaDataAssetDQB1);
+					_WorldEditorScene.LoadEyeOfRubissStructure(_EyeOfRubissStructure);
+
+					CloseDioramaHeaderAssetDQB1();
+					CloseDioramaDataAssetDQB1();
+
+					_AddFileMenuButton(_DioramaHeaderAssetDQB1.Name, FILE_MENU_DIORAMA_ID);
+				}
+				
+				if (_ItemListMode != 1)
+					_InitializeItemLists_DQB1();
 
 				return true;
 			}
@@ -548,11 +719,9 @@ namespace EyeOfRubiss.Scenes
 		}
 		private void CloseDioramaDataAssetDQB1()
 		{
-			_WorldEditorScene.UnloadDioramaDataAssetDQB1();
 			_DioramaDataAssetDQB1 = null;
 			_RemoveFileMenuButton(FILE_MENU_DIORAMA_DATA_ASSET_DQB1_ID);
 			UpdateLoadedData();
-			UpdateMenuButtons();
 		}
 
 		private CommonData _CommonData;
@@ -562,17 +731,18 @@ namespace EyeOfRubiss.Scenes
             if (CommonData.TryLoad(path, out CommonData commonData))
             {
 				CloseWorldData();
-				CloseBlueprintAssetDQB1();
 				CloseDioramaDataAssetDQB1();
 				CloseDioramaHeaderAssetDQB1();
 				CloseCommonData();
-				CloseBlueprintFileDQB2();
-				CloseEyeOfRubissStructureFile();
+				CloseEyeOfRubissStructure();
 
                 _CommonData = commonData;
                 _WorldEditorScene.LoadCommonData(commonData);
 
 				_AddFileMenuButton(Path.GetFileName(path), FILE_MENU_COMMON_DATA_ID);
+
+				if (_ItemListMode != 2)
+					_InitializeItemLists_DQB2();
 
 				return true;
             }
@@ -592,7 +762,6 @@ namespace EyeOfRubiss.Scenes
             _CommonData = null;
 			_RemoveFileMenuButton(FILE_MENU_COMMON_DATA_ID);
 			UpdateLoadedData();
-			UpdateMenuButtons();
         }
 
 		private StageData _StageData;
@@ -602,17 +771,18 @@ namespace EyeOfRubiss.Scenes
             if (StageData.TryLoad(path, out StageData stageData))
             {
 				CloseWorldData();
-				CloseBlueprintAssetDQB1();
 				CloseDioramaDataAssetDQB1();
 				CloseDioramaHeaderAssetDQB1();
 				CloseStageData();
-				CloseBlueprintFileDQB2();
-				CloseEyeOfRubissStructureFile();
+				CloseEyeOfRubissStructure();
 
                 _StageData = stageData;
                 _WorldEditorScene.LoadStageData(stageData);
 
 				_AddFileMenuButton(Path.GetFileName(path), FILE_MENU_STAGE_DATA_ID);
+
+				if (_ItemListMode != 2)
+					_InitializeItemLists_DQB2();
 
 				return true;
             }
@@ -626,13 +796,17 @@ namespace EyeOfRubiss.Scenes
 		{
 			_StageData?.Save(path);
 		}
+		private void ExportStageData(string path)
+		{
+			EyeOfRubissStructure structure = EyeOfRubissStructure.From(_StageData);
+			structure.Save(path);
+		}
 		private void CloseStageData()
         {
             _WorldEditorScene.UnloadStageData();
             _StageData = null;
 			_RemoveFileMenuButton(FILE_MENU_STAGE_DATA_ID);
 			UpdateLoadedData();
-			UpdateMenuButtons();
         }
 
 		private ScreenshotData _ScreenshotData;
@@ -642,16 +816,17 @@ namespace EyeOfRubiss.Scenes
             if (ScreenshotData.TryLoad(path, out ScreenshotData screenshotData))
             {
 				CloseWorldData();
-				CloseBlueprintAssetDQB1();
 				CloseDioramaDataAssetDQB1();
 				CloseDioramaHeaderAssetDQB1();
 				CloseScreenshotData();
-				CloseBlueprintFileDQB2();
-				CloseEyeOfRubissStructureFile();
+				CloseEyeOfRubissStructure();
 
                 _ScreenshotData = screenshotData;
 
 				_AddFileMenuButton(Path.GetFileName(path), FILE_MENU_SCREENSHOT_DATA_ID);
+
+				if (_ItemListMode != 2)
+					_InitializeItemLists_DQB2();
 
 				return true;
             }
@@ -670,10 +845,8 @@ namespace EyeOfRubiss.Scenes
             _ScreenshotData = null;
 			_RemoveFileMenuButton(FILE_MENU_SCREENSHOT_DATA_ID);
 			UpdateLoadedData();
-			UpdateMenuButtons();
         }
 
-		private BlueprintFileDQB2 _BlueprintFileDQB2;
 		private const int FILE_MENU_BLUEPRINT_FILE_DQB2_ID = 210;
         private bool TryOpenBlueprintFileDQB2(string path)
         {
@@ -681,10 +854,14 @@ namespace EyeOfRubiss.Scenes
             {
 				CloseAll();
 
-                _BlueprintFileDQB2 = blueprintFile;
-                _WorldEditorScene.LoadBlueprintDQB2(blueprintFile.Blueprint);
+				_EyeOfRubissStructure = EyeOfRubissStructure.From(blueprintFile.Blueprint);
+				_EyeOfRubissStructure.Filename = path;
+                _WorldEditorScene.LoadEyeOfRubissStructure(_EyeOfRubissStructure);
 
 				_AddFileMenuButton(Path.GetFileName(path), FILE_MENU_BLUEPRINT_FILE_DQB2_ID);
+
+				if (_ItemListMode != 2)
+					_InitializeItemLists_DQB2();
 
 				return true;
             }
@@ -694,28 +871,106 @@ namespace EyeOfRubiss.Scenes
 				return false;
             }
         }
-		private void SaveBlueprintFileDQB2(string path = null)
-		{
-			// TODO
-		}
-		private void CloseBlueprintFileDQB2()
-        {
-			_WorldEditorScene.UnloadBlueprintDQB2();
-            _BlueprintFileDQB2 = null;
-			_RemoveFileMenuButton(FILE_MENU_BLUEPRINT_FILE_DQB2_ID);
-			UpdateLoadedData();
-			UpdateMenuButtons();
-        }
 
-		private EyeOfRubissStructureFile _EyeOfRubissStructureFile;
-		private const int FILE_MENU_EYE_OF_RUBISS_STRUCTURE_FILE_ID = 10000;
-		private bool TryOpenEyeOfRubissStructureFile(string path)
+		private EyeOfRubissStructure _EyeOfRubissStructure;
+		private const int FILE_MENU_EYE_OF_RUBISS_STRUCTURE_ID = 10000;
+		public void CreateNewEyeOfRubissStructure(byte sourceGame, int sizeX, int sizeZ)
 		{
-			throw new NotImplementedException();// TODO
+			CloseAll();
+
+            EyeOfRubissStructure structure = new()
+            {
+                SourceGame = sourceGame
+            };
+
+			for (int x = 0; x < sizeX; x++)
+			{
+				for (int z = 0; z < sizeZ; z++)
+				{
+					structure.SetBlock(new Vector3I(x, 0, z), Constants.BLOCK_EARTH);
+				}
+			}
+
+			_EyeOfRubissStructure = structure;
+			_WorldEditorScene.LoadEyeOfRubissStructure(_EyeOfRubissStructure);
+
+			_AddFileMenuButton("Untitled", FILE_MENU_EYE_OF_RUBISS_STRUCTURE_ID);
+
+			if (sourceGame == 1 && _ItemListMode != 1)
+			{
+				_InitializeItemLists_DQB1();
+			}
+			else if (sourceGame == 2 && _ItemListMode != 2)
+			{
+				_InitializeItemLists_DQB2();
+			}
 		}
-		private void CloseEyeOfRubissStructureFile()
+		private bool TryOpenEyeOfRubissStructure(string path)
 		{
-			// TODO
+            try
+            {
+				CloseAll();
+
+				EyeOfRubissStructure structure = EyeOfRubissStructure.Load(path);
+
+				if (structure is null)
+					return false;
+
+				_EyeOfRubissStructure = structure;
+                _WorldEditorScene.LoadEyeOfRubissStructure(_EyeOfRubissStructure);
+
+				_AddFileMenuButton(Path.GetFileName(path), FILE_MENU_EYE_OF_RUBISS_STRUCTURE_ID);
+
+				if (_EyeOfRubissStructure.SourceGame == 1 && _ItemListMode != 1)
+				{
+					_InitializeItemLists_DQB1();
+				}
+				else if (_EyeOfRubissStructure.SourceGame == 2 && _ItemListMode != 2)
+				{
+					_InitializeItemLists_DQB2();
+				}
+
+				return true;
+            }
+            catch (Exception ex)
+            {
+                GD.Print($"Could not open file {path}.");
+				GD.PrintErr(ex);
+				return false;
+            }
+		}
+		private void SaveEyeOfRubissStructureFile(string path = null)
+		{
+			_EyeOfRubissStructure?.Save(path);
+		}
+		private void ExportEyeOfRubissStructureFile(string path = null)
+		{
+			if (path.ToLower().EndsWith(".json"))
+			{
+				SaveEyeOfRubissStructureFile(path);
+			}
+			else
+			{
+				ExportEyeOfRubissStructureFileAsBlueprint(path);
+			}
+		}
+		private void ExportEyeOfRubissStructureFileAsBlueprint(string path = null)
+		{
+			if (_EyeOfRubissStructure is not null)
+			{
+				BlueprintFileDQB2 blueprintFile = _EyeOfRubissStructure.ToBlueprint();
+				blueprintFile?.Save(path ?? _EyeOfRubissStructure.Filename);
+			}
+		}
+		private void CloseEyeOfRubissStructure()
+		{
+            _WorldEditorScene.UnloadEyeOfRubissStructure();
+			_EyeOfRubissStructure = null;
+			_RemoveFileMenuButton(FILE_MENU_BLUEPRINT_ASSET_DQB1_ID);
+			_RemoveFileMenuButton(FILE_MENU_DIORAMA_ID);
+			_RemoveFileMenuButton(FILE_MENU_BLUEPRINT_FILE_DQB2_ID);
+			_RemoveFileMenuButton(FILE_MENU_EYE_OF_RUBISS_STRUCTURE_ID);
+			UpdateLoadedData();
 		}
 
 		public string WorkingDirectory { get; set; } = null;
@@ -730,7 +985,6 @@ namespace EyeOfRubiss.Scenes
 			WorkingDirectory = path;
 
 			UpdateLoadedData();
-			UpdateMenuButtons();
 			// TODO
 		}
 
@@ -787,13 +1041,7 @@ namespace EyeOfRubiss.Scenes
 			// OpenQueue.Enqueue(path);
 			// DoCloseOpenQueue();
 		}
-		public void TryCloseFile(SaveData saveData)
-		{
-			// TODO handle unsaved changes
-			CloseFile(saveData);
-			// CloseQueue.Enqueue(saveData);
-			// DoCloseOpenQueue();
-		}
+
 		public void TryCloseAll()
 		{
 			// TODO handle unsaved changes
@@ -889,8 +1137,6 @@ namespace EyeOfRubiss.Scenes
 		{
 			return
 				_WorldData is not null ||
-				
-				_BlueprintAssetDQB1 is not null || 
 
 				_DioramaHeaderAssetDQB1 is not null || 
 				_DioramaDataAssetDQB1 is not null || 
@@ -899,23 +1145,22 @@ namespace EyeOfRubiss.Scenes
 				_StageData is not null || 
 				_ScreenshotData is not null || 
 
-				_BlueprintFileDQB2 is not null ||
-
-				_EyeOfRubissStructureFile is not null;
+				_EyeOfRubissStructure is not null;
 				
 		}
-		public static bool HasUnsavedChanges(SaveData saveData)
-		{
-			return saveData is not null && saveData.IsLoaded && saveData.UnsavedChanges;
-		}
 		#endregion
-
 
 		#region Callbacks
 		public void _On_File_PopupMenu_IdPressed(int id)
 		{
 			switch (id)
 			{
+				case 7: // New...
+					_New_Window_X_SpinBox.Value = 16;
+					_New_Window_Z_SpinBox.Value = 16;
+					_New_Window.PopupCentered();
+					break;
+
 				case 0: // Open Folder...
 					ShowOpenFolderDialog();
 					break;
@@ -952,20 +1197,74 @@ namespace EyeOfRubiss.Scenes
 							SaveWorldData();
 							break;
 						case 3: // Save As...
-							// TODO
+							_FileDialogState = FileDialogStateEnum.SaveWorldData;
+							_FileDialog.Title = "Save WDAT...";
+							_FileDialog.SetFilter("*.bin");
+							_FileDialog.FileMode = FileDialog.FileModeEnum.SaveFile;
+							_FileDialog.PopupCentered();
 							break;
-						case 1: // Export...
-							// TODO
+						case 5: // Export...
+							_FileDialogState = FileDialogStateEnum.ExportWorldData;
+							_FileDialog.Title = "Export...";
+							_FileDialog.SetFilter("*.json");
+							_FileDialog.FileMode = FileDialog.FileModeEnum.SaveFile;
+							_FileDialog.PopupCentered();
 							break;
-						case 4: // Import...
-							// TODO
+						case 1: // Export Raw...
+							_FileDialogState = FileDialogStateEnum.ExportRawWorldData;
+							_FileDialog.Title = "Export WDAT...";
+							_FileDialog.FileMode = FileDialog.FileModeEnum.SaveFile;
+							_FileDialog.SetFilter("*", "All Files");
+							_FileDialog.PopupCentered();
+							break;
+						case 4: // Import Raw...
+							_FileDialogState = FileDialogStateEnum.ImportWorldData;
+							_FileDialog.Title = "Import WDAT...";
+							_FileDialog.FileMode = FileDialog.FileModeEnum.OpenFile;
+							_FileDialog.SetFilter("*", "All Files");
+							_FileDialog.PopupCentered();
 							break;
 						case 2: // Close
 							CloseWorldData();
 							break;
 					}
 					break;
-				
+				case FILE_MENU_PARAM_DATA_ID:
+					switch (buttonId)
+					{
+						case 0: // Save
+							SaveParamData();
+							break;
+						case 3: // Save As...
+							_FileDialogState = FileDialogStateEnum.SaveParamData;
+							_FileDialog.Title = "Save PRMDAT...";
+							_FileDialog.SetFilter("*.bin");
+							_FileDialog.FileMode = FileDialog.FileModeEnum.SaveFile;
+							_FileDialog.PopupCentered();
+							break;
+						case 5: // Export...
+							// Can't do!
+							break;
+						case 1: // Export Raw...
+							_FileDialogState = FileDialogStateEnum.ExportRawParamData;
+							_FileDialog.Title = "Export PRMDAT...";
+							_FileDialog.FileMode = FileDialog.FileModeEnum.SaveFile;
+							_FileDialog.SetFilter("*", "All Files");
+							_FileDialog.PopupCentered();
+							break;
+						case 4: // Import Raw...
+							_FileDialogState = FileDialogStateEnum.ImportParamData;
+							_FileDialog.Title = "Import PRMDAT...";
+							_FileDialog.FileMode = FileDialog.FileModeEnum.OpenFile;
+							_FileDialog.SetFilter("*", "All Files");
+							_FileDialog.PopupCentered();
+							break;
+						case 2: // Close
+							CloseParamData();
+							break;
+					}
+					break;
+
 				case FILE_MENU_BLUEPRINT_ASSET_DQB1_ID:
 					switch (buttonId)
 					{
@@ -975,14 +1274,21 @@ namespace EyeOfRubiss.Scenes
 						case 3: // Save As...
 							// Can't do!
 							break;
-						case 1: // Export...
-							// TODO
+						case 5: // Export...
+							_FileDialogState = FileDialogStateEnum.ExportEyeOfRubissStructureFile;
+							_FileDialog.Title = "Export...";
+							_FileDialog.SetFilter(["*.json", "*.bin"], ["Eye of Rubiss Structure", "DQB2 Blueprint"]);
+							_FileDialog.FileMode = FileDialog.FileModeEnum.SaveFile;
+							_FileDialog.PopupCentered();
 							break;
-						case 4: // Import...
+						case 1: // Export Raw...
+							// Can't do!
+							break;
+						case 4: // Import Raw...
 							// Can't do!
 							break;
 						case 2: // Close
-							CloseBlueprintAssetDQB1();
+							CloseEyeOfRubissStructure();
 							break;
 					}
 					break;
@@ -996,10 +1302,13 @@ namespace EyeOfRubiss.Scenes
 						case 3: // Save As...
 							// Can't do!
 							break;
-						case 1: // Export...
-							// TODO
+						case 5: // Export...
+							// Can't do!
 							break;
-						case 4: // Import...
+						case 1: // Export Raw...
+							// Can't do!
+							break;
+						case 4: // Import Raw...
 							// Can't do!
 							break;
 						case 2: // Close
@@ -1016,10 +1325,13 @@ namespace EyeOfRubiss.Scenes
 						case 3: // Save As...
 							// Can't do!
 							break;
-						case 1: // Export...
-							// TODO
+						case 5: // Export...
+							// Can't do!
 							break;
-						case 4: // Import...
+						case 1: // Export Raw...
+							// Can't do!
+							break;
+						case 4: // Import Raw...
 							// Can't do!
 							break;
 						case 2: // Close
@@ -1027,7 +1339,34 @@ namespace EyeOfRubiss.Scenes
 							break;
 					}
 					break;
-				
+				case FILE_MENU_DIORAMA_ID:
+					switch (buttonId)
+					{
+						case 0: // Save
+							// Can't do!
+							break;
+						case 3: // Save As...
+							// Can't do!
+							break;
+						case 5: // Export...
+							_FileDialogState = FileDialogStateEnum.ExportEyeOfRubissStructureFile;
+							_FileDialog.Title = "Export...";
+							_FileDialog.SetFilter(["*.json", "*.bin"], ["Eye of Rubiss Structure", "DQB2 Blueprint"]);
+							_FileDialog.FileMode = FileDialog.FileModeEnum.SaveFile;
+							_FileDialog.PopupCentered();
+							break;
+						case 1: // Export Raw...
+							// Can't do!
+							break;
+						case 4: // Import Raw...
+							// Can't do!
+							break;
+						case 2: // Close
+							CloseEyeOfRubissStructure();
+							break;
+					}
+					break;
+
 				case FILE_MENU_COMMON_DATA_ID:
 					switch (buttonId)
 					{
@@ -1036,19 +1375,22 @@ namespace EyeOfRubiss.Scenes
 							break;
 						case 3: // Save As...
 							_FileDialogState = FileDialogStateEnum.SaveCommonData;
-							_FileDialog.Title = "Save Common Data...";
+							_FileDialog.Title = "Save CMNDAT...";
 							_FileDialog.SetFilter("*.bin");
 							_FileDialog.FileMode = FileDialog.FileModeEnum.SaveFile;
 							_FileDialog.PopupCentered();
 							break;
-						case 1: // Export...
-							_FileDialogState = FileDialogStateEnum.ExportCommonData;
+						case 5: // Export...
+							// Can't do!
+							break;
+						case 1: // Export Raw...
+							_FileDialogState = FileDialogStateEnum.ExportRawCommonData;
 							_FileDialog.Title = "Export CMNDAT...";
 							_FileDialog.FileMode = FileDialog.FileModeEnum.SaveFile;
 							_FileDialog.SetFilter("*", "All Files");
 							_FileDialog.PopupCentered();
 							break;
-						case 4: // Import...
+						case 4: // Import Raw...
 							_FileDialogState = FileDialogStateEnum.ImportCommonData;
 							_FileDialog.Title = "Import CMNDAT...";
 							_FileDialog.FileMode = FileDialog.FileModeEnum.OpenFile;
@@ -1068,19 +1410,26 @@ namespace EyeOfRubiss.Scenes
 							break;
 						case 3: // Save As...
 							_FileDialogState = FileDialogStateEnum.SaveStageData;
-							_FileDialog.Title = "Save Stage Data...";
+							_FileDialog.Title = "Save STGDAT...";
 							_FileDialog.SetFilter("*.bin");
 							_FileDialog.FileMode = FileDialog.FileModeEnum.SaveFile;
 							_FileDialog.PopupCentered();
 							break;
-						case 1: // Export...
+						case 5: // Export...
 							_FileDialogState = FileDialogStateEnum.ExportStageData;
+							_FileDialog.Title = "Export...";
+							_FileDialog.SetFilter("*.json");
+							_FileDialog.FileMode = FileDialog.FileModeEnum.SaveFile;
+							_FileDialog.PopupCentered();
+							break;
+						case 1: // Export Raw...
+							_FileDialogState = FileDialogStateEnum.ExportRawStageData;
 							_FileDialog.Title = "Export STGDAT...";
 							_FileDialog.FileMode = FileDialog.FileModeEnum.SaveFile;
 							_FileDialog.SetFilter("*", "All Files");
 							_FileDialog.PopupCentered();
 							break;
-						case 4: // Import...
+						case 4: // Import Raw...
 							_FileDialogState = FileDialogStateEnum.ImportStageData;
 							_FileDialog.Title = "Import STGDAT...";
 							_FileDialog.FileMode = FileDialog.FileModeEnum.OpenFile;
@@ -1100,19 +1449,22 @@ namespace EyeOfRubiss.Scenes
 							break;
 						case 3: // Save As...
 							_FileDialogState = FileDialogStateEnum.SaveScreenshotData;
-							_FileDialog.Title = "Save Sreenshot Data...";
+							_FileDialog.Title = "Save SCSHDAT...";
 							_FileDialog.SetFilter("*.bin");
 							_FileDialog.FileMode = FileDialog.FileModeEnum.SaveFile;
 							_FileDialog.PopupCentered();
 							break;
-						case 1: // Export...
-							_FileDialogState = FileDialogStateEnum.ExportScreenshotData;
+						case 5: // Export...
+							// Can't do!
+							break;
+						case 1: // Export Raw...
+							_FileDialogState = FileDialogStateEnum.ExportRawScreenshotData;
 							_FileDialog.Title = "Export SCSHDAT...";
 							_FileDialog.FileMode = FileDialog.FileModeEnum.SaveFile;
 							_FileDialog.SetFilter("*", "All Files");
 							_FileDialog.PopupCentered();
 							break;
-						case 4: // Import...
+						case 4: // Import Raw...
 							_FileDialogState = FileDialogStateEnum.ImportScreenshotData;
 							_FileDialog.Title = "Import SCSHDAT...";
 							_FileDialog.FileMode = FileDialog.FileModeEnum.OpenFile;
@@ -1129,25 +1481,75 @@ namespace EyeOfRubiss.Scenes
 					switch (buttonId)
 					{
 						case 0: // Save
-							SaveBlueprintFileDQB2();
+							ExportEyeOfRubissStructureFileAsBlueprint();
 							break;
 						case 3: // Save As...
-							// TODO
+							_FileDialogState = FileDialogStateEnum.SaveBlueprintFileDQB2;
+							_FileDialog.Title = "Save Blueprint...";
+							_FileDialog.SetFilter("*.bin");
+							_FileDialog.FileMode = FileDialog.FileModeEnum.SaveFile;
+							_FileDialog.PopupCentered();
 							break;
-						case 1: // Export...
-							// TODO
+						case 5: // Export...
+							_FileDialogState = FileDialogStateEnum.ExportEyeOfRubissStructureFile;
+							_FileDialog.Title = "Export...";
+							_FileDialog.SetFilter(["*.json", "*.bin"], ["Eye of Rubiss Structure", "DQB2 Blueprint"]);
+							_FileDialog.FileMode = FileDialog.FileModeEnum.SaveFile;
+							_FileDialog.PopupCentered();
 							break;
-						case 4: // Import...
+						case 1: // Export Raw...
+							// Can't do!
+							break;
+						case 4: // Import Raw...
 							// Can't do!
 							break;
 						case 2: // Close
-							CloseBlueprintFileDQB2();
+							CloseEyeOfRubissStructure();
 							break;
 					}
 					break;
 				
-				case FILE_MENU_EYE_OF_RUBISS_STRUCTURE_FILE_ID:
-					// TODO
+				case FILE_MENU_EYE_OF_RUBISS_STRUCTURE_ID:
+					switch (buttonId)
+					{
+						case 0: // Save
+							if (string.IsNullOrEmpty(_EyeOfRubissStructure.Filename))
+							{
+								_FileDialogState = FileDialogStateEnum.SaveEyeOfRubissStructureFile;
+								_FileDialog.Title = "Save Structure...";
+								_FileDialog.SetFilter("*.json");
+								_FileDialog.FileMode = FileDialog.FileModeEnum.SaveFile;
+								_FileDialog.PopupCentered();
+							}
+							else
+							{
+								SaveEyeOfRubissStructureFile();
+							}
+							break;
+						case 3: // Save As...
+							_FileDialogState = FileDialogStateEnum.SaveEyeOfRubissStructureFile;
+							_FileDialog.Title = "Save Structure...";
+							_FileDialog.SetFilter("*.json");
+							_FileDialog.FileMode = FileDialog.FileModeEnum.SaveFile;
+							_FileDialog.PopupCentered();
+							break;
+						case 5: // Export...
+							_FileDialogState = FileDialogStateEnum.ExportEyeOfRubissStructureFile;
+							_FileDialog.Title = "Export...";
+							_FileDialog.SetFilter(["*.json", "*.bin"], ["Eye of Rubiss Structure", "DQB2 Blueprint"]);
+							_FileDialog.FileMode = FileDialog.FileModeEnum.SaveFile;
+							_FileDialog.PopupCentered();
+							break;
+						case 1: // Export Raw...
+							// Can't do!
+							break;
+						case 4: // Import Raw...
+							// Can't do!
+							break;
+						case 2: // Close
+							CloseEyeOfRubissStructure();
+							break;
+					}
 					break;
 			}
 		}
@@ -1165,44 +1567,102 @@ namespace EyeOfRubiss.Scenes
 		{
 			switch (_FileDialogState)
 			{
+				case FileDialogStateEnum.OpenFile:
+					OpenFile(path);
+					break;
+
 				case FileDialogStateEnum.OpenDirectory:
 					TryOpenFolder(path);
 					break;
 				case FileDialogStateEnum.SaveDirectory:
 					TrySaveFolder(path);
 					break;
-				case FileDialogStateEnum.OpenFile:
-					OpenFile(path);
+				
+				case FileDialogStateEnum.SaveWorldData:
+					_WorldData?.Save(path);
 					break;
-				case FileDialogStateEnum.SaveCommonData:
-					_CommonData?.Save(path);
+				case FileDialogStateEnum.ExportWorldData:
+					ExportWorldData(path);
 					break;
+				case FileDialogStateEnum.ExportRawWorldData:
+					_WorldData?.Export(path);
+					break;
+				case FileDialogStateEnum.ImportWorldData:
+					_WorldData.Import(path);
+					_WorldEditorScene.Reload();
+					break;
+
+				case FileDialogStateEnum.SaveParamData:
+					_ParamData?.Save(path);
+					break;
+				case FileDialogStateEnum.ExportRawParamData:
+					_ParamData?.Export(path);
+					break;
+				case FileDialogStateEnum.ImportParamData:
+					_ParamData.Import(path);
+					_WorldEditorScene.Reload();
+					break;
+
 				case FileDialogStateEnum.SaveStageData:
 					_StageData?.Save(path);
 					break;
-				case FileDialogStateEnum.SaveScreenshotData:
-					_ScreenshotData?.Save(path);
-					break;
-				case FileDialogStateEnum.ExportCommonData:
-					_CommonData?.Export(path);
-					break;
-				case FileDialogStateEnum.ExportStageData:
+				case FileDialogStateEnum.ExportRawStageData:
 					_StageData?.Export(path);
-					break;
-				case FileDialogStateEnum.ExportScreenshotData:
-					_ScreenshotData?.Export(path);
-					break;
-				case FileDialogStateEnum.ImportCommonData:
-					_CommonData?.Import(path);
-					_WorldEditorScene.Reload();
 					break;
 				case FileDialogStateEnum.ImportStageData:
 					_StageData?.Import(path);
 					_WorldEditorScene.Reload();
 					break;
+				
+				case FileDialogStateEnum.SaveCommonData:
+					_CommonData?.Save(path);
+					break;
+				case FileDialogStateEnum.ExportStageData:
+					ExportStageData(path);
+					break;
+				case FileDialogStateEnum.ExportRawCommonData:
+					_CommonData?.Export(path);
+					break;
+				case FileDialogStateEnum.ImportCommonData:
+					_CommonData?.Import(path);
+					_WorldEditorScene.Reload();
+					break;
+				
+				case FileDialogStateEnum.SaveScreenshotData:
+					_ScreenshotData?.Save(path);
+					break;
+				case FileDialogStateEnum.ExportRawScreenshotData:
+					_ScreenshotData?.Export(path);
+					break;
 				case FileDialogStateEnum.ImportScreenshotData:
 					_ScreenshotData?.Import(path);
 					break;
+				
+				case FileDialogStateEnum.SaveBlueprintFileDQB2:
+					ExportEyeOfRubissStructureFileAsBlueprint(path);
+					break;
+				
+				case FileDialogStateEnum.SaveEyeOfRubissStructureFile:
+					SaveEyeOfRubissStructureFile(path);
+					break;
+				case FileDialogStateEnum.ExportEyeOfRubissStructureFile:
+					ExportEyeOfRubissStructureFile(path);
+					break;
+				
+				case FileDialogStateEnum.ExportSelection:
+					_WorldEditorScene.ExportSelection(path);
+					break;
+				
+				case FileDialogStateEnum.ExportSnapshot:
+					_ScreenshotEditor.Export(path);
+					break;
+				case FileDialogStateEnum.ImportSnapshot:
+					_ScreenshotEditor.Import(path);
+					break;
+				case FileDialogStateEnum.ExportAllSnapshots:
+					_ScreenshotEditor.ExportAll(path);
+					break;
+
 				default:
 					break;
 			}
@@ -1287,10 +1747,18 @@ namespace EyeOfRubiss.Scenes
 			if (_StageData is not null)
 				_StageData.Weather = (byte)index;
 		}
+		public void _On_PassTime_CheckBox_Toggled(bool toggledOn)
+		{
+			if (_CommonData is not null)
+			{
+				_CommonData.TimeIsPassing = toggledOn;
+				GD.Print(_CommonData.TimeIsPassing ? "Time is passing." : "Time has stopped.");
+			}
+		}
 
 		public void _On_Inventory_Button_Pressed()
 		{
-			_Inventory_Panel.ToggleVisible();
+			
 		}
 
 		public void _On_Residents_Button_Pressed()
@@ -1298,6 +1766,110 @@ namespace EyeOfRubiss.Scenes
 			
 		}
 
+		public void _On_Snapshots_Button_Pressed()
+		{
+			if (!_ScreenshotEditor.Visible)
+			{
+				_ScreenshotEditor.Show();
+
+				_ScreenshotEditor.LoadScreenshotData(_ScreenshotData);
+			}
+			else
+			{
+				_ScreenshotEditor.Hide();
+			}
+		}
+
+		public void _On_Blocks_ItemList_ItemSelected(int idx)
+		{
+			_BGParts_ItemList.DeselectAll();
+			_Fluid_ItemList.DeselectAll();
+
+			int id = _Block_ItemList.GetItemID(idx);
+			_WorldEditorScene.SetBrushBlock(id);
+		}
+		public void _On_BGParts_ItemList_ItemSelected(int idx)
+		{
+			_Block_ItemList.DeselectAll();
+			_Fluid_ItemList.DeselectAll();
+
+			int id = _BGParts_ItemList.GetItemID(idx);
+			_WorldEditorScene.SetBrushBGParts(id);
+		}
+		public void _On_Fluids_ItemList_ItemSelected(int idx)
+		{
+			_Block_ItemList.DeselectAll();
+			_BGParts_ItemList.DeselectAll();
+			
+			int id = _Fluid_ItemList.GetItemID(idx);
+			_WorldEditorScene.SetBrushFluid(id);
+		}
+
+		public void _On_Blocks_SearchBar_TextChanged(string newText)
+		{
+			PopulateBlockList(newText);
+		}
+		public void _On_BGParts_SearchBar_TextChanged(string newText)
+		{
+			PopulateBGPartsList(newText);
+		}
+		public void _On_Fluids_SearchBar_TextChanged(string newText)
+		{
+			// There is no fluids search bar.
+		}
+		
+		public void _On_New_Window_Create_Button_Pressed()
+		{
+			_New_Window.Hide();
+
+			byte sourceGame = (byte)(_New_Window_Game_OptionButton.Selected + 1);
+			int sizeX = (int)_New_Window_X_SpinBox.Value;
+			int sizeZ = (int)_New_Window_Z_SpinBox.Value;
+
+			CreateNewEyeOfRubissStructure(sourceGame, sizeX, sizeZ);
+        }
+		
+		public void _On_WorldHandler_ExportSelectionRequested()
+		{
+			_FileDialogState = FileDialogStateEnum.ExportSelection;
+			_FileDialog.Title = "Export Selection...";
+			_FileDialog.SetFilter(["*.json", "*.bin"], ["Eye of Rubiss Structure", "DQB2 Blueprint"]);
+			_FileDialog.FileMode = FileDialog.FileModeEnum.SaveFile;
+			_FileDialog.PopupCentered();
+		}
+
+		public void _On_ScreenshotEditor_ExportRequested()
+		{
+			_FileDialogState = FileDialogStateEnum.ExportSnapshot;
+			_FileDialog.Title = "Export snapshot...";
+			_FileDialog.SetFilter("*.jpg");
+			_FileDialog.FileMode = FileDialog.FileModeEnum.SaveFile;
+			_FileDialog.PopupCentered();
+		}
+		public void _On_ScreenshotEditor_ImportRequested()
+		{
+			_FileDialogState = FileDialogStateEnum.ImportSnapshot;
+			_FileDialog.Title = "Import snapshot...";
+			_FileDialog.SetFilter("*.jpg");
+			_FileDialog.FileMode = FileDialog.FileModeEnum.OpenFile;
+			_FileDialog.PopupCentered();
+		}
+		public void _On_ScreenshotEditor_ExportAllRequested()
+		{
+			_FileDialog.FileMode = FileDialog.FileModeEnum.OpenDir;
+			_FileDialogState = FileDialogStateEnum.ExportAllSnapshots;
+			_FileDialog.Title = "Export all snapshots...";
+			_FileDialog.CurrentFile = "";
+			_FileDialog.PopupCentered();
+		}
+
+		public void _On_Root_FilesDropped(string[] files)
+		{
+			foreach (string path in files)
+			{
+				OpenFile(path);
+			}
+		}
 		public void _On_Root_CloseRequested()
 		{
 			// TODO Handle unsaved changes

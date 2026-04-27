@@ -83,7 +83,8 @@ namespace EyeOfRubiss
 
             byte[] data = [.. _Header, .. Util.Compress(_Buffer, System.IO.Compression.CompressionLevel.Fastest)];
             byte[] size = BitConverter.GetBytes(data.Length);
-            Array.Copy(size, 0, data, 0x10, size.Length);
+            if (_Header.Length >= 0x14)
+                Array.Copy(size, 0, data, 0x10, size.Length);
 
             using var file = Godot.FileAccess.Open(path, Godot.FileAccess.ModeFlags.Write);
             file.StoreBuffer(data);

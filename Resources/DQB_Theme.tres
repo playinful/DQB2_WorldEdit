@@ -1,16 +1,21 @@
-[gd_resource type="Theme" load_steps=2 format=3 uid="uid://nd34kb5d40qb"]
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://nd34kb5d40qb"]
 
 [ext_resource type="FontVariation" uid="uid://cc8u6p7xikihw" path="res://Resources/Font/AbolonVariation1.tres" id="2_eo3b1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_myi6m"]
 
 [resource]
 default_font_size = 20
 Button/fonts/font = ExtResource("2_eo3b1")
+ItemList/colors/guide_color = Color(0.7, 0.7, 0.7, 0)
+ItemList/styles/panel = SubResource("StyleBoxEmpty_myi6m")
 Label/font_sizes/font_size = 20
 Label/fonts/font = ExtResource("2_eo3b1")
 LineEdit/fonts/font = ExtResource("2_eo3b1")
 MenuBar/fonts/font = ExtResource("2_eo3b1")
 PopupMenu/fonts/font = ExtResource("2_eo3b1")
 ProgressBar/fonts/font = ExtResource("2_eo3b1")
+RichTextLabel/fonts/normal_font = ExtResource("2_eo3b1")
 TabBar/fonts/font = ExtResource("2_eo3b1")
 TabContainer/font_sizes/font_size = 20
 TabContainer/fonts/font = ExtResource("2_eo3b1")

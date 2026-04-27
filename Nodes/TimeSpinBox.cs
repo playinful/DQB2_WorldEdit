@@ -76,6 +76,17 @@ namespace EyeOfRubiss.Nodes
 			_DummyLineEdit.Text = _GetFormattedText(Value);
 		}
 
+		public void Disable()
+		{
+			Editable = false;
+			_DummyLineEdit.Editable = false;
+		}
+		public void Enable()
+		{
+			Editable = true;
+			_DummyLineEdit.Editable = true;
+		}
+
 		public void _On_ValueChanged(double _)
 		{
 			UpdateLineEdit();

@@ -7,6 +7,7 @@ namespace EyeOfRubiss
         Unknown = 0,
         
         DQB1_WorldData = 100,
+        DQB1_ParamData = 101,
 
         DQB1_BlueprintAsset = 110,
         DQB1_DioramaAssetHeader = 111,
@@ -17,6 +18,8 @@ namespace EyeOfRubiss
         DQB2_ScreenshotData = 202,
 
         DQB2_Blueprint = 210,
+
+        EyeOfRubissStructure = 10000
     }
 
     [JsonConverter(typeof(JsonStringEnumConverter))]
@@ -30,7 +33,8 @@ namespace EyeOfRubiss
         Red = 5,
         Green = 6,
         Yellow = 7,
-        Blue = 8
+        Blue = 8,
+        MAXIMUM = 9
     }
 
     [JsonConverter(typeof(JsonStringEnumConverter))]
@@ -122,5 +126,25 @@ namespace EyeOfRubiss
         SevenEighths = 9,
         EightEighths = 10,
         MAXIMUM = 11
+    }
+
+    public enum ChiselShape : byte
+    {
+        FullBlock = 0,
+        DiagonalNorth = 1,
+        DiagonalNorthwest = 2,
+        DiagonalWest = 3,
+        DiagonalSouthwest = 4,
+        DiagonalSouth = 5,
+        DiagonalSoutheast = 6,
+        DiagonalEast = 7,
+        DiagonalNortheast = 8,
+        ConcaveNorthwest = 9,
+        ConcaveSouthwest = 10,
+        ConcaveSoutheast = 11,
+        ConcaveNortheast = 12,
+        TopHalf = 13,
+        BottomHalf = 14,
+        UNDEFINED = 15
     }
 }

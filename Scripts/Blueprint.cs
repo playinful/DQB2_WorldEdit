@@ -37,9 +37,10 @@ namespace EyeOfRubiss
             public readonly SaveData SaveData = saveData;
             public readonly int Address = address;
 
-            public ushort PropID { get { return SaveData.GetUInt16(Address); } set { SaveData.SetUInt16(Address, value); } }
+            public ushort BGPartsID { get { return SaveData.GetUInt16(Address); } set { SaveData.SetUInt16(Address, value); } }
             public ushort BlockID { get { return SaveData.GetUInt16(Address + 2); } set { SaveData.SetUInt16(Address + 2, value); } }
             public byte Direction { get { return SaveData.GetByte(Address + 4); } set { SaveData.SetByte(Address + 4, value); } }
+            public ChiselShape Chisel { get => (ChiselShape)SaveData.GetNumberBitwise(Address + 5, 0, 4); set => SaveData.SetNumberBitwise(Address + 5, 0, 4, (byte)value); }
         }
     }
 }

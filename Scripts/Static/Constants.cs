@@ -3,10 +3,20 @@ namespace EyeOfRubiss
     /// <summary> Static class holding constant values to be used in various places. </summary>
     public static class Constants
     {
-        /// <summary> The block ID representing air (or, empty space) in DQB2. </summary>
         public const ushort BLOCK_AIR = 0;
-        /// <summary> The block ID representing bedrock in DQB2. </summary>
         public const ushort BLOCK_BEDROCK = 1;
+        public const ushort BLOCK_EARTH = 2;
+
+        public const ulong VOXEL_AIR = 0;
+        public const ulong VOXEL_SEAFLOOR = 8;
+        public const ulong VOXEL_FLOOR_COLLISION = 603;
+        public const ulong VOXEL_BLUEPRINT = 599;
+        public const ulong VOXEL_DEFAULT = 2;
+        public const ulong VOXEL_UNKNOWN = 7;
+        public const ulong VOXEL_PARTSBLOCK = 4;
+        public const ulong VOXEL_TERRAIN_COLLISION = 600;
+        public const ulong VOXEL_FLUID_COLLISION = 601;
+        public const ulong VOXEL_FLUID_PARTSBLOCK_COLLISION = 602;
 
         /// <summary> Static class holding constant values pertaining to hexidecimal colour strings. </summary>
         public static class Colors
@@ -52,6 +62,8 @@ namespace EyeOfRubiss
             public const string CURSOR_RELEASE = "cursor_release";
             public const string CAMERA_HOLD_TO_MOVE = "camera_hold_to_move";
 
+            public const string SCREENSHOT = "screenshot";
+
             public const string KEYBOARD_SHORTCUT_OPEN_FILE = "keyboard_shortcut_open_file";
             public const string KEYBOARD_SHORTCUT_OPEN_FOLDER = "keyboard_shortcut_open_folder";
             public const string KEYBOARD_SHORTCUT_SAVE = "keyboard_shortcut_save";
@@ -60,6 +72,8 @@ namespace EyeOfRubiss
             public const string KEYBOARD_SHORTCUT_CUT = "keyboard_shortcut_cut";
             public const string KEYBOARD_SHORTCUT_PASTE = "keyboard_shortcut_paste";
             public const string KEYBOARD_SHORTCUT_FILL = "keyboard_shortcut_fill";
+
+            public const string PROP_EDITOR = "prop_editor";
 
             public const string TEST1 = "test_1";
             public const string TEST2 = "test_2";

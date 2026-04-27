@@ -26,6 +26,9 @@ namespace EyeOfRubiss.Nodes
 			if (!Enabled)
 				return;
 
+			if (GetTree().Root.GuiGetFocusOwner() is LineEdit)
+				return;
+
 			Vector3 positionChangeVector = Vector3.Zero;
 
 			if (Input.IsActionPressed(Constants.Controls.CAMERA_LEFT))

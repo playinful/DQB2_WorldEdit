@@ -1,0 +1,444 @@
+[gd_scene load_steps=9 format=3 uid="uid://dkpj1t7u686ye"]
+
+[ext_resource type="Script" uid="uid://bquype1b1pu8c" path="res://Testing/BgPartsModelTest.cs" id="1_1h1vp"]
+[ext_resource type="Script" uid="uid://dhq5ccay2sljd" path="res://Nodes/BGPartsGridManager.cs" id="2_1j355"]
+[ext_resource type="Script" uid="uid://bgg687qn5fg8" path="res://Nodes/CameraController.cs" id="3_1j355"]
+
+[sub_resource type="Environment" id="Environment_1j355"]
+ambient_light_source = 2
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_energy = 0.5
+reflected_light_source = 1
+tonemap_mode = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fefgs"]
+albedo_color = Color(1, 0, 0, 1)
+
+[sub_resource type="QuadMesh" id="QuadMesh_fefgs"]
+orientation = 1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_edgsh"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1j355"]
+
+[node name="BgPartsModelTest" type="Node3D" node_paths=PackedStringArray("_BGPartsGridManager", "_Label", "_SpinBox")]
+script = ExtResource("1_1h1vp")
+_BGPartsGridManager = NodePath("BGPartsGridManager")
+_Label = NodePath("Label")
+_SpinBox = NodePath("SpinBox")
+
+[node name="BGPartsGridManager" type="Node3D" parent="."]
+script = ExtResource("2_1j355")
+GridMapsMaximum = 10
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.7837585, -0.34031758, 0.5195253, 0, 0.8365062, 0.5479575, -0.6210657, -0.42946634, 0.65561885, 3, 2.625, 3)
+current = true
+size = 41.667
+script = ExtResource("3_1j355")
+Speed = 20.0
+MaxSpeedMultiplier = 4.0
+MouseSensitivity = 0.2
+Enabled = true
+
+[node name="VoxelViewer" type="VoxelViewer" parent="Camera3D"]
+view_distance = 88888
+
+[node name="NextButton" type="Button" parent="."]
+offset_left = 935.0
+offset_top = 526.0
+offset_right = 1081.0
+offset_bottom = 608.0
+text = "Next Model"
+
+[node name="PreviousButton" type="Button" parent="."]
+offset_left = 40.0
+offset_top = 526.0
+offset_right = 186.0
+offset_bottom = 608.0
+text = "Previous Model"
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866024, -0.433016, 0.250001, 0, 0.499998, 0.866026, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_1j355")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="SpinBox" type="SpinBox" parent="."]
+offset_left = 471.0
+offset_top = 553.0
+offset_right = 557.5625
+offset_bottom = 584.0
+min_value = -99999.0
+max_value = 99999.0
+rounded = true
+
+[node name="SpinBoxGoButton" type="Button" parent="."]
+offset_left = 586.0
+offset_top = 547.0
+offset_right = 655.0
+offset_bottom = 590.0
+text = "Go"
+
+[node name="GuideSquares" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 0.5)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="GuideSquares"]
+material_override = SubResource("StandardMaterial3D_fefgs")
+mesh = SubResource("QuadMesh_fefgs")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="GuideSquares"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+material_override = SubResource("StandardMaterial3D_edgsh")
+mesh = SubResource("QuadMesh_fefgs")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="GuideSquares"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1)
+material_override = SubResource("StandardMaterial3D_1j355")
+mesh = SubResource("QuadMesh_fefgs")
+skeleton = NodePath("../MeshInstance3D")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="GuideSquares"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+material_override = SubResource("StandardMaterial3D_edgsh")
+mesh = SubResource("QuadMesh_fefgs")
+skeleton = NodePath("../MeshInstance3D")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="GuideSquares"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+material_override = SubResource("StandardMaterial3D_1j355")
+mesh = SubResource("QuadMesh_fefgs")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="GuideSquares"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
+material_override = SubResource("StandardMaterial3D_edgsh")
+mesh = SubResource("QuadMesh_fefgs")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="GuideSquares"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -1)
+material_override = SubResource("StandardMaterial3D_1j355")
+mesh = SubResource("QuadMesh_fefgs")
+skeleton = NodePath("../MeshInstance3D")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="GuideSquares"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -1)
+material_override = SubResource("StandardMaterial3D_edgsh")
+mesh = SubResource("QuadMesh_fefgs")
+skeleton = NodePath("../MeshInstance3D")
+
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="GuideSquares"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+material_override = SubResource("StandardMaterial3D_1j355")
+mesh = SubResource("QuadMesh_fefgs")
+
+[node name="MeshInstance3D10" type="MeshInstance3D" parent="GuideSquares"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -2)
+material_override = SubResource("StandardMaterial3D_edgsh")
+mesh = SubResource("QuadMesh_fefgs")
+
+[node name="MeshInstance3D11" type="MeshInstance3D" parent="GuideSquares"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -3)
+material_override = SubResource("StandardMaterial3D_1j355")
+mesh = SubResource("QuadMesh_fefgs")
+skeleton = NodePath("../MeshInstance3D")
+
+[node name="MeshInstance3D12" type="MeshInstance3D" parent="GuideSquares"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3)
+material_override = SubResource("StandardMaterial3D_edgsh")
+mesh = SubResource("QuadMesh_fefgs")
+skeleton = NodePath("../MeshInstance3D")
+
+[node name="MeshInstance3D13" type="MeshInstance3D" parent="GuideSquares"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -2)
+material_override = SubResource("StandardMaterial3D_1j355")
+mesh = SubResource("QuadMesh_fefgs")
+
+[node name="MeshInstance3D14" type="MeshInstance3D" parent="GuideSquares"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -2)
+material_override = SubResource("StandardMaterial3D_edgsh")
+mesh = SubResource("QuadMesh_fefgs")
+
+[node name="MeshInstance3D15" type="MeshInstance3D" parent="GuideSquares"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -3)
+material_override = SubResource("StandardMaterial3D_1j355")
+mesh = SubResource("QuadMesh_fefgs")
+skeleton = NodePath("../MeshInstance3D")
+
+[node name="MeshInstance3D16" type="MeshInstance3D" parent="GuideSquares"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -3)
+material_override = SubResource("StandardMaterial3D_edgsh")
+mesh = SubResource("QuadMesh_fefgs")
+skeleton = NodePath("../MeshInstance3D")
+
+[node name="MeshInstance3D17" type="MeshInstance3D" parent="GuideSquares"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+material_override = SubResource("StandardMaterial3D_1j355")
+mesh = SubResource("QuadMesh_fefgs")
+
+[node name="MeshInstance3D18" type="MeshInstance3D" parent="GuideSquares"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
+material_override = SubResource("StandardMaterial3D_edgsh")
+mesh = SubResource("QuadMesh_fefgs")
+
+[node name="MeshInstance3D19" type="MeshInstance3D" parent="GuideSquares"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -1)
+material_override = SubResource("StandardMaterial3D_1j355")
+mesh = SubResource("QuadMesh_fefgs")
+skeleton = NodePath("../MeshInstance3D")
+
+[node name="MeshInstance3D20" type="MeshInstance3D" parent="GuideSquares"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -1)
+material_override = SubResource("StandardMaterial3D_edgsh")
+mesh = SubResource("QuadMesh_fefgs")
+skeleton = NodePath("../MeshInstance3D")
+
+[node name="MeshInstance3D21" type="MeshInstance3D" parent="GuideSquares"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
+material_override = SubResource("StandardMaterial3D_1j355")
+mesh = SubResource("QuadMesh_fefgs")
+
+[node name="MeshInstance3D22" type="MeshInstance3D" parent="GuideSquares"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 0)
+material_override = SubResource("StandardMaterial3D_edgsh")
+mesh = SubResource("QuadMesh_fefgs")
+
+[node name="MeshInstance3D23" type="MeshInstance3D" parent="GuideSquares"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -1)
+material_override = SubResource("StandardMaterial3D_1j355")
+mesh = SubResource("QuadMesh_fefgs")
+skeleton = NodePath("../MeshInstance3D")
+
+[node name="MeshInstance3D24" type="MeshInstance3D" parent="GuideSquares"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -1)
+material_override = SubResource("StandardMaterial3D_edgsh")
+mesh = SubResource("QuadMesh_fefgs")
+skeleton = NodePath("../MeshInstance3D")
+
+[node name="MeshInstance3D25" type="MeshInstance3D" parent="GuideSquares"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -2)
+material_override = SubResource("StandardMaterial3D_1j355")
+mesh = SubResource("QuadMesh_fefgs")
+
+[node name="MeshInstance3D26" type="MeshInstance3D" parent="GuideSquares"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -2)
+material_override = SubResource("StandardMaterial3D_edgsh")
+mesh = SubResource("QuadMesh_fefgs")
+
+[node name="MeshInstance3D27" type="MeshInstance3D" parent="GuideSquares"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -3)
+material_override = SubResource("StandardMaterial3D_1j355")
+mesh = SubResource("QuadMesh_fefgs")
+skeleton = NodePath("../MeshInstance3D")
+
+[node name="MeshInstance3D28" type="MeshInstance3D" parent="GuideSquares"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -3)
+material_override = SubResource("StandardMaterial3D_edgsh")
+mesh = SubResource("QuadMesh_fefgs")
+skeleton = NodePath("../MeshInstance3D")
+
+[node name="MeshInstance3D29" type="MeshInstance3D" parent="GuideSquares"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -2)
+material_override = SubResource("StandardMaterial3D_1j355")
+mesh = SubResource("QuadMesh_fefgs")
+
+[node name="MeshInstance3D30" type="MeshInstance3D" parent="GuideSquares"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -2)
+material_override = SubResource("StandardMaterial3D_edgsh")
+mesh = SubResource("QuadMesh_fefgs")
+
+[node name="MeshInstance3D31" type="MeshInstance3D" parent="GuideSquares"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -3)
+material_override = SubResource("StandardMaterial3D_1j355")
+mesh = SubResource("QuadMesh_fefgs")
+skeleton = NodePath("../MeshInstance3D")
+
+[node name="MeshInstance3D32" type="MeshInstance3D" parent="GuideSquares"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -3)
+material_override = SubResource("StandardMaterial3D_edgsh")
+mesh = SubResource("QuadMesh_fefgs")
+skeleton = NodePath("../MeshInstance3D")
+
+[node name="MeshInstance3D33" type="MeshInstance3D" parent="GuideSquares"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+material_override = SubResource("StandardMaterial3D_1j355")
+mesh = SubResource("QuadMesh_fefgs")
+
+[node name="MeshInstance3D34" type="MeshInstance3D" parent="GuideSquares"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -4)
+material_override = SubResource("StandardMaterial3D_edgsh")
+mesh = SubResource("QuadMesh_fefgs")
+
+[node name="MeshInstance3D35" type="MeshInstance3D" parent="GuideSquares"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -5)
+material_override = SubResource("StandardMaterial3D_1j355")
+mesh = SubResource("QuadMesh_fefgs")
+skeleton = NodePath("../MeshInstance3D")
+
+[node name="MeshInstance3D36" type="MeshInstance3D" parent="GuideSquares"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
+material_override = SubResource("StandardMaterial3D_edgsh")
+mesh = SubResource("QuadMesh_fefgs")
+skeleton = NodePath("../MeshInstance3D")
+
+[node name="MeshInstance3D37" type="MeshInstance3D" parent="GuideSquares"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -4)
+material_override = SubResource("StandardMaterial3D_1j355")
+mesh = SubResource("QuadMesh_fefgs")
+
+[node name="MeshInstance3D38" type="MeshInstance3D" parent="GuideSquares"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -4)
+material_override = SubResource("StandardMaterial3D_edgsh")
+mesh = SubResource("QuadMesh_fefgs")
+
+[node name="MeshInstance3D39" type="MeshInstance3D" parent="GuideSquares"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -5)
+material_override = SubResource("StandardMaterial3D_1j355")
+mesh = SubResource("QuadMesh_fefgs")
+skeleton = NodePath("../MeshInstance3D")
+
+[node name="MeshInstance3D40" type="MeshInstance3D" parent="GuideSquares"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -5)
+material_override = SubResource("StandardMaterial3D_edgsh")
+mesh = SubResource("QuadMesh_fefgs")
+skeleton = NodePath("../MeshInstance3D")
+
+[node name="MeshInstance3D41" type="MeshInstance3D" parent="GuideSquares"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6)
+material_override = SubResource("StandardMaterial3D_1j355")
+mesh = SubResource("QuadMesh_fefgs")
+
+[node name="MeshInstance3D42" type="MeshInstance3D" parent="GuideSquares"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -6)
+material_override = SubResource("StandardMaterial3D_edgsh")
+mesh = SubResource("QuadMesh_fefgs")
+
+[node name="MeshInstance3D43" type="MeshInstance3D" parent="GuideSquares"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -7)
+material_override = SubResource("StandardMaterial3D_1j355")
+mesh = SubResource("QuadMesh_fefgs")
+skeleton = NodePath("../MeshInstance3D")
+
+[node name="MeshInstance3D44" type="MeshInstance3D" parent="GuideSquares"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -7)
+material_override = SubResource("StandardMaterial3D_edgsh")
+mesh = SubResource("QuadMesh_fefgs")
+skeleton = NodePath("../MeshInstance3D")
+
+[node name="MeshInstance3D45" type="MeshInstance3D" parent="GuideSquares"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -6)
+material_override = SubResource("StandardMaterial3D_1j355")
+mesh = SubResource("QuadMesh_fefgs")
+
+[node name="MeshInstance3D46" type="MeshInstance3D" parent="GuideSquares"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -6)
+material_override = SubResource("StandardMaterial3D_edgsh")
+mesh = SubResource("QuadMesh_fefgs")
+
+[node name="MeshInstance3D47" type="MeshInstance3D" parent="GuideSquares"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -7)
+material_override = SubResource("StandardMaterial3D_1j355")
+mesh = SubResource("QuadMesh_fefgs")
+skeleton = NodePath("../MeshInstance3D")
+
+[node name="MeshInstance3D48" type="MeshInstance3D" parent="GuideSquares"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -7)
+material_override = SubResource("StandardMaterial3D_edgsh")
+mesh = SubResource("QuadMesh_fefgs")
+skeleton = NodePath("../MeshInstance3D")
+
+[node name="MeshInstance3D49" type="MeshInstance3D" parent="GuideSquares"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)
+material_override = SubResource("StandardMaterial3D_1j355")
+mesh = SubResource("QuadMesh_fefgs")
+
+[node name="MeshInstance3D50" type="MeshInstance3D" parent="GuideSquares"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -4)
+material_override = SubResource("StandardMaterial3D_edgsh")
+mesh = SubResource("QuadMesh_fefgs")
+
+[node name="MeshInstance3D51" type="MeshInstance3D" parent="GuideSquares"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -5)
+material_override = SubResource("StandardMaterial3D_1j355")
+mesh = SubResource("QuadMesh_fefgs")
+skeleton = NodePath("../MeshInstance3D")
+
+[node name="MeshInstance3D52" type="MeshInstance3D" parent="GuideSquares"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -5)
+material_override = SubResource("StandardMaterial3D_edgsh")
+mesh = SubResource("QuadMesh_fefgs")
+skeleton = NodePath("../MeshInstance3D")
+
+[node name="MeshInstance3D53" type="MeshInstance3D" parent="GuideSquares"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -4)
+material_override = SubResource("StandardMaterial3D_1j355")
+mesh = SubResource("QuadMesh_fefgs")
+
+[node name="MeshInstance3D54" type="MeshInstance3D" parent="GuideSquares"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -4)
+material_override = SubResource("StandardMaterial3D_edgsh")
+mesh = SubResource("QuadMesh_fefgs")
+
+[node name="MeshInstance3D55" type="MeshInstance3D" parent="GuideSquares"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -5)
+material_override = SubResource("StandardMaterial3D_1j355")
+mesh = SubResource("QuadMesh_fefgs")
+skeleton = NodePath("../MeshInstance3D")
+
+[node name="MeshInstance3D56" type="MeshInstance3D" parent="GuideSquares"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -5)
+material_override = SubResource("StandardMaterial3D_edgsh")
+mesh = SubResource("QuadMesh_fefgs")
+skeleton = NodePath("../MeshInstance3D")
+
+[node name="MeshInstance3D57" type="MeshInstance3D" parent="GuideSquares"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -6)
+material_override = SubResource("StandardMaterial3D_1j355")
+mesh = SubResource("QuadMesh_fefgs")
+
+[node name="MeshInstance3D58" type="MeshInstance3D" parent="GuideSquares"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -6)
+material_override = SubResource("StandardMaterial3D_edgsh")
+mesh = SubResource("QuadMesh_fefgs")
+
+[node name="MeshInstance3D59" type="MeshInstance3D" parent="GuideSquares"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -7)
+material_override = SubResource("StandardMaterial3D_1j355")
+mesh = SubResource("QuadMesh_fefgs")
+skeleton = NodePath("../MeshInstance3D")
+
+[node name="MeshInstance3D60" type="MeshInstance3D" parent="GuideSquares"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -7)
+material_override = SubResource("StandardMaterial3D_edgsh")
+mesh = SubResource("QuadMesh_fefgs")
+skeleton = NodePath("../MeshInstance3D")
+
+[node name="MeshInstance3D61" type="MeshInstance3D" parent="GuideSquares"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -6)
+material_override = SubResource("StandardMaterial3D_1j355")
+mesh = SubResource("QuadMesh_fefgs")
+
+[node name="MeshInstance3D62" type="MeshInstance3D" parent="GuideSquares"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -6)
+material_override = SubResource("StandardMaterial3D_edgsh")
+mesh = SubResource("QuadMesh_fefgs")
+
+[node name="MeshInstance3D63" type="MeshInstance3D" parent="GuideSquares"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, -7)
+material_override = SubResource("StandardMaterial3D_1j355")
+mesh = SubResource("QuadMesh_fefgs")
+skeleton = NodePath("../MeshInstance3D")
+
+[node name="MeshInstance3D64" type="MeshInstance3D" parent="GuideSquares"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -7)
+material_override = SubResource("StandardMaterial3D_edgsh")
+mesh = SubResource("QuadMesh_fefgs")
+skeleton = NodePath("../MeshInstance3D")
+
+[connection signal="pressed" from="NextButton" to="." method="_On_NextButton_Pressed"]
+[connection signal="pressed" from="PreviousButton" to="." method="_On_PreviousButton_Pressed"]
+[connection signal="pressed" from="SpinBoxGoButton" to="." method="_On_SpinBoxGoButton_Pressed"]

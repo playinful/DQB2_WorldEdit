@@ -8,20 +8,20 @@ using System.Collections.Generic;
 
 public partial class InventoryEditor : Control
 {
-    [Export] private ItemButtonSelector _Hotbar_ItemButtonSelector;
-    [Export] private ItemButtonSelector _Bag_ItemButtonSelector_1;
-    [Export] private ItemButtonSelector _Bag_ItemButtonSelector_2;
-    [Export] private ItemButtonSelector _Bag_ItemButtonSelector_3;
-    [Export] private ItemButtonSelector _Bag_ItemButtonSelector_4;
-    [Export] private ItemButtonSelector _Bag_ItemButtonSelector_5;
-    [Export] private ItemButtonSelector _Bag_ItemButtonSelector_6;
-    [Export] private ItemButtonSelector _Bag_ItemButtonSelector_7;
+    // [Export] private ItemButtonSelector _Hotbar_ItemButtonSelector;
+    // [Export] private ItemButtonSelector _Bag_ItemButtonSelector_1;
+    // [Export] private ItemButtonSelector _Bag_ItemButtonSelector_2;
+    // [Export] private ItemButtonSelector _Bag_ItemButtonSelector_3;
+    // [Export] private ItemButtonSelector _Bag_ItemButtonSelector_4;
+    // [Export] private ItemButtonSelector _Bag_ItemButtonSelector_5;
+    // [Export] private ItemButtonSelector _Bag_ItemButtonSelector_6;
+    // [Export] private ItemButtonSelector _Bag_ItemButtonSelector_7;
 
-    [Export] private InventoryItemSelector _InventoryItemSelector;
-    [Export] private ItemSelectorTest _ItemSelectorTest;
+    // [Export] private InventoryItemSelector _InventoryItemSelector;
+    // [Export] private ItemSelectorTest _ItemSelectorTest;
 
-    private Dictionary<int, ItemButton> _HotbarButtons;
-    private Dictionary<int, ItemButton> _BagButtons;
+    // private Dictionary<int, ItemButton> _HotbarButtons;
+    // private Dictionary<int, ItemButton> _BagButtons;
 
     private bool _Initialized;
 

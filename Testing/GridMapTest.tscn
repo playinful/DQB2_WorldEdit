@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://ouy3eqxf5m8a"]
+
+[ext_resource type="ArrayMesh" uid="uid://cp4vmnj84a6nf" path="res://Resources/Mesh/arrow.obj" id="1_fy2v7"]
+
+[sub_resource type="MeshLibrary" id="MeshLibrary_hb643"]
+item/0/name = ""
+item/0/mesh = ExtResource("1_fy2v7")
+item/0/mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+item/0/mesh_cast_shadow = 1
+item/0/shapes = []
+item/0/navigation_mesh_transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+item/0/navigation_layers = 1
+
+[node name="GridMapTest" type="GridMap"]
+mesh_library = SubResource("MeshLibrary_hb643")
+cell_size = Vector3(1, 1, 1)

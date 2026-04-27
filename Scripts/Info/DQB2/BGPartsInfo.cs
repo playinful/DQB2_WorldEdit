@@ -2,6 +2,7 @@ using System.Linq;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using Godot;
+using System.Collections.Generic;
 
 namespace EyeOfRubiss.Info.DQB2
 {
@@ -25,7 +26,7 @@ namespace EyeOfRubiss.Info.DQB2
         public string Name { get; set; } = "";
         public int Icon { get; set; }
 
-        public int Rarity { get; set; } = 0;
+        public byte Rarity { get; set; } = 0;
         public bool Connecting { get; set; } = false;
         public DyeColor Color { get; set; } = DyeColor.Plain;
 
@@ -40,6 +41,10 @@ namespace EyeOfRubiss.Info.DQB2
         }
 
         public PartsType Block { get; set; } = PartsType.Generic;
+        public ushort DQB1BGParts { get; set; } = 0;
+
+        public bool Collision { get; set; } = false;
+        public bool Effects { get; set; } = false;
 
         public float Sort { get; set; } = float.MaxValue;
 
@@ -76,6 +81,22 @@ namespace EyeOfRubiss.Info.DQB2
                 LoadDatabase();
 
             return _Database;
+        }
+        
+        public static IEnumerable<BGPartsInfo> SearchByText(string text)
+        {
+            if (_Database is null)
+                LoadDatabase();
+            
+            if (string.IsNullOrEmpty(text))
+                return GetAll();
+            
+            string searchText = text.ToLowerInvariant().Trim().Replace(" ", "");
+            return _Database.Where(info =>
+            {
+                string nameKey = info.Name.ToLowerInvariant().Trim().Replace(" ", "");
+                return nameKey.Contains(searchText);
+            });
         }
     }
 }

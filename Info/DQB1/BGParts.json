@@ -15,7 +15,7 @@
     {
         "ID": 1,
         "JLabel": "下草",
-        "Name": "grass",
+        "Name": "Grass",
         "NameJP": "ちいさな草",
         "Icon": 81,
         "Mesh": 1,
@@ -24,12 +24,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 0,
-        "DQB2BGParts": 1
+        "DQB2BGParts": 1,
+        "Block": "Generic"
     },
     {
         "ID": 2,
         "JLabel": "立体草",
-        "Name": "stalwort",
+        "Name": "Stalwort",
         "NameJP": "ぬの草",
         "Icon": 82,
         "Mesh": 2,
@@ -38,12 +39,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 0,
-        "DQB2BGParts": 2
+        "DQB2BGParts": 2,
+        "Block": "Generic"
     },
     {
         "ID": 3,
         "JLabel": "しげみ",
-        "Name": "medicinal shrub",
+        "Name": "Medicinal Shrub",
         "NameJP": "いやし葉のしげみ",
         "Icon": 83,
         "Mesh": 3,
@@ -52,12 +54,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 50,
-        "DQB2BGParts": 3
+        "DQB2BGParts": 3,
+        "Block": "Generic"
     },
     {
         "ID": 4,
         "JLabel": "花ピンク",
-        "Name": "coralily",
+        "Name": "Coralily",
         "NameJP": "ももいろの花",
         "Icon": 84,
         "Mesh": 4,
@@ -66,12 +69,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 15,
-        "DQB2BGParts": 4
+        "DQB2BGParts": 4,
+        "Block": "Generic"
     },
     {
         "ID": 5,
         "JLabel": "花オレンジ",
-        "Name": "daffodaisy",
+        "Name": "Daffodaisy",
         "NameJP": "きいろの花",
         "Icon": 85,
         "Mesh": 5,
@@ -80,12 +84,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 15,
-        "DQB2BGParts": 5
+        "DQB2BGParts": 5,
+        "Block": "Generic"
     },
     {
         "ID": 6,
         "JLabel": "花ホワイト",
-        "Name": "milkblossom",
+        "Name": "Milkblossom",
         "NameJP": "しろいつぼみ",
         "Icon": 86,
         "Mesh": 6,
@@ -94,12 +99,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 15,
-        "DQB2BGParts": 6
+        "DQB2BGParts": 6,
+        "Block": "Generic"
     },
     {
         "ID": 7,
         "JLabel": "ツタ",
-        "Name": "ivy",
+        "Name": "Ivy",
         "NameJP": "ツタ",
         "Icon": 87,
         "Mesh": 7,
@@ -108,12 +114,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 15,
-        "DQB2BGParts": 7
+        "DQB2BGParts": 7,
+        "Block": "Generic"
     },
     {
         "ID": 8,
         "JLabel": "森花",
-        "Name": "tingleweed",
+        "Name": "Tingleweed",
         "NameJP": "マヒ花",
         "Icon": 88,
         "Mesh": 8,
@@ -122,12 +129,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 15,
-        "DQB2BGParts": 8
+        "DQB2BGParts": 8,
+        "Block": "Generic"
     },
     {
         "ID": 9,
         "JLabel": "森草",
-        "Name": "cotton plant",
+        "Name": "Cotton Plant",
         "NameJP": "わたげ草",
         "Icon": 89,
         "Mesh": 9,
@@ -136,12 +144,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 15,
-        "DQB2BGParts": 9
+        "DQB2BGParts": 9,
+        "Block": "Generic"
     },
     {
         "ID": 10,
         "JLabel": "森きのこ",
-        "Name": "marshrooms",
+        "Name": "Marshrooms",
         "NameJP": "キノコ",
         "Icon": 90,
         "Mesh": 10,
@@ -150,26 +159,28 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 15,
-        "DQB2BGParts": 10
+        "DQB2BGParts": 10,
+        "Block": "Generic"
     },
     {
         "ID": 11,
         "JLabel": "ハス",
-        "Name": "water lily",
+        "Name": "Water Lily",
         "NameJP": "ハス",
         "Icon": 91,
         "Mesh": 11,
-        "Sort": 60230,
+        "Sort": 15079,
         "SizeX": 2,
         "SizeY": 1,
         "SizeZ": 2,
         "Fanciness": 0,
-        "DQB2BGParts": 11
+        "DQB2BGParts": 11,
+        "Block": "Generic"
     },
     {
         "ID": 12,
         "JLabel": "密林シダ草",
-        "Name": "fibrous fern",
+        "Name": "Fibrous Fern",
         "NameJP": "大きなシダ草",
         "Icon": 92,
         "Mesh": 12,
@@ -178,12 +189,13 @@
         "SizeY": 2,
         "SizeZ": 2,
         "Fanciness": 50,
-        "DQB2BGParts": 12
+        "DQB2BGParts": 12,
+        "Block": "Generic"
     },
     {
         "ID": 13,
         "JLabel": "密林大草",
-        "Name": "bigonia",
+        "Name": "Bigonia",
         "NameJP": "ジャングル草",
         "Icon": 93,
         "Mesh": 13,
@@ -192,12 +204,13 @@
         "SizeY": 2,
         "SizeZ": 2,
         "Fanciness": 50,
-        "DQB2BGParts": 13
+        "DQB2BGParts": 13,
+        "Block": "Generic"
     },
     {
         "ID": 14,
         "JLabel": "ラフレシア",
-        "Name": "pongsettia",
+        "Name": "Pongsettia",
         "NameJP": "ラフレシア",
         "Icon": 94,
         "Mesh": 14,
@@ -206,12 +219,13 @@
         "SizeY": 1,
         "SizeZ": 2,
         "Fanciness": 150,
-        "DQB2BGParts": 14
+        "DQB2BGParts": 14,
+        "Block": "Generic"
     },
     {
         "ID": 15,
         "JLabel": "砂地草",
-        "Name": "sandwort",
+        "Name": "Sandwort",
         "NameJP": "さばく草",
         "Icon": 95,
         "Mesh": 15,
@@ -220,12 +234,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 0,
-        "DQB2BGParts": 15
+        "DQB2BGParts": 15,
+        "Block": "Generic"
     },
     {
         "ID": 16,
         "JLabel": "丸サボテン",
-        "Name": "prickly peach cactus",
+        "Name": "Prickly Peach Cactus",
         "NameJP": "花サボテン",
         "Icon": 96,
         "Mesh": 16,
@@ -234,12 +249,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 20,
-        "DQB2BGParts": 16
+        "DQB2BGParts": 16,
+        "Block": "Generic"
     },
     {
         "ID": 17,
         "JLabel": "縦サボテン頭",
-        "Name": "cactus crown",
+        "Name": "Cactus Crown",
         "NameJP": "柱サボテンの頭",
         "Icon": 97,
         "Mesh": 17,
@@ -248,12 +264,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 10,
-        "DQB2BGParts": 17
+        "DQB2BGParts": 17,
+        "Block": "Generic"
     },
     {
         "ID": 18,
         "JLabel": "縦サボテン体",
-        "Name": "cactus trunk",
+        "Name": "Cactus Trunk",
         "NameJP": "柱サボテン",
         "Icon": 98,
         "Mesh": 18,
@@ -262,12 +279,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 10,
-        "DQB2BGParts": 18
+        "DQB2BGParts": 18,
+        "Block": "Generic"
     },
     {
         "ID": 19,
         "JLabel": "毒下草",
-        "Name": "witchgrass",
+        "Name": "Witchgrass",
         "NameJP": "むらさきの草",
         "Icon": 99,
         "Mesh": 19,
@@ -276,12 +294,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 0,
-        "DQB2BGParts": 19
+        "DQB2BGParts": 19,
+        "Block": "Generic"
     },
     {
         "ID": 20,
         "JLabel": "毒草",
-        "Name": "bogwort",
+        "Name": "Bogwort",
         "NameJP": "青ウニ草",
         "Icon": 100,
         "Mesh": 20,
@@ -290,12 +309,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 0,
-        "DQB2BGParts": 20
+        "DQB2BGParts": 20,
+        "Block": "Generic"
     },
     {
         "ID": 21,
         "JLabel": "毒きのこ",
-        "Name": "frogstool",
+        "Name": "Frogstool",
         "NameJP": "ニガキノコ",
         "Icon": 101,
         "Mesh": 21,
@@ -304,12 +324,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 15,
-        "DQB2BGParts": 21
+        "DQB2BGParts": 21,
+        "Block": "Generic"
     },
     {
         "ID": 22,
         "JLabel": "毒枯れ木",
-        "Name": "tainted tree",
+        "Name": "Tainted Tree",
         "NameJP": "沼枯れの木",
         "Icon": 318,
         "Mesh": 2484,
@@ -318,12 +339,13 @@
         "SizeY": 2,
         "SizeZ": 1,
         "Fanciness": 15,
-        "DQB2BGParts": 22
+        "DQB2BGParts": 22,
+        "Block": "Generic"
     },
     {
         "ID": 23,
         "JLabel": "毒倒木",
-        "Name": "twisted tree trunk",
+        "Name": "Twisted Tree Trunk",
         "NameJP": "たおれた巨木",
         "Icon": 319,
         "Mesh": 2485,
@@ -332,12 +354,13 @@
         "SizeY": 3,
         "SizeZ": 2,
         "Fanciness": 300,
-        "DQB2BGParts": 23
+        "DQB2BGParts": 23,
+        "Block": "Generic"
     },
     {
         "ID": 24,
         "JLabel": "雪草",
-        "Name": "freezia",
+        "Name": "Freezia",
         "NameJP": "白雪草",
         "Icon": 104,
         "Mesh": 24,
@@ -346,12 +369,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 15,
-        "DQB2BGParts": 24
+        "DQB2BGParts": 24,
+        "Block": "Generic"
     },
     {
         "ID": 25,
         "JLabel": "影草",
-        "Name": "septic shrub",
+        "Name": "Septic Shrub",
         "NameJP": "のろい葉のしげみ",
         "Icon": 105,
         "Mesh": 25,
@@ -360,12 +384,13 @@
         "SizeY": 2,
         "SizeZ": 1,
         "Fanciness": 0,
-        "DQB2BGParts": 25
+        "DQB2BGParts": 25,
+        "Block": "Generic"
     },
     {
         "ID": 26,
         "JLabel": "影横草",
-        "Name": "shadowgrass",
+        "Name": "Shadowgrass",
         "NameJP": "かげ草",
         "Icon": 106,
         "Mesh": 26,
@@ -374,12 +399,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 0,
-        "DQB2BGParts": 26
+        "DQB2BGParts": 26,
+        "Block": "Generic"
     },
     {
         "ID": 27,
         "JLabel": "広葉樹（苗木）",
-        "Name": "plumberry seedling",
+        "Name": "Plumberry Seedling",
         "NameJP": "ブナの苗",
         "Icon": 107,
         "Mesh": 27,
@@ -388,12 +414,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 50,
-        "DQB2BGParts": 27
+        "DQB2BGParts": 27,
+        "Block": "Generic"
     },
     {
         "ID": 28,
         "JLabel": "広葉樹（若木）",
-        "Name": "plumberry sapling",
+        "Name": "Plumberry Sapling",
         "NameJP": "ブナの若木",
         "Icon": 108,
         "Mesh": 28,
@@ -402,40 +429,43 @@
         "SizeY": 4,
         "SizeZ": 1,
         "Fanciness": 50,
-        "DQB2BGParts": 28
+        "DQB2BGParts": 28,
+        "Block": "Generic"
     },
     {
         "ID": 29,
         "JLabel": "広葉樹（中成木）",
-        "Name": "plumberry tree",
+        "Name": "Plumberry Tree",
         "NameJP": "ブナの木",
         "Icon": 109,
         "Mesh": 29,
-        "Sort": 60240,
+        "Sort": 15221,
         "SizeX": 1,
         "SizeY": 6,
         "SizeZ": 1,
         "Fanciness": 50,
-        "DQB2BGParts": 29
+        "DQB2BGParts": 29,
+        "Block": "Generic"
     },
     {
         "ID": 30,
         "JLabel": "広葉樹（切り株）",
-        "Name": "plumberry stump",
+        "Name": "Plumberry Stump",
         "NameJP": "ブナのきりかぶ",
         "Icon": 110,
         "Mesh": 30,
-        "Sort": 60250,
+        "Sort": 15231,
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 50,
-        "DQB2BGParts": 30
+        "DQB2BGParts": 30,
+        "Block": "Generic"
     },
     {
         "ID": 31,
         "JLabel": "広葉樹（大成木）",
-        "Name": "big plumberry tree",
+        "Name": "Big Plumberry Tree",
         "NameJP": "ブナの大木",
         "Icon": 111,
         "Mesh": 31,
@@ -444,12 +474,13 @@
         "SizeY": 8,
         "SizeZ": 1,
         "Fanciness": 50,
-        "DQB2BGParts": 31
+        "DQB2BGParts": 31,
+        "Block": "Generic"
     },
     {
         "ID": 32,
         "JLabel": "ヤシの木（苗木）",
-        "Name": "palm seedling",
+        "Name": "Palm Seedling",
         "NameJP": "ヤシの苗",
         "Icon": 112,
         "Mesh": 32,
@@ -458,12 +489,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 50,
-        "DQB2BGParts": 32
+        "DQB2BGParts": 32,
+        "Block": "Generic"
     },
     {
         "ID": 33,
         "JLabel": "ヤシの木（若木）",
-        "Name": "palm sapling",
+        "Name": "Palm Sapling",
         "NameJP": "ヤシの若木",
         "Icon": 113,
         "Mesh": 33,
@@ -472,40 +504,43 @@
         "SizeY": 4,
         "SizeZ": 1,
         "Fanciness": 50,
-        "DQB2BGParts": 33
+        "DQB2BGParts": 33,
+        "Block": "Generic"
     },
     {
         "ID": 34,
         "JLabel": "ヤシの木（成木）",
-        "Name": "palm tree",
+        "Name": "Palm Tree",
         "NameJP": "ヤシの木",
         "Icon": 114,
         "Mesh": 34,
-        "Sort": 60260,
+        "Sort": 15251,
         "SizeX": 1,
         "SizeY": 8,
         "SizeZ": 1,
         "Fanciness": 50,
-        "DQB2BGParts": 34
+        "DQB2BGParts": 34,
+        "Block": "Generic"
     },
     {
         "ID": 35,
         "JLabel": "ヤシの木（切り株）",
-        "Name": "palm tree stump",
+        "Name": "Palm Tree Stump",
         "NameJP": "ヤシのきりかぶ",
         "Icon": 115,
         "Mesh": 36,
-        "Sort": 60270,
+        "Sort": 15252,
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 50,
-        "DQB2BGParts": 35
+        "DQB2BGParts": 35,
+        "Block": "Generic"
     },
     {
         "ID": 36,
         "JLabel": "針葉樹（苗木）",
-        "Name": "cedar seedling",
+        "Name": "Cedar Seedling",
         "NameJP": "スギの苗",
         "Icon": 116,
         "Mesh": 37,
@@ -514,12 +549,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 50,
-        "DQB2BGParts": 36
+        "DQB2BGParts": 36,
+        "Block": "Generic"
     },
     {
         "ID": 37,
         "JLabel": "針葉樹（若木）",
-        "Name": "cedar sapling",
+        "Name": "Cedar Sapling",
         "NameJP": "スギの若木",
         "Icon": 117,
         "Mesh": 38,
@@ -528,40 +564,43 @@
         "SizeY": 4,
         "SizeZ": 1,
         "Fanciness": 50,
-        "DQB2BGParts": 37
+        "DQB2BGParts": 37,
+        "Block": "Generic"
     },
     {
         "ID": 38,
         "JLabel": "針葉樹（成木）",
-        "Name": "cedar tree",
+        "Name": "Cedar Tree",
         "NameJP": "スギの木",
         "Icon": 118,
         "Mesh": 39,
-        "Sort": 60280,
+        "Sort": 15271,
         "SizeX": 1,
         "SizeY": 8,
         "SizeZ": 1,
         "Fanciness": 50,
-        "DQB2BGParts": 38
+        "DQB2BGParts": 38,
+        "Block": "Generic"
     },
     {
         "ID": 39,
         "JLabel": "針葉樹（切り株）",
-        "Name": "cedar stump",
+        "Name": "Cedar Stump",
         "NameJP": "スギのきりかぶ",
         "Icon": 120,
         "Mesh": 41,
-        "Sort": 60290,
+        "Sort": 15281,
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 50,
-        "DQB2BGParts": 39
+        "DQB2BGParts": 39,
+        "Block": "Generic"
     },
     {
         "ID": 40,
         "JLabel": "針葉樹（雪成木）",
-        "Name": "snowy cedar",
+        "Name": "Snowy Cedar",
         "NameJP": "雪のスギ木",
         "Icon": 119,
         "Mesh": 42,
@@ -570,12 +609,13 @@
         "SizeY": 8,
         "SizeZ": 1,
         "Fanciness": 50,
-        "DQB2BGParts": 40
+        "DQB2BGParts": 40,
+        "Block": "Generic"
     },
     {
         "ID": 41,
         "JLabel": "塊岩",
-        "Name": "pumice",
+        "Name": "Pumice",
         "NameJP": "丸石",
         "Icon": 121,
         "Mesh": 44,
@@ -584,12 +624,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 0,
-        "DQB2BGParts": 41
+        "DQB2BGParts": 41,
+        "Block": "Generic"
     },
     {
         "ID": 42,
         "JLabel": "枯れ木",
-        "Name": "dead tree",
+        "Name": "Dead Tree",
         "NameJP": "枯れ木",
         "Icon": 122,
         "Mesh": 45,
@@ -598,12 +639,13 @@
         "SizeY": 4,
         "SizeZ": 1,
         "Fanciness": 20,
-        "DQB2BGParts": 42
+        "DQB2BGParts": 42,
+        "Block": "Generic"
     },
     {
         "ID": 43,
         "JLabel": "シンボル墓",
-        "Name": "metal memorial",
+        "Name": "Metal Memorial",
         "NameJP": "鉄のぼひょう",
         "Icon": 123,
         "Mesh": 46,
@@ -612,12 +654,13 @@
         "SizeY": 2,
         "SizeZ": 1,
         "Fanciness": 50,
-        "DQB2BGParts": 43
+        "DQB2BGParts": 43,
+        "Block": "Generic"
     },
     {
         "ID": 44,
         "JLabel": "大ツノ骨",
-        "Name": "huge horn",
+        "Name": "Huge Horn",
         "NameJP": "巨大なツノ",
         "Icon": 124,
         "Mesh": 47,
@@ -626,12 +669,13 @@
         "SizeY": 2,
         "SizeZ": 1,
         "Fanciness": 0,
-        "DQB2BGParts": 44
+        "DQB2BGParts": 44,
+        "Block": "Generic"
     },
     {
         "ID": 45,
         "JLabel": "木の墓",
-        "Name": "wooden memorial",
+        "Name": "Wooden Memorial",
         "NameJP": "木の墓",
         "Icon": 125,
         "Mesh": 48,
@@ -640,12 +684,13 @@
         "SizeY": 2,
         "SizeZ": 1,
         "Fanciness": 50,
-        "DQB2BGParts": 45
+        "DQB2BGParts": 45,
+        "Block": "Generic"
     },
     {
         "ID": 46,
         "JLabel": "石の墓",
-        "Name": "gravestone",
+        "Name": "Gravestone",
         "NameJP": "石の墓",
         "Icon": 126,
         "Mesh": 49,
@@ -654,12 +699,13 @@
         "SizeY": 2,
         "SizeZ": 1,
         "Fanciness": 50,
-        "DQB2BGParts": 46
+        "DQB2BGParts": 46,
+        "Block": "Generic"
     },
     {
         "ID": 47,
         "JLabel": "壊れ木箱",
-        "Name": "dilapidated crate",
+        "Name": "Dilapidated Crate",
         "NameJP": "ふるびた木箱",
         "Icon": 127,
         "Mesh": 50,
@@ -668,12 +714,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 10,
-        "DQB2BGParts": 47
+        "DQB2BGParts": 47,
+        "Block": "Generic"
     },
     {
         "ID": 48,
         "JLabel": "壊れレンガ",
-        "Name": "broken brickwork",
+        "Name": "Broken Brickwork",
         "NameJP": "くだけたレンガ",
         "Icon": 128,
         "Mesh": 51,
@@ -682,12 +729,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 0,
-        "DQB2BGParts": 48
+        "DQB2BGParts": 48,
+        "Block": "Generic"
     },
     {
         "ID": 49,
         "JLabel": "折れ旗",
-        "Name": "tattered standard",
+        "Name": "Tattered Standard",
         "NameJP": "負け戦のはた",
         "Icon": 129,
         "Mesh": 52,
@@ -696,12 +744,13 @@
         "SizeY": 3,
         "SizeZ": 1,
         "Fanciness": 10,
-        "DQB2BGParts": 49
+        "DQB2BGParts": 49,
+        "Block": "Generic"
     },
     {
         "ID": 50,
         "JLabel": "壊れ柵",
-        "Name": "broken barricade",
+        "Name": "Broken Barricade",
         "NameJP": "くちたバリケード",
         "Icon": 130,
         "Mesh": 53,
@@ -710,12 +759,13 @@
         "SizeY": 2,
         "SizeZ": 1,
         "Fanciness": 10,
-        "DQB2BGParts": 50
+        "DQB2BGParts": 50,
+        "Block": "Generic"
     },
     {
         "ID": 51,
         "JLabel": "壊れテント",
-        "Name": "tattered tent",
+        "Name": "Tattered Tent",
         "NameJP": "おんぼろテント",
         "Icon": 131,
         "Mesh": 54,
@@ -724,12 +774,13 @@
         "SizeY": 2,
         "SizeZ": 4,
         "Fanciness": 50,
-        "DQB2BGParts": 51
+        "DQB2BGParts": 51,
+        "Block": "Generic"
     },
     {
         "ID": 52,
         "JLabel": "木箱",
-        "Name": "crate",
+        "Name": "Crate",
         "NameJP": "木箱",
         "Icon": 132,
         "Mesh": 55,
@@ -738,12 +789,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 100,
-        "DQB2BGParts": 52
+        "DQB2BGParts": 52,
+        "Block": "Generic"
     },
     {
         "ID": 53,
         "JLabel": "樽",
-        "Name": "barrel",
+        "Name": "Barrel",
         "NameJP": "タル",
         "Icon": 133,
         "Mesh": 56,
@@ -752,12 +804,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 50,
-        "DQB2BGParts": 53
+        "DQB2BGParts": 53,
+        "Block": "Generic"
     },
     {
         "ID": 54,
         "JLabel": "ツボ",
-        "Name": "pot",
+        "Name": "Pot",
         "NameJP": "ツボ",
         "Icon": 134,
         "Mesh": 57,
@@ -766,12 +819,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 50,
-        "DQB2BGParts": 54
+        "DQB2BGParts": 54,
+        "Block": "Generic"
     },
     {
         "ID": 55,
         "JLabel": "皮袋",
-        "Name": "leather sack",
+        "Name": "Leather Sack",
         "NameJP": "革ぶくろ",
         "Icon": 135,
         "Mesh": 58,
@@ -780,12 +834,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 100,
-        "DQB2BGParts": 55
+        "DQB2BGParts": 55,
+        "Block": "Generic"
     },
     {
         "ID": 56,
         "JLabel": "水おけ",
-        "Name": "washtub",
+        "Name": "Washtub",
         "NameJP": "たらい",
         "Icon": 136,
         "Mesh": 59,
@@ -794,12 +849,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 50,
-        "DQB2BGParts": 56
+        "DQB2BGParts": 56,
+        "Block": "Generic"
     },
     {
         "ID": 57,
         "JLabel": "立て看板",
-        "Name": "signpost",
+        "Name": "Signpost",
         "NameJP": "かんばん",
         "Icon": 137,
         "Mesh": 60,
@@ -808,12 +864,13 @@
         "SizeY": 2,
         "SizeZ": 1,
         "Fanciness": 100,
-        "DQB2BGParts": 57
+        "DQB2BGParts": 57,
+        "Block": "Generic"
     },
     {
         "ID": 58,
         "JLabel": "木囲い",
-        "Name": "fencing",
+        "Name": "Fencing",
         "NameJP": "木のさく",
         "Icon": 138,
         "Mesh": 61,
@@ -822,12 +879,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 10,
-        "DQB2BGParts": 58
+        "DQB2BGParts": 58,
+        "Block": "Generic"
     },
     {
         "ID": 59,
         "JLabel": "大柵",
-        "Name": "barricade",
+        "Name": "Barricade",
         "NameJP": "バリケード",
         "Icon": 139,
         "Mesh": 70,
@@ -836,12 +894,13 @@
         "SizeY": 2,
         "SizeZ": 1,
         "Fanciness": 50,
-        "DQB2BGParts": 59
+        "DQB2BGParts": 59,
+        "Block": "Generic"
     },
     {
         "ID": 60,
         "JLabel": "はしご",
-        "Name": "ladder",
+        "Name": "Ladder",
         "NameJP": "はしご",
         "Icon": 140,
         "Mesh": 71,
@@ -850,26 +909,28 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 10,
-        "DQB2BGParts": 60
+        "DQB2BGParts": 60,
+        "Block": "Generic"
     },
     {
         "ID": 61,
         "JLabel": "階段",
-        "Name": "stone steps",
+        "Name": "Stone Steps",
         "NameJP": "石のかいだん",
-        "Icon": 141,
-        "Mesh": 80,
+        "Icon": 1310,
+        "Mesh": 2551,
         "Sort": 11000,
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 20,
-        "DQB2BGParts": 61
+        "DQB2BGParts": 61,
+        "Block": "Generic"
     },
     {
         "ID": 62,
         "JLabel": "武器看板",
-        "Name": "armourer's sign",
+        "Name": "Armourer's Sign",
         "NameJP": "武器屋のカベかけ",
         "Icon": 142,
         "Mesh": 89,
@@ -878,12 +939,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 150,
-        "DQB2BGParts": 62
+        "DQB2BGParts": 62,
+        "Block": "Generic"
     },
     {
         "ID": 63,
         "JLabel": "道具看板",
-        "Name": "shop sign",
+        "Name": "Shop Sign",
         "NameJP": "道具屋のカベかけ",
         "Icon": 143,
         "Mesh": 90,
@@ -892,12 +954,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 100,
-        "DQB2BGParts": 63
+        "DQB2BGParts": 63,
+        "Block": "Generic"
     },
     {
         "ID": 64,
         "JLabel": "宿看板",
-        "Name": "inn sign",
+        "Name": "Inn Sign",
         "NameJP": "宿屋のカベかけ",
         "Icon": 144,
         "Mesh": 91,
@@ -906,25 +969,27 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 100,
-        "DQB2BGParts": 64
+        "DQB2BGParts": 64,
+        "Block": "Generic"
     },
     {
         "ID": 65,
         "JLabel": "受付看板",
-        "Name": "builder symbol",
+        "Name": "Builder Symbol",
         "NameJP": "ビルダーシンボル・未使用",
         "Icon": 145,
         "Mesh": 92,
-        "Sort": 60300,
+        "Sort": 13311,
         "SizeX": 2,
         "SizeY": 2,
         "SizeZ": 1,
-        "Fanciness": 100
+        "Fanciness": 100,
+        "Block": "Generic"
     },
     {
         "ID": 66,
         "JLabel": "木窓1",
-        "Name": "porched window",
+        "Name": "Porched Window",
         "NameJP": "木のまどＡ",
         "Icon": 146,
         "Mesh": 93,
@@ -933,12 +998,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 150,
-        "DQB2BGParts": 66
+        "DQB2BGParts": 66,
+        "Block": "Fixture"
     },
     {
         "ID": 67,
         "JLabel": "木窓2",
-        "Name": "arched window",
+        "Name": "Arched Window",
         "NameJP": "木のまどＢ",
         "Icon": 147,
         "Mesh": 102,
@@ -947,12 +1013,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 150,
-        "DQB2BGParts": 67
+        "DQB2BGParts": 67,
+        "Block": "Fixture"
     },
     {
         "ID": 68,
         "JLabel": "石窓",
-        "Name": "stone window",
+        "Name": "Stone Window",
         "NameJP": "石のまど",
         "Icon": 148,
         "Mesh": 111,
@@ -961,12 +1028,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 150,
-        "DQB2BGParts": 68
+        "DQB2BGParts": 68,
+        "Block": "Fixture"
     },
     {
         "ID": 69,
         "JLabel": "木の扉",
-        "Name": "wooden door",
+        "Name": "Wooden Door",
         "NameJP": "木のとびら",
         "Icon": 149,
         "Mesh": 112,
@@ -975,12 +1043,13 @@
         "SizeY": 2,
         "SizeZ": 1,
         "Fanciness": 150,
-        "DQB2BGParts": 69
+        "DQB2BGParts": 69,
+        "Block": "Door"
     },
     {
         "ID": 70,
         "JLabel": "魔法の扉",
-        "Name": "magic door",
+        "Name": "Magic Door",
         "NameJP": "まほうのとびら",
         "Icon": 150,
         "Mesh": 121,
@@ -989,12 +1058,13 @@
         "SizeY": 2,
         "SizeZ": 1,
         "Fanciness": 300,
-        "DQB2BGParts": 70
+        "DQB2BGParts": 70,
+        "Block": "Door"
     },
     {
         "ID": 71,
         "JLabel": "牢扉",
-        "Name": "cell door",
+        "Name": "Cell Door",
         "NameJP": "ろうやのとびら",
         "Icon": 151,
         "Mesh": 130,
@@ -1003,12 +1073,13 @@
         "SizeY": 2,
         "SizeZ": 1,
         "Fanciness": 200,
-        "DQB2BGParts": 71
+        "DQB2BGParts": 71,
+        "Block": "Door"
     },
     {
         "ID": 72,
         "JLabel": "大扉",
-        "Name": "steel doors",
+        "Name": "Steel Doors",
         "NameJP": "はがねの大とびら",
         "Icon": 152,
         "Mesh": 131,
@@ -1017,12 +1088,13 @@
         "SizeY": 3,
         "SizeZ": 1,
         "Fanciness": 500,
-        "DQB2BGParts": 72
+        "DQB2BGParts": 72,
+        "Block": "Door"
     },
     {
         "ID": 73,
         "JLabel": "フェンスゲート",
-        "Name": "saloon door",
+        "Name": "Saloon Door",
         "NameJP": "フェンス",
         "Icon": 153,
         "Mesh": 132,
@@ -1031,26 +1103,28 @@
         "SizeY": 2,
         "SizeZ": 1,
         "Fanciness": 100,
-        "DQB2BGParts": 73
+        "DQB2BGParts": 73,
+        "Block": "Door"
     },
     {
         "ID": 74,
         "JLabel": "錠前",
-        "Name": "padlock",
+        "Name": "Padlock",
         "NameJP": "錠前",
         "Icon": 154,
         "Mesh": 141,
-        "Sort": 60310,
+        "Sort": 20110,
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 100,
-        "DQB2BGParts": 74
+        "DQB2BGParts": 74,
+        "Block": "Generic"
     },
     {
         "ID": 75,
         "JLabel": "丸石アクセント",
-        "Name": "buttress",
+        "Name": "Buttress",
         "NameJP": "石垣かざり",
         "Icon": 155,
         "Mesh": 143,
@@ -1059,12 +1133,13 @@
         "SizeY": 2,
         "SizeZ": 1,
         "Fanciness": 50,
-        "DQB2BGParts": 75
+        "DQB2BGParts": 75,
+        "Block": "Generic"
     },
     {
         "ID": 76,
         "JLabel": "屋根トップ",
-        "Name": "ridge tiling",
+        "Name": "Ridge Tiling",
         "NameJP": "屋根かざり",
         "Icon": 156,
         "Mesh": 144,
@@ -1073,12 +1148,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 50,
-        "DQB2BGParts": 76
+        "DQB2BGParts": 76,
+        "Block": "Roof"
     },
     {
         "ID": 77,
         "JLabel": "井戸",
-        "Name": "well",
+        "Name": "Well",
         "NameJP": "井戸",
         "Icon": 157,
         "Mesh": 153,
@@ -1087,12 +1163,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 200,
-        "DQB2BGParts": 77
+        "DQB2BGParts": 77,
+        "Block": "Generic"
     },
     {
         "ID": 78,
         "JLabel": "松明",
-        "Name": "torch",
+        "Name": "Torch",
         "NameJP": "たいまつ",
         "Icon": 158,
         "Mesh": 154,
@@ -1101,12 +1178,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 10,
-        "DQB2BGParts": 78
+        "DQB2BGParts": 78,
+        "Block": "Lighting"
     },
     {
         "ID": 79,
         "JLabel": "壁松明",
-        "Name": "sconce",
+        "Name": "Sconce",
         "NameJP": "カベかけ松明",
         "Icon": 159,
         "Mesh": 155,
@@ -1115,12 +1193,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 100,
-        "DQB2BGParts": 79
+        "DQB2BGParts": 79,
+        "Block": "Lighting"
     },
     {
         "ID": 80,
         "JLabel": "キャンプ",
-        "Name": "bonfire",
+        "Name": "Bonfire",
         "NameJP": "たき火",
         "Icon": 160,
         "Mesh": 156,
@@ -1129,12 +1208,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 50,
-        "DQB2BGParts": 80
+        "DQB2BGParts": 80,
+        "Block": "Lighting"
     },
     {
         "ID": 81,
         "JLabel": "鍋つきキャンプ",
-        "Name": "cookfire",
+        "Name": "Cookfire",
         "NameJP": "料理用たき火",
         "Icon": 161,
         "Mesh": 157,
@@ -1143,12 +1223,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 150,
-        "DQB2BGParts": 81
+        "DQB2BGParts": 81,
+        "Block": "Lighting"
     },
     {
         "ID": 82,
         "JLabel": "ランプ",
-        "Name": "lantern",
+        "Name": "Lantern",
         "NameJP": "カベかけランプ",
         "Icon": 162,
         "Mesh": 158,
@@ -1157,12 +1238,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 150,
-        "DQB2BGParts": 82
+        "DQB2BGParts": 82,
+        "Block": "Lighting"
     },
     {
         "ID": 83,
         "JLabel": "燭台",
-        "Name": "candlestick",
+        "Name": "Candlestick",
         "NameJP": "しょく台",
         "Icon": 163,
         "Mesh": 159,
@@ -1171,12 +1253,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 150,
-        "DQB2BGParts": 83
+        "DQB2BGParts": 83,
+        "Block": "Lighting"
     },
     {
         "ID": 84,
         "JLabel": "壁燭台",
-        "Name": "candelabrum",
+        "Name": "Candelabrum",
         "NameJP": "カベしょく台",
         "Icon": 164,
         "Mesh": 160,
@@ -1185,12 +1268,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 150,
-        "DQB2BGParts": 84
+        "DQB2BGParts": 84,
+        "Block": "Lighting"
     },
     {
         "ID": 85,
         "JLabel": "トーチ",
-        "Name": "brazier",
+        "Name": "Brazier",
         "NameJP": "かがり火",
         "Icon": 165,
         "Mesh": 161,
@@ -1199,12 +1283,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 100,
-        "DQB2BGParts": 85
+        "DQB2BGParts": 85,
+        "Block": "Lighting"
     },
     {
         "ID": 86,
         "JLabel": "花活け",
-        "Name": "pot plant",
+        "Name": "Pot Plant",
         "NameJP": "いけ花",
         "Icon": 166,
         "Mesh": 162,
@@ -1213,12 +1298,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 100,
-        "DQB2BGParts": 86
+        "DQB2BGParts": 86,
+        "Block": "Generic"
     },
     {
         "ID": 87,
         "JLabel": "飲料瓶",
-        "Name": "bottles",
+        "Name": "Bottles",
         "NameJP": "ガラスびん",
         "Icon": 167,
         "Mesh": 171,
@@ -1227,12 +1313,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 150,
-        "DQB2BGParts": 87
+        "DQB2BGParts": 87,
+        "Block": "Generic"
     },
     {
         "ID": 88,
         "JLabel": "食器",
-        "Name": "crockery",
+        "Name": "Crockery",
         "NameJP": "食器",
         "Icon": 168,
         "Mesh": 172,
@@ -1241,12 +1328,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 30,
-        "DQB2BGParts": 88
+        "DQB2BGParts": 88,
+        "Block": "Generic"
     },
     {
         "ID": 89,
         "JLabel": "鏡台",
-        "Name": "dressing table",
+        "Name": "Dressing Table",
         "NameJP": "ドレッサー",
         "Icon": 169,
         "Mesh": 173,
@@ -1255,12 +1343,13 @@
         "SizeY": 2,
         "SizeZ": 1,
         "Fanciness": 150,
-        "DQB2BGParts": 89
+        "DQB2BGParts": 89,
+        "Block": "Generic"
     },
     {
         "ID": 90,
         "JLabel": "角机",
-        "Name": "small table",
+        "Name": "Small Table",
         "NameJP": "木の机",
         "Icon": 170,
         "Mesh": 182,
@@ -1269,12 +1358,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 50,
-        "DQB2BGParts": 90
+        "DQB2BGParts": 90,
+        "Block": "Table"
     },
     {
         "ID": 91,
         "JLabel": "長机",
-        "Name": "big table",
+        "Name": "Big Table",
         "NameJP": "木のテーブル",
         "Icon": 171,
         "Mesh": 191,
@@ -1283,12 +1373,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 200,
-        "DQB2BGParts": 91
+        "DQB2BGParts": 91,
+        "Block": "Table"
     },
     {
         "ID": 92,
         "JLabel": "石机",
-        "Name": "stone table",
+        "Name": "Stone Table",
         "NameJP": "石のテーブル",
         "Icon": 172,
         "Mesh": 200,
@@ -1297,12 +1388,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 100,
-        "DQB2BGParts": 92
+        "DQB2BGParts": 92,
+        "Block": "Table"
     },
     {
         "ID": 93,
         "JLabel": "丸机",
-        "Name": "dining table",
+        "Name": "Dining Table",
         "NameJP": "おしゃれテーブル",
         "Icon": 173,
         "Mesh": 201,
@@ -1311,12 +1403,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 100,
-        "DQB2BGParts": 93
+        "DQB2BGParts": 93,
+        "Block": "Table"
     },
     {
         "ID": 94,
         "JLabel": "椅子LV1",
-        "Name": "wooden stool",
+        "Name": "Wooden Stool",
         "NameJP": "木のいす",
         "Icon": 174,
         "Mesh": 210,
@@ -1325,12 +1418,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 80,
-        "DQB2BGParts": 94
+        "DQB2BGParts": 94,
+        "Block": "Generic"
     },
     {
         "ID": 95,
         "JLabel": "椅子LV2",
-        "Name": "comfy stool",
+        "Name": "Comfy Stool",
         "NameJP": "クッションいす",
         "Icon": 175,
         "Mesh": 219,
@@ -1339,12 +1433,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 120,
-        "DQB2BGParts": 95
+        "DQB2BGParts": 95,
+        "Block": "Generic"
     },
     {
         "ID": 96,
         "JLabel": "玉座",
-        "Name": "throne",
+        "Name": "Throne",
         "NameJP": "玉座",
         "Icon": 176,
         "Mesh": 228,
@@ -1353,12 +1448,13 @@
         "SizeY": 2,
         "SizeZ": 2,
         "Fanciness": 500,
-        "DQB2BGParts": 96
+        "DQB2BGParts": 96,
+        "Block": "Generic"
     },
     {
         "ID": 97,
         "JLabel": "わらベッド",
-        "Name": "straw mattress",
+        "Name": "Straw Mattress",
         "NameJP": "わらベッド",
         "Icon": 177,
         "Mesh": 229,
@@ -1367,12 +1463,13 @@
         "SizeY": 1,
         "SizeZ": 2,
         "Fanciness": 30,
-        "DQB2BGParts": 97
+        "DQB2BGParts": 97,
+        "Block": "Generic"
     },
     {
         "ID": 98,
         "JLabel": "木ベッド",
-        "Name": "simple bed",
+        "Name": "Simple Bed",
         "NameJP": "木のベッド",
         "Icon": 178,
         "Mesh": 230,
@@ -1381,12 +1478,13 @@
         "SizeY": 1,
         "SizeZ": 2,
         "Fanciness": 80,
-        "DQB2BGParts": 98
+        "DQB2BGParts": 98,
+        "Block": "Generic"
     },
     {
         "ID": 99,
         "JLabel": "高級ベッド",
-        "Name": "king-sized bed",
+        "Name": "King-sized Bed",
         "NameJP": "キングベッド",
         "Icon": 179,
         "Mesh": 239,
@@ -1395,12 +1493,13 @@
         "SizeY": 1,
         "SizeZ": 2,
         "Fanciness": 300,
-        "DQB2BGParts": 99
+        "DQB2BGParts": 99,
+        "Block": "Generic"
     },
     {
         "ID": 100,
         "JLabel": "タオル",
-        "Name": "towel rail",
+        "Name": "Towel Rail",
         "NameJP": "カベかけタオル",
         "Icon": 180,
         "Mesh": 248,
@@ -1409,12 +1508,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 50,
-        "DQB2BGParts": 100
+        "DQB2BGParts": 100,
+        "Block": "Generic"
     },
     {
         "ID": 101,
         "JLabel": "本棚",
-        "Name": "bookcase",
+        "Name": "Bookcase",
         "NameJP": "本だな",
         "Icon": 181,
         "Mesh": 257,
@@ -1423,12 +1523,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 50,
-        "DQB2BGParts": 101
+        "DQB2BGParts": 101,
+        "Block": "Generic"
     },
     {
         "ID": 102,
         "JLabel": "キャビネット",
-        "Name": "chest of drawers",
+        "Name": "Chest Of Drawers",
         "NameJP": "キャビネット",
         "Icon": 182,
         "Mesh": 266,
@@ -1437,12 +1538,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 200,
-        "DQB2BGParts": 102
+        "DQB2BGParts": 102,
+        "Block": "Generic"
     },
     {
         "ID": 103,
         "JLabel": "タンス",
-        "Name": "wardrobe",
+        "Name": "Wardrobe",
         "NameJP": "タンス",
         "Icon": 183,
         "Mesh": 275,
@@ -1451,12 +1553,13 @@
         "SizeY": 2,
         "SizeZ": 1,
         "Fanciness": 200,
-        "DQB2BGParts": 103
+        "DQB2BGParts": 103,
+        "Block": "Generic"
     },
     {
         "ID": 104,
         "JLabel": "時計",
-        "Name": "grandfather clock",
+        "Name": "Grandfather Clock",
         "NameJP": "大きな時計",
         "Icon": 184,
         "Mesh": 276,
@@ -1465,12 +1568,13 @@
         "SizeY": 3,
         "SizeZ": 1,
         "Fanciness": 500,
-        "DQB2BGParts": 104
+        "DQB2BGParts": 104,
+        "Block": "Generic"
     },
     {
         "ID": 105,
         "JLabel": "武器飾り",
-        "Name": "ornamental swords",
+        "Name": "Ornamental Swords",
         "NameJP": "剣のカベかけ",
         "Icon": 185,
         "Mesh": 285,
@@ -1479,12 +1583,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 300,
-        "DQB2BGParts": 105
+        "DQB2BGParts": 105,
+        "Block": "Generic"
     },
     {
         "ID": 106,
         "JLabel": "鎧飾り",
-        "Name": "ornamental armour",
+        "Name": "Ornamental Armour",
         "NameJP": "よろいの置きもの",
         "Icon": 186,
         "Mesh": 286,
@@ -1493,12 +1598,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 300,
-        "DQB2BGParts": 106
+        "DQB2BGParts": 106,
+        "Block": "Generic"
     },
     {
         "ID": 107,
         "JLabel": "かまど",
-        "Name": "stove",
+        "Name": "Stove",
         "NameJP": "かまど",
         "Icon": 187,
         "Mesh": 287,
@@ -1507,12 +1613,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 300,
-        "DQB2BGParts": 107
+        "DQB2BGParts": 107,
+        "Block": "Lighting"
     },
     {
         "ID": 108,
         "JLabel": "シンク",
-        "Name": "sink",
+        "Name": "Sink",
         "NameJP": "シンク",
         "Icon": 188,
         "Mesh": 288,
@@ -1521,12 +1628,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 300,
-        "DQB2BGParts": 108
+        "DQB2BGParts": 108,
+        "Block": "Generic"
     },
     {
         "ID": 109,
         "JLabel": "風呂",
-        "Name": "bathtub",
+        "Name": "Bathtub",
         "NameJP": "バスタブ",
         "Icon": 189,
         "Mesh": 289,
@@ -1535,12 +1643,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 300,
-        "DQB2BGParts": 109
+        "DQB2BGParts": 109,
+        "Block": "Generic"
     },
     {
         "ID": 110,
         "JLabel": "女神像",
-        "Name": "Goddess statue",
+        "Name": "Goddess Statue",
         "NameJP": "女神像",
         "Icon": 190,
         "Mesh": 290,
@@ -1549,12 +1658,13 @@
         "SizeY": 2,
         "SizeZ": 1,
         "Fanciness": 300,
-        "DQB2BGParts": 110
+        "DQB2BGParts": 110,
+        "Block": "Generic"
     },
     {
         "ID": 111,
         "JLabel": "壁レリーフ小",
-        "Name": "clover carving",
+        "Name": "Clover Carving",
         "NameJP": "石のレリーフ",
         "Icon": 191,
         "Mesh": 291,
@@ -1563,12 +1673,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 150,
-        "DQB2BGParts": 111
+        "DQB2BGParts": 111,
+        "Block": "Generic"
     },
     {
         "ID": 112,
         "JLabel": "展示台",
-        "Name": "item display stand",
+        "Name": "Item Display Stand",
         "NameJP": "展示台",
         "Icon": 192,
         "Mesh": 300,
@@ -1577,12 +1688,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 300,
-        "DQB2BGParts": 112
+        "DQB2BGParts": 112,
+        "Block": "Generic"
     },
     {
         "ID": 113,
         "JLabel": "宝箱",
-        "Name": "treasure chest",
+        "Name": "Treasure Chest",
         "NameJP": "宝箱",
         "Icon": 193,
         "Mesh": 301,
@@ -1591,12 +1703,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 200,
-        "DQB2BGParts": 113
+        "DQB2BGParts": 113,
+        "Block": "Generic"
     },
     {
         "ID": 114,
         "JLabel": "垂れ幕",
-        "Name": "decorative drapery",
+        "Name": "Decorative Drapery",
         "NameJP": "カベかけ布かざり",
         "Icon": 194,
         "Mesh": 302,
@@ -1605,12 +1718,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 50,
-        "DQB2BGParts": 114
+        "DQB2BGParts": 114,
+        "Block": "Generic"
     },
     {
         "ID": 115,
         "JLabel": "タペストリ小",
-        "Name": "bold banner",
+        "Name": "Bold Banner",
         "NameJP": "タペストリ",
         "Icon": 195,
         "Mesh": 311,
@@ -1619,12 +1733,13 @@
         "SizeY": 2,
         "SizeZ": 1,
         "Fanciness": 50,
-        "DQB2BGParts": 115
+        "DQB2BGParts": 115,
+        "Block": "Generic"
     },
     {
         "ID": 116,
         "JLabel": "タペストリ大",
-        "Name": "big bold banner",
+        "Name": "Big Bold Banner",
         "NameJP": "大きなタペストリ",
         "Icon": 196,
         "Mesh": 320,
@@ -1633,12 +1748,13 @@
         "SizeY": 3,
         "SizeZ": 1,
         "Fanciness": 150,
-        "DQB2BGParts": 116
+        "DQB2BGParts": 116,
+        "Block": "Generic"
     },
     {
         "ID": 117,
         "JLabel": "柱小",
-        "Name": "pretty pillar",
+        "Name": "Pretty Pillar",
         "NameJP": "石の柱",
         "Icon": 197,
         "Mesh": 329,
@@ -1647,12 +1763,13 @@
         "SizeY": 2,
         "SizeZ": 1,
         "Fanciness": 100,
-        "DQB2BGParts": 117
+        "DQB2BGParts": 117,
+        "Block": "Generic"
     },
     {
         "ID": 118,
         "JLabel": "柱大",
-        "Name": "column",
+        "Name": "Column",
         "NameJP": "城の大柱",
         "Icon": 198,
         "Mesh": 330,
@@ -1661,12 +1778,13 @@
         "SizeY": 3,
         "SizeZ": 1,
         "Fanciness": 150,
-        "DQB2BGParts": 118
+        "DQB2BGParts": 118,
+        "Block": "Generic"
     },
     {
         "ID": 119,
         "JLabel": "城系囲い（線）",
-        "Name": "stone coping",
+        "Name": "Stone Coping",
         "NameJP": "石の床かざりＡ",
         "Icon": 200,
         "Mesh": 331,
@@ -1675,12 +1793,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 10,
-        "DQB2BGParts": 119
+        "DQB2BGParts": 119,
+        "Block": "Generic"
     },
     {
         "ID": 120,
         "JLabel": "城系囲い（角）",
-        "Name": "stone capping",
+        "Name": "Stone Capping",
         "NameJP": "石の床かざりＢ",
         "Icon": 199,
         "Mesh": 332,
@@ -1689,12 +1808,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 10,
-        "DQB2BGParts": 120
+        "DQB2BGParts": 120,
+        "Block": "Generic"
     },
     {
         "ID": 121,
         "JLabel": "壁レリーフ大",
-        "Name": "decorative shield",
+        "Name": "Decorative Shield",
         "NameJP": "大きなカベかざり",
         "Icon": 201,
         "Mesh": 333,
@@ -1703,12 +1823,13 @@
         "SizeY": 2,
         "SizeZ": 1,
         "Fanciness": 300,
-        "DQB2BGParts": 121
+        "DQB2BGParts": 121,
+        "Block": "Generic"
     },
     {
         "ID": 122,
         "JLabel": "洞窟崩落岩小",
-        "Name": "small stones",
+        "Name": "Small Stones",
         "NameJP": "小石",
         "Icon": 209,
         "Mesh": 334,
@@ -1717,12 +1838,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 10,
-        "DQB2BGParts": 122
+        "DQB2BGParts": 122,
+        "Block": "Generic"
     },
     {
         "ID": 123,
         "JLabel": "洞窟崩落岩大",
-        "Name": "big rock",
+        "Name": "Big Rock",
         "NameJP": "大きな石",
         "Icon": 208,
         "Mesh": 335,
@@ -1731,12 +1853,13 @@
         "SizeY": 2,
         "SizeZ": 2,
         "Fanciness": 10,
-        "DQB2BGParts": 123
+        "DQB2BGParts": 123,
+        "Block": "Generic"
     },
     {
         "ID": 124,
         "JLabel": "人骨",
-        "Name": "bones",
+        "Name": "Bones",
         "NameJP": "骨",
         "Icon": 210,
         "Mesh": 336,
@@ -1745,12 +1868,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 10,
-        "DQB2BGParts": 124
+        "DQB2BGParts": 124,
+        "Block": "Generic"
     },
     {
         "ID": 125,
         "JLabel": "竜骨",
-        "Name": "dragon bones",
+        "Name": "Dragon Bones",
         "NameJP": "竜族の骨",
         "Icon": 211,
         "Mesh": 337,
@@ -1759,12 +1883,13 @@
         "SizeY": 1,
         "SizeZ": 3,
         "Fanciness": 500,
-        "DQB2BGParts": 125
+        "DQB2BGParts": 125,
+        "Block": "Generic"
     },
     {
         "ID": 126,
         "JLabel": "壁鎖",
-        "Name": "chains",
+        "Name": "Chains",
         "NameJP": "ほりょのくさり",
         "Icon": 212,
         "Mesh": 338,
@@ -1773,12 +1898,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 150,
-        "DQB2BGParts": 126
+        "DQB2BGParts": 126,
+        "Block": "Generic"
     },
     {
         "ID": 127,
         "JLabel": "魔物の旗",
-        "Name": "Dragonlord's standard",
+        "Name": "Dragonlord's Standard",
         "NameJP": "竜王軍のはた",
         "Icon": 213,
         "Mesh": 339,
@@ -1787,12 +1913,13 @@
         "SizeY": 4,
         "SizeZ": 1,
         "Fanciness": 300,
-        "DQB2BGParts": 127
+        "DQB2BGParts": 127,
+        "Block": "Generic"
     },
     {
         "ID": 128,
         "JLabel": "魔物の床",
-        "Name": "vile tile",
+        "Name": "Vile Tile",
         "NameJP": "魔物の床かざり",
         "Icon": 214,
         "Mesh": 340,
@@ -1801,12 +1928,13 @@
         "SizeY": 1,
         "SizeZ": 2,
         "Fanciness": 200,
-        "DQB2BGParts": 128
+        "DQB2BGParts": 128,
+        "Block": "Generic"
     },
     {
         "ID": 129,
         "JLabel": "床ロト",
-        "Name": "seal of Erdrick",
+        "Name": "Seal of Erdrick",
         "NameJP": "ロトの床かざり",
         "Icon": 215,
         "Mesh": 341,
@@ -1815,12 +1943,13 @@
         "SizeY": 1,
         "SizeZ": 2,
         "Fanciness": 500,
-        "DQB2BGParts": 129
+        "DQB2BGParts": 129,
+        "Block": "Generic"
     },
     {
         "ID": 130,
         "JLabel": "竜の柱",
-        "Name": "draconic column",
+        "Name": "Draconic Column",
         "NameJP": "ドラゴンの柱",
         "Icon": 216,
         "Mesh": 342,
@@ -1829,12 +1958,13 @@
         "SizeY": 3,
         "SizeZ": 1,
         "Fanciness": 300,
-        "DQB2BGParts": 130
+        "DQB2BGParts": 130,
+        "Block": "Generic"
     },
     {
         "ID": 131,
         "JLabel": "魔物の顔像",
-        "Name": "vile visage",
+        "Name": "Vile Visage",
         "NameJP": "悪魔のカベかざり",
         "Icon": 217,
         "Mesh": 343,
@@ -1843,12 +1973,13 @@
         "SizeY": 2,
         "SizeZ": 1,
         "Fanciness": 300,
-        "DQB2BGParts": 131
+        "DQB2BGParts": 131,
+        "Block": "Generic"
     },
     {
         "ID": 132,
         "JLabel": "魔物の彫像",
-        "Name": "evil idol",
+        "Name": "Evil Idol",
         "NameJP": "火をふく石像",
         "Icon": 218,
         "Mesh": 344,
@@ -1857,12 +1988,13 @@
         "SizeY": 3,
         "SizeZ": 2,
         "Fanciness": 300,
-        "DQB2BGParts": 132
+        "DQB2BGParts": 132,
+        "Block": "Generic"
     },
     {
         "ID": 133,
         "JLabel": "魔物の生れる穴1",
-        "Name": "beastly burrow",
+        "Name": "Beastly Burrow",
         "NameJP": "土の巣穴",
         "Icon": 219,
         "Mesh": 345,
@@ -1871,12 +2003,13 @@
         "SizeY": 1,
         "SizeZ": 3,
         "Fanciness": 150,
-        "DQB2BGParts": 133
+        "DQB2BGParts": 133,
+        "Block": "Generic"
     },
     {
         "ID": 134,
         "JLabel": "魔物の生れる穴2",
-        "Name": "helliportal",
+        "Name": "Helliportal",
         "NameJP": "魔物のよびだし床",
         "Icon": 220,
         "Mesh": 347,
@@ -1885,12 +2018,13 @@
         "SizeY": 1,
         "SizeZ": 2,
         "Fanciness": 300,
-        "DQB2BGParts": 134
+        "DQB2BGParts": 134,
+        "Block": "Generic"
     },
     {
         "ID": 135,
         "JLabel": "トゲ床",
-        "Name": "spike trap",
+        "Name": "Spike Trap",
         "NameJP": "トゲわな",
         "Icon": 221,
         "Mesh": 348,
@@ -1899,26 +2033,28 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 10,
-        "DQB2BGParts": 135
+        "DQB2BGParts": 135,
+        "Block": "Generic"
     },
     {
         "ID": 136,
         "JLabel": "竜王の玉座",
-        "Name": "Dragonlord's throne",
-        "NameJP": "竜王の玉座",
+        "Name": "Dragonlord's Throne (Indestructible)",
+        "NameJP": "竜王の玉座(破壊不可)",
         "Icon": 222,
-        "Mesh": 809,
-        "Sort": 60320,
+        "Mesh": 349,
+        "Sort": 13280,
         "SizeX": 3,
         "SizeY": 3,
         "SizeZ": 2,
         "Fanciness": 500,
-        "DQB2BGParts": 254
+        "DQB2BGParts": 254,
+        "Block": "Generic"
     },
     {
         "ID": 137,
         "JLabel": "モモガキの実",
-        "Name": "pristine plumberry",
+        "Name": "Pristine Plumberry",
         "NameJP": "モモガキの実, モモガキの実",
         "Icon": 733,
         "Mesh": 350,
@@ -1927,12 +2063,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 50,
-        "DQB2BGParts": 137
+        "DQB2BGParts": 137,
+        "Block": "Generic"
     },
     {
         "ID": 138,
         "JLabel": "とうがらし",
-        "Name": "chilli peppers",
+        "Name": "Chilli Peppers",
         "NameJP": "とうがらし",
         "Icon": 224,
         "Mesh": 354,
@@ -1941,54 +2078,58 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 15,
-        "DQB2BGParts": 411
+        "DQB2BGParts": 411,
+        "Block": "Generic"
     },
     {
         "ID": 139,
         "JLabel": "小麦",
-        "Name": "wheat",
+        "Name": "Wheat",
         "NameJP": "小麦のたね, 小麦",
         "Icon": 225,
         "Mesh": 359,
-        "Sort": 60330,
+        "Sort": 20010,
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 30,
-        "DQB2BGParts": 390
+        "DQB2BGParts": 390,
+        "Block": "Generic"
     },
     {
         "ID": 140,
         "JLabel": "じゃがいも",
-        "Name": "potato",
+        "Name": "Potato",
         "NameJP": "たねイモ, じゃがいも",
         "Icon": 226,
         "Mesh": 364,
-        "Sort": 60340,
+        "Sort": 20020,
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 30,
-        "DQB2BGParts": 433
+        "DQB2BGParts": 433,
+        "Block": "Generic"
     },
     {
         "ID": 141,
         "JLabel": "トマト",
-        "Name": "heartfruit",
+        "Name": "Heartfruit",
         "NameJP": "ハートのたね, ハートフルーツ",
         "Icon": 227,
         "Mesh": 367,
-        "Sort": 60350,
+        "Sort": 20030,
         "SizeX": 1,
         "SizeY": 2,
         "SizeZ": 1,
         "Fanciness": 30,
-        "DQB2BGParts": 442
+        "DQB2BGParts": 442,
+        "Block": "Generic"
     },
     {
         "ID": 142,
         "JLabel": "酒舟石",
-        "Name": "transmutation table",
+        "Name": "Transmutation Table",
         "NameJP": "いにしえの調合台",
         "Icon": 245,
         "Mesh": 368,
@@ -1996,12 +2137,13 @@
         "SizeX": 4,
         "SizeY": 1,
         "SizeZ": 3,
-        "Fanciness": 500
+        "Fanciness": 500,
+        "Block": "Generic"
     },
     {
         "ID": 143,
         "JLabel": "ライオンヘッド",
-        "Name": "fierce fountain",
+        "Name": "Fierce Fountain",
         "NameJP": "獅子の湯かざり",
         "Icon": 258,
         "Mesh": 550,
@@ -2010,12 +2152,13 @@
         "SizeY": 2,
         "SizeZ": 1,
         "Fanciness": 300,
-        "DQB2BGParts": 143
+        "DQB2BGParts": 143,
+        "Block": "Generic"
     },
     {
         "ID": 144,
         "JLabel": "聖なる祠",
-        "Name": "ancient altar",
+        "Name": "Ancient Altar",
         "NameJP": "聖なるほこら",
         "Icon": 247,
         "Mesh": 373,
@@ -2023,12 +2166,13 @@
         "SizeX": 3,
         "SizeY": 1,
         "SizeZ": 2,
-        "Fanciness": 500
+        "Fanciness": 500,
+        "Block": "Generic"
     },
     {
         "ID": 145,
         "JLabel": "粗末な作業台",
-        "Name": "tree stump",
+        "Name": "Tree Stump",
         "NameJP": "きりかぶ作業台",
         "Icon": 246,
         "Mesh": 374,
@@ -2037,12 +2181,13 @@
         "SizeY": 1,
         "SizeZ": 2,
         "Fanciness": 50,
-        "DQB2BGParts": 145
+        "DQB2BGParts": 145,
+        "Block": "Generic"
     },
     {
         "ID": 146,
         "JLabel": "スライム風船",
-        "Name": "slime balloons",
+        "Name": "Slime Balloons",
         "NameJP": "スライム風船",
         "Icon": 847,
         "Mesh": 375,
@@ -2051,12 +2196,13 @@
         "SizeY": 2,
         "SizeZ": 1,
         "Fanciness": 500,
-        "DQB2BGParts": 146
+        "DQB2BGParts": 146,
+        "Block": "Generic"
     },
     {
         "ID": 147,
         "JLabel": "石切台",
-        "Name": "mason's workstation",
+        "Name": "Mason's Workstation",
         "NameJP": "石の作業台",
         "Icon": 230,
         "Mesh": 376,
@@ -2065,12 +2211,13 @@
         "SizeY": 1,
         "SizeZ": 2,
         "Fanciness": 100,
-        "DQB2BGParts": 2563
+        "DQB2BGParts": 2563,
+        "Block": "Generic"
     },
     {
         "ID": 148,
         "JLabel": "作業台",
-        "Name": "carpenter's workstation",
+        "Name": "Carpenter's Workstation",
         "NameJP": "木の作業台",
         "Icon": 231,
         "Mesh": 377,
@@ -2079,12 +2226,13 @@
         "SizeY": 1,
         "SizeZ": 2,
         "Fanciness": 100,
-        "DQB2BGParts": 540
+        "DQB2BGParts": 540,
+        "Block": "Generic"
     },
     {
         "ID": 149,
         "JLabel": "大作業台",
-        "Name": "Builder's workbench",
+        "Name": "Builder's Workbench",
         "NameJP": "万能作業台",
         "Icon": 232,
         "Mesh": 378,
@@ -2093,25 +2241,27 @@
         "SizeY": 2,
         "SizeZ": 3,
         "Fanciness": 500,
-        "DQB2BGParts": 149
+        "DQB2BGParts": 149,
+        "Block": "Generic"
     },
     {
         "ID": 150,
         "JLabel": "ミル",
-        "Name": "colour wheel",
+        "Name": "Colour Wheel",
         "NameJP": "ドットデコーダー",
         "Icon": 2467,
         "Mesh": 379,
-        "Sort": 60360,
+        "Sort": 14161,
         "SizeX": 2,
         "SizeY": 1,
         "SizeZ": 2,
-        "Fanciness": 300
+        "Fanciness": 300,
+        "Block": "Generic"
     },
     {
         "ID": 151,
         "JLabel": "炉",
-        "Name": "forge",
+        "Name": "Forge",
         "NameJP": "炉と金床",
         "Icon": 234,
         "Mesh": 381,
@@ -2120,12 +2270,13 @@
         "SizeY": 2,
         "SizeZ": 3,
         "Fanciness": 200,
-        "DQB2BGParts": 151
+        "DQB2BGParts": 151,
+        "Block": "Generic"
     },
     {
         "ID": 152,
         "JLabel": "武器看板2",
-        "Name": "Hela's hammer sign",
+        "Name": "Hela's Hammer Sign",
         "NameJP": "まじんのカベかけ",
         "Icon": 235,
         "Mesh": 383,
@@ -2134,12 +2285,13 @@
         "SizeY": 2,
         "SizeZ": 1,
         "Fanciness": 300,
-        "DQB2BGParts": 152
+        "DQB2BGParts": 152,
+        "Block": "Generic"
     },
     {
         "ID": 153,
         "JLabel": "キッチン",
-        "Name": "brick barbecue",
+        "Name": "Brick Barbecue",
         "NameJP": "レンガ料理台",
         "Icon": 236,
         "Mesh": 384,
@@ -2148,12 +2300,13 @@
         "SizeY": 2,
         "SizeZ": 2,
         "Fanciness": 200,
-        "DQB2BGParts": 153
+        "DQB2BGParts": 153,
+        "Block": "Lighting"
     },
     {
         "ID": 154,
         "JLabel": "ふるい",
-        "Name": "miner's refiner",
+        "Name": "Miner's Refiner",
         "NameJP": "鉄の作業台",
         "Icon": 237,
         "Mesh": 385,
@@ -2162,12 +2315,13 @@
         "SizeY": 1,
         "SizeZ": 2,
         "Fanciness": 100,
-        "DQB2BGParts": 1294
+        "DQB2BGParts": 1294,
+        "Block": "Generic"
     },
     {
         "ID": 155,
         "JLabel": "仕立て台",
-        "Name": "sewing station",
+        "Name": "Sewing Station",
         "NameJP": "仕立て台",
         "Icon": 238,
         "Mesh": 386,
@@ -2176,12 +2330,13 @@
         "SizeY": 2,
         "SizeZ": 2,
         "Fanciness": 150,
-        "DQB2BGParts": 155
+        "DQB2BGParts": 155,
+        "Block": "Generic"
     },
     {
         "ID": 156,
         "JLabel": "薬壺",
-        "Name": "herbalist's cauldron",
+        "Name": "Herbalist's Cauldron",
         "NameJP": "調合ツボ",
         "Icon": 239,
         "Mesh": 387,
@@ -2190,12 +2345,13 @@
         "SizeY": 1,
         "SizeZ": 2,
         "Fanciness": 150,
-        "DQB2BGParts": 808
+        "DQB2BGParts": 808,
+        "Block": "Generic"
     },
     {
         "ID": 157,
         "JLabel": "金属加工台",
-        "Name": "machinist's workbench",
+        "Name": "Machinist's Workbench",
         "NameJP": "超マシンメーカー",
         "Icon": 240,
         "Mesh": 388,
@@ -2204,12 +2360,13 @@
         "SizeY": 2,
         "SizeZ": 3,
         "Fanciness": 500,
-        "DQB2BGParts": 157
+        "DQB2BGParts": 157,
+        "Block": "Generic"
     },
     {
         "ID": 158,
         "JLabel": "溶接台",
-        "Name": "welder's workbench",
+        "Name": "Welder's Workbench",
         "NameJP": "マシンメーカー",
         "Icon": 241,
         "Mesh": 389,
@@ -2218,12 +2375,13 @@
         "SizeY": 1,
         "SizeZ": 2,
         "Fanciness": 300,
-        "DQB2BGParts": 158
+        "DQB2BGParts": 158,
+        "Block": "Generic"
     },
     {
         "ID": 159,
         "JLabel": "祭壇",
-        "Name": "diviner's altar",
+        "Name": "Diviner's Altar",
         "NameJP": "シャナク魔法台",
         "Icon": 242,
         "Mesh": 390,
@@ -2232,12 +2390,13 @@
         "SizeY": 2,
         "SizeZ": 2,
         "Fanciness": 300,
-        "DQB2BGParts": 1150
+        "DQB2BGParts": 1150,
+        "Block": "Generic"
     },
     {
         "ID": 160,
         "JLabel": "魔物の錬成壺",
-        "Name": "forbidden altar",
+        "Name": "Forbidden Altar",
         "NameJP": "禁断の合成ツボ",
         "Icon": 243,
         "Mesh": 391,
@@ -2246,12 +2405,13 @@
         "SizeY": 2,
         "SizeZ": 2,
         "Fanciness": 200,
-        "DQB2BGParts": 2271
+        "DQB2BGParts": 2271,
+        "Block": "Generic"
     },
     {
         "ID": 161,
         "JLabel": "神鉄炉",
-        "Name": "furnace",
+        "Name": "Furnace",
         "NameJP": "神鉄炉と金床",
         "Icon": 244,
         "Mesh": 392,
@@ -2260,12 +2420,13 @@
         "SizeY": 2,
         "SizeZ": 3,
         "Fanciness": 300,
-        "DQB2BGParts": 161
+        "DQB2BGParts": 161,
+        "Block": "Generic"
     },
     {
         "ID": 162,
         "JLabel": "本",
-        "Name": "book",
+        "Name": "Book",
         "NameJP": "本",
         "Icon": 248,
         "Mesh": 394,
@@ -2274,12 +2435,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 20,
-        "DQB2BGParts": 162
+        "DQB2BGParts": 162,
+        "Block": "Generic"
     },
     {
         "ID": 163,
         "JLabel": "メモ帳",
-        "Name": "note",
+        "Name": "Note",
         "NameJP": "メモ",
         "Icon": 249,
         "Mesh": 412,
@@ -2288,7 +2450,8 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 10,
-        "DQB2BGParts": 163
+        "DQB2BGParts": 163,
+        "Block": "Generic"
     },
     {
         "ID": 164,
@@ -2301,12 +2464,13 @@
         "SizeX": 2,
         "SizeY": 1,
         "SizeZ": 3,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Block": "Generic"
     },
     {
         "ID": 165,
         "JLabel": "メルキドシールド",
-        "Name": "Cantlin shield",
+        "Name": "Cantlin Shield",
         "NameJP": "メルキドシールド",
         "Icon": 251,
         "Mesh": 415,
@@ -2315,40 +2479,43 @@
         "SizeY": 4,
         "SizeZ": 2,
         "Fanciness": 500,
-        "DQB2BGParts": 165
+        "DQB2BGParts": 165,
+        "Block": "Generic"
     },
     {
         "ID": 166,
         "JLabel": "聖なる成長草",
-        "Name": "holyhock",
+        "Name": "Holyhock",
         "NameJP": "聖なる草",
         "Icon": 252,
         "Mesh": 418,
-        "Sort": 60370,
+        "Sort": 20060,
         "SizeX": 1,
         "SizeY": 4,
         "SizeZ": 1,
         "Fanciness": 100,
-        "DQB2BGParts": 2572
+        "DQB2BGParts": 2572,
+        "Block": "Generic"
     },
     {
         "ID": 167,
         "JLabel": "フリー用ロト床",
-        "Name": "Erdrick's emblem (for free build mode)",
+        "Name": "Erdrick's Emblem (for Free Build Mode)",
         "NameJP": "フリー用ロト床",
         "Icon": 215,
         "Mesh": 341,
-        "Sort": 60380,
+        "Sort": 13561,
         "SizeX": 2,
         "SizeY": 1,
         "SizeZ": 2,
         "Fanciness": 300,
-        "DQB2BGParts": 129
+        "DQB2BGParts": 129,
+        "Block": "Generic"
     },
     {
         "ID": 168,
         "JLabel": "ツタ（影）",
-        "Name": "infernal ivy",
+        "Name": "Infernal Ivy",
         "NameJP": "やみのツタ",
         "Icon": 254,
         "Mesh": 419,
@@ -2357,12 +2524,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 0,
-        "DQB2BGParts": 168
+        "DQB2BGParts": 168,
+        "Block": "Generic"
     },
     {
         "ID": 169,
         "JLabel": "大砲",
-        "Name": "cannon",
+        "Name": "Cannon",
         "NameJP": "大砲",
         "Icon": 802,
         "Mesh": 420,
@@ -2371,12 +2539,13 @@
         "SizeY": 2,
         "SizeZ": 2,
         "Fanciness": 200,
-        "DQB2BGParts": 169
+        "DQB2BGParts": 169,
+        "Block": "Generic"
     },
     {
         "ID": 170,
         "JLabel": "ピストン",
-        "Name": "piston",
+        "Name": "Piston",
         "NameJP": "ピストン",
         "Icon": 259,
         "Mesh": 422,
@@ -2385,12 +2554,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 50,
-        "DQB2BGParts": 170
+        "DQB2BGParts": 170,
+        "Block": "Generic"
     },
     {
         "ID": 171,
         "JLabel": "床スイッチ",
-        "Name": "pressure plate",
+        "Name": "Pressure Plate",
         "NameJP": "床用スイッチ",
         "Icon": 260,
         "Mesh": 423,
@@ -2399,12 +2569,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 30,
-        "DQB2BGParts": 171
+        "DQB2BGParts": 171,
+        "Block": "Generic"
     },
     {
         "ID": 172,
         "JLabel": "壁スイッチ",
-        "Name": "button",
+        "Name": "Button",
         "NameJP": "カベ用スイッチ",
         "Icon": 261,
         "Mesh": 433,
@@ -2413,12 +2584,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 30,
-        "DQB2BGParts": 172
+        "DQB2BGParts": 172,
+        "Block": "Fixture"
     },
     {
         "ID": 173,
         "JLabel": "弓バリスタ",
-        "Name": "ballista",
+        "Name": "Ballista",
         "NameJP": "大弓",
         "Icon": 262,
         "Mesh": 443,
@@ -2427,12 +2599,13 @@
         "SizeY": 1,
         "SizeZ": 2,
         "Fanciness": 30,
-        "DQB2BGParts": 173
+        "DQB2BGParts": 173,
+        "Block": "Generic"
     },
     {
         "ID": 174,
         "JLabel": "イオナズン大砲",
-        "Name": "magic cannon",
+        "Name": "Magic Cannon",
         "NameJP": "まほうの大砲",
         "Icon": 263,
         "Mesh": 421,
@@ -2441,12 +2614,13 @@
         "SizeY": 2,
         "SizeZ": 2,
         "Fanciness": 300,
-        "DQB2BGParts": 174
+        "DQB2BGParts": 174,
+        "Block": "Generic"
     },
     {
         "ID": 175,
         "JLabel": "屋根薄板",
-        "Name": "roof tiling",
+        "Name": "Roof Tiling",
         "NameJP": "屋根・天板",
         "Icon": 816,
         "Mesh": 444,
@@ -2455,12 +2629,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 0,
-        "DQB2BGParts": 175
+        "DQB2BGParts": 175,
+        "Block": "Roof"
     },
     {
         "ID": 176,
         "JLabel": "屋根ななめ",
-        "Name": "pitched tiling",
+        "Name": "Pitched Tiling",
         "NameJP": "屋根・ななめ板",
         "Icon": 817,
         "Mesh": 453,
@@ -2469,12 +2644,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 0,
-        "DQB2BGParts": 176
+        "DQB2BGParts": 176,
+        "Block": "Roof"
     },
     {
         "ID": 177,
         "JLabel": "屋根凸",
-        "Name": "outer corner tiling",
+        "Name": "Outer Corner Tiling",
         "NameJP": "屋根・でっぱり角",
         "Icon": 818,
         "Mesh": 462,
@@ -2483,12 +2659,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 0,
-        "DQB2BGParts": 177
+        "DQB2BGParts": 177,
+        "Block": "Roof"
     },
     {
         "ID": 178,
         "JLabel": "屋根凹",
-        "Name": "inner corner tiling",
+        "Name": "Inner Corner Tiling",
         "NameJP": "屋根・ひっこみ角",
         "Icon": 819,
         "Mesh": 471,
@@ -2497,12 +2674,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 0,
-        "DQB2BGParts": 178
+        "DQB2BGParts": 178,
+        "Block": "Roof"
     },
     {
         "ID": 179,
         "JLabel": "拠点倉庫LV1",
-        "Name": "colossal coffer",
+        "Name": "Colossal Coffer",
         "NameJP": "大倉庫",
         "Icon": 264,
         "Mesh": 480,
@@ -2511,12 +2689,13 @@
         "SizeY": 2,
         "SizeZ": 3,
         "Fanciness": 500,
-        "DQB2BGParts": 179
+        "DQB2BGParts": 179,
+        "Block": "Generic"
     },
     {
         "ID": 180,
         "JLabel": "拠点倉庫LV2",
-        "Name": "armoire",
+        "Name": "Armoire",
         "NameJP": "石のクローゼット",
         "Icon": 265,
         "Mesh": 481,
@@ -2525,12 +2704,13 @@
         "SizeY": 2,
         "SizeZ": 2,
         "Fanciness": 200,
-        "DQB2BGParts": 180
+        "DQB2BGParts": 180,
+        "Block": "Generic"
     },
     {
         "ID": 181,
         "JLabel": "拠点倉庫LV3",
-        "Name": "colossal closet",
+        "Name": "Colossal Closet",
         "NameJP": "知られざる大倉庫",
         "Icon": 266,
         "Mesh": 482,
@@ -2539,12 +2719,13 @@
         "SizeY": 3,
         "SizeZ": 3,
         "Fanciness": 1000,
-        "DQB2BGParts": 181
+        "DQB2BGParts": 181,
+        "Block": "Generic"
     },
     {
         "ID": 182,
         "JLabel": "そうび展示台",
-        "Name": "equipment display stand",
+        "Name": "Equipment Display Stand",
         "NameJP": "そうび展示台",
         "Icon": 267,
         "Mesh": 483,
@@ -2553,12 +2734,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 300,
-        "DQB2BGParts": 182
+        "DQB2BGParts": 182,
+        "Block": "Generic"
     },
     {
         "ID": 183,
         "JLabel": "線路（直線）",
-        "Name": "straight track",
+        "Name": "Straight Track",
         "NameJP": "線路・直線",
         "Icon": 268,
         "Mesh": 484,
@@ -2567,12 +2749,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 10,
-        "DQB2BGParts": 183
+        "DQB2BGParts": 183,
+        "Block": "Generic"
     },
     {
         "ID": 184,
         "JLabel": "線路（カーブ）",
-        "Name": "curved track",
+        "Name": "Curved Track",
         "NameJP": "線路・カーブ",
         "Icon": 269,
         "Mesh": 485,
@@ -2581,12 +2764,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 10,
-        "DQB2BGParts": 184
+        "DQB2BGParts": 184,
+        "Block": "Generic"
     },
     {
         "ID": 185,
         "JLabel": "線路（勾配）",
-        "Name": "sloped track",
+        "Name": "Sloped Track",
         "NameJP": "線路・こうばい",
         "Icon": 270,
         "Mesh": 486,
@@ -2595,12 +2779,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 10,
-        "DQB2BGParts": 185
+        "DQB2BGParts": 185,
+        "Block": "Generic"
     },
     {
         "ID": 186,
         "JLabel": "線路（駅）",
-        "Name": "end-of-the-line sign",
+        "Name": "End-of-the-Line Sign",
         "NameJP": "トロッコ停止板",
         "Icon": 271,
         "Mesh": 487,
@@ -2609,12 +2794,13 @@
         "SizeY": 2,
         "SizeZ": 1,
         "Fanciness": 10,
-        "DQB2BGParts": 186
+        "DQB2BGParts": 186,
+        "Block": "Generic"
     },
     {
         "ID": 187,
         "JLabel": "木トロッコ",
-        "Name": "wooden minecart",
+        "Name": "Wooden Minecart",
         "NameJP": "木のトロッコ",
         "Icon": 272,
         "Mesh": 488,
@@ -2623,12 +2809,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 0,
-        "DQB2BGParts": 187
+        "DQB2BGParts": 187,
+        "Block": "Generic"
     },
     {
         "ID": 188,
         "JLabel": "鉄トロッコ",
-        "Name": "metal minecart",
+        "Name": "Metal Minecart",
         "NameJP": "鉄のトロッコ",
         "Icon": 273,
         "Mesh": 489,
@@ -2637,64 +2824,69 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 0,
-        "DQB2BGParts": 188
+        "DQB2BGParts": 188,
+        "Block": "Generic"
     },
     {
         "ID": 189,
         "JLabel": "旗ステージ1（台座）",
-        "Name": "chapter 1 banner (pedestal)",
+        "Name": "Chapter 1 Banner (Pedestal)",
         "NameJP": "旗ステージ1（台座）",
         "Icon": 274,
-        "Mesh": null,
-        "Sort": 60390,
+        "Mesh": 494,
+        "Sort": 8381,
         "SizeX": 3,
         "SizeY": 4,
         "SizeZ": 3,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Block": "Generic"
     },
     {
         "ID": 190,
         "JLabel": "旗ステージ2（台座）",
-        "Name": "chapter 1 banner (pedestal)",
+        "Name": "Chapter 2 Banner (Pedestal)",
         "NameJP": "旗ステージ2（台座）",
         "Icon": 275,
-        "Mesh": null,
-        "Sort": 60400,
+        "Mesh": 499,
+        "Sort": 8382,
         "SizeX": 3,
         "SizeY": 4,
         "SizeZ": 3,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Block": "Generic"
     },
     {
         "ID": 191,
         "JLabel": "旗ステージ3（台座）",
-        "Name": "chapter 1 banner (pedestal)",
+        "Name": "Chapter 3 Banner (Pedestal)",
         "NameJP": "旗ステージ3（台座）",
         "Icon": 276,
-        "Mesh": null,
-        "Sort": 60410,
+        "Mesh": 504,
+        "Sort": 8383,
         "SizeX": 3,
         "SizeY": 4,
         "SizeZ": 3,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Block": "Generic"
     },
     {
         "ID": 192,
         "JLabel": "旗ステージ4（台座）",
-        "Name": "chapter 1 banner (pedestal)",
+        "Name": "Chapter 4 Banner (Pedestal)",
         "NameJP": "旗ステージ4（台座）",
         "Icon": 277,
-        "Mesh": null,
-        "Sort": 60420,
+        "Mesh": 509,
+        "Sort": 8384,
         "SizeX": 3,
         "SizeY": 4,
         "SizeZ": 3,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Block": "Generic"
     },
     {
         "ID": 193,
         "JLabel": "旅の扉（青）",
-        "Name": "yellow teleportal",
+        "Name": "Yellow Teleportal",
         "NameJP": "旅のとびら・黄",
         "Icon": 809,
         "Mesh": 513,
@@ -2702,12 +2894,13 @@
         "SizeX": 2,
         "SizeY": 2,
         "SizeZ": 2,
-        "Fanciness": 100
+        "Fanciness": 100,
+        "Block": "Generic"
     },
     {
         "ID": 194,
         "JLabel": "導きの玉（赤）",
-        "Name": "red naviglobe",
+        "Name": "Red Naviglobe",
         "NameJP": "みちびきの玉・赤",
         "Icon": 279,
         "Mesh": 515,
@@ -2715,12 +2908,13 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Block": "Generic"
     },
     {
         "ID": 195,
         "JLabel": "導きの玉（緑）",
-        "Name": "green naviglobe",
+        "Name": "Green Naviglobe",
         "NameJP": "みちびきの玉・緑",
         "Icon": 280,
         "Mesh": 516,
@@ -2728,12 +2922,13 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Block": "Generic"
     },
     {
         "ID": 196,
         "JLabel": "導きの玉（青）",
-        "Name": "blue naviglobe",
+        "Name": "Blue Naviglobe",
         "NameJP": "みちびきの玉・青",
         "Icon": 281,
         "Mesh": 514,
@@ -2741,12 +2936,13 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Block": "Generic"
     },
     {
         "ID": 197,
         "JLabel": "魔法の玉",
-        "Name": "wrecking ball",
+        "Name": "Wrecking Ball",
         "NameJP": "まほうの玉",
         "Icon": 282,
         "Mesh": 517,
@@ -2755,12 +2951,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 0,
-        "DQB2BGParts": 197
+        "DQB2BGParts": 197,
+        "Block": "Generic"
     },
     {
         "ID": 198,
         "JLabel": "壁掛け枠",
-        "Name": "portrait of a lady",
+        "Name": "Portrait of a Lady",
         "NameJP": "女性の肖像画",
         "Icon": 805,
         "Mesh": 519,
@@ -2769,12 +2966,13 @@
         "SizeY": 2,
         "SizeZ": 1,
         "Fanciness": 300,
-        "DQB2BGParts": 198
+        "DQB2BGParts": 198,
+        "Block": "Generic"
     },
     {
         "ID": 199,
         "JLabel": "噴水",
-        "Name": "fountain",
+        "Name": "Fountain",
         "NameJP": "ふんすい",
         "Icon": 806,
         "Mesh": 520,
@@ -2783,12 +2981,13 @@
         "SizeY": 2,
         "SizeZ": 1,
         "Fanciness": 500,
-        "DQB2BGParts": 199
+        "DQB2BGParts": 199,
+        "Block": "Generic"
     },
     {
         "ID": 200,
         "JLabel": "水源鉱石",
-        "Name": "water crystal",
+        "Name": "Water Crystal",
         "NameJP": "水わく青石",
         "Icon": 807,
         "Mesh": 521,
@@ -2797,12 +2996,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 0,
-        "DQB2BGParts": 200
+        "DQB2BGParts": 200,
+        "Block": "Generic"
     },
     {
         "ID": 201,
         "JLabel": "温泉水源鉱石",
-        "Name": "hot water crystal",
+        "Name": "Hot Water Crystal",
         "NameJP": "湯わく赤石",
         "Icon": 808,
         "Mesh": 522,
@@ -2811,12 +3011,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 0,
-        "DQB2BGParts": 201
+        "DQB2BGParts": 201,
+        "Block": "Generic"
     },
     {
         "ID": 202,
         "JLabel": "旅の扉（黄）",
-        "Name": "blue teleportal",
+        "Name": "Blue Teleportal",
         "NameJP": "旅のとびら・青",
         "Icon": 278,
         "Mesh": 510,
@@ -2824,12 +3025,13 @@
         "SizeX": 2,
         "SizeY": 2,
         "SizeZ": 2,
-        "Fanciness": 100
+        "Fanciness": 100,
+        "Block": "Generic"
     },
     {
         "ID": 203,
         "JLabel": "旅の扉（赤）",
-        "Name": "red teleportal",
+        "Name": "Red Teleportal",
         "NameJP": "旅のとびら・赤",
         "Icon": 810,
         "Mesh": 511,
@@ -2837,12 +3039,13 @@
         "SizeX": 2,
         "SizeY": 2,
         "SizeZ": 2,
-        "Fanciness": 100
+        "Fanciness": 100,
+        "Block": "Generic"
     },
     {
         "ID": 204,
         "JLabel": "旅の扉（緑）",
-        "Name": "green teleportal",
+        "Name": "Green Teleportal",
         "NameJP": "旅のとびら・緑",
         "Icon": 811,
         "Mesh": 512,
@@ -2850,7 +3053,8 @@
         "SizeX": 2,
         "SizeY": 2,
         "SizeZ": 2,
-        "Fanciness": 100
+        "Fanciness": 100,
+        "Block": "Generic"
     },
     {
         "ID": 205,
@@ -2862,12 +3066,13 @@
         "Sort": 8380,
         "SizeX": 3,
         "SizeY": 2,
-        "SizeZ": 3
+        "SizeZ": 3,
+        "Block": "Generic"
     },
     {
         "ID": 206,
         "JLabel": "そまつな扉",
-        "Name": "straw door",
+        "Name": "Straw Door",
         "NameJP": "わらのとびら",
         "Icon": 202,
         "Mesh": 523,
@@ -2876,26 +3081,28 @@
         "SizeY": 2,
         "SizeZ": 1,
         "Fanciness": 50,
-        "DQB2BGParts": 206
+        "DQB2BGParts": 206,
+        "Block": "Door"
     },
     {
         "ID": 207,
         "JLabel": "木階段",
-        "Name": "wooden steps",
+        "Name": "Wooden Steps",
         "NameJP": "木のかいだん",
-        "Icon": 203,
-        "Mesh": 524,
+        "Icon": 1311,
+        "Mesh": 2552,
         "Sort": 11010,
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 20,
-        "DQB2BGParts": 207
+        "DQB2BGParts": 207,
+        "Block": "Generic"
     },
     {
         "ID": 208,
         "JLabel": "えんとつ",
-        "Name": "chimney",
+        "Name": "Chimney",
         "NameJP": "えんとつ",
         "Icon": 204,
         "Mesh": 533,
@@ -2904,12 +3111,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 0,
-        "DQB2BGParts": 208
+        "DQB2BGParts": 208,
+        "Block": "Generic"
     },
     {
         "ID": 209,
         "JLabel": "石の椅子",
-        "Name": "stone stool",
+        "Name": "Stone Stool",
         "NameJP": "石のいす",
         "Icon": 205,
         "Mesh": 534,
@@ -2918,12 +3126,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 100,
-        "DQB2BGParts": 209
+        "DQB2BGParts": 209,
+        "Block": "Generic"
     },
     {
         "ID": 210,
         "JLabel": "収納箱",
-        "Name": "chest",
+        "Name": "Chest",
         "NameJP": "収納箱",
         "Icon": 206,
         "Mesh": 1017,
@@ -2932,12 +3141,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 50,
-        "DQB2BGParts": 626
+        "DQB2BGParts": 626,
+        "Block": "Generic"
     },
     {
         "ID": 211,
         "JLabel": "透明壁",
-        "Name": "window",
+        "Name": "Window",
         "NameJP": "ガラスまど",
         "Icon": 207,
         "Mesh": 540,
@@ -2946,40 +3156,43 @@
         "SizeY": 2,
         "SizeZ": 1,
         "Fanciness": 200,
-        "DQB2BGParts": 211
+        "DQB2BGParts": 211,
+        "Block": "Fixture"
     },
     {
         "ID": 212,
         "JLabel": "まめ",
-        "Name": "butterbeans",
+        "Name": "Butterbeans",
         "NameJP": "まめ",
         "Icon": 228,
         "Mesh": 539,
-        "Sort": 60430,
+        "Sort": 20040,
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 30,
-        "DQB2BGParts": 394
+        "DQB2BGParts": 394,
+        "Block": "Generic"
     },
     {
         "ID": 213,
         "JLabel": "さとうきび",
-        "Name": "sugar cane",
+        "Name": "Sugar Cane",
         "NameJP": "あまきび",
         "Icon": 229,
         "Mesh": 372,
-        "Sort": 60440,
+        "Sort": 20050,
         "SizeX": 1,
         "SizeY": 3,
         "SizeZ": 1,
         "Fanciness": 30,
-        "DQB2BGParts": 416
+        "DQB2BGParts": 416,
+        "Block": "Generic"
     },
     {
         "ID": 214,
         "JLabel": "濾過装置",
-        "Name": "filter fountain",
+        "Name": "Filter Fountain",
         "NameJP": "浄化のふんすい",
         "Icon": 256,
         "Mesh": 559,
@@ -2988,40 +3201,43 @@
         "SizeY": 3,
         "SizeZ": 1,
         "Fanciness": 300,
-        "DQB2BGParts": 214
+        "DQB2BGParts": 214,
+        "Block": "Generic"
     },
     {
         "ID": 215,
         "JLabel": "邪悪な宝箱",
-        "Name": "hexed chest",
+        "Name": "Hexed Chest",
         "NameJP": "魔物の宝箱",
         "Icon": 257,
         "Mesh": 560,
-        "Sort": 60450,
+        "Sort": 3221,
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 0,
-        "DQB2BGParts": 215
+        "DQB2BGParts": 215,
+        "Block": "Generic"
     },
     {
         "ID": 216,
         "JLabel": "古代の大旅の扉",
-        "Name": "ancient teleportal",
+        "Name": "Ancient Teleportal",
         "NameJP": "古代のとびら",
         "Icon": 812,
         "Mesh": 561,
-        "Sort": 60460,
+        "Sort": 8161,
         "SizeX": 4,
         "SizeY": 1,
         "SizeZ": 4,
         "Fanciness": 0,
-        "DQB2BGParts": 216
+        "DQB2BGParts": 216,
+        "Block": "Generic"
     },
     {
         "ID": 217,
         "JLabel": "建築エリア看板（自分用）",
-        "Name": "sharing stone",
+        "Name": "Sharing Stone",
         "NameJP": "じぶんのビルド石",
         "Icon": 813,
         "Mesh": 562,
@@ -3030,12 +3246,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 0,
-        "DQB2BGParts": 217
+        "DQB2BGParts": 217,
+        "Block": "Generic"
     },
     {
         "ID": 218,
         "JLabel": "建築エリア看板（他人用）",
-        "Name": "summoning stone",
+        "Name": "Summoning Stone",
         "NameJP": "みんなのビルド石",
         "Icon": 814,
         "Mesh": 563,
@@ -3044,26 +3261,28 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 0,
-        "DQB2BGParts": 218
+        "DQB2BGParts": 218,
+        "Block": "Generic"
     },
     {
         "ID": 219,
         "JLabel": "地名石標",
-        "Name": "puzzlepost",
+        "Name": "Puzzlepost",
         "NameJP": "地名石標",
         "Icon": 815,
         "Mesh": 564,
-        "Sort": 60470,
+        "Sort": 20130,
         "SizeX": 1,
         "SizeY": 2,
         "SizeZ": 1,
         "Fanciness": 0,
-        "DQB2BGParts": 219
+        "DQB2BGParts": 219,
+        "Block": "Generic"
     },
     {
         "ID": 220,
         "JLabel": "屋根窓",
-        "Name": "tiled window",
+        "Name": "Tiled Window",
         "NameJP": "屋根・窓かざり",
         "Icon": 820,
         "Mesh": 565,
@@ -3072,12 +3291,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 0,
-        "DQB2BGParts": 220
+        "DQB2BGParts": 220,
+        "Block": "Roof"
     },
     {
         "ID": 221,
         "JLabel": "木枝",
-        "Name": "branch",
+        "Name": "Branch",
         "NameJP": "木の枝",
         "Icon": 821,
         "Mesh": 574,
@@ -3086,12 +3306,13 @@
         "SizeY": 1,
         "SizeZ": 2,
         "Fanciness": 20,
-        "DQB2BGParts": 221
+        "DQB2BGParts": 221,
+        "Block": "Generic"
     },
     {
         "ID": 222,
         "JLabel": "城壁キャップ",
-        "Name": "mini merlon",
+        "Name": "Mini Merlon",
         "NameJP": "城のカベかざり",
         "Icon": 823,
         "Mesh": 575,
@@ -3100,25 +3321,27 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 10,
-        "DQB2BGParts": 222
+        "DQB2BGParts": 222,
+        "Block": "Generic"
     },
     {
         "ID": 223,
         "JLabel": "石像ローラ",
-        "Name": "princess statue",
+        "Name": "Princess Statue",
         "NameJP": "美しい女性の石像",
-        "Icon": 2,
+        "Icon": 822,
         "Mesh": 549,
-        "Sort": 60480,
+        "Sort": 20140,
         "SizeX": 1,
         "SizeY": 2,
         "SizeZ": 1,
-        "Fanciness": 500
+        "Fanciness": 500,
+        "Block": "Generic"
     },
     {
         "ID": 224,
         "JLabel": "男性用看板",
-        "Name": "gentleman sign",
+        "Name": "Gentleman Sign",
         "NameJP": "男のカベかけ",
         "Icon": 824,
         "Mesh": 576,
@@ -3127,12 +3350,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 100,
-        "DQB2BGParts": 224
+        "DQB2BGParts": 224,
+        "Block": "Generic"
     },
     {
         "ID": 225,
         "JLabel": "女性用看板",
-        "Name": "lady sign",
+        "Name": "Lady Sign",
         "NameJP": "女のカベかけ",
         "Icon": 825,
         "Mesh": 577,
@@ -3141,12 +3365,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 100,
-        "DQB2BGParts": 225
+        "DQB2BGParts": 225,
+        "Block": "Generic"
     },
     {
         "ID": 226,
         "JLabel": "ベンチ",
-        "Name": "bench",
+        "Name": "Bench",
         "NameJP": "ベンチ",
         "Icon": 826,
         "Mesh": 578,
@@ -3155,12 +3380,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 150,
-        "DQB2BGParts": 226
+        "DQB2BGParts": 226,
+        "Block": "Generic"
     },
     {
         "ID": 227,
         "JLabel": "バーカウンター",
-        "Name": "bar counter",
+        "Name": "Bar Counter",
         "NameJP": "バーカウンター",
         "Icon": 827,
         "Mesh": 579,
@@ -3169,12 +3395,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 300,
-        "DQB2BGParts": 227
+        "DQB2BGParts": 227,
+        "Block": "Table"
     },
     {
         "ID": 228,
         "JLabel": "豪華な椅子",
-        "Name": "chic chair",
+        "Name": "Chic Chair",
         "NameJP": "きぞくのいす",
         "Icon": 828,
         "Mesh": 580,
@@ -3183,12 +3410,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 200,
-        "DQB2BGParts": 228
+        "DQB2BGParts": 228,
+        "Block": "Generic"
     },
     {
         "ID": 229,
         "JLabel": "酒ダル",
-        "Name": "beer barrel",
+        "Name": "Beer Barrel",
         "NameJP": "酒ダル",
         "Icon": 829,
         "Mesh": 589,
@@ -3197,12 +3425,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 150,
-        "DQB2BGParts": 229
+        "DQB2BGParts": 229,
+        "Block": "Generic"
     },
     {
         "ID": 230,
         "JLabel": "ハート壁かけライト",
-        "Name": "naughty night light",
+        "Name": "Naughty Night Light",
         "NameJP": "えっちなライト",
         "Icon": 830,
         "Mesh": 560,
@@ -3211,12 +3440,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 500,
-        "DQB2BGParts": 230
+        "DQB2BGParts": 230,
+        "Block": "Lighting"
     },
     {
         "ID": 231,
         "JLabel": "２シーターソファ",
-        "Name": "comfy sofa",
+        "Name": "Comfy Sofa",
         "NameJP": "くつろぎソファ",
         "Icon": 831,
         "Mesh": 561,
@@ -3225,12 +3455,13 @@
         "SizeY": 2,
         "SizeZ": 2,
         "Fanciness": 500,
-        "DQB2BGParts": 231
+        "DQB2BGParts": 231,
+        "Block": "Generic"
     },
     {
         "ID": 232,
         "JLabel": "天蓋つきベッド",
-        "Name": "princess-sized bed",
+        "Name": "Princess-sized Bed",
         "NameJP": "王女のベッド",
         "Icon": 832,
         "Mesh": 600,
@@ -3239,12 +3470,13 @@
         "SizeY": 2,
         "SizeZ": 3,
         "Fanciness": 500,
-        "DQB2BGParts": 232
+        "DQB2BGParts": 232,
+        "Block": "Generic"
     },
     {
         "ID": 233,
         "JLabel": "豪華木製大テーブル",
-        "Name": "extravagant table",
+        "Name": "Extravagant Table",
         "NameJP": "スクエアテーブル",
         "Icon": 833,
         "Mesh": 609,
@@ -3253,12 +3485,13 @@
         "SizeY": 1,
         "SizeZ": 3,
         "Fanciness": 750,
-        "DQB2BGParts": 233
+        "DQB2BGParts": 233,
+        "Block": "Table"
     },
     {
         "ID": 234,
         "JLabel": "豪華石製大テーブル",
-        "Name": "round table",
+        "Name": "Round Table",
         "NameJP": "ラウンドテーブル",
         "Icon": 834,
         "Mesh": 618,
@@ -3267,12 +3500,13 @@
         "SizeY": 1,
         "SizeZ": 3,
         "Fanciness": 750,
-        "DQB2BGParts": 234
+        "DQB2BGParts": 234,
+        "Block": "Table"
     },
     {
         "ID": 235,
         "JLabel": "暖炉",
-        "Name": "fireplace",
+        "Name": "Fireplace",
         "NameJP": "だんろ",
         "Icon": 835,
         "Mesh": 619,
@@ -3281,12 +3515,13 @@
         "SizeY": 2,
         "SizeZ": 1,
         "Fanciness": 500,
-        "DQB2BGParts": 235
+        "DQB2BGParts": 235,
+        "Block": "Lighting"
     },
     {
         "ID": 236,
         "JLabel": "プランターツボ",
-        "Name": "plant pot",
+        "Name": "Plant Pot",
         "NameJP": "うえきばち",
         "Icon": 836,
         "Mesh": 620,
@@ -3295,12 +3530,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 300,
-        "DQB2BGParts": 236
+        "DQB2BGParts": 236,
+        "Block": "Generic"
     },
     {
         "ID": 237,
         "JLabel": "なつかしのたてごと",
-        "Name": "lyre of slime immemorial",
+        "Name": "Lyre of Slime Immemorial",
         "NameJP": "なつかしの竪琴",
         "Icon": 2468,
         "Mesh": 629,
@@ -3309,12 +3545,13 @@
         "SizeY": 3,
         "SizeZ": 1,
         "Fanciness": 500,
-        "DQB2BGParts": 237
+        "DQB2BGParts": 237,
+        "Block": "Generic"
     },
     {
         "ID": 238,
         "JLabel": "ダンベル",
-        "Name": "dumb-bells",
+        "Name": "Dumb-Bells",
         "NameJP": "ダンベル",
         "Icon": 838,
         "Mesh": 631,
@@ -3323,12 +3560,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 100,
-        "DQB2BGParts": 238
+        "DQB2BGParts": 238,
+        "Block": "Generic"
     },
     {
         "ID": 239,
         "JLabel": "文房具",
-        "Name": "stationery",
+        "Name": "Stationery",
         "NameJP": "文房具",
         "Icon": 839,
         "Mesh": 632,
@@ -3337,12 +3575,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 200,
-        "DQB2BGParts": 239
+        "DQB2BGParts": 239,
+        "Block": "Generic"
     },
     {
         "ID": 240,
         "JLabel": "水差し",
-        "Name": "water jug",
+        "Name": "Water Jug",
         "NameJP": "水さし",
         "Icon": 840,
         "Mesh": 633,
@@ -3351,12 +3590,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 300,
-        "DQB2BGParts": 240
+        "DQB2BGParts": 240,
+        "Block": "Generic"
     },
     {
         "ID": 241,
         "JLabel": "ケーキセット",
-        "Name": "tea service",
+        "Name": "Tea Service",
         "NameJP": "ケーキセット",
         "Icon": 841,
         "Mesh": 634,
@@ -3365,12 +3605,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 300,
-        "DQB2BGParts": 241
+        "DQB2BGParts": 241,
+        "Block": "Generic"
     },
     {
         "ID": 242,
         "JLabel": "野菜料理",
-        "Name": "salad plate",
+        "Name": "Salad Plate",
         "NameJP": "サラダプレート",
         "Icon": 842,
         "Mesh": 635,
@@ -3379,12 +3620,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 200,
-        "DQB2BGParts": 242
+        "DQB2BGParts": 242,
+        "Block": "Generic"
     },
     {
         "ID": 243,
         "JLabel": "魚料理",
-        "Name": "fish dish",
+        "Name": "Fish Dish",
         "NameJP": "魚料理プレート",
         "Icon": 843,
         "Mesh": 636,
@@ -3393,12 +3635,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 300,
-        "DQB2BGParts": 243
+        "DQB2BGParts": 243,
+        "Block": "Generic"
     },
     {
         "ID": 244,
         "JLabel": "パンとカゴ",
-        "Name": "bread basket",
+        "Name": "Bread Basket",
         "NameJP": "パンとカゴ",
         "Icon": 844,
         "Mesh": 637,
@@ -3407,12 +3650,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 200,
-        "DQB2BGParts": 244
+        "DQB2BGParts": 244,
+        "Block": "Generic"
     },
     {
         "ID": 245,
         "JLabel": "肉料理",
-        "Name": "meat feast",
+        "Name": "Meat Feast",
         "NameJP": "肉料理プレート",
         "Icon": 845,
         "Mesh": 638,
@@ -3421,7 +3665,8 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 200,
-        "DQB2BGParts": 245
+        "DQB2BGParts": 245,
+        "Block": "Generic"
     },
     {
         "ID": 246,
@@ -3435,12 +3680,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 500,
-        "DQB2BGParts": 246
+        "DQB2BGParts": 246,
+        "Block": "Generic"
     },
     {
         "ID": 247,
         "JLabel": "おおきづちのぬいぐるみ",
-        "Name": "stuffed hammerhood",
+        "Name": "Stuffed Hammerhood",
         "NameJP": "おおきづち人形",
         "Icon": 848,
         "Mesh": 640,
@@ -3449,12 +3695,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 500,
-        "DQB2BGParts": 247
+        "DQB2BGParts": 247,
+        "Block": "Generic"
     },
     {
         "ID": 248,
         "JLabel": "イエティラグ",
-        "Name": "powie yowie rug",
+        "Name": "Powie Yowie Rug",
         "NameJP": "イエティラグ",
         "Icon": 849,
         "Mesh": 641,
@@ -3463,12 +3710,13 @@
         "SizeY": 1,
         "SizeZ": 3,
         "Fanciness": 500,
-        "DQB2BGParts": 248
+        "DQB2BGParts": 248,
+        "Block": "Generic"
     },
     {
         "ID": 249,
         "JLabel": "桜の木",
-        "Name": "cherry blossom tree",
+        "Name": "Cherry Blossom Tree",
         "NameJP": "桜の木",
         "Icon": 850,
         "Mesh": 642,
@@ -3477,7 +3725,8 @@
         "SizeY": 6,
         "SizeZ": 1,
         "Fanciness": 50,
-        "DQB2BGParts": 249
+        "DQB2BGParts": 249,
+        "Block": "Generic"
     },
     {
         "ID": 250,
@@ -3491,40 +3740,43 @@
         "SizeY": 2,
         "SizeZ": 1,
         "Fanciness": 500,
-        "DQB2BGParts": 250
+        "DQB2BGParts": 250,
+        "Block": "Generic"
     },
     {
         "ID": 251,
         "JLabel": "錠前2",
-        "Name": "lock 2 - for dev use",
+        "Name": "Lock 2 - for Dev Use",
         "NameJP": "錠前2・開発用",
         "Icon": 154,
         "Mesh": 142,
-        "Sort": 60490,
+        "Sort": 20120,
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 10,
-        "DQB2BGParts": 251
+        "DQB2BGParts": 251,
+        "Block": "Generic"
     },
     {
         "ID": 252,
         "JLabel": "折れ旗2",
-        "Name": "broken flag 2 - for dev use",
+        "Name": "Broken Flag 2 - for Dev Use",
         "NameJP": "折れ旗2・開発用",
         "Icon": 129,
         "Mesh": 52,
-        "Sort": 60500,
+        "Sort": 13091,
         "SizeX": 1,
         "SizeY": 3,
         "SizeZ": 1,
         "Fanciness": 10,
-        "DQB2BGParts": 252
+        "DQB2BGParts": 252,
+        "Block": "Generic"
     },
     {
         "ID": 253,
         "JLabel": "木枝（影）",
-        "Name": "blighted branch",
+        "Name": "Blighted Branch",
         "NameJP": "やみの木の枝",
         "Icon": 804,
         "Mesh": 644,
@@ -3533,26 +3785,28 @@
         "SizeY": 1,
         "SizeZ": 2,
         "Fanciness": 0,
-        "DQB2BGParts": 253
+        "DQB2BGParts": 253,
+        "Block": "Generic"
     },
     {
         "ID": 254,
         "JLabel": "竜王の玉座（破壊可能）",
-        "Name": "Dragonlord's throne",
+        "Name": "Dragonlord's Throne",
         "NameJP": "竜王の玉座",
         "Icon": 222,
-        "Mesh": 809,
+        "Mesh": 349,
         "Sort": 13280,
         "SizeX": 3,
         "SizeY": 3,
         "SizeZ": 2,
         "Fanciness": 500,
-        "DQB2BGParts": 254
+        "DQB2BGParts": 254,
+        "Block": "Generic"
     },
     {
         "ID": 255,
         "JLabel": "DQ1:扉",
-        "Name": "door sprite",
+        "Name": "Door Sprite",
         "NameJP": "ドット扉",
         "Icon": 2503,
         "Mesh": 2489,
@@ -3560,12 +3814,13 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 50
+        "Fanciness": 50,
+        "Block": "Generic"
     },
     {
         "ID": 256,
         "JLabel": "DQ1:宝箱",
-        "Name": "treasure chest sprite",
+        "Name": "Treasure Chest Sprite",
         "NameJP": "ドット宝箱",
         "Icon": 2504,
         "Mesh": 2490,
@@ -3573,12 +3828,13 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 50
+        "Fanciness": 50,
+        "Block": "Generic"
     },
     {
         "ID": 257,
         "JLabel": "DQ1:宿屋看板",
-        "Name": "inn sign sprite",
+        "Name": "Inn Sign Sprite",
         "NameJP": "ドット宿屋",
         "Icon": 2505,
         "Mesh": 2491,
@@ -3586,12 +3842,13 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 50
+        "Fanciness": 50,
+        "Block": "Generic"
     },
     {
         "ID": 258,
         "JLabel": "DQ1:店看板",
-        "Name": "shop sign sprite",
+        "Name": "Shop Sign Sprite",
         "NameJP": "ドット店看板",
         "Icon": 2506,
         "Mesh": 2492,
@@ -3599,12 +3856,13 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 50
+        "Fanciness": 50,
+        "Block": "Generic"
     },
     {
         "ID": 259,
         "JLabel": "DQ1:階段上り",
-        "Name": "up stairs sprite",
+        "Name": "Up Stairs Sprite",
         "NameJP": "ドット階段上",
         "Icon": 2507,
         "Mesh": 2493,
@@ -3612,12 +3870,13 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 50
+        "Fanciness": 50,
+        "Block": "Generic"
     },
     {
         "ID": 260,
         "JLabel": "DQ1:階段下り",
-        "Name": "down stairs sprite",
+        "Name": "Down Stairs Sprite",
         "NameJP": "ドット階段下",
         "Icon": 2508,
         "Mesh": 2494,
@@ -3625,12 +3884,13 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 50
+        "Fanciness": 50,
+        "Block": "Generic"
     },
     {
         "ID": 261,
         "JLabel": "DQ1:橋",
-        "Name": "bridge sprite",
+        "Name": "Bridge Sprite",
         "NameJP": "ドット橋",
         "Icon": 2509,
         "Mesh": 2495,
@@ -3638,12 +3898,13 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 50
+        "Fanciness": 50,
+        "Block": "Generic"
     },
     {
         "ID": 262,
         "JLabel": "DQ1:木",
-        "Name": "forest sprite",
+        "Name": "Forest Sprite",
         "NameJP": "ドット木",
         "Icon": 2510,
         "Mesh": 2496,
@@ -3651,12 +3912,13 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 50
+        "Fanciness": 50,
+        "Block": "Generic"
     },
     {
         "ID": 263,
         "JLabel": "DQ1:町",
-        "Name": "town sprite",
+        "Name": "Town Sprite",
         "NameJP": "ドット町",
         "Icon": 2511,
         "Mesh": 2497,
@@ -3664,12 +3926,13 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 50
+        "Fanciness": 50,
+        "Block": "Generic"
     },
     {
         "ID": 264,
         "JLabel": "DQ1:城",
-        "Name": "castle sprite",
+        "Name": "Castle Sprite",
         "NameJP": "ドット城",
         "Icon": 2512,
         "Mesh": 2498,
@@ -3677,12 +3940,13 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 50
+        "Fanciness": 50,
+        "Block": "Generic"
     },
     {
         "ID": 265,
         "JLabel": "DQ1:洞窟",
-        "Name": "cave sprite",
+        "Name": "Cave Sprite",
         "NameJP": "ドット洞窟",
         "Icon": 2513,
         "Mesh": 2499,
@@ -3690,12 +3954,13 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 50
+        "Fanciness": 50,
+        "Block": "Generic"
     },
     {
         "ID": 266,
         "JLabel": "DQ1:山",
-        "Name": "hill sprite",
+        "Name": "Hill Sprite",
         "NameJP": "ドット山",
         "Icon": 2514,
         "Mesh": 2500,
@@ -3703,12 +3968,13 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 50
+        "Fanciness": 50,
+        "Block": "Generic"
     },
     {
         "ID": 267,
         "JLabel": "DQ1:高い山",
-        "Name": "mountain sprite",
+        "Name": "Mountain Sprite",
         "NameJP": "ドット高い山",
         "Icon": 2515,
         "Mesh": 2501,
@@ -3716,12 +3982,13 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 50
+        "Fanciness": 50,
+        "Block": "Generic"
     },
     {
         "ID": 268,
         "JLabel": "DQ1:お姫様",
-        "Name": "princess sprite",
+        "Name": "Princess Sprite",
         "NameJP": "ドットお姫様",
         "Icon": 2516,
         "Mesh": 2502,
@@ -3729,12 +3996,13 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 50
+        "Fanciness": 50,
+        "Block": "Generic"
     },
     {
         "ID": 269,
         "JLabel": "DQ1:主人公",
-        "Name": "hero sprite",
+        "Name": "Hero Sprite",
         "NameJP": "ドット主人公",
         "Icon": 2517,
         "Mesh": 2503,
@@ -3742,12 +4010,13 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 50
+        "Fanciness": 50,
+        "Block": "Generic"
     },
     {
         "ID": 270,
         "JLabel": "DQ1:王様",
-        "Name": "king sprite",
+        "Name": "King Sprite",
         "NameJP": "ドット王様",
         "Icon": 2518,
         "Mesh": 2504,
@@ -3755,12 +4024,13 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 50
+        "Fanciness": 50,
+        "Block": "Generic"
     },
     {
         "ID": 271,
         "JLabel": "DQ1:竜王",
-        "Name": "Dragonlord sprite",
+        "Name": "Dragonlord Sprite",
         "NameJP": "ドット竜王",
         "Icon": 2519,
         "Mesh": 2505,
@@ -3768,12 +4038,13 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 50
+        "Fanciness": 50,
+        "Block": "Generic"
     },
     {
         "ID": 272,
         "JLabel": "DQ1:魔法使い",
-        "Name": "wizard sprite",
+        "Name": "Wizard Sprite",
         "NameJP": "ドット魔法",
         "Icon": 2520,
         "Mesh": 2506,
@@ -3781,12 +4052,13 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 50
+        "Fanciness": 50,
+        "Block": "Generic"
     },
     {
         "ID": 273,
         "JLabel": "DQ1:商人",
-        "Name": "shopkeeper sprite",
+        "Name": "Shopkeeper Sprite",
         "NameJP": "ドット商人",
         "Icon": 2521,
         "Mesh": 2507,
@@ -3794,12 +4066,13 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 50
+        "Fanciness": 50,
+        "Block": "Generic"
     },
     {
         "ID": 274,
         "JLabel": "DQ1:戦士",
-        "Name": "warrior sprite",
+        "Name": "Warrior Sprite",
         "NameJP": "ドット戦士",
         "Icon": 2522,
         "Mesh": 2508,
@@ -3807,12 +4080,13 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 50
+        "Fanciness": 50,
+        "Block": "Generic"
     },
     {
         "ID": 275,
         "JLabel": "DQ1:兵士",
-        "Name": "soldier sprite",
+        "Name": "Soldier Sprite",
         "NameJP": "ドット兵士",
         "Icon": 2523,
         "Mesh": 2509,
@@ -3820,12 +4094,13 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 50
+        "Fanciness": 50,
+        "Block": "Generic"
     },
     {
         "ID": 276,
         "JLabel": "DQ1:男",
-        "Name": "gentleman sprite",
+        "Name": "Gentleman Sprite",
         "NameJP": "ドット町人男",
         "Icon": 2524,
         "Mesh": 2510,
@@ -3833,12 +4108,13 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 50
+        "Fanciness": 50,
+        "Block": "Generic"
     },
     {
         "ID": 277,
         "JLabel": "DQ1:女",
-        "Name": "lady sprite",
+        "Name": "Lady Sprite",
         "NameJP": "ドット町人女",
         "Icon": 2525,
         "Mesh": 2511,
@@ -3846,12 +4122,13 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 50
+        "Fanciness": 50,
+        "Block": "Generic"
     },
     {
         "ID": 278,
         "JLabel": "DQ1:お姫様抱っこ",
-        "Name": "saviour sprite",
+        "Name": "Saviour Sprite",
         "NameJP": "ドット抱っこ",
         "Icon": 2526,
         "Mesh": 2512,
@@ -3859,12 +4136,13 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 100
+        "Fanciness": 100,
+        "Block": "Generic"
     },
     {
         "ID": 279,
         "JLabel": "DQ1:ラッパ吹き",
-        "Name": "herald sprite",
+        "Name": "Herald Sprite",
         "NameJP": "ドットラッパ",
         "Icon": 2527,
         "Mesh": 2513,
@@ -3872,12 +4150,13 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 50
+        "Fanciness": 50,
+        "Block": "Generic"
     },
     {
         "ID": 280,
         "JLabel": "DQ1:扉（横）",
-        "Name": "flat door sprite",
+        "Name": "Flat Door Sprite",
         "NameJP": "ドット扉・床",
         "Icon": 2529,
         "Mesh": 2514,
@@ -3885,12 +4164,13 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 50
+        "Fanciness": 50,
+        "Block": "Generic"
     },
     {
         "ID": 281,
         "JLabel": "DQ1:宝箱（横）",
-        "Name": "flat treasure chest sprite",
+        "Name": "Flat Treasure Chest Sprite",
         "NameJP": "ドット宝箱・床",
         "Icon": 2530,
         "Mesh": 2515,
@@ -3898,12 +4178,13 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 50
+        "Fanciness": 50,
+        "Block": "Generic"
     },
     {
         "ID": 282,
         "JLabel": "DQ1:宿屋看板（横）",
-        "Name": "flat inn sign sprite",
+        "Name": "Flat Inn Sign Sprite",
         "NameJP": "ドット宿屋・床",
         "Icon": 2531,
         "Mesh": 2516,
@@ -3911,12 +4192,13 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 50
+        "Fanciness": 50,
+        "Block": "Generic"
     },
     {
         "ID": 283,
         "JLabel": "DQ1:店看板（横）",
-        "Name": "flat shop sign sprite",
+        "Name": "Flat Shop Sign Sprite",
         "NameJP": "ドット店看板・床",
         "Icon": 2532,
         "Mesh": 2517,
@@ -3924,12 +4206,13 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 50
+        "Fanciness": 50,
+        "Block": "Generic"
     },
     {
         "ID": 284,
         "JLabel": "DQ1:階段上り（横）",
-        "Name": "flat up stairs sprite",
+        "Name": "Flat Up Stairs Sprite",
         "NameJP": "ドット階段上・床",
         "Icon": 2533,
         "Mesh": 2518,
@@ -3937,12 +4220,13 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 50
+        "Fanciness": 50,
+        "Block": "Generic"
     },
     {
         "ID": 285,
         "JLabel": "DQ1:階段下り（横）",
-        "Name": "flat down stairs sprite",
+        "Name": "Flat Down Stairs Sprite",
         "NameJP": "ドット階段下・床",
         "Icon": 2534,
         "Mesh": 2519,
@@ -3950,12 +4234,13 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 50
+        "Fanciness": 50,
+        "Block": "Generic"
     },
     {
         "ID": 286,
         "JLabel": "DQ1:橋（横）",
-        "Name": "flat bridge sprite",
+        "Name": "Flat Bridge Sprite",
         "NameJP": "ドット橋・床",
         "Icon": 2535,
         "Mesh": 2520,
@@ -3963,12 +4248,13 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 50
+        "Fanciness": 50,
+        "Block": "Generic"
     },
     {
         "ID": 287,
         "JLabel": "DQ1:木（横）",
-        "Name": "flat forest sprite",
+        "Name": "Flat Forest Sprite",
         "NameJP": "ドット木・床",
         "Icon": 2536,
         "Mesh": 2521,
@@ -3976,12 +4262,13 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 50
+        "Fanciness": 50,
+        "Block": "Generic"
     },
     {
         "ID": 288,
         "JLabel": "DQ1:町（横）",
-        "Name": "flat town sprite",
+        "Name": "Flat Town Sprite",
         "NameJP": "ドット町・床",
         "Icon": 2537,
         "Mesh": 2522,
@@ -3989,12 +4276,13 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 50
+        "Fanciness": 50,
+        "Block": "Generic"
     },
     {
         "ID": 289,
         "JLabel": "DQ1:城（横）",
-        "Name": "flat castle sprite",
+        "Name": "Flat Castle Sprite",
         "NameJP": "ドット城・床",
         "Icon": 2538,
         "Mesh": 2523,
@@ -4002,12 +4290,13 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 50
+        "Fanciness": 50,
+        "Block": "Generic"
     },
     {
         "ID": 290,
         "JLabel": "DQ1:洞窟（横）",
-        "Name": "flat cave sprite",
+        "Name": "Flat Cave Sprite",
         "NameJP": "ドット洞窟・床",
         "Icon": 2539,
         "Mesh": 2524,
@@ -4015,12 +4304,13 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 50
+        "Fanciness": 50,
+        "Block": "Generic"
     },
     {
         "ID": 291,
         "JLabel": "DQ1:山（横）",
-        "Name": "flat hill sprite",
+        "Name": "Flat Hill Sprite",
         "NameJP": "ドット山・床",
         "Icon": 2540,
         "Mesh": 2525,
@@ -4028,12 +4318,13 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 50
+        "Fanciness": 50,
+        "Block": "Generic"
     },
     {
         "ID": 292,
         "JLabel": "DQ1:高い山（横）",
-        "Name": "flat mountain sprite",
+        "Name": "Flat Mountain Sprite",
         "NameJP": "ドット高い山・床",
         "Icon": 2541,
         "Mesh": 2526,
@@ -4041,12 +4332,13 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 50
+        "Fanciness": 50,
+        "Block": "Generic"
     },
     {
         "ID": 293,
         "JLabel": "DQ1:お姫様（横）",
-        "Name": "flat princess sprite",
+        "Name": "Flat Princess Sprite",
         "NameJP": "ドットお姫様・床",
         "Icon": 2542,
         "Mesh": 2527,
@@ -4054,12 +4346,13 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 50
+        "Fanciness": 50,
+        "Block": "Generic"
     },
     {
         "ID": 294,
         "JLabel": "DQ1:主人公（横）",
-        "Name": "flat hero sprite",
+        "Name": "Flat Hero Sprite",
         "NameJP": "ドット主人公・床",
         "Icon": 2543,
         "Mesh": 2528,
@@ -4067,12 +4360,13 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 50
+        "Fanciness": 50,
+        "Block": "Generic"
     },
     {
         "ID": 295,
         "JLabel": "DQ1:王様（横）",
-        "Name": "flat king sprite",
+        "Name": "Flat King Sprite",
         "NameJP": "ドット王様・床",
         "Icon": 2544,
         "Mesh": 2529,
@@ -4080,12 +4374,13 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 50
+        "Fanciness": 50,
+        "Block": "Generic"
     },
     {
         "ID": 296,
         "JLabel": "DQ1:竜王（横）",
-        "Name": "flat Dragonlord sprite",
+        "Name": "Flat Dragonlord Sprite",
         "NameJP": "ドット竜王・床",
         "Icon": 2545,
         "Mesh": 2530,
@@ -4093,12 +4388,13 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 50
+        "Fanciness": 50,
+        "Block": "Generic"
     },
     {
         "ID": 297,
         "JLabel": "DQ1:魔法使い（横）",
-        "Name": "flat wizard sprite",
+        "Name": "Flat Wizard Sprite",
         "NameJP": "ドット魔法・床",
         "Icon": 2546,
         "Mesh": 2531,
@@ -4106,12 +4402,13 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 50
+        "Fanciness": 50,
+        "Block": "Generic"
     },
     {
         "ID": 298,
         "JLabel": "DQ1:商人（横）",
-        "Name": "flat shopkeeper sprite",
+        "Name": "Flat Shopkeeper Sprite",
         "NameJP": "ドット商人・床",
         "Icon": 2547,
         "Mesh": 2532,
@@ -4119,12 +4416,13 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 50
+        "Fanciness": 50,
+        "Block": "Generic"
     },
     {
         "ID": 299,
         "JLabel": "DQ1:戦士（横）",
-        "Name": "flat warrior sprite",
+        "Name": "Flat Warrior Sprite",
         "NameJP": "ドット戦士・床",
         "Icon": 2548,
         "Mesh": 2533,
@@ -4132,12 +4430,13 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 50
+        "Fanciness": 50,
+        "Block": "Generic"
     },
     {
         "ID": 300,
         "JLabel": "DQ1:兵士（横）",
-        "Name": "flat soldier sprite",
+        "Name": "Flat Soldier Sprite",
         "NameJP": "ドット兵士・床",
         "Icon": 2549,
         "Mesh": 2534,
@@ -4145,12 +4444,13 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 50
+        "Fanciness": 50,
+        "Block": "Generic"
     },
     {
         "ID": 301,
         "JLabel": "DQ1:男（横）",
-        "Name": "flat gentleman sprite",
+        "Name": "Flat Gentleman Sprite",
         "NameJP": "ドット町人男・床",
         "Icon": 2550,
         "Mesh": 2535,
@@ -4158,12 +4458,13 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 50
+        "Fanciness": 50,
+        "Block": "Generic"
     },
     {
         "ID": 302,
         "JLabel": "DQ1:女（横）",
-        "Name": "flat lady sprite",
+        "Name": "Flat Lady Sprite",
         "NameJP": "ドット町人女・床",
         "Icon": 2551,
         "Mesh": 2536,
@@ -4171,12 +4472,13 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 50
+        "Fanciness": 50,
+        "Block": "Generic"
     },
     {
         "ID": 303,
         "JLabel": "DQ1:お姫様抱っこ（横）",
-        "Name": "flat saviour sprite",
+        "Name": "Flat Saviour Sprite",
         "NameJP": "ドット抱っこ・床",
         "Icon": 2552,
         "Mesh": 2537,
@@ -4184,12 +4486,13 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 100
+        "Fanciness": 100,
+        "Block": "Generic"
     },
     {
         "ID": 304,
         "JLabel": "DQ1:ラッパ吹き（横）",
-        "Name": "flat herald sprite",
+        "Name": "Flat Herald Sprite",
         "NameJP": "ドットラッパ・床",
         "Icon": 2553,
         "Mesh": 2538,
@@ -4197,7 +4500,8 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 50
+        "Fanciness": 50,
+        "Block": "Generic"
     },
     {
         "ID": 305,
@@ -4210,12 +4514,13 @@
         "SizeX": 2,
         "SizeY": 2,
         "SizeZ": 1,
-        "Fanciness": 500
+        "Fanciness": 500,
+        "Block": "Generic"
     },
     {
         "ID": 306,
         "JLabel": "NX:スライムランプ（１）",
-        "Name": "slime light",
+        "Name": "Slime Light",
         "NameJP": "スライムランプ",
         "Icon": 1353,
         "Mesh": 1200,
@@ -4224,12 +4529,13 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 500,
-		"DQB2BGParts": 1015
+        "DQB2BGParts": 1015,
+        "Block": "Lighting"
     },
     {
         "ID": 307,
         "JLabel": "NX:スライムランプ（２）",
-        "Name": "king slime light",
+        "Name": "King Slime Light",
         "NameJP": "キングＳランプ",
         "Icon": 1354,
         "Mesh": 1201,
@@ -4238,12 +4544,13 @@
         "SizeY": 3,
         "SizeZ": 2,
         "Fanciness": 500,
-		"DQB2BGParts": 1016
+        "DQB2BGParts": 1016,
+        "Block": "Lighting"
     },
     {
         "ID": 308,
         "JLabel": "NX:スライム目",
-        "Name": "slimy eye",
+        "Name": "Slimy Eye",
         "NameJP": "スライムの目",
         "Icon": 1355,
         "Mesh": 1202,
@@ -4252,12 +4559,13 @@
         "SizeY": 2,
         "SizeZ": 1,
         "Fanciness": 500,
-		"DQB2BGParts": 1017
+        "DQB2BGParts": 1017,
+        "Block": "Generic"
     },
     {
         "ID": 309,
         "JLabel": "NX:スライム口",
-        "Name": "slimy mouth",
+        "Name": "Slimy Mouth",
         "NameJP": "スライムの口",
         "Icon": 1356,
         "Mesh": 1203,
@@ -4266,7 +4574,8 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 500,
-		"DQB2BGParts": 1018
+        "DQB2BGParts": 1018,
+        "Block": "Generic"
     },
     {
         "ID": 310,
@@ -4281,7 +4590,7 @@
     {
         "ID": 311,
         "JLabel": "高速トロッコ",
-        "Name": "mega minecart",
+        "Name": "Mega Minecart",
         "NameJP": "高速トロッコ",
         "Icon": 2599,
         "Mesh": 2488,
@@ -4294,7 +4603,7 @@
     {
         "ID": 312,
         "JLabel": "DLC天体オブジェ・陽",
-        "Name": "sun sphere",
+        "Name": "Sun Sphere",
         "NameJP": "天体オブジェ・陽",
         "Icon": 890,
         "Mesh": 2539,
@@ -4307,7 +4616,7 @@
     {
         "ID": 313,
         "JLabel": "DLC天体オブジェ・水",
-        "Name": "Mercury sphere",
+        "Name": "Mercury Sphere",
         "NameJP": "天体オブジェ・水",
         "Icon": 891,
         "Mesh": 2540,
@@ -4320,7 +4629,7 @@
     {
         "ID": 314,
         "JLabel": "DLC天体オブジェ・金",
-        "Name": "Venus sphere",
+        "Name": "Venus Sphere",
         "NameJP": "天体オブジェ・金",
         "Icon": 892,
         "Mesh": 2541,
@@ -4333,7 +4642,7 @@
     {
         "ID": 315,
         "JLabel": "DLC天体オブジェ・地",
-        "Name": "Earth sphere",
+        "Name": "Earth Sphere",
         "NameJP": "天体オブジェ・地",
         "Icon": 893,
         "Mesh": 2542,
@@ -4346,7 +4655,7 @@
     {
         "ID": 316,
         "JLabel": "DLC天体オブジェ・火",
-        "Name": "Mars sphere",
+        "Name": "Mars Sphere",
         "NameJP": "天体オブジェ・火",
         "Icon": 894,
         "Mesh": 2543,
@@ -4359,7 +4668,7 @@
     {
         "ID": 317,
         "JLabel": "DLC天体オブジェ・木",
-        "Name": "Jupiter sphere",
+        "Name": "Jupiter Sphere",
         "NameJP": "天体オブジェ・木",
         "Icon": 895,
         "Mesh": 2544,
@@ -4372,7 +4681,7 @@
     {
         "ID": 318,
         "JLabel": "DLC天体オブジェ・土",
-        "Name": "Saturn sphere",
+        "Name": "Saturn Sphere",
         "NameJP": "天体オブジェ・土",
         "Icon": 896,
         "Mesh": 2545,
@@ -4385,7 +4694,7 @@
     {
         "ID": 319,
         "JLabel": "DLC天体オブジェ・天",
-        "Name": "Uranus sphere",
+        "Name": "Uranus Sphere",
         "NameJP": "天体オブジェ・天",
         "Icon": 897,
         "Mesh": 2546,
@@ -4398,7 +4707,7 @@
     {
         "ID": 320,
         "JLabel": "DLC天体オブジェ・海",
-        "Name": "Neptune sphere",
+        "Name": "Neptune Sphere",
         "NameJP": "天体オブジェ・海",
         "Icon": 898,
         "Mesh": 2547,
@@ -4411,7 +4720,7 @@
     {
         "ID": 321,
         "JLabel": "DLC天体オブジェ・月",
-        "Name": "moon sphere",
+        "Name": "Moon Sphere",
         "NameJP": "天体オブジェ・月",
         "Icon": 899,
         "Mesh": 2548,
@@ -4424,7 +4733,7 @@
     {
         "ID": 322,
         "JLabel": "モンスター像GR",
-        "Name": "golem",
+        "Name": "Golem",
         "NameJP": "ゴーレム",
         "Icon": 2556,
         "Mesh": 2549,
@@ -4437,7 +4746,7 @@
     {
         "ID": 323,
         "JLabel": "モンスター像ST",
-        "Name": "stone golem",
+        "Name": "Stone Golem",
         "NameJP": "ストーンマン",
         "Icon": 2557,
         "Mesh": 2549,
@@ -4450,7 +4759,7 @@
     {
         "ID": 324,
         "JLabel": "モンスター像GM",
-        "Name": "gold golem",
+        "Name": "Gold Golem",
         "NameJP": "ゴールドマン",
         "Icon": 2558,
         "Mesh": 2549,
@@ -4463,7 +4772,7 @@
     {
         "ID": 325,
         "JLabel": "モンスター像DR",
-        "Name": "green dragon",
+        "Name": "Green Dragon",
         "NameJP": "ドラゴン",
         "Icon": 2559,
         "Mesh": 2549,
@@ -4476,7 +4785,7 @@
     {
         "ID": 326,
         "JLabel": "モンスター像KD",
-        "Name": "blue dragon",
+        "Name": "Blue Dragon",
         "NameJP": "キースドラゴン",
         "Icon": 2560,
         "Mesh": 2549,
@@ -4489,7 +4798,7 @@
     {
         "ID": 327,
         "JLabel": "モンスター像DD",
-        "Name": "dread dragon",
+        "Name": "Dread Dragon",
         "NameJP": "ダースドラゴン",
         "Icon": 2561,
         "Mesh": 2549,
@@ -4502,7 +4811,7 @@
     {
         "ID": 328,
         "JLabel": "モンスター像GS",
-        "Name": "ghost",
+        "Name": "Ghost",
         "NameJP": "ゴースト",
         "Icon": 2562,
         "Mesh": 2549,
@@ -4515,7 +4824,7 @@
     {
         "ID": 329,
         "JLabel": "モンスター像MG",
-        "Name": "fightgeist",
+        "Name": "Fightgeist",
         "NameJP": "メトロゴースト",
         "Icon": 2563,
         "Mesh": 2549,
@@ -4528,7 +4837,7 @@
     {
         "ID": 330,
         "JLabel": "モンスター像HG",
-        "Name": "spitegeist",
+        "Name": "Spitegeist",
         "NameJP": "ヘルゴースト",
         "Icon": 2564,
         "Mesh": 2549,
@@ -4541,7 +4850,7 @@
     {
         "ID": 331,
         "JLabel": "モンスター像KS",
-        "Name": "walking corpse",
+        "Name": "Walking Corpse",
         "NameJP": "くさったしたい",
         "Icon": 2565,
         "Mesh": 2549,
@@ -4554,7 +4863,7 @@
     {
         "ID": 332,
         "JLabel": "モンスター像LD",
-        "Name": "corpse corporal",
+        "Name": "Corpse Corporal",
         "NameJP": "リビングデッド",
         "Icon": 2566,
         "Mesh": 2549,
@@ -4567,7 +4876,7 @@
     {
         "ID": 333,
         "JLabel": "モンスター像GH",
-        "Name": "ghoul",
+        "Name": "Ghoul",
         "NameJP": "グール",
         "Icon": 2567,
         "Mesh": 2549,
@@ -4580,7 +4889,7 @@
     {
         "ID": 334,
         "JLabel": "モンスター像SL",
-        "Name": "slime",
+        "Name": "Slime",
         "NameJP": "スライム",
         "Icon": 2568,
         "Mesh": 2549,
@@ -4593,7 +4902,7 @@
     {
         "ID": 335,
         "JLabel": "モンスター像SB",
-        "Name": "she-slime",
+        "Name": "She-Slime",
         "NameJP": "スライムベス",
         "Icon": 2569,
         "Mesh": 2549,
@@ -4606,7 +4915,7 @@
     {
         "ID": 336,
         "JLabel": "モンスター像MS",
-        "Name": "metal slime",
+        "Name": "Metal Slime",
         "NameJP": "メタルスライム",
         "Icon": 2570,
         "Mesh": 2549,
@@ -4619,7 +4928,7 @@
     {
         "ID": 337,
         "JLabel": "モンスター像YK",
-        "Name": "knight errant",
+        "Name": "Knight Errant",
         "NameJP": "よろいのきし",
         "Icon": 2571,
         "Mesh": 2549,
@@ -4632,7 +4941,7 @@
     {
         "ID": 338,
         "JLabel": "モンスター像AK",
-        "Name": "knight aberrant",
+        "Name": "Knight Aberrant",
         "NameJP": "あくまのきし",
         "Icon": 2572,
         "Mesh": 2549,
@@ -4645,7 +4954,7 @@
     {
         "ID": 339,
         "JLabel": "モンスター像SK",
-        "Name": "knight abhorrent",
+        "Name": "Knight Abhorrent",
         "NameJP": "しにがみのきし",
         "Icon": 2573,
         "Mesh": 2549,
@@ -4658,7 +4967,7 @@
     {
         "ID": 340,
         "JLabel": "モンスター像OK",
-        "Name": "hammerhood",
+        "Name": "Hammerhood",
         "NameJP": "おおきづち",
         "Icon": 2574,
         "Mesh": 2549,
@@ -4671,7 +4980,7 @@
     {
         "ID": 341,
         "JLabel": "モンスター像BR",
-        "Name": "brownie",
+        "Name": "Brownie",
         "NameJP": "ブラウニー",
         "Icon": 2575,
         "Mesh": 2549,
@@ -4710,7 +5019,7 @@
     {
         "ID": 344,
         "JLabel": "モンスター像HC",
-        "Name": "Hades condor (L)",
+        "Name": "Hades Condor (L)",
         "NameJP": "ヘルコンドルL",
         "Icon": 2578,
         "Mesh": 2549,
@@ -4723,7 +5032,7 @@
     {
         "ID": 345,
         "JLabel": "モンスター像YM",
-        "Name": "magmalice (L)",
+        "Name": "Magmalice (L)",
         "NameJP": "ようがんまじんL",
         "Icon": 2579,
         "Mesh": 2549,
@@ -4736,7 +5045,7 @@
     {
         "ID": 346,
         "JLabel": "モンスター像HM",
-        "Name": "firn fiend (L)",
+        "Name": "Firn Fiend (L)",
         "NameJP": "ひょうがまじんL",
         "Icon": 2580,
         "Mesh": 2549,
@@ -4749,7 +5058,7 @@
     {
         "ID": 347,
         "JLabel": "モンスター像GA",
-        "Name": "hostile merger (L)",
+        "Name": "Hostile Merger (L)",
         "NameJP": "がったいまじんL",
         "Icon": 2581,
         "Mesh": 2549,
@@ -4762,7 +5071,7 @@
     {
         "ID": 348,
         "JLabel": "住人像PRN",
-        "Name": "Pippa figurine",
+        "Name": "Pippa Figurine",
         "NameJP": "ピリンの像",
         "Icon": 900,
         "Mesh": 2549,
@@ -4775,7 +5084,7 @@
     {
         "ID": 349,
         "JLabel": "住人像ELL",
-        "Name": "Elle figurine",
+        "Name": "Elle Figurine",
         "NameJP": "エルの像",
         "Icon": 901,
         "Mesh": 2549,
@@ -4788,7 +5097,7 @@
     {
         "ID": 350,
         "JLabel": "住人像AME",
-        "Name": "Barbella figurine",
+        "Name": "Barbella Figurine",
         "NameJP": "アメルダの像",
         "Icon": 902,
         "Mesh": 2549,
@@ -4801,7 +5110,7 @@
     {
         "ID": 351,
         "JLabel": "住人像PRI",
-        "Name": "Princess figurine",
+        "Name": "Princess Figurine",
         "NameJP": "姫の像",
         "Icon": 903,
         "Mesh": 2549,
@@ -4814,7 +5123,7 @@
     {
         "ID": 352,
         "JLabel": "住人像ROL",
-        "Name": "Rollo figurine",
+        "Name": "Rollo Figurine",
         "NameJP": "ロロンドの像",
         "Icon": 904,
         "Mesh": 2549,
@@ -4827,7 +5136,7 @@
     {
         "ID": 353,
         "JLabel": "住人像YUK",
-        "Name": "Magnus figurine",
+        "Name": "Magnus Figurine",
         "NameJP": "ゆきのへの像",
         "Icon": 905,
         "Mesh": 2549,
@@ -4840,7 +5149,7 @@
     {
         "ID": 354,
         "JLabel": "住人像GEN",
-        "Name": "Gerontius figurine",
+        "Name": "Gerontius Figurine",
         "NameJP": "ゲンローワの像",
         "Icon": 906,
         "Mesh": 2549,
@@ -4853,7 +5162,7 @@
     {
         "ID": 355,
         "JLabel": "住人像MUT",
-        "Name": "Myrlund figurine",
+        "Name": "Myrlund Figurine",
         "NameJP": "ムツヘタの像",
         "Icon": 907,
         "Mesh": 2549,
@@ -4866,7 +5175,7 @@
     {
         "ID": 356,
         "JLabel": "住人像SOLA",
-        "Name": "soldier A figurine",
+        "Name": "Soldier A Figurine",
         "NameJP": "へいしの像A",
         "Icon": 908,
         "Mesh": 2549,
@@ -4879,7 +5188,7 @@
     {
         "ID": 357,
         "JLabel": "住人像SOLB",
-        "Name": "soldier B figurine",
+        "Name": "Soldier B Figurine",
         "NameJP": "へいしの像B",
         "Icon": 909,
         "Mesh": 2549,
@@ -4892,7 +5201,7 @@
     {
         "ID": 358,
         "JLabel": "住人像MERA",
-        "Name": "merchant A figurine",
+        "Name": "Merchant A Figurine",
         "NameJP": "しょうにんの像A",
         "Icon": 910,
         "Mesh": 2549,
@@ -4905,7 +5214,7 @@
     {
         "ID": 359,
         "JLabel": "住人像MERB",
-        "Name": "merchant B figurine",
+        "Name": "Merchant B Figurine",
         "NameJP": "しょうにんの像B",
         "Icon": 911,
         "Mesh": 2549,
@@ -4918,7 +5227,7 @@
     {
         "ID": 360,
         "JLabel": "住人像CITA",
-        "Name": "townsperson A figurine",
+        "Name": "Townsperson A Figurine",
         "NameJP": "まちびとの像A",
         "Icon": 912,
         "Mesh": 2549,
@@ -4931,7 +5240,7 @@
     {
         "ID": 361,
         "JLabel": "住人像CITB",
-        "Name": "townsperson B figurine",
+        "Name": "Townsperson B Figurine",
         "NameJP": "まちびとの像B",
         "Icon": 913,
         "Mesh": 2549,
@@ -4944,7 +5253,7 @@
     {
         "ID": 362,
         "JLabel": "住人像ROW",
-        "Name": "toughie figurine",
+        "Name": "Toughie Figurine",
         "NameJP": "あらくれの像",
         "Icon": 914,
         "Mesh": 2549,
@@ -4957,7 +5266,7 @@
     {
         "ID": 363,
         "JLabel": "モンスター像YR",
-        "Name": "magmalice's hand (L)",
+        "Name": "Magmalice's Hand (L)",
         "NameJP": "ようがんの腕L",
         "Icon": 2582,
         "Mesh": 2549,
@@ -4970,7 +5279,7 @@
     {
         "ID": 364,
         "JLabel": "モンスター像HR",
-        "Name": "firn fiend's hand (L)",
+        "Name": "Firn Fiend's Hand (L)",
         "NameJP": "ひょうがの腕L",
         "Icon": 2583,
         "Mesh": 2549,
@@ -4983,7 +5292,7 @@
     {
         "ID": 365,
         "JLabel": "モンスター像GL",
-        "Name": "monster's hand (L)",
+        "Name": "Monster's Hand (L)",
         "NameJP": "まじんの腕L",
         "Icon": 2584,
         "Mesh": 2549,
@@ -4996,7 +5305,7 @@
     {
         "ID": 366,
         "JLabel": "モンスター像BG",
-        "Name": "golem (L)",
+        "Name": "Golem (L)",
         "NameJP": "ゴーレムL",
         "Icon": 2585,
         "Mesh": 2549,
@@ -5009,7 +5318,7 @@
     {
         "ID": 367,
         "JLabel": "モンスター像SG",
-        "Name": "golem (M)",
+        "Name": "Golem (M)",
         "NameJP": "ゴーレムM",
         "Icon": 2586,
         "Mesh": 2549,
@@ -5022,7 +5331,7 @@
     {
         "ID": 368,
         "JLabel": "モンスター像SH",
-        "Name": "Hades condor (M)",
+        "Name": "Hades Condor (M)",
         "NameJP": "ヘルコンドルM",
         "Icon": 2587,
         "Mesh": 2549,
@@ -5035,7 +5344,7 @@
     {
         "ID": 369,
         "JLabel": "モンスター像SY",
-        "Name": "magmalice (M)",
+        "Name": "Magmalice (M)",
         "NameJP": "ようがんまじんM",
         "Icon": 2588,
         "Mesh": 2549,
@@ -5048,7 +5357,7 @@
     {
         "ID": 370,
         "JLabel": "モンスター像SI",
-        "Name": "firn fiend (M)",
+        "Name": "Firn Fiend (M)",
         "NameJP": "ひょうがまじんM",
         "Icon": 2589,
         "Mesh": 2549,
@@ -5061,7 +5370,7 @@
     {
         "ID": 371,
         "JLabel": "モンスター像SU",
-        "Name": "hostile merger (M)",
+        "Name": "Hostile Merger (M)",
         "NameJP": "がったいまじんM",
         "Icon": 2590,
         "Mesh": 2549,
@@ -5074,7 +5383,7 @@
     {
         "ID": 372,
         "JLabel": "モンスター像YS",
-        "Name": "magmalice's hand (M)",
+        "Name": "Magmalice's Hand (M)",
         "NameJP": "ようがんの腕M",
         "Icon": 2591,
         "Mesh": 2549,
@@ -5087,7 +5396,7 @@
     {
         "ID": 373,
         "JLabel": "モンスター像IS",
-        "Name": "firn fiend's hand (M)",
+        "Name": "Firn Fiend's Hand (M)",
         "NameJP": "ひょうがの腕M",
         "Icon": 2592,
         "Mesh": 2549,
@@ -5100,7 +5409,7 @@
     {
         "ID": 374,
         "JLabel": "モンスター像US",
-        "Name": "monster's hand (M)",
+        "Name": "Monster's Hand (M)",
         "NameJP": "まじんの腕M",
         "Icon": 2593,
         "Mesh": 2549,
@@ -5126,9 +5435,9 @@
     {
         "ID": 376,
         "JLabel": "線路・逆カーブ",
-        "Name": "reverse curved rail track",
+        "Name": "Reverse Curved Rail Track",
         "NameJP": "線路・逆カーブ",
-        "Icon": 2620,
+        "Icon": 1312,
         "Mesh": null,
         "Sort": 3081,
         "SizeX": 1,
@@ -5152,7 +5461,7 @@
     {
         "ID": 378,
         "JLabel": "モンスター像キングスライム",
-        "Name": "king slime",
+        "Name": "King Slime",
         "NameJP": "キングスライム",
         "Icon": 2596,
         "Mesh": 2549,

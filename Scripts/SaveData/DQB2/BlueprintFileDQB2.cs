@@ -19,7 +19,28 @@ namespace EyeOfRubiss
             }
             else return false;
         }
+        public override void Save(string path = null)
+        {
+            path ??= Path;
+            Path = path;
 
-        public Blueprint Blueprint => new Blueprint(this, 0);
+            using var file = Godot.FileAccess.Open(path, Godot.FileAccess.ModeFlags.Write);
+            file.StoreBuffer(_Buffer);
+
+            UnsavedChanges = false;
+        }
+
+        public static BlueprintFileDQB2 CreateNew()
+        {
+            BlueprintFileDQB2 blueprintFile = new()
+            {
+                _Header = [],
+                _Buffer = new byte[Blueprint.LENGTH]
+            };
+
+           return blueprintFile;
+        }
+
+        public Blueprint Blueprint => new(this, 0);
     }
 }

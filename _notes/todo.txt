@@ -1,54 +1,42 @@
-connecting window rotation
-crop delineation
-
-
-weather selection
-
+fix weather selection
 clothes editing
 inventory editing
-
 npc editing
-npcs editable on map
-
+npcs editable from map
 connecting tiles
-map editing
-time editor
-file select
-sign editor
-chest editor
+minimap editing
 slope edges tool
-loading visualizer
-Make tools their own object??
-blueprints
-backups
 mass move residents
-undo feature
 chisel shapes
-magic pencil BlockEntity
-
 Chisel Tool
-Fill Tool
-Replace 
-Decorations deleter
-Buildable Area Extender 
+Fix Fill Tool
+Delete Decorations Tool
+"Extend Buildable Area" - Option to fill all chunks bottom with bedrock
 Raise/Lower Entire Island Tool
-
-Biome Brush
- - Convert Existing props toggle
- - Place new props toggle
-
-Research:
+Biome Brush (Convert Existing props toggle, Place new props toggle)
 Break user-locked saves
-Find the time-stop byte
-
-Basic:
-Make liquids toggle work, by adding a bool to the VoxelGenerator
-Rewrite DQB2 block get function to be more elegant
-
-UI:
-Rotation for props
-
-Fully new system required:
-Completely rework prop thing
 Click on signs
 Click on chests
+BlockEntity Selector
+Japanese translation
+make "Export" export as filetype (blueprint or EORS)
+Complete BGPartsModel
+BGParts fake blocks
+multiple selection in block/prop selector
+try to fix water transparency
+crack dqb1 checksum
+see if gravity globules are stored in stgdat
+sort bgparts, items, and blocks
+upgrade selector with categories
+add good icons to props without it
+DQB1/EORS set parts block for overlapping parts when deleting parts
+DQB1 chests, signs, item displays
+DQB1 time
+DQB1 stop time
+DQB1 npc rotation
+add effects and collision to DQB1 BGPartsInfo
+File>New
+Builder's name instead of {pname}
+Chunk expansion DQB1
+refactor block & prop placement
+make it so that you can't erase bedrock, dqb1 water, etc.

@@ -22,28 +22,28 @@ namespace EyeOfRubiss.Scenes
 
         [Export] private Button _HairColor_Button;
         [Export] private Button _SkinColor_Button;
-        [Export] private Button _EyeColor_Button;
+        // [Export] private Button _EyeColor_Button;
 
-        [Export] private ItemButton _Weapon_ItemButton;
-        [Export] private ItemButton _Shield_ItemButton;
-        [Export] private ItemButton _Armor_ItemButton;
-        [Export] private ItemButton _Hammer_ItemButton;
-        [Export] private ItemButton _Gloves_ItemButton;
-        [Export] private ItemButton _BottomlessPot_ItemButton;
-        [Export] private ItemButton _EchoFlute_ItemButton;
-        [Export] private ItemButton _TransformOTrowel_ItemButton;
-        [Export] private ItemButton _MagicPencil_ItemButton;
-        [Export] private ItemButton _Chisel_ItemButton;
-        [Export] private ItemButton _FishingRod_ItemButton;
+        // [Export] private ItemButton _Weapon_ItemButton;
+        // [Export] private ItemButton _Shield_ItemButton;
+        // [Export] private ItemButton _Armor_ItemButton;
+        // [Export] private ItemButton _Hammer_ItemButton;
+        // [Export] private ItemButton _Gloves_ItemButton;
+        // [Export] private ItemButton _BottomlessPot_ItemButton;
+        // [Export] private ItemButton _EchoFlute_ItemButton;
+        // [Export] private ItemButton _TransformOTrowel_ItemButton;
+        // [Export] private ItemButton _MagicPencil_ItemButton;
+        // [Export] private ItemButton _Chisel_ItemButton;
+        // [Export] private ItemButton _FishingRod_ItemButton;
 
-        [Export] private ItemButton _Glamour_Weapon_ItemButton;
-        [Export] private ItemButton _Glamour_Shield_ItemButton;
-        [Export] private ItemButton _Glamour_Armor_ItemButton;
-        [Export] private ItemButton _Glamour_Hammer_ItemButton;
-        [Export] private ItemButton _Glamour_Headwear_ItemButton;
-        [Export] private ItemButton _Glamour_Accessory1_ItemButton;
-        [Export] private ItemButton _Glamour_Accessory2_ItemButton;
-        [Export] private ItemButton _Glamour_Accessory3_ItemButton;
+        // [Export] private ItemButton _Glamour_Weapon_ItemButton;
+        // [Export] private ItemButton _Glamour_Shield_ItemButton;
+        // [Export] private ItemButton _Glamour_Armor_ItemButton;
+        // [Export] private ItemButton _Glamour_Hammer_ItemButton;
+        // [Export] private ItemButton _Glamour_Headwear_ItemButton;
+        // [Export] private ItemButton _Glamour_Accessory1_ItemButton;
+        // [Export] private ItemButton _Glamour_Accessory2_ItemButton;
+        // [Export] private ItemButton _Glamour_Accessory3_ItemButton;
 
         /*
         public void UpdateAll()

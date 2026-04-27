@@ -8,8 +8,6 @@ namespace EyeOfRubiss
     /// <summary> VoxelStreamScript that streams a DQB2 StageData instance as voxel data. </summary>
     public partial class VoxelGeneratorDQB2(StageData stageData, bool showTerrain = true, bool showFluid = true, bool showPartsBlock = false) : VoxelGeneratorScript
     {
-        const ulong BLOCK_SEAFLOOR = 8;
-
         public StageData _StageData { get; set; } = stageData;
 
         public bool ShowTerrain { get; set; } = showTerrain;
@@ -27,7 +25,7 @@ namespace EyeOfRubiss
 
             if (originInVoxels.Y < 0 && !ShowPartsBlock)
             {
-                outBuffer.Fill(BLOCK_SEAFLOOR);
+                outBuffer.Fill(Constants.VOXEL_SEAFLOOR);
                 return;
             }
             Vector3I bufferSize = outBuffer.GetSize();
@@ -47,15 +45,61 @@ namespace EyeOfRubiss
                     for (int z = 0; z < bufferSize.Z; z++)
                     {
                         Vector3I coords = originInVoxels + new Vector3I(x, y, z);
-                        StageData.BlockInstance block = _StageData.GetBlockAtPosition(coords);
-                        if (block is not null)
-                        {
-                            BlockInfo blockInfo = BlockInfo.Get(block.BlockID);
-                            ulong voxelId = ShowPartsBlock ? (ulong)blockInfo.GetPartsType() : blockInfo.Voxel;
-                            outBuffer.SetVoxel(voxelId, x, y, z, CHANNEL);
-                        }
+                        outBuffer.SetVoxel(GetVoxelAtPosition(_StageData, coords, ShowTerrain, ShowFluid, ShowPartsBlock), x, y, z, CHANNEL);
                     }
                 }
+            }
+        }
+    
+        public static ulong GetVoxelAtPosition(StageData stageData, Vector3I position, bool showTerrain = true, bool showFluid = true, bool showPartsBlock = false)
+        {
+            StageData.BlockInstance block = stageData.GetBlockAtPosition(position);
+            if (block is null)
+                return Constants.VOXEL_AIR;
+            
+            BlockInfo blockInfo = BlockInfo.Get(block.BlockID);
+
+            if (showPartsBlock)
+                return (ulong)blockInfo.GetPartsType();
+
+            ulong voxelId = blockInfo.Voxel;
+
+            if (voxelId != Constants.VOXEL_AIR)
+                return showTerrain ? voxelId : Constants.VOXEL_TERRAIN_COLLISION;
+            
+            PartsType partsType = blockInfo.GetPartsType();
+            FluidType fluidType = blockInfo.FluidType;
+            FluidLevel fluidLevel = blockInfo.FluidLevel; // TODO
+
+            if (partsType == PartsType.None)
+            {
+                return fluidType switch
+                {
+                    FluidType.Water      => showFluid ? 640 : Constants.VOXEL_FLUID_COLLISION,
+                    FluidType.HotWater   => showFluid ? 646 : Constants.VOXEL_FLUID_COLLISION,
+                    FluidType.Poison     => showFluid ? 652 : Constants.VOXEL_FLUID_COLLISION,
+                    FluidType.Lava       => showFluid ? 658 : Constants.VOXEL_FLUID_COLLISION,
+                    FluidType.SwampWater => showFluid ? 664 : Constants.VOXEL_FLUID_COLLISION,
+                    FluidType.MuddyWater => showFluid ? 670 : Constants.VOXEL_FLUID_COLLISION,
+                    FluidType.Seawater   => showFluid ? 676 : Constants.VOXEL_FLUID_COLLISION,
+                    FluidType.Plasma     => showFluid ? 682 : Constants.VOXEL_FLUID_COLLISION,
+                    _ => Constants.VOXEL_AIR
+                };
+            }
+            else
+            {
+                return fluidType switch
+                {
+                    FluidType.Water      => showFluid ? 643 : Constants.VOXEL_FLUID_PARTSBLOCK_COLLISION,
+                    FluidType.HotWater   => showFluid ? 649 : Constants.VOXEL_FLUID_PARTSBLOCK_COLLISION,
+                    FluidType.Poison     => showFluid ? 655 : Constants.VOXEL_FLUID_PARTSBLOCK_COLLISION,
+                    FluidType.Lava       => showFluid ? 661 : Constants.VOXEL_FLUID_PARTSBLOCK_COLLISION,
+                    FluidType.SwampWater => showFluid ? 667 : Constants.VOXEL_FLUID_PARTSBLOCK_COLLISION,
+                    FluidType.MuddyWater => showFluid ? 673 : Constants.VOXEL_FLUID_PARTSBLOCK_COLLISION,
+                    FluidType.Seawater   => showFluid ? 679 : Constants.VOXEL_FLUID_PARTSBLOCK_COLLISION,
+                    FluidType.Plasma     => showFluid ? 685 : Constants.VOXEL_FLUID_PARTSBLOCK_COLLISION,
+                    _ => Constants.VOXEL_PARTSBLOCK
+                };
             }
         }
     }

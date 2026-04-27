@@ -2,8 +2,16 @@
 	{
 		"ID": 0,
 		"Name": "DUMMY",
-		"Mesh": "res://Resources/Mesh/BGParts/dummy.tres",
-		"Materials": [],
+		"Mesh": "res://Resources/Mesh/BGParts/dummy/dummy.tres",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/dummy/unknown.png",
+				"Transparent": true,
+				"BackfaceCulling": false,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0.5,
 		"MeshOffsetZ": 0
@@ -384,7 +392,7 @@
 	},
 	{
 		"ID": 23,
-		"Name": "Twisted Tree Trunk (DQB2)",
+		"Name": "Twisted Tree Trunk (DQB2) [TODO check alignment]",
 		"Mesh": "res://Resources/Mesh/BGParts/twisted_tree_trunk/twisted_tree_trunk.obj",
 		"Materials": [
 			{
@@ -1374,11 +1382,11 @@
 	},
 	{
 		"ID": 80,
-		"Name": "Stone Steps",
-		"Mesh": "res://Resources/Mesh/BGParts/stone_steps/stone_steps.obj",
+		"Name": "Stone Steps (DQB2)",
+		"Mesh": "res://Resources/Mesh/BGParts/stone_steps/stone_steps_dqb2.obj",
 		"Materials": [
 			{
-				"Texture": "res://Resources/Mesh/BGParts/stone_steps/stone_steps.png",
+				"Texture": "res://Resources/Mesh/BGParts/stone_steps/stone_steps_dqb2.png",
 				"Transparent": false,
 				"BackfaceCulling": true,
 				"Mask": null,
@@ -1392,7 +1400,7 @@
 	{
 		"ID": 81,
 		"Name": "Stone Steps [White]",
-		"Mesh": "res://Resources/Mesh/BGParts/stone_steps/stone_steps.obj",
+		"Mesh": "res://Resources/Mesh/BGParts/stone_steps/stone_steps_dqb2.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/stone_steps/stone_steps_color.png",
@@ -1409,7 +1417,7 @@
 	{
 		"ID": 82,
 		"Name": "Stone Steps [Black]",
-		"Mesh": "res://Resources/Mesh/BGParts/stone_steps/stone_steps.obj",
+		"Mesh": "res://Resources/Mesh/BGParts/stone_steps/stone_steps_dqb2.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/stone_steps/stone_steps_color.png",
@@ -1426,7 +1434,7 @@
 	{
 		"ID": 83,
 		"Name": "Stone Steps [Purple]",
-		"Mesh": "res://Resources/Mesh/BGParts/stone_steps/stone_steps.obj",
+		"Mesh": "res://Resources/Mesh/BGParts/stone_steps/stone_steps_dqb2.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/stone_steps/stone_steps_color.png",
@@ -1443,7 +1451,7 @@
 	{
 		"ID": 84,
 		"Name": "Stone Steps [Pink]",
-		"Mesh": "res://Resources/Mesh/BGParts/stone_steps/stone_steps.obj",
+		"Mesh": "res://Resources/Mesh/BGParts/stone_steps/stone_steps_dqb2.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/stone_steps/stone_steps_color.png",
@@ -1460,7 +1468,7 @@
 	{
 		"ID": 85,
 		"Name": "Stone Steps [Red]",
-		"Mesh": "res://Resources/Mesh/BGParts/stone_steps/stone_steps.obj",
+		"Mesh": "res://Resources/Mesh/BGParts/stone_steps/stone_steps_dqb2.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/stone_steps/stone_steps_color.png",
@@ -1477,7 +1485,7 @@
 	{
 		"ID": 86,
 		"Name": "Stone Steps [Green]",
-		"Mesh": "res://Resources/Mesh/BGParts/stone_steps/stone_steps.obj",
+		"Mesh": "res://Resources/Mesh/BGParts/stone_steps/stone_steps_dqb2.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/stone_steps/stone_steps_color.png",
@@ -1494,7 +1502,7 @@
 	{
 		"ID": 87,
 		"Name": "Stone Steps [Yellow]",
-		"Mesh": "res://Resources/Mesh/BGParts/stone_steps/stone_steps.obj",
+		"Mesh": "res://Resources/Mesh/BGParts/stone_steps/stone_steps_dqb2.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/stone_steps/stone_steps_color.png",
@@ -1511,7 +1519,7 @@
 	{
 		"ID": 88,
 		"Name": "Stone Steps [Blue]",
-		"Mesh": "res://Resources/Mesh/BGParts/stone_steps/stone_steps.obj",
+		"Mesh": "res://Resources/Mesh/BGParts/stone_steps/stone_steps_dqb2.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/stone_steps/stone_steps_color.png",
@@ -2810,7 +2818,7 @@
 				"Transparent": true,
 				"BackfaceCulling": false,
 				"Mask": "res://Resources/Mesh/BGParts/pot_plant/pot_plant_mask.png",
-				"Color": "a1d988ff"
+				"Color": "292929ff"
 			}
 		],
 		"MeshOffsetX": 0,
@@ -3065,7 +3073,7 @@
 				"Transparent": false,
 				"BackfaceCulling": true,
 				"Mask": "res://Resources/Mesh/BGParts/dressing_table/dressing_table_mask.png",
-				"Color": "ffe640ff"
+				"Color": "a1d988ff"
 			}
 		],
 		"MeshOffsetX": 0,
@@ -3082,7 +3090,7 @@
 				"Transparent": false,
 				"BackfaceCulling": true,
 				"Mask": "res://Resources/Mesh/BGParts/dressing_table/dressing_table_mask.png",
-				"Color": "82befaff"
+				"Color": "ffe640ff"
 			}
 		],
 		"MeshOffsetX": 0,
@@ -3093,7 +3101,15 @@
 		"ID": 181,
 		"Name": "Dressing Table [Blue]",
 		"Mesh": "res://Resources/Mesh/BGParts/dressing_table/dressing_table.obj",
-		"Materials": [],
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/dressing_table/dressing_table_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": "res://Resources/Mesh/BGParts/dressing_table/dressing_table_mask.png",
+				"Color": "82befaff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -3278,7 +3294,7 @@
 				"Transparent": false,
 				"BackfaceCulling": true,
 				"Mask": null,
-				"Color": "f5bae1ff"
+				"Color": "ffffffff"
 			}
 		],
 		"MeshOffsetX": 0.5,
@@ -6114,7 +6130,7 @@
 	},
 	{
 		"ID": 356,
-		"Name": "Wheat [1/4]",
+		"Name": "Wheat [1/4] [TODO]",
 		"Mesh": null,
 		"Materials": [],
 		"MeshOffsetX": 0,
@@ -8918,8 +8934,8 @@
 	},
 	{
 		"ID": 524,
-		"Name": "Wooden Steps",
-		"Mesh": "res://Resources/Mesh/BGParts/wooden_steps/wooden_steps.obj",
+		"Name": "Wooden Steps (DQB2)",
+		"Mesh": "res://Resources/Mesh/BGParts/wooden_steps/wooden_steps_dqb2.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/wooden_steps/wooden_steps.png",
@@ -8936,7 +8952,7 @@
 	{
 		"ID": 525,
 		"Name": "Wooden Steps [White]",
-		"Mesh": "res://Resources/Mesh/BGParts/wooden_steps/wooden_steps.obj",
+		"Mesh": "res://Resources/Mesh/BGParts/wooden_steps/wooden_steps_dqb2.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/wooden_steps/wooden_steps_color.png",
@@ -8953,14 +8969,14 @@
 	{
 		"ID": 526,
 		"Name": "Wooden Steps [Black]",
-		"Mesh": "res://Resources/Mesh/BGParts/wooden_steps/wooden_steps.obj",
+		"Mesh": "res://Resources/Mesh/BGParts/wooden_steps/wooden_steps_dqb2.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/wooden_steps/wooden_steps_color.png",
 				"Transparent": false,
 				"BackfaceCulling": true,
 				"Mask": null,
-				"Color": "ffffffff"
+				"Color": "292929ff"
 			}
 		],
 		"MeshOffsetX": 0,
@@ -8970,14 +8986,14 @@
 	{
 		"ID": 527,
 		"Name": "Wooden Steps [Purple]",
-		"Mesh": "res://Resources/Mesh/BGParts/wooden_steps/wooden_steps.obj",
+		"Mesh": "res://Resources/Mesh/BGParts/wooden_steps/wooden_steps_dqb2.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/wooden_steps/wooden_steps_color.png",
 				"Transparent": false,
 				"BackfaceCulling": true,
 				"Mask": null,
-				"Color": "ffffffff"
+				"Color": "a762ccff"
 			}
 		],
 		"MeshOffsetX": 0,
@@ -8987,14 +9003,14 @@
 	{
 		"ID": 528,
 		"Name": "Wooden Steps [Pink]",
-		"Mesh": "res://Resources/Mesh/BGParts/wooden_steps/wooden_steps.obj",
+		"Mesh": "res://Resources/Mesh/BGParts/wooden_steps/wooden_steps_dqb2.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/wooden_steps/wooden_steps_color.png",
 				"Transparent": false,
 				"BackfaceCulling": true,
 				"Mask": null,
-				"Color": "ffffffff"
+				"Color": "f5bae1ff"
 			}
 		],
 		"MeshOffsetX": 0,
@@ -9004,14 +9020,14 @@
 	{
 		"ID": 529,
 		"Name": "Wooden Steps [Red]",
-		"Mesh": "res://Resources/Mesh/BGParts/wooden_steps/wooden_steps.obj",
+		"Mesh": "res://Resources/Mesh/BGParts/wooden_steps/wooden_steps_dqb2.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/wooden_steps/wooden_steps_color.png",
 				"Transparent": false,
 				"BackfaceCulling": true,
 				"Mask": null,
-				"Color": "ffffffff"
+				"Color": "db432cff"
 			}
 		],
 		"MeshOffsetX": 0,
@@ -9021,14 +9037,14 @@
 	{
 		"ID": 530,
 		"Name": "Wooden Steps [Green]",
-		"Mesh": "res://Resources/Mesh/BGParts/wooden_steps/wooden_steps.obj",
+		"Mesh": "res://Resources/Mesh/BGParts/wooden_steps/wooden_steps_dqb2.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/wooden_steps/wooden_steps_color.png",
 				"Transparent": false,
 				"BackfaceCulling": true,
 				"Mask": null,
-				"Color": "ffffffff"
+				"Color": "a1d988ff"
 			}
 		],
 		"MeshOffsetX": 0,
@@ -9038,14 +9054,14 @@
 	{
 		"ID": 531,
 		"Name": "Wooden Steps [Yellow]",
-		"Mesh": "res://Resources/Mesh/BGParts/wooden_steps/wooden_steps.obj",
+		"Mesh": "res://Resources/Mesh/BGParts/wooden_steps/wooden_steps_dqb2.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/wooden_steps/wooden_steps_color.png",
 				"Transparent": false,
 				"BackfaceCulling": true,
 				"Mask": null,
-				"Color": "ffffffff"
+				"Color": "ffe640ff"
 			}
 		],
 		"MeshOffsetX": 0,
@@ -9055,14 +9071,14 @@
 	{
 		"ID": 532,
 		"Name": "Wooden Steps [Blue]",
-		"Mesh": "res://Resources/Mesh/BGParts/wooden_steps/wooden_steps.obj",
+		"Mesh": "res://Resources/Mesh/BGParts/wooden_steps/wooden_steps_dqb2.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/wooden_steps/wooden_steps_color.png",
 				"Transparent": false,
 				"BackfaceCulling": true,
 				"Mask": null,
-				"Color": "ffffffff"
+				"Color": "82befaff"
 			}
 		],
 		"MeshOffsetX": 0,
@@ -9199,6 +9215,13 @@
 				"BackfaceCulling": true,
 				"Mask": null,
 				"Color": "ffffffff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_pane.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
 			}
 		],
 		"MeshOffsetX": 0.5,
@@ -9216,9 +9239,16 @@
 				"BackfaceCulling": true,
 				"Mask": null,
 				"Color": "ffffffff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_pane.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
 			}
 		],
-		"MeshOffsetX": 0,
+		"MeshOffsetX": 0.5,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
@@ -9232,10 +9262,17 @@
 				"Transparent": false,
 				"BackfaceCulling": true,
 				"Mask": null,
+				"Color": "292929ff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_pane.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
 				"Color": "ffffffff"
 			}
 		],
-		"MeshOffsetX": 0,
+		"MeshOffsetX": 0.5,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
@@ -9249,10 +9286,17 @@
 				"Transparent": false,
 				"BackfaceCulling": true,
 				"Mask": null,
+				"Color": "a762ccff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_pane.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
 				"Color": "ffffffff"
 			}
 		],
-		"MeshOffsetX": 0,
+		"MeshOffsetX": 0.5,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
@@ -9266,10 +9310,17 @@
 				"Transparent": false,
 				"BackfaceCulling": true,
 				"Mask": null,
+				"Color": "f5bae1ff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_pane.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
 				"Color": "ffffffff"
 			}
 		],
-		"MeshOffsetX": 0,
+		"MeshOffsetX": 0.5,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
@@ -9283,10 +9334,17 @@
 				"Transparent": false,
 				"BackfaceCulling": true,
 				"Mask": null,
+				"Color": "db432cff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_pane.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
 				"Color": "ffffffff"
 			}
 		],
-		"MeshOffsetX": 0,
+		"MeshOffsetX": 0.5,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
@@ -9300,10 +9358,17 @@
 				"Transparent": false,
 				"BackfaceCulling": true,
 				"Mask": null,
+				"Color": "a1d988ff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_pane.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
 				"Color": "ffffffff"
 			}
 		],
-		"MeshOffsetX": 0,
+		"MeshOffsetX": 0.5,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
@@ -9317,10 +9382,17 @@
 				"Transparent": false,
 				"BackfaceCulling": true,
 				"Mask": null,
+				"Color": "ffe640ff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_pane.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
 				"Color": "ffffffff"
 			}
 		],
-		"MeshOffsetX": 0,
+		"MeshOffsetX": 0.5,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
@@ -9334,10 +9406,17 @@
 				"Transparent": false,
 				"BackfaceCulling": true,
 				"Mask": null,
+				"Color": "82befaff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_pane.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
 				"Color": "ffffffff"
 			}
 		],
-		"MeshOffsetX": 0,
+		"MeshOffsetX": 0.5,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
@@ -9402,7 +9481,7 @@
 				"Transparent": false,
 				"BackfaceCulling": true,
 				"Mask": null,
-				"Color": "ffffffff"
+				"Color": "292929ff"
 			}
 		],
 		"MeshOffsetX": 0,
@@ -9419,7 +9498,7 @@
 				"Transparent": false,
 				"BackfaceCulling": true,
 				"Mask": null,
-				"Color": "ffffffff"
+				"Color": "a762ccff"
 			}
 		],
 		"MeshOffsetX": 0,
@@ -9436,7 +9515,7 @@
 				"Transparent": false,
 				"BackfaceCulling": true,
 				"Mask": null,
-				"Color": "ffffffff"
+				"Color": "f5bae1ff"
 			}
 		],
 		"MeshOffsetX": 0,
@@ -9453,7 +9532,7 @@
 				"Transparent": false,
 				"BackfaceCulling": true,
 				"Mask": null,
-				"Color": "ffffffff"
+				"Color": "db432cff"
 			}
 		],
 		"MeshOffsetX": 0,
@@ -9470,7 +9549,7 @@
 				"Transparent": false,
 				"BackfaceCulling": true,
 				"Mask": null,
-				"Color": "ffffffff"
+				"Color": "a1d988ff"
 			}
 		],
 		"MeshOffsetX": 0,
@@ -9487,7 +9566,7 @@
 				"Transparent": false,
 				"BackfaceCulling": true,
 				"Mask": null,
-				"Color": "ffffffff"
+				"Color": "ffe640ff"
 			}
 		],
 		"MeshOffsetX": 0,
@@ -9504,7 +9583,7 @@
 				"Transparent": false,
 				"BackfaceCulling": true,
 				"Mask": null,
-				"Color": "ffffffff"
+				"Color": "82befaff"
 			}
 		],
 		"MeshOffsetX": 0,
@@ -10085,9 +10164,9 @@
 				"Color": "ffffffff"
 			}
 		],
-		"MeshOffsetX": 0,
+		"MeshOffsetX": 1,
 		"MeshOffsetY": 0,
-		"MeshOffsetZ": 0
+		"MeshOffsetZ": -0.5
 	},
 	{
 		"ID": 593,
@@ -10102,9 +10181,9 @@
 				"Color": "292929ff"
 			}
 		],
-		"MeshOffsetX": 0,
+		"MeshOffsetX": 1,
 		"MeshOffsetY": 0,
-		"MeshOffsetZ": 0
+		"MeshOffsetZ": -0.5
 	},
 	{
 		"ID": 594,
@@ -10119,9 +10198,9 @@
 				"Color": "a762ccff"
 			}
 		],
-		"MeshOffsetX": 0,
+		"MeshOffsetX": 1,
 		"MeshOffsetY": 0,
-		"MeshOffsetZ": 0
+		"MeshOffsetZ": -0.5
 	},
 	{
 		"ID": 595,
@@ -10136,9 +10215,9 @@
 				"Color": "f5bae1ff"
 			}
 		],
-		"MeshOffsetX": 0,
+		"MeshOffsetX": 1,
 		"MeshOffsetY": 0,
-		"MeshOffsetZ": 0
+		"MeshOffsetZ": -0.5
 	},
 	{
 		"ID": 596,
@@ -10153,9 +10232,9 @@
 				"Color": "db432cff"
 			}
 		],
-		"MeshOffsetX": 0,
+		"MeshOffsetX": 1,
 		"MeshOffsetY": 0,
-		"MeshOffsetZ": 0
+		"MeshOffsetZ": -0.5
 	},
 	{
 		"ID": 597,
@@ -10170,9 +10249,9 @@
 				"Color": "a1d988ff"
 			}
 		],
-		"MeshOffsetX": 0,
+		"MeshOffsetX": 1,
 		"MeshOffsetY": 0,
-		"MeshOffsetZ": 0
+		"MeshOffsetZ": -0.5
 	},
 	{
 		"ID": 598,
@@ -10187,9 +10266,9 @@
 				"Color": "ffe640ff"
 			}
 		],
-		"MeshOffsetX": 0,
+		"MeshOffsetX": 1,
 		"MeshOffsetY": 0,
-		"MeshOffsetZ": 0
+		"MeshOffsetZ": -0.5
 	},
 	{
 		"ID": 599,
@@ -10204,9 +10283,9 @@
 				"Color": "82befaff"
 			}
 		],
-		"MeshOffsetX": 0,
+		"MeshOffsetX": 1,
 		"MeshOffsetY": 0,
-		"MeshOffsetZ": 0
+		"MeshOffsetZ": -0.5
 	},
 	{
 		"ID": 600,
@@ -11226,9 +11305,9 @@
 				"Color": "ffffffff"
 			}
 		],
-		"MeshOffsetX": 0,
+		"MeshOffsetX": 0.5,
 		"MeshOffsetY": 0,
-		"MeshOffsetZ": 0
+		"MeshOffsetZ": -0.5
 	},
 	{
 		"ID": 656,
@@ -11243,9 +11322,9 @@
 				"Color": "ffffffff"
 			}
 		],
-		"MeshOffsetX": 0,
+		"MeshOffsetX": 0.5,
 		"MeshOffsetY": 0,
-		"MeshOffsetZ": 0
+		"MeshOffsetZ": -0.5
 	},
 	{
 		"ID": 657,
@@ -11260,9 +11339,9 @@
 				"Color": "ffffffff"
 			}
 		],
-		"MeshOffsetX": 0,
+		"MeshOffsetX": 0.5,
 		"MeshOffsetY": 0,
-		"MeshOffsetZ": 0
+		"MeshOffsetZ": -0.5
 	},
 	{
 		"ID": 659,
@@ -11277,9 +11356,9 @@
 				"Color": "ffffffff"
 			}
 		],
-		"MeshOffsetX": 0,
+		"MeshOffsetX": 0.5,
 		"MeshOffsetY": 0,
-		"MeshOffsetZ": 0
+		"MeshOffsetZ": -0.5
 	},
 	{
 		"ID": 660,
@@ -11294,9 +11373,9 @@
 				"Color": "ffffffff"
 			}
 		],
-		"MeshOffsetX": 0,
+		"MeshOffsetX": 0.5,
 		"MeshOffsetY": 0,
-		"MeshOffsetZ": 0
+		"MeshOffsetZ": -0.5
 	},
 	{
 		"ID": 661,
@@ -11318,9 +11397,9 @@
 				"Color": "ffffffff"
 			}
 		],
-		"MeshOffsetX": 0,
+		"MeshOffsetX": 0.5,
 		"MeshOffsetY": 0,
-		"MeshOffsetZ": 0
+		"MeshOffsetZ": -0.5
 	},
 	{
 		"ID": 662,
@@ -11342,13 +11421,13 @@
 				"Color": "ffffffff"
 			}
 		],
-		"MeshOffsetX": 0,
+		"MeshOffsetX": 0.5,
 		"MeshOffsetY": 0,
-		"MeshOffsetZ": 0
+		"MeshOffsetZ": -0.5
 	},
 	{
 		"ID": 663,
-		"Name": "Deitree N",
+		"Name": "Deitree N [TODO]",
 		"Mesh": "",
 		"Materials": [
 			{
@@ -11383,9 +11462,9 @@
 				"Color": "ffffffff"
 			}
 		],
-		"MeshOffsetX": 0,
+		"MeshOffsetX": 0.5,
 		"MeshOffsetY": 0,
-		"MeshOffsetZ": 0
+		"MeshOffsetZ": -0.5
 	},
 	{
 		"ID": 665,
@@ -11400,9 +11479,9 @@
 				"Color": "ffffffff"
 			}
 		],
-		"MeshOffsetX": 0,
+		"MeshOffsetX": 0.5,
 		"MeshOffsetY": 0,
-		"MeshOffsetZ": 0
+		"MeshOffsetZ": -0.5
 	},
 	{
 		"ID": 666,
@@ -11417,9 +11496,9 @@
 				"Color": "ffffffff"
 			}
 		],
-		"MeshOffsetX": 0,
+		"MeshOffsetX": 0.5,
 		"MeshOffsetY": 0,
-		"MeshOffsetZ": 0
+		"MeshOffsetZ": -0.5
 	},
 	{
 		"ID": 667,
@@ -11434,9 +11513,9 @@
 				"Color": "ffffffff"
 			}
 		],
-		"MeshOffsetX": 0,
+		"MeshOffsetX": 0.5,
 		"MeshOffsetY": 0,
-		"MeshOffsetZ": 0
+		"MeshOffsetZ": -0.5
 	},
 	{
 		"ID": 669,
@@ -12676,7 +12755,7 @@
 				"Transparent": false,
 				"BackfaceCulling": true,
 				"Mask": "res://Resources/Mesh/BGParts/classy_couch/classy_couch_mask.png",
-				"Color": "292929ff"
+				"Color": "ffffffff"
 			}
 		],
 		"MeshOffsetX": 1,
@@ -14710,7 +14789,7 @@
 	},
 	{
 		"ID": 836,
-		"Name": "Deitree A",
+		"Name": "Deitree A [TODO]",
 		"Mesh": "",
 		"Materials": [
 			{
@@ -14741,7 +14820,7 @@
 	},
 	{
 		"ID": 837,
-		"Name": "Deitree B",
+		"Name": "Deitree B [TODO]",
 		"Mesh": "",
 		"Materials": [
 			{
@@ -14765,7 +14844,7 @@
 	},
 	{
 		"ID": 838,
-		"Name": "Deitree C",
+		"Name": "Deitree C [TODO]",
 		"Mesh": "",
 		"Materials": [
 			{
@@ -14789,7 +14868,7 @@
 	},
 	{
 		"ID": 839,
-		"Name": "Deitree D",
+		"Name": "Deitree D [TODO]",
 		"Mesh": "",
 		"Materials": [
 			{
@@ -14813,7 +14892,7 @@
 	},
 	{
 		"ID": 840,
-		"Name": "Deitree E",
+		"Name": "Deitree E [TODO]",
 		"Mesh": "",
 		"Materials": [
 			{
@@ -14851,7 +14930,7 @@
 	},
 	{
 		"ID": 841,
-		"Name": "Deitree F",
+		"Name": "Deitree F [TODO]",
 		"Mesh": "",
 		"Materials": [
 			{
@@ -14882,7 +14961,7 @@
 	},
 	{
 		"ID": 842,
-		"Name": "Deitree G",
+		"Name": "Deitree G [TODO]",
 		"Mesh": "",
 		"Materials": [
 			{
@@ -14906,7 +14985,7 @@
 	},
 	{
 		"ID": 843,
-		"Name": "Deitree H",
+		"Name": "Deitree H [TODO]",
 		"Mesh": "",
 		"Materials": [
 			{
@@ -14930,7 +15009,7 @@
 	},
 	{
 		"ID": 844,
-		"Name": "Deitree Planter",
+		"Name": "Deitree Planter [TODO]",
 		"Mesh": "",
 		"Materials": [
 			{
@@ -14947,7 +15026,7 @@
 	},
 	{
 		"ID": 845,
-		"Name": "Deitree Planter w/ Light Bulb",
+		"Name": "Deitree Planter w/ Light Bulb [TODO]",
 		"Mesh": "",
 		"Materials": [
 			{
@@ -14971,7 +15050,7 @@
 	},
 	{
 		"ID": 846,
-		"Name": "Deitree Remains",
+		"Name": "Deitree Remains [TODO]",
 		"Mesh": "",
 		"Materials": [
 			{
@@ -14995,7 +15074,7 @@
 	},
 	{
 		"ID": 847,
-		"Name": "Deitree L",
+		"Name": "Deitree L [TODO]",
 		"Mesh": "",
 		"Materials": [
 			{
@@ -15019,7 +15098,7 @@
 	},
 	{
 		"ID": 848,
-		"Name": "Deitree M",
+		"Name": "Deitree M [TODO]",
 		"Mesh": "",
 		"Materials": [
 			{
@@ -15370,7 +15449,7 @@
 		"Mesh": "res://Resources/Mesh/BGParts/strawberry/moreberry.obj",
 		"Materials": [
 			{
-				"Texture": "res://Resources/Mesh/BGParts/strawberry/strawberry_5b.png",
+				"Texture": "res://Resources/Mesh/BGParts/strawberry/moreberry.png",
 				"Transparent": true,
 				"BackfaceCulling": false,
 				"Mask": null,
@@ -15608,7 +15687,7 @@
 		"Mesh": "res://Resources/Mesh/BGParts/pumpkin/plumpkin.obj",
 		"Materials": [
 			{
-				"Texture": "res://Resources/Mesh/BGParts/pumpkin/pumpkin_5b.png",
+				"Texture": "res://Resources/Mesh/BGParts/pumpkin/plumpkin.png",
 				"Transparent": true,
 				"BackfaceCulling": false,
 				"Mask": null,
@@ -16496,7 +16575,7 @@
 				"Color": "ffffffff"
 			}
 		],
-		"MeshOffsetX": 0.5,
+		"MeshOffsetX": 1.5,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
@@ -16520,7 +16599,7 @@
 				"Color": "ffffffff"
 			}
 		],
-		"MeshOffsetX": 0.5,
+		"MeshOffsetX": 1.5,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
@@ -16544,7 +16623,7 @@
 				"Color": "ffffffff"
 			}
 		],
-		"MeshOffsetX": 0.5,
+		"MeshOffsetX": 1.5,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
@@ -16568,7 +16647,7 @@
 				"Color": "ffffffff"
 			}
 		],
-		"MeshOffsetX": 0.5,
+		"MeshOffsetX": 1.5,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
@@ -16592,7 +16671,7 @@
 				"Color": "ffffffff"
 			}
 		],
-		"MeshOffsetX": 0.5,
+		"MeshOffsetX": 1.5,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
@@ -16616,7 +16695,7 @@
 				"Color": "ffffffff"
 			}
 		],
-		"MeshOffsetX": 0.5,
+		"MeshOffsetX": 1.5,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
@@ -16640,7 +16719,7 @@
 				"Color": "ffffffff"
 			}
 		],
-		"MeshOffsetX": 0.5,
+		"MeshOffsetX": 1.5,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
@@ -16664,7 +16743,7 @@
 				"Color": "ffffffff"
 			}
 		],
-		"MeshOffsetX": 0.5,
+		"MeshOffsetX": 1.5,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
@@ -16688,7 +16767,7 @@
 				"Color": "ffffffff"
 			}
 		],
-		"MeshOffsetX": 0.5,
+		"MeshOffsetX": 1.5,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
@@ -16987,9 +17066,17 @@
 	},
 	{
 		"ID": 964,
-		"Name": "TODO Wooden Fencing",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Wooden Fencing",
+		"Mesh": "res://Resources/Mesh/BGParts/wooden_fencing/wooden_fencing_0.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/wooden_fencing/wooden_fencing.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -16997,8 +17084,16 @@
 	{
 		"ID": 965,
 		"Name": "Wooden Fencing [White]",
-		"Mesh": null,
-		"Materials": [],
+		"Mesh": "res://Resources/Mesh/BGParts/wooden_fencing/wooden_fencing_0.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/wooden_fencing/wooden_fencing_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -17006,8 +17101,16 @@
 	{
 		"ID": 966,
 		"Name": "Wooden Fencing [Black]",
-		"Mesh": null,
-		"Materials": [],
+		"Mesh": "res://Resources/Mesh/BGParts/wooden_fencing/wooden_fencing_0.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/wooden_fencing/wooden_fencing_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": "res://Resources/Mesh/BGParts/wooden_fencing/wooden_fencing_mask.png",
+				"Color": "292929ff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -17015,8 +17118,16 @@
 	{
 		"ID": 967,
 		"Name": "Wooden Fencing [Purple]",
-		"Mesh": null,
-		"Materials": [],
+		"Mesh": "res://Resources/Mesh/BGParts/wooden_fencing/wooden_fencing_0.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/wooden_fencing/wooden_fencing_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": "res://Resources/Mesh/BGParts/wooden_fencing/wooden_fencing_mask.png",
+				"Color": "a762ccff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -17024,8 +17135,16 @@
 	{
 		"ID": 968,
 		"Name": "Wooden Fencing [Pink]",
-		"Mesh": null,
-		"Materials": [],
+		"Mesh": "res://Resources/Mesh/BGParts/wooden_fencing/wooden_fencing_0.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/wooden_fencing/wooden_fencing_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": "res://Resources/Mesh/BGParts/wooden_fencing/wooden_fencing_mask.png",
+				"Color": "f5bae1ff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -17033,8 +17152,16 @@
 	{
 		"ID": 969,
 		"Name": "Wooden Fencing [Red]",
-		"Mesh": null,
-		"Materials": [],
+		"Mesh": "res://Resources/Mesh/BGParts/wooden_fencing/wooden_fencing_0.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/wooden_fencing/wooden_fencing_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": "res://Resources/Mesh/BGParts/wooden_fencing/wooden_fencing_mask.png",
+				"Color": "db432cff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -17042,8 +17169,16 @@
 	{
 		"ID": 970,
 		"Name": "Wooden Fencing [Green]",
-		"Mesh": null,
-		"Materials": [],
+		"Mesh": "res://Resources/Mesh/BGParts/wooden_fencing/wooden_fencing_0.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/wooden_fencing/wooden_fencing_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": "res://Resources/Mesh/BGParts/wooden_fencing/wooden_fencing_mask.png",
+				"Color": "a1d988ff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -17051,8 +17186,16 @@
 	{
 		"ID": 971,
 		"Name": "Wooden Fencing [Yellow]",
-		"Mesh": null,
-		"Materials": [],
+		"Mesh": "res://Resources/Mesh/BGParts/wooden_fencing/wooden_fencing_0.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/wooden_fencing/wooden_fencing_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": "res://Resources/Mesh/BGParts/wooden_fencing/wooden_fencing_mask.png",
+				"Color": "ffe640ff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -17060,8 +17203,16 @@
 	{
 		"ID": 972,
 		"Name": "Wooden Fencing [Blue]",
-		"Mesh": null,
-		"Materials": [],
+		"Mesh": "res://Resources/Mesh/BGParts/wooden_fencing/wooden_fencing_0.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/wooden_fencing/wooden_fencing_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": "res://Resources/Mesh/BGParts/wooden_fencing/wooden_fencing_mask.png",
+				"Color": "82befaff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -17549,14 +17700,14 @@
 		"Mesh": "res://Resources/Mesh/BGParts/curtain/curtain_open.obj",
 		"Materials": [
 			{
-				"Texture": "res://Resources/Mesh/BGParts/curtain/curtain_closed_color.png",
+				"Texture": "res://Resources/Mesh/BGParts/curtain/curtain_open_color.png",
 				"Transparent": false,
 				"BackfaceCulling": true,
 				"Mask": "res://Resources/Mesh/BGParts/curtain/curtain_open_mask.png",
 				"Color": "222222ff"
 			},
 			{
-				"Texture": "res://Resources/Mesh/BGParts/curtain/curtain_closed_color.png",
+				"Texture": "res://Resources/Mesh/BGParts/curtain/curtain_open_color.png",
 				"Transparent": false,
 				"BackfaceCulling": true,
 				"Mask": "res://Resources/Mesh/BGParts/curtain/curtain_open_mask.png",
@@ -17597,14 +17748,14 @@
 		"Mesh": "res://Resources/Mesh/BGParts/curtain/curtain_open.obj",
 		"Materials": [
 			{
-				"Texture": "res://Resources/Mesh/BGParts/curtain/curtain_closed_color.png",
+				"Texture": "res://Resources/Mesh/BGParts/curtain/curtain_open_color.png",
 				"Transparent": false,
 				"BackfaceCulling": true,
 				"Mask": "res://Resources/Mesh/BGParts/curtain/curtain_open_mask.png",
 				"Color": "4c0080ff"
 			},
 			{
-				"Texture": "res://Resources/Mesh/BGParts/curtain/curtain_closed_color.png",
+				"Texture": "res://Resources/Mesh/BGParts/curtain/curtain_open_color.png",
 				"Transparent": false,
 				"BackfaceCulling": true,
 				"Mask": "res://Resources/Mesh/BGParts/curtain/curtain_open_mask.png",
@@ -17645,14 +17796,14 @@
 		"Mesh": "res://Resources/Mesh/BGParts/curtain/curtain_open.obj",
 		"Materials": [
 			{
-				"Texture": "res://Resources/Mesh/BGParts/curtain/curtain_closed_color.png",
+				"Texture": "res://Resources/Mesh/BGParts/curtain/curtain_open_color.png",
 				"Transparent": false,
 				"BackfaceCulling": true,
 				"Mask": "res://Resources/Mesh/BGParts/curtain/curtain_open_mask.png",
 				"Color": "ff70adff"
 			},
 			{
-				"Texture": "res://Resources/Mesh/BGParts/curtain/curtain_closed_color.png",
+				"Texture": "res://Resources/Mesh/BGParts/curtain/curtain_open_color.png",
 				"Transparent": false,
 				"BackfaceCulling": true,
 				"Mask": "res://Resources/Mesh/BGParts/curtain/curtain_open_mask.png",
@@ -17693,14 +17844,14 @@
 		"Mesh": "res://Resources/Mesh/BGParts/curtain/curtain_open.obj",
 		"Materials": [
 			{
-				"Texture": "res://Resources/Mesh/BGParts/curtain/curtain_closed_color.png",
+				"Texture": "res://Resources/Mesh/BGParts/curtain/curtain_open_color.png",
 				"Transparent": false,
 				"BackfaceCulling": true,
 				"Mask": "res://Resources/Mesh/BGParts/curtain/curtain_open_mask.png",
 				"Color": "a20d1cff"
 			},
 			{
-				"Texture": "res://Resources/Mesh/BGParts/curtain/curtain_closed_color.png",
+				"Texture": "res://Resources/Mesh/BGParts/curtain/curtain_open_color.png",
 				"Transparent": false,
 				"BackfaceCulling": true,
 				"Mask": "res://Resources/Mesh/BGParts/curtain/curtain_open_mask.png",
@@ -17741,14 +17892,14 @@
 		"Mesh": "res://Resources/Mesh/BGParts/curtain/curtain_open.obj",
 		"Materials": [
 			{
-				"Texture": "res://Resources/Mesh/BGParts/curtain/curtain_closed_color.png",
+				"Texture": "res://Resources/Mesh/BGParts/curtain/curtain_open_color.png",
 				"Transparent": false,
 				"BackfaceCulling": true,
 				"Mask": "res://Resources/Mesh/BGParts/curtain/curtain_open_mask.png",
 				"Color": "007000ff"
 			},
 			{
-				"Texture": "res://Resources/Mesh/BGParts/curtain/curtain_closed_color.png",
+				"Texture": "res://Resources/Mesh/BGParts/curtain/curtain_open_color.png",
 				"Transparent": false,
 				"BackfaceCulling": true,
 				"Mask": "res://Resources/Mesh/BGParts/curtain/curtain_open_mask.png",
@@ -17789,14 +17940,14 @@
 		"Mesh": "res://Resources/Mesh/BGParts/curtain/curtain_open.obj",
 		"Materials": [
 			{
-				"Texture": "res://Resources/Mesh/BGParts/curtain/curtain_closed_color.png",
+				"Texture": "res://Resources/Mesh/BGParts/curtain/curtain_open_color.png",
 				"Transparent": false,
 				"BackfaceCulling": true,
 				"Mask": "res://Resources/Mesh/BGParts/curtain/curtain_open_mask.png",
 				"Color": "fcc600ff"
 			},
 			{
-				"Texture": "res://Resources/Mesh/BGParts/curtain/curtain_closed_color.png",
+				"Texture": "res://Resources/Mesh/BGParts/curtain/curtain_open_color.png",
 				"Transparent": false,
 				"BackfaceCulling": true,
 				"Mask": "res://Resources/Mesh/BGParts/curtain/curtain_open_mask.png",
@@ -17837,14 +17988,14 @@
 		"Mesh": "res://Resources/Mesh/BGParts/curtain/curtain_open.obj",
 		"Materials": [
 			{
-				"Texture": "res://Resources/Mesh/BGParts/curtain/curtain_closed_color.png",
+				"Texture": "res://Resources/Mesh/BGParts/curtain/curtain_open_color.png",
 				"Transparent": false,
 				"BackfaceCulling": true,
 				"Mask": "res://Resources/Mesh/BGParts/curtain/curtain_open_mask.png",
 				"Color": "1414b8ff"
 			},
 			{
-				"Texture": "res://Resources/Mesh/BGParts/curtain/curtain_closed_color.png",
+				"Texture": "res://Resources/Mesh/BGParts/curtain/curtain_open_color.png",
 				"Transparent": false,
 				"BackfaceCulling": true,
 				"Mask": "res://Resources/Mesh/BGParts/curtain/curtain_open_mask.png",
@@ -18147,7 +18298,7 @@
 				"Color": "ffffffff"
 			}
 		],
-		"MeshOffsetX": 0,
+		"MeshOffsetX": 0.5,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
@@ -18194,18 +18345,34 @@
 	},
 	{
 		"ID": 1031,
-		"Name": "TODO Picket Fencing",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Picket Fencing",
+		"Mesh": "res://Resources/Mesh/BGParts/picket_fence/picket_fence_0.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/picket_fence/picket_fence.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 1032,
-		"Name": "TODO Picket Fencing [White]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Picket Fencing [White]",
+		"Mesh": "res://Resources/Mesh/BGParts/picket_fence/picket_fence_0.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/picket_fence/picket_fence_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -18213,8 +18380,16 @@
 	{
 		"ID": 1033,
 		"Name": "Picket Fencing [Black]",
-		"Mesh": null,
-		"Materials": [],
+		"Mesh": "res://Resources/Mesh/BGParts/picket_fence/picket_fence_0.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/picket_fence/picket_fence_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "292929ff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -18222,8 +18397,16 @@
 	{
 		"ID": 1034,
 		"Name": "Picket Fencing [Purple]",
-		"Mesh": null,
-		"Materials": [],
+		"Mesh": "res://Resources/Mesh/BGParts/picket_fence/picket_fence_0.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/picket_fence/picket_fence_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "a762ccff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -18231,8 +18414,16 @@
 	{
 		"ID": 1035,
 		"Name": "Picket Fencing [Pink]",
-		"Mesh": null,
-		"Materials": [],
+		"Mesh": "res://Resources/Mesh/BGParts/picket_fence/picket_fence_0.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/picket_fence/picket_fence_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "f5bae1ff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -18240,8 +18431,16 @@
 	{
 		"ID": 1036,
 		"Name": "Picket Fencing [Red]",
-		"Mesh": null,
-		"Materials": [],
+		"Mesh": "res://Resources/Mesh/BGParts/picket_fence/picket_fence_0.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/picket_fence/picket_fence_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "db432cff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -18249,8 +18448,16 @@
 	{
 		"ID": 1037,
 		"Name": "Picket Fencing [Yellow]",
-		"Mesh": null,
-		"Materials": [],
+		"Mesh": "res://Resources/Mesh/BGParts/picket_fence/picket_fence_0.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/picket_fence/picket_fence_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "a1d988ff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -18258,8 +18465,16 @@
 	{
 		"ID": 1038,
 		"Name": "Picket Fencing [Green]",
-		"Mesh": null,
-		"Materials": [],
+		"Mesh": "res://Resources/Mesh/BGParts/picket_fence/picket_fence_0.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/picket_fence/picket_fence_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffe640ff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -18267,8 +18482,16 @@
 	{
 		"ID": 1039,
 		"Name": "Picket Fencing [Blue]",
-		"Mesh": null,
-		"Materials": [],
+		"Mesh": "res://Resources/Mesh/BGParts/picket_fence/picket_fence_0.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/picket_fence/picket_fence_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "82befaff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -18796,7 +19019,7 @@
 				"Color": "ffffffff"
 			}
 		],
-		"MeshOffsetX": 0,
+		"MeshOffsetX": 0.5,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
@@ -18813,7 +19036,7 @@
 				"Color": "292929ff"
 			}
 		],
-		"MeshOffsetX": 0,
+		"MeshOffsetX": 0.5,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
@@ -20525,9 +20748,17 @@
 	},
 	{
 		"ID": 1172,
-		"Name": "Stone Handrail TODO",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Stone Handrail",
+		"Mesh": "res://Resources/Mesh/BGParts/stone_handrail/stone_handrail_0.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/stone_handrail/stone_handrail.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -20535,8 +20766,16 @@
 	{
 		"ID": 1173,
 		"Name": "Stone Handrail [White]",
-		"Mesh": null,
-		"Materials": [],
+		"Mesh": "res://Resources/Mesh/BGParts/stone_handrail/stone_handrail_0.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/stone_handrail/stone_handrail_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -20544,8 +20783,16 @@
 	{
 		"ID": 1174,
 		"Name": "Stone Handrail [Black]",
-		"Mesh": null,
-		"Materials": [],
+		"Mesh": "res://Resources/Mesh/BGParts/stone_handrail/stone_handrail_0.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/stone_handrail/stone_handrail_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "292929ff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -20553,8 +20800,16 @@
 	{
 		"ID": 1175,
 		"Name": "Stone Handrail [Purple]",
-		"Mesh": null,
-		"Materials": [],
+		"Mesh": "res://Resources/Mesh/BGParts/stone_handrail/stone_handrail_0.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/stone_handrail/stone_handrail_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "a762ccff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -20562,8 +20817,16 @@
 	{
 		"ID": 1176,
 		"Name": "Stone Handrail [Pink]",
-		"Mesh": null,
-		"Materials": [],
+		"Mesh": "res://Resources/Mesh/BGParts/stone_handrail/stone_handrail_0.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/stone_handrail/stone_handrail_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "f5bae1ff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -20571,8 +20834,16 @@
 	{
 		"ID": 1177,
 		"Name": "Stone Handrail [Red]",
-		"Mesh": null,
-		"Materials": [],
+		"Mesh": "res://Resources/Mesh/BGParts/stone_handrail/stone_handrail_0.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/stone_handrail/stone_handrail_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "db432cff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -20580,8 +20851,16 @@
 	{
 		"ID": 1178,
 		"Name": "Stone Handrail [Green]",
-		"Mesh": null,
-		"Materials": [],
+		"Mesh": "res://Resources/Mesh/BGParts/stone_handrail/stone_handrail_0.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/stone_handrail/stone_handrail_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "a1d988ff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -20589,8 +20868,16 @@
 	{
 		"ID": 1179,
 		"Name": "Stone Handrail [Yellow]",
-		"Mesh": null,
-		"Materials": [],
+		"Mesh": "res://Resources/Mesh/BGParts/stone_handrail/stone_handrail_0.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/stone_handrail/stone_handrail_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffe640ff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -20598,17 +20885,33 @@
 	{
 		"ID": 1180,
 		"Name": "Stone Handrail [Blue]",
-		"Mesh": null,
-		"Materials": [],
+		"Mesh": "res://Resources/Mesh/BGParts/stone_handrail/stone_handrail_0.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/stone_handrail/stone_handrail_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "82befaff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 1181,
-		"Name": "Wooden Handrail TODO",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Wooden Handrail",
+		"Mesh": "res://Resources/Mesh/BGParts/wooden_handrail/wooden_handrail_0.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/wooden_handrail/wooden_handrail.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -20616,8 +20919,16 @@
 	{
 		"ID": 1182,
 		"Name": "Wooden Handrail [White]",
-		"Mesh": null,
-		"Materials": [],
+		"Mesh": "res://Resources/Mesh/BGParts/wooden_handrail/wooden_handrail_0.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/wooden_handrail/wooden_handrail_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -20625,8 +20936,16 @@
 	{
 		"ID": 1183,
 		"Name": "Wooden Handrail [Black]",
-		"Mesh": null,
-		"Materials": [],
+		"Mesh": "res://Resources/Mesh/BGParts/wooden_handrail/wooden_handrail_0.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/wooden_handrail/wooden_handrail_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "292929ff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -20634,8 +20953,16 @@
 	{
 		"ID": 1184,
 		"Name": "Wooden Handrail [Purple]",
-		"Mesh": null,
-		"Materials": [],
+		"Mesh": "res://Resources/Mesh/BGParts/wooden_handrail/wooden_handrail_0.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/wooden_handrail/wooden_handrail_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "a762ccff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -20643,8 +20970,16 @@
 	{
 		"ID": 1185,
 		"Name": "Wooden Handrail [Pink]",
-		"Mesh": null,
-		"Materials": [],
+		"Mesh": "res://Resources/Mesh/BGParts/wooden_handrail/wooden_handrail_0.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/wooden_handrail/wooden_handrail_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "f5bae1ff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -20652,8 +20987,16 @@
 	{
 		"ID": 1186,
 		"Name": "Wooden Handrail [Red]",
-		"Mesh": null,
-		"Materials": [],
+		"Mesh": "res://Resources/Mesh/BGParts/wooden_handrail/wooden_handrail_0.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/wooden_handrail/wooden_handrail_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "db432cff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -20661,8 +21004,16 @@
 	{
 		"ID": 1187,
 		"Name": "Wooden Handrail [Green]",
-		"Mesh": null,
-		"Materials": [],
+		"Mesh": "res://Resources/Mesh/BGParts/wooden_handrail/wooden_handrail_0.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/wooden_handrail/wooden_handrail_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "a1d988ff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -20670,8 +21021,16 @@
 	{
 		"ID": 1188,
 		"Name": "Wooden Handrail [Yellow]",
-		"Mesh": null,
-		"Materials": [],
+		"Mesh": "res://Resources/Mesh/BGParts/wooden_handrail/wooden_handrail_0.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/wooden_handrail/wooden_handrail_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffe640ff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -20679,8 +21038,16 @@
 	{
 		"ID": 1189,
 		"Name": "Wooden Handrail [Blue]",
-		"Mesh": null,
-		"Materials": [],
+		"Mesh": "res://Resources/Mesh/BGParts/wooden_handrail/wooden_handrail_0.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/wooden_handrail/wooden_handrail_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "82befaff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -20911,7 +21278,7 @@
 		],
 		"MeshOffsetX": 0.5,
 		"MeshOffsetY": 0,
-		"MeshOffsetZ": 0
+		"MeshOffsetZ": -0.5
 	},
 	{
 		"ID": 1203,
@@ -20928,7 +21295,7 @@
 		],
 		"MeshOffsetX": 1.5,
 		"MeshOffsetY": 0,
-		"MeshOffsetZ": 0
+		"MeshOffsetZ": 0.5
 	},
 	{
 		"ID": 1204,
@@ -22131,7 +22498,7 @@
 				"Transparent": true,
 				"BackfaceCulling": false,
 				"Mask": "res://Resources/Mesh/BGParts/rose/rose_mask.png",
-				"Color": "222222ff"
+				"Color": "ffffffff"
 			}
 		],
 		"MeshOffsetX": 0,
@@ -22468,7 +22835,7 @@
 	},
 	{
 		"ID": 1289,
-		"Name": "Blocky Branch",
+		"Name": "Blocky Branch [TODO check alignment]",
 		"Mesh": "res://Resources/Mesh/BGParts/blocky_branch/blocky_branch.obj",
 		"Materials": [
 			{
@@ -24849,27 +25216,17 @@
 	},
 	{
 		"ID": 1427,
-		"Name": "Gravity Globule S",
-		"Mesh": null,
-		"Materials": [],
-		"MeshOffsetX": 0,
-		"MeshOffsetY": 0.5,
-		"MeshOffsetZ": 0
-	},
-	{
-		"ID": 1428,
-		"Name": "Gravity Globule M",
-		"Mesh": null,
-		"Materials": [],
-		"MeshOffsetX": 0,
-		"MeshOffsetY": 0.5,
-		"MeshOffsetZ": 0
-	},
-	{
-		"ID": 1429,
-		"Name": "Gravity Globule L",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Gravity Globule",
+		"Mesh": "res://Resources/Mesh/BGParts/dummy/dummy.tres",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/dummy/blackhole.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0.5,
 		"MeshOffsetZ": 0
@@ -25837,7 +26194,7 @@
 	{
 		"ID": 1482,
 		"Name": "Cross Pipe",
-		"Mesh": "res://Resources/Mesh/BGParts/pipe/cross_pipe.png",
+		"Mesh": "res://Resources/Mesh/BGParts/pipe/cross_pipe.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/pipe/cross_pipe.png",
@@ -25881,7 +26238,7 @@
 				"Color": "9ab779ff"
 			}
 		],
-		"MeshOffsetX": 0,
+		"MeshOffsetX": 0.5,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
@@ -26163,9 +26520,17 @@
 	},
 	{
 		"ID": 1500,
-		"Name": "Citadel Handrail TODO",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Citadel Handrail",
+		"Mesh": "res://Resources/Mesh/BGParts/stone_handrail/stone_handrail_0.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/stone_handrail/stone_handrail.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "9ab779ff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -26729,10 +27094,10 @@
 	{
 		"ID": 1533,
 		"Name": "Citadel Steps",
-		"Mesh": "res://Resources/Mesh/BGParts/stone_steps/stone_steps.obj",
+		"Mesh": "res://Resources/Mesh/BGParts/stone_steps/stone_steps_dqb2.obj",
 		"Materials": [
 			{
-				"Texture": "res://Resources/Mesh/BGParts/stone_steps/stone_steps.png",
+				"Texture": "res://Resources/Mesh/BGParts/stone_steps/stone_steps_dqb2.png",
 				"Transparent": false,
 				"BackfaceCulling": true,
 				"Mask": null,
@@ -27009,9 +27374,17 @@
 	},
 	{
 		"ID": 1550,
-		"Name": "Whirlwind TODO",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Whirlwind",
+		"Mesh": "res://Resources/Mesh/BGParts/dummy/dummy.tres",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/dummy/hurricane.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0.5,
 		"MeshOffsetZ": 0
@@ -27866,7 +28239,7 @@
 	},
 	{
 		"ID": 1606,
-		"Name": "Liquid Metal Soup TODO",
+		"Name": "Liquid Metal Soup",
 		"Mesh": "res://Resources/Mesh/BGParts/liquid_metal_soup/liquid_metal_soup.obj",
 		"Materials": [
 			{
@@ -27877,7 +28250,7 @@
 				"Color": "ffffffff"
 			},
 			{
-				"Texture": null,
+				"Texture": "res://Resources/Mesh/BGParts/simple_supper_set/simple_supper_set.png",
 				"Transparent": false,
 				"BackfaceCulling": true,
 				"Mask": null,
@@ -28847,7 +29220,7 @@
 				"Color": "ffffffff"
 			}
 		],
-		"MeshOffsetX": 0,
+		"MeshOffsetX": 0.5,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
@@ -28864,7 +29237,7 @@
 				"Color": "ffffffff"
 			}
 		],
-		"MeshOffsetX": 0,
+		"MeshOffsetX": 0.5,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
@@ -28881,7 +29254,7 @@
 				"Color": "222222ff"
 			}
 		],
-		"MeshOffsetX": 0,
+		"MeshOffsetX": 0.5,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
@@ -28898,7 +29271,7 @@
 				"Color": "4c0080ff"
 			}
 		],
-		"MeshOffsetX": 0,
+		"MeshOffsetX": 0.5,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
@@ -28915,7 +29288,7 @@
 				"Color": "ff70adff"
 			}
 		],
-		"MeshOffsetX": 0,
+		"MeshOffsetX": 0.5,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
@@ -28932,7 +29305,7 @@
 				"Color": "a20d1cff"
 			}
 		],
-		"MeshOffsetX": 0,
+		"MeshOffsetX": 0.5,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
@@ -28949,7 +29322,7 @@
 				"Color": "007000ff"
 			}
 		],
-		"MeshOffsetX": 0,
+		"MeshOffsetX": 0.5,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
@@ -28966,7 +29339,7 @@
 				"Color": "fcc600ff"
 			}
 		],
-		"MeshOffsetX": 0,
+		"MeshOffsetX": 0.5,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
@@ -28983,7 +29356,7 @@
 				"Color": "1414b8ff"
 			}
 		],
-		"MeshOffsetX": 0,
+		"MeshOffsetX": 0.5,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
@@ -29500,7 +29873,7 @@
 				"Color": "ffffffff"
 			}
 		],
-		"MeshOffsetX": 0.5,
+		"MeshOffsetX": 1.5,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
@@ -29524,7 +29897,7 @@
 				"Color": "ffffffff"
 			}
 		],
-		"MeshOffsetX": 0.5,
+		"MeshOffsetX": 1.5,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
@@ -29548,7 +29921,7 @@
 				"Color": "ffffffff"
 			}
 		],
-		"MeshOffsetX": 0.5,
+		"MeshOffsetX": 1.5,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
@@ -29572,7 +29945,7 @@
 				"Color": "ffffffff"
 			}
 		],
-		"MeshOffsetX": 0.5,
+		"MeshOffsetX": 1.5,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
@@ -29596,7 +29969,7 @@
 				"Color": "ffffffff"
 			}
 		],
-		"MeshOffsetX": 0.5,
+		"MeshOffsetX": 1.5,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
@@ -29620,7 +29993,7 @@
 				"Color": "ffffffff"
 			}
 		],
-		"MeshOffsetX": 0.5,
+		"MeshOffsetX": 1.5,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
@@ -29644,7 +30017,7 @@
 				"Color": "ffffffff"
 			}
 		],
-		"MeshOffsetX": 0.5,
+		"MeshOffsetX": 1.5,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
@@ -29668,7 +30041,7 @@
 				"Color": "ffffffff"
 			}
 		],
-		"MeshOffsetX": 0.5,
+		"MeshOffsetX": 1.5,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
@@ -29692,7 +30065,7 @@
 				"Color": "ffffffff"
 			}
 		],
-		"MeshOffsetX": 0.5,
+		"MeshOffsetX": 1.5,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
@@ -29751,23 +30124,6 @@
 		"ID": 1709,
 		"Name": "Låmpe Bäsen",
 		"Mesh": "res://Resources/Mesh/BGParts/linken_lampe/lampe_basen.obj",
-		"Materials": [
-			{
-				"Texture": "res://Resources/Mesh/BGParts/linken_lampe/linken_lampe.png",
-				"Transparent": false,
-				"BackfaceCulling": true,
-				"Mask": null,
-				"Color": "ffffffff"
-			}
-		],
-		"MeshOffsetX": 0,
-		"MeshOffsetY": 0,
-		"MeshOffsetZ": 0
-	},
-	{
-		"ID": 1710,
-		"Name": "Täbel Låmpe",
-		"Mesh": "res://Resources/Mesh/BGParts/linken_lampe/tabel_lampe.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/linken_lampe/linken_lampe.png",
@@ -31859,7 +32215,7 @@
 				"Color": "ffffffff"
 			}
 		],
-		"MeshOffsetX": 0,
+		"MeshOffsetX": 0.5,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
@@ -31883,7 +32239,7 @@
 				"Color": "ffffffff"
 			}
 		],
-		"MeshOffsetX": 0,
+		"MeshOffsetX": 0.5,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
@@ -31907,7 +32263,7 @@
 				"Color": "ffffffff"
 			}
 		],
-		"MeshOffsetX": 0,
+		"MeshOffsetX": 0.5,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
@@ -31931,7 +32287,7 @@
 				"Color": "ffffffff"
 			}
 		],
-		"MeshOffsetX": 0,
+		"MeshOffsetX": 0.5,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
@@ -31955,7 +32311,7 @@
 				"Color": "ffffffff"
 			}
 		],
-		"MeshOffsetX": 0,
+		"MeshOffsetX": 0.5,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
@@ -31979,7 +32335,7 @@
 				"Color": "ffffffff"
 			}
 		],
-		"MeshOffsetX": 0,
+		"MeshOffsetX": 0.5,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
@@ -32003,7 +32359,7 @@
 				"Color": "ffffffff"
 			}
 		],
-		"MeshOffsetX": 0,
+		"MeshOffsetX": 0.5,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
@@ -32027,7 +32383,7 @@
 				"Color": "ffffffff"
 			}
 		],
-		"MeshOffsetX": 0,
+		"MeshOffsetX": 0.5,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
@@ -32051,17 +32407,17 @@
 				"Color": "ffffffff"
 			}
 		],
-		"MeshOffsetX": 0,
+		"MeshOffsetX": 0.5,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 1832,
-		"Name": "Rigid Rope TODO",
-		"Mesh": "",
+		"Name": "Rigid Rope",
+		"Mesh": "res://Resources/Mesh/BGParts/rigid_rope/rigid_rope.obj",
 		"Materials": [
 			{
-				"Texture": null,
+				"Texture": "res://Resources/Mesh/BGParts/rigid_rope/rigid_rope.png",
 				"Transparent": false,
 				"BackfaceCulling": true,
 				"Mask": null,
@@ -32075,8 +32431,16 @@
 	{
 		"ID": 1833,
 		"Name": "Rigid Rope [White]",
-		"Mesh": null,
-		"Materials": [],
+		"Mesh": "res://Resources/Mesh/BGParts/rigid_rope/rigid_rope.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/rigid_rope/rigid_rope_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -32084,8 +32448,16 @@
 	{
 		"ID": 1834,
 		"Name": "Rigid Rope [Black]",
-		"Mesh": null,
-		"Materials": [],
+		"Mesh": "res://Resources/Mesh/BGParts/rigid_rope/rigid_rope.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/rigid_rope/rigid_rope_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "222222ff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -32093,8 +32465,16 @@
 	{
 		"ID": 1835,
 		"Name": "Rigid Rope [Purple]",
-		"Mesh": null,
-		"Materials": [],
+		"Mesh": "res://Resources/Mesh/BGParts/rigid_rope/rigid_rope.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/rigid_rope/rigid_rope_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "730080ff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -32102,8 +32482,16 @@
 	{
 		"ID": 1836,
 		"Name": "Rigid Rope [Pink]",
-		"Mesh": null,
-		"Materials": [],
+		"Mesh": "res://Resources/Mesh/BGParts/rigid_rope/rigid_rope.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/rigid_rope/rigid_rope_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ff70adff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -32111,8 +32499,16 @@
 	{
 		"ID": 1837,
 		"Name": "Rigid Rope [Red]",
-		"Mesh": null,
-		"Materials": [],
+		"Mesh": "res://Resources/Mesh/BGParts/rigid_rope/rigid_rope.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/rigid_rope/rigid_rope_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "a20d1cff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -32120,8 +32516,16 @@
 	{
 		"ID": 1838,
 		"Name": "Rigid Rope [Green]",
-		"Mesh": null,
-		"Materials": [],
+		"Mesh": "res://Resources/Mesh/BGParts/rigid_rope/rigid_rope.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/rigid_rope/rigid_rope_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "00ba00ff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -32129,8 +32533,16 @@
 	{
 		"ID": 1839,
 		"Name": "Rigid Rope [Yellow]",
-		"Mesh": null,
-		"Materials": [],
+		"Mesh": "res://Resources/Mesh/BGParts/rigid_rope/rigid_rope.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/rigid_rope/rigid_rope_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "fcc600ff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -32138,8 +32550,16 @@
 	{
 		"ID": 1840,
 		"Name": "Rigid Rope [Blue]",
-		"Mesh": null,
-		"Materials": [],
+		"Mesh": "res://Resources/Mesh/BGParts/rigid_rope/rigid_rope.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/rigid_rope/rigid_rope_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "1414b8ff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -32222,7 +32642,7 @@
 				"Transparent": false,
 				"BackfaceCulling": true,
 				"Mask": "res://Resources/Mesh/BGParts/sleek_shelf/sleek_shelf_mask.png",
-				"Color": "ffe640ff"
+				"Color": "292929ff"
 			}
 		],
 		"MeshOffsetX": 0,
@@ -32947,16 +33367,32 @@
 		"ID": 1888,
 		"Name": "Wooden Pillar",
 		"Mesh": "res://Resources/Mesh/BGParts/wooden_pillar/wooden_pillar.obj",
-		"Materials": [],
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/wooden_pillar/wooden_pillar.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 1889,
-		"Name": "Wooden Pillar [White] TODO",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Wooden Pillar [White]",
+		"Mesh": "res://Resources/Mesh/BGParts/wooden_pillar/wooden_pillar.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/wooden_pillar/wooden_pillar_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -32964,8 +33400,16 @@
 	{
 		"ID": 1890,
 		"Name": "Wooden Pillar [Purple]",
-		"Mesh": null,
-		"Materials": [],
+		"Mesh": "res://Resources/Mesh/BGParts/wooden_pillar/wooden_pillar.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/wooden_pillar/wooden_pillar_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "a762ccff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -32973,8 +33417,16 @@
 	{
 		"ID": 1891,
 		"Name": "Wooden Pillar [Pink]",
-		"Mesh": null,
-		"Materials": [],
+		"Mesh": "res://Resources/Mesh/BGParts/wooden_pillar/wooden_pillar.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/wooden_pillar/wooden_pillar_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "f5bae1ff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -32982,8 +33434,16 @@
 	{
 		"ID": 1892,
 		"Name": "Wooden Pillar [Red]",
-		"Mesh": null,
-		"Materials": [],
+		"Mesh": "res://Resources/Mesh/BGParts/wooden_pillar/wooden_pillar.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/wooden_pillar/wooden_pillar_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "db432cff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -32991,8 +33451,16 @@
 	{
 		"ID": 1893,
 		"Name": "Wooden Pillar [Green]",
-		"Mesh": null,
-		"Materials": [],
+		"Mesh": "res://Resources/Mesh/BGParts/wooden_pillar/wooden_pillar.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/wooden_pillar/wooden_pillar_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "a1d988ff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -33000,8 +33468,16 @@
 	{
 		"ID": 1894,
 		"Name": "Wooden Pillar [Yellow]",
-		"Mesh": null,
-		"Materials": [],
+		"Mesh": "res://Resources/Mesh/BGParts/wooden_pillar/wooden_pillar.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/wooden_pillar/wooden_pillar_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffe640ff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -33009,8 +33485,16 @@
 	{
 		"ID": 1895,
 		"Name": "Wooden Pillar [Blue]",
-		"Mesh": null,
-		"Materials": [],
+		"Mesh": "res://Resources/Mesh/BGParts/wooden_pillar/wooden_pillar.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/wooden_pillar/wooden_pillar_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "82befaff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -36560,7 +37044,7 @@
 	},
 	{
 		"ID": 2095,
-		"Name": "Sinister Sconce",
+		"Name": "Sinister Sconce TODO",
 		"Mesh": "res://Resources/Mesh/BGParts/sconce/sconce.obj",
 		"Materials": [
 			{
@@ -36752,7 +37236,7 @@
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/beastly_burrow/pestilential_nest.png",
-				"Transparent": false,
+				"Transparent": true,
 				"BackfaceCulling": true,
 				"Mask": null,
 				"Color": "ffffffff"
@@ -36769,7 +37253,7 @@
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/beastly_burrow/pestilential_nest_damaged.png",
-				"Transparent": false,
+				"Transparent": true,
 				"BackfaceCulling": true,
 				"Mask": null,
 				"Color": "ffffffff"
@@ -36781,1215 +37265,3096 @@
 	},
 	{
 		"ID": 2108,
-		"Name": "Connecting Window A TODO",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window NC",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_NC.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		
+		
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2109,
-		"Name": "Connecting Window B",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE1",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE1.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2110,
-		"Name": "Connecting Window C",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE2A",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE2A.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		
+		
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2111,
-		"Name": "Connecting Window D",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE2C_O0",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE2C_O0.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		
+		
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2112,
-		"Name": "Connecting Window E",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE2C_O1",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE2C_O1.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		
+		
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2113,
-		"Name": "Connecting Window F",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE3C_O0",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE3C_O0.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		
+		
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2114,
-		"Name": "Connecting Window G",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE3C_O1",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE3C_O1.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		
+		
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2115,
-		"Name": "Connecting Window H",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE3C_O2",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE3C_O2.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		
+		
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2116,
-		"Name": "Connecting Window I",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE3C_O3",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE3C_O3.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		
+		
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2117,
-		"Name": "Connecting Window J",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE4_O0",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE4_O0.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		
+		
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2118,
-		"Name": "Connecting Window K",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE4_O1",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE4_O1.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		
+		
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2119,
-		"Name": "Connecting Window L",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE4_O2C",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE4_O2C.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		
+		
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2120,
-		"Name": "Connecting Window M",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE4_O2A",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE4_O2A.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		
+		
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2121,
-		"Name": "Connecting Window N",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE4_O3",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE4_O3.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		
+		
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2122,
-		"Name": "Connecting Window O",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CA",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CA.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2123,
-		"Name": "Connecting Window A [White]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window NC [White]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_NC.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		
+		
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2124,
-		"Name": "Connecting Window B [White]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE1 [White]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE1.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		
+		
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2125,
-		"Name": "Connecting Window C [White]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE2A [White]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE2A.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		
+		
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2126,
-		"Name": "Connecting Window D [White]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE2C_O0 [White]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE2C_O0.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		
+		
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2127,
-		"Name": "Connecting Window E [White]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE2C_O1 [White]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE2C_O1.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		
+		
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2128,
-		"Name": "Connecting Window F [White]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE3C_O0 [White]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE3C_O0.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		
+		
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2129,
-		"Name": "Connecting Window G [White]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE3C_O1 [White]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE3C_O1.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		
+		
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2130,
-		"Name": "Connecting Window H [White]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE3C_O2 [White]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE3C_O2.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		
+		
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2131,
-		"Name": "Connecting Window I [White]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE3C_O3 [White]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE3C_O3.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		
+		
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2132,
-		"Name": "Connecting Window J [White]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE4_O0 [White]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE4_O0.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		
+		
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2133,
-		"Name": "Connecting Window K [White]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE4_O1 [White]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE4_O1.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		
+		
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2134,
-		"Name": "Connecting Window L [White]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE4_O2C [White]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE4_O2C.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		
+		
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2135,
-		"Name": "Connecting Window M [White]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE4_O2A [White]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE4_O2A.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		
+		
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2136,
-		"Name": "Connecting Window N [White]",
-		"Mesh": null,
-		"Materials": [],
-		"MeshOffsetX": 0,
-		"MeshOffsetY": 0,
-		"MeshOffsetZ": 0
-	},
-	{
-		"ID": 2137,
-		"Name": "Connecting Window O [White]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE4_O3 [White]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE4_O3.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		
+		
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2138,
-		"Name": "Connecting Window A [Black]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window NC [Black]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_NC.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "292929ff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2139,
-		"Name": "Connecting Window B [Black]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE1 [Black]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE1.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "292929ff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2140,
-		"Name": "Connecting Window C [Black]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE2A [Black]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE2A.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "292929ff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2141,
-		"Name": "Connecting Window D [Black]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE2C_O0 [Black]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE2C_O0.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "292929ff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2142,
-		"Name": "Connecting Window E [Black]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE2C_O1 [Black]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE2C_O1.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "292929ff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2143,
-		"Name": "Connecting Window F [Black]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE3C_O0 [Black]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE3C_O0.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "292929ff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2144,
-		"Name": "Connecting Window G [Black]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE3C_O1 [Black]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE3C_O1.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "292929ff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2145,
-		"Name": "Connecting Window H [Black]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE3C_O2 [Black]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE3C_O2.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "292929ff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2146,
-		"Name": "Connecting Window I [Black]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE3C_O3 [Black]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE3C_O3.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "292929ff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2147,
-		"Name": "Connecting Window J [Black]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE4_O0 [Black]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE4_O0.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "292929ff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2148,
-		"Name": "Connecting Window K [Black]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE4_O1 [Black]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE4_O1.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "292929ff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2149,
-		"Name": "Connecting Window L [Black]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE4_O2C [Black]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE4_O2C.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "292929ff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2150,
-		"Name": "Connecting Window M [Black]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE4_O2A [Black]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE4_O2A.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "292929ff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2151,
-		"Name": "Connecting Window N [Black]",
-		"Mesh": null,
-		"Materials": [],
-		"MeshOffsetX": 0,
-		"MeshOffsetY": 0,
-		"MeshOffsetZ": 0
-	},
-	{
-		"ID": 2152,
-		"Name": "Connecting Window O [Black]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE4_O3 [Black]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE4_O3.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "292929ff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2153,
-		"Name": "Connecting Window A [Purple]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window NC [Purple]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_NC.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "a762ccff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2154,
-		"Name": "Connecting Window B [Purple]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE1 [Purple]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE1.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "a762ccff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2155,
-		"Name": "Connecting Window C [Purple]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE2A [Purple]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE2A.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "a762ccff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2156,
-		"Name": "Connecting Window D [Purple]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE2C_O0 [Purple]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE2C_O0.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "a762ccff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2157,
-		"Name": "Connecting Window E [Purple]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE2C_O1 [Purple]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE2C_O1.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "a762ccff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2158,
-		"Name": "Connecting Window F [Purple]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE3C_O0 [Purple]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE3C_O0.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "a762ccff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2159,
-		"Name": "Connecting Window G [Purple]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE3C_O1 [Purple]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE3C_O1.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "a762ccff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2160,
-		"Name": "Connecting Window H [Purple]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE3C_O2 [Purple]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE3C_O2.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "a762ccff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2161,
-		"Name": "Connecting Window I [Purple]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE3C_O3 [Purple]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE3C_O3.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "a762ccff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2162,
-		"Name": "Connecting Window J [Purple]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE4_O0 [Purple]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE4_O0.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "a762ccff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2163,
-		"Name": "Connecting Window K [Purple]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE4_O1 [Purple]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE4_O1.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "a762ccff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2164,
-		"Name": "Connecting Window L [Purple]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE4_O2C [Purple]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE4_O2C.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "a762ccff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2165,
-		"Name": "Connecting Window M [Purple]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE4_O2A [Purple]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE4_O2A.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "a762ccff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2166,
-		"Name": "Connecting Window N [Purple]",
-		"Mesh": null,
-		"Materials": [],
-		"MeshOffsetX": 0,
-		"MeshOffsetY": 0,
-		"MeshOffsetZ": 0
-	},
-	{
-		"ID": 2167,
-		"Name": "Connecting Window O [Purple]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE4_O3 [Purple]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE4_O3.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "a762ccff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2168,
-		"Name": "Connecting Window A [Pink]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window NC [Pink]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_NC.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "f5bae1ff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2169,
-		"Name": "Connecting Window B [Pink]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE1 [Pink]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE1.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "f5bae1ff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2170,
-		"Name": "Connecting Window C [Pink]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE2A [Pink]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE2A.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "f5bae1ff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2171,
-		"Name": "Connecting Window D [Pink]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE2C_O0 [Pink]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE2C_O0.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "f5bae1ff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2172,
-		"Name": "Connecting Window E [Pink]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE2C_O1 [Pink]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE2C_O1.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "f5bae1ff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2173,
-		"Name": "Connecting Window F [Pink]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE3C_O0 [Pink]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE3C_O0.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "f5bae1ff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2174,
-		"Name": "Connecting Window G [Pink]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE3C_O1 [Pink]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE3C_O1.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "f5bae1ff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2175,
-		"Name": "Connecting Window H [Pink]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE3C_O2 [Pink]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE3C_O2.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "f5bae1ff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2176,
-		"Name": "Connecting Window I [Pink]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE3C_O3 [Pink]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE3C_O3.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "f5bae1ff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2177,
-		"Name": "Connecting Window J [Pink]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE4_O0 [Pink]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE4_O0.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "f5bae1ff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2178,
-		"Name": "Connecting Window K [Pink]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE4_O1 [Pink]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE4_O1.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "f5bae1ff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2179,
-		"Name": "Connecting Window L [Pink]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE4_O2C [Pink]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE4_O2C.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "f5bae1ff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2180,
-		"Name": "Connecting Window M [Pink]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE4_O2A [Pink]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE4_O2A.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "f5bae1ff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2181,
-		"Name": "Connecting Window N [Pink]",
-		"Mesh": null,
-		"Materials": [],
-		"MeshOffsetX": 0,
-		"MeshOffsetY": 0,
-		"MeshOffsetZ": 0
-	},
-	{
-		"ID": 2182,
-		"Name": "Connecting Window O [Pink]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE4_O3 [Pink]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE4_O3.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "f5bae1ff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2183,
-		"Name": "Connecting Window A [Red]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window NC [Red]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_NC.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "db432cff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2184,
-		"Name": "Connecting Window B [Red]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE1 [Red]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE1.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "db432cff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2185,
-		"Name": "Connecting Window C [Red]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE2A [Red]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE2A.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "db432cff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2186,
-		"Name": "Connecting Window D [Red]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE2C_O0 [Red]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE2C_O0.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "db432cff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2187,
-		"Name": "Connecting Window E [Red]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE2C_O1 [Red]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE2C_O1.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "db432cff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2188,
-		"Name": "Connecting Window F [Red]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE3C_O0 [Red]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE3C_O0.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "db432cff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2189,
-		"Name": "Connecting Window G [Red]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE3C_O1 [Red]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE3C_O1.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "db432cff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2190,
-		"Name": "Connecting Window H [Red]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE3C_O2 [Red]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE3C_O2.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "db432cff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2191,
-		"Name": "Connecting Window I [Red]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE3C_O3 [Red]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE3C_O3.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "db432cff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2192,
-		"Name": "Connecting Window J [Red]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE4_O0 [Red]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE4_O0.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "db432cff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2193,
-		"Name": "Connecting Window K [Red]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE4_O1 [Red]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE4_O1.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "db432cff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2194,
-		"Name": "Connecting Window L [Red]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE4_O2C [Red]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE4_O2C.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "db432cff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2195,
-		"Name": "Connecting Window M [Red]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE4_O2A [Red]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE4_O2A.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "db432cff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2196,
-		"Name": "Connecting Window N [Red]",
-		"Mesh": null,
-		"Materials": [],
-		"MeshOffsetX": 0,
-		"MeshOffsetY": 0,
-		"MeshOffsetZ": 0
-	},
-	{
-		"ID": 2197,
-		"Name": "Connecting Window O [Red]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE4_O3 [Red]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE4_O3.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "db432cff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2198,
-		"Name": "Connecting Window A [Green]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window NC [Green]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_NC.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "a1d988ff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2199,
-		"Name": "Connecting Window B [Green]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE1 [Green]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE1.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "a1d988ff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2200,
-		"Name": "Connecting Window C [Green]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE2A [Green]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE2A.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "a1d988ff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2201,
-		"Name": "Connecting Window D [Green]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE2C_O0 [Green]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE2C_O0.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "a1d988ff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2202,
-		"Name": "Connecting Window E [Green]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE2C_O1 [Green]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE2C_O1.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "a1d988ff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2203,
-		"Name": "Connecting Window F [Green]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE3C_O0 [Green]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE3C_O0.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "a1d988ff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2204,
-		"Name": "Connecting Window G [Green]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE3C_O1 [Green]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE3C_O1.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "a1d988ff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2205,
-		"Name": "Connecting Window H [Green]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE3C_O2 [Green]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE3C_O2.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "a1d988ff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2206,
-		"Name": "Connecting Window I [Green]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE3C_O3 [Green]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE3C_O3.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "a1d988ff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2207,
-		"Name": "Connecting Window J [Green]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE4_O0 [Green]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE4_O0.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "a1d988ff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2208,
-		"Name": "Connecting Window K [Green]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE4_O1 [Green]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE4_O1.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "a1d988ff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2209,
-		"Name": "Connecting Window L [Green]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE4_O2C [Green]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE4_O2C.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "a1d988ff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2210,
-		"Name": "Connecting Window M [Green]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE4_O2A [Green]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE4_O2A.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "a1d988ff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2211,
-		"Name": "Connecting Window N [Green]",
-		"Mesh": null,
-		"Materials": [],
-		"MeshOffsetX": 0,
-		"MeshOffsetY": 0,
-		"MeshOffsetZ": 0
-	},
-	{
-		"ID": 2212,
-		"Name": "Connecting Window O [Green]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE4_O3 [Green]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE4_O3.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "a1d988ff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2213,
-		"Name": "Connecting Window A [Yellow]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window NC [Yellow]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_NC.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffe640ff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2214,
-		"Name": "Connecting Window B [Yellow]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE1 [Yellow]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE1.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffe640ff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2215,
-		"Name": "Connecting Window C [Yellow]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE2A [Yellow]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE2A.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffe640ff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2216,
-		"Name": "Connecting Window D [Yellow]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE2C_O0 [Yellow]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE2C_O0.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffe640ff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2217,
-		"Name": "Connecting Window E [Yellow]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE2C_O1 [Yellow]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE2C_O1.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffe640ff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2218,
-		"Name": "Connecting Window F [Yellow]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE3C_O0 [Yellow]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE3C_O0.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffe640ff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2219,
-		"Name": "Connecting Window G [Yellow]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE3C_O1 [Yellow]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE3C_O1.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffe640ff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2220,
-		"Name": "Connecting Window H [Yellow]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE3C_O2 [Yellow]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE3C_O2.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffe640ff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2221,
-		"Name": "Connecting Window I [Yellow]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE3C_O3 [Yellow]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE3C_O3.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffe640ff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2222,
-		"Name": "Connecting Window J [Yellow]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE4_O0 [Yellow]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE4_O0.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffe640ff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2223,
-		"Name": "Connecting Window K [Yellow]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE4_O1 [Yellow]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE4_O1.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffe640ff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2224,
-		"Name": "Connecting Window L [Yellow]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE4_O2C [Yellow]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE4_O2C.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffe640ff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2225,
-		"Name": "Connecting Window M [Yellow]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE4_O2A [Yellow]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE4_O2A.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffe640ff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2226,
-		"Name": "Connecting Window N [Yellow]",
-		"Mesh": null,
-		"Materials": [],
-		"MeshOffsetX": 0,
-		"MeshOffsetY": 0,
-		"MeshOffsetZ": 0
-	},
-	{
-		"ID": 2227,
-		"Name": "Connecting Window O [Yellow]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE4_O3 [Yellow]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE4_O3.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffe640ff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2228,
-		"Name": "Connecting Window A [Blue]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window NC [Blue]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_NC.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "82befaff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2229,
-		"Name": "Connecting Window B [Blue]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE1 [Blue]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE1.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "82befaff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2230,
-		"Name": "Connecting Window C [Blue]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE2A [Blue]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE2A.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "82befaff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2231,
-		"Name": "Connecting Window D [Blue]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE2C_O0 [Blue]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE2C_O0.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "82befaff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2232,
-		"Name": "Connecting Window E [Blue]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE2C_O1 [Blue]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE2C_O1.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "82befaff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2233,
-		"Name": "Connecting Window F [Blue]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE3C_O0 [Blue]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE3C_O0.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "82befaff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2234,
-		"Name": "Connecting Window G [Blue]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE3C_O1 [Blue]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE3C_O1.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "82befaff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2235,
-		"Name": "Connecting Window H [Blue]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE3C_O2 [Blue]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE3C_O2.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "82befaff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2236,
-		"Name": "Connecting Window I [Blue]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE3C_O3 [Blue]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE3C_O3.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "82befaff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2237,
-		"Name": "Connecting Window J [Blue]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE4_O0 [Blue]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE4_O0.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "82befaff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2238,
-		"Name": "Connecting Window K [Blue]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE4_O1 [Blue]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE4_O1.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "82befaff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2239,
-		"Name": "Connecting Window L [Blue]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE4_O2C [Blue]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE4_O2C.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "82befaff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2240,
-		"Name": "Connecting Window M [Blue]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE4_O2A [Blue]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE4_O2A.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "82befaff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
 	{
 		"ID": 2241,
-		"Name": "Connecting Window N [Blue]",
-		"Mesh": null,
-		"Materials": [],
-		"MeshOffsetX": 0,
-		"MeshOffsetY": 0,
-		"MeshOffsetZ": 0
-	},
-	{
-		"ID": 2242,
-		"Name": "Connecting Window O [Blue]",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Connecting Window CE4_O3 [Blue]",
+		"Mesh": "res://Resources/Mesh/BGParts/window/connecting_window_CE4_O3.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "82befaff"
+			},
+			{
+				"Texture": "res://Resources/Mesh/BGParts/window/window.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -38540,9 +40905,17 @@
 	},
 	{
 		"ID": 2275,
-		"Name": "Carpeted Steps Midsection TODO",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Carpeted Steps Midsection",
+		"Mesh": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps_midsection.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -38550,8 +40923,16 @@
 	{
 		"ID": 2276,
 		"Name": "Carpeted Steps Midsection [White]",
-		"Mesh": null,
-		"Materials": [],
+		"Mesh": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps_midsection.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -38559,8 +40940,16 @@
 	{
 		"ID": 2277,
 		"Name": "Carpeted Steps Midsection [Black]",
-		"Mesh": null,
-		"Materials": [],
+		"Mesh": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps_midsection.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps_mask.png",
+				"Color": "222222ff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -38568,8 +40957,16 @@
 	{
 		"ID": 2278,
 		"Name": "Carpeted Steps Midsection [Purple]",
-		"Mesh": null,
-		"Materials": [],
+		"Mesh": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps_midsection.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps_mask.png",
+				"Color": "730080ff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -38577,8 +40974,16 @@
 	{
 		"ID": 2279,
 		"Name": "Carpeted Steps Midsection [Pink]",
-		"Mesh": null,
-		"Materials": [],
+		"Mesh": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps_midsection.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps_mask.png",
+				"Color": "ff70adff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -38586,8 +40991,16 @@
 	{
 		"ID": 2280,
 		"Name": "Carpeted Steps Midsection [Red]",
-		"Mesh": null,
-		"Materials": [],
+		"Mesh": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps_midsection.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps_mask.png",
+				"Color": "a20d1cff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -38595,8 +41008,16 @@
 	{
 		"ID": 2281,
 		"Name": "Carpeted Steps Midsection [Green]",
-		"Mesh": null,
-		"Materials": [],
+		"Mesh": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps_midsection.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps_mask.png",
+				"Color": "00ba00ff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -38604,8 +41025,16 @@
 	{
 		"ID": 2282,
 		"Name": "Carpeted Steps Midsection [Yellow]",
-		"Mesh": null,
-		"Materials": [],
+		"Mesh": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps_midsection.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps_mask.png",
+				"Color": "fcc600ff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -38613,8 +41042,16 @@
 	{
 		"ID": 2283,
 		"Name": "Carpeted Steps Midsection [Blue]",
-		"Mesh": null,
-		"Materials": [],
+		"Mesh": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps_midsection.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps_mask.png",
+				"Color": "1414b8ff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -38622,8 +41059,16 @@
 	{
 		"ID": 2284,
 		"Name": "Left-Bordered Carpeted Steps",
-		"Mesh": null,
-		"Materials": [],
+		"Mesh": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps_left.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -38631,8 +41076,16 @@
 	{
 		"ID": 2285,
 		"Name": "Left-Bordered Carpeted Steps [White]",
-		"Mesh": null,
-		"Materials": [],
+		"Mesh": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps_left.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -38640,8 +41093,16 @@
 	{
 		"ID": 2286,
 		"Name": "Left-Bordered Carpeted Steps [Black]",
-		"Mesh": null,
-		"Materials": [],
+		"Mesh": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps_left.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps_mask.png",
+				"Color": "222222ff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -38649,8 +41110,16 @@
 	{
 		"ID": 2287,
 		"Name": "Left-Bordered Carpeted Steps [Purple]",
-		"Mesh": null,
-		"Materials": [],
+		"Mesh": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps_left.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps_mask.png",
+				"Color": "730080ff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -38658,8 +41127,16 @@
 	{
 		"ID": 2288,
 		"Name": "Left-Bordered Carpeted Steps [Pink]",
-		"Mesh": null,
-		"Materials": [],
+		"Mesh": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps_left.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps_mask.png",
+				"Color": "ff70adff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -38667,8 +41144,16 @@
 	{
 		"ID": 2289,
 		"Name": "Left-Bordered Carpeted Steps [Red]",
-		"Mesh": null,
-		"Materials": [],
+		"Mesh": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps_left.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps_mask.png",
+				"Color": "a20d1cff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -38676,8 +41161,16 @@
 	{
 		"ID": 2290,
 		"Name": "Left-Bordered Carpeted Steps [Green]",
-		"Mesh": null,
-		"Materials": [],
+		"Mesh": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps_left.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps_mask.png",
+				"Color": "00ba00ff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -38685,8 +41178,16 @@
 	{
 		"ID": 2291,
 		"Name": "Left-Bordered Carpeted Steps [Yellow]",
-		"Mesh": null,
-		"Materials": [],
+		"Mesh": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps_left.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps_mask.png",
+				"Color": "fcc600ff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -38694,8 +41195,16 @@
 	{
 		"ID": 2292,
 		"Name": "Left-Bordered Carpeted Steps [Blue]",
-		"Mesh": null,
-		"Materials": [],
+		"Mesh": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps_left.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps_mask.png",
+				"Color": "1414b8ff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -38703,8 +41212,16 @@
 	{
 		"ID": 2293,
 		"Name": "Right-Bordered Carpeted Steps",
-		"Mesh": null,
-		"Materials": [],
+		"Mesh": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps_right.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -38712,8 +41229,16 @@
 	{
 		"ID": 2294,
 		"Name": "Right-Bordered Carpeted Steps [White]",
-		"Mesh": null,
-		"Materials": [],
+		"Mesh": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps_right.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -38721,8 +41246,16 @@
 	{
 		"ID": 2295,
 		"Name": "Right-Bordered Carpeted Steps [Black]",
-		"Mesh": null,
-		"Materials": [],
+		"Mesh": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps_right.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps_mask.png",
+				"Color": "222222ff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -38730,8 +41263,16 @@
 	{
 		"ID": 2296,
 		"Name": "Right-Bordered Carpeted Steps [Purple]",
-		"Mesh": null,
-		"Materials": [],
+		"Mesh": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps_right.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps_mask.png",
+				"Color": "730080ff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -38739,8 +41280,16 @@
 	{
 		"ID": 2297,
 		"Name": "Right-Bordered Carpeted Steps [Pink]",
-		"Mesh": null,
-		"Materials": [],
+		"Mesh": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps_right.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps_mask.png",
+				"Color": "ff70adff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -38748,8 +41297,16 @@
 	{
 		"ID": 2298,
 		"Name": "Right-Bordered Carpeted Steps [Red]",
-		"Mesh": null,
-		"Materials": [],
+		"Mesh": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps_right.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps_mask.png",
+				"Color": "a20d1cff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -38757,8 +41314,16 @@
 	{
 		"ID": 2299,
 		"Name": "Right-Bordered Carpeted Steps [Green]",
-		"Mesh": null,
-		"Materials": [],
+		"Mesh": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps_right.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps_mask.png",
+				"Color": "00ba00ff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -38766,8 +41331,16 @@
 	{
 		"ID": 2300,
 		"Name": "Right-Bordered Carpeted Steps [Yellow]",
-		"Mesh": null,
-		"Materials": [],
+		"Mesh": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps_right.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps_mask.png",
+				"Color": "fcc600ff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -38775,8 +41348,16 @@
 	{
 		"ID": 2301,
 		"Name": "Right-Bordered Carpeted Steps [Blue]",
-		"Mesh": null,
-		"Materials": [],
+		"Mesh": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps_right.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": "res://Resources/Mesh/BGParts/carpeted_steps/carpeted_steps_mask.png",
+				"Color": "1414b8ff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
@@ -39960,9 +42541,17 @@
 	},
 	{
 		"ID": 2370,
-		"Name": "Coffin (Closed) TODO",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Coffin (Closed)",
+		"Mesh": "res://Resources/Mesh/BGParts/coffin/coffin_closed.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/coffin/coffin.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": -0.5
@@ -41208,7 +43797,7 @@
 				"Color": "ffffffff"
 			}
 		],
-		"MeshOffsetX": 0,
+		"MeshOffsetX": 0.5,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	},
@@ -41928,7 +44517,7 @@
 	},
 	{
 		"ID": 2485,
-		"Name": "Twisted Tree Trunk (DQB1)",
+		"Name": "Twisted Tree Trunk (DQB1) [TODO check alignment]",
 		"Mesh": "res://Resources/Mesh/BGParts/twisted_tree_trunk/twisted_tree_trunk.obj",
 		"Materials": [
 			{
@@ -41997,7 +44586,7 @@
 	{
 		"ID": 2489,
 		"Name": "Door Sprite",
-		"Mesh": "",
+		"Mesh": "res://Resources/Mesh/BGParts/sprites/door_sprite.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/sprites/door_sprite.png",
@@ -42014,7 +44603,7 @@
 	{
 		"ID": 2490,
 		"Name": "Treasure Chest Sprite",
-		"Mesh": "",
+		"Mesh": "res://Resources/Mesh/BGParts/sprites/treasure_chest_sprite.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/sprites/treasure_chest_sprite.png",
@@ -42031,7 +44620,7 @@
 	{
 		"ID": 2491,
 		"Name": "Inn Sign Sprite",
-		"Mesh": "",
+		"Mesh": "res://Resources/Mesh/BGParts/sprites/inn_sign_sprite.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/sprites/inn_sign_sprite.png",
@@ -42048,7 +44637,7 @@
 	{
 		"ID": 2492,
 		"Name": "Shop Sign Sprite",
-		"Mesh": "",
+		"Mesh": "res://Resources/Mesh/BGParts/sprites/shop_sign_sprite.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/sprites/shop_sign_sprite.png",
@@ -42065,7 +44654,7 @@
 	{
 		"ID": 2493,
 		"Name": "Up Stairs Sprite",
-		"Mesh": "",
+		"Mesh": "res://Resources/Mesh/BGParts/sprites/up_stairs_sprite.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/sprites/up_stairs_sprite.png",
@@ -42082,7 +44671,7 @@
 	{
 		"ID": 2494,
 		"Name": "Down Stairs Sprite",
-		"Mesh": "",
+		"Mesh": "res://Resources/Mesh/BGParts/sprites/down_stairs_sprite.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/sprites/down_stairs_sprite.png",
@@ -42099,7 +44688,7 @@
 	{
 		"ID": 2495,
 		"Name": "Bridge Sprite",
-		"Mesh": "",
+		"Mesh": "res://Resources/Mesh/BGParts/sprites/bridge_sprite.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/sprites/bridge_sprite.png",
@@ -42116,7 +44705,7 @@
 	{
 		"ID": 2496,
 		"Name": "Forest Sprite",
-		"Mesh": "",
+		"Mesh": "res://Resources/Mesh/BGParts/sprites/forest_sprite.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/sprites/forest_sprite.png",
@@ -42133,7 +44722,7 @@
 	{
 		"ID": 2497,
 		"Name": "Town Sprite",
-		"Mesh": "",
+		"Mesh": "res://Resources/Mesh/BGParts/sprites/town_sprite.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/sprites/town_sprite.png",
@@ -42150,7 +44739,7 @@
 	{
 		"ID": 2498,
 		"Name": "Castle Sprite",
-		"Mesh": "",
+		"Mesh": "res://Resources/Mesh/BGParts/sprites/castle_sprite.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/sprites/castle_sprite.png",
@@ -42167,7 +44756,7 @@
 	{
 		"ID": 2499,
 		"Name": "Cave Sprite",
-		"Mesh": "",
+		"Mesh": "res://Resources/Mesh/BGParts/sprites/cave_sprite.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/sprites/cave_sprite.png",
@@ -42184,7 +44773,7 @@
 	{
 		"ID": 2500,
 		"Name": "Hill Sprite",
-		"Mesh": "",
+		"Mesh": "res://Resources/Mesh/BGParts/sprites/hill_sprite.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/sprites/hill_sprite.png",
@@ -42201,7 +44790,7 @@
 	{
 		"ID": 2501,
 		"Name": "Mountain Sprite",
-		"Mesh": "",
+		"Mesh": "res://Resources/Mesh/BGParts/sprites/mountain_sprite.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/sprites/mountain_sprite.png",
@@ -42218,7 +44807,7 @@
 	{
 		"ID": 2502,
 		"Name": "Princess Sprite",
-		"Mesh": "",
+		"Mesh": "res://Resources/Mesh/BGParts/sprites/princess_sprite.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/sprites/princess_sprite.png",
@@ -42235,7 +44824,7 @@
 	{
 		"ID": 2503,
 		"Name": "Hero Sprite",
-		"Mesh": "",
+		"Mesh": "res://Resources/Mesh/BGParts/sprites/hero_sprite.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/sprites/hero_sprite.png",
@@ -42252,7 +44841,7 @@
 	{
 		"ID": 2504,
 		"Name": "King Sprite",
-		"Mesh": "",
+		"Mesh": "res://Resources/Mesh/BGParts/sprites/king_sprite.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/sprites/king_sprite.png",
@@ -42269,7 +44858,7 @@
 	{
 		"ID": 2505,
 		"Name": "Dragonlord Sprite",
-		"Mesh": "",
+		"Mesh": "res://Resources/Mesh/BGParts/sprites/dragonlord_sprite.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/sprites/dragonlord_sprite.png",
@@ -42286,7 +44875,7 @@
 	{
 		"ID": 2506,
 		"Name": "Wizard Sprite",
-		"Mesh": "",
+		"Mesh": "res://Resources/Mesh/BGParts/sprites/wizard_sprite.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/sprites/wizard_sprite.png",
@@ -42303,7 +44892,7 @@
 	{
 		"ID": 2507,
 		"Name": "Shopkeeper Sprite",
-		"Mesh": "",
+		"Mesh": "res://Resources/Mesh/BGParts/sprites/shopkeeper_sprite.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/sprites/shopkeeper_sprite.png",
@@ -42320,7 +44909,7 @@
 	{
 		"ID": 2508,
 		"Name": "Warrior Sprite",
-		"Mesh": "",
+		"Mesh": "res://Resources/Mesh/BGParts/sprites/warrior_sprite.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/sprites/warrior_sprite.png",
@@ -42337,7 +44926,7 @@
 	{
 		"ID": 2509,
 		"Name": "Soldier Sprite",
-		"Mesh": "",
+		"Mesh": "res://Resources/Mesh/BGParts/sprites/soldier_sprite.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/sprites/soldier_sprite.png",
@@ -42354,7 +44943,7 @@
 	{
 		"ID": 2510,
 		"Name": "Gentleman Sprite",
-		"Mesh": "",
+		"Mesh": "res://Resources/Mesh/BGParts/sprites/gentleman_sprite.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/sprites/gentleman_sprite.png",
@@ -42371,7 +44960,7 @@
 	{
 		"ID": 2511,
 		"Name": "Lady Sprite",
-		"Mesh": "",
+		"Mesh": "res://Resources/Mesh/BGParts/sprites/lady_sprite.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/sprites/lady_sprite.png",
@@ -42388,7 +44977,7 @@
 	{
 		"ID": 2512,
 		"Name": "Saviour Sprite",
-		"Mesh": "",
+		"Mesh": "res://Resources/Mesh/BGParts/sprites/saviour_sprite.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/sprites/saviour_sprite.png",
@@ -42405,7 +44994,7 @@
 	{
 		"ID": 2513,
 		"Name": "Herald Sprite",
-		"Mesh": "",
+		"Mesh": "res://Resources/Mesh/BGParts/sprites/herald_sprite.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/sprites/herald_sprite.png",
@@ -42422,7 +45011,7 @@
 	{
 		"ID": 2514,
 		"Name": "Flat Door Sprite",
-		"Mesh": "",
+		"Mesh": "res://Resources/Mesh/BGParts/sprites/door_sprite_flat.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/sprites/door_sprite.png",
@@ -42439,7 +45028,7 @@
 	{
 		"ID": 2515,
 		"Name": "Flat Treasure Chest Sprite",
-		"Mesh": "",
+		"Mesh": "res://Resources/Mesh/BGParts/sprites/treasure_chest_sprite_flat.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/sprites/treasure_chest_sprite.png",
@@ -42456,7 +45045,7 @@
 	{
 		"ID": 2516,
 		"Name": "Flat Inn Sign Sprite",
-		"Mesh": "",
+		"Mesh": "res://Resources/Mesh/BGParts/sprites/inn_sign_sprite_flat.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/sprites/inn_sign_sprite.png",
@@ -42473,7 +45062,7 @@
 	{
 		"ID": 2517,
 		"Name": "Flat Shop Sign Sprite",
-		"Mesh": "",
+		"Mesh": "res://Resources/Mesh/BGParts/sprites/shop_sign_sprite_flat.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/sprites/shop_sign_sprite.png",
@@ -42490,7 +45079,7 @@
 	{
 		"ID": 2518,
 		"Name": "Flat Up Stairs Sprite",
-		"Mesh": "",
+		"Mesh": "res://Resources/Mesh/BGParts/sprites/up_stairs_sprite_flat.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/sprites/up_stairs_sprite.png",
@@ -42507,7 +45096,7 @@
 	{
 		"ID": 2519,
 		"Name": "Flat Down Stairs Sprite",
-		"Mesh": "",
+		"Mesh": "res://Resources/Mesh/BGParts/sprites/down_stairs_sprite_flat.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/sprites/down_stairs_sprite.png",
@@ -42524,7 +45113,7 @@
 	{
 		"ID": 2520,
 		"Name": "Bridge Sprite",
-		"Mesh": "",
+		"Mesh": "res://Resources/Mesh/BGParts/sprites/bridge_sprite_flat.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/sprites/bridge_sprite.png",
@@ -42541,7 +45130,7 @@
 	{
 		"ID": 2521,
 		"Name": "Flat Forest Sprite",
-		"Mesh": "",
+		"Mesh": "res://Resources/Mesh/BGParts/sprites/forest_sprite_flat.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/sprites/forest_sprite.png",
@@ -42558,7 +45147,7 @@
 	{
 		"ID": 2522,
 		"Name": "Flat Town Sprite",
-		"Mesh": "",
+		"Mesh": "res://Resources/Mesh/BGParts/sprites/town_sprite_flat.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/sprites/town_sprite.png",
@@ -42575,7 +45164,7 @@
 	{
 		"ID": 2523,
 		"Name": "Flat Castle Sprite",
-		"Mesh": "",
+		"Mesh": "res://Resources/Mesh/BGParts/sprites/castle_sprite_flat.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/sprites/castle_sprite.png",
@@ -42592,7 +45181,7 @@
 	{
 		"ID": 2524,
 		"Name": "Flat Cave Sprite",
-		"Mesh": "",
+		"Mesh": "res://Resources/Mesh/BGParts/sprites/cave_sprite_flat.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/sprites/cave_sprite.png",
@@ -42609,7 +45198,7 @@
 	{
 		"ID": 2525,
 		"Name": "Flat Hill Sprite",
-		"Mesh": "",
+		"Mesh": "res://Resources/Mesh/BGParts/sprites/hill_sprite_flat.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/sprites/hill_sprite.png",
@@ -42626,7 +45215,7 @@
 	{
 		"ID": 2526,
 		"Name": "Flat Mountain Sprite",
-		"Mesh": "",
+		"Mesh": "res://Resources/Mesh/BGParts/sprites/mountain_sprite_flat.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/sprites/mountain_sprite.png",
@@ -42643,7 +45232,7 @@
 	{
 		"ID": 2527,
 		"Name": "Flat Princess Sprite",
-		"Mesh": "",
+		"Mesh": "res://Resources/Mesh/BGParts/sprites/princess_sprite_flat.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/sprites/princess_sprite.png",
@@ -42660,7 +45249,7 @@
 	{
 		"ID": 2528,
 		"Name": "Flat Hero Sprite",
-		"Mesh": "",
+		"Mesh": "res://Resources/Mesh/BGParts/sprites/hero_sprite_flat.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/sprites/hero_sprite.png",
@@ -42677,7 +45266,7 @@
 	{
 		"ID": 2529,
 		"Name": "Flat King Sprite",
-		"Mesh": "",
+		"Mesh": "res://Resources/Mesh/BGParts/sprites/king_sprite_flat.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/sprites/king_sprite.png",
@@ -42694,7 +45283,7 @@
 	{
 		"ID": 2530,
 		"Name": "Flat Dragonlord Sprite",
-		"Mesh": "",
+		"Mesh": "res://Resources/Mesh/BGParts/sprites/dragonlord_sprite_flat.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/sprites/dragonlord_sprite.png",
@@ -42711,7 +45300,7 @@
 	{
 		"ID": 2531,
 		"Name": "Flat Wizard Sprite",
-		"Mesh": "",
+		"Mesh": "res://Resources/Mesh/BGParts/sprites/wizard_sprite_flat.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/sprites/wizard_sprite.png",
@@ -42728,7 +45317,7 @@
 	{
 		"ID": 2532,
 		"Name": "Flat Shopkeeper Sprite",
-		"Mesh": "",
+		"Mesh": "res://Resources/Mesh/BGParts/sprites/shopkeeper_sprite_flat.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/sprites/shopkeeper_sprite.png",
@@ -42745,7 +45334,7 @@
 	{
 		"ID": 2533,
 		"Name": "Flat Warrior Sprite",
-		"Mesh": "",
+		"Mesh": "res://Resources/Mesh/BGParts/sprites/warrior_sprite_flat.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/sprites/warrior_sprite.png",
@@ -42762,7 +45351,7 @@
 	{
 		"ID": 2534,
 		"Name": "Flat Soldier Sprite",
-		"Mesh": "",
+		"Mesh": "res://Resources/Mesh/BGParts/sprites/soldier_sprite_flat.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/sprites/soldier_sprite.png",
@@ -42779,7 +45368,7 @@
 	{
 		"ID": 2535,
 		"Name": "Flat Gentleman Sprite",
-		"Mesh": "",
+		"Mesh": "res://Resources/Mesh/BGParts/sprites/gentleman_sprite_flat.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/sprites/gentleman_sprite.png",
@@ -42796,7 +45385,7 @@
 	{
 		"ID": 2536,
 		"Name": "Flat Lady Sprite",
-		"Mesh": "",
+		"Mesh": "res://Resources/Mesh/BGParts/sprites/lady_sprite_flat.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/sprites/lady_sprite.png",
@@ -42813,7 +45402,7 @@
 	{
 		"ID": 2537,
 		"Name": "Flat Saviour Sprite",
-		"Mesh": "",
+		"Mesh": "res://Resources/Mesh/BGParts/sprites/saviour_sprite_flat.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/sprites/saviour_sprite.png",
@@ -42830,7 +45419,7 @@
 	{
 		"ID": 2538,
 		"Name": "Flat Herald Sprite",
-		"Mesh": "",
+		"Mesh": "res://Resources/Mesh/BGParts/sprites/herald_sprite_flat.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/sprites/herald_sprite.png",
@@ -42847,7 +45436,7 @@
 	{
 		"ID": 2539,
 		"Name": "Sun Sphere",
-		"Mesh": "",
+		"Mesh": "res://Resources/Mesh/BGParts/solar_system/sun_sphere.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/solar_system/sun_sphere.png",
@@ -42864,7 +45453,7 @@
 	{
 		"ID": 2540,
 		"Name": "Mercury Sphere",
-		"Mesh": "",
+		"Mesh": "res://Resources/Mesh/BGParts/solar_system/mercury_sphere.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/solar_system/mercury_sphere.png",
@@ -42881,7 +45470,7 @@
 	{
 		"ID": 2541,
 		"Name": "Venus Sphere",
-		"Mesh": "",
+		"Mesh": "res://Resources/Mesh/BGParts/solar_system/venus_sphere.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/solar_system/venus_sphere.png",
@@ -42898,7 +45487,7 @@
 	{
 		"ID": 2542,
 		"Name": "Earth Sphere",
-		"Mesh": "",
+		"Mesh": "res://Resources/Mesh/BGParts/solar_system/earth_sphere.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/solar_system/earth_sphere.png",
@@ -42915,7 +45504,7 @@
 	{
 		"ID": 2543,
 		"Name": "Mars Sphere",
-		"Mesh": "",
+		"Mesh": "res://Resources/Mesh/BGParts/solar_system/mars_sphere.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/solar_system/mars_sphere.png",
@@ -42932,7 +45521,7 @@
 	{
 		"ID": 2544,
 		"Name": "Jupiter Sphere",
-		"Mesh": "",
+		"Mesh": "res://Resources/Mesh/BGParts/solar_system/jupiter_sphere.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/solar_system/jupiter_sphere.png",
@@ -42949,7 +45538,7 @@
 	{
 		"ID": 2545,
 		"Name": "Saturn Sphere",
-		"Mesh": "",
+		"Mesh": "res://Resources/Mesh/BGParts/solar_system/saturn_sphere.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/solar_system/saturn_sphere_2.png",
@@ -42973,7 +45562,7 @@
 	{
 		"ID": 2546,
 		"Name": "Uranus Sphere",
-		"Mesh": "",
+		"Mesh": "res://Resources/Mesh/BGParts/solar_system/uranus_sphere.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/solar_system/uranus_sphere_2.png",
@@ -42997,7 +45586,7 @@
 	{
 		"ID": 2547,
 		"Name": "Neptune Sphere",
-		"Mesh": "",
+		"Mesh": "res://Resources/Mesh/BGParts/solar_system/neptune_sphere.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/solar_system/neptune_sphere.png",
@@ -43014,7 +45603,7 @@
 	{
 		"ID": 2548,
 		"Name": "Moon Sphere",
-		"Mesh": "",
+		"Mesh": "res://Resources/Mesh/BGParts/solar_system/moon_sphere.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/solar_system/moon_sphere.png",
@@ -43050,6 +45639,57 @@
 		],
 		"MeshOffsetX": 0,
 		"MeshOffsetY": 0.118,
+		"MeshOffsetZ": 0
+	},
+	{
+		"ID": 2550,
+		"Name": "Wooden Pillar [Black]",
+		"Mesh": "res://Resources/Mesh/BGParts/wooden_pillar/wooden_pillar.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/wooden_pillar/wooden_pillar_color.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "292929ff"
+			}
+		],
+		"MeshOffsetX": 0,
+		"MeshOffsetY": 0,
+		"MeshOffsetZ": 0
+	},
+	{
+		"ID": 2551,
+		"Name": "Stone Steps (DQB1)",
+		"Mesh": "res://Resources/Mesh/BGParts/stone_steps/stone_steps_dqb1.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/stone_steps/stone_steps_dqb1.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
+		"MeshOffsetX": 0,
+		"MeshOffsetY": 0,
+		"MeshOffsetZ": 0
+	},
+	{
+		"ID": 2552,
+		"Name": "Wooden Steps (DQB1)",
+		"Mesh": "res://Resources/Mesh/BGParts/wooden_steps/wooden_steps_dqb1.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/wooden_steps/wooden_steps.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
+		"MeshOffsetX": 0,
+		"MeshOffsetY": 0,
 		"MeshOffsetZ": 0
 	}
 ]
