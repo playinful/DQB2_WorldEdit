@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://dpx6jvhcs37un"]
+
+[ext_resource type="Texture2D" uid="uid://4tfed42tw1mt" path="res://icon.svg" id="1_jbrvx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4vf6b"]
+
+[sub_resource type="Theme" id="Theme_jbrvx"]
+ItemList/constants/h_separation = 64
+ItemList/styles/panel = SubResource("StyleBoxEmpty_4vf6b")
+
+[node name="Itemlistthemetest" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ItemList" type="ItemList" parent="."]
+layout_mode = 0
+offset_left = 218.0
+offset_top = 58.0
+offset_right = 671.0
+offset_bottom = 548.0
+theme = SubResource("Theme_jbrvx")
+item_count = 5
+max_columns = 4
+item_0/icon = ExtResource("1_jbrvx")
+item_1/icon = ExtResource("1_jbrvx")
+item_2/icon = ExtResource("1_jbrvx")
+item_3/icon = ExtResource("1_jbrvx")
+item_4/icon = ExtResource("1_jbrvx")

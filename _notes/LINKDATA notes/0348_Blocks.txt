@@ -1,0 +1,17 @@
+# BLOCKS #
+
+0x00 = ushort(?) 0x0800 (2048) (amount of entries in file)
+0x02..0x3F = Empty
+0x40..0x203F = uint[] Integers from 0-2047
+0x2040..0xC03F = Block Data[] (0x14 bytes each) (2048 count)
+    +0x00 = ushort Block Param ID
+    +0x02 = ushort Block Model ID
+    +0x04 = byte(?) Fluid ID
+    +0x05 = ?
+    +0x06 = ushort "Above" Block ID (e.g. Sand for Sandy Sandstone)
+    +0x08 = ushort "Below" Block ID (e.g. Sandstone for Sandy Sandstone)
+    +0x0A = Duplicate of 0x0E? (TEST)
+    +0x0C = ushort Item ID (used for dyed objects? blueprint?)
+    +0x0E = ushort Alternative Block ID for Blueprint? (Transform-O-Trowel drop)
+    +0x10 = bool Connecting?
+    +0x11..+0x013 = Padding?

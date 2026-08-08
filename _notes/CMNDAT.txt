@@ -1,0 +1,206 @@
+Header
+
+0xC4_b1 = PlayerSex (0: Female, 1: Male)
+
+0xC8 = byte CurrentIsland
+0xC9 = byte PreviousIsland (if different than CurrentIsland, play ship animation on load)
+
+0xCD..?? = string PlayerName
+
+0xED = byte Buildertopia Type
+0xEE = byte Buildertopia Beta Type
+0xEF = byte Buildertopia Gamma Type
+
+0x010D..0x2A40C = Thumbnail (320x180 pixels, 3 bytes per pixel, 172800 total)
+0x2A40D = FILETIME Timestamp
+0x2A415..0x2A41C = Steam account lock
+
+Buffer
+
+0x0500_b1 = bool Time is Passing
+0x0500_b6 = bool Transform (?)
+0x0501_b1 = bool Expression (?)
+
+0x0502_b3 = bool Unlock Bigger Bash
+0x0502_b7 = bool Unlock Buildnoculars
+
+0x0504_b2 = bool Bottomless Pot Use (?)
+
+0x0506_b1 = bool Unlock Big Bash
+0x0506_b5 = bool Buggy Headlights
+0x0506_b6 = bool Buggy Fly
+0x0506_b7 = bool Buggy Blasters
+
+0x0535.. = Story Island Data (8 bytes each) (? count)
+    +0x00_b0 = bool Map
+    +0x00_b1 = bool Move
+    +0x00_b2 = bool New
+    +0x00_b3 = bool Clear
+
+0x0635_b0 = bool Unlock Bag
+
+0x0682_b1 = bool Green Gardens Buildable
+0x0682_b2 = bool Scarlet Sands Buildable
+0x0682_b3 = bool Cerulean Steppe Buildable
+
+0x067D_b1 = bool Bottomless Pot (?)
+
+0x69F8D.. = Material Island data (7 bytes each) (? count)
+    +0x00..+0x05 = bool[] Items (bit field)
+    +0x06 = byte State(?)
+
+0x6A876 = ushort Player Hair Color
+0x6A878 = ushort Player Eye Color
+0x6A87A = ushort Skin Color
+0x6A87C = float PlayerPositionX
+0x6A880 = float PlayerPositionY
+0x6A884 = float PlayerPositionZ
+
+0x6A88A = float PlayerRotation
+0x6A88E = ushort Gratitude?
+0x6A890 = ushort Player HP
+0x6A892 = ushort Player Max HP
+0x6A894 = ushort MaxSatiety (100% = 10000)
+0x6A896 = ushort Satiety
+0x6A898 = ushort PlayerStrength
+0x6A89A = ushort PlayerVitality [resilience]
+0x6A89C = float Stamina?
+0x6A8A0 = ushort Max Stamina (?)
+0x6A8A2_b1 = bool Unlock Windbraker
+0x6A8A3_b1 = bool Unlock Flipper (?)
+
+0x6A8C2 = InventoryItem Glamour Weapon
+0x6A8C6 = InventoryItem Glamour Hammer
+0x6A8CA = InventoryItem Glamour Armour
+0x6A8CE = InventoryItem Glamour Shield
+0x6A8D2 = InventoryItem Glamour Headwear
+0x6A8D6 = InventoryItem Glamour Accessory 1
+0x6A8DA = InventoryItem Glamour Accessory 2
+0x6A8DE = InventoryItem Glamour Accessory 3
+
+0x6A9CF = byte(?) Player Level
+
+0x6A9D1 = (int/uint?) Player Experience
+0x6A9D5 = byte(?) Max Level(?)
+
+0x6A9DC..0x6A9E7 = Party (4 bytes each) (3 count)
+    +0x00 = ushort ID
+    +0x02 = ushort Type (?)
+
+0x6ACC8..0x125FA7 = Resident data (608 bytes each) (1023 important, 238 generic, 1261 total)
+    +0x0000..0x001D = string Name
+    +0x0020..0x005B = InventoryItem[] Inventory (15 count)
+    +0x005C = float Position X
+    +0x0060 = float Position Y
+    +0x0064 = float Position Z
+    +0x008C = float Rotation
+    +0x0090 = ushort Type
+    +0x0092 = ushort HP
+    +0x009Cb1 = bool InRags
+    +0x009Cb6 = bool Clothed
+    +0x00C7 = InventoryItem Weapon
+    +0x00CF = InventoryItem Armour
+    +0x00DF = byte Current Island
+    +0x00E3 = byte(?) State?
+    +0x00E5 = ushort Face
+    +0x00E7 = ushort Hair
+    +0x00E9 = ushort Body
+    +0x00EB = ushort Eye Color
+    +0x00ED = ushort Hair Color
+    +0x00EF = ushort Skin Color
+    +0x0102 = byte Sex (0 = female, 1 = male)
+    +0x0103_b1 = bool Cannot Battle
+    +0x0107 = byte Room Size Preference
+    +0x0108 = byte Room Fanciness Preference
+    +0x0109 = byte Room Ambience Preference
+    +0x010A = byte Message Type
+    +0x010B = byte Voice Type
+    +0x010F = byte Job
+    +0x0112 = byte Generic Name
+    +0x0113 = byte Home Island
+    +0x012D_b7 = bool Use Custom Name
+    +0x012E_b3 = bool Type Lock (?)
+    +0x012E_b4 = bool Lock Graphic
+    +0x0133_b1 = bool Cannot Equip Weapons
+    +0x0133_b3 = bool Hidden
+    +0x0134_b1 = bool Dead
+    +0x0144 = byte Current Region
+
+0x136DE8..0x226E0F = Blueprint data (0x30008 bytes each) (5 count)
+    +0x00000..0x2FFFF = Block data (32768 blocks)
+        +0x00 = BGParts ID
+        +0x02 = Block ID
+        +0x04 = byte Direction
+        +0x05_b0.._b3 = Chisel shape
+    +0x30000 = ushort SizeX
+    +0x30002 = ushort SizeY
+    +0x30004 = ushort SizeZ
+    +0x30006 = bool Exists
+0x226E10..0x226E2D = string Isle of Awakening Nickname
+
+0x226E40 = byte(?) Mini Medals
+0x226E44 = byte(?) Mini Medals Consigned
+
+0x22C757_b4 = bool MaterialBonusWood (?)
+
+0x22C75A_b4 = bool MaterialBonusCord (?)
+
+0x22CD3E_b4 = bool MaterialBonusDryGrass (?)
+
+0x22CD8A_b4 = bool MaterialBonusGrassFibre (?)
+
+0x22D568..?? = Crop Data (8 bytes each) (? count)
+    +0x00 = uint Count
+    +0x04_b0 = bool Harvest
+    +0x04_b2 = bool Plant
+    +0x04_b3 = bool Growth
+
+0x22E785_b3 = bool Buildertopia Unlock
+
+0x230B6D..0x230BD0 = bool[100] Builderdom's Best Visited
+
+0x24963C..? = Postbox Letters (62 bytes each) (? count)
+    .. = ?
+    +0x06 = byte(?) Letter Contents
+    +0x08 = ushort Attached Item ID
+    +0x0A = byte Letter Background
+    +0x0B = byte(?) Contest Type (for contest)
+    .. = ?
+    +0x0D = uint Placement (for contest)
+
+0x52A667..0x52A684 = string Buildertopia Nickname
+
+0x52A697 = uint Buildertopia Seed
+0x52A69B = byte Buildertopia Size
+
+0x52A69F..0x52A6BC = string Buildertopia Beta Nickname
+
+0x52A6CF = uint Buildertopia Beta Seed
+0x52A6D3 = byte Buildertopia Beta Size
+
+0x52A6D7..0x52A6F4 = string Buildertopia Gamma Nickname
+
+0x52A707 = uint Buildertopia Gamma Seed
+0x52A70B = byte Buildertopia Gamma Size
+
+0x52A747 = uint Buildertopia Gratitude
+0x52A74B = uint Buildertopia Beta Gratitude
+0x52A74F = uint Buildertopia Gamma Gratitude
+
+0x55B28D..0x55B2C8 = InventoryItem[] Hotbar Items (15 count)
+0x55B2C9..0x55B958 = InventoryItem[] Bag Items (420 count)
+0x55B959 = InventoryItem Player Weapon
+0x55B95D = InventoryItem Player Hammer
+0x55B961 = InventoryItem Player Gloves
+0x55B965 = InventoryItem Player Magic Pencil
+0x55B969 = InventoryItem Player Transform-O-Trowel
+0x55B96D = InventoryItem Player Echo Flute
+0x55B971 = InventoryItem Player Chisel
+0x55B975 = InventoryItem Player Bottomless Pot
+0x55B979 = InventoryItem Player Fishing Rod
+0x55B97D = InventoryItem Player Unused Tool 1
+0x55B981 = InventoryItem Player Unused Tool 2
+0x55B985 = InventoryItem Player Shield
+0x55B989 = InventoryItem Player Armour
+
+0x55DD30 = byte Hotbar Index

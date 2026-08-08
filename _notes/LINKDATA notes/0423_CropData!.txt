@@ -1,0 +1,12 @@
+# CROP DATA? #
+
+0x00 = ushort(?) 0x0200 (512) (amount of entries in file)
+0x02..0x3F = Empty
+0x40..0x83F = uint[] Integers from 0-511
+0x840..0x203F = Crop Data?[] (12 bytes each) (512 count)
+    +0x00 = ushort Crop ID
+    +0x02 = ushort BGParts ID
+    .. = ?
+    +0x05..+0x07 = always 0x64 0x64 0x64
+    .. = ?
+    +0x09..+0x0B = Padding?

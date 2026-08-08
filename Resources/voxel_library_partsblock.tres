@@ -3,8 +3,70 @@
 [sub_resource type="VoxelBlockyModelEmpty" id="VoxelBlockyModelEmpty_4y33w"]
 resource_name = "None"
 
-[sub_resource type="VoxelBlockyModelCube" id="VoxelBlockyModelCube_8oyac"]
-resource_name = "Generic"
+[sub_resource type="VoxelBlockyModelCube" id="VoxelBlockyModelCube_thjpt"]
+resource_name = "Fence"
+color = Color(0.283333, 0, 1, 1)
+transparency_index = 7
+atlas_size_in_tiles = Vector2i(32, 32)
+tile_left = Vector2i(3, 0)
+tile_right = Vector2i(3, 0)
+tile_bottom = Vector2i(3, 0)
+tile_top = Vector2i(3, 0)
+tile_back = Vector2i(3, 0)
+tile_front = Vector2i(3, 0)
+
+[sub_resource type="VoxelBlockyModelCube" id="VoxelBlockyModelCube_aohkh"]
+resource_name = "FryingPan"
+color = Color(1, 0, 0.866667, 1)
+transparency_index = 8
+atlas_size_in_tiles = Vector2i(32, 32)
+tile_left = Vector2i(3, 0)
+tile_right = Vector2i(3, 0)
+tile_bottom = Vector2i(3, 0)
+tile_top = Vector2i(3, 0)
+tile_back = Vector2i(3, 0)
+tile_front = Vector2i(3, 0)
+
+[sub_resource type="VoxelBlockyModelCube" id="VoxelBlockyModelCube_bsfr4"]
+resource_name = "Track"
+color = Color(1, 0, 0, 1)
+transparency_index = 6
+atlas_size_in_tiles = Vector2i(32, 32)
+tile_left = Vector2i(3, 0)
+tile_right = Vector2i(3, 0)
+tile_bottom = Vector2i(3, 0)
+tile_top = Vector2i(3, 0)
+tile_back = Vector2i(3, 0)
+tile_front = Vector2i(3, 0)
+
+[sub_resource type="VoxelBlockyModelCube" id="VoxelBlockyModelCube_nqr0s"]
+resource_name = "Roof"
+color = Color(0.716667, 1, 0, 1)
+transparency_index = 3
+atlas_size_in_tiles = Vector2i(32, 32)
+tile_left = Vector2i(3, 0)
+tile_right = Vector2i(3, 0)
+tile_bottom = Vector2i(3, 0)
+tile_top = Vector2i(3, 0)
+tile_back = Vector2i(3, 0)
+tile_front = Vector2i(3, 0)
+
+[sub_resource type="VoxelBlockyModelCube" id="VoxelBlockyModelCube_a7mm5"]
+resource_name = "Table"
+color = Color(0, 0.583333, 1, 1)
+transparency_index = 5
+atlas_size_in_tiles = Vector2i(32, 32)
+tile_left = Vector2i(3, 0)
+tile_right = Vector2i(3, 0)
+tile_bottom = Vector2i(3, 0)
+tile_top = Vector2i(3, 0)
+tile_back = Vector2i(3, 0)
+tile_front = Vector2i(3, 0)
+
+[sub_resource type="VoxelBlockyModelCube" id="VoxelBlockyModelCube_158qo"]
+resource_name = "Lighting"
+color = Color(1, 0.85, 0, 1)
+transparency_index = 4
 atlas_size_in_tiles = Vector2i(32, 32)
 tile_left = Vector2i(3, 0)
 tile_right = Vector2i(3, 0)
@@ -37,78 +99,6 @@ tile_top = Vector2i(3, 0)
 tile_back = Vector2i(3, 0)
 tile_front = Vector2i(3, 0)
 
-[sub_resource type="VoxelBlockyModelCube" id="VoxelBlockyModelCube_nqr0s"]
-resource_name = "Roof"
-color = Color(0.716667, 1, 0, 1)
-transparency_index = 3
-atlas_size_in_tiles = Vector2i(32, 32)
-tile_left = Vector2i(3, 0)
-tile_right = Vector2i(3, 0)
-tile_bottom = Vector2i(3, 0)
-tile_top = Vector2i(3, 0)
-tile_back = Vector2i(3, 0)
-tile_front = Vector2i(3, 0)
-
-[sub_resource type="VoxelBlockyModelCube" id="VoxelBlockyModelCube_158qo"]
-resource_name = "Lighting"
-color = Color(1, 0.85, 0, 1)
-transparency_index = 4
-atlas_size_in_tiles = Vector2i(32, 32)
-tile_left = Vector2i(3, 0)
-tile_right = Vector2i(3, 0)
-tile_bottom = Vector2i(3, 0)
-tile_top = Vector2i(3, 0)
-tile_back = Vector2i(3, 0)
-tile_front = Vector2i(3, 0)
-
-[sub_resource type="VoxelBlockyModelCube" id="VoxelBlockyModelCube_a7mm5"]
-resource_name = "Table"
-color = Color(0, 0.583333, 1, 1)
-transparency_index = 5
-atlas_size_in_tiles = Vector2i(32, 32)
-tile_left = Vector2i(3, 0)
-tile_right = Vector2i(3, 0)
-tile_bottom = Vector2i(3, 0)
-tile_top = Vector2i(3, 0)
-tile_back = Vector2i(3, 0)
-tile_front = Vector2i(3, 0)
-
-[sub_resource type="VoxelBlockyModelCube" id="VoxelBlockyModelCube_bsfr4"]
-resource_name = "Track"
-color = Color(1, 0, 0, 1)
-transparency_index = 6
-atlas_size_in_tiles = Vector2i(32, 32)
-tile_left = Vector2i(3, 0)
-tile_right = Vector2i(3, 0)
-tile_bottom = Vector2i(3, 0)
-tile_top = Vector2i(3, 0)
-tile_back = Vector2i(3, 0)
-tile_front = Vector2i(3, 0)
-
-[sub_resource type="VoxelBlockyModelCube" id="VoxelBlockyModelCube_thjpt"]
-resource_name = "Fence"
-color = Color(0.283333, 0, 1, 1)
-transparency_index = 7
-atlas_size_in_tiles = Vector2i(32, 32)
-tile_left = Vector2i(3, 0)
-tile_right = Vector2i(3, 0)
-tile_bottom = Vector2i(3, 0)
-tile_top = Vector2i(3, 0)
-tile_back = Vector2i(3, 0)
-tile_front = Vector2i(3, 0)
-
-[sub_resource type="VoxelBlockyModelCube" id="VoxelBlockyModelCube_aohkh"]
-resource_name = "FryingPan"
-color = Color(1, 0, 0.866667, 1)
-transparency_index = 8
-atlas_size_in_tiles = Vector2i(32, 32)
-tile_left = Vector2i(3, 0)
-tile_right = Vector2i(3, 0)
-tile_bottom = Vector2i(3, 0)
-tile_top = Vector2i(3, 0)
-tile_back = Vector2i(3, 0)
-tile_front = Vector2i(3, 0)
-
 [sub_resource type="VoxelBlockyModelCube" id="VoxelBlockyModelCube_lohdm"]
 resource_name = "Unknown"
 color = Color(0, 0, 0, 1)
@@ -121,6 +111,16 @@ tile_top = Vector2i(3, 0)
 tile_back = Vector2i(3, 0)
 tile_front = Vector2i(3, 0)
 
+[sub_resource type="VoxelBlockyModelCube" id="VoxelBlockyModelCube_8oyac"]
+resource_name = "Generic"
+atlas_size_in_tiles = Vector2i(32, 32)
+tile_left = Vector2i(3, 0)
+tile_right = Vector2i(3, 0)
+tile_bottom = Vector2i(3, 0)
+tile_top = Vector2i(3, 0)
+tile_back = Vector2i(3, 0)
+tile_front = Vector2i(3, 0)
+
 [resource]
 bake_tangents = false
-models = Array[VoxelBlockyModel]([SubResource("VoxelBlockyModelEmpty_4y33w"), SubResource("VoxelBlockyModelCube_8oyac"), SubResource("VoxelBlockyModelCube_7ygnj"), SubResource("VoxelBlockyModelCube_jv6a8"), SubResource("VoxelBlockyModelCube_nqr0s"), SubResource("VoxelBlockyModelCube_158qo"), SubResource("VoxelBlockyModelCube_a7mm5"), SubResource("VoxelBlockyModelCube_bsfr4"), SubResource("VoxelBlockyModelCube_thjpt"), SubResource("VoxelBlockyModelCube_aohkh"), SubResource("VoxelBlockyModelCube_lohdm")])
+models = Array[VoxelBlockyModel]([SubResource("VoxelBlockyModelEmpty_4y33w"), SubResource("VoxelBlockyModelCube_thjpt"), SubResource("VoxelBlockyModelCube_aohkh"), SubResource("VoxelBlockyModelCube_bsfr4"), SubResource("VoxelBlockyModelCube_nqr0s"), SubResource("VoxelBlockyModelCube_a7mm5"), SubResource("VoxelBlockyModelCube_158qo"), SubResource("VoxelBlockyModelCube_7ygnj"), SubResource("VoxelBlockyModelCube_jv6a8"), SubResource("VoxelBlockyModelCube_lohdm"), SubResource("VoxelBlockyModelCube_8oyac")])

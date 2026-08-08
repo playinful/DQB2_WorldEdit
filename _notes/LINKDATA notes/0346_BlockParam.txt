@@ -1,0 +1,30 @@
+# BLOCK PARAM #
+
+0x00 = ushort(?) 0x0FFD (4093) (amount of entries in file)
+0x02..0x3F = Empty
+0x40..0x4033 = uint[] Integers from 0-2047
+0x4034..0x47F67 = Block Param[] (0x44 bytes each) (4093 count)
+    +0x00 = ushort Gimmick ID
+    +0x02 = ushort Slash Treasure ID
+    +0x04 = ushort Drop Treasure ID
+    +0x06 = ushort Ultimallet Drop Treasure ID duplicate?
+    +0x08 = ushort Ultimallet Drop Treasure ID
+    +0x0A = ushort Drop Treasure ID duplicate?
+    .. = ?
+    +0x1E = ushort Minimap Tile ID
+    .. = ?
+    +0x20 = byte Color Type (1 = vivid, 2 = pastel, 3 = vivid, 4 = pastel)
+    +0x22 = byte Color
+    .. = ?
+    +0x2C = ushort Item ID
+    +0x2E = byte Ambience Type (Cute, Cool, Natural, Flamboyant, Cheeky, Normal)
+    .. = ?
+    +0x32 = byte HP
+    .. = ?
+    +0x35 = Tool Requirement?
+    .. = ?
+    +0x3A = byte Fanciness
+    .. = ?
+    +0x3E = byte Ambience Strength
+    .. = ?
+    +0x40_b1 = bool Not Appear On Blueprint

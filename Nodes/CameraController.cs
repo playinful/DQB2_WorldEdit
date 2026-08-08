@@ -26,7 +26,11 @@ namespace EyeOfRubiss.Nodes
 			if (!Enabled)
 				return;
 
-			if (GetTree().Root.GuiGetFocusOwner() is LineEdit)
+			if (Window.GetFocusedWindow() != GetWindow())
+				return;
+
+			Control focusOwner = GetTree().Root.GuiGetFocusOwner();
+			if (focusOwner is LineEdit || focusOwner is TextEdit)
 				return;
 
 			Vector3 positionChangeVector = Vector3.Zero;

@@ -1,127 +1,126 @@
-{
-    "Weather": [
-      {
-        "Id": 0,
-        "Name": "Invalid"
-      },
-      {
-        "Id": 1,
-        "Name": "Sunny"
-      },
-      {
-        "Id": 2,
-        "Name": "Cloudy"
-      },
-      {
-        "Id": 3,
-        "Name": "Rain"
-      },
-      {
-        "Id": 4,
-        "Name": "Snow"
-      },
-      {
-        "Id": 5,
-        "Name": "Green Mist"
-      },
-      {
-        "Id": 6,
-        "Name": "[Furrowfield] Ill Wind"
-      },
-      {
-        "Id": 7,
-        "Name": "Post Malhalla Darkness"
-      },
-      {
-        "Id": 8,
-        "Name": "[Furrowfield] Sunny"
-      },
-      {
-        "Id": 9,
-        "Name": "[Furrowfield] Cloudy"
-      },
-      {
-        "Id": 10,
-        "Name": "[Furrowfield] Rain"
-      },
-      {
-        "Id": 11,
-        "Name": "Thunderstorm"
-      },
-      {
-        "Id": 12,
-        "Name": "[Khrumbul-dun] Sunny"
-      },
-      {
-        "Id": 13,
-        "Name": "[Moonbroke] Sun rays through clouds"
-      },
-      {
-        "Id": 14,
-        "Name": "[Moonbrooke] Cloudy"
-      },
-      {
-        "Id": 15,
-        "Name": "[Moonbrooke] Rain"
-      },
-      {
-        "Id": 16,
-        "Name": "[Moonbrooke] Snow"
-      },
-      {
-        "Id": 17,
-        "Name": "[Tutorial Ship] Rain"
-      },
-      {
-        "Id": 18,
-        "Name": "[Tutorial Ship] Sunny"
-      },
-      {
-        "Id": 19,
-        "Name": "[Malhalla] Sunny"
-      },
-      {
-        "Id": 20,
-        "Name": "[Tutorial] Thunderstorm"
-      },
-      {
-        "Id": 21,
-        "Name": "[Tutorial] Cloudy"
-      },
-      {
-        "Id": 22,
-        "Name": "[Malhalla] Pitch Black"
-      },
-      {
-        "Id": 23,
-        "Name": "Purple Mist"
-      },
-      {
-        "Id": 24,
-        "Name": "[Moonbrooke] Sunny"
-      },
-      {
-        "Id": 25,
-        "Name": "[Moonbrooke] Thunderstorm"
-      },
-      {
-        "Id": 26,
-        "Name": "[Malhalla] 'Light' (?)"
-      },
-      {
-        "Id": 27,
-        "Name": "[Khrumbul-dun] Base attack (?)"
-      },
-      {
-        "Id": 28,
-        "Name": "[Post Final Battle] Darkness"
-      },
-      {
-        "Id": 29,
-        "Name": "[Furrowfield] Destroyed Deitree Mist"
-      },
-      {
-        "Id": 30,
-        "Name": "[Furrowfield] Final scene Sunny"
-      }]
-}
+[
+  {
+    "ID": 0,
+    "Name": "Invalid"
+  },
+  {
+    "ID": 1,
+    "Name": "Sunny"
+  },
+  {
+    "ID": 2,
+    "Name": "Cloudy"
+  },
+  {
+    "ID": 3,
+    "Name": "Rain"
+  },
+  {
+    "ID": 4,
+    "Name": "Snow"
+  },
+  {
+    "ID": 5,
+    "Name": "Green Mist"
+  },
+  {
+    "ID": 6,
+    "Name": "[Furrowfield] Ill Wind"
+  },
+  {
+    "ID": 7,
+    "Name": "Post Malhalla Darkness"
+  },
+  {
+    "ID": 8,
+    "Name": "[Furrowfield] Sunny"
+  },
+  {
+    "ID": 9,
+    "Name": "[Furrowfield] Cloudy"
+  },
+  {
+    "ID": 10,
+    "Name": "[Furrowfield] Rain"
+  },
+  {
+    "ID": 11,
+    "Name": "Thunderstorm"
+  },
+  {
+    "ID": 12,
+    "Name": "[Khrumbul-dun] Sunny"
+  },
+  {
+    "ID": 13,
+    "Name": "[Moonbroke] Sun rays through clouds"
+  },
+  {
+    "ID": 14,
+    "Name": "[Moonbrooke] Cloudy"
+  },
+  {
+    "ID": 15,
+    "Name": "[Moonbrooke] Rain"
+  },
+  {
+    "ID": 16,
+    "Name": "[Moonbrooke] Snow"
+  },
+  {
+    "ID": 17,
+    "Name": "[Tutorial Ship] Rain"
+  },
+  {
+    "ID": 18,
+    "Name": "[Tutorial Ship] Sunny"
+  },
+  {
+    "ID": 19,
+    "Name": "[Malhalla] Sunny"
+  },
+  {
+    "ID": 20,
+    "Name": "[Tutorial] Thunderstorm"
+  },
+  {
+    "ID": 21,
+    "Name": "[Tutorial] Cloudy"
+  },
+  {
+    "ID": 22,
+    "Name": "[Malhalla] Pitch Black"
+  },
+  {
+    "ID": 23,
+    "Name": "Purple Mist"
+  },
+  {
+    "ID": 24,
+    "Name": "[Moonbrooke] Sunny"
+  },
+  {
+    "ID": 25,
+    "Name": "[Moonbrooke] Thunderstorm"
+  },
+  {
+    "ID": 26,
+    "Name": "[Malhalla] 'Light' (?)"
+  },
+  {
+    "ID": 27,
+    "Name": "[Khrumbul-dun] Base attack (?)"
+  },
+  {
+    "ID": 28,
+    "Name": "[Post Final Battle] Darkness"
+  },
+  {
+    "ID": 29,
+    "Name": "[Furrowfield] Destroyed Deitree Mist"
+  },
+  {
+    "ID": 30,
+    "Name": "[Furrowfield] Final scene Sunny"
+  }
+]

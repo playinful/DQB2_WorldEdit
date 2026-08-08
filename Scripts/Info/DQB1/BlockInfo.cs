@@ -32,7 +32,10 @@ namespace EyeOfRubiss.Info.DQB1
             ID = id;
             Unknown = unknown;
             if (unknown)
+            {
+                Voxel = 591;
                 Name = "Unknown";
+            }
         }
 
         public static void LoadDatabase(bool forceReload = false)

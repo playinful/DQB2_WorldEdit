@@ -1,0 +1,10 @@
+# WEAPONS #
+
+0x00 = ushort(?) 0x0021 (33) (amount of entries in file)
+0x02..0x3F = Empty
+0x40..0xC3 = uint[] Integers from 0-32
+0xC4..0x1CB = Weapon Data[] (8 bytes each) (33 count)
+    +0x00 = ushort Fluid Type (1 = Water, 2 = Hot Water, 3 = Poison, 4 = Lava, 5 = Swamp Water, 6 = Muddy Water, 7 = Seawater, 8 = Plasma)
+    +0x02 = ushort Unfilled Item ID (e.g. Bottomless Pot)
+    +0x04 = ushort Filled Item ID (e.g. Water-Filled Bottomless Pot)
+    +0x06 = ushort Color ID (used for the little drop icon)

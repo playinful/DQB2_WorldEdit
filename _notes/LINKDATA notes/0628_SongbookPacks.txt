@@ -1,0 +1,8 @@
+# SONGBOOK PACKS #
+
+0x00 = ushort(?) 0x0081 (129) (amount of entries in file)
+0x02..0x3F = Empty
+0x40..0x243 = uint[] Integers from 0-128
+0x244..0x447 = Object Data[] (4 bytes each) (129 count)
+    +0x00 = ushort Songbook Pack ID (e.g. 'Tunes of the Town')
+    +0x02 = ushort Songbook ID (e.g. 'Street Corner')

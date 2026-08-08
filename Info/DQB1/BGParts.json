@@ -25,7 +25,9 @@
         "SizeZ": 1,
         "Fanciness": 0,
         "DQB2BGParts": 1,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 2,
@@ -40,7 +42,9 @@
         "SizeZ": 1,
         "Fanciness": 0,
         "DQB2BGParts": 2,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 3,
@@ -55,7 +59,9 @@
         "SizeZ": 1,
         "Fanciness": 50,
         "DQB2BGParts": 3,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 4,
@@ -70,7 +76,9 @@
         "SizeZ": 1,
         "Fanciness": 15,
         "DQB2BGParts": 4,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 5,
@@ -85,7 +93,9 @@
         "SizeZ": 1,
         "Fanciness": 15,
         "DQB2BGParts": 5,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 6,
@@ -100,7 +110,9 @@
         "SizeZ": 1,
         "Fanciness": 15,
         "DQB2BGParts": 6,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 7,
@@ -115,7 +127,9 @@
         "SizeZ": 1,
         "Fanciness": 15,
         "DQB2BGParts": 7,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 8,
@@ -130,7 +144,9 @@
         "SizeZ": 1,
         "Fanciness": 15,
         "DQB2BGParts": 8,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 9,
@@ -145,7 +161,9 @@
         "SizeZ": 1,
         "Fanciness": 15,
         "DQB2BGParts": 9,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 10,
@@ -160,7 +178,9 @@
         "SizeZ": 1,
         "Fanciness": 15,
         "DQB2BGParts": 10,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 11,
@@ -175,7 +195,9 @@
         "SizeZ": 2,
         "Fanciness": 0,
         "DQB2BGParts": 11,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 12,
@@ -190,7 +212,9 @@
         "SizeZ": 2,
         "Fanciness": 50,
         "DQB2BGParts": 12,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 13,
@@ -205,7 +229,9 @@
         "SizeZ": 2,
         "Fanciness": 50,
         "DQB2BGParts": 13,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 14,
@@ -220,7 +246,9 @@
         "SizeZ": 2,
         "Fanciness": 150,
         "DQB2BGParts": 14,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 15,
@@ -235,7 +263,9 @@
         "SizeZ": 1,
         "Fanciness": 0,
         "DQB2BGParts": 15,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 16,
@@ -250,7 +280,9 @@
         "SizeZ": 1,
         "Fanciness": 20,
         "DQB2BGParts": 16,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 17,
@@ -265,7 +297,9 @@
         "SizeZ": 1,
         "Fanciness": 10,
         "DQB2BGParts": 17,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 18,
@@ -280,7 +314,9 @@
         "SizeZ": 1,
         "Fanciness": 10,
         "DQB2BGParts": 18,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 19,
@@ -295,7 +331,9 @@
         "SizeZ": 1,
         "Fanciness": 0,
         "DQB2BGParts": 19,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 20,
@@ -310,7 +348,9 @@
         "SizeZ": 1,
         "Fanciness": 0,
         "DQB2BGParts": 20,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 21,
@@ -325,7 +365,9 @@
         "SizeZ": 1,
         "Fanciness": 15,
         "DQB2BGParts": 21,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 22,
@@ -340,7 +382,9 @@
         "SizeZ": 1,
         "Fanciness": 15,
         "DQB2BGParts": 22,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 23,
@@ -355,7 +399,9 @@
         "SizeZ": 2,
         "Fanciness": 300,
         "DQB2BGParts": 23,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 24,
@@ -370,7 +416,9 @@
         "SizeZ": 1,
         "Fanciness": 15,
         "DQB2BGParts": 24,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 25,
@@ -385,7 +433,9 @@
         "SizeZ": 1,
         "Fanciness": 0,
         "DQB2BGParts": 25,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 26,
@@ -400,7 +450,9 @@
         "SizeZ": 1,
         "Fanciness": 0,
         "DQB2BGParts": 26,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 27,
@@ -415,7 +467,9 @@
         "SizeZ": 1,
         "Fanciness": 50,
         "DQB2BGParts": 27,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 28,
@@ -430,7 +484,9 @@
         "SizeZ": 1,
         "Fanciness": 50,
         "DQB2BGParts": 28,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 29,
@@ -445,7 +501,9 @@
         "SizeZ": 1,
         "Fanciness": 50,
         "DQB2BGParts": 29,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 30,
@@ -460,7 +518,9 @@
         "SizeZ": 1,
         "Fanciness": 50,
         "DQB2BGParts": 30,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 31,
@@ -475,7 +535,9 @@
         "SizeZ": 1,
         "Fanciness": 50,
         "DQB2BGParts": 31,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 32,
@@ -490,7 +552,9 @@
         "SizeZ": 1,
         "Fanciness": 50,
         "DQB2BGParts": 32,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 33,
@@ -505,7 +569,9 @@
         "SizeZ": 1,
         "Fanciness": 50,
         "DQB2BGParts": 33,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 34,
@@ -520,7 +586,9 @@
         "SizeZ": 1,
         "Fanciness": 50,
         "DQB2BGParts": 34,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 35,
@@ -535,7 +603,9 @@
         "SizeZ": 1,
         "Fanciness": 50,
         "DQB2BGParts": 35,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 36,
@@ -550,7 +620,9 @@
         "SizeZ": 1,
         "Fanciness": 50,
         "DQB2BGParts": 36,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 37,
@@ -565,7 +637,9 @@
         "SizeZ": 1,
         "Fanciness": 50,
         "DQB2BGParts": 37,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 38,
@@ -580,7 +654,9 @@
         "SizeZ": 1,
         "Fanciness": 50,
         "DQB2BGParts": 38,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 39,
@@ -595,7 +671,9 @@
         "SizeZ": 1,
         "Fanciness": 50,
         "DQB2BGParts": 39,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 40,
@@ -610,7 +688,9 @@
         "SizeZ": 1,
         "Fanciness": 50,
         "DQB2BGParts": 40,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 41,
@@ -625,7 +705,9 @@
         "SizeZ": 1,
         "Fanciness": 0,
         "DQB2BGParts": 41,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 42,
@@ -640,7 +722,9 @@
         "SizeZ": 1,
         "Fanciness": 20,
         "DQB2BGParts": 42,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 43,
@@ -655,7 +739,9 @@
         "SizeZ": 1,
         "Fanciness": 50,
         "DQB2BGParts": 43,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 44,
@@ -670,7 +756,9 @@
         "SizeZ": 1,
         "Fanciness": 0,
         "DQB2BGParts": 44,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 45,
@@ -685,7 +773,9 @@
         "SizeZ": 1,
         "Fanciness": 50,
         "DQB2BGParts": 45,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 46,
@@ -700,7 +790,9 @@
         "SizeZ": 1,
         "Fanciness": 50,
         "DQB2BGParts": 46,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 47,
@@ -715,7 +807,9 @@
         "SizeZ": 1,
         "Fanciness": 10,
         "DQB2BGParts": 47,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 48,
@@ -730,7 +824,9 @@
         "SizeZ": 1,
         "Fanciness": 0,
         "DQB2BGParts": 48,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 49,
@@ -745,7 +841,9 @@
         "SizeZ": 1,
         "Fanciness": 10,
         "DQB2BGParts": 49,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 50,
@@ -760,7 +858,9 @@
         "SizeZ": 1,
         "Fanciness": 10,
         "DQB2BGParts": 50,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 51,
@@ -775,7 +875,9 @@
         "SizeZ": 4,
         "Fanciness": 50,
         "DQB2BGParts": 51,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 52,
@@ -790,7 +892,9 @@
         "SizeZ": 1,
         "Fanciness": 100,
         "DQB2BGParts": 52,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 53,
@@ -805,7 +909,9 @@
         "SizeZ": 1,
         "Fanciness": 50,
         "DQB2BGParts": 53,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 54,
@@ -820,7 +926,9 @@
         "SizeZ": 1,
         "Fanciness": 50,
         "DQB2BGParts": 54,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 55,
@@ -835,7 +943,9 @@
         "SizeZ": 1,
         "Fanciness": 100,
         "DQB2BGParts": 55,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 56,
@@ -850,7 +960,9 @@
         "SizeZ": 1,
         "Fanciness": 50,
         "DQB2BGParts": 56,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 57,
@@ -865,7 +977,9 @@
         "SizeZ": 1,
         "Fanciness": 100,
         "DQB2BGParts": 57,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 58,
@@ -880,7 +994,9 @@
         "SizeZ": 1,
         "Fanciness": 10,
         "DQB2BGParts": 58,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 59,
@@ -895,7 +1011,9 @@
         "SizeZ": 1,
         "Fanciness": 50,
         "DQB2BGParts": 59,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 60,
@@ -910,7 +1028,9 @@
         "SizeZ": 1,
         "Fanciness": 10,
         "DQB2BGParts": 60,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 61,
@@ -925,7 +1045,9 @@
         "SizeZ": 1,
         "Fanciness": 20,
         "DQB2BGParts": 61,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 62,
@@ -940,7 +1062,9 @@
         "SizeZ": 1,
         "Fanciness": 150,
         "DQB2BGParts": 62,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 63,
@@ -955,7 +1079,9 @@
         "SizeZ": 1,
         "Fanciness": 100,
         "DQB2BGParts": 63,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 64,
@@ -970,7 +1096,9 @@
         "SizeZ": 1,
         "Fanciness": 100,
         "DQB2BGParts": 64,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 65,
@@ -984,7 +1112,9 @@
         "SizeY": 2,
         "SizeZ": 1,
         "Fanciness": 100,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 66,
@@ -999,7 +1129,9 @@
         "SizeZ": 1,
         "Fanciness": 150,
         "DQB2BGParts": 66,
-        "Block": "Fixture"
+        "Block": "Fixture",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 67,
@@ -1014,7 +1146,9 @@
         "SizeZ": 1,
         "Fanciness": 150,
         "DQB2BGParts": 67,
-        "Block": "Fixture"
+        "Block": "Fixture",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 68,
@@ -1029,7 +1163,9 @@
         "SizeZ": 1,
         "Fanciness": 150,
         "DQB2BGParts": 68,
-        "Block": "Fixture"
+        "Block": "Fixture",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 69,
@@ -1044,7 +1180,9 @@
         "SizeZ": 1,
         "Fanciness": 150,
         "DQB2BGParts": 69,
-        "Block": "Door"
+        "Block": "Door",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 70,
@@ -1059,7 +1197,9 @@
         "SizeZ": 1,
         "Fanciness": 300,
         "DQB2BGParts": 70,
-        "Block": "Door"
+        "Block": "Door",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 71,
@@ -1074,7 +1214,9 @@
         "SizeZ": 1,
         "Fanciness": 200,
         "DQB2BGParts": 71,
-        "Block": "Door"
+        "Block": "Door",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 72,
@@ -1089,7 +1231,9 @@
         "SizeZ": 1,
         "Fanciness": 500,
         "DQB2BGParts": 72,
-        "Block": "Door"
+        "Block": "Door",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 73,
@@ -1104,7 +1248,9 @@
         "SizeZ": 1,
         "Fanciness": 100,
         "DQB2BGParts": 73,
-        "Block": "Door"
+        "Block": "Door",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 74,
@@ -1119,7 +1265,9 @@
         "SizeZ": 1,
         "Fanciness": 100,
         "DQB2BGParts": 74,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 75,
@@ -1134,7 +1282,9 @@
         "SizeZ": 1,
         "Fanciness": 50,
         "DQB2BGParts": 75,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 76,
@@ -1149,7 +1299,9 @@
         "SizeZ": 1,
         "Fanciness": 50,
         "DQB2BGParts": 76,
-        "Block": "Roof"
+        "Block": "Roof",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 77,
@@ -1164,7 +1316,9 @@
         "SizeZ": 1,
         "Fanciness": 200,
         "DQB2BGParts": 77,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 78,
@@ -1179,7 +1333,9 @@
         "SizeZ": 1,
         "Fanciness": 10,
         "DQB2BGParts": 78,
-        "Block": "Lighting"
+        "Block": "Lighting",
+        "Collision": false,
+        "Effects": true
     },
     {
         "ID": 79,
@@ -1194,7 +1350,9 @@
         "SizeZ": 1,
         "Fanciness": 100,
         "DQB2BGParts": 79,
-        "Block": "Lighting"
+        "Block": "Lighting",
+        "Collision": false,
+        "Effects": true
     },
     {
         "ID": 80,
@@ -1209,7 +1367,9 @@
         "SizeZ": 1,
         "Fanciness": 50,
         "DQB2BGParts": 80,
-        "Block": "Lighting"
+        "Block": "Lighting",
+        "Collision": true,
+        "Effects": true
     },
     {
         "ID": 81,
@@ -1224,7 +1384,9 @@
         "SizeZ": 1,
         "Fanciness": 150,
         "DQB2BGParts": 81,
-        "Block": "Lighting"
+        "Block": "Lighting",
+        "Collision": true,
+        "Effects": true
     },
     {
         "ID": 82,
@@ -1239,7 +1401,9 @@
         "SizeZ": 1,
         "Fanciness": 150,
         "DQB2BGParts": 82,
-        "Block": "Lighting"
+        "Block": "Lighting",
+        "Collision": false,
+        "Effects": true
     },
     {
         "ID": 83,
@@ -1254,7 +1418,9 @@
         "SizeZ": 1,
         "Fanciness": 150,
         "DQB2BGParts": 83,
-        "Block": "Lighting"
+        "Block": "Lighting",
+        "Collision": false,
+        "Effects": true
     },
     {
         "ID": 84,
@@ -1269,7 +1435,9 @@
         "SizeZ": 1,
         "Fanciness": 150,
         "DQB2BGParts": 84,
-        "Block": "Lighting"
+        "Block": "Lighting",
+        "Collision": false,
+        "Effects": true
     },
     {
         "ID": 85,
@@ -1284,7 +1452,9 @@
         "SizeZ": 1,
         "Fanciness": 100,
         "DQB2BGParts": 85,
-        "Block": "Lighting"
+        "Block": "Lighting",
+        "Collision": true,
+        "Effects": true
     },
     {
         "ID": 86,
@@ -1299,7 +1469,9 @@
         "SizeZ": 1,
         "Fanciness": 100,
         "DQB2BGParts": 86,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 87,
@@ -1314,7 +1486,9 @@
         "SizeZ": 1,
         "Fanciness": 150,
         "DQB2BGParts": 87,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 88,
@@ -1329,7 +1503,9 @@
         "SizeZ": 1,
         "Fanciness": 30,
         "DQB2BGParts": 88,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 89,
@@ -1344,7 +1520,9 @@
         "SizeZ": 1,
         "Fanciness": 150,
         "DQB2BGParts": 89,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 90,
@@ -1359,7 +1537,9 @@
         "SizeZ": 1,
         "Fanciness": 50,
         "DQB2BGParts": 90,
-        "Block": "Table"
+        "Block": "Table",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 91,
@@ -1374,7 +1554,9 @@
         "SizeZ": 1,
         "Fanciness": 200,
         "DQB2BGParts": 91,
-        "Block": "Table"
+        "Block": "Table",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 92,
@@ -1389,7 +1571,9 @@
         "SizeZ": 1,
         "Fanciness": 100,
         "DQB2BGParts": 92,
-        "Block": "Table"
+        "Block": "Table",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 93,
@@ -1404,7 +1588,9 @@
         "SizeZ": 1,
         "Fanciness": 100,
         "DQB2BGParts": 93,
-        "Block": "Table"
+        "Block": "Table",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 94,
@@ -1419,7 +1605,9 @@
         "SizeZ": 1,
         "Fanciness": 80,
         "DQB2BGParts": 94,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 95,
@@ -1434,7 +1622,9 @@
         "SizeZ": 1,
         "Fanciness": 120,
         "DQB2BGParts": 95,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 96,
@@ -1449,7 +1639,9 @@
         "SizeZ": 2,
         "Fanciness": 500,
         "DQB2BGParts": 96,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 97,
@@ -1464,7 +1656,9 @@
         "SizeZ": 2,
         "Fanciness": 30,
         "DQB2BGParts": 97,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 98,
@@ -1479,7 +1673,9 @@
         "SizeZ": 2,
         "Fanciness": 80,
         "DQB2BGParts": 98,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 99,
@@ -1494,7 +1690,9 @@
         "SizeZ": 2,
         "Fanciness": 300,
         "DQB2BGParts": 99,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 100,
@@ -1509,7 +1707,9 @@
         "SizeZ": 1,
         "Fanciness": 50,
         "DQB2BGParts": 100,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 101,
@@ -1524,7 +1724,9 @@
         "SizeZ": 1,
         "Fanciness": 50,
         "DQB2BGParts": 101,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 102,
@@ -1539,7 +1741,9 @@
         "SizeZ": 1,
         "Fanciness": 200,
         "DQB2BGParts": 102,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 103,
@@ -1554,7 +1758,9 @@
         "SizeZ": 1,
         "Fanciness": 200,
         "DQB2BGParts": 103,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 104,
@@ -1569,7 +1775,9 @@
         "SizeZ": 1,
         "Fanciness": 500,
         "DQB2BGParts": 104,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 105,
@@ -1584,7 +1792,9 @@
         "SizeZ": 1,
         "Fanciness": 300,
         "DQB2BGParts": 105,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 106,
@@ -1599,7 +1809,9 @@
         "SizeZ": 1,
         "Fanciness": 300,
         "DQB2BGParts": 106,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 107,
@@ -1614,7 +1826,9 @@
         "SizeZ": 1,
         "Fanciness": 300,
         "DQB2BGParts": 107,
-        "Block": "Lighting"
+        "Block": "Lighting",
+        "Collision": true,
+        "Effects": true
     },
     {
         "ID": 108,
@@ -1629,7 +1843,9 @@
         "SizeZ": 1,
         "Fanciness": 300,
         "DQB2BGParts": 108,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 109,
@@ -1644,7 +1860,9 @@
         "SizeZ": 1,
         "Fanciness": 300,
         "DQB2BGParts": 109,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 110,
@@ -1659,7 +1877,9 @@
         "SizeZ": 1,
         "Fanciness": 300,
         "DQB2BGParts": 110,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 111,
@@ -1674,7 +1894,9 @@
         "SizeZ": 1,
         "Fanciness": 150,
         "DQB2BGParts": 111,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 112,
@@ -1689,7 +1911,9 @@
         "SizeZ": 1,
         "Fanciness": 300,
         "DQB2BGParts": 112,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 113,
@@ -1704,7 +1928,9 @@
         "SizeZ": 1,
         "Fanciness": 200,
         "DQB2BGParts": 113,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 114,
@@ -1719,7 +1945,9 @@
         "SizeZ": 1,
         "Fanciness": 50,
         "DQB2BGParts": 114,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 115,
@@ -1734,7 +1962,9 @@
         "SizeZ": 1,
         "Fanciness": 50,
         "DQB2BGParts": 115,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 116,
@@ -1749,7 +1979,9 @@
         "SizeZ": 1,
         "Fanciness": 150,
         "DQB2BGParts": 116,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 117,
@@ -1764,7 +1996,9 @@
         "SizeZ": 1,
         "Fanciness": 100,
         "DQB2BGParts": 117,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 118,
@@ -1779,7 +2013,9 @@
         "SizeZ": 1,
         "Fanciness": 150,
         "DQB2BGParts": 118,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 119,
@@ -1794,7 +2030,9 @@
         "SizeZ": 1,
         "Fanciness": 10,
         "DQB2BGParts": 119,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 120,
@@ -1809,7 +2047,9 @@
         "SizeZ": 1,
         "Fanciness": 10,
         "DQB2BGParts": 120,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 121,
@@ -1824,7 +2064,9 @@
         "SizeZ": 1,
         "Fanciness": 300,
         "DQB2BGParts": 121,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 122,
@@ -1839,7 +2081,9 @@
         "SizeZ": 1,
         "Fanciness": 10,
         "DQB2BGParts": 122,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 123,
@@ -1854,7 +2098,9 @@
         "SizeZ": 2,
         "Fanciness": 10,
         "DQB2BGParts": 123,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 124,
@@ -1869,7 +2115,9 @@
         "SizeZ": 1,
         "Fanciness": 10,
         "DQB2BGParts": 124,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 125,
@@ -1884,7 +2132,9 @@
         "SizeZ": 3,
         "Fanciness": 500,
         "DQB2BGParts": 125,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 126,
@@ -1899,7 +2149,9 @@
         "SizeZ": 1,
         "Fanciness": 150,
         "DQB2BGParts": 126,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 127,
@@ -1914,7 +2166,9 @@
         "SizeZ": 1,
         "Fanciness": 300,
         "DQB2BGParts": 127,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 128,
@@ -1929,7 +2183,9 @@
         "SizeZ": 2,
         "Fanciness": 200,
         "DQB2BGParts": 128,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 129,
@@ -1944,7 +2200,9 @@
         "SizeZ": 2,
         "Fanciness": 500,
         "DQB2BGParts": 129,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 130,
@@ -1959,7 +2217,9 @@
         "SizeZ": 1,
         "Fanciness": 300,
         "DQB2BGParts": 130,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 131,
@@ -1974,7 +2234,9 @@
         "SizeZ": 1,
         "Fanciness": 300,
         "DQB2BGParts": 131,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 132,
@@ -1989,7 +2251,9 @@
         "SizeZ": 2,
         "Fanciness": 300,
         "DQB2BGParts": 132,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 133,
@@ -2004,7 +2268,9 @@
         "SizeZ": 3,
         "Fanciness": 150,
         "DQB2BGParts": 133,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 134,
@@ -2019,7 +2285,9 @@
         "SizeZ": 2,
         "Fanciness": 300,
         "DQB2BGParts": 134,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 135,
@@ -2034,7 +2302,9 @@
         "SizeZ": 1,
         "Fanciness": 10,
         "DQB2BGParts": 135,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 136,
@@ -2049,7 +2319,9 @@
         "SizeZ": 2,
         "Fanciness": 500,
         "DQB2BGParts": 254,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 137,
@@ -2064,7 +2336,9 @@
         "SizeZ": 1,
         "Fanciness": 50,
         "DQB2BGParts": 137,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 138,
@@ -2079,7 +2353,9 @@
         "SizeZ": 1,
         "Fanciness": 15,
         "DQB2BGParts": 411,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 139,
@@ -2094,7 +2370,9 @@
         "SizeZ": 1,
         "Fanciness": 30,
         "DQB2BGParts": 390,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 140,
@@ -2109,7 +2387,9 @@
         "SizeZ": 1,
         "Fanciness": 30,
         "DQB2BGParts": 433,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 141,
@@ -2124,7 +2404,9 @@
         "SizeZ": 1,
         "Fanciness": 30,
         "DQB2BGParts": 442,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 142,
@@ -2138,7 +2420,9 @@
         "SizeY": 1,
         "SizeZ": 3,
         "Fanciness": 500,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 143,
@@ -2153,7 +2437,9 @@
         "SizeZ": 1,
         "Fanciness": 300,
         "DQB2BGParts": 143,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 144,
@@ -2167,7 +2453,9 @@
         "SizeY": 1,
         "SizeZ": 2,
         "Fanciness": 500,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 145,
@@ -2182,7 +2470,9 @@
         "SizeZ": 2,
         "Fanciness": 50,
         "DQB2BGParts": 145,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 146,
@@ -2197,7 +2487,9 @@
         "SizeZ": 1,
         "Fanciness": 500,
         "DQB2BGParts": 146,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 147,
@@ -2212,7 +2504,9 @@
         "SizeZ": 2,
         "Fanciness": 100,
         "DQB2BGParts": 2563,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 148,
@@ -2227,7 +2521,9 @@
         "SizeZ": 2,
         "Fanciness": 100,
         "DQB2BGParts": 540,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 149,
@@ -2242,7 +2538,9 @@
         "SizeZ": 3,
         "Fanciness": 500,
         "DQB2BGParts": 149,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 150,
@@ -2256,7 +2554,9 @@
         "SizeY": 1,
         "SizeZ": 2,
         "Fanciness": 300,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 151,
@@ -2271,7 +2571,9 @@
         "SizeZ": 3,
         "Fanciness": 200,
         "DQB2BGParts": 151,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": true
     },
     {
         "ID": 152,
@@ -2286,7 +2588,9 @@
         "SizeZ": 1,
         "Fanciness": 300,
         "DQB2BGParts": 152,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 153,
@@ -2301,7 +2605,9 @@
         "SizeZ": 2,
         "Fanciness": 200,
         "DQB2BGParts": 153,
-        "Block": "Lighting"
+        "Block": "Lighting",
+        "Collision": true,
+        "Effects": true
     },
     {
         "ID": 154,
@@ -2316,7 +2622,9 @@
         "SizeZ": 2,
         "Fanciness": 100,
         "DQB2BGParts": 1294,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 155,
@@ -2331,7 +2639,9 @@
         "SizeZ": 2,
         "Fanciness": 150,
         "DQB2BGParts": 155,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 156,
@@ -2346,7 +2656,9 @@
         "SizeZ": 2,
         "Fanciness": 150,
         "DQB2BGParts": 808,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 157,
@@ -2361,7 +2673,9 @@
         "SizeZ": 3,
         "Fanciness": 500,
         "DQB2BGParts": 157,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 158,
@@ -2376,7 +2690,9 @@
         "SizeZ": 2,
         "Fanciness": 300,
         "DQB2BGParts": 158,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 159,
@@ -2391,7 +2707,9 @@
         "SizeZ": 2,
         "Fanciness": 300,
         "DQB2BGParts": 1150,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 160,
@@ -2406,7 +2724,9 @@
         "SizeZ": 2,
         "Fanciness": 200,
         "DQB2BGParts": 2271,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 161,
@@ -2421,7 +2741,9 @@
         "SizeZ": 3,
         "Fanciness": 300,
         "DQB2BGParts": 161,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": true
     },
     {
         "ID": 162,
@@ -2436,7 +2758,9 @@
         "SizeZ": 1,
         "Fanciness": 20,
         "DQB2BGParts": 162,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 163,
@@ -2451,7 +2775,9 @@
         "SizeZ": 1,
         "Fanciness": 10,
         "DQB2BGParts": 163,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 164,
@@ -2465,7 +2791,9 @@
         "SizeY": 1,
         "SizeZ": 3,
         "Fanciness": 0,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 165,
@@ -2480,7 +2808,9 @@
         "SizeZ": 2,
         "Fanciness": 500,
         "DQB2BGParts": 165,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 166,
@@ -2495,7 +2825,9 @@
         "SizeZ": 1,
         "Fanciness": 100,
         "DQB2BGParts": 2572,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 167,
@@ -2510,7 +2842,9 @@
         "SizeZ": 2,
         "Fanciness": 300,
         "DQB2BGParts": 129,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 168,
@@ -2525,7 +2859,9 @@
         "SizeZ": 1,
         "Fanciness": 0,
         "DQB2BGParts": 168,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 169,
@@ -2540,7 +2876,9 @@
         "SizeZ": 2,
         "Fanciness": 200,
         "DQB2BGParts": 169,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 170,
@@ -2555,7 +2893,9 @@
         "SizeZ": 1,
         "Fanciness": 50,
         "DQB2BGParts": 170,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 171,
@@ -2570,7 +2910,9 @@
         "SizeZ": 1,
         "Fanciness": 30,
         "DQB2BGParts": 171,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 172,
@@ -2585,7 +2927,9 @@
         "SizeZ": 1,
         "Fanciness": 30,
         "DQB2BGParts": 172,
-        "Block": "Fixture"
+        "Block": "Fixture",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 173,
@@ -2600,7 +2944,9 @@
         "SizeZ": 2,
         "Fanciness": 30,
         "DQB2BGParts": 173,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 174,
@@ -2615,7 +2961,9 @@
         "SizeZ": 2,
         "Fanciness": 300,
         "DQB2BGParts": 174,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 175,
@@ -2630,7 +2978,9 @@
         "SizeZ": 1,
         "Fanciness": 0,
         "DQB2BGParts": 175,
-        "Block": "Roof"
+        "Block": "Roof",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 176,
@@ -2645,7 +2995,9 @@
         "SizeZ": 1,
         "Fanciness": 0,
         "DQB2BGParts": 176,
-        "Block": "Roof"
+        "Block": "Roof",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 177,
@@ -2660,7 +3012,9 @@
         "SizeZ": 1,
         "Fanciness": 0,
         "DQB2BGParts": 177,
-        "Block": "Roof"
+        "Block": "Roof",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 178,
@@ -2675,7 +3029,9 @@
         "SizeZ": 1,
         "Fanciness": 0,
         "DQB2BGParts": 178,
-        "Block": "Roof"
+        "Block": "Roof",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 179,
@@ -2690,7 +3046,9 @@
         "SizeZ": 3,
         "Fanciness": 500,
         "DQB2BGParts": 179,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 180,
@@ -2705,7 +3063,9 @@
         "SizeZ": 2,
         "Fanciness": 200,
         "DQB2BGParts": 180,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 181,
@@ -2720,7 +3080,9 @@
         "SizeZ": 3,
         "Fanciness": 1000,
         "DQB2BGParts": 181,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 182,
@@ -2735,7 +3097,9 @@
         "SizeZ": 1,
         "Fanciness": 300,
         "DQB2BGParts": 182,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 183,
@@ -2750,7 +3114,9 @@
         "SizeZ": 1,
         "Fanciness": 10,
         "DQB2BGParts": 183,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 184,
@@ -2765,7 +3131,9 @@
         "SizeZ": 1,
         "Fanciness": 10,
         "DQB2BGParts": 184,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 185,
@@ -2780,7 +3148,9 @@
         "SizeZ": 1,
         "Fanciness": 10,
         "DQB2BGParts": 185,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 186,
@@ -2795,7 +3165,9 @@
         "SizeZ": 1,
         "Fanciness": 10,
         "DQB2BGParts": 186,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 187,
@@ -2810,7 +3182,9 @@
         "SizeZ": 1,
         "Fanciness": 0,
         "DQB2BGParts": 187,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 188,
@@ -2825,7 +3199,9 @@
         "SizeZ": 1,
         "Fanciness": 0,
         "DQB2BGParts": 188,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 189,
@@ -2839,7 +3215,9 @@
         "SizeY": 4,
         "SizeZ": 3,
         "Fanciness": 0,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 190,
@@ -2853,7 +3231,9 @@
         "SizeY": 4,
         "SizeZ": 3,
         "Fanciness": 0,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 191,
@@ -2867,7 +3247,9 @@
         "SizeY": 4,
         "SizeZ": 3,
         "Fanciness": 0,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 192,
@@ -2881,7 +3263,9 @@
         "SizeY": 4,
         "SizeZ": 3,
         "Fanciness": 0,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 193,
@@ -2895,7 +3279,9 @@
         "SizeY": 2,
         "SizeZ": 2,
         "Fanciness": 100,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 194,
@@ -2909,7 +3295,9 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 0,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 195,
@@ -2923,7 +3311,9 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 0,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 196,
@@ -2937,7 +3327,9 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 0,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 197,
@@ -2952,7 +3344,9 @@
         "SizeZ": 1,
         "Fanciness": 0,
         "DQB2BGParts": 197,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 198,
@@ -2967,7 +3361,9 @@
         "SizeZ": 1,
         "Fanciness": 300,
         "DQB2BGParts": 198,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 199,
@@ -2982,7 +3378,9 @@
         "SizeZ": 1,
         "Fanciness": 500,
         "DQB2BGParts": 199,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 200,
@@ -2997,7 +3395,9 @@
         "SizeZ": 1,
         "Fanciness": 0,
         "DQB2BGParts": 200,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 201,
@@ -3012,7 +3412,9 @@
         "SizeZ": 1,
         "Fanciness": 0,
         "DQB2BGParts": 201,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 202,
@@ -3026,7 +3428,9 @@
         "SizeY": 2,
         "SizeZ": 2,
         "Fanciness": 100,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 203,
@@ -3040,7 +3444,9 @@
         "SizeY": 2,
         "SizeZ": 2,
         "Fanciness": 100,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 204,
@@ -3054,7 +3460,9 @@
         "SizeY": 2,
         "SizeZ": 2,
         "Fanciness": 100,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 205,
@@ -3067,7 +3475,9 @@
         "SizeX": 3,
         "SizeY": 2,
         "SizeZ": 3,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 206,
@@ -3082,7 +3492,9 @@
         "SizeZ": 1,
         "Fanciness": 50,
         "DQB2BGParts": 206,
-        "Block": "Door"
+        "Block": "Door",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 207,
@@ -3097,7 +3509,9 @@
         "SizeZ": 1,
         "Fanciness": 20,
         "DQB2BGParts": 207,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 208,
@@ -3112,7 +3526,9 @@
         "SizeZ": 1,
         "Fanciness": 0,
         "DQB2BGParts": 208,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 209,
@@ -3127,7 +3543,9 @@
         "SizeZ": 1,
         "Fanciness": 100,
         "DQB2BGParts": 209,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 210,
@@ -3142,7 +3560,9 @@
         "SizeZ": 1,
         "Fanciness": 50,
         "DQB2BGParts": 626,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 211,
@@ -3157,7 +3577,9 @@
         "SizeZ": 1,
         "Fanciness": 200,
         "DQB2BGParts": 211,
-        "Block": "Fixture"
+        "Block": "Fixture",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 212,
@@ -3172,7 +3594,9 @@
         "SizeZ": 1,
         "Fanciness": 30,
         "DQB2BGParts": 394,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 213,
@@ -3187,7 +3611,9 @@
         "SizeZ": 1,
         "Fanciness": 30,
         "DQB2BGParts": 416,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 214,
@@ -3202,7 +3628,9 @@
         "SizeZ": 1,
         "Fanciness": 300,
         "DQB2BGParts": 214,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 215,
@@ -3217,7 +3645,9 @@
         "SizeZ": 1,
         "Fanciness": 0,
         "DQB2BGParts": 215,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 216,
@@ -3232,7 +3662,9 @@
         "SizeZ": 4,
         "Fanciness": 0,
         "DQB2BGParts": 216,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 217,
@@ -3247,7 +3679,9 @@
         "SizeZ": 1,
         "Fanciness": 0,
         "DQB2BGParts": 217,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 218,
@@ -3262,7 +3696,9 @@
         "SizeZ": 1,
         "Fanciness": 0,
         "DQB2BGParts": 218,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 219,
@@ -3277,7 +3713,9 @@
         "SizeZ": 1,
         "Fanciness": 0,
         "DQB2BGParts": 219,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 220,
@@ -3292,7 +3730,9 @@
         "SizeZ": 1,
         "Fanciness": 0,
         "DQB2BGParts": 220,
-        "Block": "Roof"
+        "Block": "Roof",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 221,
@@ -3307,7 +3747,9 @@
         "SizeZ": 2,
         "Fanciness": 20,
         "DQB2BGParts": 221,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 222,
@@ -3322,7 +3764,9 @@
         "SizeZ": 1,
         "Fanciness": 10,
         "DQB2BGParts": 222,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 223,
@@ -3336,7 +3780,9 @@
         "SizeY": 2,
         "SizeZ": 1,
         "Fanciness": 500,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 224,
@@ -3351,7 +3797,9 @@
         "SizeZ": 1,
         "Fanciness": 100,
         "DQB2BGParts": 224,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 225,
@@ -3366,7 +3814,9 @@
         "SizeZ": 1,
         "Fanciness": 100,
         "DQB2BGParts": 225,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 226,
@@ -3381,7 +3831,9 @@
         "SizeZ": 1,
         "Fanciness": 150,
         "DQB2BGParts": 226,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 227,
@@ -3396,7 +3848,9 @@
         "SizeZ": 1,
         "Fanciness": 300,
         "DQB2BGParts": 227,
-        "Block": "Table"
+        "Block": "Table",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 228,
@@ -3411,7 +3865,9 @@
         "SizeZ": 1,
         "Fanciness": 200,
         "DQB2BGParts": 228,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 229,
@@ -3426,7 +3882,9 @@
         "SizeZ": 1,
         "Fanciness": 150,
         "DQB2BGParts": 229,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 230,
@@ -3441,7 +3899,9 @@
         "SizeZ": 1,
         "Fanciness": 500,
         "DQB2BGParts": 230,
-        "Block": "Lighting"
+        "Block": "Lighting",
+        "Collision": false,
+        "Effects": true
     },
     {
         "ID": 231,
@@ -3456,7 +3916,9 @@
         "SizeZ": 2,
         "Fanciness": 500,
         "DQB2BGParts": 231,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 232,
@@ -3471,7 +3933,9 @@
         "SizeZ": 3,
         "Fanciness": 500,
         "DQB2BGParts": 232,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 233,
@@ -3486,7 +3950,9 @@
         "SizeZ": 3,
         "Fanciness": 750,
         "DQB2BGParts": 233,
-        "Block": "Table"
+        "Block": "Table",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 234,
@@ -3501,7 +3967,9 @@
         "SizeZ": 3,
         "Fanciness": 750,
         "DQB2BGParts": 234,
-        "Block": "Table"
+        "Block": "Table",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 235,
@@ -3516,7 +3984,9 @@
         "SizeZ": 1,
         "Fanciness": 500,
         "DQB2BGParts": 235,
-        "Block": "Lighting"
+        "Block": "Lighting",
+        "Collision": true,
+        "Effects": true
     },
     {
         "ID": 236,
@@ -3531,7 +4001,9 @@
         "SizeZ": 1,
         "Fanciness": 300,
         "DQB2BGParts": 236,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 237,
@@ -3546,7 +4018,9 @@
         "SizeZ": 1,
         "Fanciness": 500,
         "DQB2BGParts": 237,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 238,
@@ -3561,7 +4035,9 @@
         "SizeZ": 1,
         "Fanciness": 100,
         "DQB2BGParts": 238,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 239,
@@ -3576,7 +4052,9 @@
         "SizeZ": 1,
         "Fanciness": 200,
         "DQB2BGParts": 239,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 240,
@@ -3591,7 +4069,9 @@
         "SizeZ": 1,
         "Fanciness": 300,
         "DQB2BGParts": 240,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 241,
@@ -3606,7 +4086,9 @@
         "SizeZ": 1,
         "Fanciness": 300,
         "DQB2BGParts": 241,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 242,
@@ -3621,7 +4103,9 @@
         "SizeZ": 1,
         "Fanciness": 200,
         "DQB2BGParts": 242,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 243,
@@ -3636,7 +4120,9 @@
         "SizeZ": 1,
         "Fanciness": 300,
         "DQB2BGParts": 243,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 244,
@@ -3651,7 +4137,9 @@
         "SizeZ": 1,
         "Fanciness": 200,
         "DQB2BGParts": 244,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 245,
@@ -3666,7 +4154,9 @@
         "SizeZ": 1,
         "Fanciness": 200,
         "DQB2BGParts": 245,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 246,
@@ -3681,7 +4171,9 @@
         "SizeZ": 1,
         "Fanciness": 500,
         "DQB2BGParts": 246,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 247,
@@ -3696,7 +4188,9 @@
         "SizeZ": 1,
         "Fanciness": 500,
         "DQB2BGParts": 247,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 248,
@@ -3711,7 +4205,9 @@
         "SizeZ": 3,
         "Fanciness": 500,
         "DQB2BGParts": 248,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 249,
@@ -3726,7 +4222,9 @@
         "SizeZ": 1,
         "Fanciness": 50,
         "DQB2BGParts": 249,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 250,
@@ -3741,7 +4239,9 @@
         "SizeZ": 1,
         "Fanciness": 500,
         "DQB2BGParts": 250,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 251,
@@ -3756,7 +4256,9 @@
         "SizeZ": 1,
         "Fanciness": 10,
         "DQB2BGParts": 251,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 252,
@@ -3771,7 +4273,9 @@
         "SizeZ": 1,
         "Fanciness": 10,
         "DQB2BGParts": 252,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 253,
@@ -3786,7 +4290,9 @@
         "SizeZ": 2,
         "Fanciness": 0,
         "DQB2BGParts": 253,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": false,
+        "Effects": false
     },
     {
         "ID": 254,
@@ -3801,7 +4307,9 @@
         "SizeZ": 2,
         "Fanciness": 500,
         "DQB2BGParts": 254,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false
     },
     {
         "ID": 255,
@@ -3815,7 +4323,10 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 50,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false,
+        "Version": 4
     },
     {
         "ID": 256,
@@ -3829,7 +4340,10 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 50,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false,
+        "Version": 4
     },
     {
         "ID": 257,
@@ -3843,7 +4357,10 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 50,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false,
+        "Version": 4
     },
     {
         "ID": 258,
@@ -3857,7 +4374,10 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 50,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false,
+        "Version": 4
     },
     {
         "ID": 259,
@@ -3871,7 +4391,10 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 50,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false,
+        "Version": 4
     },
     {
         "ID": 260,
@@ -3885,7 +4408,10 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 50,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false,
+        "Version": 4
     },
     {
         "ID": 261,
@@ -3899,7 +4425,10 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 50,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false,
+        "Version": 4
     },
     {
         "ID": 262,
@@ -3913,7 +4442,10 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 50,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false,
+        "Version": 4
     },
     {
         "ID": 263,
@@ -3927,7 +4459,10 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 50,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false,
+        "Version": 4
     },
     {
         "ID": 264,
@@ -3941,7 +4476,10 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 50,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false,
+        "Version": 4
     },
     {
         "ID": 265,
@@ -3955,7 +4493,10 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 50,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false,
+        "Version": 4
     },
     {
         "ID": 266,
@@ -3969,7 +4510,10 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 50,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false,
+        "Version": 4
     },
     {
         "ID": 267,
@@ -3983,7 +4527,10 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 50,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false,
+        "Version": 4
     },
     {
         "ID": 268,
@@ -3997,7 +4544,10 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 50,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false,
+        "Version": 4
     },
     {
         "ID": 269,
@@ -4011,7 +4561,10 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 50,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false,
+        "Version": 4
     },
     {
         "ID": 270,
@@ -4025,7 +4578,10 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 50,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false,
+        "Version": 4
     },
     {
         "ID": 271,
@@ -4039,7 +4595,10 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 50,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false,
+        "Version": 4
     },
     {
         "ID": 272,
@@ -4053,7 +4612,10 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 50,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false,
+        "Version": 4
     },
     {
         "ID": 273,
@@ -4067,7 +4629,10 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 50,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false,
+        "Version": 4
     },
     {
         "ID": 274,
@@ -4081,7 +4646,10 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 50,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false,
+        "Version": 4
     },
     {
         "ID": 275,
@@ -4095,7 +4663,10 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 50,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false,
+        "Version": 4
     },
     {
         "ID": 276,
@@ -4109,7 +4680,10 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 50,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false,
+        "Version": 4
     },
     {
         "ID": 277,
@@ -4123,7 +4697,10 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 50,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false,
+        "Version": 4
     },
     {
         "ID": 278,
@@ -4137,7 +4714,10 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 100,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false,
+        "Version": 4
     },
     {
         "ID": 279,
@@ -4151,7 +4731,10 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 50,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false,
+        "Version": 4
     },
     {
         "ID": 280,
@@ -4165,7 +4748,10 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 50,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false,
+        "Version": 4
     },
     {
         "ID": 281,
@@ -4179,7 +4765,10 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 50,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false,
+        "Version": 4
     },
     {
         "ID": 282,
@@ -4193,7 +4782,10 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 50,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false,
+        "Version": 4
     },
     {
         "ID": 283,
@@ -4207,7 +4799,10 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 50,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false,
+        "Version": 4
     },
     {
         "ID": 284,
@@ -4221,7 +4816,10 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 50,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false,
+        "Version": 4
     },
     {
         "ID": 285,
@@ -4235,7 +4833,10 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 50,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false,
+        "Version": 4
     },
     {
         "ID": 286,
@@ -4249,7 +4850,10 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 50,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false,
+        "Version": 4
     },
     {
         "ID": 287,
@@ -4263,7 +4867,10 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 50,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false,
+        "Version": 4
     },
     {
         "ID": 288,
@@ -4277,7 +4884,10 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 50,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false,
+        "Version": 4
     },
     {
         "ID": 289,
@@ -4291,7 +4901,10 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 50,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false,
+        "Version": 4
     },
     {
         "ID": 290,
@@ -4305,7 +4918,10 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 50,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false,
+        "Version": 4
     },
     {
         "ID": 291,
@@ -4319,7 +4935,10 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 50,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false,
+        "Version": 4
     },
     {
         "ID": 292,
@@ -4333,7 +4952,10 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 50,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false,
+        "Version": 4
     },
     {
         "ID": 293,
@@ -4347,7 +4969,10 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 50,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false,
+        "Version": 4
     },
     {
         "ID": 294,
@@ -4361,7 +4986,10 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 50,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false,
+        "Version": 4
     },
     {
         "ID": 295,
@@ -4375,7 +5003,10 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 50,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false,
+        "Version": 4
     },
     {
         "ID": 296,
@@ -4389,7 +5020,10 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 50,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false,
+        "Version": 4
     },
     {
         "ID": 297,
@@ -4403,7 +5037,10 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 50,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false,
+        "Version": 4
     },
     {
         "ID": 298,
@@ -4417,7 +5054,10 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 50,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false,
+        "Version": 4
     },
     {
         "ID": 299,
@@ -4431,7 +5071,10 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 50,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false,
+        "Version": 4
     },
     {
         "ID": 300,
@@ -4445,7 +5088,10 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 50,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false,
+        "Version": 4
     },
     {
         "ID": 301,
@@ -4459,7 +5105,10 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 50,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false,
+        "Version": 4
     },
     {
         "ID": 302,
@@ -4473,7 +5122,10 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 50,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false,
+        "Version": 4
     },
     {
         "ID": 303,
@@ -4487,7 +5139,10 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 100,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false,
+        "Version": 4
     },
     {
         "ID": 304,
@@ -4501,7 +5156,10 @@
         "SizeY": 1,
         "SizeZ": 1,
         "Fanciness": 50,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false,
+        "Version": 4
     },
     {
         "ID": 305,
@@ -4515,7 +5173,10 @@
         "SizeY": 2,
         "SizeZ": 1,
         "Fanciness": 500,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false,
+        "Version": 4
     },
     {
         "ID": 306,
@@ -4530,7 +5191,10 @@
         "SizeZ": 1,
         "Fanciness": 500,
         "DQB2BGParts": 1015,
-        "Block": "Lighting"
+        "Block": "Lighting",
+        "Collision": false,
+        "Effects": true,
+        "Version": 4
     },
     {
         "ID": 307,
@@ -4545,7 +5209,10 @@
         "SizeZ": 2,
         "Fanciness": 500,
         "DQB2BGParts": 1016,
-        "Block": "Lighting"
+        "Block": "Lighting",
+        "Collision": true,
+        "Effects": true,
+        "Version": 4
     },
     {
         "ID": 308,
@@ -4560,7 +5227,10 @@
         "SizeZ": 1,
         "Fanciness": 500,
         "DQB2BGParts": 1017,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false,
+        "Version": 4
     },
     {
         "ID": 309,
@@ -4575,17 +5245,24 @@
         "SizeZ": 1,
         "Fanciness": 500,
         "DQB2BGParts": 1018,
-        "Block": "Generic"
+        "Block": "Generic",
+        "Collision": true,
+        "Effects": false,
+        "Version": 4
     },
     {
         "ID": 310,
         "JLabel": "NX:ファミコン",
-        "Name": "",
-        "NameJP": "",
-        "Icon": -1,
+        "Name": "Famicom",
+        "NameJP": "ファミコン",
+        "Icon": 0,
+        "Mesh": 2563,
         "SizeX": 1,
         "SizeY": 1,
-        "SizeZ": 1
+        "SizeZ": 1,
+        "Collision": true,
+        "Effects": false,
+        "Version": 4
     },
     {
         "ID": 311,
@@ -4598,7 +5275,10 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Collision": false,
+        "Effects": false,
+        "Version": 5
     },
     {
         "ID": 312,
@@ -4611,7 +5291,10 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Collision": true,
+        "Effects": false,
+        "Version": 5
     },
     {
         "ID": 313,
@@ -4624,7 +5307,10 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Collision": true,
+        "Effects": false,
+        "Version": 5
     },
     {
         "ID": 314,
@@ -4637,7 +5323,10 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Collision": true,
+        "Effects": false,
+        "Version": 5
     },
     {
         "ID": 315,
@@ -4650,7 +5339,10 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Collision": true,
+        "Effects": false,
+        "Version": 5
     },
     {
         "ID": 316,
@@ -4663,7 +5355,10 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Collision": true,
+        "Effects": false,
+        "Version": 5
     },
     {
         "ID": 317,
@@ -4676,7 +5371,10 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Collision": true,
+        "Effects": false,
+        "Version": 5
     },
     {
         "ID": 318,
@@ -4689,7 +5387,10 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Collision": true,
+        "Effects": false,
+        "Version": 5
     },
     {
         "ID": 319,
@@ -4702,7 +5403,10 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Collision": true,
+        "Effects": false,
+        "Version": 5
     },
     {
         "ID": 320,
@@ -4715,7 +5419,10 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Collision": true,
+        "Effects": false,
+        "Version": 5
     },
     {
         "ID": 321,
@@ -4728,7 +5435,10 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Collision": true,
+        "Effects": false,
+        "Version": 5
     },
     {
         "ID": 322,
@@ -4741,7 +5451,10 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Collision": true,
+        "Effects": false,
+        "Version": 5
     },
     {
         "ID": 323,
@@ -4754,7 +5467,10 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Collision": true,
+        "Effects": false,
+        "Version": 5
     },
     {
         "ID": 324,
@@ -4767,7 +5483,10 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Collision": true,
+        "Effects": false,
+        "Version": 5
     },
     {
         "ID": 325,
@@ -4780,7 +5499,10 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Collision": true,
+        "Effects": false,
+        "Version": 5
     },
     {
         "ID": 326,
@@ -4793,7 +5515,10 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Collision": true,
+        "Effects": false,
+        "Version": 5
     },
     {
         "ID": 327,
@@ -4806,7 +5531,10 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Collision": true,
+        "Effects": false,
+        "Version": 5
     },
     {
         "ID": 328,
@@ -4819,7 +5547,10 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Collision": true,
+        "Effects": false,
+        "Version": 5
     },
     {
         "ID": 329,
@@ -4832,7 +5563,10 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Collision": true,
+        "Effects": false,
+        "Version": 5
     },
     {
         "ID": 330,
@@ -4845,7 +5579,10 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Collision": true,
+        "Effects": false,
+        "Version": 5
     },
     {
         "ID": 331,
@@ -4858,7 +5595,10 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Collision": true,
+        "Effects": false,
+        "Version": 5
     },
     {
         "ID": 332,
@@ -4871,7 +5611,10 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Collision": true,
+        "Effects": false,
+        "Version": 5
     },
     {
         "ID": 333,
@@ -4884,7 +5627,10 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Collision": true,
+        "Effects": false,
+        "Version": 5
     },
     {
         "ID": 334,
@@ -4897,7 +5643,10 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Collision": true,
+        "Effects": false,
+        "Version": 5
     },
     {
         "ID": 335,
@@ -4910,7 +5659,10 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Collision": true,
+        "Effects": false,
+        "Version": 5
     },
     {
         "ID": 336,
@@ -4923,7 +5675,10 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Collision": true,
+        "Effects": false,
+        "Version": 5
     },
     {
         "ID": 337,
@@ -4936,7 +5691,10 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Collision": true,
+        "Effects": false,
+        "Version": 5
     },
     {
         "ID": 338,
@@ -4949,7 +5707,10 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Collision": true,
+        "Effects": false,
+        "Version": 5
     },
     {
         "ID": 339,
@@ -4962,7 +5723,10 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Collision": true,
+        "Effects": false,
+        "Version": 5
     },
     {
         "ID": 340,
@@ -4975,7 +5739,10 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Collision": true,
+        "Effects": false,
+        "Version": 5
     },
     {
         "ID": 341,
@@ -4988,7 +5755,10 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Collision": true,
+        "Effects": false,
+        "Version": 5
     },
     {
         "ID": 342,
@@ -5001,7 +5771,10 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Collision": true,
+        "Effects": false,
+        "Version": 5
     },
     {
         "ID": 343,
@@ -5014,7 +5787,10 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Collision": true,
+        "Effects": false,
+        "Version": 5
     },
     {
         "ID": 344,
@@ -5027,7 +5803,10 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Collision": true,
+        "Effects": false,
+        "Version": 5
     },
     {
         "ID": 345,
@@ -5040,7 +5819,10 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Collision": true,
+        "Effects": false,
+        "Version": 5
     },
     {
         "ID": 346,
@@ -5053,7 +5835,10 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Collision": true,
+        "Effects": false,
+        "Version": 5
     },
     {
         "ID": 347,
@@ -5066,7 +5851,10 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Collision": true,
+        "Effects": false,
+        "Version": 5
     },
     {
         "ID": 348,
@@ -5079,7 +5867,10 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Collision": true,
+        "Effects": false,
+        "Version": 5
     },
     {
         "ID": 349,
@@ -5092,7 +5883,10 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Collision": true,
+        "Effects": false,
+        "Version": 5
     },
     {
         "ID": 350,
@@ -5105,7 +5899,10 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Collision": true,
+        "Effects": false,
+        "Version": 5
     },
     {
         "ID": 351,
@@ -5118,7 +5915,10 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Collision": true,
+        "Effects": false,
+        "Version": 5
     },
     {
         "ID": 352,
@@ -5131,7 +5931,10 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Collision": true,
+        "Effects": false,
+        "Version": 5
     },
     {
         "ID": 353,
@@ -5144,7 +5947,10 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Collision": true,
+        "Effects": false,
+        "Version": 5
     },
     {
         "ID": 354,
@@ -5157,7 +5963,10 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Collision": true,
+        "Effects": false,
+        "Version": 5
     },
     {
         "ID": 355,
@@ -5170,7 +5979,10 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Collision": true,
+        "Effects": false,
+        "Version": 5
     },
     {
         "ID": 356,
@@ -5183,7 +5995,10 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Collision": true,
+        "Effects": false,
+        "Version": 5
     },
     {
         "ID": 357,
@@ -5196,7 +6011,10 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Collision": true,
+        "Effects": false,
+        "Version": 5
     },
     {
         "ID": 358,
@@ -5209,7 +6027,10 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Collision": true,
+        "Effects": false,
+        "Version": 5
     },
     {
         "ID": 359,
@@ -5222,7 +6043,10 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Collision": true,
+        "Effects": false,
+        "Version": 5
     },
     {
         "ID": 360,
@@ -5235,7 +6059,10 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Collision": true,
+        "Effects": false,
+        "Version": 5
     },
     {
         "ID": 361,
@@ -5248,7 +6075,10 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Collision": true,
+        "Effects": false,
+        "Version": 5
     },
     {
         "ID": 362,
@@ -5261,7 +6091,10 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Collision": true,
+        "Effects": false,
+        "Version": 5
     },
     {
         "ID": 363,
@@ -5274,7 +6107,10 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Collision": true,
+        "Effects": false,
+        "Version": 5
     },
     {
         "ID": 364,
@@ -5287,7 +6123,10 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Collision": true,
+        "Effects": false,
+        "Version": 5
     },
     {
         "ID": 365,
@@ -5300,7 +6139,10 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Collision": true,
+        "Effects": false,
+        "Version": 5
     },
     {
         "ID": 366,
@@ -5313,7 +6155,10 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Collision": true,
+        "Effects": false,
+        "Version": 5
     },
     {
         "ID": 367,
@@ -5326,7 +6171,10 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Collision": true,
+        "Effects": false,
+        "Version": 5
     },
     {
         "ID": 368,
@@ -5339,7 +6187,10 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Collision": true,
+        "Effects": false,
+        "Version": 5
     },
     {
         "ID": 369,
@@ -5352,7 +6203,10 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Collision": true,
+        "Effects": false,
+        "Version": 5
     },
     {
         "ID": 370,
@@ -5365,7 +6219,10 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Collision": true,
+        "Effects": false,
+        "Version": 5
     },
     {
         "ID": 371,
@@ -5378,7 +6235,10 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Collision": true,
+        "Effects": false,
+        "Version": 5
     },
     {
         "ID": 372,
@@ -5391,7 +6251,10 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Collision": true,
+        "Effects": false,
+        "Version": 5
     },
     {
         "ID": 373,
@@ -5404,7 +6267,10 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Collision": true,
+        "Effects": false,
+        "Version": 5
     },
     {
         "ID": 374,
@@ -5417,7 +6283,10 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Collision": true,
+        "Effects": false,
+        "Version": 5
     },
     {
         "ID": 375,
@@ -5430,7 +6299,10 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Collision": true,
+        "Effects": false,
+        "Version": 5
     },
     {
         "ID": 376,
@@ -5443,7 +6315,10 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 10
+        "Fanciness": 10,
+        "Collision": true,
+        "Effects": false,
+        "Version": 5
     },
     {
         "ID": 377,
@@ -5456,7 +6331,10 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Collision": true,
+        "Effects": false,
+        "Version": 5
     },
     {
         "ID": 378,
@@ -5469,6 +6347,9 @@
         "SizeX": 1,
         "SizeY": 1,
         "SizeZ": 1,
-        "Fanciness": 0
+        "Fanciness": 0,
+        "Collision": true,
+        "Effects": false,
+        "Version": 5
     }
 ]

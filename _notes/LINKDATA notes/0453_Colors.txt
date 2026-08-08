@@ -1,0 +1,10 @@
+# COLORS #
+
+0x00 = ushort(?) 0x03E8 (1000) (amount of entries in file)
+0x02..0x3F = Empty
+0x40..0xFDF = uint[] Integers from 0-999
+0xFE0..0x1F7F = Color[] (4 bytes each) (1000 count)
+    +0x00 = byte R
+    +0x01 = byte G
+    +0x02 = byte B
+    +0x03 = byte A

@@ -12,6 +12,7 @@ using System.Text.Json;
 using System.Collections;
 using System.ComponentModel;
 using System.Reflection.Metadata;
+using Godot.NativeInterop;
 
 namespace EyeOfRubiss.Scenes
 {
@@ -50,11 +51,21 @@ namespace EyeOfRubiss.Scenes
 		[Export] private SpinBox _New_Window_X_SpinBox;
 		[Export] private SpinBox _New_Window_Z_SpinBox;
 
+		[Export] private InventoryEditor _InventoryEditor;
+		[Export] private ResidentEditorDQB1 _ResidentEditorDQB1;
+		[Export] private ResidentEditorDQB2 _ResidentEditorDQB2;
 		[Export] private ScreenshotEditor _ScreenshotEditor;
 		#endregion
 
+		private static Main _Instance;
+
 		public override void _Ready()
 		{
+			GD.Randomize();
+
+			if (_Instance is null)
+				_Instance = this;
+
 			if (!OS.IsDebugBuild())
 			{
 				foreach (string arg in OS.GetCmdlineArgs())
@@ -259,7 +270,7 @@ namespace EyeOfRubiss.Scenes
 		}
 		private void _RemoveFileMenuButton(int id)
 		{
-			int index = _File_PopupMenu.GetItemIndexById(id);
+			int index = _File_PopupMenu.GetItemIndex(id);
 			if (index >= 0)
 			{
 				if (_File_PopupMenu.GetItemSubmenuNode(index) is PopupMenu submenu)
@@ -278,11 +289,9 @@ namespace EyeOfRubiss.Scenes
 			_File_PopupMenu?.SetItemDisabled(-4, !AnyIsLoaded()); // Save All
 			_File_PopupMenu?.SetItemDisabled(-3, !AnyIsLoaded()); // Close All
 
-			_Inventory_Button.Disabled = _CommonData is null;
+			_Inventory_Button.Disabled = _CommonData is null && _ParamData is null;
 			_Player_Button.Disabled = _CommonData is null;
 			_Snapshots_Button.Disabled = _ScreenshotData is null;
-
-			_PassTime_CheckBox.Disabled = _CommonData is null;
 			
 			if (!string.IsNullOrEmpty(WorkingDirectory))
 			{
@@ -323,7 +332,7 @@ namespace EyeOfRubiss.Scenes
                     {
                         
 						_Gratitude_SpinBox.SetValueNoSignal(0);
-						_Gratitude_SpinBox.Editable = false;   
+						_Gratitude_SpinBox.Editable = false;
                     }
                 }
 				else
@@ -334,7 +343,30 @@ namespace EyeOfRubiss.Scenes
 				_Time_SpinBox.SetValueNoSignal(_StageData.Time * 1.2);
 				_Time_SpinBox.UpdateLineEdit();
 				_Time_SpinBox.Enable();
-				_Weather_OptionButton.Select(_StageData.Weather);
+
+				_Weather_OptionButton.Clear();
+				foreach (Info.DQB2.WeatherInfo weather in Info.DQB2.WeatherInfo.GetAll())
+				{
+					_Weather_OptionButton.AddItem(weather.Name, weather.ID);
+				}
+				_Weather_OptionButton.Select(_Weather_OptionButton.GetItemIndex(_StageData.Weather));
+				_Weather_OptionButton.Disabled = false;
+			}
+			else if (_ParamData is not null)
+			{
+				_Time_SpinBox.SetValueNoSignal(_ParamData.Time * 2.4);
+				_Time_SpinBox.UpdateLineEdit();
+				_Time_SpinBox.Enable();
+
+				_Gratitude_SpinBox.SetValueNoSignal(_ParamData.Score);
+				_Gratitude_SpinBox.Editable = true;
+
+				_Weather_OptionButton.Clear();
+				foreach (Info.DQB1.WeatherInfo weather in Info.DQB1.WeatherInfo.GetAll())
+				{
+					_Weather_OptionButton.AddItem(weather.Name, weather.ID);
+				}
+				_Weather_OptionButton.Select(_Weather_OptionButton.GetItemIndex(_ParamData.Weather));
 				_Weather_OptionButton.Disabled = false;
 			}
 			else
@@ -344,17 +376,19 @@ namespace EyeOfRubiss.Scenes
 				_Time_SpinBox.SetValueNoSignal(0);
 				_Time_SpinBox.UpdateLineEdit();
 				_Time_SpinBox.Disable();
-				_Weather_OptionButton.Select(0);
+				_Weather_OptionButton.Select(-1);
 				_Weather_OptionButton.Disabled = true;
 			}
 
 			if (_CommonData is not null)
 			{
 				_PassTime_CheckBox.ButtonPressed = _CommonData.TimeIsPassing;
+				_PassTime_CheckBox.Disabled = false;
 			}
 			else
 			{
 				_PassTime_CheckBox.ButtonPressed = false;
+				_PassTime_CheckBox.Disabled = true;
 			}
 		}
 
@@ -422,9 +456,17 @@ namespace EyeOfRubiss.Scenes
 
 			ExportSelection,
 
+			ExportResidentDQB1,
+			ImportResidentDQB1,
+
+			ExportResidentDQB2,
+			ImportResidentDQB2,
+
 			ExportSnapshot,
 			ImportSnapshot,
-			ExportAllSnapshots
+			ExportAllSnapshots,
+			
+			CopyFromFile
 		}
 		private FileDialogStateEnum _FileDialogState = FileDialogStateEnum.Unknown;
 
@@ -433,7 +475,7 @@ namespace EyeOfRubiss.Scenes
 			_FileDialog.FileMode = FileDialog.FileModeEnum.OpenFiles;
 			_FileDialogState = FileDialogStateEnum.OpenFile;
 			_FileDialog.Title = "Open a file";
-			_FileDialog.SetFilter("*.bin, *.json");
+			_FileDialog.SetFilter("*.bin, *.json, *.unknown, *.dat");
 			_FileDialog.PopupCentered();
 		}
 		public void ShowOpenFolderDialog()
@@ -450,23 +492,41 @@ namespace EyeOfRubiss.Scenes
 			switch (Util.DetermineFileType(path))
             {
                 case FileType.Unknown:
-					GD.Print($"Could not open file {path}.");
+					StatusLabel.PrintMessage($"Could not open file {path}.");
 					break;
 				
-				case FileType.DQB1_WorldData:
-					TryOpenWorldData(path);
+				case FileType.DQB1_ParamData_PS3:
+					TryOpenParamDataPS3(path);
 					break;
-				case FileType.DQB1_ParamData:
-					TryOpenParamData(path);
+				case FileType.DQB1_WorldData_PS3:
+					TryOpenWorldDataPS3(path);
+					break;
+
+				case FileType.DQB1_ParamData_PS4:
+					TryOpenParamDataPS4(path);
+					break;
+				case FileType.DQB1_WorldData_PS4:
+					TryOpenWorldDataPS4(path);
+					break;
+
+				case FileType.DQB1_ParamData_Vita:
+					TryOpenParamDataVita(path);
+					break;
+
+				case FileType.DQB1_WorldData_Switch:
+					TryOpenWorldDataSwitch(path);
+					break;
+				case FileType.DQB1_ParamData_Switch:
+					TryOpenParamDataSwitch(path);
 					break;
 
                 case FileType.DQB1_BlueprintAsset:
                     TryOpenBlueprintAssetDQB1(path);
                     break;
-                case FileType.DQB1_DioramaAssetHeader:
+                case FileType.DQB1_DioramaHeaderAsset:
 					TryOpenDioramaHeaderAssetDQB1(path);
 					break;
-				case FileType.DQB1_DioramaAssetData:
+				case FileType.DQB1_DioramaDataAsset:
 					TryOpenDioramaDataAssetDQB1(path);
 					break;
 
@@ -480,9 +540,16 @@ namespace EyeOfRubiss.Scenes
                     TryOpenScreenshotData(path);
                     break;
 
-                case FileType.DQB2_Blueprint:
-                    TryOpenBlueprintFileDQB2(path);
+                case FileType.DQB2_PencilSketch:
+                    TryOpenPencilSketchFileDQB2(path);
                     break;
+				
+				case FileType.DQB2_DioramaData:
+					TryOpenDQB2Diorama(path);
+					break;
+				case FileType.DQB2_Blueprint:
+					TryOpenDQB2Blueprint(path);
+					break;
 				
 				case FileType.EyeOfRubissStructure:
 					TryOpenEyeOfRubissStructure(path);
@@ -490,6 +557,77 @@ namespace EyeOfRubiss.Scenes
             }
 			
 			UpdateLoadedData();
+		}
+
+		public void CopyFromFile(string[] paths)
+		{
+			foreach (string path in paths)
+			{
+				GD.Print(path);
+				try
+				{
+					switch (Util.DetermineFileType(path))
+					{
+						case FileType.DQB1_BlueprintAsset:
+							GD.Print("DQB1_BlueprintAsset");
+							_WorldEditorScene.Copy(EyeOfRubissStructure.From(BlueprintAssetDQB1.Load(path)));
+							break;
+						case FileType.DQB1_DioramaHeaderAsset:
+							break;
+						case FileType.DQB1_DioramaDataAsset:
+							break;
+
+						case FileType.DQB2_Blueprint:
+							GD.Print("DQB2_Blueprint");
+            				if (SaveData.TryLoad(path, out SaveData blueprint, 0, decompress: false))
+            				{
+								_WorldEditorScene.Copy(EyeOfRubissStructure.FromDQB2Blueprint(blueprint));
+            				}
+							else
+								StatusLabel.PrintMessage($"Could not open file {path}.");
+							break;
+						case FileType.DQB2_DioramaHeader:
+							// TODO
+							break;
+						case FileType.DQB2_DioramaData:
+            				if (SaveData.TryLoad(path, out SaveData diorama, 0, decompress: false))
+            				{
+								EyeOfRubissStructure structure = EyeOfRubissStructure.FromDQB2Diorama(diorama,
+									(int)(GetNode<SpinBox>("X_SpinBox").Value),
+									(int)(GetNode<SpinBox>("Y_SpinBox").Value),
+									(int)(GetNode<SpinBox>("Z_SpinBox").Value)
+								);
+								_WorldEditorScene.Copy(structure);
+            				}
+							else
+								StatusLabel.PrintMessage($"Could not open file {path}.");
+							break;
+						case FileType.DQB2_PencilSketch:
+							GD.Print("DQB2_PencilSketch");
+            				if (PencilSketchFile.TryLoad(path, out PencilSketchFile pencilSketchFile))
+            				{
+								_WorldEditorScene.Copy(EyeOfRubissStructure.From(pencilSketchFile.PencilSketch));
+            				}
+							else
+								StatusLabel.PrintMessage($"Could not open file {path}.");
+							break;
+
+						case FileType.EyeOfRubissStructure:
+							GD.Print("EyeOfRubissStructure");
+							_WorldEditorScene.Copy(EyeOfRubissStructure.Load(path));
+							break;
+						
+						default:
+							StatusLabel.PrintMessage($"Could not open file {path}.");
+							break;
+					}
+				}
+				catch (Exception ex)
+				{
+					StatusLabel.PrintMessage($"Could not open file {path}.");
+					GD.PrintErr(ex);
+				}
+			}
 		}
 
 		public void CloseAll()
@@ -508,9 +646,9 @@ namespace EyeOfRubiss.Scenes
 
 		private WorldData _WorldData;
 		private const int FILE_MENU_WORLD_DATA_ID = 100;
-        private bool TryOpenWorldData(string path)
+        private bool TryOpenWorldDataPS3(string path)
         {
-			if (WorldData.TryLoad(path, out WorldData worldData))
+			if (WorldDataPS3.TryLoad(path, out WorldDataPS3 worldData))
             {
 				CloseWorldData();
             	CloseStageData();
@@ -532,14 +670,76 @@ namespace EyeOfRubiss.Scenes
             }
             else
             {
-                GD.Print($"Could not open file {path}.");
+                StatusLabel.PrintMessage($"Could not open file {path}.");
+				return false;
+            }
+        }
+        private bool TryOpenWorldDataPS4(string path)
+        {
+			if (WorldDataPS4.TryLoad(path, out WorldDataPS4 worldData))
+            {
+				CloseWorldData();
+            	CloseStageData();
+            	CloseCommonData();
+            	CloseScreenshotData();
+				CloseDioramaDataAssetDQB1();
+				CloseDioramaHeaderAssetDQB1();
+				CloseEyeOfRubissStructure();
+
+            	_WorldData = worldData;
+            	_WorldEditorScene.LoadWorldData(worldData);
+
+				_AddFileMenuButton(Path.GetFileName(path), FILE_MENU_WORLD_DATA_ID);
+
+				if (_ItemListMode != 1)
+					_InitializeItemLists_DQB1();
+
+				return true;
+            }
+            else
+            {
+                StatusLabel.PrintMessage($"Could not open file {path}.");
+				return false;
+            }
+        }
+        private bool TryOpenWorldDataSwitch(string path)
+        {
+			if (WorldDataSwitch.TryLoad(path, out WorldDataSwitch worldData))
+            {
+				CloseWorldData();
+            	CloseStageData();
+            	CloseCommonData();
+            	CloseScreenshotData();
+				CloseDioramaDataAssetDQB1();
+				CloseDioramaHeaderAssetDQB1();
+				CloseEyeOfRubissStructure();
+
+            	_WorldData = worldData;
+            	_WorldEditorScene.LoadWorldData(worldData);
+
+				_AddFileMenuButton(Path.GetFileName(path), FILE_MENU_WORLD_DATA_ID);
+
+				if (_ItemListMode != 1)
+					_InitializeItemLists_DQB1();
+
+				return true;
+            }
+            else
+            {
+                StatusLabel.PrintMessage($"Could not open file {path}.");
 				return false;
             }
         }
 		private void SaveWorldData(string path = null)
 		{
+			if (_ParamData is not null)
+			{
+				GD.Print($"OLD WORLD CHECKSUM: {_ParamData.WorldChecksum}");
+				GD.Print($"NEW WORLD CHECKSUM: {_WorldData.CreateChecksum()}");
+				_ParamData.WorldChecksum = _WorldData.CreateChecksum();
+				GD.Print($"SAVED WORLD CHECKSUM: {_ParamData.WorldChecksum}");
+			}
 			_WorldData?.Save();
-			// TODO
 		}
 		private void ExportWorldData(string path)
 		{
@@ -556,9 +756,9 @@ namespace EyeOfRubiss.Scenes
 
 		private ParamData _ParamData;
 		private const int FILE_MENU_PARAM_DATA_ID = 101;
-        private bool TryOpenParamData(string path)
+        private bool TryOpenParamDataPS3(string path)
         {
-			if (ParamData.TryLoad(path, out ParamData paramData))
+			if (ParamDataPS3.TryLoad(path, out ParamDataPS3 paramData))
             {
 				CloseParamData();
             	CloseStageData();
@@ -580,7 +780,91 @@ namespace EyeOfRubiss.Scenes
             }
             else
             {
-                GD.Print($"Could not open file {path}.");
+                StatusLabel.PrintMessage($"Could not open file {path}.");
+				return false;
+            }
+        }
+        private bool TryOpenParamDataPS4(string path)
+        {
+			if (ParamDataPS4.TryLoad(path, out ParamDataPS4 paramData))
+            {
+				CloseParamData();
+            	CloseStageData();
+            	CloseCommonData();
+            	CloseScreenshotData();
+				CloseDioramaDataAssetDQB1();
+				CloseDioramaHeaderAssetDQB1();
+				CloseEyeOfRubissStructure();
+
+            	_ParamData = paramData;
+				_WorldEditorScene.LoadParamData(paramData);
+
+				_AddFileMenuButton(Path.GetFileName(path), FILE_MENU_PARAM_DATA_ID);
+
+				if (_ItemListMode != 1)
+					_InitializeItemLists_DQB1();
+
+				return true;
+            }
+            else
+            {
+                StatusLabel.PrintMessage($"Could not open file {path}.");
+				return false;
+            }
+        }
+        private bool TryOpenParamDataVita(string path)
+        {
+			if (ParamDataVita.TryLoad(path, out ParamDataVita paramData))
+            {
+				CloseParamData();
+            	CloseStageData();
+            	CloseCommonData();
+            	CloseScreenshotData();
+				CloseDioramaDataAssetDQB1();
+				CloseDioramaHeaderAssetDQB1();
+				CloseEyeOfRubissStructure();
+
+            	_ParamData = paramData;
+				_WorldEditorScene.LoadParamData(paramData);
+
+				_AddFileMenuButton(Path.GetFileName(path), FILE_MENU_PARAM_DATA_ID);
+
+				if (_ItemListMode != 1)
+					_InitializeItemLists_DQB1();
+
+				return true;
+            }
+            else
+            {
+                StatusLabel.PrintMessage($"Could not open file {path}.");
+				return false;
+            }
+        }
+        private bool TryOpenParamDataSwitch(string path)
+        {
+			if (ParamDataSwitch.TryLoad(path, out ParamDataSwitch paramData))
+            {
+				CloseParamData();
+            	CloseStageData();
+            	CloseCommonData();
+            	CloseScreenshotData();
+				CloseDioramaDataAssetDQB1();
+				CloseDioramaHeaderAssetDQB1();
+				CloseEyeOfRubissStructure();
+
+            	_ParamData = paramData;
+				_WorldEditorScene.LoadParamData(paramData);
+
+				_AddFileMenuButton(Path.GetFileName(path), FILE_MENU_PARAM_DATA_ID);
+
+				if (_ItemListMode != 1)
+					_InitializeItemLists_DQB1();
+
+				return true;
+            }
+            else
+            {
+                StatusLabel.PrintMessage($"Could not open file {path}.");
 				return false;
             }
         }
@@ -617,7 +901,7 @@ namespace EyeOfRubiss.Scenes
             }
             catch (Exception ex)
             {
-                GD.Print($"Could not open file {path}.");
+                StatusLabel.PrintMessage($"Could not open file {path}.");
 				GD.PrintErr(ex);
 				return false;
             }
@@ -663,7 +947,7 @@ namespace EyeOfRubiss.Scenes
 			}
 			catch (Exception ex)
 			{
-                GD.Print($"Could not open file {path}.");
+                StatusLabel.PrintMessage($"Could not open file {path}.");
 				GD.PrintErr(ex);
 				return false;
 			}
@@ -712,8 +996,8 @@ namespace EyeOfRubiss.Scenes
 			}
 			catch (Exception ex)
 			{
+				StatusLabel.PrintMessage($"Could not open file {path}.");
 				GD.PrintErr(ex);
-                GD.Print($"Could not open file {path}.");
 				return false;
 			}
 		}
@@ -748,7 +1032,7 @@ namespace EyeOfRubiss.Scenes
             }
             else
             {
-                GD.Print($"Could not open file {path}.");
+                StatusLabel.PrintMessage($"Could not open file {path}.");
 				return false;
             }
         }
@@ -788,7 +1072,7 @@ namespace EyeOfRubiss.Scenes
             }
             else
             {
-                GD.Print($"Could not open file {path}.");
+                StatusLabel.PrintMessage($"Could not open file {path}.");
 				return false;
             }
         }
@@ -832,7 +1116,7 @@ namespace EyeOfRubiss.Scenes
             }
             else
             {
-                GD.Print($"Could not open file {path}.");
+                StatusLabel.PrintMessage($"Could not open file {path}.");
 				return false;
             }
         }
@@ -848,13 +1132,13 @@ namespace EyeOfRubiss.Scenes
         }
 
 		private const int FILE_MENU_BLUEPRINT_FILE_DQB2_ID = 210;
-        private bool TryOpenBlueprintFileDQB2(string path)
+        private bool TryOpenPencilSketchFileDQB2(string path)
         {
-            if (BlueprintFileDQB2.TryLoad(path, out BlueprintFileDQB2 blueprintFile))
+            if (PencilSketchFile.TryLoad(path, out PencilSketchFile blueprintFile))
             {
 				CloseAll();
 
-				_EyeOfRubissStructure = EyeOfRubissStructure.From(blueprintFile.Blueprint);
+				_EyeOfRubissStructure = EyeOfRubissStructure.From(blueprintFile.PencilSketch);
 				_EyeOfRubissStructure.Filename = path;
                 _WorldEditorScene.LoadEyeOfRubissStructure(_EyeOfRubissStructure);
 
@@ -867,7 +1151,61 @@ namespace EyeOfRubiss.Scenes
             }
             else
             {
-                GD.Print($"Could not open file {path}.");
+                StatusLabel.PrintMessage($"Could not open file {path}.");
+				return false;
+            }
+        }
+
+		private const int FILE_MENU_DQB2_DIORAMA_ID = 220;
+        private bool TryOpenDQB2Diorama(string path)
+        {
+            if (SaveData.TryLoad(path, out SaveData diorama, 0, decompress: false))
+            {
+				CloseAll();
+
+				_EyeOfRubissStructure = EyeOfRubissStructure.FromDQB2Diorama(diorama,
+					(int)(GetNode<SpinBox>("X_SpinBox").Value),
+					(int)(GetNode<SpinBox>("Y_SpinBox").Value),
+					(int)(GetNode<SpinBox>("Z_SpinBox").Value)
+				);
+				_EyeOfRubissStructure.Filename = path;
+                _WorldEditorScene.LoadEyeOfRubissStructure(_EyeOfRubissStructure);
+
+				_AddFileMenuButton(Path.GetFileName(path), FILE_MENU_DQB2_DIORAMA_ID);
+
+				if (_ItemListMode != 2)
+					_InitializeItemLists_DQB2();
+
+				return true;
+            }
+            else
+            {
+                StatusLabel.PrintMessage($"Could not open file {path}.");
+				return false;
+            }
+        }
+
+		private const int FILE_MENU_DQB2_BLUEPRINT_ID = 221;
+        private bool TryOpenDQB2Blueprint(string path)
+        {
+            if (SaveData.TryLoad(path, out SaveData blueprint, 0, decompress: false))
+            {
+				CloseAll();
+
+				_EyeOfRubissStructure = EyeOfRubissStructure.FromDQB2Blueprint(blueprint);
+				_EyeOfRubissStructure.Filename = path;
+                _WorldEditorScene.LoadEyeOfRubissStructure(_EyeOfRubissStructure);
+
+				_AddFileMenuButton(Path.GetFileName(path), FILE_MENU_DQB2_BLUEPRINT_ID);
+
+				if (_ItemListMode != 2)
+					_InitializeItemLists_DQB2();
+
+				return true;
+            }
+            else
+            {
+                StatusLabel.PrintMessage($"Could not open file {path}.");
 				return false;
             }
         }
@@ -934,16 +1272,27 @@ namespace EyeOfRubiss.Scenes
             }
             catch (Exception ex)
             {
-                GD.Print($"Could not open file {path}.");
+                StatusLabel.PrintMessage($"Could not open file {path}.");
 				GD.PrintErr(ex);
 				return false;
             }
 		}
 		private void SaveEyeOfRubissStructureFile(string path = null)
 		{
-			_EyeOfRubissStructure?.Save(path);
+			if (string.IsNullOrEmpty(path) && string.IsNullOrEmpty(_EyeOfRubissStructure.Filename))
+			{
+				_FileDialogState = FileDialogStateEnum.SaveEyeOfRubissStructureFile;
+				_FileDialog.Title = "Save Structure...";
+				_FileDialog.SetFilter("*.json");
+				_FileDialog.FileMode = FileDialog.FileModeEnum.SaveFile;
+				_FileDialog.PopupCentered();
+			}
+			else
+			{
+				_EyeOfRubissStructure?.Save(path);
+			}
 		}
-		private void ExportEyeOfRubissStructureFile(string path = null)
+		private void ExportEyeOfRubissStructureFile(string path)
 		{
 			if (path.ToLower().EndsWith(".json"))
 			{
@@ -958,8 +1307,15 @@ namespace EyeOfRubiss.Scenes
 		{
 			if (_EyeOfRubissStructure is not null)
 			{
-				BlueprintFileDQB2 blueprintFile = _EyeOfRubissStructure.ToBlueprint();
-				blueprintFile?.Save(path ?? _EyeOfRubissStructure.Filename);
+				PencilSketchFile blueprintFile = _EyeOfRubissStructure.ToBlueprint();
+				if (blueprintFile is not null)
+				{
+					blueprintFile.Save(path ?? _EyeOfRubissStructure.Filename);
+				}
+				else
+				{
+					PopupWindow("Error", "This structure is too large to save as a DQB2 blueprint.");
+				}
 			}
 		}
 		private void CloseEyeOfRubissStructure()
@@ -970,6 +1326,8 @@ namespace EyeOfRubiss.Scenes
 			_RemoveFileMenuButton(FILE_MENU_DIORAMA_ID);
 			_RemoveFileMenuButton(FILE_MENU_BLUEPRINT_FILE_DQB2_ID);
 			_RemoveFileMenuButton(FILE_MENU_EYE_OF_RUBISS_STRUCTURE_ID);
+			_RemoveFileMenuButton(FILE_MENU_DQB2_DIORAMA_ID);
+			_RemoveFileMenuButton(FILE_MENU_DQB2_BLUEPRINT_ID);
 			UpdateLoadedData();
 		}
 
@@ -991,11 +1349,24 @@ namespace EyeOfRubiss.Scenes
 		// These don't check for unsaved changes
 		public void SaveAll()
 		{
-			_WorldData?.Save();
+			SaveWorldData();
+			SaveParamData();
 
-			_CommonData?.Save();
-			_StageData?.Save();
-			_ScreenshotData?.Save();
+			SaveStageData();
+			SaveCommonData();
+			SaveScreenshotData();
+
+			if (_EyeOfRubissStructure is not null)
+			{
+				if (string.IsNullOrEmpty(_EyeOfRubissStructure.Filename) || _EyeOfRubissStructure.Filename.ToLower().EndsWith(".json"))
+				{
+					SaveEyeOfRubissStructureFile();
+				}
+				else
+				{
+					ExportEyeOfRubissStructureFileAsBlueprint();
+				}
+			}
 		}
 		public void TrySaveFolder(string path)
 		{
@@ -1513,18 +1884,7 @@ namespace EyeOfRubiss.Scenes
 					switch (buttonId)
 					{
 						case 0: // Save
-							if (string.IsNullOrEmpty(_EyeOfRubissStructure.Filename))
-							{
-								_FileDialogState = FileDialogStateEnum.SaveEyeOfRubissStructureFile;
-								_FileDialog.Title = "Save Structure...";
-								_FileDialog.SetFilter("*.json");
-								_FileDialog.FileMode = FileDialog.FileModeEnum.SaveFile;
-								_FileDialog.PopupCentered();
-							}
-							else
-							{
-								SaveEyeOfRubissStructureFile();
-							}
+							SaveEyeOfRubissStructureFile();
 							break;
 						case 3: // Save As...
 							_FileDialogState = FileDialogStateEnum.SaveEyeOfRubissStructureFile;
@@ -1551,6 +1911,18 @@ namespace EyeOfRubiss.Scenes
 							break;
 					}
 					break;
+			}
+		}
+
+		public void _On_Edit_PopupMenu_IdPressed(int id)
+		{
+			if (id == 8)
+			{
+				_FileDialog.FileMode = FileDialog.FileModeEnum.OpenFiles;
+				_FileDialogState = FileDialogStateEnum.CopyFromFile;
+				_FileDialog.Title = "Open a file";
+				_FileDialog.SetFilter("*.bin, *.json, *.unknown, *.dat");
+				_FileDialog.PopupCentered();
 			}
 		}
 
@@ -1593,7 +1965,7 @@ namespace EyeOfRubiss.Scenes
 					break;
 
 				case FileDialogStateEnum.SaveParamData:
-					_ParamData?.Save(path);
+					SaveParamData(path);
 					break;
 				case FileDialogStateEnum.ExportRawParamData:
 					_ParamData?.Export(path);
@@ -1653,6 +2025,20 @@ namespace EyeOfRubiss.Scenes
 					_WorldEditorScene.ExportSelection(path);
 					break;
 				
+				case FileDialogStateEnum.ExportResidentDQB1:
+					_ResidentEditorDQB1.Export(path);
+					break;
+				case FileDialogStateEnum.ImportResidentDQB1:
+					_ResidentEditorDQB1.Import(path);
+					break;
+				
+				case FileDialogStateEnum.ExportResidentDQB2:
+					_ResidentEditorDQB2.Export(path);
+					break;
+				case FileDialogStateEnum.ImportResidentDQB2:
+					_ResidentEditorDQB2.Import(path);
+					break;
+				
 				case FileDialogStateEnum.ExportSnapshot:
 					_ScreenshotEditor.Export(path);
 					break;
@@ -1675,6 +2061,10 @@ namespace EyeOfRubiss.Scenes
 				{
 					OpenFile(path);
 				}
+			}
+			else if (_FileDialogState == FileDialogStateEnum.CopyFromFile)
+			{
+				CopyFromFile(paths);
 			}
 		}
 
@@ -1736,34 +2126,59 @@ namespace EyeOfRubiss.Scenes
                     }
                 }
             }
+			else if (_ParamData is not null)
+			{
+				_ParamData.Score = (uint)value;
+			}
 		}
 		public void _On_Time_SpinBox_ValueChanged(double value)
         {
             if (_StageData is not null)
 				_StageData.Time = (float)(value / 1.2);
+			else if (_ParamData is not null)
+				_ParamData.Time = (float)(value / 2.4);
         }
 		public void _On_Weather_OptionButton_ItemSelected(int index)
 		{
 			if (_StageData is not null)
-				_StageData.Weather = (byte)index;
+			{
+				_StageData.Weather = (byte)_Weather_OptionButton.GetItemId(index);
+			}
+			else if (_ParamData is not null)
+			{
+				_ParamData.Weather = (byte)_Weather_OptionButton.GetItemId(index);
+			}
 		}
 		public void _On_PassTime_CheckBox_Toggled(bool toggledOn)
 		{
 			if (_CommonData is not null)
 			{
 				_CommonData.TimeIsPassing = toggledOn;
-				GD.Print(_CommonData.TimeIsPassing ? "Time is passing." : "Time has stopped.");
 			}
 		}
 
 		public void _On_Inventory_Button_Pressed()
 		{
-			
+			if (_ParamData is not null)
+			{
+				_InventoryEditor.Popup(_ParamData);
+			}
+			else if (_CommonData is not null)
+			{
+				_InventoryEditor.Popup(_CommonData);
+			}
 		}
 
 		public void _On_Residents_Button_Pressed()
 		{
-			
+			if (_ParamData is not null)
+			{
+				_ResidentEditorDQB1.Popup(_ParamData);
+			}
+			else if (_CommonData is not null)
+			{
+				_ResidentEditorDQB2.Popup(_CommonData);
+			}
 		}
 
 		public void _On_Snapshots_Button_Pressed()
@@ -1838,6 +2253,40 @@ namespace EyeOfRubiss.Scenes
 			_FileDialog.PopupCentered();
 		}
 
+		public void _On_ResidentEditorDQB1_ExportRequested()
+		{
+			_FileDialogState = FileDialogStateEnum.ExportResidentDQB1;
+			_FileDialog.Title = "Export resident...";
+			_FileDialog.SetFilter("*", "All Files");
+			_FileDialog.FileMode = FileDialog.FileModeEnum.SaveFile;
+			_FileDialog.PopupCentered();
+		}
+		public void _On_ResidentEditorDQB1_ImportRequested()
+		{
+			_FileDialogState = FileDialogStateEnum.ImportResidentDQB1;
+			_FileDialog.Title = "Import resident...";
+			_FileDialog.SetFilter("*", "All Files");
+			_FileDialog.FileMode = FileDialog.FileModeEnum.OpenFile;
+			_FileDialog.PopupCentered();
+		}
+
+		public void _On_ResidentEditorDQB2_ExportRequested()
+		{
+			_FileDialogState = FileDialogStateEnum.ExportResidentDQB2;
+			_FileDialog.Title = "Export resident...";
+			_FileDialog.SetFilter("*", "All Files");
+			_FileDialog.FileMode = FileDialog.FileModeEnum.SaveFile;
+			_FileDialog.PopupCentered();
+		}
+		public void _On_ResidentEditorDQB2_ImportRequested()
+		{
+			_FileDialogState = FileDialogStateEnum.ImportResidentDQB2;
+			_FileDialog.Title = "Import resident...";
+			_FileDialog.SetFilter("*", "All Files");
+			_FileDialog.FileMode = FileDialog.FileModeEnum.OpenFile;
+			_FileDialog.PopupCentered();
+		}
+
 		public void _On_ScreenshotEditor_ExportRequested()
 		{
 			_FileDialogState = FileDialogStateEnum.ExportSnapshot;
@@ -1880,37 +2329,56 @@ namespace EyeOfRubiss.Scenes
 		}
 		#endregion
 
-		#region TEST
-		/*public void DoVerySimpleCopy()
+		#region Static methods
+		public static string GetPlayerName()
 		{
-			int x1 = (int)Math.Round(GetNode<SpinBox>("VeryBasicCopierWindow/VBoxContainer/GridContainer/SpinBoxX1").Value);
-			int y1 = (int)Math.Round(GetNode<SpinBox>("VeryBasicCopierWindow/VBoxContainer/GridContainer/SpinBoxY1").Value);
-			int z1 = (int)Math.Round(GetNode<SpinBox>("VeryBasicCopierWindow/VBoxContainer/GridContainer/SpinBoxZ1").Value);
-			int x2 = (int)Math.Round(GetNode<SpinBox>("VeryBasicCopierWindow/VBoxContainer/GridContainer/SpinBoxX2").Value);
-			int y2 = (int)Math.Round(GetNode<SpinBox>("VeryBasicCopierWindow/VBoxContainer/GridContainer/SpinBoxY2").Value);
-			int z2 = (int)Math.Round(GetNode<SpinBox>("VeryBasicCopierWindow/VBoxContainer/GridContainer/SpinBoxZ2").Value);
-			int x3 = (int)Math.Round(GetNode<SpinBox>("VeryBasicCopierWindow/VBoxContainer/HBoxContainer/SpinBoxX3").Value);
-			int y3 = (int)Math.Round(GetNode<SpinBox>("VeryBasicCopierWindow/VBoxContainer/HBoxContainer/SpinBoxY3").Value);
-			int z3 = (int)Math.Round(GetNode<SpinBox>("VeryBasicCopierWindow/VBoxContainer/HBoxContainer/SpinBoxZ3").Value);
+			if (_Instance is not null)
+			{
+				if (_Instance._CommonData is CommonData commonData)
+				{
+					return commonData.PlayerName;
+				}
+			}
 
-			Vector3I from = new(x1, y1, z1);
-			Vector3I bounds = new Vector3I(x2, y2, z2) - from;
-			Vector3I to = new(x3, y3, z3);
-
-			_WorldEditorScene.CopyPaste(from, bounds, to);
+			return "the Builder";
 		}
-		public void BasicPropEditor()
+		public static string GetResidentName(int id)
 		{
-			int propId = (int)Math.Round(GetNode<SpinBox>("BasicPropEditor/VBoxContainer/HBoxContainer1/SpinBox").Value);
-			int rotation = (int)Math.Round(GetNode<SpinBox>("BasicPropEditor/VBoxContainer/HBoxContainer1/SpinBox2").Value);
-
-			int x = (int)Math.Round(GetNode<SpinBox>("BasicPropEditor/VBoxContainer/HBoxContainer2/SpinBoxX").Value);
-			int y = (int)Math.Round(GetNode<SpinBox>("BasicPropEditor/VBoxContainer/HBoxContainer2/SpinBoxY").Value);
-			int z = (int)Math.Round(GetNode<SpinBox>("BasicPropEditor/VBoxContainer/HBoxContainer2/SpinBoxZ").Value);
-
-			_WorldEditorScene.DoPropEditor(new Vector3I(x, y, z), (ushort)propId, (byte)rotation);
+			if (_Instance._CommonData is null)
+			{
+				return Info.DQB2.StoryPeopleName.Get(id);
+			}
+			else
+			{
+				CommonData.Resident resident = _Instance._CommonData.GetResident(id);
+				if (resident.UseCustomName)
+				{
+					return resident.Name;
+				}
+				else
+				{
+					return Info.DQB2.StoryPeopleName.Get(id);
+					// TODO generic names
+				}
+			}
 		}
-		*/
+
+		public static void PopupWindow(string title, string text)
+		{
+			if (_Instance is null)
+				return;
+
+            AcceptDialog dialog = new()
+            {
+                Title = title,
+                DialogText = text
+            };
+            dialog.Canceled += dialog.QueueFree;
+			dialog.Confirmed += dialog.QueueFree;
+			
+			_Instance.AddChild(dialog);
+			dialog.PopupCentered();
+		}
 		#endregion
 	}
 }

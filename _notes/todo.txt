@@ -1,4 +1,3 @@
-fix weather selection
 clothes editing
 inventory editing
 npc editing
@@ -6,37 +5,51 @@ npcs editable from map
 connecting tiles
 minimap editing
 slope edges tool
-mass move residents
 chisel shapes
-Chisel Tool
 Fix Fill Tool
-Delete Decorations Tool
-"Extend Buildable Area" - Option to fill all chunks bottom with bedrock
 Raise/Lower Entire Island Tool
 Biome Brush (Convert Existing props toggle, Place new props toggle)
-Break user-locked saves
-Click on signs
-Click on chests
-BlockEntity Selector
 Japanese translation
-make "Export" export as filetype (blueprint or EORS)
 Complete BGPartsModel
 BGParts fake blocks
 multiple selection in block/prop selector
 try to fix water transparency
 crack dqb1 checksum
-see if gravity globules are stored in stgdat
 sort bgparts, items, and blocks
 upgrade selector with categories
 add good icons to props without it
 DQB1/EORS set parts block for overlapping parts when deleting parts
-DQB1 chests, signs, item displays
-DQB1 time
-DQB1 stop time
-DQB1 npc rotation
+Set prop shells when importing blueprint/diorama
 add effects and collision to DQB1 BGPartsInfo
-File>New
-Builder's name instead of {pname}
 Chunk expansion DQB1
 refactor block & prop placement
-make it so that you can't erase bedrock, dqb1 water, etc.
+Let you disable prop deletion
+Let you disable block entity deletion
+storage editor
+better item display editor
+better magnetic block editor
+do the generic names
+fluid editing in dqb1
+copy from file
+evil idol gimmick
+growupdata dqb1
+correct addresses of BuildingArea
+woosh widget gimmicks
+smashing sign gimmick
+worm food gimmick
+gravity globule gimmick
+DQB1 prop shells for pre-switch versions
+Make "open folder" work on dqb1 files
+Make Export have a submenu: Raw Data, JSON File, Pencil Sketch, DQB1 Blueprint, DQB1 Diorama, DQB2 Blueprint, DQB2 Diorama
+fix cracked floorboard orientation
+isometric mouse projection
+fix blooming poxglove model
+Connecting window rotation pencil sketch
+fix selecting NPCsprite when invisible
+rework both diorama loaders
+diorama header implement
+fix citadel wall voxels/icons/names
+
+look for status effect data
+map out dog find data (stgdat)
+check if unity still has prop limit

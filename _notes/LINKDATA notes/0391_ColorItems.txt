@@ -1,0 +1,19 @@
+# DYEABLE ITEMS #
+
+0x00 = ushort(?) 0x0100 (256) (amount of entries in file)
+0x02..0x3F = Empty
+0x40..0x43F = uint[] Integers from 0-255
+0x440..01C3F = Dyeable Item Data[] (0x18 bytes each) (256 count)
+    +0x00 = ushort Base Item ID
+    +0x02..+0x03 = Padding?
+    +0x04 = ushort White Item ID
+    +0x06 = ushort Black Item ID
+    +0x08 = ushort Purple Item ID
+    +0x0A = ushort Pink Item ID
+    +0x0C = ushort Red Item ID
+    +0x0E = ushort Green Item ID
+    +0x10 = ushort Yellow Item ID
+    +0x12 = ushort Blue Item ID
+    +0x14 = byte Item or BGParts (0 for item, 2 for BGParts, possibly 1 for block but not used?)
+    +0x15 = Unknown? (Always 1 if used)
+    +0x16..+0x17 = Padding?

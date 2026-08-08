@@ -20,8 +20,6 @@ namespace EyeOfRubiss
         private bool _Loaded = false;
         private bool _BGPartsLoaded = false;
 
-        private NPCSprite _SelectedNPCSprite;
-
         public override string GetDebugInfo(Vector3I position)
         {
             StageData.BlockInstance block = _StageData.GetBlockAtPosition(position);
@@ -33,8 +31,12 @@ namespace EyeOfRubiss
 				result += $"Targeted block: {BlockInfo.Get(block.BlockID).Name} [{block.BlockID}]";
 				result += $"\nX: {position.X}, Y: {position.Y}, Z: {position.Z}";
 	    		result += $"\nChunk: {dataPosition.X}, Layer: {dataPosition.Y}, Tile: {dataPosition.Z}";
+				result += $"\nChunk ID: {_StageData.GetChunk(dataPosition.X).BlockDataIndex}";
 	    		result += $"\nPlaced by Builder: {block.PlayerPlaced}";
 	    		result += $"\nShape: {block.Chisel}";
+
+				StageData.BiomeMapData biome = _StageData.GetBiomeMapData(position);
+				result += $"\nBiome: {biome.Biome}, Area: {biome.Area}, Diorama: {biome.Diorama}";
 
 				if (_StageData.GetOverlappingBGParts(position) is StageData.BGParts bgParts)
 				{
@@ -53,9 +55,7 @@ namespace EyeOfRubiss
         #region Scene Setup
         public void LoadStageData(StageData stageData)
 		{
-            GD.Print("Loading");
 			UnloadStageData();
-
 			_StageData = stageData;
 
 			if (_WorldEditorScene.ShowBGParts)
@@ -85,10 +85,11 @@ namespace EyeOfRubiss
 		
 		public void LoadCommonData(CommonData commonData)
 		{
+            _CommonData = commonData;
+
 			if (_StageData is null)
 				return;
 
-            _CommonData = commonData;
 			CreateResidents(_CommonData);
 
 			_WorldEditorScene._PlayerDisplay.SetNPCName(_CommonData.PlayerName);
@@ -207,7 +208,7 @@ namespace EyeOfRubiss
 			// 	_WorldEditorScene._StatusLabel.PrintMessage("Cannot place blocks out of bounds.");
 			// }
 		}
-		public void SetBGParts(Vector3I position, ushort bgPartsId, byte direction, PartsType? partsBlock = null, bool collision = true, bool effects = true, byte connectingWindowRotation = 0)
+		public void SetBGParts(Vector3I position, ushort bgPartsId, byte direction, PartsType? partsBlock = null, bool collision = true, bool effects = true, bool unbreakable = false, byte size = 0, byte connectingWindowRotation = 0)
 		{
 			if (_StageData is null)
 				return;
@@ -217,6 +218,8 @@ namespace EyeOfRubiss
 			StageData.BGParts bgParts = _StageData.AddBGParts(position, bgPartsId, direction); // TODO enum for fixed rotations
 			bgParts.Effects = effects && partsInfo.Effects;
 			bgParts.Collision = collision && partsInfo.Collision;
+			bgParts.Unbreakable = unbreakable;
+			bgParts.Size = size;
 			bgParts.ConnectingWindowRotation = connectingWindowRotation;
 			
 			(Vector3I start, Vector3I end) = bgParts.GetBounds();
@@ -241,6 +244,7 @@ namespace EyeOfRubiss
 			foreach (StageData.BGParts prop in props)
 			{
 				(Vector3I start, Vector3I end) = prop.GetBounds();
+				_StageData.ClearBlockEntitiesAtPosition(prop.GetPosition());
 				_WorldEditorScene._BGPartsGridManager.ClearCellItem(prop.GetPosition());
 				prop.Clear();
 
@@ -267,8 +271,13 @@ namespace EyeOfRubiss
 
 		public void ChangePartsBlock(Vector3I position, PartsType propShell)
 		{
-			BlockInfo blockInfo = _StageData.GetBlockAtPosition(position).GetInfo();
-			SetBlock(position, FluidConverter.Convert(blockInfo.FluidType, blockInfo.FluidLevel, propShell));
+			StageData.BlockInstance block = _StageData.GetBlockAtPosition(position);
+			if (block is null)
+				return;
+			
+			BlockInfo blockInfo = block.GetInfo();
+			if (blockInfo.GetPartsType() != propShell)
+				SetBlock(position, FluidConverter.Convert(blockInfo.FluidType, blockInfo.FluidLevel, propShell));
 		}
 
         public override void ReplaceBlock(int replace, int with, Vector3I? from = null, Vector3I? to = null)
@@ -339,17 +348,17 @@ namespace EyeOfRubiss
 			
 			if (!StageData.PositionIsInBounds(position))
 			{
-				_WorldEditorScene._StatusLabel.PrintMessage("Cannot place blocks out of bounds.");
+				StatusLabel.PrintMessage("Cannot place blocks out of bounds.");
 				return;
 			}
 
             if (block >= ushort.MinValue && block <= ushort.MaxValue)
 				SetBlock(position, (ushort)block);
         }
-        public override void DoSetBGParts(Vector3I position, int bgParts, PartsType? partsBlock = null, bool collision = true, bool effects = true)
+        public override void DoSetBGParts(Vector3I position, int bgParts, PartsType? partsBlock = null, bool collision = true, bool effects = true, bool unbreakable = false, byte size = 0)
         {
             if (bgParts >= ushort.MinValue && bgParts <= ushort.MaxValue)
-				SetBGParts(position, (ushort)bgParts, _WorldEditorScene.GetBGPartsPlacementDirection(), partsBlock: partsBlock, collision: collision, effects: effects);
+				SetBGParts(position, (ushort)bgParts, _WorldEditorScene.GetBGPartsPlacementDirection(), partsBlock: partsBlock, collision: collision, effects: effects, unbreakable: unbreakable, size: size);
         }
         public override void DoSetFluid(Vector3I position, int fluidType, int fluidLevel)
         {
@@ -368,12 +377,55 @@ namespace EyeOfRubiss
             SetBlock(position, BLOCK_AIR);
         }
 
-		public override void DoPointer()
+        public override void DoChisel(Vector3I position, ChiselShape shape)
+        {
+            if (_StageData is null)
+				return;
+			
+			if (_StageData.GetBlockAtPosition(position) is not StageData.BlockInstance block)
+				return;
+			
+			block.Chisel = shape;
+        }
+
+		public override void DoPointer(Vector3I position)
 		{
-			Node3D pointedObject = _WorldEditorScene.GetPointedObject();
-			if (pointedObject is NPCSprite npc)
+			if (_StageData is null)
+				return;
+
+			foreach (StageData.BGParts bgParts in _StageData.GetAllOverlappingBGParts(position))
 			{
-				SelectNPC(npc);
+				Vector3I partsPosition = bgParts.GetPosition();
+				if (_StageData.GetStorageAtPosition(partsPosition) is StageData.Storage storage)
+				{
+					_WorldEditorScene._StorageEditor.Popup(storage);
+					return;
+				}
+				if (_StageData.GetItemDisplayAtPosition(partsPosition) is StageData.ItemDisplay display)
+				{
+					_WorldEditorScene._ItemDisplayEditor.Popup(display);
+					return;
+				}
+				if (_StageData.GetSignpostAtPosition(partsPosition) is StageData.Signpost signpost)
+				{
+					_WorldEditorScene._SignpostEditor.Popup(signpost);
+					return;
+				}
+				if (_StageData.GetSalutationStationAtPosition(partsPosition) is StageData.SalutationStation station)
+				{
+					_WorldEditorScene._SalutationStationEditor.Popup(station);
+					return;
+				}
+				if (_StageData.GetInstrumentAtPosition(partsPosition) is StageData.Instrument instrument)
+				{
+					_WorldEditorScene._InstrumentEditor.Popup(instrument);
+					return;
+				}
+				if (_StageData.GetMagneticBlockAtPosition(partsPosition) is StageData.MagneticBlock block)
+				{
+					_WorldEditorScene._MagneticBlockEditor.Popup(block);
+					return;
+				}
 			}
 		}
 
@@ -476,34 +528,281 @@ namespace EyeOfRubiss
 			}
         }
         #endregion
-		
+
+        #region Tools
+        public override void FillInChunks()
+        {
+            if (_StageData is null)
+				return;
+			
+			int seaLevel = _StageData.GetSeaLevel(_CommonData);
+			
+			foreach (StageData.Chunk chunk in _StageData.GetUsedChunks())
+			{
+				for (int x = 0; x < StageData.CHUNK_SIZE; x++)
+				{
+					for (int z = 0; z < StageData.CHUNK_SIZE; z++)
+					{
+						Vector3I position = new(x, 0, z);
+						StageData.BlockInstance block = chunk.GetBlock(position);
+						if (block is not null && block.BlockID == Constants.BLOCK_AIR)
+						{
+							block.BlockID = Constants.BLOCK_BEDROCK;
+							block.Chisel = ChiselShape.FullBlock;
+							block.PlayerPlaced = false;
+
+							for (int y = 1; y < seaLevel; y++)
+							{
+								chunk.SetBlock(new Vector3I(x, y, z), 341);
+							}
+
+							if (seaLevel > 0)
+								chunk.SetBlock(new Vector3I(x, seaLevel, z), 349);	
+						}
+					}
+				}
+			}
+
+			ReloadTerrain();
+        }
+
+        public override void DeleteAllBGParts()
+        {
+            if (_StageData is null)
+				return;
+			
+			HashSet<Vector3I> partsBlocks = [];
+			foreach (StageData.BGParts bgParts in _StageData.GetBGParts())
+			{
+				if (!bgParts.Exists())
+					continue;
+
+				(Vector3I start, Vector3I end) = bgParts.GetBounds();
+				for (int x = start.X; x <= end.X; x++)
+				{
+					for (int y = start.Y; y <= end.Y; y++)
+					{
+						for (int z = start.Z; z <= end.Z; z++)
+						{
+							partsBlocks.Add(new Vector3I(x, y, z));
+						}
+					}
+				}
+				bgParts.Clear();
+			}
+			foreach (Vector3I position in partsBlocks)
+			{
+				ChangePartsBlock(position, PartsType.None);
+			}
+
+			_StageData.ClearAllBlockEntities();
+			_StageData.PropCount = 0;
+			_WorldEditorScene._BGPartsGridManager.Clear();
+        }
+
+        public override void FixPropShells()
+        {
+            if (_StageData is null)
+				return;
+			
+			foreach (StageData.BGParts bgParts in _StageData.GetBGParts())
+			{
+				(Vector3I start, Vector3I end) = bgParts.GetBounds();
+				for (int x = start.X; x <= end.X; x++)
+				{
+					for (int y = start.Y; y <= end.Y; y++)
+					{
+						for (int z = start.Z; z <= end.Z; z++)
+						{
+							Vector3I position = new(x, y, z);
+							if (_StageData.GetBlockAtPosition(position) is StageData.BlockInstance block && block.GetInfo().GetPartsType() == PartsType.None)
+							{
+								ChangePartsBlock(position, bgParts.GetInfo().Block);
+							}
+						}
+					}
+				}
+			}
+        }
+
+        public override void FixFakeBlocks()
+        {
+            if (_StageData is null)
+			 	return;
+			
+			foreach (StageData.BGParts bgParts in _StageData.GetBGParts())
+			{
+				BGPartsInfo info = bgParts.GetInfo();
+				if (info.IsFakeBlock())
+				{
+					Vector3I position = bgParts.GetPosition();
+					bgParts.Clear();
+					_WorldEditorScene._BGPartsGridManager.ClearCellItem(position);
+					_StageData.ClearBlockEntitiesAtPosition(position);
+
+					SetBlock(position, info.GetFakeBlockID(), destroyProps: false);
+				}
+			}
+        }
+
+        public override void ClearOrphanedBlockEntities()
+        {
+            if (_StageData is null)
+				return;
+			
+			foreach (StageData.Storage storage in _StageData.GetAllStorage())
+			{
+				if (storage.Enabled && _StageData.GetBGPartsAtPosition(storage.GetPosition()) is null)
+					storage.Clear();
+			}
+			
+			foreach (StageData.ItemDisplay display in _StageData.GetAllItemDisplays())
+			{
+				if (display.Enabled && _StageData.GetBGPartsAtPosition(display.GetPosition()) is null)
+					display.Clear();
+			}
+			
+			foreach (StageData.CraftingStation station in _StageData.GetCraftingStations())
+			{
+				if (_StageData.GetBGPartsAtPosition(station.GetPosition()) is null)
+					station.Clear();
+			}
+			
+			foreach (StageData.Signpost signpost in _StageData.GetSignposts())
+			{
+				if (signpost.Enabled && _StageData.GetBGPartsAtPosition(signpost.GetPosition()) is null)
+					signpost.Clear();
+			}
+			
+			foreach (StageData.SalutationStation station in _StageData.GetSalutationStations())
+			{
+				if (station.Enabled && _StageData.GetBGPartsAtPosition(station.GetPosition()) is null)
+					station.Clear();
+			}
+			
+			foreach (StageData.Crop crop in _StageData.GetCrops())
+			{
+				if (_StageData.GetBGPartsAtPosition(crop.GetPosition()) is null)
+					crop.Clear();
+			}
+			
+			foreach (StageData.Scarecrow scarecrow in _StageData.GetScarecrows())
+			{
+				if (scarecrow.Enabled && _StageData.GetBGPartsAtPosition(scarecrow.GetPosition()) is null)
+					scarecrow.Clear();
+			}
+			
+			foreach (StageData.Instrument instrument in _StageData.GetInstruments())
+			{
+				if (_StageData.GetBGPartsAtPosition(instrument.GetPosition()) is null)
+					instrument.Clear();
+			}
+			
+			foreach (StageData.MagneticBlock block in _StageData.GetMagneticBlocks())
+			{
+				if (block.Enabled && _StageData.GetBGPartsAtPosition(block.GetPosition()) is null)
+					block.Clear();
+			}
+			
+			foreach (StageData.MagicPencil pencil in _StageData.GetMagicPencils())
+			{
+				if (pencil.Enabled && _StageData.GetBGPartsAtPosition(pencil.GetPosition()) is null)
+					pencil.Clear();
+			}
+			
+			foreach (StageData.FireworkCannon cannon in _StageData.GetFireworkCannons())
+			{
+				if (cannon.Enabled && _StageData.GetBGPartsAtPosition(cannon.GetPosition()) is null)
+					cannon.Clear();
+			}
+			
+			foreach (StageData.PictureFrame frame in _StageData.GetPictureFrames())
+			{
+				if (frame.Enabled && _StageData.GetBGPartsAtPosition(frame.GetPosition()) is null)
+					frame.Clear();
+			}
+			
+			foreach (StageData.Watchfire watchfire in _StageData.GetWatchfires())
+			{
+				if (watchfire.Enabled && _StageData.GetBGPartsAtPosition(watchfire.GetPosition()) is null)
+					watchfire.Clear();
+			}
+			
+			foreach (StageData.WardOfErdrick ward in _StageData.GetWardsOfErdrick())
+			{
+				if (ward.Enabled && _StageData.GetBGPartsAtPosition(ward.GetPosition()) is null)
+					ward.Clear();
+			}
+			
+			foreach (StageData.Buggy buggy in _StageData.GetBuggies())
+			{
+				if (buggy.Enabled && _StageData.GetBGPartsAtPosition(buggy.GetPosition()) is null)
+					buggy.Clear();
+			}
+			
+			foreach (StageData.Toilet toilet in _StageData.GetToilets())
+			{
+				if (toilet.Enabled && _StageData.GetBGPartsAtPosition(toilet.GetPosition()) is null)
+					toilet.Clear();
+			}
+        }
+
+        public override void CreateWaterCeiling()
+        {
+            if (_StageData is null)
+				return;
+			
+			int worldTop = StageData.WORLD_HEIGHT_BLOCKS - 1;
+			int floodDataCount = 0;
+			foreach (StageData.Chunk chunk in _StageData.GetUsedChunks())
+			{
+				for (int x = 0; x < StageData.CHUNK_SIZE; x++)
+				{
+					for (int z = 0; z < StageData.CHUNK_SIZE; z++)
+					{
+						if (x % 96 != 0 && z % 96 != 0 &&
+							chunk.GetBlock(new Vector3I(x, 0, z)) is StageData.BlockInstance bottom && bottom.BlockID != 0 &&
+							chunk.GetBlock(new Vector3I(x, worldTop, z)) is StageData.BlockInstance top && top.BlockID == 0)
+						{
+							chunk.SetBlock(new Vector3I(x, worldTop, z), 145);
+						}
+					}
+				}
+
+				_StageData.SetUInt16(0xC15AB + floodDataCount * 12 + 4, (ushort)(chunk.GetOrigin().X + 31));
+				_StageData.SetUInt16(0xC15AB + floodDataCount * 12 + 6, (ushort)(chunk.GetOrigin().Z + 31));
+				_StageData.SetByte(0xC15AB + floodDataCount * 12 + 8, (byte)worldTop);
+				floodDataCount++;
+			}
+			_StageData.SetUInt16(0xC15A7, (ushort)floodDataCount);
+
+			ReloadTerrain();
+        }
+		#endregion
+
         #region NPC editing
-		public void SelectNPC(NPCSprite npc)
-		{
-			_WorldEditorScene._Gizmo.ClearSelection();
-			_WorldEditorScene._Gizmo.Select(npc);
-			_SelectedNPCSprite = npc;
-		}
-        public override void OnGizmo3DTransformEnd()
+        public override void OnGizmo3DTransformEnd(NPCSprite npcSprite)
         {
             if (_CommonData is null)
 				return;
 
-			if (_SelectedNPCSprite == _WorldEditorScene._PlayerDisplay)
+			if (npcSprite.ResidentID == -1)
 			{
-				_CommonData.PlayerPositionX = _SelectedNPCSprite.Position.X;
-				_CommonData.PlayerPositionY = _SelectedNPCSprite.Position.Y;
-				_CommonData.PlayerPositionZ = _SelectedNPCSprite.Position.Z;
+				_CommonData.PlayerPositionX = npcSprite.Position.X;
+				_CommonData.PlayerPositionY = npcSprite.Position.Y;
+				_CommonData.PlayerPositionZ = npcSprite.Position.Z;
 
-				_CommonData.PlayerRotation = _SelectedNPCSprite.Rotation.Y;
+				_CommonData.PlayerRotation = npcSprite.Rotation.Y;
 			}
 			else
 			{
-				_SelectedNPCSprite.Resident.PositionX = _SelectedNPCSprite.Position.X; // TODO rework with IDs
-				_SelectedNPCSprite.Resident.PositionY = _SelectedNPCSprite.Position.Y;
-				_SelectedNPCSprite.Resident.PositionZ = _SelectedNPCSprite.Position.Z;
+				CommonData.Resident resident = _CommonData.GetResident(npcSprite.ResidentID);
 
-				_SelectedNPCSprite.Resident.Rotation = _SelectedNPCSprite.Rotation.Y;
+				resident.PositionX = npcSprite.Position.X;
+				resident.PositionY = npcSprite.Position.Y;
+				resident.PositionZ = npcSprite.Position.Z;
+
+				resident.Rotation = npcSprite.Rotation.Y;
 			}
         }
         #endregion

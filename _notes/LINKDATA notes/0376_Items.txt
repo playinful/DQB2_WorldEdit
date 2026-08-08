@@ -1,0 +1,36 @@
+# ITEMS #
+
+0x00 = ushort(?) 0x0FA0 (4000) (amount of entries in file)
+0x02..0x3F = Empty
+0x40..0x3EBF = uint[] Integers from 0-3999
+0x3EC0..0x32CBF = Item Data[] (0x30 bytes each) (4000 count)
+    +0x00 = ushort Block/BGParts ID/Armour ID
+    ..
+    +0x06 = ushort Icon
+    ..
+    +0x18 = ushort Gratitude cost
+    +0x1A = ushort Sort A?
+    +0x1C = ushort Name/Description
+    +0x1E = byte Sort B?
+    +0x1F = byte Block or BGParts or Armour (1 = block, 2 = BGParts, 4 = Armour)
+    ..
+    +0x2B = byte Rarity
+    +0x2C
+        ..
+        0b000000X0 = bool Connecting
+        ..
+        0b00X00000 = bool Consumable
+        0b0X000000 = bool Material
+        0bX0000000 = bool Building Block
+    +0x2D
+        0b0000000X = bool Fixture
+        0b000000X0 = bool Furniture
+        0b00000X00 = bool Lighting
+        0b0000X000 = bool Wall Hanging
+        0b000X0000 = bool Decorative Item
+        0b00X00000 = bool Equipment
+        0b0X000000 = bool Farming Equipment
+        0bX0000000 = bool Machinery
+    +0x2E
+        0b0000000X = bool Crafting Station
+        0b000000X0 = bool Does not appear in Builderpedia

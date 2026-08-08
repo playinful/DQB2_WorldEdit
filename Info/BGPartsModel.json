@@ -392,7 +392,7 @@
 	},
 	{
 		"ID": 23,
-		"Name": "Twisted Tree Trunk (DQB2) [TODO check alignment]",
+		"Name": "Twisted Tree Trunk (DQB2)",
 		"Mesh": "res://Resources/Mesh/BGParts/twisted_tree_trunk/twisted_tree_trunk.obj",
 		"Materials": [
 			{
@@ -403,7 +403,7 @@
 				"Color": "ffffffff"
 			}
 		],
-		"MeshOffsetX": 0.5,
+		"MeshOffsetX": 1.5,
 		"MeshOffsetY": 0,
 		"MeshOffsetZ": -0.5
 	},
@@ -6129,15 +6129,6 @@
 		"MeshOffsetZ": 0
 	},
 	{
-		"ID": 356,
-		"Name": "Wheat [1/4] [TODO]",
-		"Mesh": null,
-		"Materials": [],
-		"MeshOffsetX": 0,
-		"MeshOffsetY": 0,
-		"MeshOffsetZ": 0
-	},
-	{
 		"ID": 357,
 		"Name": "Wheat [2/4]",
 		"Mesh": "res://Resources/Mesh/BGParts/wheat/wheat_2.obj",
@@ -11427,18 +11418,18 @@
 	},
 	{
 		"ID": 663,
-		"Name": "Deitree N [TODO]",
-		"Mesh": "",
+		"Name": "Deitree [3/3] (Alt)",
+		"Mesh": "res://Resources/Mesh/BGParts/deitree/deitree_3b.obj",
 		"Materials": [
 			{
-				"Texture": "res://Resources/Mesh/BGParts/deitree/deitree2.png",
+				"Texture": "res://Resources/Mesh/BGParts/deitree/deitree.png",
 				"Transparent": false,
 				"BackfaceCulling": true,
 				"Mask": null,
 				"Color": "ffffffff"
 			},
 			{
-				"Texture": "res://Resources/Mesh/BGParts/deitree/deitree2.png",
+				"Texture": "res://Resources/Mesh/BGParts/deitree/deitree.png",
 				"Transparent": true,
 				"BackfaceCulling": false,
 				"Mask": null,
@@ -14789,11 +14780,11 @@
 	},
 	{
 		"ID": 836,
-		"Name": "Deitree A [TODO]",
-		"Mesh": "",
+		"Name": "Deitree [1/3]",
+		"Mesh": "res://Resources/Mesh/BGParts/deitree/deitree_1.obj",
 		"Materials": [
 			{
-				"Texture": "res://Resources/Mesh/BGParts/deitree/deitree2.png",
+				"Texture": "res://Resources/Mesh/BGParts/deitree/deitree.png",
 				"Transparent": false,
 				"BackfaceCulling": true,
 				"Mask": null,
@@ -14807,7 +14798,7 @@
 				"Color": "ffffffff"
 			},
 			{
-				"Texture": "res://Resources/Mesh/BGParts/deitree/deitree2.png",
+				"Texture": "res://Resources/Mesh/BGParts/deitree/deitree.png",
 				"Transparent": true,
 				"BackfaceCulling": false,
 				"Mask": null,
@@ -14820,18 +14811,18 @@
 	},
 	{
 		"ID": 837,
-		"Name": "Deitree B [TODO]",
-		"Mesh": "",
+		"Name": "Deitree (Unused)",
+		"Mesh": "res://Resources/Mesh/BGParts/deitree/deitree_unused.obj",
 		"Materials": [
 			{
-				"Texture": "res://Resources/Mesh/BGParts/deitree/deitree3.png",
+				"Texture": "res://Resources/Mesh/BGParts/deitree/deitree_unused.png",
 				"Transparent": true,
 				"BackfaceCulling": true,
 				"Mask": null,
 				"Color": "ffffffff"
 			},
 			{
-				"Texture": "res://Resources/Mesh/BGParts/deitree/deitree3.png",
+				"Texture": "res://Resources/Mesh/BGParts/deitree/deitree_unused.png",
 				"Transparent": true,
 				"BackfaceCulling": false,
 				"Mask": null,
@@ -14844,11 +14835,11 @@
 	},
 	{
 		"ID": 838,
-		"Name": "Deitree C [TODO]",
-		"Mesh": "",
+		"Name": "Withered Deitree (Unused)",
+		"Mesh": "res://Resources/Mesh/BGParts/deitree/deitree_unused_dead.obj",
 		"Materials": [
 			{
-				"Texture": "res://Resources/Mesh/BGParts/deitree/deitree4.png",
+				"Texture": "res://Resources/Mesh/BGParts/deitree/deitree_unused_dead.png",
 				"Transparent": false,
 				"BackfaceCulling": true,
 				"Mask": null,
@@ -14868,18 +14859,18 @@
 	},
 	{
 		"ID": 839,
-		"Name": "Deitree D [TODO]",
-		"Mesh": "",
+		"Name": "Deitree Sapling [1/3]",
+		"Mesh": "res://Resources/Mesh/BGParts/deitree/deitree_sapling_1.obj",
 		"Materials": [
 			{
-				"Texture": "res://Resources/Mesh/BGParts/deitree/deitree_1.png",
+				"Texture": "res://Resources/Mesh/BGParts/deitree/deitree_sapling.png",
 				"Transparent": false,
 				"BackfaceCulling": true,
 				"Mask": null,
 				"Color": "ffffffff"
 			},
 			{
-				"Texture": "res://Resources/Mesh/BGParts/deitree/deitree_1.png",
+				"Texture": "res://Resources/Mesh/BGParts/deitree/deitree_sapling.png",
 				"Transparent": false,
 				"BackfaceCulling": false,
 				"Mask": null,
@@ -14892,18 +14883,18 @@
 	},
 	{
 		"ID": 840,
-		"Name": "Deitree E [TODO]",
-		"Mesh": "",
+		"Name": "Deitree [1/3] (Rooted)",
+		"Mesh": "res://Resources/Mesh/BGParts/deitree/deitree_1b.obj",
 		"Materials": [
 			{
-				"Texture": "res://Resources/Mesh/BGParts/deitree/deitree2.png",
+				"Texture": "res://Resources/Mesh/BGParts/deitree/deitree.png",
 				"Transparent": false,
 				"BackfaceCulling": true,
 				"Mask": null,
 				"Color": "ffffffff"
 			},
 			{
-				"Texture": "res://Resources/Mesh/BGParts/deitree/deitree2.png",
+				"Texture": "res://Resources/Mesh/BGParts/deitree/deitree.png",
 				"Transparent": false,
 				"BackfaceCulling": true,
 				"Mask": null,
@@ -14917,7 +14908,7 @@
 				"Color": "ffffffff"
 			},
 			{
-				"Texture": "res://Resources/Mesh/BGParts/deitree/deitree2.png",
+				"Texture": "res://Resources/Mesh/BGParts/deitree/deitree.png",
 				"Transparent": true,
 				"BackfaceCulling": false,
 				"Mask": null,
@@ -14930,11 +14921,11 @@
 	},
 	{
 		"ID": 841,
-		"Name": "Deitree F [TODO]",
-		"Mesh": "",
+		"Name": "Deitree [2/3]",
+		"Mesh": "res://Resources/Mesh/BGParts/deitree/deitree_1.obj",
 		"Materials": [
 			{
-				"Texture": "res://Resources/Mesh/BGParts/deitree/deitree2.png",
+				"Texture": "res://Resources/Mesh/BGParts/deitree/deitree.png",
 				"Transparent": false,
 				"BackfaceCulling": true,
 				"Mask": null,
@@ -14948,7 +14939,7 @@
 				"Color": "ffffffff"
 			},
 			{
-				"Texture": "res://Resources/Mesh/BGParts/deitree/deitree2.png",
+				"Texture": "res://Resources/Mesh/BGParts/deitree/deitree.png",
 				"Transparent": true,
 				"BackfaceCulling": false,
 				"Mask": null,
@@ -14961,18 +14952,18 @@
 	},
 	{
 		"ID": 842,
-		"Name": "Deitree G [TODO]",
-		"Mesh": "",
+		"Name": "Deitree [3/3]",
+		"Mesh": "res://Resources/Mesh/BGParts/deitree/deitree_3.obj",
 		"Materials": [
 			{
-				"Texture": "res://Resources/Mesh/BGParts/deitree/deitree2.png",
+				"Texture": "res://Resources/Mesh/BGParts/deitree/deitree.png",
 				"Transparent": false,
 				"BackfaceCulling": true,
 				"Mask": null,
 				"Color": "ffffffff"
 			},
 			{
-				"Texture": "res://Resources/Mesh/BGParts/deitree/deitree2.png",
+				"Texture": "res://Resources/Mesh/BGParts/deitree/deitree.png",
 				"Transparent": true,
 				"BackfaceCulling": false,
 				"Mask": null,
@@ -14985,18 +14976,18 @@
 	},
 	{
 		"ID": 843,
-		"Name": "Deitree H [TODO]",
-		"Mesh": "",
+		"Name": "Deitree [4/3]",
+		"Mesh": "res://Resources/Mesh/BGParts/deitree/deitree_4.obj",
 		"Materials": [
 			{
-				"Texture": "res://Resources/Mesh/BGParts/deitree/deitree1.png",
+				"Texture": "res://Resources/Mesh/BGParts/deitree/deitree_4.png",
 				"Transparent": false,
 				"BackfaceCulling": true,
 				"Mask": null,
 				"Color": "ffffffff"
 			},
 			{
-				"Texture": "res://Resources/Mesh/BGParts/deitree/deitree3.png",
+				"Texture": "res://Resources/Mesh/BGParts/deitree/deitree_4.png",
 				"Transparent": true,
 				"BackfaceCulling": false,
 				"Mask": null,
@@ -15009,8 +15000,8 @@
 	},
 	{
 		"ID": 844,
-		"Name": "Deitree Planter [TODO]",
-		"Mesh": "",
+		"Name": "Deitree Planter",
+		"Mesh": "res://Resources/Mesh/BGParts/deitree/deitree_planter_0.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/deitree/deitree_planter_0.png",
@@ -15026,8 +15017,8 @@
 	},
 	{
 		"ID": 845,
-		"Name": "Deitree Planter w/ Light Bulb [TODO]",
-		"Mesh": "",
+		"Name": "Deitree Planter w/ Light Bulb",
+		"Mesh": "res://Resources/Mesh/BGParts/deitree/deitree_planter_1.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/deitree/deitree_planter_1.png",
@@ -15050,8 +15041,8 @@
 	},
 	{
 		"ID": 846,
-		"Name": "Deitree Remains [TODO]",
-		"Mesh": "",
+		"Name": "Deitree Remains",
+		"Mesh": "res://Resources/Mesh/BGParts/deitree/deitree_dead.obj",
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/deitree/deitree_dead.png",
@@ -15074,19 +15065,19 @@
 	},
 	{
 		"ID": 847,
-		"Name": "Deitree L [TODO]",
-		"Mesh": "",
+		"Name": "Deitree Sapling [2/3]",
+		"Mesh": "res://Resources/Mesh/BGParts/deitree/deitree_sapling_2.obj",
 		"Materials": [
 			{
-				"Texture": "res://Resources/Mesh/BGParts/deitree/deitree_1.png",
+				"Texture": "res://Resources/Mesh/BGParts/deitree/deitree_sapling.png",
 				"Transparent": false,
 				"BackfaceCulling": true,
 				"Mask": null,
 				"Color": "ffffffff"
 			},
 			{
-				"Texture": "res://Resources/Mesh/BGParts/deitree/deitree_1.png",
-				"Transparent": false,
+				"Texture": "res://Resources/Mesh/BGParts/deitree/deitree_sapling.png",
+				"Transparent": true,
 				"BackfaceCulling": false,
 				"Mask": null,
 				"Color": "ffffffff"
@@ -15098,19 +15089,19 @@
 	},
 	{
 		"ID": 848,
-		"Name": "Deitree M [TODO]",
-		"Mesh": "",
+		"Name": "Deitree Sapling [3/3]",
+		"Mesh": "res://Resources/Mesh/BGParts/deitree/deitree_sapling_3.obj",
 		"Materials": [
 			{
-				"Texture": "res://Resources/Mesh/BGParts/deitree/deitree_1.png",
+				"Texture": "res://Resources/Mesh/BGParts/deitree/deitree_sapling.png",
 				"Transparent": false,
 				"BackfaceCulling": true,
 				"Mask": null,
 				"Color": "ffffffff"
 			},
 			{
-				"Texture": "res://Resources/Mesh/BGParts/deitree/deitree_1.png",
-				"Transparent": false,
+				"Texture": "res://Resources/Mesh/BGParts/deitree/deitree_sapling.png",
+				"Transparent": true,
 				"BackfaceCulling": false,
 				"Mask": null,
 				"Color": "ffffffff"
@@ -20654,12 +20645,21 @@
 	},
 	{
 		"ID": 1166,
-		"Name": "Deitree's Soul TODO",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Deitree's Soul",
+		"Mesh": "res://Resources/Mesh/BGParts/dummy/dummy.tres",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/dummy/glow_red.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
-		"MeshOffsetY": 0,
-		"MeshOffsetZ": 0
+		"MeshOffsetY": 1.5,
+		"MeshOffsetZ": 0,
+		"MeshSizeY": 3
 	},
 	{
 		"ID": 1167,
@@ -22835,7 +22835,7 @@
 	},
 	{
 		"ID": 1289,
-		"Name": "Blocky Branch [TODO check alignment]",
+		"Name": "Blocky Branch",
 		"Mesh": "res://Resources/Mesh/BGParts/blocky_branch/blocky_branch.obj",
 		"Materials": [
 			{
@@ -22848,7 +22848,7 @@
 		],
 		"MeshOffsetX": 0.5,
 		"MeshOffsetY": 0,
-		"MeshOffsetZ": -1.5
+		"MeshOffsetZ": -1.0
 	},
 	{
 		"ID": 1290,
@@ -27365,12 +27365,21 @@
 	},
 	{
 		"ID": 1549,
-		"Name": "Portal to Malhalla TODO",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Portal to Malhalla",
+		"Mesh": "res://Resources/Mesh/BGParts/dummy/dummy.tres",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/dummy/blackhole.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
-		"MeshOffsetY": 0.5,
-		"MeshOffsetZ": 0
+		"MeshOffsetY": 1.5,
+		"MeshOffsetZ": 0,
+		"MeshSizeY": 3
 	},
 	{
 		"ID": 1550,
@@ -28139,20 +28148,19 @@
 	},
 	{
 		"ID": 1600,
-		"Name": "Blue Fire TODO",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Blue Fire",
+		"Mesh": "res://Resources/Mesh/BGParts/dummy/dummy.tres",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/dummy/fire_blue.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
-		"MeshOffsetY": 0,
-		"MeshOffsetZ": 0
-	},
-	{
-		"ID": 1601,
-		"Name": "Orb of Heroes Glow TODO",
-		"Mesh": null,
-		"Materials": [],
-		"MeshOffsetX": 0,
-		"MeshOffsetY": 0,
+		"MeshOffsetY": 0.5,
 		"MeshOffsetZ": 0
 	},
 	{
@@ -28673,11 +28681,19 @@
 	},
 	{
 		"ID": 1627,
-		"Name": "Deitree Aura TODO",
-		"Mesh": null,
-		"Materials": [],
+		"Name": "Deitree Aura",
+		"Mesh": "res://Resources/Mesh/BGParts/dummy/dummy.tres",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/dummy/glow_blue.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
 		"MeshOffsetX": 0,
-		"MeshOffsetY": 0,
+		"MeshOffsetY": 0.5,
 		"MeshOffsetZ": 0
 	},
 	{
@@ -36018,11 +36034,11 @@
 	},
 	{
 		"ID": 2035,
-		"Name": "Vault Wall Rubble TODO",
-		"Mesh": "",
+		"Name": "Vault Wall Rubble",
+		"Mesh": "res://Resources/Mesh/BGParts/vault_wall_rubble/vault_wall_rubble.obj",
 		"Materials": [
 			{
-				"Texture": null,
+				"Texture": "res://Resources/Mesh/BGParts/vault_wall_rubble/vault_wall_rubble.png",
 				"Transparent": false,
 				"BackfaceCulling": true,
 				"Mask": null,
@@ -37035,20 +37051,11 @@
 	},
 	{
 		"ID": 2094,
-		"Name": "Fire TODO",
-		"Mesh": null,
-		"Materials": [],
-		"MeshOffsetX": 0,
-		"MeshOffsetY": 0,
-		"MeshOffsetZ": 0
-	},
-	{
-		"ID": 2095,
-		"Name": "Sinister Sconce TODO",
-		"Mesh": "res://Resources/Mesh/BGParts/sconce/sconce.obj",
+		"Name": "Fire",
+		"Mesh": "res://Resources/Mesh/BGParts/dummy/dummy.tres",
 		"Materials": [
 			{
-				"Texture": "res://Resources/Mesh/BGParts/sconce/sconce.png",
+				"Texture": "res://Resources/Mesh/BGParts/dummy/fire.png",
 				"Transparent": false,
 				"BackfaceCulling": true,
 				"Mask": null,
@@ -37056,7 +37063,7 @@
 			}
 		],
 		"MeshOffsetX": 0,
-		"MeshOffsetY": 0,
+		"MeshOffsetY": 0.5,
 		"MeshOffsetZ": 0
 	},
 	{
@@ -44517,7 +44524,7 @@
 	},
 	{
 		"ID": 2485,
-		"Name": "Twisted Tree Trunk (DQB1) [TODO check alignment]",
+		"Name": "Twisted Tree Trunk (DQB1)",
 		"Mesh": "res://Resources/Mesh/BGParts/twisted_tree_trunk/twisted_tree_trunk.obj",
 		"Materials": [
 			{
@@ -45682,6 +45689,196 @@
 		"Materials": [
 			{
 				"Texture": "res://Resources/Mesh/BGParts/wooden_steps/wooden_steps.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
+		"MeshOffsetX": 0,
+		"MeshOffsetY": 0,
+		"MeshOffsetZ": 0
+	},
+	{
+		"ID": 2553,
+		"Name": "Deitree's Soul 2",
+		"Mesh": "res://Resources/Mesh/BGParts/dummy/dummy.tres",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/dummy/glow_blue.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
+		"MeshOffsetX": 0,
+		"MeshOffsetY": 1.5,
+		"MeshOffsetZ": 0,
+		"MeshSizeY": 3
+	},
+	{
+		"ID": 2554,
+		"Name": "Yellow Glow",
+		"Mesh": "res://Resources/Mesh/BGParts/dummy/dummy.tres",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/dummy/glow_yellow.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
+		"MeshOffsetX": 0,
+		"MeshOffsetY": 0.5,
+		"MeshOffsetZ": 0
+	},
+	{
+		"ID": 2555,
+		"Name": "Blue Glow",
+		"Mesh": "res://Resources/Mesh/BGParts/dummy/dummy.tres",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/dummy/glow_blue.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
+		"MeshOffsetX": 0,
+		"MeshOffsetY": 0.5,
+		"MeshOffsetZ": 0
+	},
+	{
+		"ID": 2556,
+		"Name": "Red Glow",
+		"Mesh": "res://Resources/Mesh/BGParts/dummy/dummy.tres",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/dummy/glow_red.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
+		"MeshOffsetX": 0,
+		"MeshOffsetY": 0.5,
+		"MeshOffsetZ": 0
+	},
+	{
+		"ID": 2557,
+		"Name": "Green Glow",
+		"Mesh": "res://Resources/Mesh/BGParts/dummy/dummy.tres",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/dummy/glow_green.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
+		"MeshOffsetX": 0,
+		"MeshOffsetY": 0.5,
+		"MeshOffsetZ": 0
+	},
+	{
+		"ID": 2558,
+		"Name": "Yellow Lightning",
+		"Mesh": "res://Resources/Mesh/BGParts/dummy/dummy.tres",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/dummy/zap_yellow.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
+		"MeshOffsetX": 0,
+		"MeshOffsetY": 0.5,
+		"MeshOffsetZ": 0
+	},
+	{
+		"ID": 2559,
+		"Name": "Blue Lightning",
+		"Mesh": "res://Resources/Mesh/BGParts/dummy/dummy.tres",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/dummy/zap_blue.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
+		"MeshOffsetX": 0,
+		"MeshOffsetY": 0.5,
+		"MeshOffsetZ": 0
+	},
+	{
+		"ID": 2560,
+		"Name": "Red Lightning",
+		"Mesh": "res://Resources/Mesh/BGParts/dummy/dummy.tres",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/dummy/zap_red.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
+		"MeshOffsetX": 0,
+		"MeshOffsetY": 0.5,
+		"MeshOffsetZ": 0
+	},
+	{
+		"ID": 2561,
+		"Name": "Green Lightning",
+		"Mesh": "res://Resources/Mesh/BGParts/dummy/dummy.tres",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/dummy/zap_green.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
+		"MeshOffsetX": 0,
+		"MeshOffsetY": 0.5,
+		"MeshOffsetZ": 0
+	},
+	{
+		"ID": 2562,
+		"Name": "Base Flame - Large",
+		"Mesh": "res://Resources/Mesh/BGParts/dummy/dummy.tres",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/dummy/fire.png",
+				"Transparent": false,
+				"BackfaceCulling": true,
+				"Mask": null,
+				"Color": "ffffffff"
+			}
+		],
+		"MeshOffsetX": 1.5,
+		"MeshOffsetY": 0.5,
+		"MeshOffsetZ": -1.5,
+		"MeshSizeX": 4,
+		"MeshSizeZ": 4
+	},
+	{
+		"ID": 2563,
+		"Name": "Famicom",
+		"Mesh": "res://Resources/Mesh/BGParts/famicom/famicom.obj",
+		"Materials": [
+			{
+				"Texture": "res://Resources/Mesh/BGParts/famicom/famicom.png",
 				"Transparent": false,
 				"BackfaceCulling": true,
 				"Mask": null,

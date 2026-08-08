@@ -5,6 +5,8 @@ using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text.Json;
+using EyeOfRubiss.Nodes;
+using EyeOfRubiss.Scenes;
 using Godot;
 
 namespace EyeOfRubiss
@@ -40,9 +42,60 @@ namespace EyeOfRubiss
 			
 			using Godot.FileAccess file = Godot.FileAccess.Open(path, Godot.FileAccess.ModeFlags.Read);
             {
-                if (file.GetLength() == 0x30008)
-					return FileType.DQB2_Blueprint;
+				if (path.ToLower().EndsWith(".unknown") || path.ToLower().EndsWith(".dat") || path.ToLower().EndsWith(".vap") || path.ToLower().EndsWith(".sdb") || path.ToLower().EndsWith(".dfont") || path.ToLower().EndsWith(".nfc") || path.ToLower().EndsWith(".ttf") || path.ToLower().EndsWith(".gt1") || path.ToLower().EndsWith(".unpack") || path.ToLower().EndsWith(".frm"))
+				{
+					file.Seek(0);
+					byte[] header = file.GetBuffer(4);
+					if (header[1] != 0 && header[2] != 0 && header[3] != 0 && ((ulong)header[1] * header[2] * header[3] * 6 + 4 + header[0] * (ulong)8 == file.GetLength()))
+					{
+						return FileType.DQB2_Blueprint;
+					}
+					else
+					{
+						// todo make more elegant and robust
+						return FileType.DQB2_DioramaData;	
+					}
+				}
+
 				
+				// todo make more elegant and robust
+                if (file.GetLength() == 0x30008)
+					return FileType.DQB2_PencilSketch;
+				
+				file.Seek(0);
+				if (file.GetLength() == 0x48010)
+				{
+					byte[] header = file.GetBuffer(8);
+
+					if (header.SequenceEqual<byte>([0x00, 0x02, 0x01, 0x00, 0x00, 0x04, 0x80, 0x10]))
+						return FileType.DQB1_ParamData_PS3;
+					if (header.SequenceEqual<byte>([0x01, 0x02, 0x00, 0x01, 0x10, 0x80, 0x04, 0x00]))
+						return FileType.DQB1_ParamData_PS4;
+					if (header.SequenceEqual<byte>([0x02, 0x02, 0x00, 0x01, 0x10, 0x80, 0x04, 0x00]))
+						return FileType.DQB1_ParamData_Vita;
+				}
+				if (file.GetLength() == 0x1A00000 || file.GetLength() == 0x194CCFC)
+				{
+					file.Seek(0x1200);
+					byte[] test1 = file.GetBuffer(7);
+					file.Seek(0x1208);
+					byte[] test2 = file.GetBuffer(4);
+
+					if (test1.SequenceEqual<byte>([0x00, 0x00, 0x09, 0x00, 0x00, 0x00, 0x02]) &&
+						test2.SequenceEqual<byte>([0x06, 0x00, 0x06, 0x00]))
+						return FileType.DQB1_WorldData_PS3;
+
+					file.Seek(0x1200);
+					byte[] test3 = file.GetBuffer(4);
+					file.Seek(0x1205);
+					byte[] test4 = file.GetBuffer(7);
+
+					if (test3.SequenceEqual<byte>([0x00, 0x09, 0x00, 0x00]) &&
+						test4.SequenceEqual<byte>([0x02, 0x00, 0x00, 0x00, 0x06, 0x00, 0x06]))
+						return FileType.DQB1_WorldData_PS4;
+						
+				}
+
 				file.Seek(0);
 				if (file.GetLength() >= StageData.HEADER_LENGTH)
                 {
@@ -81,11 +134,11 @@ namespace EyeOfRubiss
 
 						if (data[0] == 0x04 && data[1] == 0x02 && data[2] == 0x00 && data[3] == 0x01)
 						{
-							return FileType.DQB1_ParamData;
+							return FileType.DQB1_ParamData_Switch;
 						}
 						else
 						{
-							return FileType.DQB1_WorldData;
+							return FileType.DQB1_WorldData_Switch;
 						}
                     }
                 }
@@ -99,9 +152,9 @@ namespace EyeOfRubiss
 						if (pathId == 9047693110664622774)
 							return FileType.DQB1_BlueprintAsset;
 						if (pathId == 3054667693991686249)
-							return FileType.DQB1_DioramaAssetHeader;
+							return FileType.DQB1_DioramaHeaderAsset;
 						if (pathId == 1781583903654961094)
-							return FileType.DQB1_DioramaAssetData;
+							return FileType.DQB1_DioramaDataAsset;
                     }
 					if (json.RootElement.TryGetProperty("SourceGame", out JsonElement sourceGameElement) && sourceGameElement.TryGetByte(out byte sourceGame) && (sourceGame == 1 || sourceGame == 2))
 					{
@@ -148,6 +201,7 @@ namespace EyeOfRubiss
 			output = output.Replace("{green}", $"[color={Constants.Colors.GREEN}]■[/color]");
 			output = output.Replace("{yellow}", $"[color={Constants.Colors.YELLOW}]■[/color]");
 			output = output.Replace("{blue}", $"[color={Constants.Colors.BLUE}]■[/color]");
+			output = output.Replace("{pname}", Main.GetPlayerName());
 			return output;
 		}
 		public static string DirectionToString(int direction)

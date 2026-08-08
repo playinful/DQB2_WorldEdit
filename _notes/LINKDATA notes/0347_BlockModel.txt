@@ -1,0 +1,17 @@
+# BLOCK MODELS #
+
+0x00 = ushort(?) 0x0200 (512) (amount of entries in file?)
+0x02..0x3F = Empty
+0x40..0x83F = uint[] Integers from 0-511
+0x840..0xB83F = Block Model Data[] (0x58 bytes each) (512 count)
+    .. = ?
+    +0x08..+0x13 = ushort[6] Top Face Variations
+    +0x14..+0x1F = ushort[6] Bottom Face Variations
+    +0x20..+0x2B = ushort[6] West Face Variations
+    +0x2C..+0x37 = ushort[6] East Face Variations
+    +0x38..+0x43 = ushort[6] North Face Variations
+    +0x44..+0x4F = ushort[6] South Face Variations
+    +0x50 = byte Texture Sheet
+    .. = ?
+    +0x56 = byte (0 = Full Block, 1 = Powder Snow Height)
+    +0x57 = byte Collision (0 = collision, 2 = no collision)

@@ -144,7 +144,8 @@ public partial class BGPartsGridManager : Node3D
                 mesh.SurfaceSetMaterial(i, material);
             }
 
-            MeshLibrary.SetItemMeshTransform(item, new Transform3D{Basis=Basis.Identity, Origin=param.GetMeshOffset() + new Vector3(0, -0.5f, 0)});
+			Basis basis = new(param.MeshSizeX, 0, 0, 0, param.MeshSizeY, 0, 0, 0, param.MeshSizeZ);
+            MeshLibrary.SetItemMeshTransform(item, new Transform3D{Basis=basis, Origin=param.GetMeshOffset() + new Vector3(0, -0.5f, 0)});
         }
     }
 
@@ -168,7 +169,7 @@ public partial class BGPartsGridManager : Node3D
         return _ModelParams.FirstOrDefault(model => model.ID == id);
     }
 
-    public struct BGPartsModel
+    public class BGPartsModel
     {
         public int ID { get; set; }
 		public string Name { get; set; }
@@ -178,6 +179,9 @@ public partial class BGPartsGridManager : Node3D
         public float MeshOffsetY { get; set; }
         public float MeshOffsetZ { get; set; }
         public Vector3 GetMeshOffset() => new(MeshOffsetX, MeshOffsetY, MeshOffsetZ);
+		public float MeshSizeX { get; set; } = 1;
+		public float MeshSizeY { get; set; } = 1;
+		public float MeshSizeZ { get; set; } = 1;
         
         public struct BGPartsModelMaterial
         {

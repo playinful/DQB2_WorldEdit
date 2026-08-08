@@ -1,0 +1,15 @@
+# BIOME BGPARTS #
+
+0x00 = ushort(?) 0x0800 (2048) (amount of entries in file)
+0x02..0x3F = Empty
+0x40..0x203F = uint[] Integers from 0-2047
+0x2040..0x1403F = Biome BGParts Data[] (0x24 bytes each) (2048 count)
+    .. = ?
+    +0x02 = ushort BGParts ID
+    +0x04..+0x05 = Always 0
+    .. = ?
+    +0x08 = ushort Block ID that must be spawned on top of
+    .. = ?
+    +0x10 = ushort BGParts ID that this BGParts appears nearby?
+
+0x98A0 = the scarletulips that spawn on Rimey Reef

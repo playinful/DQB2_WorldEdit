@@ -8,7 +8,7 @@ namespace EyeOfRubiss.Nodes
         [Export] private int _Icon;
         [Export] private string _Name;
 
-        public CommonData.Resident Resident { get; set; }
+        public int ResidentID { get; set; } = -1;
 
         private Sprite3D _Sprite;
         private Label3D _Label;
@@ -26,9 +26,23 @@ namespace EyeOfRubiss.Nodes
 
         public void SetNPC(CommonData.Resident resident)
         {
-            Resident = resident;
+            ResidentID = resident.Index;
             _Name = resident.GetDisplayName();
             _Icon = resident.Type;
+            UpdateNPC();
+        }
+        public void SetNPC(ParamData.Resident resident)
+        {
+            ResidentID = resident.Index;
+            if (resident.Type == 0)
+            {
+                _Name = Info.DQB1.ResidentInfo.Get(resident.ResidentID).Name;
+            }
+            else
+            {
+                _Name = Info.DQB1.ResidentInfo.Get(resident.Type).Name;
+            }
+            _Icon = 0;
             UpdateNPC();
         }
         public void SetNPCIcon(int icon)

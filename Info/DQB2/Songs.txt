@@ -1,84 +1,84 @@
-Name
-'A Warrior's Journey'
-'Overture March'
+None
+‘A Warrior's Journey’
+‘Overture March’
 
-'Prologue'
-'Love Song'
-'Inviting Village'
-'Ghost Ship'
-'Lonely Village'
+‘Prologue’
+‘Love Song’
+‘Inviting Village’
+‘Ghost Ship’
+‘Lonely Village’
 
-'Legendary Castle'
-'Wanderer's Theme'
-'Into the Aegean Sea'
-'A Merchant's Journey'
-'Shadows in the Darkness'
-'Never-ending Journey'
-'Pinnacle of Evil'
-'Into the Blue Sky'
-'Conflict'
+‘Legendary Castle’
+‘Wanderer's Theme’
+‘Into the Aegean Sea’
+‘A Merchant's Journey’
+‘Shadows in the Darkness’
+‘Never-ending Journey’
+‘Pinnacle of Evil’
+‘Into the Blue Sky’
+‘Conflict’
 
-'Facing the Immortal Foe'
-'Dicing with Death'
-'Requiem'
+‘Facing the Immortal Foe’
+‘Dicing with Death’
+‘Requiem’
 
-'Queen of the Heavens'
-'Level Up'
-	Small Fanfare		
-	Battle Victory		
-'Annihilation'
-	Item Discovery		
-	New Goal		
-'Sweet Dreams'
-'Cursed Item'
-	Blueprint Cleared		
-	Rendarak Revealed		
-	Adventure Begins		
-	New Mission		
-	Comrades		
-	Echo Flute 1		
-	Echo Flute 2		
-	Echo Flute 3		
-	Medium Fanfare		
-	Big Fanfare		
-			
-	Boss Fanfare		
-'Coliseum Bleachers'
-'Backstage at the Coliseum'
-'Premonition of Destruction'
-'Shrine Theme'
-'Shining City'
-'Folk Dance'
-'Tower Theme'
-'Battle for Honour'
-'Open Oceans'
+‘Queen of the Heavens’
+‘Level Up’
+Small Fanfare
+Battle Victory
+‘Annihilation’
+Item Discovery
+New Goal
+‘Sweet Dreams’
+‘Cursed Item’
+Blueprint Cleared
+Rendarak Revealed
+Adventure Begins
+New Mission
+Comrades
+Echo Flute 1
+Echo Flute 2
+Echo Flute 3
+Medium Fanfare
+Big Fanfare
 
-'Bustling Streets'
-'Slumbering'
+Boss Fanfare
+‘Coliseum Bleachers’
+‘Backstage at the Coliseum’
+‘Premonition of Destruction’
+‘Shrine Theme’
+‘Shining City’
+‘Folk Dance’
+‘Tower Theme’
+‘Battle for Honour’
+‘Open Oceans’
 
-'Boogie-Woogie Bar'
-'Passionate Dance'
-'Perilous Passage'
-'Street Corner'
-'Town Theme'
+‘Bustling Streets’
+‘Slumbering’
 
-
-
-'Determination'
-
-'My Road My Journey'
-'Ancient Ruins'
-'To Play with Passion'
-'Foolish Fiend'
-'Daytime Palace'
-'Night-Time Palace'
-'Flying Carpet'
-'Soaring Spirit'
-
-'Paradise'
+‘Boogie-Woogie Bar’
+‘Passionate Dance’
+‘Perilous Passage’
+‘Street Corner’
+‘Town Theme’
 
 
 
+‘Determination’
 
-'Saint'
-'The Sphinx'
+‘My Road My Journey’
+‘Ancient Ruins’
+‘To Play with Passion’
+‘Foolish Fiend’
+‘Daytime Palace’
+‘Night-Time Palace’
+‘Flying Carpet’
+‘Soaring Spirit’
+
+‘Paradise’
+
+
+
+
+‘Saint’
+‘The Sphinx’

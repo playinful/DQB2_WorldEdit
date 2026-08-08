@@ -39,17 +39,18 @@ namespace EyeOfRubiss.Scenes
 		[Export] public CanvasItem _DebugInfoContainer;
 		[Export] public FPSLabel _FPSLabel;
 		[Export] public Label _PointedVoxelLabel;
-		[Export] public StatusLabel _StatusLabel;
 		[Export] public LineEdit _CommandParser;
 		[Export] public AnimationPlayer _LoadingAnimationPlayer;
 
-		[Export] public PopupMenu _View_PopupMenu;
 		[Export] public PopupMenu _Edit_PopupMenu;
+		[Export] public PopupMenu _Tools_PopupMenu;
+		[Export] public PopupMenu _View_PopupMenu;
 		[Export] public PopupMenu _Collision_PopupMenu;
 
 		[Export] public Button _ChiselButton;
 		[Export] public Button _PasteButton;
 
+		[Export] public OptionButton _BGPartsSize_OptionButton;
 		[Export] public OptionButton _BGPartsBlock_OptionButton;
 
 		[Export] public OptionButton _FluidLevel_OptionButton;
@@ -59,6 +60,13 @@ namespace EyeOfRubiss.Scenes
 		[Export] private OptionButton _ReplaceWindow_OptionButton_With;
 		[Export] private CheckBox _ReplaceWindow_CheckBox_InSelection;
 
+		[Export] public StorageEditor _StorageEditor;
+		[Export] public ItemDisplayEditor _ItemDisplayEditor;
+		[Export] public SignpostEditor _SignpostEditor;
+		[Export] public SalutationStationEditor _SalutationStationEditor;
+		[Export] public InstrumentEditor _InstrumentEditor;
+		[Export] public MagneticBlockEditor _MagneticBlockEditor;
+
 		[Export] private BGPartsEditor _Debug_PropEditor_Window;
 
 		[ExportGroup("Settings")]
@@ -67,8 +75,6 @@ namespace EyeOfRubiss.Scenes
 		[Signal] public delegate void ExportSelectionRequestedEventHandler();
 
 		private WorldHandler _WorldHandler;
-
-		private NPCSprite _SelectedNPCSprite;
 
 		private Vector3I? _AreaSelectionStart;
 		private Vector3I? _AreaSelectionEnd;
@@ -80,6 +86,25 @@ namespace EyeOfRubiss.Scenes
 
 		public override void _Ready()
 		{
+			_Tools_PopupMenu.SetItemTooltip(_Tools_PopupMenu.GetItemIndex(0), // Make Superflat...
+				"Create an entirely flat island with customisable layers.");
+			_Tools_PopupMenu.SetItemTooltip(_Tools_PopupMenu.GetItemIndex(1), // Raise/Lower Island...
+				"Raise or lower an entire island by a specified amount.");
+			_Tools_PopupMenu.SetItemTooltip(_Tools_PopupMenu.GetItemIndex(2), // Fill In Chunks
+				"Fill in the empty parts of all chunks, maximizing buildable area.");
+			_Tools_PopupMenu.SetItemTooltip(_Tools_PopupMenu.GetItemIndex(3), // Delete All Props
+				"Delete all props on the island.");
+			_Tools_PopupMenu.SetItemTooltip(_Tools_PopupMenu.GetItemIndex(4), // Fix Prop Shells
+				"Add proper prop shells to props without them.");
+			_Tools_PopupMenu.SetItemTooltip(_Tools_PopupMenu.GetItemIndex(5), // Fix Fake Blocks
+				"Replace all \"fake blocks\" (prop blocks) with real blocks.");
+			_Tools_PopupMenu.SetItemTooltip(_Tools_PopupMenu.GetItemIndex(6), // Clear Orphaned Block Entities
+				"Delete block entities that have no assigned props.");
+			_Tools_PopupMenu.SetItemTooltip(_Tools_PopupMenu.GetItemIndex(7), // Water Ceiling
+				"Fill the top layer of the world with shallow water\n" +
+				"which will disappear when a block is placed next to it ingame.\n" +
+				"This will cause the minimap to update automatically.");
+
 			_VoxelTool = _VoxelTerrain.GetVoxelTool();
 			_VoxelTool_PropShells = _VoxelTerrain_PropShells.GetVoxelTool();
 
@@ -93,10 +118,10 @@ namespace EyeOfRubiss.Scenes
 
 		private void _UpdateMenuButtons()
 		{
-			_Edit_PopupMenu?.SetItemDisabled(0, _AreaSelectionStart is null);
-			_Edit_PopupMenu?.SetItemDisabled(1, _AreaSelectionStart is null);
-			_Edit_PopupMenu?.SetItemDisabled(2, _AreaSelectionStart is null);
-			_Edit_PopupMenu?.SetItemDisabled(3, _AreaSelectionStart is null);
+			_Edit_PopupMenu?.SetItemDisabled(_Edit_PopupMenu.GetItemIndex(3), _AreaSelectionStart is null); // Copy
+			_Edit_PopupMenu?.SetItemDisabled(_Edit_PopupMenu.GetItemIndex(4), _AreaSelectionStart is null); // Cut
+			_Edit_PopupMenu?.SetItemDisabled(_Edit_PopupMenu.GetItemIndex(5), _AreaSelectionStart is null); // Export Selection...
+			_Edit_PopupMenu?.SetItemDisabled(_Edit_PopupMenu.GetItemIndex(6), _AreaSelectionStart is null); // Fill
 
 			_PasteButton.Disabled = Clipboard is null;
 
@@ -105,12 +130,26 @@ namespace EyeOfRubiss.Scenes
 
 			_Edit_PopupMenu?.SetItemDisabled(5, !(sourceGame == 1 || sourceGame == 2));
 
-			_BGPartsBlock_OptionButton.SetItemDisabled(8,  sourceGame == 1);
-			_BGPartsBlock_OptionButton.SetItemDisabled(9,  sourceGame == 1);
-			_BGPartsBlock_OptionButton.SetItemDisabled(10, sourceGame == 1);
-			if (sourceGame == 1 && (_BGPartsBlock_OptionButton.Selected == 8 || _BGPartsBlock_OptionButton.Selected == 9 || _BGPartsBlock_OptionButton.Selected == 10))
+			if (sourceGame == 2)
 			{
-				_BGPartsBlock_OptionButton.Select(0);
+				_BGPartsSize_OptionButton.Disabled = false;
+			}
+			else
+			{
+				_BGPartsSize_OptionButton.Select(0);
+				_BGPartsSize_OptionButton.Disabled = true;
+				_BGPartsSize = 0;
+			}
+
+			_BGPartsBlock_OptionButton.SetItemDisabled(_BGPartsBlock_OptionButton.GetItemIndex((int)PartsType.Fence + 1),      sourceGame == 1);
+			_BGPartsBlock_OptionButton.SetItemDisabled(_BGPartsBlock_OptionButton.GetItemIndex((int)PartsType.FryingPan + 1),  sourceGame == 1);
+			_BGPartsBlock_OptionButton.SetItemDisabled(_BGPartsBlock_OptionButton.GetItemIndex((int)PartsType.Track + 1),      sourceGame == 1);
+			if (sourceGame == 1 &&
+				(_BGPartsBlock_OptionButton.Selected == _BGPartsBlock_OptionButton.GetItemIndex((int)PartsType.Fence + 1) ||
+				_BGPartsBlock_OptionButton.Selected == _BGPartsBlock_OptionButton.GetItemIndex((int)PartsType.FryingPan + 1) ||
+				_BGPartsBlock_OptionButton.Selected == _BGPartsBlock_OptionButton.GetItemIndex((int)PartsType.Track + 1)))
+			{
+				_BGPartsBlock_OptionButton.Select(_BGPartsBlock_OptionButton.GetItemIndex(11)); // Auto
 				_BGPartsBlock = null;
 			}
 		}
@@ -138,7 +177,7 @@ namespace EyeOfRubiss.Scenes
 				collision |= 0b1000;
 			return collision;
 		}
-		public Node3D GetPointedObject()
+		public Godot.Collections.Dictionary GetPointedObject()
 		{
 			Vector3 origin = _CameraController.GlobalTransform.Origin;
 			Vector3 forward = (Input.MouseMode == Input.MouseModeEnum.Captured) ?
@@ -149,11 +188,8 @@ namespace EyeOfRubiss.Scenes
 				From = origin,
 				To = origin + forward * 4096.0f
 			});
-			if (result.Count == 0)
-				return null;
-			
-			Node collider = (Node) result["collider"];
-			return collider.GetParent().GetParent<Node3D>();
+
+			return result;
 		}
 		private Vector3I? _LastPointedVoxel = null;
 		private void UpdatePointedVoxel(bool forceUpdate = false)
@@ -258,6 +294,9 @@ namespace EyeOfRubiss.Scenes
 		#region Input
 		public override void _Process(double delta)
 		{
+			if (Window.GetFocusedWindow() != GetWindow())
+				return;
+			
 			if (Input.IsActionPressed(Constants.Controls.BRUSH_PRIMARY)   && BrushPrimary   == BrushType.Swap)
 				DoBrush(GetPointedVoxel(), BrushPrimary);
 			if (Input.IsActionPressed(Constants.Controls.BRUSH_SECONDARY) && BrushSecondary == BrushType.Swap)
@@ -306,6 +345,27 @@ namespace EyeOfRubiss.Scenes
 					_Debug_PropEditor_Window.PopupCentered();
 				}
 			}
+
+			if (@event.IsActionPressed(Constants.Controls.TEST1) && _WorldHandler is WorldHandlerDQB2 _whDQB2 && _whDQB2._StageData is StageData stgdat && _AreaSelectionStart is Vector3I start && _AreaSelectionEnd is Vector3I end)
+			{
+				for (int x = start.X; x <= end.X; x++)
+				{
+					for (int y = start.Y; y <= end.Y; y++)
+					{
+						for (int z = start.Z; z <= end.Z; z++)
+						{
+							int chunkX = x / 32;
+							int chunkZ = z / 32;
+							ushort block = (ushort)(((chunkX + chunkZ) % 2) == 1 ? 4 : 3);
+
+							stgdat.SetBlockAtPosition(new Vector3I(x,y,z), block);
+						}
+					}
+				}
+
+				StatusLabel.PrintMessage("Done.");
+				_WorldHandler.Reload();
+			}
 		}
 
 		public void ResetCamera()
@@ -341,11 +401,16 @@ namespace EyeOfRubiss.Scenes
 			DateTime dateTime = DateTime.Now;
 			var path = Path.Join(System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyPictures), "Screenshot_" + dateTime.ToString("yyyy-MM-dd_HH-mm-ss.fff") + ".png");
 			GetViewport().GetTexture().GetImage().SavePng(path);
+			StatusLabel.PrintMessage($"Saved screenshot to {path}.");
 		}
 
 		public byte GetBGPartsPlacementDirection()
         {
-			if (_BGPartsPlacementDirection >= 4)
+			if (_BGPartsPlacementDirection == 5) // Random
+			{
+				return (byte)(GD.Randi() % 4);
+			}
+			else if (_BGPartsPlacementDirection > 3)
 			{
 				int rotation = (int)Math.Round(_CameraController.Rotation.Y / (Math.PI / 2)) % 4;
 				if (rotation < 0)
@@ -355,6 +420,13 @@ namespace EyeOfRubiss.Scenes
 			else
 				return _BGPartsPlacementDirection;
         }
+		public byte GetEightPointDirection()
+		{
+			int rotation = (int)Math.Round(_CameraController.Rotation.Y / (Math.PI / 4)) % 8;
+			if (rotation < 0)
+				rotation += 8;
+			return (byte)rotation;	
+		}
 		#endregion
 
 		#region Callbacks
@@ -378,22 +450,41 @@ namespace EyeOfRubiss.Scenes
 				case 7: // Replace...
 					PopupReplaceWindow();
 					break;
-
+			}
+		}
+		public void _On_Tools_PopupMenu_IdPressed(int id)
+		{
+			switch(id)
+			{
 				case 0: // Make Superflat...
-					//_StageData?.MakeSuperflat([1, 2, 2, 3]);
-					//_WorldEditorScene.Reload();
+					// TODO
 					break;
-				case 1: // Delete All Props
-					//_StageData?.DeleteAllBGParts();
+				case 1: // Raise/Lower Island...
+					// TODO
 					break;
-				case 2: // Very Simple Copy
-					//GetNode<Window>("VeryBasicCopierWindow").Popup();
+				case 2: // Fill In Chunks
+					_WorldHandler?.FillInChunks();
+					break;
+				case 3: // Delete All Props
+					_WorldHandler?.DeleteAllBGParts();
+					break;
+				case 4: // Fix Prop Shells
+					_WorldHandler?.FixPropShells();
+					break;
+				case 5: // Fix Fake Blocks
+					_WorldHandler?.FixFakeBlocks();
+					break;
+				case 6: // Clear Orphaned Block Entities
+					_WorldHandler?.ClearOrphanedBlockEntities();
+					break;
+				case 7: // Water Ceiling
+					_WorldHandler?.CreateWaterCeiling();
 					break;
 			}
 		}
 		public void _On_View_PopupMenu_IdPressed(int id)
 		{
-			int index = _View_PopupMenu.GetItemIndexById(id);
+			int index = _View_PopupMenu.GetItemIndex(id);
 			switch (id)
 			{
 				case 6: // Show FPS
@@ -467,6 +558,8 @@ namespace EyeOfRubiss.Scenes
 		{
 			if (index <= 0)
 				_BGPartsPlacementDirection = 4;
+			else if (index == 5)
+				_BGPartsPlacementDirection = 5;
 			else
 				_BGPartsPlacementDirection = (byte)(index - 1);
 		}
@@ -477,6 +570,10 @@ namespace EyeOfRubiss.Scenes
 		public void _On_BGPartsEffectsEnabled_Toggled(bool toggledOn)
 		{
 			_BGPartsEffectsEnabled = toggledOn;
+		}
+		public void _On_BGPartsUnbreakableEnabled_Toggled(bool toggledOn)
+		{
+			_BGPartsUnbreakableEnabled = toggledOn;
 		}
 		public void _On_BGPartsBlock_OptionButton_ItemSelected(int index)
 		{
@@ -491,13 +588,26 @@ namespace EyeOfRubiss.Scenes
 				_BGPartsBlock = null;
 			}
 		}
+		public void _On_BGPartsSize_OptionButton_ItemSelected(int index)
+		{
+			_BGPartsSize = (byte)_BGPartsSize_OptionButton.GetItemId(index);
+		}
 
 		public void _On_FluidLevel_OptionButton_ItemSelected(int index)
 		{
 			int id = _FluidLevel_OptionButton.GetItemId(index);
 			_FluidLevel = id;
 		}
-		
+
+		public void _On_Chisel_Shape_OptionButton_ItemSelected(int index)
+		{
+			_Chisel_Shape = (byte)index;
+		}
+		public void _On_Chisel_Direction_OptionButton_ItemSelected(int index)
+		{
+			_Chisel_Direction = (byte)index;
+		}
+
 		public void _On_SelectArea_Mode_OptionButton_ItemSelected(int index)
 		{
 			_SelectArea_Mode = index;
@@ -570,6 +680,8 @@ namespace EyeOfRubiss.Scenes
 				ResetCamera();
             }
 
+			_Gizmo.ClearSelection();
+
 			worldHandler.LoadParamData(paramData);
 			TranslateTerrain(new Vector3(-768, 0, -768));
 			//ResetCamera();
@@ -578,6 +690,8 @@ namespace EyeOfRubiss.Scenes
 		}
 		public void UnloadParamData()
 		{
+			_Gizmo.ClearSelection();
+
             if (_WorldHandler is WorldHandlerDQB1 worldHandler)
             {
                 worldHandler.UnloadParamData();
@@ -630,12 +744,16 @@ namespace EyeOfRubiss.Scenes
 				_WorldHandler = worldHandler;
             }
 
+			_Gizmo.ClearSelection();
+
 			worldHandler.LoadCommonData(commonData);
 			
 			_UpdateMenuButtons();
         }
 		public void UnloadCommonData()
         {
+			_Gizmo.ClearSelection();
+
             if (_WorldHandler is WorldHandlerDQB2 worldHandler)
             {
                 worldHandler.UnloadCommonData();
@@ -647,6 +765,8 @@ namespace EyeOfRubiss.Scenes
 		
 		public void LoadEyeOfRubissStructure(EyeOfRubissStructure structure)
 		{
+			_Gizmo.ClearSelection();
+
 			if (_WorldHandler is WorldHandlerEyeOfRubissStructure)
 			{
 				(_WorldHandler as WorldHandlerEyeOfRubissStructure).Load(structure);
@@ -781,12 +901,17 @@ namespace EyeOfRubiss.Scenes
 		public BrushObjectModeEnum BrushObjectMode = BrushObjectModeEnum.Block;
 		public int BrushObject = 1;
 
-		private byte _BGPartsPlacementDirection = byte.MaxValue;
+		private byte _BGPartsPlacementDirection = 4;
 		private bool _BGPartsCollisionEnabled = true;
 		private bool _BGPartsEffectsEnabled = true;
+		private bool _BGPartsUnbreakableEnabled = false;
+		private byte _BGPartsSize = 0;
 		private PartsType? _BGPartsBlock = null;
 
 		private int _FluidLevel = (int)FluidLevel.Full;
+
+		private byte _Chisel_Shape;
+		private byte _Chisel_Direction;
 
 		private int _SelectArea_Mode = 0;
 
@@ -819,7 +944,17 @@ namespace EyeOfRubiss.Scenes
 
 		public void DoBrush(VoxelRaycastResult result, BrushType brush)
 		{
-			if (result is null || _WorldHandler is null)
+			if (_WorldHandler is null)
+				return;
+			
+			if (brush == BrushType.Pointer)
+			{
+				DoPointer(result);
+				UpdatePointedVoxel(true);
+				return;
+			}
+
+			if (result is null)
 				return;
 
 			switch (brush)
@@ -837,6 +972,10 @@ namespace EyeOfRubiss.Scenes
 
                 case BrushType.Swap:
 					DoPencil(result.Position);
+					break;
+
+				case BrushType.Chisel:
+					_WorldHandler?.DoChisel(result.Position, _GetChiselShape());
 					break;
 				
 				case BrushType.Paste:
@@ -863,13 +1002,147 @@ namespace EyeOfRubiss.Scenes
                     _WorldHandler?.DoSetBlock(position, BrushObject);
                     break;
                 case BrushObjectModeEnum.BGParts:
-                    _WorldHandler?.DoSetBGParts(position, BrushObject, partsBlock: _BGPartsBlock, collision: _BGPartsCollisionEnabled, effects: _BGPartsEffectsEnabled);
+                    _WorldHandler?.DoSetBGParts(position, BrushObject, partsBlock: _BGPartsBlock, collision: _BGPartsCollisionEnabled, effects: _BGPartsEffectsEnabled, unbreakable: _BGPartsUnbreakableEnabled, size: _GetBGPartsSize());
                     break;
                 case BrushObjectModeEnum.Fluid:
                     _WorldHandler?.DoSetFluid(position, BrushObject, _FluidLevel);
                     break;
             }
         }
+
+		private void DoPointer(VoxelRaycastResult blockResult)
+		{
+			Godot.Collections.Dictionary objectResult = GetPointedObject();
+			
+			if (blockResult is not null && objectResult.Count != 0)
+			{
+				float objectDistance = _CameraController.Position.DistanceTo((Vector3)objectResult["position"]);
+				float blockDistance = blockResult.Distance;
+
+				if (objectDistance <= blockDistance && ((Node)(GodotObject)objectResult["collider"]).GetParent().GetParent() is NPCSprite npc)
+				{
+					_Gizmo.ClearSelection();
+					_Gizmo.Select(npc);
+					_SelectedNPCSprite = npc;
+				}
+				else
+				{
+					_Gizmo.ClearSelection();
+					_SelectedNPCSprite = null;
+					_WorldHandler?.DoPointer(blockResult.Position);
+				}
+			}
+			else if (blockResult is not null)
+			{
+				_Gizmo.ClearSelection();
+				_SelectedNPCSprite = null;
+				_WorldHandler?.DoPointer(blockResult.Position);
+			}
+			else if (objectResult.Count != 0 && ((Node)(GodotObject)objectResult["collider"]).GetParent().GetParent() is NPCSprite npc)
+			{	
+				_Gizmo.ClearSelection();
+				_Gizmo.Select(npc);
+				_SelectedNPCSprite = npc;
+			}
+			else
+			{
+				_Gizmo.ClearSelection();
+				_SelectedNPCSprite = null;
+			}
+		}
+
+		private ChiselShape _GetChiselShape()
+		{
+            return _Chisel_Shape switch
+            {
+                // Full Block
+                0 => ChiselShape.FullBlock,
+                // Diagonal
+                1 => _Chisel_Direction switch
+                {
+                    // Auto
+                    0 => GetEightPointDirection() switch
+                    {
+                        // North
+                        0 => ChiselShape.DiagonalNorth,
+                        // Northwest
+                        1 => ChiselShape.DiagonalNorthwest,
+                        // West
+                        2 => ChiselShape.DiagonalWest,
+                        // Southwest
+                        3 => ChiselShape.DiagonalSouthwest,
+                        // South
+                        4 => ChiselShape.DiagonalSouth,
+                        // Southeast
+                        5 => ChiselShape.DiagonalSoutheast,
+                        // East
+                        6 => ChiselShape.DiagonalEast,
+                        // Northeast
+                        7 => ChiselShape.DiagonalNortheast,
+                        _ => ChiselShape.DiagonalNorth,
+                    },
+                    // North
+                    1 => ChiselShape.DiagonalNorth,
+                    // Northwest
+                    2 => ChiselShape.DiagonalNorthwest,
+                    // West
+                    3 => ChiselShape.DiagonalWest,
+                    // Southwest
+                    4 => ChiselShape.DiagonalSouthwest,
+                    // South
+                    5 => ChiselShape.DiagonalSouth,
+                    // Southeast
+                    6 => ChiselShape.DiagonalSoutheast,
+                    // East
+                    7 => ChiselShape.DiagonalEast,
+                    // Northeast
+                    8 => ChiselShape.DiagonalNortheast,
+                    _ => ChiselShape.DiagonalNorth,
+                },
+                // Concave
+                2 => _Chisel_Direction switch
+                {
+                    // Auto
+                    0 => GetEightPointDirection() switch
+                    {
+                        // North
+                        0 or 1 => ChiselShape.ConcaveNorthwest,
+                        // West
+                        2 or 3 => ChiselShape.ConcaveSouthwest,
+                        // South
+                        4 or 5 => ChiselShape.ConcaveSoutheast,
+                        // East
+                        6 or 7 => ChiselShape.ConcaveNortheast,
+                        _ => ChiselShape.ConcaveNorthwest,
+                    },
+                    // North
+                    1 or 2 => ChiselShape.ConcaveNorthwest,
+                    // West
+                    3 or 4 => ChiselShape.ConcaveSouthwest,
+                    // South
+                    5 or 6 => ChiselShape.ConcaveSoutheast,
+                    // East
+                    7 or 8 => ChiselShape.ConcaveNortheast,
+                    _ => ChiselShape.ConcaveNorthwest,
+                },
+                // Top Half
+                3 => ChiselShape.TopHalf,
+                // Bottom Half
+                4 => ChiselShape.BottomHalf,
+                _ => ChiselShape.FullBlock,
+            };
+        }
+		private byte _GetBGPartsSize()
+		{
+			if (_BGPartsSize > 3)
+			{
+				return (byte)(GD.Randi() % 4);
+			}
+			else
+			{
+				return _BGPartsSize;
+			}
+		}
 
         public void DoSelectArea(Vector3I position)
 		{
@@ -984,11 +1257,13 @@ namespace EyeOfRubiss.Scenes
 			_BoundaryBox.Hide();
 		}
 		#endregion
-
+		
 		#region Gizmo functions
+        private NPCSprite _SelectedNPCSprite;
+
 		public void _On_Gizmo3D_TransformEnd()
 		{
-			_WorldHandler?.OnGizmo3DTransformEnd();
+			_WorldHandler?.OnGizmo3DTransformEnd(_SelectedNPCSprite);
 		}
 		#endregion
 
@@ -1007,9 +1282,6 @@ namespace EyeOfRubiss.Scenes
 			if (_WorldHandler is not null)
 			{
 				Clipboard = _WorldHandler.DoCopy(start, end);
-				Clipboard.SizeX = size.X;
-				Clipboard.SizeY = size.Y;
-				Clipboard.SizeZ = size.Z;
 				
 				_PasteButton.Disabled = false;
 			}
@@ -1020,6 +1292,12 @@ namespace EyeOfRubiss.Scenes
 			DeleteSelection();
 		}
 		
+		public void Copy(EyeOfRubissStructure structure)
+		{
+			Clipboard = structure;
+			_PasteButton.Disabled = false;
+		}
+
 		public void ExportSelection(string path)
 		{
 			if (_AreaSelectionStart is not Vector3I start)
@@ -1039,8 +1317,16 @@ namespace EyeOfRubiss.Scenes
 					}
 					else
 					{
-						BlueprintFileDQB2 blueprintFile = structure.ToBlueprint();
-						blueprintFile.Save(path);
+						PencilSketchFile blueprintFile = structure.ToBlueprint();
+
+						if (blueprintFile is not null)
+						{
+							blueprintFile.Save(path);
+						}
+						else
+						{
+							Main.PopupWindow("Error", "The selected area is too large to save as a DQB2 blueprint.");
+						}
 					}	
 				}
 			}

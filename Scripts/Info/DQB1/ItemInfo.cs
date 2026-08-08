@@ -14,6 +14,7 @@ namespace EyeOfRubiss.Info.DQB1
         public ushort ID { get; set; }
         public string Name { get; set; } = "";
         public int Icon { get; set; } = -1;
+        public ushort? Durability { get; set; }
 
         public float Sort { get; set; } = float.MaxValue;
 

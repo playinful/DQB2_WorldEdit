@@ -1,0 +1,273 @@
+Header
+0x00..0x05: aerCÝ header
+
+0x10 = uint Size
+
+0x80 = uint Save File Key
+
+0xC8 = byte Island ID
+
+0xCD..?? = string Player Name
+
+Buffer
+0x00 = double Timer (usage unknown)
+0x08 = double Timer (usage unknown)
+0x10..0x834F = Room Data (0x150 bytes each) (100 count)
+    +0x0002 = ushort Room ID
+    +0x0004 = uint Fanciness
+    +0x0008 = ushort Cute
+    +0x000A = ushort Cool
+    +0x000C = ushort Natural
+    +0x000E = ushort Flamboyant
+    +0x0010 = ushort Cheeky
+    +0x0012 = ushort Normal
+    +0x0014 = ushort x
+    +0x0016 = ushort Z
+    +0x001C = byte Y
+    +0x001D = byte(?) SizeX
+    +0x001F = byte(?) SizeZ
+0x8350..0x84DF = Worm Food, etc. Info (8 bytes each) (50 count)
+    +0x00 = ushort X
+    +0x02 = ushort Y
+    +0x04 = ushort Z
+    +0x06 = bool Enabled
+    +0x07 = Unknown
+0x84E0..0x866F = Smashing Signs info (8 bytes each) (50 count)
+    +0x00 = ushort X
+    +0x02 = ushort Y
+    +0x04 = ushort Z
+    +0x06 = bool Enabled
+    +0x07 = Unknown
+
+0xB560..0xF55F = GrowupObject info (16 bytes each) (1024 count)
+    +0x04 = ushort X
+    +0x06 = ushort Z
+    +0x08 = byte Y
+    +0x09 = Crop ID
+0xF560 = ushort GrowupInfoCount
+
+0xF565..0xF6F4 = GimmickData[]: Chests (50 count)
+0xF6F5..0xF734 = GimmickData[]: Storage Type 2? (8 count)
+0xF735..0xF774 = GimmickData[]: Storage Type 3? (8 count)
+0xF775..0xFB74 = GimmickData[]: Item Display Stands (128 count)
+0xFB75..0xFC74 = GimmickData[]: Equipment Display Stands (32 count)
+0xFC75..0xFD74 = GimmickData[]: Food Display (32 count)
+0xFD75..0xFE74 = GimmickData[]: Decorative Food Display (32 count)
+0xFE75..0xFF74 = GimmickData[]: Pet Bowls (32 count)
+0xFF75..0x10174 = GimmickData[]: Wardrobes (64 count)
+0x10175..0x10274 = GimmickData[]: Price Tags (32 count)
+0x10275 = GimmickData: Multibuilder Chest (1 count)
+0x1027D..0x102FC = GimmickData[]: Cupboards (16 count)
+0x102FD..0x103FC = GimmickData[]: Drawers (32 count)
+0x103FD..0x104FC = GimmickData[]: Beverages (32 count)
+0x104FD..0x1097C = Treasure chest gimmick data? (12 bytes each) (60 count)
+    +0x00 = ushort X
+    +0x02 = ushort Y
+    +0x04 = ushort Z
+    +0x06 = Always 01?
+    +0x07 = byte Treasure ID? Seems to be a number pertaining to a preset "treasure chest contents" value
+    +0x08 = Unknown. Always a low, single-digit number.
+    +0x09 = Unknown, possibly a unique ID for each chest?
+    +0x0A = Nothing?
+    +0x0B = bool Opened
+
+0x10EA5..0x128A4 = Crafting Stations data (0x34 bytes each) (128 count)
+    +0x00 = ushort X
+    +0x02 = ushort Y
+    +0x04 = ushort Z
+0x128A5..0x12A64 = Evil Idols data (7 bytes each) (64 count)
+    +0x00 = ushort X
+    +0x02 = ushort Y
+    +0x04 = ushort Z
+    +0x06 = bool Enabled
+0x12A65..0x12C64 = Toilets data (8 bytes each) (64 count)
+    +0x00 = ushort X
+    +0x02 = ushort Y
+    +0x04 = ushort Z
+    +0x06 = bool Enabled
+    +0x07 = byte Times Used
+
+0x12D73..0x12DCC = Naviglobes data (9 bytes each) (10 count)
+    +0x00 = ushort X
+    +0x02 = ushort Y
+    +0x04 = ushort Z
+    +0x06b0 = bool Enabled?
+    "    b3 = bool Activated
+    +0x07 = Maybe the warp ID?
+0x12DCD..0x1300C Firework Cannons data (9 bytes each) (64 count)
+    +0x00 = ushort X
+    +0x02 = ushort Y
+    +0x04 = ushort Z
+    +0x06 = bool Enabled
+    +0x07_b0..+0x08_b6 = ushort Color
+0x1300D..0x1305C = Picture Frames data (8 bytes each) (10 count)
+    +0x00 = ushort X
+    +0x02 = ushort Y
+    +0x04 = ushort Z
+    +0x06 = bool Enabled
+    +0x07 = byte Screenshot index
+0x1305D..0x1310C = Unused picture frame data?
+0x1310D..0x13A0C = Magnetic Blocks data (9 bytes each) (256 count)
+    +0x00 = ushort X
+    +0x02 = ushort Y
+    +0x04 = ushort Z
+    +0x06 = bool Enabled
+    +0x07_b0..+0x08_b4 = ushort Camouflage Block ID or BGParts ID
+    +0x08_b7 = bool BG Parts Camouflaged (0 = Block, 1 = BGParts)
+0x13A0D..0x13BCC = Watchfires data (7 bytes each) (64 count)
+    +0x00 = ushort X
+    +0x02 = ushort Y
+    +0x04 = ushort Z
+    +0x06 = bool Enabled
+0x13BCD..0x13D8C = Woosh Widgets data (7 bytes each) (64 count)
+    +0x00 = ushort X
+    +0x02 = ushort Y
+    +0x04 = ushort Z
+    +0x06 = bool Enabled
+0x13D8D..0x13DB4 = Buggy Buggy data (10 bytes each) (4 count)
+    +0x00 = ushort X
+    +0x02 = ushort Y
+    +0x04 = ushort Z
+    +0x06 = bool Enabled
+    +0x07..+0x09 = Unknown? (C3 0A 02)
+0x13DB5..0x13DC2 = Magic Pencils data (7 bytes each) (2 count)
+    +0x00 = ushort X
+    +0x02 = ushort Y
+    +0x04 = ushort Z
+    +0x06 = bool Enabled
+
+0x13E09..0x148FD = Diorama Data? (11 bytes each) (255 count)
+    +0x00 = ?? (when i changed this to 0xFF from 5, the diorama disappeared, but changing it to 0 seems to do nothing? setting to 0x18 changes warp position? seting 0b000000X0 to 1 seems to make "The Landing Point" disappear)
+    +0x01 = ?? (when I changed this to 0 from 2, the diorama disappeared)
+    +0x02 = ushort Diorama ID
+    +0x04 = byte Chunk X
+    +0x05 = byte Chunk Z
+    +0x06 = byte Local X
+    +0x07 = byte Y
+    +0x08 = byte Local Z
+    +0x09_b0..+0x09_b1 = byte Direction
+    +0x0A = ??
+
+0x148FE..0x15375 = Signboards data (0x86 bytes each) (20 count)
+    +0x00 = ushort X
+    +0x02 = ushort Z
+    +0x04 = byte Y
+    +0x05
+        0b0000000X = bool Enabled
+        0b000000X0 = bool Written
+    +0x06..+0x85 = string Text
+0x15376..0x15535 = Scarecrows data (7 bytes each) (64 count)
+    +0x00 = ushort X
+    +0x02 = ushort Z
+    +0x04 = byte Y
+    +0x05 = byte Crop ID
+    +0x06 = bool Enabled
+0x15538..?? = "The Dog Will Sniff This Out" data? (Treasure chests, seeded soil) (11 bytes each?) (512 count?)
+
+0x16B36..0x1A435 = Salutation Stations data (0xE4 bytes each) (64 count)
+    +0x00 = ushort X
+    +0x02 = ushort Y
+    +0x04 = ushort Z
+    +0x06 = bool Enabled
+    +0x07..+0xDF = string Text
+    +0xE0 = ushort ResidentID
+    +0xE2 = ushort ResidentID (not sure why there are two)
+
+0x287E8..0x28C2F = Instrument data (8 bytes each) (137 count?)
+    +0x00 = ushort X
+    +0x02 = ushort Z
+    +0x04 = byte Y
+    +0x05 = byte Song
+
+0x28CC0..0x28DEB = Gravity Globules data (6 bytes each) (50 count)
+    +0x00 = ushort X
+    +0x02 = ushort Z
+    +0x04 = byte Y
+    +0x05 = bool Enabled
+0x28DEC..0x2910B = Fish data (16 bytes each) (50 count)
+    +0x00 = ushort Fish Type
+    +0x02 = float X
+    +0x06 = float Y
+    +0x0A = float Z
+
+0x2CA3C..0x2CA77 = Blueprints data (12 bytes each) (5 count)
+    +0x00 = ushort Blueprint ID
+    +0x02 = ushort X
+    +0x04 = ushort Z
+    +0x05 = byte Y
+
+0x2CA9C..0x2CE1B = Fields data (14 bytes each) (64 count)
+    +0x00 = ushort X
+    +0x02 = ushort Z
+    +0x04 = ushort Scarecrow X
+    +0x06 = ushort Scarecrow Z
+    +0x08 = byte Scarecrow Y
+    +0x09 = byte Size X
+    +0x09? = byte Size Z (TODO CHECk)
+    +0x0C = ushort Crop ID
+
+0x34EC8..0xC0EC7 (roughly) = Biome Map? (35 bytes each) (16384 count)
+    +0x00 = ushort Biome ID
+    ..
+    +0x10 = ushort Diorama ID
+    ..
+    +0x22 = byte Area
+
+0xC0ECC = uint Gratitude
+
+0xC0ED6 = byte Island ID
+
+0xC0F50 = float daytime
+0xC0F54 = ushort(?) weather
+
+0xC15A7 = ushort Flood Data Count
+
+0xC15AB..0xC75AA = Flood Data (12 bytes each) (2048 count) ((if you set Flood Data Count to greater than 2048 and then fill in the data it works but i don't think it's supposed to because the game itself doesn't go over 2048))
+    +0x00 = potentially a float of some kind
+    +0x04 = ushort X
+    +0x06 = ushort Z
+    +0x08 = byte Y
+    +0x09..+0x0B = ??
+
+0x1451AF = ushort(?) chunk count
+
+0x145258..0x14526F = Ward of Erdrick data (6 bytes each) (4 count)
+    +0x00 = ushort X
+    +0x02 = ushort Z
+    +0x04 = byte Y
+    +0x05 = bool Enabled
+
+0x2428CC..0x24334B = Important Dropped Items (128 count)
+0x24334C..0x2467CB = Dropped items (0x15 bytes each) (640 count)
+    +0x00 = InventoryItem item
+    +0x04 = float X
+    +0x08 = float Y
+    +0x0C = float Z
+
+0x2467CC..0x247F3B = InventoryItem[] Chest contents (50 chests, 30 items each, 1500 total)
+0x247F3C..0x2482FB = InventoryItem[] Storage Type 2 contents (8 storages, 30 items each, 240 total)
+0x2482FC..0x2486BB = InventoryItem[] Storage Type 3 contents (8 storages, 30 items each, 240 total)
+0x2486BC..0x2488BB = InventoryItem[] Item Display Stand contents (128 displays, 1 item each, 128 total)
+0x2488BC..0x2489CB = InventoryItem[] Equipment Display Stand contents (32 displays, 1 item each, 32 total)
+0x24893C..0x2489BB = InventoryItem[] Food Display contents (32 displays, 1 item each, 32 total)
+0x2489BC..0x248A3B = InventoryItem[] Decorative Food Display contents (32 displays, 1 item each, 32 total)
+0x248A3C..0x248ABB = InventoryItem[] Pet Bowl contents (32 bowls, 1 item each, 32 total)
+0x248ABC..0x24A8BB = InventoryItem[] Wardrobe contents (64 wardrobes, 30 items each, 960 total)
+0x24A8BC..0x24A93B = InventoryItem[] Price Tag contents (32 tags, 1 item each, 32 total)
+0x24A93C..0x24A9B3 = InventoryItem[] Multibuilder Chest contents (1 chest, 30 items total)
+0x24A9B4..0x24B133 = InventoryItem[] Cupboard contents (16 cupboards, 30 items each, 480 total)
+0x24B134..0x24C033 = InventoryItem[] Drawer contents (32 drawers, 30 items each, 960 total)
+0x24C034..0x24C0B3 = InventoryItem[] Beverage contents (32 beverages, 1 item each, 32 total)
+0x24C0B4..0x24C77F = InventoryItem[] Storage Sack Items (435 count)
+
+0x24C7C1..0x24E7C0 = Physical Grid
+0x24E7C1 = uint UsePhysicalGridCount (guess) (The amount of chunks in the PhysicalGrid. Seems to always be 4096?)
+0x24E7C5 = uint(?) UseVirtualGridCount (The amount of chunks with valid IDs assigned to them.)
+0x24E7C9 = ushort SizeX (guess) (X size of the world, in blocks. Seems to always be 2048?)
+0x24E7CB = ushort SizeZ (guess) (Z size of the world, in blocks. Seems to always be 2048?)
+0x24E7CD = int BGPartsCount
+
+0x24E7D1?..0x150E7D0? = BGParts Data[] (24 bytes each) (819200 count)
+0x150E7D1..0x182E7D0 = BGParts Metadata[] (4 bytes each) (819200 count)
+
+0x183FEF0..EOF = BlockInstance[] Block Data

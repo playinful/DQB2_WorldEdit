@@ -19,10 +19,17 @@ namespace EyeOfRubiss.Info.DQB2
             if (_Database is null)
                 LoadDatabase();
 
-            if (idx > _Database.Length || idx < 0)
+            if (idx >= _Database.Length || idx < 0)
                 return "";
             else
                 return _Database[idx];
+        }
+        public static string[] GetAll()
+        {
+            if (_Database is null)
+                LoadDatabase();
+
+            return [.. _Database];
         }
     }
 }

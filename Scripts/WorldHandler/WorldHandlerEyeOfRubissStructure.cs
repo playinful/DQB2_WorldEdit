@@ -171,8 +171,11 @@ public class WorldHandlerEyeOfRubissStructure(WorldEditorScene worldEditorScene)
             return;
 
 		EyeOfRubiss.Info.DQB2.BlockInfo blockInfo = EyeOfRubiss.Info.DQB2.BlockInfo.Get(Structure.GetBlock(position).GetBlockID());
-		Structure.SetBlock(position, FluidConverter.Convert(blockInfo.FluidType, blockInfo.FluidLevel, propShell));
-        UpdateBlock(position);
+        if (blockInfo.GetPartsType() != propShell)
+        {
+		    Structure.SetBlock(position, FluidConverter.Convert(blockInfo.FluidType, blockInfo.FluidLevel, propShell));
+            UpdateBlock(position);   
+        }
 	}
 
     public override void ReplaceBlock(int replace, int with, Vector3I? from = null, Vector3I? to = null)
@@ -222,6 +225,40 @@ public class WorldHandlerEyeOfRubissStructure(WorldEditorScene worldEditorScene)
         
         return EyeOfRubissStructure.From(Structure, start, end);
     }
+    
+    public void UpdateBlock(Vector3I position)
+    {
+        if (Structure is null)
+            return;
+        
+        _WorldEditorScene._VoxelTool.SetVoxel(position, VoxelGeneratorEyeOfRubissStructure.GetVoxelAtPosition(Structure, position, showTerrain: _WorldEditorScene.ShowTerrain, showFluid: _WorldEditorScene.ShowFluids));
+        _WorldEditorScene._VoxelTool_PropShells.SetVoxel(position, VoxelGeneratorEyeOfRubissStructure.GetVoxelAtPosition(Structure, position, showPartsBlock: true));
+
+        if (Structure.SourceGame == 1)
+        {
+            _WorldEditorScene._BGPartsGridManager.ClearCellItem(position);
+            foreach (EyeOfRubissStructure.BGPartsData bgParts in Structure.GetAllBGPartsAtPosition(position))
+            {
+                EyeOfRubiss.Info.DQB1.BGPartsInfo bgPartsInfo = EyeOfRubiss.Info.DQB1.BGPartsInfo.Get(bgParts.BGPartsID);
+		    	if (bgPartsInfo.Mesh is int meshId)
+		    	{
+		    		_WorldEditorScene._BGPartsGridManager.AddCellItem(bgParts.GetPosition(), meshId, Util.GridMapRotationFromDirection(bgParts.Direction));
+		    	}
+            }
+        }
+        else if (Structure.SourceGame == 2)
+        {
+            _WorldEditorScene._BGPartsGridManager.ClearCellItem(position);
+            foreach (EyeOfRubissStructure.BGPartsData bgParts in Structure.GetAllBGPartsAtPosition(position))
+            {
+                EyeOfRubiss.Info.DQB2.BGPartsInfo bgPartsInfo = EyeOfRubiss.Info.DQB2.BGPartsInfo.Get(bgParts.BGPartsID);
+		    	if (bgPartsInfo.Mesh is int meshId)
+		    	{
+		    		_WorldEditorScene._BGPartsGridManager.AddCellItem(bgParts.GetPosition(), meshId, Util.GridMapRotationFromDirection(bgParts.Direction, bgParts.ConnectingWindowRotation));
+		    	}
+            }
+        }
+    }
     #endregion
 
     #region Brush methods
@@ -245,16 +282,25 @@ public class WorldHandlerEyeOfRubissStructure(WorldEditorScene worldEditorScene)
         Structure.SetBlock(position, (ushort) block);
         UpdateBlock(position);
     }
-    public override void DoSetBGParts(Vector3I position, int bgPartsId, PartsType? partsBlock = null, bool collision = true, bool effects = true)
+    public override void DoSetBGParts(Vector3I position, int bgPartsId, PartsType? partsBlock = null, bool collision = true, bool effects = true, bool unbreakable = false, byte size = 0)
     {
         if (Structure is null)
             return;
-        
-        EyeOfRubissStructure.BGPartsData bgParts = Structure.AddBGParts(position, (ushort)bgPartsId, _WorldEditorScene.GetBGPartsPlacementDirection());
 
         // Set prop blocks
         if (Structure.SourceGame == 1)
         {
+            EyeOfRubiss.Info.DQB1.BGPartsInfo bgPartsInfo = EyeOfRubiss.Info.DQB1.BGPartsInfo.Get((ushort)bgPartsId);
+
+            EyeOfRubissStructure.BGPartsData bgParts = Structure.AddBGParts(
+                position,
+                (ushort)bgPartsId,
+                _WorldEditorScene.GetBGPartsPlacementDirection(),
+                bgPartsInfo.Collision && collision,
+                bgPartsInfo.Effects && effects,
+                unbreakable
+            );
+
             byte block;
             if (partsBlock is PartsType partsType)
             {
@@ -281,6 +327,18 @@ public class WorldHandlerEyeOfRubissStructure(WorldEditorScene worldEditorScene)
         }
         else if (Structure.SourceGame == 2)
         {
+            EyeOfRubiss.Info.DQB2.BGPartsInfo bgPartsInfo = EyeOfRubiss.Info.DQB2.BGPartsInfo.Get((ushort)bgPartsId);
+
+            EyeOfRubissStructure.BGPartsData bgParts = Structure.AddBGParts(
+                position,
+                (ushort)bgPartsId,
+                _WorldEditorScene.GetBGPartsPlacementDirection(),
+                bgPartsInfo.Collision && collision,
+                bgPartsInfo.Effects && effects,
+                unbreakable,
+                size
+            );
+
             EyeOfRubiss.Info.DQB2.BGPartsInfo partsInfo = EyeOfRubiss.Info.DQB2.BGPartsInfo.Get((ushort)bgPartsId);
             (Vector3I start, Vector3I end) = bgParts.GetBounds();
             for (int x = start.X; x <= end.X; x++)
@@ -316,6 +374,15 @@ public class WorldHandlerEyeOfRubissStructure(WorldEditorScene worldEditorScene)
         DoSetBlock(position, 0);
     }
 
+    public override void DoChisel(Vector3I position, ChiselShape shape)
+    {
+        if (Structure is null || Structure.SourceGame != 2)
+            return;
+        
+        ushort block = Structure.GetBlock(position);
+        Structure.SetBlock(position, block.SetChiselShape(shape));
+    }
+
     public override void DoPaste(Vector3I position, EyeOfRubissStructure clipboard, bool pasteAir)
     {
         if (Structure is null)
@@ -346,7 +413,7 @@ public class WorldHandlerEyeOfRubissStructure(WorldEditorScene worldEditorScene)
             }
             foreach (EyeOfRubissStructure.BGPartsData bgParts in clipboard.GetBGParts())
             {
-                Structure.AddBGParts(position + bgParts.GetPosition(), bgParts.BGPartsID, bgParts.Direction, bgParts.Collision, bgParts.Effects, bgParts.ConnectingWindowRotation);
+                Structure.AddBGParts(position + bgParts.GetPosition(), bgParts.BGPartsID, bgParts.Direction, bgParts.Collision, bgParts.Effects, bgParts.Unbreakable, bgParts.Size, bgParts.ConnectingWindowRotation);
                 UpdateBlock(position + bgParts.GetPosition());
             }
         }
@@ -427,37 +494,104 @@ public class WorldHandlerEyeOfRubissStructure(WorldEditorScene worldEditorScene)
     }
     #endregion
 
-    public void UpdateBlock(Vector3I position)
+    #region Tools
+    public override void DeleteAllBGParts()
     {
         if (Structure is null)
             return;
         
-        _WorldEditorScene._VoxelTool.SetVoxel(position, VoxelGeneratorEyeOfRubissStructure.GetVoxelAtPosition(Structure, position, showTerrain: _WorldEditorScene.ShowTerrain, showFluid: _WorldEditorScene.ShowFluids));
-        _WorldEditorScene._VoxelTool_PropShells.SetVoxel(position, VoxelGeneratorEyeOfRubissStructure.GetVoxelAtPosition(Structure, position, showPartsBlock: true));
+        HashSet<Vector3I> partsBlocks = [];
+        foreach (EyeOfRubissStructure.BGPartsData bgParts in Structure.GetAllBGParts())
+        {
+            (Vector3I start, Vector3I end) = bgParts.GetBounds();
+            for (int x = start.X; x <= end.X; x++)
+            {
+                for (int y = start.Y; y <= end.Y; y++)
+                {
+                    for (int z = start.Z; z <= end.Z; z++)
+                    {
+                        partsBlocks.Add(new Vector3I(x, y, z));
+                    }
+                }
+            }
+            Structure.RemoveBGParts(bgParts);
+        }
+        foreach (Vector3I position in partsBlocks)
+        {
+            ChangePartsBlock(position, PartsType.None);
+        }
 
+        _WorldEditorScene._BGPartsGridManager.Clear();
+    }
+
+    public override void FixPropShells()
+    {
+        if (Structure is null)
+            return;
+        
         if (Structure.SourceGame == 1)
         {
-            _WorldEditorScene._BGPartsGridManager.ClearCellItem(position);
-            foreach (EyeOfRubissStructure.BGPartsData bgParts in Structure.GetAllBGPartsAtPosition(position))
+            foreach (EyeOfRubissStructure.BGPartsData bgParts in Structure.GetAllBGParts())
             {
-                EyeOfRubiss.Info.DQB1.BGPartsInfo bgPartsInfo = EyeOfRubiss.Info.DQB1.BGPartsInfo.Get(bgParts.BGPartsID);
-		    	if (bgPartsInfo.Mesh is int meshId)
-		    	{
-		    		_WorldEditorScene._BGPartsGridManager.AddCellItem(bgParts.GetPosition(), meshId, Util.GridMapRotationFromDirection(bgParts.Direction));
-		    	}
-            }
+                (Vector3I start, Vector3I end) = bgParts.GetBounds();
+                for (int x = start.X; x <= end.X; x++)
+                {
+                    for (int y = start.Y; y <= end.Y; y++)
+                    {
+                        for (int z = start.Z; z <= end.Z; z++)
+                        {
+                            Vector3I position = new(x, y, z);
+                            EyeOfRubiss.Info.DQB1.BlockInfo blockInfo = EyeOfRubiss.Info.DQB1.BlockInfo.Get((byte)Structure.GetBlock(position));
+                            if (blockInfo.PartsType == PartsType.None)
+                            {
+                                Structure.SetBlock(position, EyeOfRubiss.Info.DQB1.BGPartsInfo.Get(bgParts.BGPartsID).GetPartsBlockID());
+                                UpdateBlock(position);
+                            }
+                        }
+                    }
+                }
+            }   
         }
         else if (Structure.SourceGame == 2)
         {
-            _WorldEditorScene._BGPartsGridManager.ClearCellItem(position);
-            foreach (EyeOfRubissStructure.BGPartsData bgParts in Structure.GetAllBGPartsAtPosition(position))
+            foreach (EyeOfRubissStructure.BGPartsData bgParts in Structure.GetAllBGParts())
             {
-                EyeOfRubiss.Info.DQB2.BGPartsInfo bgPartsInfo = EyeOfRubiss.Info.DQB2.BGPartsInfo.Get(bgParts.BGPartsID);
-		    	if (bgPartsInfo.Mesh is int meshId)
-		    	{
-		    		_WorldEditorScene._BGPartsGridManager.AddCellItem(bgParts.GetPosition(), meshId, Util.GridMapRotationFromDirection(bgParts.Direction, bgParts.ConnectingWindowRotation));
-		    	}
+                (Vector3I start, Vector3I end) = bgParts.GetBounds();
+                for (int x = start.X; x <= end.X; x++)
+                {
+                    for (int y = start.Y; y <= end.Y; y++)
+                    {
+                        for (int z = start.Z; z <= end.Z; z++)
+                        {
+                            Vector3I position = new(x, y, z);
+                            EyeOfRubiss.Info.DQB2.BlockInfo blockInfo = EyeOfRubiss.Info.DQB2.BlockInfo.Get(Structure.GetBlock(position).GetBlockID());
+                            if (blockInfo.GetPartsType() == PartsType.None)
+                            {
+                                ChangePartsBlock(position, EyeOfRubiss.Info.DQB2.BGPartsInfo.Get(bgParts.BGPartsID).Block);
+                            }
+                        }
+                    }
+                }
             }
         }
     }
+
+    public override void FixFakeBlocks()
+    {
+        if (Structure is null || Structure.SourceGame != 2)
+            return;
+        
+        foreach (EyeOfRubissStructure.BGPartsData bgParts in Structure.GetAllBGParts())
+        {
+            EyeOfRubiss.Info.DQB2.BGPartsInfo bgPartsInfo = EyeOfRubiss.Info.DQB2.BGPartsInfo.Get(bgParts.BGPartsID);
+            if (bgPartsInfo.IsFakeBlock())
+            {
+                Vector3I position = bgParts.GetPosition();
+                Structure.SetBlock(position, bgPartsInfo.GetFakeBlockID());
+                Structure.RemoveBGParts(bgParts);
+                UpdateBlock(position);
+            }
+        }
+    }
+    #endregion
 }

@@ -6,6 +6,8 @@ using EyeOfRubiss.Info.DQB1;
 using System.Formats.Tar;
 using System.Linq;
 using System.ComponentModel;
+using System.Collections.Generic;
+using System.Reflection.Metadata;
 
 namespace EyeOfRubiss
 {
@@ -30,7 +32,15 @@ namespace EyeOfRubiss
       			$"X: {position.X}, Y: {position.Y}, Z: {position.Z}\n" +
                 $"Chunk: {dataPosition.X}, ID: {_WorldData.GetChunk(dataPosition.X).ChunkID}, Layer: {dataPosition.Y}, Tile: {dataPosition.Z}";
             
-            displayString += $"\nTargeted fluid: {_WorldData.GetFluidAtPosition(position)}";
+            FluidType fluid = _WorldData.GetFluidAtPosition(position);
+            if (fluid != FluidType.Air)
+                displayString += $"\nTargeted fluid: {fluid}";
+            
+            if (_ParamData is not null)
+            {
+                ParamData.BiomeMapInfo biomeMapInfo = _ParamData.GetBiomeMapInfo(position);
+                displayString += $"\nBiome: {BiomeInfo.Get(biomeMapInfo.Biome).Name}, Area: {biomeMapInfo.LevelArea}";
+            }
             
             if (_WorldData.GetOverlappingBGParts(position) is WorldData.BGParts parts)
             {
@@ -48,7 +58,6 @@ namespace EyeOfRubiss
             _WorldData = worldData;
             
             ReloadTerrain();
-            // TODO parts block
             if (_WorldEditorScene.ShowBGParts)
                 GenerateBGParts();
         }
@@ -66,7 +75,7 @@ namespace EyeOfRubiss
 
 			_WorldEditorScene._PlayerDisplay.SetNPCName("Player");
 			_WorldEditorScene._PlayerDisplay.Position = _ParamData.GetPlayerPosition();
-			//_WorldEditorScene._PlayerDisplay.Rotation = Vector3.Up * _CommonData.PlayerRotation; TODO
+			_WorldEditorScene._PlayerDisplay.Rotation = Vector3.Up * _ParamData.PlayerRotation;
 			_WorldEditorScene._PlayerDisplay.Visible = _WorldEditorScene.ShowPlayer;
 
             if (_WorldEditorScene.ShowNPCs)
@@ -116,17 +125,30 @@ namespace EyeOfRubiss
             
             foreach (ParamData.Resident resident in _ParamData.GetResidents())
             {
-                GenerateResident(resident);
+                if (resident.ResidentID != 0)
+                    GenerateResident(resident);
             }
+            if (_ParamData.YoshiExists)
+                GenerateYoshi();
 
             _ResidentsLoaded = true;
         }
         public void GenerateResident(ParamData.Resident resident)
         {
             NPCSprite npcSprite = ResourceLoader.Load<PackedScene>("res://Nodes/NPCSprite.tscn").Instantiate<NPCSprite>();
-            npcSprite.SetNPCName("TODO");
+            npcSprite.SetNPC(resident);
             npcSprite.Position = resident.GetPosition();
+            npcSprite.Rotation = Vector3.Up * resident.Rotation;
 			_WorldEditorScene._ResidentLayer.AddChild(npcSprite);
+        }
+        public void GenerateYoshi()
+        {
+            NPCSprite npcSprite = ResourceLoader.Load<PackedScene>("res://Nodes/NPCSprite.tscn").Instantiate<NPCSprite>();
+            npcSprite.ResidentID = -2;
+            npcSprite.SetNPCName("great sabrecat");
+            npcSprite.Position = _ParamData.GetYoshiPosition();
+            npcSprite.Rotation = Vector3.Up * _ParamData.YoshiRotation;
+            _WorldEditorScene._ResidentLayer.AddChild(npcSprite);
         }
         public void DestroyResidents()
         {
@@ -188,9 +210,9 @@ namespace EyeOfRubiss
             
         }
 
-        public bool AddBGParts(Vector3I position, int bgPartsId, byte direction, PartsType? partsBlock = null, bool collision = true, bool effects = true)
+        public bool AddBGParts(Vector3I position, int bgPartsId, byte direction, PartsType? partsBlock = null, bool collision = true, bool effects = true, bool unbreakable = false)
         {
-            if (_WorldData.AddBGParts(position, (ushort)bgPartsId, direction, collision, effects) is not WorldData.BGParts bgParts)
+            if (_WorldData.AddBGParts(position, (ushort)bgPartsId, direction, collision, effects, unbreakable) is not WorldData.BGParts bgParts)
                 return false;
 
             BGPartsInfo bgPartsInfo = BGPartsInfo.Get((ushort)bgPartsId);
@@ -226,6 +248,8 @@ namespace EyeOfRubiss
         }
         public void RemoveBGParts(WorldData.BGParts bgParts)
         {
+            _ParamData?.ClearBlockEntitiesAtPosition(bgParts.GetPosition());
+
             (Vector3I start, Vector3I end) = bgParts.GetBounds();
             for (int x = start.X; x <= end.X; x++)
             {
@@ -294,6 +318,15 @@ namespace EyeOfRubiss
             
             return EyeOfRubissStructure.From(_WorldData, start, end);
         }
+        
+        public void UpdateBlock(Vector3I position)
+        {
+            if (_WorldData is null)
+                return;
+
+            _WorldEditorScene._VoxelTool.SetVoxel(position, VoxelGeneratorDQB1.GetVoxelAtPosition(_WorldData, position, _WorldEditorScene.ShowTerrain, _WorldEditorScene.ShowFluids));
+            _WorldEditorScene._VoxelTool_PropShells.SetVoxel(position, VoxelGeneratorDQB1.GetVoxelAtPosition(_WorldData, position, showPartsBlock: true));
+        }
         #endregion
 
         #region Brush methods
@@ -304,7 +337,7 @@ namespace EyeOfRubiss
 
 			if (!WorldData.PositionIsInBounds(position))
 			{
-				_WorldEditorScene._StatusLabel.PrintMessage("Cannot place blocks out of bounds.");
+				StatusLabel.PrintMessage("Cannot place blocks out of bounds.");
 				return;
 			}
 
@@ -317,20 +350,20 @@ namespace EyeOfRubiss
             _WorldData.SetBlockAtPosition(position, (byte)block);
             UpdateBlock(position);
         }
-        public override void DoSetBGParts(Vector3I position, int bgParts, PartsType? partsBlock = null, bool collision = true, bool effects = true)
+        public override void DoSetBGParts(Vector3I position, int bgParts, PartsType? partsBlock = null, bool collision = true, bool effects = true, bool unbreakable = false, byte size = 0)
         {
             if (_WorldData is null)
                 return;
 
 			if (!WorldData.PositionIsInBounds(position))
 			{
-				_WorldEditorScene._StatusLabel.PrintMessage("Cannot place blocks out of bounds.");
+				StatusLabel.PrintMessage("Cannot place blocks out of bounds.");
 				return;
 			}
 
-            if (!AddBGParts(position, bgParts, _WorldEditorScene.GetBGPartsPlacementDirection(), partsBlock, collision, effects))
+            if (!AddBGParts(position, bgParts, _WorldEditorScene.GetBGPartsPlacementDirection(), partsBlock, collision, effects, unbreakable))
             {
-				_WorldEditorScene._StatusLabel.PrintMessage("Failed to place object.");
+				StatusLabel.PrintMessage("Failed to place object.");
             }
         }
         public override void DoEraser(Vector3I position)
@@ -412,15 +445,221 @@ namespace EyeOfRubiss
                 }
             }
         }
+
+        public override void DoPointer(Vector3I position)
+        {
+            if (_ParamData is null || _WorldData is null)
+                return;
+            
+            foreach (WorldData.BGParts bgParts in _WorldData.GetAllOverlappingBGParts(position))
+            {
+                if (_ParamData.GetStorageAtPosition(bgParts.GetPosition()) is ParamData.Storage storage)
+                {
+                    _WorldEditorScene._StorageEditor.Popup(storage);
+                    return;
+                }
+                if (_ParamData.GetItemDisplayAtPosition(bgParts.GetPosition()) is ParamData.ItemDisplay display)
+                {
+                    _WorldEditorScene._ItemDisplayEditor.Popup(display);
+                    return;
+                }
+                if (_ParamData.GetSignpostAtPosition(bgParts.GetPosition()) is ParamData.Signpost signpost)
+                {
+                    _WorldEditorScene._SignpostEditor.Popup(signpost);
+                    return;
+                }
+                if (_ParamData.GetColossalCofferAtPosition(bgParts.GetPosition()) is ParamData.ColossalCoffer)
+                {
+                    GD.Print("Yep, that's a colossal coffer.");
+                    return;
+                    // TODO
+                }
+            }
+        }
         #endregion
 
-        public void UpdateBlock(Vector3I position)
+        #region Tools
+        public override void DeleteAllBGParts()
         {
             if (_WorldData is null)
                 return;
 
-            _WorldEditorScene._VoxelTool.SetVoxel(position, VoxelGeneratorDQB1.GetVoxelAtPosition(_WorldData, position, _WorldEditorScene.ShowTerrain, _WorldEditorScene.ShowFluids));
-            _WorldEditorScene._VoxelTool_PropShells.SetVoxel(position, VoxelGeneratorDQB1.GetVoxelAtPosition(_WorldData, position, showPartsBlock: true));
+            HashSet<Vector3I> partsBlocks = [];
+            foreach (WorldData.Chunk chunk in _WorldData.GetUsedChunks())
+            {
+                foreach (WorldData.BGParts bgParts in chunk.GetAllBGParts())
+                {
+                    if (!bgParts.Exists())
+                        continue;
+
+                    (Vector3I start, Vector3I end) = bgParts.GetBounds();
+                    for (int x = start.X; x <= end.X; x++)
+                    {
+                        for (int y = start.Y; y <= end.Y; y++)
+                        {
+                            for (int z = start.Z; z <= end.Z; z++)
+                            {
+                                partsBlocks.Add(new Vector3I(x, y, z));
+                            }
+                        }
+                    }
+                    bgParts.Clear();
+                }
+                chunk.BGPartsCount = 0;
+            }
+            foreach (Vector3I position in partsBlocks)
+            {
+                BlockInfo blockInfo = BlockInfo.Get(_WorldData.GetBlockAtPosition(position));
+                if (blockInfo.PartsType != PartsType.None)
+                {
+                    _WorldData.SetBlockAtPosition(position, (byte)Constants.BLOCK_AIR);
+                    UpdateBlock(position);
+                }
+            }
+
+            _WorldEditorScene._BGPartsGridManager.Clear();
+            _ParamData?.ClearAllBlockEntities();
         }
+        
+        public override void FillInChunks()
+        {
+            if (_WorldData is null)
+                return;
+
+            foreach (WorldData.Chunk chunk in _WorldData.GetUsedChunks())
+            {
+                for (int x = 0; x < WorldData.CHUNK_SIZE; x++)
+                {
+                    for (int z = 0; z < WorldData.CHUNK_SIZE; z++)
+                    {
+                        Vector3I position = new(x, 0, z);
+                        if (chunk.GetBlock(position) == 0)
+                        {
+                            chunk.SetBlock(position, (byte)Constants.BLOCK_BEDROCK);
+                            chunk.SetFluid(new(x, 1, z), FluidType.Water);
+                            chunk.SetFluid(new(x, 2, z), FluidType.Water);
+                        }
+                    }
+                }
+            }
+
+            ReloadTerrain();
+        }
+
+        public override void FixPropShells()
+        {
+            if (_WorldData is null)
+                return;
+            
+            foreach (WorldData.Chunk chunk in _WorldData.GetUsedChunks())
+            {
+                foreach (WorldData.BGParts bgParts in chunk.GetAllBGParts())
+                {
+                    (Vector3I start, Vector3I end) = bgParts.GetBounds();
+                    for (int x = start.X; x <= end.X; x++)
+                    {
+                        for (int y = start.Y; y <= end.Y; y++)
+                        {
+                            for (int z = start.Z; z <= end.Z; z++)
+                            {
+                                Vector3I position = new(x, y, z);
+                                BlockInfo blockInfo = BlockInfo.Get(_WorldData.GetBlockAtPosition(position));
+                                if (blockInfo.PartsType == PartsType.None)
+                                {
+                                    _WorldData.SetBlockAtPosition(position, bgParts.GetInfo().GetPartsBlockID());
+                                    UpdateBlock(position);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        public override void ClearOrphanedBlockEntities()
+        {
+            if (_ParamData is null || _WorldData is null)
+                return;
+            
+            ParamData.ColossalCoffer coffer = _ParamData.GetColossalCoffer();
+            if (coffer.Enabled && _WorldData.GetBGPartsAtPosition(coffer.GetPosition()) is null)
+                coffer.Clear();
+            
+            foreach (ParamData.Storage storage in _ParamData.GetStorages())
+            {
+                if (storage.Enabled && _WorldData.GetBGPartsAtPosition(storage.GetPosition()) is null)
+                    storage.Clear();
+            }
+
+            foreach (ParamData.ItemDisplay display in _ParamData.GetAllItemDisplays())
+            {
+                if (display.Enabled && _WorldData.GetBGPartsAtPosition(display.GetPosition()) is null)
+                    display.Clear();
+            }
+
+            foreach (ParamData.Signpost signpost in _ParamData.GetSignposts())
+            {
+                if (signpost.Enabled && _WorldData.GetBGPartsAtPosition(signpost.GetPosition()) is null)
+                    signpost.Clear();
+            }
+
+            foreach (ParamData.Teleportal teleportal in _ParamData.GetTeleportals())
+            {
+                if (teleportal.Enabled && _WorldData.GetBGPartsAtPosition(teleportal.GetPosition()) is null)
+                    teleportal.Clear();
+            }
+
+            foreach (ParamData.Naviglobe globe in _ParamData.GetNaviglobes())
+            {
+                if (globe.Enabled && _WorldData.GetBGPartsAtPosition(globe.GetPosition()) is null)
+                    globe.Clear();
+            }
+
+            ParamData.SharingStone sharingStone = _ParamData.GetSharingStone();
+            if (sharingStone.Enabled &&_WorldData.GetBGPartsAtPosition(sharingStone.GetPosition()) is null)
+                sharingStone.Clear();
+
+            foreach (ParamData.SummoningStone stone in _ParamData.GetSummoningStones())
+            {
+                if (stone.Enabled && _WorldData.GetBGPartsAtPosition(stone.GetPosition()) is null)
+                    stone.Clear();
+            }
+        }
+        #endregion
+        
+        #region NPC editing
+        public override void OnGizmo3DTransformEnd(NPCSprite npcSprite)
+        {
+            if (_ParamData is null)
+				return;
+
+			if (npcSprite.ResidentID == -1)
+			{
+				_ParamData.PlayerPositionX = npcSprite.Position.X;
+				_ParamData.PlayerPositionY = npcSprite.Position.Y;
+				_ParamData.PlayerPositionZ = npcSprite.Position.Z;
+
+				_ParamData.PlayerRotation = npcSprite.Rotation.Y;
+			}
+            else if (npcSprite.ResidentID == -2)
+            {
+				_ParamData.YoshiPositionX = npcSprite.Position.X;
+				_ParamData.YoshiPositionY = npcSprite.Position.Y;
+				_ParamData.YoshiPositionZ = npcSprite.Position.Z;
+
+				_ParamData.YoshiRotation = npcSprite.Rotation.Y;
+            }
+			else
+			{
+				ParamData.Resident resident = _ParamData.GetResident(npcSprite.ResidentID);
+
+				resident.PositionX = npcSprite.Position.X;
+				resident.PositionY = npcSprite.Position.Y;
+				resident.PositionZ = npcSprite.Position.Z;
+
+				resident.Rotation = npcSprite.Rotation.Y;
+			}
+        }
+        #endregion
     }
 }

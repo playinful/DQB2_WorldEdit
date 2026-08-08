@@ -55,11 +55,14 @@ namespace EyeOfRubiss
 
         public static ulong GetVoxelAtPosition(WorldData worldData, Vector3I position, bool showTerrain = true, bool showFluid = true, bool showPartsBlock = false)
         {
+            if (position.Y < 0 && !showPartsBlock)
+                return Constants.VOXEL_FLOOR_COLLISION;
+
             byte block = worldData.GetBlockAtPosition(position);
             Info.DQB1.BlockInfo blockInfo = Info.DQB1.BlockInfo.Get(block);
 
             if (showPartsBlock)
-                return (ulong)blockInfo.PartsType;
+                    return (ulong)((int)blockInfo.PartsType + 1);
                 
             ulong voxelId = blockInfo.Voxel;
 

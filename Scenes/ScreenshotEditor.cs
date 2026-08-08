@@ -67,8 +67,10 @@ public partial class ScreenshotEditor : Window
 
 		if (false)//(_ItemList.ItemCount < 100)
 		{
-			_AddImageIndex = _ItemList.ItemCount;
-			_ItemList.AddIconItem(ResourceLoader.Load<Texture2D>("res://Resources/Graphics/add_image.png"));
+#pragma warning disable CS0162 // Unreachable code detected
+            _AddImageIndex = _ItemList.ItemCount;
+#pragma warning restore CS0162 // Unreachable code detected
+            _ItemList.AddIconItem(ResourceLoader.Load<Texture2D>("res://Resources/Graphics/add_image.png"));
 		}
 		else
 		{

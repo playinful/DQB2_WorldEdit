@@ -1,0 +1,14 @@
+# MONSTERS #
+
+0x00 = ushort(?) 0x03E8 (1000) (amount of entries in file)
+0x02..0x3F = Empty
+0x40..0x0FDF = uint[] Integers from 0-999
+0xFE0..0x1197F = Monster Param[] (0x44 bytes each) (1000 count)
+    .. = ?
+    +0x0A = ushort NPC Type?
+    .. = ?
+    +0x1E = ushort Model ID
+    .. = ?
+    +0x28 = ushort Loot ID
+    .. = ?
+    +0x38 = ushort Experience

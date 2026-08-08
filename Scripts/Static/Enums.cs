@@ -6,18 +6,34 @@ namespace EyeOfRubiss
     {
         Unknown = 0,
         
-        DQB1_WorldData = 100,
-        DQB1_ParamData = 101,
+        DQB1_WorldData_Switch = 100,
+        DQB1_ParamData_Switch = 101,
+
+        DQB1_WorldData_PS3 = 102,
+        DQB1_ParamData_PS3 = 103,
+
+        DQB1_WorldData_PS4 = 104,
+        DQB1_ParamData_PS4 = 105,
+
+        DQB1_WorldData_Vita = 106,
+        DQB1_ParamData_Vita = 107,
+
+        DQB1_WorldData_Unity = 108,
+        DQB1_ParamData_Unity = 109,
 
         DQB1_BlueprintAsset = 110,
-        DQB1_DioramaAssetHeader = 111,
-        DQB1_DioramaAssetData = 112,
+        DQB1_DioramaHeaderAsset = 111,
+        DQB1_DioramaDataAsset = 112,
 
         DQB2_StageData = 200,
         DQB2_CommonData = 201,
         DQB2_ScreenshotData = 202,
 
-        DQB2_Blueprint = 210,
+        DQB2_PencilSketch = 210,
+
+        DQB2_Blueprint = 220,
+        DQB2_DioramaHeader = 221,
+        DQB2_DioramaData = 222,
 
         EyeOfRubissStructure = 10000
     }

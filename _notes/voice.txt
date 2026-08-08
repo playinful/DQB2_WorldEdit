@@ -1,0 +1,46 @@
+1 - slime
+3 - dracky
+4 - ghostly guest
+5 - pastor's pal
+6 - orc
+7 - guard (skeleton)
+9 - bewarewolf
+15 - Smashley
+18 - madusa
+20 - killing machine
+24 - bodkin archer
+25 - gargoyle
+26 - Gottfried
+28 - gigantes
+36 - Malroth (monster)
+41 - fat rat
+43 - spirit
+44 - stark raven
+45 - magus
+46 - guard (chasmonaut)
+47 - gremlin
+48 - shell slime
+49 - healslime
+50 - warden
+53 - goodybag
+59 - Wrigley
+60 - cat
+61 - Furrowfield retriever
+63 - chicken
+72 - Malroth
+73 - Hargon
+76 - Perry, Clayton, ex-con 77, Serge, tireless trader (young man A)
+77 - ex-con 78, Haydin (young man B)
+78 - avid agriculturist (young man C)
+79 - Lulu, Britney, Babs, Esther (young woman A)
+80 - Rosie, showy showgirl, Zara (young woman B)
+81 - Saffron, perky performer, dazzling dancer, carefree commoner (young woman C)
+82 - Bonanzo, Captain Brownbeard, Den, Magrog (middle-aged man A)
+83 - rough rancher (middle-aged man B)
+84 - Ordelia (middle-aged woman A)
+85 - fervent farmer (middle-aged woman B)
+86 - ex-con 76, Dougie, Digby, beefy bloke (toughie)
+87 - Anessa
+88 - King, Jeremiah, Gerome (old man)
+89 - Clarissa (old woman)
+90 - Atlas

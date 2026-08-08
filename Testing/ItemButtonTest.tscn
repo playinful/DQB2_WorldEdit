@@ -1,0 +1,114 @@
+[gd_scene load_steps=2 format=3 uid="uid://svyiparvlpda"]
+
+[ext_resource type="Script" uid="uid://dqpq8qneifxgu" path="res://Nodes/ItemButton.cs" id="1_x0vpu"]
+
+[node name="ItemButtonTest" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button_512x512" type="Button" parent="."]
+layout_mode = 0
+offset_left = 191.0
+offset_top = 41.0
+offset_right = 703.0
+offset_bottom = 553.0
+expand_icon = true
+script = ExtResource("1_x0vpu")
+Rarity = 3
+Color = 3
+Connecting = true
+FallbackIconIndex = 2362
+
+[node name="Button_256x256" type="Button" parent="."]
+layout_mode = 0
+offset_left = 781.0
+offset_top = 46.0
+offset_right = 1037.0
+offset_bottom = 302.0
+expand_icon = true
+script = ExtResource("1_x0vpu")
+IconIndex = 7
+Rarity = 3
+Color = 3
+Connecting = true
+
+[node name="Button_128x128" type="Button" parent="."]
+layout_mode = 0
+offset_left = 781.0
+offset_top = 343.0
+offset_right = 909.0
+offset_bottom = 471.0
+expand_icon = true
+script = ExtResource("1_x0vpu")
+IconIndex = 7
+Rarity = 3
+Color = 3
+Connecting = true
+
+[node name="Button_96x96" type="Button" parent="."]
+layout_mode = 0
+offset_left = 947.0
+offset_top = 359.0
+offset_right = 1043.0
+offset_bottom = 455.0
+expand_icon = true
+script = ExtResource("1_x0vpu")
+IconIndex = 7
+Rarity = 3
+Color = 3
+Connecting = true
+
+[node name="Button_64x64" type="Button" parent="."]
+layout_mode = 0
+offset_left = 797.0
+offset_top = 506.0
+offset_right = 861.0
+offset_bottom = 570.0
+expand_icon = true
+script = ExtResource("1_x0vpu")
+IconIndex = 7
+Rarity = 3
+Color = 3
+Connecting = true
+
+[node name="Button_48x48" type="Button" parent="."]
+layout_mode = 0
+offset_left = 884.0
+offset_top = 517.0
+offset_right = 932.0
+offset_bottom = 565.0
+expand_icon = true
+script = ExtResource("1_x0vpu")
+IconIndex = 7
+Rarity = 3
+Color = 3
+Connecting = true
+
+[node name="Button_32x32" type="Button" parent="."]
+layout_mode = 0
+offset_left = 975.0
+offset_top = 527.0
+offset_right = 1007.0
+offset_bottom = 559.0
+expand_icon = true
+script = ExtResource("1_x0vpu")
+IconIndex = 7
+Rarity = 3
+Color = 3
+Connecting = true
+
+[node name="Button_16x16" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1057.0
+offset_top = 534.0
+offset_right = 1073.0
+offset_bottom = 550.0
+expand_icon = true
+script = ExtResource("1_x0vpu")
+Rarity = 3
+Color = 3
+Connecting = true

@@ -65,7 +65,7 @@ namespace EyeOfRubiss
         public bool CarLight { get => GetBit(0x506, 5); set => SetBit(0x506, 5, value); }
 
         public bool GreenGardensBuildable { get => GetBit(0x682, 1); set => SetBit(0x682, 1, value); }
-        public bool ScaletSandsBuildable { get => GetBit(0x682, 2); set => SetBit(0x682, 2, value); }
+        public bool ScarletSandsBuildable { get => GetBit(0x682, 2); set => SetBit(0x682, 2, value); }
         public bool CeruleanSteppeBuildable { get => GetBit(0x682, 3); set => SetBit(0x682, 3, value); }
         
         public bool Transform { get => GetBit(0x500, 6); set => SetBit(0x500, 6, value); } // TODO: What does this do?
@@ -154,6 +154,12 @@ namespace EyeOfRubiss
             else return null;
         }
 
+        public override void Save(string path = null)
+        {
+            RemoveSteamAccountLock();
+            base.Save(path);
+        }
+
         public Image GetThumbnail()
         {
             Image image = Image.CreateEmpty(320, 180, false, Image.Format.Rgb8);
@@ -171,6 +177,11 @@ namespace EyeOfRubiss
                 }
             }
             return image;
+        }
+
+        public void RemoveSteamAccountLock()
+        {
+            Fill(0, 0x2A415, 8, header: true);
         }
 
         public InventoryItem GetHotbarItem(int index)
@@ -238,6 +249,8 @@ namespace EyeOfRubiss
 
             public int GetAddress() => (Index - 1) * LENGTH + START_ADDRESS;
 
+            public Span<byte> GetBytes() => SaveData.GetBytes(GetAddress(), LENGTH);
+
             public string Name { get => SaveData.GetString(GetAddress(), 30).Replace("\0", ""); set => SaveData.SetString(GetAddress(), value, 30); }
             public bool UseCustomName { get => SaveData.GetBit(GetAddress() + 0x12D, 7); set => SaveData.SetBit(GetAddress() + 0x12D, 7, value); }
             public byte GenericName { get => SaveData.GetByte(GetAddress() + 0x112); set => SaveData.SetByte(GetAddress() + 0x112, value); }
@@ -250,12 +263,12 @@ namespace EyeOfRubiss
             public ushort Type { get => SaveData.GetUInt16(GetAddress() + 0x90); set => SaveData.SetUInt16(GetAddress() + 0x90, value); }
             public byte Job { get => SaveData.GetByte(GetAddress() + 0x10F); set => SaveData.SetByte(GetAddress() + 0x10F, value); }
 
-            public bool CanEquip { get => SaveData.GetBit(GetAddress() + 0x133, 1); set => SaveData.SetBit(GetAddress() + 0x133, 1, value); }
-            public bool CanBattle { get => SaveData.GetBit(GetAddress() + 0x103, 1); set => SaveData.SetBit(GetAddress() + 0x103, 1, value); }
+            public bool CanEquip { get => !SaveData.GetBit(GetAddress() + 0x133, 1); set => SaveData.SetBit(GetAddress() + 0x133, 1, !value); }
+            public bool CanBattle { get => !SaveData.GetBit(GetAddress() + 0x103, 1); set => SaveData.SetBit(GetAddress() + 0x103, 1, !value); }
 
             public byte HomeIsland { get => SaveData.GetByte(GetAddress() + 0x113); set => SaveData.SetByte(GetAddress() + 0x113, value); }
             public byte CurrentIsland { get => SaveData.GetByte(GetAddress() + 0xDF); set => SaveData.SetByte(GetAddress() + 0xDF, value); }
-            /// <summary> A byte value pertaining to the section of the Isle of Awakening in which this Resident lives (Green Gardens, Scarlet Sands, etc. Should be set to 0 if CurrentIsland is not the Isle of Awakening). </summary>
+            /// <summary> A byte value pertaining to the section of the Isle of Awakening in which this Resident lives (Green Gardens, Scarlet Sands, etc. Should be set to 0 if CurrentIsland is not the Isle of Awakening?). </summary>
             public byte CurrentRegion { get => SaveData.GetByte(GetAddress() + 0x144); set => SaveData.SetByte(GetAddress() + 0x144, value); }
 
             public ushort Face { get => SaveData.GetUInt16(GetAddress() + 0xE5); set => SaveData.SetUInt16(GetAddress() + 0xE5, value); }
@@ -264,7 +277,7 @@ namespace EyeOfRubiss
             public ushort EyeColor { get => SaveData.GetUInt16(GetAddress() + 0xEB); set => SaveData.SetUInt16(GetAddress() + 0xEB, value); }
             public ushort HairColor { get => SaveData.GetUInt16(GetAddress() + 0xED); set => SaveData.SetUInt16(GetAddress() + 0xED, value); }
             public ushort SkinColor { get => SaveData.GetUInt16(GetAddress() + 0xEF); set => SaveData.SetUInt16(GetAddress() + 0xEF, value); }
-            public bool LockGraphic { get => SaveData.GetBit(GetAddress() + 0x12E, 4); set => SaveData.SetBit(GetAddress() + 0x12E, 4, value); }
+            public bool LockGraphic { get => !SaveData.GetBit(GetAddress() + 0x12E, 4); set => SaveData.SetBit(GetAddress() + 0x12E, 4, !value); }
 
             public byte MessageType { get => SaveData.GetByte(GetAddress() + 0x10A); set => SaveData.SetByte(GetAddress() + 0x10A, value); }
             public byte VoiceType { get => SaveData.GetByte(GetAddress() + 0x10B); set => SaveData.SetByte(GetAddress() + 0x10B, value); }
@@ -312,16 +325,28 @@ namespace EyeOfRubiss
             {
                 return new Vector3(PositionX, PositionY, PositionZ);
             }
+            
+            public void Clear()
+            {
+                SaveData.Fill(0, GetAddress(), LENGTH);
+            }
+
             public string GetDisplayName()
             {
-                if (!string.IsNullOrEmpty(Name))
+                if (UseCustomName)
                     return Name;
-
+                else
+                    return GetInternalName();
+            }
+            public string GetInternalName()
+            {
                 if (IsImportant())
-                    return StoryPeopleName.Get(Index);
+                    return StoryPeopleName.Get(Type);
 
-                return Name;
-                // TODO generic names
+                if (Type == 295)
+                    return Info.DQB2.GenericName.Get(GenericName, Sex);
+
+                return JobTitle.Get(Job);
             }
 
             public void Resurrect()
@@ -369,12 +394,12 @@ namespace EyeOfRubiss
         private static int BLUEPRINT_START_ADDRESS = 0x136DE8;
         private static int BLUEPRINT_MAXIMUM = 5;
 
-        public Blueprint GetBlueprint(int index)
+        public PencilSketch GetBlueprint(int index)
         {
             if (index < 0 || index >= BLUEPRINT_MAXIMUM)
                 throw new IndexOutOfRangeException();
             
-            return new Blueprint(this, BLUEPRINT_START_ADDRESS + index * Blueprint.LENGTH);
+            return new PencilSketch(this, BLUEPRINT_START_ADDRESS + index * PencilSketch.LENGTH);
         }
         #endregion
 

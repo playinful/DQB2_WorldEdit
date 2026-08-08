@@ -1,0 +1,85 @@
+
+
+villager
+farmer
+miner
+merchant
+soldier
+sailor
+bartender
+dancer
+general
+nun
+king
+bard
+singer
+dog
+enigma
+farmer
+farmer
+wiggly
+
+chicken
+chick
+sheep
+lamb
+cow
+calf
+slime
+farmer
+
+villager
+
+cat
+kitten
+puppy
+child
+ghost
+hammerhood
+healslime
+chimaera
+killing machine
+walking corpse
+golem
+liquid metal slime
+great sabrecat
+muddy hand
+powie yowie
+living statue
+hammerhood
+villager
+farmer
+villager
+
+
+villager
+
+elder
+
+magus
+
+soldier
+soldier
+goodybag
+great sabrecub
+metal slime
+killing machine
+whackolyte
+magus
+deadnaut
+deadnaut
+gremlin
+dracky
+badboon
+hood
+silvapithecus
+gargoyle
+rockbomb
+archdemon
+mean spirit
+villager
+child
+villager
+miner
+soldier
+toughie

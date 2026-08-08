@@ -1,0 +1,30 @@
+# RESIDENTS #
+
+0x00 = ushort(?) 0x0400 (1024) (amount of entries in file?)
+0x02..0x3F = Empty
+0x40..0x103F = uint[] Integers from 0-1023
+0x1040..0x1303F = Resident Data[] (0x48 bytes each) (1024 count)
+    +0x00 = ushort Hair colour
+    +0x02 = ushort Eye colour
+    +0x04 = ushort Skin colour
+    .. = ?
+    +0x0A = ushort Weapon ID
+    .. = ?
+    +0x10 = ushort Resident Model Param ID #1 (not sure what to call it, see 0389.unknown)
+    +0x12 = ushort Resident Model Param ID #2
+    +0x14 = ushort Resident Model Param ID #3
+    +0x16 = ushort Resident Model Param ID #4 (note: These different model param IDs are for when an NPC's appearance changes throughout the story, like Babs)
+    .. = ?
+    +0x1C = ushort(?) HP
+    .. = ?
+    +0x22 = byte Job
+    +0x23 = ? (when it is 01, cannot be recruited from monster battle)
+    .. = ?
+    +0x2A = byte Room Size Preference
+    +0x2B = byte Room Fanciness Preference
+    +0x2C = byte Room Ambience Preference
+    +0x2D = byte Message Type
+    .. = ?
+    +0x37 = byte Home Island
+    .. = ?
+    +0x44 = > (when it is 0x59, cannot be recruited from monster battle)

@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Linq;
 using System.Text.Json;
 using System.Text.Json.Serialization;
@@ -40,6 +41,13 @@ namespace EyeOfRubiss.Info.DQB2
                 LoadDatabase();
 
             return _Database.FirstOrDefault(i => i.ID == id) ?? new WeatherInfo(id, true);
+        }
+        public static WeatherInfo[] GetAll()
+        {
+            if (_Database is null)
+                LoadDatabase();
+            
+            return [.. _Database];
         }
     }
 }

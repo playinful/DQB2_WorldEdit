@@ -3,6 +3,7 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using Godot;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 
 namespace EyeOfRubiss.Info.DQB2
 {
@@ -50,6 +51,10 @@ namespace EyeOfRubiss.Info.DQB2
 
         public bool Unknown { get; set; } = false;
 
+        public bool IsFakeBlock() => ID > 3083;
+        public ushort GetFakeBlockID() => IsFakeBlock() ? (ushort)(ID - 3084) : (ushort)0;
+        public BlockInfo GetFakeBlockInfo() => IsFakeBlock() ? BlockInfo.Get((ushort)(ID - 3084)) : null;
+
         [JsonConstructor]
         private BGPartsInfo() { }
         private BGPartsInfo(ushort id, bool unknown = false)
@@ -57,7 +62,10 @@ namespace EyeOfRubiss.Info.DQB2
             ID = id;
             Unknown = unknown;
             if (unknown)
+            {
+                Mesh = 0;
                 Name = "Unknown";
+            }
         }
 
         public static void LoadDatabase(bool forceReload = false)
@@ -73,7 +81,22 @@ namespace EyeOfRubiss.Info.DQB2
             if (_Database is null)
                 LoadDatabase();
 
-            return _Database.FirstOrDefault(i => i.ID == id) ?? new BGPartsInfo(id, unknown: true);
+            if (id < 3084)
+            {
+                return _Database.FirstOrDefault(i => i.ID == id) ?? new BGPartsInfo(id, unknown: true);
+            }
+            else
+            {
+                BlockInfo blockInfo = BlockInfo.Get((ushort)(id - 3084));
+                return new(id)
+                {
+                    Collision = true,
+                    Icon = blockInfo.Icon,
+                    Color = blockInfo.Color,
+                    Name = blockInfo.Name,
+                    Mesh = 0
+                };
+            }
         }
         public static BGPartsInfo[] GetAll()
         {

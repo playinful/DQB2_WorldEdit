@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://5uisrr0wq1pj"]
+
+[ext_resource type="Script" uid="uid://dak6h55ts13nk" path="res://Testing/OptionButtonWithWriteInTest.cs" id="1_3h2fr"]
+[ext_resource type="Script" uid="uid://bajtk8eb1uc4g" path="res://Testing/OptionButtonWithWriteIn.cs" id="1_c1wom"]
+
+[node name="OptionButtonWithWriteIn" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3h2fr")
+
+[node name="OptionButton" type="OptionButton" parent="."]
+layout_mode = 0
+offset_left = 111.0
+offset_top = 106.0
+offset_right = 409.0
+offset_bottom = 137.0
+clip_text = true
+selected = 0
+fit_to_longest_item = false
+item_count = 3
+popup/item_0/text = "Normal Item 1"
+popup/item_0/id = 0
+popup/item_1/text = "Normal Item 2"
+popup/item_1/id = 1
+popup/item_2/text = "Normal Item 3"
+popup/item_2/id = 2
+script = ExtResource("1_c1wom")

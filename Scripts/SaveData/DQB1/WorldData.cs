@@ -8,7 +8,7 @@ using EyeOfRubiss.Info.DQB1;
 
 namespace EyeOfRubiss
 {
-    public class WorldData : SaveData
+    public abstract class WorldData : SaveData
     {
         public const int HEADER_LENGTH = 0;
 
@@ -18,18 +18,15 @@ namespace EyeOfRubiss
         public const int WORLD_SIZE_BLOCKS = WORLD_SIZE_CHUNKS * CHUNK_SIZE;
         public const int WORLD_HEIGHT_BLOCKS = 32;
 
-        public static bool TryLoad(string path, out WorldData result)
+        public uint CreateChecksum()
         {
-            result = null;
-            WorldData worldData = new();
-            if (worldData._TryLoad(path, HEADER_LENGTH))
-            {
-                result = worldData;
-                worldData.CreateBGPartsPositionDictionary();
-                worldData.CreateBGPartsOverlapDictionary();
-                return true;
-            }
-            else return false;
+            uint checksum = 0;
+			for (int index = 0; index < 0x194CCFC; index++)
+			{
+				checksum *= 31;
+				checksum += GetByte(index);
+			}
+            return checksum;
         }
 
         public static bool PositionIsInBounds(Vector3I position)
@@ -65,17 +62,17 @@ namespace EyeOfRubiss
         {
             if (!PositionIsInBounds(position))
                 return 0;
+
+            Chunk chunk = GetChunk(PositionToChunkIndex(position));
+
+            if (chunk is null || !chunk.IsUsed())
+                return 0;
                 
             int chunkPosX = position.X % CHUNK_SIZE;
             int chunkPosY = position.Y;
             int chunkPosZ = position.Z % CHUNK_SIZE;
 
             int tile = (chunkPosY * CHUNK_SIZE * CHUNK_SIZE) + (chunkPosZ * CHUNK_SIZE) + (chunkPosX);
-
-            Chunk chunk = GetChunk(PositionToChunkIndex(position));
-
-            if (chunk is null || !chunk.IsUsed())
-                return 0;
 
             return chunk.GetBlock(tile);
         }
@@ -97,7 +94,7 @@ namespace EyeOfRubiss
             return true;
         }
         
-        public BGParts AddBGParts(Vector3I position, ushort bgPartsId, byte direction = 0, bool collision = true, bool effects = true)
+        public BGParts AddBGParts(Vector3I position, ushort bgPartsId, byte direction = 0, bool collision = true, bool effects = true, bool unbreakable = false)
         {
             if (!PositionIsInBounds(position))
                 return null;
@@ -120,24 +117,19 @@ namespace EyeOfRubiss
             bgParts.Direction = direction;
             bgParts.BGPartsID = bgPartsId;
 
+            bgParts.Collision = collision;
+            bgParts.Effects = effects;
+            bgParts.Unbreakable = unbreakable;
+
             return bgParts;
         }
 
         public FluidType GetFluidAtPosition(Vector3I position)
         {
-            if (position.Y < 3)
-                return GetChunk(PositionToChunkIndex(position)).GetFluid(new Vector2I(position.X % 32, position.Z % 32));
-            else
-                return FluidType.Air;
+            return GetChunk(PositionToChunkIndex(position)).GetFluid(new Vector3I(position.X % 32, position.Y, position.Z % 32));
         }
         
-        public Chunk GetChunk(int index)
-        {
-            if (index < 0 || index >= Chunk.MAXIMUM)
-                throw new IndexOutOfRangeException();
-
-            return new Chunk(this, index);
-        }
+        abstract public Chunk GetChunk(int index);
         public IEnumerable<Chunk> GetChunks(int index = 0, int count = Chunk.MAXIMUM)
         {
             if (index < 0 || index >= Chunk.MAXIMUM)
@@ -150,13 +142,17 @@ namespace EyeOfRubiss
         {
             return GetChunks().Where(chunk => chunk.IsUsed());
         }
+        public Chunk GetChunkAtPosition(Vector3I position)
+        {
+            return GetChunk(PositionToChunkIndex(position));
+        }
 
-        public class Chunk(WorldData saveData, int index)
+        public abstract class Chunk(WorldData saveData, int index)
         {
             public const int START_ADDRESS_METADATA = 0;
             public const int START_ADDRESS_BLOCKDATA = 0x120C;
             public const int START_ADDRESS_BGPARTSDATA = 0x169020C;
-            public const int START_ADDRESS_FLUIDDATA = 0x15E_140C;
+            public const int START_ADDRESS_FLUIDDATA = 0x15E120C;
             public const int LENGTH_BGPARTSDATA = BGParts.LENGTH * BGParts.MAXIMUM + 4;
             public const int LENGTH_METADATA = 2;
             public const int MAXIMUM = WORLD_SIZE_CHUNKS * WORLD_SIZE_CHUNKS;
@@ -168,8 +164,8 @@ namespace EyeOfRubiss
             public WorldData SaveData { get; set; } = saveData;
             public int Index { get; set; } = index;
 
-            public ushort ChunkID { get => SaveData.GetUInt16(START_ADDRESS_METADATA + Index * LENGTH_METADATA); set => SaveData.SetUInt16(START_ADDRESS_METADATA + Index * LENGTH_METADATA, value); }// => SaveData.GetChunkIdByIndex(Index);
-            public int BGPartsCount { get => SaveData.GetInt32(GetBGPartsAddress() - 4); set => SaveData.SetInt32(GetBGPartsAddress() - 4, value); }
+            abstract public ushort ChunkID { get; set; }
+            abstract public ushort BGPartsCount { get; set; }
 
             public Vector3I GetOrigin() => ChunkIndexToPosition(Index);
 
@@ -188,7 +184,10 @@ namespace EyeOfRubiss
             }
             public byte GetBlock(Vector3I position)
             {
-                if (position.X < 0 || position.X >= CHUNK_SIZE || position.Y < 0 || position.Y > WORLD_HEIGHT_BLOCKS || position.Z < 0 || position.Z > CHUNK_SIZE)
+                if (!IsUsed())
+                    return 0;
+                
+                if (position.X < 0 || position.X >= CHUNK_SIZE || position.Y < 0 || position.Y >= WORLD_HEIGHT_BLOCKS || position.Z < 0 || position.Z >= CHUNK_SIZE)
                     return 0;
 
                 int tile = (position.Y * CHUNK_SIZE * CHUNK_SIZE) + (position.Z * CHUNK_SIZE) + position.X;
@@ -207,6 +206,17 @@ namespace EyeOfRubiss
 
                 SaveData.SetByte(GetBlockAddress() + tile, blockId);
             }
+            public void SetBlock(Vector3I position, byte blockId)
+            {
+                if (!IsUsed())
+                    return;
+
+                if (position.X < 0 || position.X >= CHUNK_SIZE || position.Y < 0 || position.Y >= WORLD_HEIGHT_BLOCKS || position.Z < 0 || position.Z >= CHUNK_SIZE)
+                    return;
+
+                int tile = (position.Y * CHUNK_SIZE * CHUNK_SIZE) + (position.Z * CHUNK_SIZE) + position.X;
+                SetBlock(tile, blockId);
+            }
 
             public void SetLayer(int layer, byte block)
             {
@@ -216,16 +226,7 @@ namespace EyeOfRubiss
                 }
             }
 
-            public BGParts GetBGParts(int index)
-            {
-                if (!IsUsed())
-                    return null;
-                
-                if (index < 0 || index >= BGParts.MAXIMUM)
-                    return null;
-                
-                return new BGParts(SaveData, this, index);
-            }
+            abstract public BGParts GetBGParts(int index);
             public IEnumerable<BGParts> GetAllBGParts()
             {
                 if (!IsUsed())
@@ -251,12 +252,16 @@ namespace EyeOfRubiss
                 return null;
             }
 
-            public FluidType GetFluid(Vector2I position)
+            public FluidType GetFluid(Vector3I position)
             {
                 if (!IsUsed())
                     return FluidType.Air;
+                if (position.Y < 1 || position.Y > 2)
+                    return FluidType.Air;
 
-                int address = GetFluidAddress() + ((position.X + position.Y * 32) / 2);
+                int address = GetFluidAddress() + ((position.X + position.Z * 32) / 2);
+                if (position.Y == 2)
+                    address += 0x200;
                 int nibble = position.X % 2;
 
                 uint fluidType = SaveData.GetNumberBitwise(address, nibble * 4, 4);
@@ -269,6 +274,20 @@ namespace EyeOfRubiss
                     _ => FluidType.Air
                 };
             }
+            public void SetFluid(Vector3I position, FluidType fluid)
+            {
+                if (!IsUsed())
+                    return;
+                if (position.Y < 1 || position.Y > 2)
+                    return;
+
+                int address = GetFluidAddress() + ((position.X + position.Z * 32) / 2);
+                if (position.Y == 2)
+                    address += 0x200;
+                int nibble = position.X % 2;
+
+                SaveData.SetNumberBitwise(address, nibble * 4, 4, ((uint)fluid) + 1);
+            }
 
             public void Clear()
             {
@@ -279,7 +298,7 @@ namespace EyeOfRubiss
             }
         }
         
-        public class BGParts(WorldData saveData, Chunk chunk, int index)
+        public abstract class BGParts(WorldData saveData, Chunk chunk, int index)
         {
             public const int LENGTH = 4;
             public const int MAXIMUM = 1024;
@@ -290,69 +309,15 @@ namespace EyeOfRubiss
             
             public int GetAddress() => Chunk.GetBGPartsAddress() + LENGTH * Index;
 
-            public ushort BGPartsID 
-            { 
-                get => (ushort)SaveData.GetNumberBitwise(GetAddress(), 0, 9);
-                set
-                {
-                    SaveData.RemoveBGPartsFromPositionDictionary(this);
-                    SaveData.RemoveBGPartsFromOverlapDictionary(this);
-                    SaveData.SetNumberBitwise(GetAddress(), 0, 9, value);
-                    SaveData.AddBGPartsToPositionDictionary(this);
-                    SaveData.AddBGPartsToOverlapDictionary(this);
-                }
-            }
-            public byte X 
-            { 
-                get => (byte)SaveData.GetNumberBitwise(GetAddress() + 1, 1, 5);
-                set
-                {
-                    SaveData.RemoveBGPartsFromPositionDictionary(this);
-                    SaveData.RemoveBGPartsFromOverlapDictionary(this);
-                    SaveData.SetNumberBitwise(GetAddress() + 1, 1, 5, value);
-                    SaveData.AddBGPartsToPositionDictionary(this);
-                    SaveData.AddBGPartsToOverlapDictionary(this);
-                }
-            }
-            public byte Y 
-            { 
-                get => (byte)SaveData.GetNumberBitwise(GetAddress() + 1, 6, 5);
-                set
-                {
-                    SaveData.RemoveBGPartsFromPositionDictionary(this);
-                    SaveData.RemoveBGPartsFromOverlapDictionary(this);
-                    SaveData.SetNumberBitwise(GetAddress() + 1, 6, 5, value);
-                    SaveData.AddBGPartsToPositionDictionary(this);
-                    SaveData.AddBGPartsToOverlapDictionary(this);
-                }
-            }
-            public byte Z
-            { 
-                get => (byte)SaveData.GetNumberBitwise(GetAddress() + 2, 3, 5);
-                set
-                {
-                    SaveData.RemoveBGPartsFromPositionDictionary(this);
-                    SaveData.RemoveBGPartsFromOverlapDictionary(this);
-                    SaveData.SetNumberBitwise(GetAddress() + 2, 3, 5, value);
-                    SaveData.AddBGPartsToPositionDictionary(this);
-                    SaveData.AddBGPartsToOverlapDictionary(this);
-                }
-            }
-            public byte Direction
-            {
-                get => (byte)SaveData.GetNumberBitwise(GetAddress() + 3, 0, 2); 
-                set
-                {
-                    SaveData.RemoveBGPartsFromPositionDictionary(this);
-                    SaveData.RemoveBGPartsFromOverlapDictionary(this);
-                    SaveData.SetNumberBitwise(GetAddress() + 3, 0, 2, value);
-                    SaveData.AddBGPartsToPositionDictionary(this);
-                    SaveData.AddBGPartsToOverlapDictionary(this);
-                }
-            }
+            abstract public ushort BGPartsID { get; set; }
+            abstract public byte X { get; set; }
+            abstract public byte Y { get; set; }
+            abstract public byte Z { get; set; }
+            abstract public byte Direction { get; set; }
 
-            public bool Collision { get => SaveData.GetBit(GetAddress() + 3, 4); set => SaveData.SetBit(GetAddress() + 3, 4, value);  }
-            public bool Effects { get => SaveData.GetBit(GetAddress() + 3, 2); set => SaveData.SetBit(GetAddress() + 3, 2, value); }
+            abstract public bool Collision { get; set; }
+            abstract public bool Unbreakable { get; set; }
+            abstract public bool Effects { get; set; }
 
             public Vector3I GetLocalPosition() => new Vector3I(X, Y, Z);
             public Vector3I GetPosition() => GetLocalPosition() + Chunk.GetOrigin();
@@ -408,8 +373,8 @@ namespace EyeOfRubiss
             }
         }
     
-        private Dictionary<Vector3I, List<Tuple<int, int>>> _BGPartsPositionDictionary;
-        private void CreateBGPartsPositionDictionary()
+        public Dictionary<Vector3I, List<Tuple<int, int>>> _BGPartsPositionDictionary;
+        public void CreateBGPartsPositionDictionary()
         {
             _BGPartsPositionDictionary = [];
             foreach (Chunk chunk in GetUsedChunks())
@@ -420,7 +385,7 @@ namespace EyeOfRubiss
                 }
             }
         }
-        private void AddBGPartsToPositionDictionary(BGParts bgParts)
+        public void AddBGPartsToPositionDictionary(BGParts bgParts)
         {
             if (!bgParts.Exists())
             {
@@ -460,8 +425,8 @@ namespace EyeOfRubiss
             }
         }
         
-        private Dictionary<Vector3I, List<Tuple<int, int>>> _BGPartsOverlapDictionary;
-        private void CreateBGPartsOverlapDictionary()
+        public Dictionary<Vector3I, List<Tuple<int, int>>> _BGPartsOverlapDictionary;
+        public void CreateBGPartsOverlapDictionary()
         {
             _BGPartsOverlapDictionary = [];
             foreach (Chunk chunk in GetUsedChunks())
@@ -472,7 +437,7 @@ namespace EyeOfRubiss
                 }
             }
         }
-        private void AddBGPartsToOverlapDictionary(BGParts bgParts)
+        public void AddBGPartsToOverlapDictionary(BGParts bgParts)
         {
             if (!bgParts.Exists())
             {

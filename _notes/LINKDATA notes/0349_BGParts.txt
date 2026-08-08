@@ -1,0 +1,14 @@
+# BGPARTS #
+
+0x00 = ushort(?) 0x1000 (4096) (amount of entries in file)
+0x02..0x3F = Empty
+0x40..0x403F = uint[] Integers from 0-4095
+0x4040..0x1C03F = BGParts Data[] (0x18 bytes each) (4096 count)
+    +0x00 = ushort Block Param ID
+    +0x02 = ushort Model ID
+    ..
+    +0x08 = Duplicate of 0x0C? (if not the same as 0x0C then it won't be highlighted on Blueprint)
+    +0x0A = ushort Alternative Item ID? i.e. Normal Milkblossom in the case of Rare Milkblossom
+    +0x0C = ushort Alternative BGParts ID for Blueprint?
+    ..
+    +0x12 = ushort Seed Item ID?

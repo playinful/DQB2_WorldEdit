@@ -1320,60 +1320,71 @@
     {
         "ID": 121,
         "JLabel": "DQ1:毒沼",
-        "Name": "Bygone Bog",
-        "NameJP": "ドット毒沼",
-        "Icon": 2473,
-        "Voxel": 598,
+        "Name": "Prop (Roof)",
+        "NameV4": "Bygone Bog",
+        "NameJP": "",
+        "NameJPV4": "ドット毒沼",
+        "Icon": 1099,
+        "IconV4": 2473,
+        "Voxel": 0,
+        "VoxelV4": 598,
         "Fanciness": 0,
-        "Sort": 10930
+        "Sort": 10930,
+        "Note": "Bygone Bog on Switch, Roof on PS3"
     },
     {
         "ID": 122,
         "JLabel": "",
-        "Name": "",
+        "Name": "Prop (Table)",
         "NameJP": "",
-        "Icon": -1,
-        "Voxel": 7
+        "Icon": 1100,
+        "PartsType": "Table",
+        "Note": "PS3"
     },
     {
         "ID": 123,
         "JLabel": "",
-        "Name": "",
+        "Name": "Prop (Lighting)",
         "NameJP": "",
-        "Icon": -1,
-        "Voxel": 7
+        "Icon": 1101,
+        "PartsType": "Lighting",
+        "Note": "PS3"
     },
     {
         "ID": 124,
-        "JLabel": "",
-        "Name": "",
+        "JLabel": "草C",
+        "Name": "Prop (Fixture)",
         "NameJP": "",
-        "Icon": -1,
-        "Voxel": 7
+        "Icon": 1102,
+        "PartsType": "Fixture",
+        "Note": "PS3"
     },
     {
         "ID": 125,
-        "JLabel": "",
-        "Name": "",
+        "JLabel": "草D",
+        "Name": "Prop (Door)",
         "NameJP": "",
-        "Icon": -1,
-        "Voxel": 7
+        "Icon": 1103,
+        "PartsType": "Door",
+        "Note": "PS3"
     },
     {
         "ID": 126,
-        "JLabel": "",
-        "Name": "",
+        "JLabel": "草A",
+        "Name": "Prop (Unknown)",
         "NameJP": "",
-        "Icon": -1,
-        "Voxel": 7
+        "Icon": 1104,
+        "PartsType": "Unknown",
+        "Note": "PS3"
     },
     {
         "ID": 127,
-        "JLabel": "",
-        "Name": "",
+        "JLabel": "草B",
+        "Name": "Prop (Generic)",
         "NameJP": "",
-        "Icon": -1,
-        "Voxel": 7
+        "Icon": 1105,
+        "PartsType": "Generic",
+        "Note": "PS3"
     },
     {
         "ID": 128,
@@ -2349,7 +2360,6 @@
         "Name": "Prop (Roof)",
         "NameJP": "",
         "Icon": 1099,
-        
         "PartsType": "Roof"
     },
     {
@@ -2358,7 +2368,6 @@
         "Name": "Prop (Table)",
         "NameJP": "",
         "Icon": 1100,
-        
         "PartsType": "Table"
     },
     {
@@ -2367,7 +2376,6 @@
         "Name": "Prop (Lighting)",
         "NameJP": "",
         "Icon": 1101,
-        
         "PartsType": "Lighting"
     },
     {
@@ -2376,7 +2384,6 @@
         "Name": "Prop (Fixture)",
         "NameJP": "",
         "Icon": 1102,
-        
         "PartsType": "Fixture"
     },
     {
@@ -2385,7 +2392,6 @@
         "Name": "Prop (Door)",
         "NameJP": "",
         "Icon": 1103,
-        
         "PartsType": "Door"
     },
     {
@@ -2394,7 +2400,6 @@
         "Name": "Prop (Unknown)",
         "NameJP": "",
         "Icon": 1104,
-        
         "PartsType": "Unknown"
     },
     {
@@ -2403,7 +2408,6 @@
         "Name": "Prop (Generic)",
         "NameJP": "",
         "Icon": 1105,
-        
         "PartsType": "Generic"
     }
 ]

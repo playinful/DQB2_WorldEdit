@@ -1,7 +1,97 @@
-01 = research room
-02 = ballista barricade
-03 = power tower 1
-
-3C = red blueprint
-3D = blue print
-3E = green? print
+1	research room
+2	ballista barricade
+3	power tower 1
+4	builder's emblem
+5	bathhouse
+6	Babs's bedroom
+7	sturdy scaffold
+8	<no name>
+9	bell room
+10	potato patch
+11	castle walls
+12	simple gate
+13	cannon tower
+14	<no name>
+15	great gate
+16	arm raid shelter
+17	Ark airframe
+18	holy altar
+19	<does not display>
+20	dressing room
+21	lift
+22	power tower 2
+23	anti-Air Force fortifications
+24	anti-Scare Force fortifications
+25	Moonbrooke chapel
+26	anti-Hair Force fortifications
+27	copper bar
+28	silver bar (alpha)
+29	silver bar
+30	<no name>
+31	Den's drawing
+32	gold bar level 1
+33	the Ark
+34	upgraded garage
+35	relaxation room
+36	pyramid level 1 (actually unused pinnacle)
+37	gold bar level 2
+38	gold bar level 3
+39	<no name>
+40	irrigation station
+41	<no name>
+42	<no name>
+43	<no name>
+44	<no name>
+45	<no name>
+46	<no name>
+47	reinforced walls
+48	<no name>
+49	<no name>
+50	Deitree level 1
+51	Deitree level 2
+52	Deitree level 3
+53	better base
+54	even better base
+55	basic buggy
+56	<does not display>
+57	<does not display>
+58	<does not display>
+59	<does not display>
+60	red pencil sketch
+61	blue pencil sketch
+62	green pencil sketch
+63	yellow pencil sketch
+64	?
+65	?
+66	?
+67	?
+68	Kazapple cannon
+69	energisation station
+70	<does not display>
+71	<does not display>
+72	<does not display>
+73	<does not display>
+74	<does not display>
+75	<no name>
+76	<no name>
+77	<no name>
+78	<does not display>
+79	<does not display>
+80	<does not display>
+81	<does not display>
+82	dungeon
+83	mountaintop temple
+84	pyramid level 1
+85	pyramid level 2
+86	pyramid level 3
+87	pyramid pinnacle (Goldirox)
+88	pyramid pinnacle (artistic)
+89	minecart station
+90	<does not display>
+91	<does not display>
+92	builder's castle level 3
+93	Ark understructure
+94	lift (Ark)
+95	party platform
+96	<no name>
+97	Gillian's aquarium blueprint

@@ -1,0 +1,11 @@
+# TREASURE #
+
+0x00 = ushort(?) 0x157C (5500) (amount of entries in file)
+0x02..0x3F = Empty
+0x40..0x562F = uint[] Integers from 0-5500
+0x5630..0x35B9F = Treasure Data[] (0x24 bytes each) (5500 count)
+    +0x00..+0x07 = ushort[4] ??
+    +0x08..+0x0F = ushort[4] Item IDs
+    +0x10..+0x17 = ushort[4] Item Counts
+    +0x18..+0x1F = ushort[4] Item Chances (out of 10000)
+    .. = ?

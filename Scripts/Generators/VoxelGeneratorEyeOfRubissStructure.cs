@@ -45,10 +45,14 @@ namespace EyeOfRubiss
             if (structure.SourceGame == 1)
             {
                 byte block = (byte)structure.GetBlock(position);
+
+                if (position.Y < 0 && block == Constants.BLOCK_AIR)
+                    return Constants.VOXEL_FLOOR_COLLISION;
+
                 Info.DQB1.BlockInfo blockInfo = Info.DQB1.BlockInfo.Get(block);
                 
                 if (showPartsBlock)
-                    return (ulong)blockInfo.PartsType;
+                    return (ulong)((int)blockInfo.PartsType + 1);
                 
                 ulong voxelId = blockInfo.Voxel;
                 if (voxelId != Constants.VOXEL_AIR)
@@ -83,10 +87,14 @@ namespace EyeOfRubiss
             else if (structure.SourceGame == 2)
             {
                 ushort block = structure.GetBlock(position).GetBlockID();
+
+                if (position.Y < 0 && block == Constants.BLOCK_AIR)
+                    return Constants.VOXEL_FLOOR_COLLISION;
+                
                 Info.DQB2.BlockInfo blockInfo = Info.DQB2.BlockInfo.Get(block);
 
                 if (showPartsBlock)
-                    return (ulong)blockInfo.GetPartsType();
+                    return (ulong)((int)blockInfo.GetPartsType() + 1);
                 
                 ulong voxelId = blockInfo.Voxel;
                 if (voxelId != Constants.VOXEL_AIR)

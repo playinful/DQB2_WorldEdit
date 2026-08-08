@@ -1,0 +1,636 @@
+[gd_scene load_steps=19 format=3 uid="uid://dcpo0bap6hph"]
+
+[ext_resource type="Theme" uid="uid://nd34kb5d40qb" path="res://Resources/DQB_Theme.tres" id="1_hgjc7"]
+[ext_resource type="Script" uid="uid://crpcyrwhc3jgv" path="res://Scenes/ResidentEditorDQB2.cs" id="1_mkcxy"]
+[ext_resource type="Script" uid="uid://dqpq8qneifxgu" path="res://Nodes/ItemButton.cs" id="3_01lqq"]
+[ext_resource type="Texture2D" uid="uid://dykf4roqg12b5" path="res://Resources/Graphics/icon_isle01.png" id="3_iprri"]
+[ext_resource type="Texture2D" uid="uid://lb77gm65ns65" path="res://Resources/Graphics/icon_all.png" id="3_vy6kn"]
+[ext_resource type="Texture2D" uid="uid://cdnrxjgvlt7q5" path="res://Resources/Graphics/icon_isle02.png" id="4_j5sgi"]
+[ext_resource type="Texture2D" uid="uid://b6vlgtjdw1ykk" path="res://Resources/Graphics/icon_isle03.png" id="5_0dlvi"]
+[ext_resource type="Texture2D" uid="uid://cxlhif5bgpoyy" path="res://Resources/Graphics/icon_isle04.png" id="6_0dlvi"]
+[ext_resource type="Texture2D" uid="uid://cp0bqbhki081x" path="res://Resources/Graphics/icon_isle09.png" id="7_dpevh"]
+[ext_resource type="Texture2D" uid="uid://b2yue7qmwoqvc" path="res://Resources/Graphics/icon_isle05.png" id="8_dpevh"]
+[ext_resource type="Texture2D" uid="uid://dxos23265x2ev" path="res://Resources/Graphics/icon_isle10.png" id="9_n22hb"]
+[ext_resource type="Texture2D" uid="uid://dksjirgdotgbq" path="res://Resources/Graphics/icon_isle12.png" id="10_ams3d"]
+[ext_resource type="Texture2D" uid="uid://20gcs71uuf0x" path="res://Resources/Graphics/icon_isle13.png" id="11_g26tp"]
+[ext_resource type="Texture2D" uid="uid://b26vy58y24rvf" path="res://Resources/Graphics/icon_isle16.png" id="12_vy6kn"]
+[ext_resource type="Texture2D" uid="uid://diyestt7o7ejn" path="res://Resources/Graphics/icon_isle14.png" id="13_g26tp"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_yhbij"]
+resource_name = "TypeFilterButtonGroup"
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_01lqq"]
+resource_name = "IslandFilterButtonGroup"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y6ixr"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[node name="ResidentEditorDQB2" type="Window" node_paths=PackedStringArray("_ResidentItemList", "_ResidentIndex_Label", "_Name_LineEdit", "_HP_SpinBox", "_Sex_SpinBox", "_Type_SpinBox", "_Job_SpinBox", "_GenericName_SpinBox", "_Hair_SpinBox", "_Face_SpinBox", "_Body_SpinBox", "_HairColor_SpinBox", "_SkinColor_SpinBox", "_EyeColor_SpinBox", "_CanEquip_CheckBox", "_CanBattle_CheckBox", "_Hidden_CheckBox", "_LockGraphic_CheckBox", "_LockType_CheckBox", "_Dead_CheckBox", "_Clothed_CheckBox", "_InRags_CheckBox", "_HomeIsland_OptionButton", "_CurrentIsland_OptionButton", "_RoomSize_OptionButton", "_RoomFanciness_OptionButton", "_RoomAmbience_OptionButton", "_Weapon_ItemButton", "_Armour_ItemButton", "_Export_Button", "_Import_Button", "_Clone_Button", "_Clear_Button")]
+oversampling_override = 1.0
+title = "Residents"
+position = Vector2i(0, 36)
+size = Vector2i(1000, 500)
+transient = true
+exclusive = true
+unresizable = true
+theme = ExtResource("1_hgjc7")
+script = ExtResource("1_mkcxy")
+_ResidentItemList = NodePath("ItemList")
+_ResidentIndex_Label = NodePath("ResidentIndex_Label")
+_Name_LineEdit = NodePath("Name_LineEdit")
+_HP_SpinBox = NodePath("HP_SpinBox")
+_Sex_SpinBox = NodePath("Sex_SpinBox")
+_Type_SpinBox = NodePath("Type_SpinBox")
+_Job_SpinBox = NodePath("Job_SpinBox")
+_GenericName_SpinBox = NodePath("GenericName_SpinBox")
+_Hair_SpinBox = NodePath("Hair_SpinBox")
+_Face_SpinBox = NodePath("Face_SpinBox")
+_Body_SpinBox = NodePath("Body_SpinBox")
+_HairColor_SpinBox = NodePath("HairColor_SpinBox")
+_SkinColor_SpinBox = NodePath("SkinColor_SpinBox")
+_EyeColor_SpinBox = NodePath("EyeColor_SpinBox")
+_CanEquip_CheckBox = NodePath("CanEquip_CheckBox")
+_CanBattle_CheckBox = NodePath("CanBattle_CheckBox")
+_Hidden_CheckBox = NodePath("Hidden_CheckBox")
+_LockGraphic_CheckBox = NodePath("LockGraphic_CheckBox")
+_LockType_CheckBox = NodePath("LockType_CheckBox")
+_Dead_CheckBox = NodePath("Dead_CheckBox")
+_Clothed_CheckBox = NodePath("Clothed_CheckBox")
+_InRags_CheckBox = NodePath("InRags_CheckBox")
+_HomeIsland_OptionButton = NodePath("HomeIsland_OptionButton")
+_CurrentIsland_OptionButton = NodePath("CurrentIsland_OptionButton")
+_RoomSize_OptionButton = NodePath("RoomSize_OptionButton")
+_RoomFanciness_OptionButton = NodePath("RoomFancy_OptionButton")
+_RoomAmbience_OptionButton = NodePath("RoomMood_OptionButton")
+_Weapon_ItemButton = NodePath("Weapon_ItemButton")
+_Armour_ItemButton = NodePath("Armour_ItemButton")
+_Export_Button = NodePath("Export_Button")
+_Import_Button = NodePath("Import_Button")
+_Clone_Button = NodePath("Clone_Button")
+_Clear_Button = NodePath("Clear_Button")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 31.0
+grow_horizontal = 2
+
+[node name="TypeFilterButton_All" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+tooltip_text = "Show all residents"
+toggle_mode = true
+button_pressed = true
+button_group = SubResource("ButtonGroup_yhbij")
+text = "All"
+
+[node name="TypeFilterButton_Story" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+tooltip_text = "Show only important residents"
+toggle_mode = true
+button_group = SubResource("ButtonGroup_yhbij")
+text = "Important"
+
+[node name="TypeFilterButton_Generic" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+tooltip_text = "Show only generic residents"
+toggle_mode = true
+button_group = SubResource("ButtonGroup_yhbij")
+text = "Generic"
+
+[node name="VSeparator" type="VSeparator" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="IslandFilterButton_00" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+tooltip_text = "All Islands"
+toggle_mode = true
+button_pressed = true
+button_group = SubResource("ButtonGroup_01lqq")
+icon = ExtResource("3_vy6kn")
+
+[node name="IslandFilterButton_01" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+tooltip_text = "Isle of Awakening"
+toggle_mode = true
+button_group = SubResource("ButtonGroup_01lqq")
+icon = ExtResource("3_iprri")
+
+[node name="IslandFilterButton_02" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+tooltip_text = "Furrowfield"
+toggle_mode = true
+button_group = SubResource("ButtonGroup_01lqq")
+icon = ExtResource("4_j5sgi")
+
+[node name="IslandFilterButton_03" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+tooltip_text = "Khrumbul-Dun"
+toggle_mode = true
+button_group = SubResource("ButtonGroup_01lqq")
+icon = ExtResource("5_0dlvi")
+
+[node name="IslandFilterButton_04" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+tooltip_text = "Moonbooke"
+toggle_mode = true
+button_group = SubResource("ButtonGroup_01lqq")
+icon = ExtResource("6_0dlvi")
+
+[node name="IslandFilterButton_05" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+tooltip_text = "Malhalla"
+toggle_mode = true
+button_group = SubResource("ButtonGroup_01lqq")
+icon = ExtResource("8_dpevh")
+
+[node name="IslandFilterButton_09" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+tooltip_text = "Angler's Isle"
+toggle_mode = true
+button_group = SubResource("ButtonGroup_01lqq")
+icon = ExtResource("7_dpevh")
+
+[node name="IslandFilterButton_10" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+tooltip_text = "Skelkatraz"
+toggle_mode = true
+button_group = SubResource("ButtonGroup_01lqq")
+icon = ExtResource("9_n22hb")
+
+[node name="IslandFilterButton_12" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+tooltip_text = "Buildertopia"
+toggle_mode = true
+button_group = SubResource("ButtonGroup_01lqq")
+icon = ExtResource("10_ams3d")
+
+[node name="IslandFilterButton_13" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+tooltip_text = "Buildertopia Beta"
+toggle_mode = true
+button_group = SubResource("ButtonGroup_01lqq")
+icon = ExtResource("11_g26tp")
+
+[node name="IslandFilterButton_16" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+tooltip_text = "Buildertopia Gamma"
+toggle_mode = true
+button_group = SubResource("ButtonGroup_01lqq")
+icon = ExtResource("12_vy6kn")
+
+[node name="IslandFilterButton_14" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+tooltip_text = "Buildertopia Gamma"
+toggle_mode = true
+button_group = SubResource("ButtonGroup_01lqq")
+icon = ExtResource("13_g26tp")
+
+[node name="ItemList" type="ItemList" parent="."]
+offset_left = 10.0
+offset_top = 41.0
+offset_right = 294.0
+offset_bottom = 487.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_y6ixr")
+
+[node name="Name_LineEdit" type="LineEdit" parent="."]
+offset_left = 304.0
+offset_top = 41.0
+offset_right = 503.0
+offset_bottom = 72.0
+placeholder_text = "Name"
+
+[node name="RoomSize_OptionButton" type="OptionButton" parent="."]
+offset_left = 394.0
+offset_top = 279.0
+offset_right = 564.0
+offset_bottom = 311.0
+selected = 3
+item_count = 6
+popup/item_0/text = "--"
+popup/item_0/id = 0
+popup/item_1/text = "♥♡♡♡♡"
+popup/item_1/id = 1
+popup/item_2/text = "♥♥♡♡♡"
+popup/item_2/id = 2
+popup/item_3/text = "♥♥♥♡♡"
+popup/item_3/id = 3
+popup/item_4/text = "♥♥♥♥♡"
+popup/item_4/id = 4
+popup/item_5/text = "♥♥♥♥♥"
+popup/item_5/id = 5
+
+[node name="RoomFancy_OptionButton" type="OptionButton" parent="."]
+offset_left = 396.0
+offset_top = 317.0
+offset_right = 566.0
+offset_bottom = 349.0
+selected = 3
+item_count = 6
+popup/item_0/text = "--"
+popup/item_0/id = 0
+popup/item_1/text = "♥♡♡♡♡"
+popup/item_1/id = 1
+popup/item_2/text = "♥♥♡♡♡"
+popup/item_2/id = 2
+popup/item_3/text = "♥♥♥♡♡"
+popup/item_3/id = 3
+popup/item_4/text = "♥♥♥♥♡"
+popup/item_4/id = 4
+popup/item_5/text = "♥♥♥♥♥"
+popup/item_5/id = 5
+
+[node name="RoomMood_OptionButton" type="OptionButton" parent="."]
+offset_left = 395.0
+offset_top = 358.0
+offset_right = 537.0
+offset_bottom = 389.0
+selected = 1
+item_count = 7
+popup/item_0/text = "--"
+popup/item_0/id = 0
+popup/item_1/text = "Cute"
+popup/item_1/id = 1
+popup/item_2/text = "Cool"
+popup/item_2/id = 2
+popup/item_3/text = "Natural"
+popup/item_3/id = 3
+popup/item_4/text = "Flamboyant"
+popup/item_4/id = 4
+popup/item_5/text = "Cheeky"
+popup/item_5/id = 5
+popup/item_6/text = "Normal"
+popup/item_6/id = 6
+
+[node name="Sex_SpinBox" type="SpinBox" parent="."]
+offset_left = 314.0
+offset_top = 109.0
+offset_right = 450.0
+offset_bottom = 140.0
+max_value = 255.0
+prefix = "Sex:"
+
+[node name="Type_SpinBox" type="SpinBox" parent="."]
+offset_left = 312.0
+offset_top = 150.0
+offset_right = 448.0
+offset_bottom = 181.0
+max_value = 65535.0
+prefix = "Type:"
+
+[node name="GenericName_SpinBox" type="SpinBox" parent="."]
+offset_left = 655.0
+offset_top = 465.0
+offset_right = 791.0
+offset_bottom = 496.0
+max_value = 255.0
+prefix = "GName:"
+
+[node name="Job_SpinBox" type="SpinBox" parent="."]
+offset_left = 311.0
+offset_top = 190.0
+offset_right = 447.0
+offset_bottom = 221.0
+max_value = 255.0
+prefix = "Job:"
+
+[node name="Hair_SpinBox" type="SpinBox" parent="."]
+offset_left = 542.0
+offset_top = 111.0
+offset_right = 655.0
+offset_bottom = 142.0
+max_value = 65535.0
+prefix = "Hair:"
+
+[node name="Face_SpinBox" type="SpinBox" parent="."]
+offset_left = 543.0
+offset_top = 148.0
+offset_right = 655.0
+offset_bottom = 179.0
+max_value = 65535.0
+prefix = "Face:"
+
+[node name="Body_SpinBox" type="SpinBox" parent="."]
+offset_left = 543.0
+offset_top = 185.0
+offset_right = 655.0
+offset_bottom = 216.0
+max_value = 65535.0
+prefix = "Body:"
+
+[node name="HairColor_SpinBox" type="SpinBox" parent="."]
+offset_left = 668.0
+offset_top = 111.0
+offset_right = 781.0
+offset_bottom = 142.0
+max_value = 65535.0
+prefix = "HairCol:"
+
+[node name="SkinColor_SpinBox" type="SpinBox" parent="."]
+offset_left = 669.0
+offset_top = 148.0
+offset_right = 781.0
+offset_bottom = 179.0
+max_value = 65535.0
+prefix = "Skin:"
+
+[node name="EyeColor_SpinBox" type="SpinBox" parent="."]
+offset_left = 669.0
+offset_top = 185.0
+offset_right = 781.0
+offset_bottom = 216.0
+max_value = 65535.0
+prefix = "Eyes:"
+
+[node name="HP_SpinBox" type="SpinBox" parent="."]
+offset_left = 314.0
+offset_top = 228.0
+offset_right = 448.0
+offset_bottom = 259.0
+min_value = -32768.0
+max_value = 32767.0
+prefix = "HP:"
+
+[node name="HomeIsland_OptionButton" type="OptionButton" parent="."]
+offset_left = 316.0
+offset_top = 397.0
+offset_right = 509.0
+offset_bottom = 428.0
+selected = 2
+item_count = 13
+popup/item_0/text = "--"
+popup/item_0/id = 0
+popup/item_1/text = "Isle of Awakening"
+popup/item_1/id = 1
+popup/item_2/text = "Furrowfield"
+popup/item_2/id = 2
+popup/item_3/text = "Khrumbul-Dun"
+popup/item_3/id = 3
+popup/item_4/text = "Moonbrooke"
+popup/item_4/id = 4
+popup/item_5/text = "Malhalla"
+popup/item_5/id = 5
+popup/item_6/text = "Angler's Isle"
+popup/item_6/id = 9
+popup/item_7/text = "Skelkatraz"
+popup/item_7/id = 10
+popup/item_8/text = "Buildertopia"
+popup/item_8/id = 12
+popup/item_9/text = "Buildertopia Beta"
+popup/item_9/id = 13
+popup/item_10/text = "Buildertopia Gamma"
+popup/item_10/id = 16
+popup/item_11/text = "Battle Atoll"
+popup/item_11/id = 14
+popup/item_12/text = "Explorer's Shores"
+popup/item_12/id = 18
+
+[node name="CurrentIsland_OptionButton" type="OptionButton" parent="."]
+offset_left = 308.0
+offset_top = 440.0
+offset_right = 624.0
+offset_bottom = 471.0
+selected = 1
+item_count = 17
+popup/item_0/text = "--"
+popup/item_0/id = 0
+popup/item_1/text = "Island of Awakening (Gardens)"
+popup/item_1/id = 257
+popup/item_2/text = "Isle of Awakening (Sands)"
+popup/item_2/id = 513
+popup/item_3/text = "Isle of Awakening (Steppe)"
+popup/item_3/id = 769
+popup/item_4/text = "Isle of Awakening (Beach)"
+popup/item_4/id = 1025
+popup/item_5/text = "Isle of Awakening (Mountain)"
+popup/item_5/id = 1281
+popup/item_6/text = "Furrowfield"
+popup/item_6/id = 258
+popup/item_7/text = "Khrumbul-Dun"
+popup/item_7/id = 259
+popup/item_8/text = "Moonbrooke"
+popup/item_8/id = 260
+popup/item_9/text = "Malhalla"
+popup/item_9/id = 261
+popup/item_10/text = "Angler's Isle"
+popup/item_10/id = 265
+popup/item_11/text = "Skelkatraz"
+popup/item_11/id = 266
+popup/item_12/text = "Buildertopia"
+popup/item_12/id = 268
+popup/item_13/text = "Buildertopia Beta"
+popup/item_13/id = 269
+popup/item_14/text = "Buildertopia Gamma"
+popup/item_14/id = 272
+popup/item_15/text = "Battle Atoll"
+popup/item_15/id = 270
+popup/item_16/text = "Explorer's Shores"
+popup/item_16/id = 274
+
+[node name="ResidentIndex_Label" type="Label" parent="."]
+offset_left = 503.0
+offset_top = 45.0
+offset_right = 782.0
+offset_bottom = 68.0
+text = "Resident #0"
+horizontal_alignment = 2
+
+[node name="CanEquip_CheckBox" type="CheckBox" parent="."]
+offset_left = 709.0
+offset_top = 347.0
+offset_right = 787.0
+offset_bottom = 378.0
+text = "Equip"
+
+[node name="CanBattle_CheckBox" type="CheckBox" parent="."]
+offset_left = 598.0
+offset_top = 337.0
+offset_right = 687.0
+offset_bottom = 368.0
+text = "Battle"
+
+[node name="Hidden_CheckBox" type="CheckBox" parent="."]
+offset_left = 573.0
+offset_top = 273.0
+offset_right = 663.0
+offset_bottom = 304.0
+text = "Hidden"
+
+[node name="Dead_CheckBox" type="CheckBox" parent="."]
+offset_left = 568.0
+offset_top = 236.0
+offset_right = 652.0
+offset_bottom = 267.0
+text = "Dead"
+
+[node name="Clothed_CheckBox" type="CheckBox" parent="."]
+offset_left = 586.0
+offset_top = 306.0
+offset_right = 688.0
+offset_bottom = 337.0
+text = "Clothed"
+
+[node name="InRags_CheckBox" type="CheckBox" parent="."]
+offset_left = 702.0
+offset_top = 307.0
+offset_right = 798.0
+offset_bottom = 338.0
+text = "Ragged"
+
+[node name="LockGraphic_CheckBox" type="CheckBox" parent="."]
+offset_left = 639.0
+offset_top = 235.0
+offset_right = 790.0
+offset_bottom = 266.0
+tooltip_text = "When enabled, resident will use a
+predefined appearance as determined
+by the game. Disable if you want to
+change an important NPC's appearance."
+text = "Lock Graphic"
+
+[node name="LockType_CheckBox" type="CheckBox" parent="."]
+offset_left = 668.0
+offset_top = 269.0
+offset_right = 797.0
+offset_bottom = 300.0
+text = "Lock Type"
+
+[node name="Export_Button" type="Button" parent="."]
+offset_left = 556.0
+offset_top = 398.0
+offset_right = 656.0
+offset_bottom = 429.0
+text = "Export..."
+
+[node name="Import_Button" type="Button" parent="."]
+offset_left = 686.0
+offset_top = 386.0
+offset_right = 783.0
+offset_bottom = 417.0
+text = "Import..."
+
+[node name="Clone_Button" type="Button" parent="."]
+offset_left = 666.0
+offset_top = 424.0
+offset_right = 725.0
+offset_bottom = 455.0
+toggle_mode = true
+text = "Clone"
+
+[node name="Clear_Button" type="Button" parent="."]
+offset_left = 739.0
+offset_top = 428.0
+offset_right = 796.0
+offset_bottom = 459.0
+text = "Clear
+"
+
+[node name="RoomSize_Label" type="Label" parent="."]
+offset_left = 326.0
+offset_top = 283.0
+offset_right = 366.0
+offset_bottom = 305.0
+text = "Size:"
+
+[node name="RoomFancy_Label" type="Label" parent="."]
+offset_left = 316.0
+offset_top = 318.0
+offset_right = 414.0
+offset_bottom = 340.0
+scale = Vector2(0.75, 1)
+text = "Fanciness:"
+
+[node name="RoomAmbience_Label" type="Label" parent="."]
+offset_left = 315.0
+offset_top = 361.0
+offset_right = 413.0
+offset_bottom = 383.0
+scale = Vector2(0.75, 1)
+text = "Ambience:"
+
+[node name="Weapon_ItemButton" type="Button" parent="."]
+offset_left = 876.0
+offset_top = 91.0
+offset_right = 940.0
+offset_bottom = 155.0
+expand_icon = true
+script = ExtResource("3_01lqq")
+FallbackIconIndex = 2362
+
+[node name="Armour_ItemButton" type="Button" parent="."]
+offset_left = 877.0
+offset_top = 167.0
+offset_right = 941.0
+offset_bottom = 231.0
+expand_icon = true
+script = ExtResource("3_01lqq")
+FallbackIconIndex = 2364
+
+[node name="PopupPanel" type="PopupPanel" parent="."]
+oversampling_override = 1.0
+size = Vector2i(195, 30)
+force_native = true
+
+[node name="Label" type="Label" parent="PopupPanel"]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 191.0
+offset_bottom = 26.0
+text = "check me out dawg"
+
+[connection signal="close_requested" from="." to="." method="Close"]
+[connection signal="pressed" from="HBoxContainer/TypeFilterButton_All" to="." method="_On_TypeFilter_Button_Pressed" binds= [3]]
+[connection signal="pressed" from="HBoxContainer/TypeFilterButton_Story" to="." method="_On_TypeFilter_Button_Pressed" binds= [1]]
+[connection signal="pressed" from="HBoxContainer/TypeFilterButton_Generic" to="." method="_On_TypeFilter_Button_Pressed" binds= [2]]
+[connection signal="pressed" from="HBoxContainer/IslandFilterButton_00" to="." method="_On_IslandFilter_Button_Pressed" binds= [0]]
+[connection signal="pressed" from="HBoxContainer/IslandFilterButton_01" to="." method="_On_IslandFilter_Button_Pressed" binds= [1]]
+[connection signal="pressed" from="HBoxContainer/IslandFilterButton_02" to="." method="_On_IslandFilter_Button_Pressed" binds= [2]]
+[connection signal="pressed" from="HBoxContainer/IslandFilterButton_03" to="." method="_On_IslandFilter_Button_Pressed" binds= [3]]
+[connection signal="pressed" from="HBoxContainer/IslandFilterButton_04" to="." method="_On_IslandFilter_Button_Pressed" binds= [4]]
+[connection signal="pressed" from="HBoxContainer/IslandFilterButton_05" to="." method="_On_IslandFilter_Button_Pressed" binds= [5]]
+[connection signal="pressed" from="HBoxContainer/IslandFilterButton_09" to="." method="_On_IslandFilter_Button_Pressed" binds= [9]]
+[connection signal="pressed" from="HBoxContainer/IslandFilterButton_10" to="." method="_On_IslandFilter_Button_Pressed" binds= [10]]
+[connection signal="pressed" from="HBoxContainer/IslandFilterButton_12" to="." method="_On_IslandFilter_Button_Pressed" binds= [12]]
+[connection signal="pressed" from="HBoxContainer/IslandFilterButton_13" to="." method="_On_IslandFilter_Button_Pressed" binds= [13]]
+[connection signal="pressed" from="HBoxContainer/IslandFilterButton_16" to="." method="_On_IslandFilter_Button_Pressed" binds= [16]]
+[connection signal="pressed" from="HBoxContainer/IslandFilterButton_14" to="." method="_On_IslandFilter_Button_Pressed" binds= [14]]
+[connection signal="item_selected" from="ItemList" to="." method="_On_Resident_ItemList_ItemSelected"]
+[connection signal="editing_toggled" from="Name_LineEdit" to="." method="_On_Name_LineEdit_EditingToggled"]
+[connection signal="item_selected" from="RoomSize_OptionButton" to="." method="_On_RoomSize_OptionButton_ItemSelected"]
+[connection signal="item_selected" from="RoomFancy_OptionButton" to="." method="_On_RoomFanciness_OptionButton_ItemSelected"]
+[connection signal="item_selected" from="RoomMood_OptionButton" to="." method="_On_RoomAmbience_OptionButton_ItemSelected"]
+[connection signal="value_changed" from="Sex_SpinBox" to="." method="_On_Sex_SpinBox_ValueChanged"]
+[connection signal="value_changed" from="Type_SpinBox" to="." method="_On_Type_SpinBox_ValueChanged"]
+[connection signal="value_changed" from="GenericName_SpinBox" to="." method="_On_GenericName_SpinBox_ValueChanged"]
+[connection signal="value_changed" from="Job_SpinBox" to="." method="_On_Job_SpinBox_ValueChanged"]
+[connection signal="value_changed" from="Hair_SpinBox" to="." method="_On_Hair_SpinBox_ValueChanged"]
+[connection signal="value_changed" from="Face_SpinBox" to="." method="_On_Face_SpinBox_ValueChanged"]
+[connection signal="value_changed" from="Body_SpinBox" to="." method="_On_Body_SpinBox_ValueChanged"]
+[connection signal="value_changed" from="HairColor_SpinBox" to="." method="_On_HairColor_SpinBox_ValueChanged"]
+[connection signal="value_changed" from="SkinColor_SpinBox" to="." method="_On_SkinColor_SpinBox_ValueChanged"]
+[connection signal="value_changed" from="EyeColor_SpinBox" to="." method="_On_EyeColor_SpinBox_ValueChanged"]
+[connection signal="value_changed" from="HP_SpinBox" to="." method="_On_HP_SpinBox_ValueChanged"]
+[connection signal="item_selected" from="HomeIsland_OptionButton" to="." method="_On_HomeIsland_OptionButton_ItemSelected"]
+[connection signal="item_selected" from="CurrentIsland_OptionButton" to="." method="_On_CurrentIsland_OptionButton_ItemSelected"]
+[connection signal="toggled" from="CanEquip_CheckBox" to="." method="_On_CanEquip_CheckBox_Toggled"]
+[connection signal="toggled" from="CanBattle_CheckBox" to="." method="_On_CanBattle_CheckBox_Toggled"]
+[connection signal="toggled" from="Hidden_CheckBox" to="." method="_On_Hidden_CheckBox_Toggled"]
+[connection signal="toggled" from="Dead_CheckBox" to="." method="_On_Dead_CheckBox_Toggled"]
+[connection signal="toggled" from="Clothed_CheckBox" to="." method="_On_Clothed_CheckBox_Toggled"]
+[connection signal="toggled" from="InRags_CheckBox" to="." method="_On_InRags_CheckBox_Toggled"]
+[connection signal="toggled" from="LockGraphic_CheckBox" to="." method="_On_LockGraphic_CheckBox_Toggled"]
+[connection signal="toggled" from="LockType_CheckBox" to="." method="_On_LockType_CheckBox_Toggled"]
+[connection signal="pressed" from="Export_Button" to="." method="_On_Export_Button_Pressed"]
+[connection signal="pressed" from="Import_Button" to="." method="_On_Import_Button_Pressed"]
+[connection signal="toggled" from="Clone_Button" to="." method="_On_Clone_Button_Toggled"]
+[connection signal="pressed" from="Clear_Button" to="." method="_On_Clear_Button_Pressed"]
+[connection signal="pressed" from="Weapon_ItemButton" to="." method="_On_Weapon_ItemButton_Pressed"]
+[connection signal="pressed" from="Armour_ItemButton" to="." method="_On_Armour_ItemButton_Pressed"]

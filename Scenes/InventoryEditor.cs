@@ -1,164 +1,95 @@
 using EyeOfRubiss;
-using EyeOfRubiss.Info;
 using EyeOfRubiss.Nodes;
 using EyeOfRubiss.Scenes;
 using Godot;
+using Microsoft.VisualBasic;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
-public partial class InventoryEditor : Control
+public partial class InventoryEditor : Window
 {
-    // [Export] private ItemButtonSelector _Hotbar_ItemButtonSelector;
-    // [Export] private ItemButtonSelector _Bag_ItemButtonSelector_1;
-    // [Export] private ItemButtonSelector _Bag_ItemButtonSelector_2;
-    // [Export] private ItemButtonSelector _Bag_ItemButtonSelector_3;
-    // [Export] private ItemButtonSelector _Bag_ItemButtonSelector_4;
-    // [Export] private ItemButtonSelector _Bag_ItemButtonSelector_5;
-    // [Export] private ItemButtonSelector _Bag_ItemButtonSelector_6;
-    // [Export] private ItemButtonSelector _Bag_ItemButtonSelector_7;
-
-    // [Export] private InventoryItemSelector _InventoryItemSelector;
-    // [Export] private ItemSelectorTest _ItemSelectorTest;
-
-    // private Dictionary<int, ItemButton> _HotbarButtons;
-    // private Dictionary<int, ItemButton> _BagButtons;
-
-    private bool _Initialized;
-
-    private bool _HotbarSelected = false;
-    private int _SelectedItem = -1;
-/*
-    public void Initialize()
+    private ParamData _ParamData;
+    private CommonData _CommonData;
+    
+    public void Popup(ParamData paramData)
     {
-        if (!CommonData.HasInstance())
-            return;
+        _ParamData = paramData;
+        _CommonData = null;
 
-        if (_Initialized)
-            return;
-
-        _BagButtons = [];
-        _HotbarButtons = [];
-
-        for (int i = 0; i < 15; i++)
+        FlowContainer container = new()
         {
-            InventoryItem item = CommonData.Instance.GetHotbarItem(i);
-            _HotbarButtons.Add(i, _Hotbar_ItemButtonSelector.AddButton(i, item.GetInfo(), item.Count));
-        }
-        for (int i = 0; i < 60; i++)
+            Size = Size
+        };
+        AddChild(container);
+        foreach (InventoryItem item in _ParamData.GetHotbarItems())
         {
-            InventoryItem item1 = CommonData.Instance.GetBagItem(i + 60 * 0);
-            InventoryItem item2 = CommonData.Instance.GetBagItem(i + 60 * 1);
-            InventoryItem item3 = CommonData.Instance.GetBagItem(i + 60 * 2);
-            InventoryItem item4 = CommonData.Instance.GetBagItem(i + 60 * 3);
-            InventoryItem item5 = CommonData.Instance.GetBagItem(i + 60 * 4);
-            InventoryItem item6 = CommonData.Instance.GetBagItem(i + 60 * 5);
-            InventoryItem item7 = CommonData.Instance.GetBagItem(i + 60 * 6);
-            _BagButtons.Add(i + 60 * 0, _Bag_ItemButtonSelector_1.AddButton(i + 60 * 0, item1.GetInfo(), item1.Count));
-            _BagButtons.Add(i + 60 * 1, _Bag_ItemButtonSelector_2.AddButton(i + 60 * 1, item2.GetInfo(), item2.Count));
-            _BagButtons.Add(i + 60 * 2, _Bag_ItemButtonSelector_3.AddButton(i + 60 * 2, item3.GetInfo(), item3.Count));
-            _BagButtons.Add(i + 60 * 3, _Bag_ItemButtonSelector_4.AddButton(i + 60 * 3, item4.GetInfo(), item4.Count));
-            _BagButtons.Add(i + 60 * 4, _Bag_ItemButtonSelector_5.AddButton(i + 60 * 4, item5.GetInfo(), item5.Count));
-            _BagButtons.Add(i + 60 * 5, _Bag_ItemButtonSelector_6.AddButton(i + 60 * 5, item6.GetInfo(), item6.Count));
-            _BagButtons.Add(i + 60 * 6, _Bag_ItemButtonSelector_7.AddButton(i + 60 * 6, item7.GetInfo(), item7.Count));
+            if (item.ItemID != 0)
+            {
+                EyeOfRubiss.Info.DQB1.ItemInfo itemInfo = EyeOfRubiss.Info.DQB1.ItemInfo.Get(item.ItemID);
+                AtlasTexture texture = itemInfo.GetIcon();
+                Button button = new Button();
+                button.Icon = texture;
+                container.AddChild(button);   
+            }
+        }
+        foreach (InventoryItem item in _ParamData.GetBagItems())
+        {
+            if (item.ItemID != 0)
+            {
+                EyeOfRubiss.Info.DQB1.ItemInfo itemInfo = EyeOfRubiss.Info.DQB1.ItemInfo.Get(item.ItemID);
+                AtlasTexture texture = itemInfo.GetIcon();
+                Button button = new Button();
+                button.Icon = texture;
+                container.AddChild(button);   
+            }
         }
 
-        _Initialized = true;
+        PopupCentered();
+    }
+    public void Popup(CommonData commonData)
+    {
+        _ParamData = null;
+        _CommonData = commonData;
+
+        List<string> hotbarStrings = [];
+        foreach (InventoryItem item in _CommonData.GetHotbarItems())
+        {
+            if (item.ItemID != 0)
+            {
+                hotbarStrings.Add($"{EyeOfRubiss.Info.DQB2.ItemInfo.Get(item.ItemID).GetNameRich()} x{item.Count}");
+            }
+        }
+        
+        List<string> bagStrings = [];
+        foreach (InventoryItem item in _CommonData.GetBagItems())
+        {
+            if (item.ItemID != 0)
+            {
+                bagStrings.Add($"{EyeOfRubiss.Info.DQB2.ItemInfo.Get(item.ItemID).GetNameRich()} x{item.Count}");
+            }
+        }
+        
+        AddChild(new Label()
+        {
+            Text =
+                "Hotbar Items: " + string.Join(", ", hotbarStrings) +
+                "\n\nBag Items: " + string.Join(", ", bagStrings)
+        });
+
+        PopupCentered();
     }
 
-    public void ChangeItem(bool hotbar, int slot, ushort item)
+    public void Close()
     {
-        if (hotbar)
+        _ParamData = null;
+        _CommonData = null;
+
+        foreach (Node child in GetChildren())
         {
-            CommonData.Instance.GetHotbarItem(slot).ItemID = item;
-            _HotbarButtons[slot].SetItem(ItemInfo.Get(item));
+            child.QueueFree();
         }
-        else
-        {
-            CommonData.Instance.GetBagItem(slot).ItemID = item;
-            _BagButtons[slot].SetItem(ItemInfo.Get(item));
-        }
+
+        Hide();
     }
-    public void ChangeItemCount(bool hotbar, int slot, short count)
-    {
-        if (hotbar)
-        {
-            CommonData.Instance.GetHotbarItem(slot).Count = count;
-            _HotbarButtons[slot].SetItemCount(count);
-        }
-        else
-        {
-            CommonData.Instance.GetBagItem(slot).Count = count;
-            _BagButtons[slot].SetItemCount(count);
-        }
-    }
-
-    public void _On_Hotbar_ItemSelected(int id)
-    {
-        if (CommonData.HasInstance())
-        {
-            InventoryItem item = CommonData.Instance.GetHotbarItem(id);
-            GD.Print($"Hotbar item {id}: {item.GetInfo().Name} x {item.Count}");
-        }
-        else
-        {
-            GD.Print($"Hotbar item {id} (No CommonData loaded)");
-        }
-
-        _ItemSelectorTest.ItemSelected += item => ChangeItem(true, id, (ushort)item);
-    }
-    public void _On_Bag_ItemSelected(int id)
-    {
-        if (CommonData.HasInstance())
-        {
-            InventoryItem item = CommonData.Instance.GetBagItem(id);
-            GD.Print($"Bag item {id}: {item.GetInfo().Name} x {item.Count}");
-        }
-        else
-        {
-            GD.Print($"Bag item {id} (No CommonData loaded)");
-        }
-
-        if (_InventoryItemSelector is null)
-        {
-            return;
-        }
-
-        _ItemSelectorTest.ItemSelected += item => ChangeItem(false, id, (ushort)item);
-    }
-
-    public void _On_TabBar_TabChanged(int tab)
-    {
-        _Bag_ItemButtonSelector_1.Hide();
-        _Bag_ItemButtonSelector_2.Hide();
-        _Bag_ItemButtonSelector_3.Hide();
-        _Bag_ItemButtonSelector_4.Hide();
-        _Bag_ItemButtonSelector_5.Hide();
-        _Bag_ItemButtonSelector_6.Hide();
-        _Bag_ItemButtonSelector_7.Hide();
-
-        switch (tab)
-        {
-            case 0:
-                _Bag_ItemButtonSelector_1.Show();
-                break;
-            case 1:
-                _Bag_ItemButtonSelector_2.Show();
-                break;
-            case 2:
-                _Bag_ItemButtonSelector_3.Show();
-                break;
-            case 3:
-                _Bag_ItemButtonSelector_4.Show();
-                break;
-            case 4:
-                _Bag_ItemButtonSelector_5.Show();
-                break;
-            case 5:
-                _Bag_ItemButtonSelector_6.Show();
-                break;
-            case 6:
-                _Bag_ItemButtonSelector_7.Show();
-                break;
-        }
-    }
-*/}
+}

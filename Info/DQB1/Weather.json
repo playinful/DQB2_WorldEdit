@@ -1,0 +1,222 @@
+[
+  {
+    "ID": 0,
+    "Name": "BLD_WEATHER_INVALID"
+  },
+  {
+    "ID": 1,
+    "Name": "BLD_WEATHER_DEFAULT"
+  },
+  {
+    "ID": 2,
+    "Name": "BLD_WEATHER_TEST_SUNNY"
+  },
+  {
+    "ID": 3,
+    "Name": "BLD_WEATHER_TEST_CLOUDY"
+  },
+  {
+    "ID": 4,
+    "Name": "BLD_WEATHER_TEST_RAIN"
+  },
+  {
+    "ID": 5,
+    "Name": "BLD_WEATHER_TEST_SNOW"
+  },
+  {
+    "ID": 6,
+    "Name": "BLD_WEATHER_DEFAULTVITA"
+  },
+  {
+    "ID": 7,
+    "Name": "BLD_WEATHER_TEST_BLACK"
+  },
+  {
+    "ID": 8,
+    "Name": "BLD_WEATHER_TEST_FIRE"
+  },
+  {
+    "ID": 9,
+    "Name": "BLD_WEATHER_CONDOR_RAIN"
+  },
+  {
+    "ID": 11,
+    "Name": "BLD_WEATHER_BOSS_HELL_CONDOR_RAIN"
+  },
+  {
+    "ID": 12,
+    "Name": "BLD_WEATHER_BOSS_DRAGONLORD2_BLACK"
+  },
+  {
+    "ID": 15,
+    "Name": "BLD_WEATHER_TEST_SUBSPACE"
+  },
+  {
+    "ID": 18,
+    "Name": "BLD_WEATHER_STAGE1_SUNNY"
+  },
+  {
+    "ID": 19,
+    "Name": "BLD_WEATHER_STAGE1_SUBSPACE"
+  },
+  {
+    "ID": 20,
+    "Name": "BLD_WEATHER_STAGE1_BOSS"
+  },
+  {
+    "ID": 23,
+    "Name": "BLD_WEATHER_STAGE2_SUNNY"
+  },
+  {
+    "ID": 24,
+    "Name": "BLD_WEATHER_STAGE2_CLOUDY"
+  },
+  {
+    "ID": 25,
+    "Name": "BLD_WEATHER_STAGE2_RAIN"
+  },
+  {
+    "ID": 26,
+    "Name": "BLD_WEATHER_STAGE2_DISEASERAIN"
+  },
+  {
+    "ID": 27,
+    "Name": "BLD_WEATHER_STAGE2_SUBSPACE"
+  },
+  {
+    "ID": 28,
+    "Name": "BLD_WEATHER_STAGE2_BOSS"
+  },
+  {
+    "ID": 29,
+    "Name": "BLD_WEATHER_STAGE2_BOSS_RAIN"
+  },
+  {
+    "ID": 32,
+    "Name": "BLD_WEATHER_STAGE3_SUNNY"
+  },
+  {
+    "ID": 33,
+    "Name": "BLD_WEATHER_STAGE3_CLOUDY"
+  },
+  {
+    "ID": 34,
+    "Name": "BLD_WEATHER_STAGE3_FIRE"
+  },
+  {
+    "ID": 35,
+    "Name": "BLD_WEATHER_STAGE3_SNOW"
+  },
+  {
+    "ID": 36,
+    "Name": "BLD_WEATHER_STAGE3_SUBSPACE"
+  },
+  {
+    "ID": 37,
+    "Name": "BLD_WEATHER_STAGE3_BOSS"
+  },
+  {
+    "ID": 40,
+    "Name": "BLD_WEATHER_STAGE4_SUNNY"
+  },
+  {
+    "ID": 41,
+    "Name": "BLD_WEATHER_STAGE4_CLOUDY"
+  },
+  {
+    "ID": 42,
+    "Name": "BLD_WEATHER_STAGE4_RAIN"
+  },
+  {
+    "ID": 43,
+    "Name": "BLD_WEATHER_STAGE4_BLACK"
+  },
+  {
+    "ID": 44,
+    "Name": "BLD_WEATHER_STAGE4_BLACK_SPORE"
+  },
+  {
+    "ID": 45,
+    "Name": "BLD_WEATHER_STAGE4_SUBSPACE"
+  },
+  {
+    "ID": 46,
+    "Name": "BLD_WEATHER_STAGE4_BOSS1"
+  },
+  {
+    "ID": 47,
+    "Name": "BLD_WEATHER_STAGE4_BOSS2"
+  },
+  {
+    "ID": 48,
+    "Name": "BLD_WEATHER_STAGE4_BOSS2_BLACK"
+  },
+  {
+    "ID": 51,
+    "Name": "BLD_WEATHER_FREECRAFT_SUNNY"
+  },
+  {
+    "ID": 52,
+    "Name": "BLD_WEATHER_FREECRAFT_CLOUDY"
+  },
+  {
+    "ID": 53,
+    "Name": "BLD_WEATHER_FREECRAFT_RAIN"
+  },
+  {
+    "ID": 54,
+    "Name": "BLD_WEATHER_FREECRAFT_DISEASERAIN"
+  },
+  {
+    "ID": 55,
+    "Name": "BLD_WEATHER_FREECRAFT_FIRE"
+  },
+  {
+    "ID": 56,
+    "Name": "BLD_WEATHER_FREECRAFT_SNOW"
+  },
+  {
+    "ID": 57,
+    "Name": "BLD_WEATHER_FREECRAFT_BLACK"
+  },
+  {
+    "ID": 58,
+    "Name": "BLD_WEATHER_FREECRAFT_BLACK_SPORE"
+  },
+  {
+    "ID": 59,
+    "Name": "BLD_WEATHER_FREECRAFT_SUBSPACE"
+  },
+  {
+    "ID": 62,
+    "Name": "_EMPTY_RECID_0"
+  },
+  {
+    "ID": 63,
+    "Name": "_EMPTY_RECID_1"
+  },
+  {
+    "ID": 64,
+    "Name": "_EMPTY_RECID_2"
+  },
+  {
+    "ID": 65,
+    "Name": "_EMPTY_RECID_3"
+  },
+  {
+    "ID": 66,
+    "Name": "_EMPTY_RECID_4"
+  },
+  {
+    "ID": 67,
+    "Name": "_EMPTY_RECID_5"
+  },
+  {
+    "ID": 69,
+    "Name": "BLD_WEATHER_ICONSNAPSHOT_BGPARTS"
+  },
+  {
+    "ID": 70,
+    "Name": "BLD_WEATHER_ICONSNAPSHOT_BLOCK"
+  }
+]

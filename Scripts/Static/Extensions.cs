@@ -112,16 +112,5 @@ namespace EyeOfRubiss
                 }
 			}
         }
-    
-        public static int GetItemIndexById(this PopupMenu @this, int id)
-        {
-            for (int i = 0; i < @this.ItemCount; i++)
-            {
-                if (@this.GetItemId(i) == id)
-                    return i;
-            }
-
-            return -1;
-        }
     }
 }

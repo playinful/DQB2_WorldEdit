@@ -8,6 +8,7 @@
 default_font_size = 20
 Button/fonts/font = ExtResource("2_eo3b1")
 ItemList/colors/guide_color = Color(0.7, 0.7, 0.7, 0)
+ItemList/fonts/font = ExtResource("2_eo3b1")
 ItemList/styles/panel = SubResource("StyleBoxEmpty_myi6m")
 Label/font_sizes/font_size = 20
 Label/fonts/font = ExtResource("2_eo3b1")

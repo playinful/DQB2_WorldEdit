@@ -1,0 +1,21 @@
+0x00..0x11FF = PhysicalGrid
+0x1200 = uint UsePhysicalGridCount (The amount of chunks in the PhysicalGrid. Seems to always be 2304?)
+0x1204 = uint UseVirtualGridCount (The amount of chunks with valid IDs assigned to them. Maximum possible value is 700.)
+0x1208 = ushort SizeX (X size of the world, in blocks. Seems to always be 1536?)
+0x120A = ushort SizeZ (Z size of the world, in blocks. Seems to always be 1536?)
+0x120C..0x15E120B = BlockMemory (A list of the blocks in each chunk, with one byte per block, ordered by chunk ID. Contains space for 700 chunks with 32768 blocks each.)
+0x15E120C..0x169020B = FluidMemory (A list of the fluids in each chunk. Each entry is a half-byte. Contains 2048 half-bytes separated into two layers. Contains space for 700 chunks.)
+0x169020C..0x194CCFB = PartsGridData[700]
+    +0x0000 = ushort PartsCount
+    +0x0002..+0x0003 = Nothing?
+    +0x0004..+0x0403 = PartsUnit[]
+        +0x00_b0..+0x01_b0 = PartsID
+        +0x01_b1.._b5 = GridLocalX
+        +0x01_b6..+0x02_b2 = BlockY
+        +0x02_b3.._b7 = GridLocalZ
+        +0x03_b0.._b1 = Direction
+        +0x03_b2 = Activate
+        +0x03_b3 = Unbreakable (guess)
+        +0x03_b4 = CanCollisionInt
+        +0x03_b5..?? = GrowupID (guess)
+- END OF FILE -

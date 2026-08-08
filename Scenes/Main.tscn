@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://d5ygrv1j2owh"]
+[gd_scene load_steps=31 format=3 uid="uid://d5ygrv1j2owh"]
 
 [ext_resource type="Theme" uid="uid://nd34kb5d40qb" path="res://Resources/DQB_Theme.tres" id="1_sua2j"]
 [ext_resource type="Script" uid="uid://o1l3wpft1cmb" path="res://Scenes/Main.cs" id="2_vy5pj"]
@@ -18,7 +18,16 @@
 [ext_resource type="Texture2D" uid="uid://bq58vaml02jo5" path="res://Resources/Graphics/BrushIcon/paste.png" id="14_fq0cl"]
 [ext_resource type="Script" uid="uid://ctgvynnbic0qx" path="res://Nodes/CustomItemList.cs" id="17_hwpts"]
 [ext_resource type="PackedScene" uid="uid://ctlww0brannf3" path="res://Scenes/ScreenshotEditor.tscn" id="18_0sclb"]
+[ext_resource type="Script" uid="uid://b72kj538f1jxm" path="res://Nodes/StorageEditor.cs" id="18_c4ay3"]
+[ext_resource type="Script" uid="uid://bqg8rouoixbg6" path="res://Nodes/ItemDisplayEditor.cs" id="18_jyqft"]
+[ext_resource type="Script" uid="uid://kxuptybyg1ee" path="res://Nodes/SignpostEditor.cs" id="18_sxkr1"]
+[ext_resource type="Script" uid="uid://bltwmed7avd38" path="res://Nodes/InstrumentEditor.cs" id="19_fq0cl"]
+[ext_resource type="Script" uid="uid://6cc6tsh6v5uq" path="res://Nodes/SalutationStationEditor.cs" id="19_hwpts"]
 [ext_resource type="Script" uid="uid://cfhloh2ybo6g3" path="res://Nodes/BGPartsEditor.cs" id="21_fq0cl"]
+[ext_resource type="Script" uid="uid://cw48gx8wwtuys" path="res://Nodes/MagneticBlockEditor.cs" id="22_3tgeq"]
+[ext_resource type="PackedScene" uid="uid://c8ji32ohm06et" path="res://Scenes/InventoryEditor.tscn" id="24_aht7i"]
+[ext_resource type="PackedScene" uid="uid://dcpo0bap6hph" path="res://Scenes/ResidentEditorDQB2.tscn" id="25_5jffn"]
+[ext_resource type="PackedScene" uid="uid://u7wl43257yo8" path="res://Scenes/ResidentEditorDQB1.tscn" id="25_kpo4j"]
 
 [sub_resource type="InputEventKey" id="InputEventKey_sxkr1"]
 device = -1
@@ -28,7 +37,7 @@ keycode = 86
 [sub_resource type="Shortcut" id="Shortcut_fq0cl"]
 events = [SubResource("InputEventKey_sxkr1")]
 
-[node name="Main" type="Control" node_paths=PackedStringArray("_WorldEditorScene", "_FileDialog", "_UnsavedChanges_Window", "_UnsavedChanges_Label", "_File_PopupMenu", "_Settings_PopupMenu", "_Inventory_Button", "_Player_Button", "_Snapshots_Button", "_IslandSelector_Button", "_Gratitude_SpinBox", "_Time_SpinBox", "_Weather_OptionButton", "_PassTime_CheckBox", "_BlockSelector_TabContainer", "_Block_ItemList", "_BGParts_ItemList", "_Fluid_ItemList", "_Block_SearchBox", "_BGParts_SearchBox", "_New_Window", "_New_Window_Game_OptionButton", "_New_Window_X_SpinBox", "_New_Window_Z_SpinBox", "_ScreenshotEditor")]
+[node name="Main" type="Control" node_paths=PackedStringArray("_WorldEditorScene", "_FileDialog", "_UnsavedChanges_Window", "_UnsavedChanges_Label", "_File_PopupMenu", "_Settings_PopupMenu", "_Inventory_Button", "_Player_Button", "_Snapshots_Button", "_IslandSelector_Button", "_Gratitude_SpinBox", "_Time_SpinBox", "_Weather_OptionButton", "_PassTime_CheckBox", "_BlockSelector_TabContainer", "_Block_ItemList", "_BGParts_ItemList", "_Fluid_ItemList", "_Block_SearchBox", "_BGParts_SearchBox", "_New_Window", "_New_Window_Game_OptionButton", "_New_Window_X_SpinBox", "_New_Window_Z_SpinBox", "_InventoryEditor", "_ResidentEditorDQB1", "_ResidentEditorDQB2", "_ScreenshotEditor")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -49,7 +58,7 @@ _Snapshots_Button = NodePath("Toolbar/VBoxContainer/MenuBar_Main/SnapshotsButton
 _IslandSelector_Button = NodePath("Toolbar/VBoxContainer/MenuBar_Stage/IslandSelectorButton")
 _Gratitude_SpinBox = NodePath("Toolbar/VBoxContainer/MenuBar_Stage/GratitudeBox")
 _Time_SpinBox = NodePath("Toolbar/VBoxContainer/MenuBar_Stage/TimeBox")
-_Weather_OptionButton = NodePath("Toolbar/VBoxContainer/MenuBar_Stage/SimpleWeatherSelect")
+_Weather_OptionButton = NodePath("Toolbar/VBoxContainer/MenuBar_Stage/WeatherSelect")
 _PassTime_CheckBox = NodePath("Toolbar/VBoxContainer/MenuBar_Stage/CheckBox_PassTime")
 _BlockSelector_TabContainer = NodePath("Toolbar/VBoxContainer/HSplitContainer/Right")
 _Block_ItemList = NodePath("Toolbar/VBoxContainer/HSplitContainer/Right/Blocks/Blocks_ItemList")
@@ -61,6 +70,9 @@ _New_Window = NodePath("Subwindows/NewWindow")
 _New_Window_Game_OptionButton = NodePath("Subwindows/NewWindow/OptionButtonGame")
 _New_Window_X_SpinBox = NodePath("Subwindows/NewWindow/SpinBoxX")
 _New_Window_Z_SpinBox = NodePath("Subwindows/NewWindow/SpinBoxZ")
+_InventoryEditor = NodePath("Subwindows/InventoryEditor")
+_ResidentEditorDQB1 = NodePath("Subwindows/ResidentEditorDQB1")
+_ResidentEditorDQB2 = NodePath("Subwindows/ResidentEditorDQB2")
 _ScreenshotEditor = NodePath("Subwindows/ScreenshotEditor")
 metadata/_edit_lock_ = true
 
@@ -114,7 +126,7 @@ item_7/id = 4
 auto_translate_mode = 1
 title = "Edit"
 size = Vector2i(189, 100)
-item_count = 6
+item_count = 7
 item_0/text = "Cut"
 item_0/id = 4
 item_1/text = "Copy"
@@ -123,10 +135,32 @@ item_2/text = "Fill"
 item_2/id = 6
 item_3/text = "Export Selection..."
 item_3/id = 5
-item_4/id = 999
-item_4/separator = true
-item_5/text = "Replace..."
-item_5/id = 7
+item_4/text = "Copy from File..."
+item_4/id = 8
+item_5/id = 999
+item_5/separator = true
+item_6/text = "Replace..."
+item_6/id = 7
+
+[node name="ToolsMenu" type="PopupMenu" parent="Toolbar/VBoxContainer/MenuBar_Main/MenuBar"]
+title = "Tools"
+item_count = 8
+item_0/text = "Make Superflat..."
+item_0/id = 0
+item_1/text = "Fill In Chunks"
+item_1/id = 2
+item_2/text = "Raise/Lower Island..."
+item_2/id = 1
+item_3/text = "Delete All Props"
+item_3/id = 3
+item_4/text = "Fix Prop Shells"
+item_4/id = 4
+item_5/text = "Fix Fake Blocks"
+item_5/id = 5
+item_6/text = "Clear Orphaned Block Entities"
+item_6/id = 6
+item_7/text = "Water Ceiling"
+item_7/id = 7
 
 [node name="ViewMenu" type="PopupMenu" parent="Toolbar/VBoxContainer/MenuBar_Main/MenuBar"]
 auto_translate_mode = 1
@@ -198,18 +232,16 @@ item_0/text = "Advanced Mode (TODO)"
 item_0/checkable = 1
 item_0/id = 0
 
-[node name="InventoryButton" type="Button" parent="Toolbar/VBoxContainer/MenuBar_Main"]
-visible = false
-layout_mode = 2
-text = "Inventory"
-
 [node name="PlayerButton" type="Button" parent="Toolbar/VBoxContainer/MenuBar_Main"]
 visible = false
 layout_mode = 2
 text = "Player"
 
+[node name="InventoryButton" type="Button" parent="Toolbar/VBoxContainer/MenuBar_Main"]
+layout_mode = 2
+text = "Inventory"
+
 [node name="ResidentsButton" type="Button" parent="Toolbar/VBoxContainer/MenuBar_Main"]
-visible = false
 layout_mode = 2
 text = "Residents"
 
@@ -259,73 +291,9 @@ popup/item_11/id = 14
 layout_mode = 2
 text = "Weather:"
 
-[node name="SimpleWeatherSelect" type="OptionButton" parent="Toolbar/VBoxContainer/MenuBar_Stage"]
+[node name="WeatherSelect" type="OptionButton" parent="Toolbar/VBoxContainer/MenuBar_Stage"]
+custom_minimum_size = Vector2(381, 0)
 layout_mode = 2
-selected = 0
-item_count = 31
-popup/item_0/text = "Weather"
-popup/item_0/id = 0
-popup/item_0/disabled = true
-popup/item_1/text = "Sunny"
-popup/item_1/id = 1
-popup/item_2/text = "Cloudy"
-popup/item_2/id = 2
-popup/item_3/text = "Rainy"
-popup/item_3/id = 3
-popup/item_4/text = "Snowy"
-popup/item_4/id = 4
-popup/item_5/text = "Stormy"
-popup/item_5/id = 11
-popup/item_6/text = "Furrowfield_Sunny"
-popup/item_6/id = 8
-popup/item_7/text = "Furrowfield_Cloudy"
-popup/item_7/id = 9
-popup/item_8/text = "Furrowfield_Rainy"
-popup/item_8/id = 10
-popup/item_9/text = "KhrumbulDun_Sunny"
-popup/item_9/id = 12
-popup/item_10/text = "Moonbrooke_Sunny"
-popup/item_10/id = 24
-popup/item_11/text = "Moonbrooke_PartlyCloudy"
-popup/item_11/id = 13
-popup/item_12/text = "Moonbrooke_Cloudy"
-popup/item_12/id = 14
-popup/item_13/text = "Moonbrooke_Rainy"
-popup/item_13/id = 15
-popup/item_14/text = "Moonbrooke_Snowy"
-popup/item_14/id = 16
-popup/item_15/text = "Moonbrooke_Stormy"
-popup/item_15/id = 25
-popup/item_16/text = "Malhalla_Sunny"
-popup/item_16/id = 19
-popup/item_17/text = "Malhalla_Darkness"
-popup/item_17/id = 22
-popup/item_18/text = "Prologue_Rainy"
-popup/item_18/id = 17
-popup/item_19/text = "Prologue_Sunny"
-popup/item_19/id = 18
-popup/item_20/text = "Prologue_Stormy"
-popup/item_20/id = 20
-popup/item_21/text = "Prologue_Cloudy"
-popup/item_21/id = 21
-popup/item_22/text = "GreenMist"
-popup/item_22/id = 5
-popup/item_23/text = "IllWind"
-popup/item_23/id = 6
-popup/item_24/text = "PostMalhallaDarkness"
-popup/item_24/id = 7
-popup/item_25/text = "PurpleMist"
-popup/item_25/id = 23
-popup/item_26/text = "MalhallaLight"
-popup/item_26/id = 26
-popup/item_27/text = "KhrumbulDunBaseAttack"
-popup/item_27/id = 27
-popup/item_28/text = "PostFinalBattleDarkness"
-popup/item_28/id = 28
-popup/item_29/text = "DestroyedDeitreeMist"
-popup/item_29/id = 29
-popup/item_30/text = "FurrowfieldFinalSceneSunny"
-popup/item_30/id = 30
 
 [node name="TextureRect" type="TextureRect" parent="Toolbar/VBoxContainer/MenuBar_Stage"]
 layout_mode = 2
@@ -436,7 +404,7 @@ button_group = ExtResource("4_v1gob")
 shortcut = SubResource("Shortcut_fq0cl")
 icon = ExtResource("14_fq0cl")
 
-[node name="SelectArea_Label1" type="Label" parent="Toolbar/VBoxContainer/HSplitContainer/Left/MenuBar_Tools"]
+[node name="SelectArea_Label" type="Label" parent="Toolbar/VBoxContainer/HSplitContainer/Left/MenuBar_Tools"]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 10
@@ -458,6 +426,59 @@ layout_mode = 2
 size_flags_horizontal = 10
 text = "Paste Air"
 
+[node name="Chisel_ShapeLabel" type="Label" parent="Toolbar/VBoxContainer/HSplitContainer/Left/MenuBar_Tools"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Shape:"
+
+[node name="Chisel_ShapeOptionButton" type="OptionButton" parent="Toolbar/VBoxContainer/HSplitContainer/Left/MenuBar_Tools"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 8
+selected = 0
+item_count = 5
+popup/item_0/text = "Full"
+popup/item_0/id = 0
+popup/item_1/text = "Diagonal"
+popup/item_1/id = 0
+popup/item_2/text = "Concave"
+popup/item_2/id = 4
+popup/item_3/text = "Top Half"
+popup/item_3/id = 0
+popup/item_4/text = "Bottom Half"
+popup/item_4/id = 0
+
+[node name="Chisel_DirectionLabel" type="Label" parent="Toolbar/VBoxContainer/HSplitContainer/Left/MenuBar_Tools"]
+visible = false
+layout_mode = 2
+text = "Direction:"
+
+[node name="Chisel_DirectionOptionButton" type="OptionButton" parent="Toolbar/VBoxContainer/HSplitContainer/Left/MenuBar_Tools"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 8
+selected = 0
+item_count = 9
+popup/item_0/text = "Auto"
+popup/item_0/id = 0
+popup/item_1/text = "North"
+popup/item_1/id = 0
+popup/item_2/text = "Northwest"
+popup/item_2/id = 0
+popup/item_3/text = "West"
+popup/item_3/id = 0
+popup/item_4/text = "Southwest"
+popup/item_4/id = 0
+popup/item_5/text = "South"
+popup/item_5/id = 0
+popup/item_6/text = "Southeast"
+popup/item_6/id = 0
+popup/item_7/text = "East"
+popup/item_7/id = 0
+popup/item_8/text = "Northeast"
+popup/item_8/id = 0
+
 [node name="WorldEditorContainer" type="SubViewportContainer" parent="Toolbar/VBoxContainer/HSplitContainer/Left"]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -470,19 +491,27 @@ handle_input_locally = false
 size = Vector2i(860, 548)
 render_target_update_mode = 4
 
-[node name="WorldEditor" parent="Toolbar/VBoxContainer/HSplitContainer/Left/WorldEditorContainer/SubViewport" node_paths=PackedStringArray("_View_PopupMenu", "_Edit_PopupMenu", "_Collision_PopupMenu", "_ChiselButton", "_PasteButton", "_BGPartsBlock_OptionButton", "_FluidLevel_OptionButton", "_Replace_Window", "_ReplaceWindow_OptionButton_Replace", "_ReplaceWindow_OptionButton_With", "_ReplaceWindow_CheckBox_InSelection", "_Debug_PropEditor_Window") instance=ExtResource("11_4kpch")]
+[node name="WorldEditor" parent="Toolbar/VBoxContainer/HSplitContainer/Left/WorldEditorContainer/SubViewport" node_paths=PackedStringArray("_Edit_PopupMenu", "_Tools_PopupMenu", "_View_PopupMenu", "_Collision_PopupMenu", "_ChiselButton", "_PasteButton", "_BGPartsSize_OptionButton", "_BGPartsBlock_OptionButton", "_FluidLevel_OptionButton", "_Replace_Window", "_ReplaceWindow_OptionButton_Replace", "_ReplaceWindow_OptionButton_With", "_ReplaceWindow_CheckBox_InSelection", "_StorageEditor", "_ItemDisplayEditor", "_SignpostEditor", "_SalutationStationEditor", "_InstrumentEditor", "_MagneticBlockEditor", "_Debug_PropEditor_Window") instance=ExtResource("11_4kpch")]
 unique_name_in_owner = true
-_View_PopupMenu = NodePath("../../../../../MenuBar_Main/MenuBar/ViewMenu")
 _Edit_PopupMenu = NodePath("../../../../../MenuBar_Main/MenuBar/EditMenu")
+_Tools_PopupMenu = NodePath("../../../../../MenuBar_Main/MenuBar/ToolsMenu")
+_View_PopupMenu = NodePath("../../../../../MenuBar_Main/MenuBar/ViewMenu")
 _Collision_PopupMenu = NodePath("../../../../../MenuBar_Main/MenuBar/CollisionMenu")
 _ChiselButton = NodePath("../../../MenuBar_Tools/Chisel")
 _PasteButton = NodePath("../../../MenuBar_Tools/Paste")
+_BGPartsSize_OptionButton = NodePath("../../../../Right/Objects/HBoxContainer4/OptionButton")
 _BGPartsBlock_OptionButton = NodePath("../../../../Right/Objects/HBoxContainer/OptionButton")
 _FluidLevel_OptionButton = NodePath("../../../../Right/Fluids/OptionButton")
 _Replace_Window = NodePath("../../../../../../../Subwindows/ReplaceWindow")
 _ReplaceWindow_OptionButton_Replace = NodePath("../../../../../../../Subwindows/ReplaceWindow/OptionButtonReplace")
 _ReplaceWindow_OptionButton_With = NodePath("../../../../../../../Subwindows/ReplaceWindow/OptionButtonWith")
 _ReplaceWindow_CheckBox_InSelection = NodePath("../../../../../../../Subwindows/ReplaceWindow/CheckBoxInSelection")
+_StorageEditor = NodePath("../../../../../../../Subwindows/StorageEditor")
+_ItemDisplayEditor = NodePath("../../../../../../../Subwindows/ItemDisplayEditor")
+_SignpostEditor = NodePath("../../../../../../../Subwindows/SignpostEditor")
+_SalutationStationEditor = NodePath("../../../../../../../Subwindows/SalutationStationEditor")
+_InstrumentEditor = NodePath("../../../../../../../Subwindows/InstrumentEditor")
+_MagneticBlockEditor = NodePath("../../../../../../../Subwindows/MagneticBlockEditor")
 _Debug_PropEditor_Window = NodePath("../../../../../../../Subwindows/Debug - Prop Editor")
 
 [node name="Right" type="TabContainer" parent="Toolbar/VBoxContainer/HSplitContainer"]
@@ -538,7 +567,7 @@ text = " Direction: "
 layout_mode = 2
 size_flags_horizontal = 3
 selected = 0
-item_count = 5
+item_count = 6
 popup/item_0/text = "Auto"
 popup/item_0/id = 4
 popup/item_1/text = "North"
@@ -549,6 +578,8 @@ popup/item_3/text = "South"
 popup/item_3/id = 2
 popup/item_4/text = "East"
 popup/item_4/id = 3
+popup/item_5/text = "Random"
+popup/item_5/id = 5
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="Toolbar/VBoxContainer/HSplitContainer/Right/Objects"]
 layout_mode = 2
@@ -564,6 +595,37 @@ layout_mode = 2
 size_flags_horizontal = 3
 button_pressed = true
 text = "Effects"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Toolbar/VBoxContainer/HSplitContainer/Right/Objects"]
+layout_mode = 2
+
+[node name="Unbreakable_CheckBox" type="CheckBox" parent="Toolbar/VBoxContainer/HSplitContainer/Right/Objects/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Unbreakable"
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="Toolbar/VBoxContainer/HSplitContainer/Right/Objects"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Toolbar/VBoxContainer/HSplitContainer/Right/Objects/HBoxContainer4"]
+layout_mode = 2
+text = " Size: "
+
+[node name="OptionButton" type="OptionButton" parent="Toolbar/VBoxContainer/HSplitContainer/Right/Objects/HBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 3
+selected = 0
+item_count = 5
+popup/item_0/text = "Normal"
+popup/item_0/id = 0
+popup/item_1/text = "Small"
+popup/item_1/id = 1
+popup/item_2/text = "Smaller"
+popup/item_2/id = 2
+popup/item_3/text = "Smallest"
+popup/item_3/id = 3
+popup/item_4/text = "Random"
+popup/item_4/id = 4
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Toolbar/VBoxContainer/HSplitContainer/Right/Objects"]
 layout_mode = 2
@@ -649,78 +711,6 @@ popup/item_9/text = "Flowing - 2/8"
 popup/item_9/id = 4
 popup/item_10/text = "Flowing - 1/8"
 popup/item_10/id = 3
-
-[node name="ComplexWeatherSelect" type="OptionButton" parent="Toolbar"]
-layout_mode = 0
-offset_left = 1255.0
-offset_top = -121.0
-offset_right = 1555.0
-offset_bottom = -91.0
-selected = 0
-item_count = 31
-popup/item_0/text = "Weather"
-popup/item_0/id = 0
-popup/item_0/disabled = true
-popup/item_1/text = "Sunny"
-popup/item_1/id = 1
-popup/item_2/text = "Cloudy"
-popup/item_2/id = 2
-popup/item_3/text = "Rainy"
-popup/item_3/id = 3
-popup/item_4/text = "Snowy"
-popup/item_4/id = 4
-popup/item_5/text = "Stormy"
-popup/item_5/id = 11
-popup/item_6/text = "Furrowfield_Sunny"
-popup/item_6/id = 8
-popup/item_7/text = "Furrowfield_Cloudy"
-popup/item_7/id = 9
-popup/item_8/text = "Furrowfield_Rainy"
-popup/item_8/id = 10
-popup/item_9/text = "KhrumbulDun_Sunny"
-popup/item_9/id = 12
-popup/item_10/text = "Moonbrooke_Sunny"
-popup/item_10/id = 24
-popup/item_11/text = "Moonbrooke_PartlyCloudy"
-popup/item_11/id = 13
-popup/item_12/text = "Moonbrooke_Cloudy"
-popup/item_12/id = 14
-popup/item_13/text = "Moonbrooke_Rainy"
-popup/item_13/id = 15
-popup/item_14/text = "Moonbrooke_Snowy"
-popup/item_14/id = 16
-popup/item_15/text = "Moonbrooke_Stormy"
-popup/item_15/id = 25
-popup/item_16/text = "Malhalla_Sunny"
-popup/item_16/id = 19
-popup/item_17/text = "Malhalla_Darkness"
-popup/item_17/id = 22
-popup/item_18/text = "Prologue_Rainy"
-popup/item_18/id = 17
-popup/item_19/text = "Prologue_Sunny"
-popup/item_19/id = 18
-popup/item_20/text = "Prologue_Stormy"
-popup/item_20/id = 20
-popup/item_21/text = "Prologue_Cloudy"
-popup/item_21/id = 21
-popup/item_22/text = "GreenMist"
-popup/item_22/id = 5
-popup/item_23/text = "IllWind"
-popup/item_23/id = 6
-popup/item_24/text = "PostMalhallaDarkness"
-popup/item_24/id = 7
-popup/item_25/text = "PurpleMist"
-popup/item_25/id = 23
-popup/item_26/text = "MalhallaLight"
-popup/item_26/id = 26
-popup/item_27/text = "KhrumbulDunBaseAttack"
-popup/item_27/id = 27
-popup/item_28/text = "PostFinalBattleDarkness"
-popup/item_28/id = 28
-popup/item_29/text = "DestroyedDeitreeMist"
-popup/item_29/id = 29
-popup/item_30/text = "FurrowfieldFinalSceneSunny"
-popup/item_30/id = 30
 
 [node name="Subwindows" type="Node" parent="."]
 
@@ -933,6 +923,246 @@ offset_bottom = 140.0
 size_flags_horizontal = 4
 text = "Apply"
 
+[node name="StorageEditor" type="Window" parent="Subwindows"]
+oversampling_override = 1.0
+title = "Storage"
+initial_position = 2
+size = Vector2i(200, 100)
+visible = false
+transient = true
+exclusive = true
+unresizable = true
+theme = ExtResource("1_sua2j")
+script = ExtResource("18_c4ay3")
+
+[node name="Label" type="Label" parent="Subwindows/StorageEditor"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "TODO"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ItemDisplayEditor" type="Window" parent="Subwindows" node_paths=PackedStringArray("_OptionButton", "_SpinBox")]
+oversampling_override = 1.0
+title = "Item Display"
+initial_position = 2
+size = Vector2i(400, 90)
+visible = false
+transient = true
+exclusive = true
+unresizable = true
+theme = ExtResource("1_sua2j")
+script = ExtResource("18_jyqft")
+_OptionButton = NodePath("OptionButton")
+_SpinBox = NodePath("SpinBox")
+
+[node name="OptionButton" type="OptionButton" parent="Subwindows/ItemDisplayEditor"]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 390.0
+offset_bottom = 40.0
+fit_to_longest_item = false
+
+[node name="SpinBox" type="SpinBox" parent="Subwindows/ItemDisplayEditor"]
+offset_left = 10.0
+offset_top = 50.0
+offset_right = 390.0
+offset_bottom = 80.0
+max_value = 32767.0
+rounded = true
+
+[node name="SignpostEditor" type="Window" parent="Subwindows" node_paths=PackedStringArray("_TextEdit")]
+oversampling_override = 1.0
+title = "Signpost"
+initial_position = 2
+size = Vector2i(400, 172)
+visible = false
+transient = true
+exclusive = true
+unresizable = true
+theme = ExtResource("1_sua2j")
+script = ExtResource("18_sxkr1")
+_TextEdit = NodePath("TextEdit")
+
+[node name="TextEdit" type="TextEdit" parent="Subwindows/SignpostEditor"]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 390.0
+offset_bottom = 122.0
+tooltip_text = "<pname> - Player name
+<morf(X,Y)> - X text if male, Y text if female
+<cap> - Capitalise next letter
+<br> - Line break
+
+<$iname(X)> - Item name
+<$sgl_iname(X)> Item name (singular)
+<$plr_ibname(X)> Item name (plural)
+<$kname(X)> - Room/Set name
+<$sgl_kname(X)> - Room/Set name (singular)
+<$plr_kbname(X)> - Room/Set name (plural)
+<note> - ♪
+
+<$icon(X)> - TODO
+<$iicon(X)> - Item icon
+<$kicon(X)> - Room/Set icon
+<$ui(X)> - UI icon
+<button(X)> - Button icon
+
+<$cdef(X)> - Change text colour
+</color> - Return to default colour
+<key> - Wait for input
+<man> - Masculine voice SFX
+<woman> - Feminine voice SFX
+<off> - Make text box invisible
+<scron> - Scrolling ON
+<scroff> - Scrolling OFF
+<show(Malroth)> - TODO"
+placeholder_text = "Write a message..."
+
+[node name="ButtonApply" type="Button" parent="Subwindows/SignpostEditor"]
+offset_left = 170.0
+offset_top = 132.0
+offset_right = 230.0
+offset_bottom = 162.0
+text = "Apply"
+
+[node name="SalutationStationEditor" type="Window" parent="Subwindows" node_paths=PackedStringArray("_OptionButton", "_TextEdit")]
+oversampling_override = 1.0
+title = "Salutation Station"
+initial_position = 2
+size = Vector2i(464, 212)
+visible = false
+transient = true
+exclusive = true
+unresizable = true
+theme = ExtResource("1_sua2j")
+script = ExtResource("19_hwpts")
+_OptionButton = NodePath("OptionButton")
+_TextEdit = NodePath("TextEdit")
+
+[node name="Label" type="Label" parent="Subwindows/SalutationStationEditor"]
+offset_left = 10.0
+offset_top = 14.0
+offset_right = 102.0
+offset_bottom = 36.0
+text = "Resident:"
+
+[node name="OptionButton" type="OptionButton" parent="Subwindows/SalutationStationEditor"]
+offset_left = 112.0
+offset_top = 10.0
+offset_right = 454.0
+offset_bottom = 40.0
+
+[node name="TextEdit" type="TextEdit" parent="Subwindows/SalutationStationEditor"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 10.0
+offset_top = 50.0
+offset_right = -10.0
+offset_bottom = 162.0
+grow_horizontal = 2
+tooltip_text = "<pname> - Player name
+<morf(X,Y)> - Changes text based on player gender 
+<cap> - Capitalise next letter
+<allcap> - Capitalise all following text
+</allcap> - Stop capitalising text
+
+<icon(X)> <$icon(X)> - Display icon number X 
+<$iicon(X)> - Display icon of item number X
+<$kicon(X)> - Display icon of room/set number X
+<$ui(X)> - Display UI icon number X
+<button(X)> - Display button icon number X
+<note> - ♪
+
+<key> - Wait for input
+<$cdef(X)> - Change text color to color number X
+<color(0xFFFFFFFF)> - Change text color to hex code
+</color> - Change text color to default
+<off> - Makes text box invisible
+
+<man> - Masculine voice SFX
+<woman> - Feminine voice SFX
+<unknown> - Ambiguous voice SFX
+<nose> - No voice SFX"
+placeholder_text = "Write a message..."
+
+[node name="ButtonApply" type="Button" parent="Subwindows/SalutationStationEditor"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 202.0
+offset_top = 172.0
+offset_right = -202.0
+offset_bottom = 202.0
+grow_horizontal = 2
+text = "Apply"
+
+[node name="InstrumentEditor" type="Window" parent="Subwindows" node_paths=PackedStringArray("_OptionButton")]
+oversampling_override = 1.0
+title = "Instrument"
+initial_position = 2
+size = Vector2i(400, 50)
+visible = false
+transient = true
+exclusive = true
+unresizable = true
+theme = ExtResource("1_sua2j")
+script = ExtResource("19_fq0cl")
+_OptionButton = NodePath("OptionButton")
+
+[node name="Label" type="Label" parent="Subwindows/InstrumentEditor"]
+offset_left = 10.0
+offset_top = 14.0
+offset_right = 63.0
+offset_bottom = 36.0
+text = "Song:"
+
+[node name="OptionButton" type="OptionButton" parent="Subwindows/InstrumentEditor"]
+offset_left = 73.0
+offset_top = 10.0
+offset_right = 390.0
+offset_bottom = 40.0
+
+[node name="MagneticBlockEditor" type="Window" parent="Subwindows" node_paths=PackedStringArray("_OptionButton")]
+oversampling_override = 1.0
+title = "Magnetic Block"
+initial_position = 2
+size = Vector2i(400, 50)
+visible = false
+transient = true
+exclusive = true
+unresizable = true
+theme = ExtResource("1_sua2j")
+script = ExtResource("22_3tgeq")
+_OptionButton = NodePath("OptionButton")
+
+[node name="Label" type="Label" parent="Subwindows/MagneticBlockEditor"]
+offset_left = 10.0
+offset_top = 14.0
+offset_right = 124.0
+offset_bottom = 36.0
+text = "Camouflage:"
+
+[node name="OptionButton" type="OptionButton" parent="Subwindows/MagneticBlockEditor"]
+offset_left = 134.0
+offset_top = 10.0
+offset_right = 390.0
+offset_bottom = 40.0
+fit_to_longest_item = false
+
+[node name="InventoryEditor" parent="Subwindows" instance=ExtResource("24_aht7i")]
+initial_position = 2
+visible = false
+theme = ExtResource("1_sua2j")
+
+[node name="ResidentEditorDQB1" parent="Subwindows" instance=ExtResource("25_kpo4j")]
+visible = false
+
+[node name="ResidentEditorDQB2" parent="Subwindows" instance=ExtResource("25_5jffn")]
+visible = false
+
 [node name="ScreenshotEditor" parent="Subwindows" instance=ExtResource("18_0sclb")]
 initial_position = 2
 visible = false
@@ -995,8 +1225,37 @@ layout_mode = 2
 size_flags_horizontal = 4
 text = "Apply"
 
+[node name="X_SpinBox" type="SpinBox" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 820.0
+offset_top = 3.0
+offset_right = 902.0
+offset_bottom = 33.0
+max_value = 255.0
+
+[node name="Y_SpinBox" type="SpinBox" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 912.0
+offset_top = 1.0
+offset_right = 994.0
+offset_bottom = 31.0
+max_value = 255.0
+
+[node name="Z_SpinBox" type="SpinBox" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 1017.0
+offset_top = 1.0
+offset_right = 1099.0
+offset_bottom = 31.0
+max_value = 255.0
+
 [connection signal="id_pressed" from="Toolbar/VBoxContainer/MenuBar_Main/MenuBar/FileMenu" to="." method="_On_File_PopupMenu_IdPressed"]
+[connection signal="id_pressed" from="Toolbar/VBoxContainer/MenuBar_Main/MenuBar/EditMenu" to="." method="_On_Edit_PopupMenu_IdPressed"]
 [connection signal="id_pressed" from="Toolbar/VBoxContainer/MenuBar_Main/MenuBar/EditMenu" to="Toolbar/VBoxContainer/HSplitContainer/Left/WorldEditorContainer/SubViewport/WorldEditor" method="_On_Edit_PopupMenu_IdPressed"]
+[connection signal="id_pressed" from="Toolbar/VBoxContainer/MenuBar_Main/MenuBar/ToolsMenu" to="Toolbar/VBoxContainer/HSplitContainer/Left/WorldEditorContainer/SubViewport/WorldEditor" method="_On_Tools_PopupMenu_IdPressed"]
 [connection signal="id_pressed" from="Toolbar/VBoxContainer/MenuBar_Main/MenuBar/ViewMenu" to="Toolbar/VBoxContainer/HSplitContainer/Left/WorldEditorContainer/SubViewport/WorldEditor" method="_On_View_PopupMenu_IdPressed"]
 [connection signal="index_pressed" from="Toolbar/VBoxContainer/MenuBar_Main/MenuBar/CollisionMenu" to="Toolbar/VBoxContainer/HSplitContainer/Left/WorldEditorContainer/SubViewport/WorldEditor" method="_On_Collision_PopupMenu_IndexPressed"]
 [connection signal="id_pressed" from="Toolbar/VBoxContainer/MenuBar_Main/MenuBar/Hidden/SettingsMenu" to="." method="_On_Settings_PopupMenu_IdPressed"]
@@ -1005,6 +1264,7 @@ text = "Apply"
 [connection signal="pressed" from="Toolbar/VBoxContainer/MenuBar_Main/SnapshotsButton" to="." method="_On_Snapshots_Button_Pressed"]
 [connection signal="pressed" from="Toolbar/VBoxContainer/MenuBar_Main/AboutButton" to="Subwindows/AboutDialog" method="show"]
 [connection signal="item_selected" from="Toolbar/VBoxContainer/MenuBar_Stage/IslandSelectorButton" to="." method="_On_IslandSelectorButton_ItemSelected"]
+[connection signal="item_selected" from="Toolbar/VBoxContainer/MenuBar_Stage/WeatherSelect" to="." method="_On_Weather_OptionButton_ItemSelected"]
 [connection signal="value_changed" from="Toolbar/VBoxContainer/MenuBar_Stage/GratitudeBox" to="." method="_On_Gratitude_SpinBox_ValueChanged"]
 [connection signal="value_changed" from="Toolbar/VBoxContainer/MenuBar_Stage/TimeBox" to="." method="_On_Time_SpinBox_ValueChanged"]
 [connection signal="toggled" from="Toolbar/VBoxContainer/MenuBar_Stage/CheckBox_PassTime" to="." method="_On_PassTime_CheckBox_Toggled"]
@@ -1014,8 +1274,12 @@ text = "Apply"
 [connection signal="pressed" from="Toolbar/VBoxContainer/HSplitContainer/Left/MenuBar_Tools/Eraser" to="Toolbar/VBoxContainer/HSplitContainer/Left/WorldEditorContainer/SubViewport/WorldEditor" method="SetBrushPrimary" binds= [0]]
 [connection signal="pressed" from="Toolbar/VBoxContainer/HSplitContainer/Left/MenuBar_Tools/Bucket" to="Toolbar/VBoxContainer/HSplitContainer/Left/WorldEditorContainer/SubViewport/WorldEditor" method="SetBrushPrimary" binds= [2]]
 [connection signal="pressed" from="Toolbar/VBoxContainer/HSplitContainer/Left/MenuBar_Tools/Chisel" to="Toolbar/VBoxContainer/HSplitContainer/Left/WorldEditorContainer/SubViewport/WorldEditor" method="SetBrushPrimary" binds= [9]]
+[connection signal="toggled" from="Toolbar/VBoxContainer/HSplitContainer/Left/MenuBar_Tools/Chisel" to="Toolbar/VBoxContainer/HSplitContainer/Left/MenuBar_Tools/Chisel_ShapeLabel" method="set_visible"]
+[connection signal="toggled" from="Toolbar/VBoxContainer/HSplitContainer/Left/MenuBar_Tools/Chisel" to="Toolbar/VBoxContainer/HSplitContainer/Left/MenuBar_Tools/Chisel_ShapeOptionButton" method="set_visible"]
+[connection signal="toggled" from="Toolbar/VBoxContainer/HSplitContainer/Left/MenuBar_Tools/Chisel" to="Toolbar/VBoxContainer/HSplitContainer/Left/MenuBar_Tools/Chisel_DirectionLabel" method="set_visible"]
+[connection signal="toggled" from="Toolbar/VBoxContainer/HSplitContainer/Left/MenuBar_Tools/Chisel" to="Toolbar/VBoxContainer/HSplitContainer/Left/MenuBar_Tools/Chisel_DirectionOptionButton" method="set_visible"]
 [connection signal="pressed" from="Toolbar/VBoxContainer/HSplitContainer/Left/MenuBar_Tools/SelectArea" to="Toolbar/VBoxContainer/HSplitContainer/Left/WorldEditorContainer/SubViewport/WorldEditor" method="SetBrushPrimary" binds= [10]]
-[connection signal="toggled" from="Toolbar/VBoxContainer/HSplitContainer/Left/MenuBar_Tools/SelectArea" to="Toolbar/VBoxContainer/HSplitContainer/Left/MenuBar_Tools/SelectArea_Label1" method="set_visible"]
+[connection signal="toggled" from="Toolbar/VBoxContainer/HSplitContainer/Left/MenuBar_Tools/SelectArea" to="Toolbar/VBoxContainer/HSplitContainer/Left/MenuBar_Tools/SelectArea_Label" method="set_visible"]
 [connection signal="toggled" from="Toolbar/VBoxContainer/HSplitContainer/Left/MenuBar_Tools/SelectArea" to="Toolbar/VBoxContainer/HSplitContainer/Left/MenuBar_Tools/SelectArea_ModeOptionButton" method="set_visible"]
 [connection signal="pressed" from="Toolbar/VBoxContainer/HSplitContainer/Left/MenuBar_Tools/Copy_NotUsed" to="Toolbar/VBoxContainer/HSplitContainer/Left/WorldEditorContainer/SubViewport/WorldEditor" method="DoCopy"]
 [connection signal="pressed" from="Toolbar/VBoxContainer/HSplitContainer/Left/MenuBar_Tools/Cut_NotUsed" to="Toolbar/VBoxContainer/HSplitContainer/Left/WorldEditorContainer/SubViewport/WorldEditor" method="DoCut"]
@@ -1023,6 +1287,8 @@ text = "Apply"
 [connection signal="toggled" from="Toolbar/VBoxContainer/HSplitContainer/Left/MenuBar_Tools/Paste" to="Toolbar/VBoxContainer/HSplitContainer/Left/MenuBar_Tools/Paste_AirCheckBox" method="set_visible"]
 [connection signal="item_selected" from="Toolbar/VBoxContainer/HSplitContainer/Left/MenuBar_Tools/SelectArea_ModeOptionButton" to="Toolbar/VBoxContainer/HSplitContainer/Left/WorldEditorContainer/SubViewport/WorldEditor" method="_On_SelectArea_Mode_OptionButton_ItemSelected"]
 [connection signal="toggled" from="Toolbar/VBoxContainer/HSplitContainer/Left/MenuBar_Tools/Paste_AirCheckBox" to="Toolbar/VBoxContainer/HSplitContainer/Left/WorldEditorContainer/SubViewport/WorldEditor" method="_On_Paste_Air_CheckBox_Toggled"]
+[connection signal="item_selected" from="Toolbar/VBoxContainer/HSplitContainer/Left/MenuBar_Tools/Chisel_ShapeOptionButton" to="Toolbar/VBoxContainer/HSplitContainer/Left/WorldEditorContainer/SubViewport/WorldEditor" method="_On_Chisel_Shape_OptionButton_ItemSelected"]
+[connection signal="item_selected" from="Toolbar/VBoxContainer/HSplitContainer/Left/MenuBar_Tools/Chisel_DirectionOptionButton" to="Toolbar/VBoxContainer/HSplitContainer/Left/WorldEditorContainer/SubViewport/WorldEditor" method="_On_Chisel_Direction_OptionButton_ItemSelected"]
 [connection signal="ExportSelectionRequested" from="Toolbar/VBoxContainer/HSplitContainer/Left/WorldEditorContainer/SubViewport/WorldEditor" to="." method="_On_WorldHandler_ExportSelectionRequested"]
 [connection signal="text_changed" from="Toolbar/VBoxContainer/HSplitContainer/Right/Blocks/SearchBox" to="." method="_On_Blocks_SearchBar_TextChanged"]
 [connection signal="item_selected" from="Toolbar/VBoxContainer/HSplitContainer/Right/Blocks/Blocks_ItemList" to="." method="_On_Blocks_ItemList_ItemSelected"]
@@ -1031,6 +1297,8 @@ text = "Apply"
 [connection signal="item_selected" from="Toolbar/VBoxContainer/HSplitContainer/Right/Objects/HBoxContainer1/OptionButton" to="Toolbar/VBoxContainer/HSplitContainer/Left/WorldEditorContainer/SubViewport/WorldEditor" method="_On_BGPartsPlacementDirection_OptionButton_ItemSelected"]
 [connection signal="toggled" from="Toolbar/VBoxContainer/HSplitContainer/Right/Objects/HBoxContainer2/Collision_CheckBox" to="Toolbar/VBoxContainer/HSplitContainer/Left/WorldEditorContainer/SubViewport/WorldEditor" method="_On_BGPartsCollisionEnabled_Toggled"]
 [connection signal="toggled" from="Toolbar/VBoxContainer/HSplitContainer/Right/Objects/HBoxContainer2/Effects_CheckBox" to="Toolbar/VBoxContainer/HSplitContainer/Left/WorldEditorContainer/SubViewport/WorldEditor" method="_On_BGPartsEffectsEnabled_Toggled"]
+[connection signal="toggled" from="Toolbar/VBoxContainer/HSplitContainer/Right/Objects/HBoxContainer3/Unbreakable_CheckBox" to="Toolbar/VBoxContainer/HSplitContainer/Left/WorldEditorContainer/SubViewport/WorldEditor" method="_On_BGPartsUnbreakableEnabled_Toggled"]
+[connection signal="item_selected" from="Toolbar/VBoxContainer/HSplitContainer/Right/Objects/HBoxContainer4/OptionButton" to="Toolbar/VBoxContainer/HSplitContainer/Left/WorldEditorContainer/SubViewport/WorldEditor" method="_On_BGPartsSize_OptionButton_ItemSelected"]
 [connection signal="item_selected" from="Toolbar/VBoxContainer/HSplitContainer/Right/Objects/HBoxContainer/OptionButton" to="Toolbar/VBoxContainer/HSplitContainer/Left/WorldEditorContainer/SubViewport/WorldEditor" method="_On_BGPartsBlock_OptionButton_ItemSelected"]
 [connection signal="text_changed" from="Toolbar/VBoxContainer/HSplitContainer/Right/Fluids/SearchBox" to="." method="_On_Fluids_SearchBar_TextChanged"]
 [connection signal="item_selected" from="Toolbar/VBoxContainer/HSplitContainer/Right/Fluids/Fluid_ItemList" to="." method="_On_Fluids_ItemList_ItemSelected"]
@@ -1046,6 +1314,22 @@ text = "Apply"
 [connection signal="pressed" from="Subwindows/NewWindow/ButtonCreate" to="." method="_On_New_Window_Create_Button_Pressed"]
 [connection signal="close_requested" from="Subwindows/ReplaceWindow" to="Subwindows/ReplaceWindow" method="hide"]
 [connection signal="pressed" from="Subwindows/ReplaceWindow/ButtonApply" to="Toolbar/VBoxContainer/HSplitContainer/Left/WorldEditorContainer/SubViewport/WorldEditor" method="_On_ReplaceWindow_Button_Apply_Pressed"]
+[connection signal="close_requested" from="Subwindows/StorageEditor" to="Subwindows/StorageEditor" method="Close"]
+[connection signal="close_requested" from="Subwindows/ItemDisplayEditor" to="Subwindows/ItemDisplayEditor" method="Close"]
+[connection signal="item_selected" from="Subwindows/ItemDisplayEditor/OptionButton" to="Subwindows/ItemDisplayEditor" method="_On_OptionButton_ItemSelected"]
+[connection signal="value_changed" from="Subwindows/ItemDisplayEditor/SpinBox" to="Subwindows/ItemDisplayEditor" method="_On_SpinBox_ValueChanged"]
+[connection signal="close_requested" from="Subwindows/SignpostEditor" to="Subwindows/SignpostEditor" method="Close"]
+[connection signal="pressed" from="Subwindows/SignpostEditor/ButtonApply" to="Subwindows/SignpostEditor" method="_On_Button_Apply_Pressed"]
+[connection signal="close_requested" from="Subwindows/SalutationStationEditor" to="Subwindows/SalutationStationEditor" method="Close"]
+[connection signal="pressed" from="Subwindows/SalutationStationEditor/ButtonApply" to="Subwindows/SalutationStationEditor" method="_On_Button_Apply_Pressed"]
+[connection signal="close_requested" from="Subwindows/InstrumentEditor" to="Subwindows/InstrumentEditor" method="Close"]
+[connection signal="item_selected" from="Subwindows/InstrumentEditor/OptionButton" to="Subwindows/InstrumentEditor" method="_On_OptionButton_ItemSelected"]
+[connection signal="close_requested" from="Subwindows/MagneticBlockEditor" to="Subwindows/MagneticBlockEditor" method="Close"]
+[connection signal="item_selected" from="Subwindows/MagneticBlockEditor/OptionButton" to="Subwindows/MagneticBlockEditor" method="_On_OptionButton_ItemSelected"]
+[connection signal="ExportRequested" from="Subwindows/ResidentEditorDQB1" to="." method="_On_ResidentEditorDQB1_ExportRequested"]
+[connection signal="ImportRequested" from="Subwindows/ResidentEditorDQB1" to="." method="_On_ResidentEditorDQB1_ImportRequested"]
+[connection signal="ExportRequested" from="Subwindows/ResidentEditorDQB2" to="." method="_On_ResidentEditorDQB2_ExportRequested"]
+[connection signal="ImportRequested" from="Subwindows/ResidentEditorDQB2" to="." method="_On_ResidentEditorDQB2_ImportRequested"]
 [connection signal="ExportAllRequested" from="Subwindows/ScreenshotEditor" to="." method="_On_ScreenshotEditor_ExportAllRequested"]
 [connection signal="ExportRequested" from="Subwindows/ScreenshotEditor" to="." method="_On_ScreenshotEditor_ExportRequested"]
 [connection signal="ImportRequested" from="Subwindows/ScreenshotEditor" to="." method="_On_ScreenshotEditor_ImportRequested"]

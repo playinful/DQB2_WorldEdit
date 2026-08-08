@@ -1,0 +1,21 @@
+# NPC MODELS #
+
+0x00 = ushort(?) 0x03E9 (1001) (amount of entries in file?)
+0x02..0x3F = Empty
+0x40..0x0FE3 = uint[] Integers from 0-1001
+0xFE4..0x21407 = Model Data[] (0x84 bytes each) (1001 count)
+    .. = ?
+    +0x18 = float Walk Speed
+    +0x1C = float Run Speed
+    .. = ?
+    +0x3C = float Model Size
+    .. = ?
+    +0x5E = byte(?) Voice
+    .. = ?
+    +0x6E = ushort Body Model
+    +0x70 = ushort Hair Model
+    +0x72 = ushort Face Model
+    .. = ?
+    +0x76 = ushort Swimming Body Model
+    +0x78 = ushort Bathing Body Model
+    .. = ?

@@ -13,6 +13,8 @@ using System.Security.Cryptography.X509Certificates;
 using EyeOfRubiss.Info.DQB2;
 using System.Data.SqlTypes;
 using System.Runtime.CompilerServices;
+using System.Net.Mail;
+using System.ComponentModel;
 
 namespace EyeOfRubiss
 {
@@ -38,6 +40,9 @@ namespace EyeOfRubiss
         */
 
         public const int CHUNK_SIZE = 32;
+
+        public const int WORLD_SIZE_CHUNKS = 64;
+        public const int WORLD_SIZE_BLOCKS = WORLD_SIZE_CHUNKS * CHUNK_SIZE;
         public const int WORLD_HEIGHT_BLOCKS = 96;
 
         /*
@@ -77,6 +82,7 @@ namespace EyeOfRubiss
         public override void Save(string path = null)
         {
             DefragmentChunks();
+            DefragmentCrops();
             base.Save(path);
         }
 
@@ -114,14 +120,18 @@ namespace EyeOfRubiss
             if (!PositionIsInBounds(position))
                 return null;
 
-            Vector3I blockPosition = PositionToDataPosition(position);
-
-            Chunk chunk = GetChunk(blockPosition.X);
+            Chunk chunk = GetChunkAtPosition(position);
 
             if (chunk is null || !chunk.IsUsed())
                 return null;
+                
+            int chunkPosX = position.X % CHUNK_SIZE;
+            int chunkPosY = position.Y;
+            int chunkPosZ = position.Z % CHUNK_SIZE;
 
-            return chunk.GetBlock(blockPosition.Y, blockPosition.Z);
+            int tile = (chunkPosY * CHUNK_SIZE * CHUNK_SIZE) + (chunkPosZ * CHUNK_SIZE) + (chunkPosX);
+
+            return chunk.GetBlock(tile);
         }
         public bool SetBlockAtPosition(Vector3I position, ushort blockId, ChiselShape? chisel = null, bool? playerPlaced = null, bool createChunk = false)
         {
@@ -158,7 +168,10 @@ namespace EyeOfRubiss
             if (IslandID == 12 || IslandID == 13 || IslandID == 16)
             {
                 if (commonData is null)
+                {
+                    GD.Print("commonData is null");
                     return -1;
+                }
 
                 var buildertopiaType = IslandID switch
                 {
@@ -167,6 +180,7 @@ namespace EyeOfRubiss
                     16 => commonData.Buildertopia3Type,
                     _ => 0,
                 };
+                GD.Print($"buildertopiaType: {buildertopiaType}");
 
                 return buildertopiaType switch
                 {
@@ -191,45 +205,15 @@ namespace EyeOfRubiss
                 1 => 31, // Isle of Awakening
                 2 => 31, // Furrowfield
                 3 => 65, // Khrumbul-Dun
-                4 => 19, // Moonbrooke
+                4 => 21, // Moonbrooke
                 5 => -1, // Malhalla
                 9 => 31, // Angler's Isle
                 10 => 11, // Skelkatraz
+                14 => 31, // Battle Atoll
                 _ => -1,
             };
         }
-
-        public void MakeSuperflat(List<ushort> layers, bool deleteProps = true)
-        {
-            if (deleteProps)
-                DeleteAllBGParts();
-
-            foreach (Chunk chunk in GetUsedChunks())
-            {
-                chunk.Clear();
-                for (int i = 0; i < layers.Count; i++)
-                {
-                    chunk.SetLayer(i, layers[i]);
-                }
-                // BIG NOTE: if there's a block with additional data (like a lore book generated with the world that u can read) removing it will break the superflat
-                // TODO FIXME
-                //if (chunk.ID >= 163)
-                //    break;
-            }
-
-            ClearRoomData();
-        }
-        public void ClearRoomData()
-        {
-            // I'm not sure entirely what this does. I don't think I really need to know.
-            for (int i = 0; i < 100; i++)
-            {
-                int address = 0x10 + i * 336;
-                Fill(0, address, 36);
-                Fill(0xFF, address + 36, 300);
-            }
-        }
-
+        
         public InventoryItem GetBagItem(int index)
         {
             if (index < 0 || index >= 435)
@@ -275,12 +259,11 @@ namespace EyeOfRubiss
             {
                 return IsUsed() ? new BlockInstance(SaveData, GetBlockAddress() + tile * BlockInstance.LENGTH) : null;
             }
-            public BlockInstance GetBlock(int layer, int tile)
-            {
-                return GetBlock(layer * LAYER_LENGTH / 2 + tile);
-            }
             public BlockInstance GetBlock(Vector3I position)
             {
+                if (!IsUsed())
+                    return null;
+
                 if (position.X < 0 || position.X >= CHUNK_SIZE || position.Y < 0 || position.Y >= WORLD_HEIGHT_BLOCKS || position.Z < 0 || position.Z >= CHUNK_SIZE)
                     return null;
 
@@ -293,24 +276,28 @@ namespace EyeOfRubiss
                     yield return GetBlock(i);
             }
 
-            public void SetBlock(int layer, int tile, ushort blockId, bool? playerPlaced = null, ChiselShape? chisel = null)
+            public void SetBlock(int tile, ushort blockId, bool? playerPlaced = null, ChiselShape? chisel = null)
             {
                 if (!IsUsed())
                     return;
 
-                BlockInstance block = GetBlock(layer, tile);
+                BlockInstance block = GetBlock(tile);
                 block.BlockID = blockId;
                 if (playerPlaced is not null)
                     block.PlayerPlaced = (bool)playerPlaced;
                 if (chisel is not null)
                     block.Chisel = (ChiselShape)chisel;
             }
-            public void SetLayer(int layer, ushort block)
+            public void SetBlock(Vector3I position, ushort blockId, bool? playerPlaced = null, ChiselShape? chisel = null)
             {
-                for (int i = 0; i < LAYER_LENGTH / BlockInstance.LENGTH; i++)
-                {
-                    SetBlock(layer, i, block);
-                }
+                if (!IsUsed())
+                    return;
+
+                if (position.X < 0 || position.X >= CHUNK_SIZE || position.Y < 0 || position.Y >= WORLD_HEIGHT_BLOCKS || position.Z < 0 || position.Z >= CHUNK_SIZE)
+                    return;
+
+                int tile = (position.Y * CHUNK_SIZE * CHUNK_SIZE) + (position.Z * CHUNK_SIZE) + position.X;
+                SetBlock(tile, blockId, playerPlaced, chisel);
             }
 
             public void Clear()
@@ -567,7 +554,9 @@ namespace EyeOfRubiss
             }
 
             public bool Collision { get { return SaveData.GetBit(GetAddress() + 0xC, 1); } set { SaveData.SetBit(GetAddress() + 0xC, 1, value); } }
+            public bool Unbreakable { get { return SaveData.GetBit(GetAddress() + 0xC, 0); } set { SaveData.SetBit(GetAddress() + 0xC, 0, value); } }
             public bool Effects { get { return SaveData.GetBit(GetAddress() + 0xF, 7); } set { SaveData.SetBit(GetAddress() + 0xF, 7, value); } }
+            public byte Size { get { return (byte)SaveData.GetNumberBitwise(GetAddress() + 0xF, 4, 2); } set { SaveData.SetNumberBitwise(GetAddress() + 0xF, 4, 2, value); } }
 
             public byte ConnectingWindowRotation { get { return (byte)SaveData.GetNumberBitwise(GetAddress() + 15, 2, 2); } set { SaveData.SetNumberBitwise(GetAddress() + 15, 2, 2, value); } }
 
@@ -664,7 +653,7 @@ namespace EyeOfRubiss
         }
         public BGParts GetBGPartsAtPosition(Vector3I position)
         {
-            return GetAllBGPartsAtPosition(position).First();
+            return GetAllBGPartsAtPosition(position).FirstOrDefault();
         }
         public IEnumerable<BGParts> GetAllBGPartsAtPosition(Vector3I position)
         {
@@ -767,6 +756,7 @@ namespace EyeOfRubiss
             if (prop.DataIndex >= PropCount)
                 PropCount = (int)prop.DataIndex + 1;
             
+            prop.Clear();
             prop.Chunk = PositionToChunkIndex(position);
             prop.X = (byte)(position.X % 32);
             prop.Y = (byte)position.Y;
@@ -799,11 +789,6 @@ namespace EyeOfRubiss
         #endregion
 
         #region Block Entities
-        public BlockEntity GetBlockEntityAtPosition(Vector3I position)
-        {
-            throw new NotImplementedException();
-        }
-
         public abstract class BlockEntity(StageData saveData)
         {
             public readonly StageData SaveData = saveData;
@@ -813,68 +798,500 @@ namespace EyeOfRubiss
             abstract public ushort Z { get; set; }
 
             public virtual Vector3I GetPosition() => new(X, Y, Z);
+
+            public virtual void Clear() {}
+        }
+        public void ClearBlockEntitiesAtPosition(Vector3I position)
+        {
+            foreach (Storage storage in GetAllStorage())
+                if (storage.Enabled && storage.GetPosition() == position)
+                    storage.Clear();
+            foreach (ItemDisplay display in GetAllItemDisplays())
+                if (display.Enabled && display.GetPosition() == position)
+                    display.Clear();
+            foreach (CraftingStation station in GetCraftingStations())
+                if (station.GetPosition() == position)
+                    station.Clear();
+            foreach (Signpost signpost in GetSignposts())
+                if (signpost.Enabled && signpost.GetPosition() == position)
+                    signpost.Clear();
+            foreach (SalutationStation station in GetSalutationStations())
+                if (station.Enabled && station.GetPosition() == position)
+                    station.Clear();
+            foreach (Crop crop in GetCrops())
+                if (crop.GetPosition() == position)
+                    crop.Clear();
+            foreach (Scarecrow scarecrow in GetScarecrows())
+                if (scarecrow.Enabled && scarecrow.GetPosition() == position)
+                    scarecrow.Clear();
+            foreach (Instrument instrument in GetInstruments())
+                if (instrument.GetPosition() == position)
+                    instrument.Clear();
+            foreach (MagneticBlock block in GetMagneticBlocks())
+                if (block.Enabled && block.GetPosition() == position)
+                    block.Clear();
+            foreach (MagicPencil pencil in GetMagicPencils())
+                if (pencil.Enabled && pencil.GetPosition() == position)
+                    pencil.Clear();
+            foreach (FireworkCannon cannon in GetFireworkCannons())
+                if (cannon.Enabled && cannon.GetPosition() == position)
+                    cannon.Clear();
+            foreach (PictureFrame frame in GetPictureFrames())
+                if (frame.Enabled && frame.GetPosition() == position)
+                    frame.Clear();
+            foreach (Watchfire watchfire in GetWatchfires())
+                if (watchfire.Enabled && watchfire.GetPosition() == position)
+                    watchfire.Clear();
+            foreach (WardOfErdrick ward in GetWardsOfErdrick())
+                if (ward.Enabled && ward.GetPosition() == position)
+                    ward.Clear();
+            foreach (Buggy buggy in GetBuggies())
+                if (buggy.Enabled && buggy.GetPosition() == position)
+                    buggy.Clear();
+            foreach (Toilet toilet in GetToilets())
+                if (toilet.Enabled && toilet.GetPosition() == position)
+                    toilet.Clear();
+        }
+        public void ClearAllBlockEntities()
+        {
+            foreach (Storage storage in GetAllStorage())
+                storage.Clear();
+            foreach (ItemDisplay display in GetAllItemDisplays())
+                display.Clear();
+            foreach (CraftingStation station in GetCraftingStations())
+                station.Clear();
+            foreach (Signpost signpost in GetSignposts())
+                signpost.Clear();
+            foreach (SalutationStation station in GetSalutationStations())
+                station.Clear();
+            //foreach (Crop crop in GetCrops())
+            //    crop.Clear();
+            CropCount = 0;
+            foreach (Scarecrow scarecrow in GetScarecrows())
+                scarecrow.Clear();
+            foreach (Instrument instrument in GetInstruments())
+                instrument.Clear();
+            foreach (MagneticBlock block in GetMagneticBlocks())
+                block.Clear();
+            foreach (MagicPencil pencil in GetMagicPencils())
+                pencil.Clear();
+            foreach (FireworkCannon cannon in GetFireworkCannons())
+                cannon.Clear();
+            foreach (PictureFrame frame in GetPictureFrames())
+                frame.Clear();
+            foreach (Watchfire watchfire in GetWatchfires())
+                watchfire.Clear();
+            foreach (WardOfErdrick ward in GetWardsOfErdrick())
+                ward.Clear();
+            foreach (Buggy buggy in GetBuggies())
+                buggy.Clear();
+            foreach (Toilet toilet in GetToilets())
+                toilet.Clear();
         }
 
-        public class Storage(StageData saveData, int info, int inside) : BlockEntity(saveData)
+        public class Storage(StageData saveData, int metadataAddress, int contentsAddress) : BlockEntity(saveData)
         {
-            public int Info = info;
-            public int Inside = inside;
+            public int MetadataAddress = metadataAddress;
+            public int ContentsAddress = contentsAddress;
 
+            public const int LENGTH_METADATA = 8;
+            public const int LENGTH_CONTENTS = ITEM_COUNT * 4;
             public const int ITEM_COUNT = 30;
 
-            public override ushort X { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-            public override byte Y { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-            public override ushort Z { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+            public const int START_ADDRESS_CHEST_METADATA = 0xF565;
+            public const int START_ADDRESS_CHEST_CONTENTS = 0x2467CC;
+            public const int CHEST_MAXIMUM = 50;
+            public const byte CHEST_TYPE = 1;
+
+            public const int START_ADDRESS_STORAGE_TYPE_2_METADATA = 0xF6F5;
+            public const int START_ADDRESS_STORAGE_TYPE_2_CONTENTS = 0x247F3C;
+            public const int STORAGE_TYPE_2_MAXIMUM = 8;
+            public const byte STORAGE_TYPE_2_TYPE = 2;
+
+            public const int START_ADDRESS_STORAGE_TYPE_3_METADATA = 0xF735;
+            public const int START_ADDRESS_STORAGE_TYPE_3_CONTENTS = 0x2482FC;
+            public const int STORAGE_TYPE_3_MAXIMUM = 8;
+            public const byte STORAGE_TYPE_3_TYPE = 3;
+            
+            public const int START_ADDRESS_WARDROBE_METADATA = 0xFF75;
+            public const int START_ADDRESS_WARDROBE_CONTENTS = 0x248ABC;
+            public const int WARDROBE_MAXIMUM = 64;
+            public const byte WARDROBE_TYPE = 9;
+
+            public const int START_ADDRESS_MULTIPLAYER_CHEST_METADATA = 0x10275;
+            public const int START_ADDRESS_MULTIPLAYER_CHEST_CONTENTS = 0x24A93C;
+            public const int MULTIPLAYER_CHEST_MAXIMUM = 1;
+            public const byte MULTIPLAYER_CHEST_TYPE = 0xB;
+
+            public const int START_ADDRESS_CUPBOARD_METADATA = 0x1027D;
+            public const int START_ADDRESS_CUPBOARD_CONTENTS = 0x24A9B0;
+            public const int CUPBOARD_MAXIMUM = 16;
+            public const byte CUPBOARD_TYPE = 0xC;
+
+            public const int START_ADDRESS_DRAWER_METADATA = 0x102FD;
+            public const int START_ADDRESS_DRAWER_CONTENTS = 0x24B134;
+            public const int DRAWER_MAXIMUM = 32;
+            public const byte DRAWER_TYPE = 0xD;
+
+            public override ushort X { get => SaveData.GetUInt16(MetadataAddress); set => SaveData.SetUInt16(MetadataAddress, value); }
+            public override byte Y { get => SaveData.GetByte(MetadataAddress + 2); set => SaveData.SetUInt16(MetadataAddress + 2, value); }
+            public override ushort Z { get => SaveData.GetUInt16(MetadataAddress + 4); set => SaveData.SetUInt16(MetadataAddress + 4, value); }
+
+            public bool Enabled { get => SaveData.GetBit(MetadataAddress + 6, 0); set => SaveData.SetBit(MetadataAddress + 6, 0, value); }
+
+            public byte StorageType { get => SaveData.GetByte(MetadataAddress + 7); set => SaveData.SetByte(MetadataAddress + 7, value); } // Type must match for the area in STGDAT.
 
             public InventoryItem GetItem(int index)
             {
                 if (index < 0 || index >= ITEM_COUNT)
                     throw new IndexOutOfRangeException();
 
-                return new(SaveData, Inside + index * 4);
+                return new(SaveData, ContentsAddress + index * InventoryItem.LENGTH);
             }
-            public IEnumerable<InventoryItem> GetItems(int index = 0, int length = ITEM_COUNT)
+            public IEnumerable<InventoryItem> GetItems(int index = 0, int count = ITEM_COUNT)
             {
                 if (index < 0 || index >= ITEM_COUNT)
                     throw new IndexOutOfRangeException();
 
-                for (int i = index; i < length; i++)
-                    yield return GetItem(i);
+                for (int i = 0; i < count && i + index < ITEM_COUNT; i++)
+                    yield return GetItem(i + index);
             }
 
-            public bool IsActive() => !(SaveData.GetInt32(Info) == 0 && SaveData.GetInt32(Info + 4) == 0);
-
-            // Chests: 0x2467CC - 0x2476CC (30 slots * 4 bytes = 120 bytes * 32 chests = 3840 bytes); Info = F565
-            // Wardrobes: 0x248ABC - 0x24A8BC (30 slots * 4 bytes = 120 bytes * 64 chests = 7680 bytes); "Info" for "cabinets" starts at 0xFF75, 8 bytes each
-            // Cupboards: 0x24A9B0 - 0x24B130 (30 slots * 4 bytes = 120 bytes * 16 chests = 1920 bytes); "Info" starts at 0xF565, 8 bytes each
-            // Drawers: 0x24B134 - 0x24C034 (30 slots * 4 bytes = 120 bytes * 32 chests = 3840 bytes); "Info" starts at 0xF565, 8 bytes each
+            public override void Clear()
+            {
+                SaveData.Fill(0, MetadataAddress, LENGTH_METADATA);
+                SaveData.Fill(0, ContentsAddress, LENGTH_CONTENTS);
+            }
         }
-        public class ItemDisplay(StageData saveData, int info, int inside) : BlockEntity(saveData)
+        public Storage GetChest(int index)
         {
-            public const int START_ADDRESS_METADATA = 0xF575 - 8 * (128 + 32);
-            public const int START_ADDRESS_INVENTORY = 0x2486BC;
-            public const int LENGTH_METADATA = 8;
-            public const int LENGTH_INVENTORY = 4;
-
-            public readonly int Info = info;
-            public readonly int Inside = inside;
-
-            public InventoryItem Item => new(SaveData, Inside);
-
-            public override ushort X { get { return SaveData.GetUInt16(Info); } set { SaveData.SetUInt16(Info, value); } }
-            public override byte Y { get { return SaveData.GetByte(Info + 2); } set { SaveData.SetUInt16(Info + 2, value); } }
-            public override ushort Z { get { return SaveData.GetUInt16(Info + 4); } set { SaveData.SetUInt16(Info + 4, value); } }
-
-            // Item Display Stand: 0x2486BC - 0x2488BC (4 bytes * 128 displays) ; Info @ 0xF775 - 0xFB75
-            // Arms Display Stand: 0x2488BC - 0x24893C (4 bytes * 32 displays) ; Info @ 0xFB75 - 0xFC75
-            // Food Display: 0x24893C - 0x2489BC (4 bytes * 32 displays) ; Info @ 0xFC75 - 0xFD75
-            // Decorative Food: 0x2489BC - 0x248A3C (4 bytes * 32 displays) ; Info @ 0xFD75 - 0xFE75
-            // Pet Bowl: 0x248A3C - 0x248ABC (4 bytes * 32 displays) ; Info @ 0xFE75 - 0xFF75? see also 0x8AC1, 0xD3BBD
-            // Price Tags: 0x24A8BC - 0x24A93C (4 bytes * 32 displays) ; Info @ 0xD39C7
-            // Drinks: 0x24C034 - 0x24C0B4 (4 bytes * 32 displays) ; Info @ 0x103FD
-
-            // "Tablewares Info": 0xFC75, 8 bytes each ; this counts crockery.
+            if (index < 0 || index >= Storage.CHEST_MAXIMUM)
+                throw new IndexOutOfRangeException();
+            
+            return new Storage(this,
+                Storage.START_ADDRESS_CHEST_METADATA + Storage.LENGTH_METADATA * index,
+                Storage.START_ADDRESS_CHEST_CONTENTS + Storage.LENGTH_CONTENTS * index);
         }
+        public IEnumerable<Storage> GetChests(int index = 0, int count = Storage.CHEST_MAXIMUM)
+        {
+            if (index < 0 || index >= Storage.CHEST_MAXIMUM)
+                throw new IndexOutOfRangeException();
+            
+            for (int i = 0; i < count && i + index < Storage.CHEST_MAXIMUM; i++)
+                yield return GetChest(i + index);
+        }
+        public Storage GetStorageType2(int index)
+        {
+            if (index < 0 || index >= Storage.STORAGE_TYPE_2_MAXIMUM)
+                throw new IndexOutOfRangeException();
+            
+            return new Storage(this,
+                Storage.START_ADDRESS_STORAGE_TYPE_2_METADATA + Storage.LENGTH_METADATA * index,
+                Storage.START_ADDRESS_STORAGE_TYPE_2_CONTENTS + Storage.LENGTH_CONTENTS * index);
+        }
+        public IEnumerable<Storage> GetStoragesType2(int index = 0, int count = Storage.STORAGE_TYPE_2_MAXIMUM)
+        {
+            if (index < 0 || index >= Storage.STORAGE_TYPE_2_MAXIMUM)
+                throw new IndexOutOfRangeException();
+            
+            for (int i = 0; i < count && i + index < Storage.STORAGE_TYPE_2_MAXIMUM; i++)
+                yield return GetStorageType2(i + index);
+        }
+        public Storage GetStorageType3(int index)
+        {
+            if (index < 0 || index >= Storage.STORAGE_TYPE_3_MAXIMUM)
+                throw new IndexOutOfRangeException();
+            
+            return new Storage(this,
+                Storage.START_ADDRESS_STORAGE_TYPE_3_METADATA + Storage.LENGTH_METADATA * index,
+                Storage.START_ADDRESS_STORAGE_TYPE_3_CONTENTS + Storage.LENGTH_CONTENTS * index);
+        }
+        public IEnumerable<Storage> GetStoragesType3(int index = 0, int count = Storage.STORAGE_TYPE_3_MAXIMUM)
+        {
+            if (index < 0 || index >= Storage.STORAGE_TYPE_3_MAXIMUM)
+                throw new IndexOutOfRangeException();
+            
+            for (int i = 0; i < count && i + index < Storage.STORAGE_TYPE_3_MAXIMUM; i++)
+                yield return GetStorageType3(i + index);
+        }
+        public Storage GetWardrobe(int index)
+        {
+            if (index < 0 || index >= Storage.WARDROBE_MAXIMUM)
+                throw new IndexOutOfRangeException();
+            
+            return new Storage(this,
+                Storage.START_ADDRESS_WARDROBE_METADATA + Storage.LENGTH_METADATA * index,
+                Storage.START_ADDRESS_WARDROBE_CONTENTS + Storage.LENGTH_CONTENTS * index);
+        }
+        public IEnumerable<Storage> GetWardrobes(int index = 0, int count = Storage.WARDROBE_MAXIMUM)
+        {
+            if (index < 0 || index >= Storage.WARDROBE_MAXIMUM)
+                throw new IndexOutOfRangeException();
+            
+            for (int i = 0; i < count && i + index < Storage.WARDROBE_MAXIMUM; i++)
+                yield return GetWardrobe(i + index);
+        }
+        public Storage GetMultiplayerChest()
+        {
+            return new Storage(this,
+                Storage.START_ADDRESS_MULTIPLAYER_CHEST_METADATA,
+                Storage.START_ADDRESS_MULTIPLAYER_CHEST_CONTENTS);
+        }
+        public Storage GetCupboard(int index)
+        {
+            if (index < 0 || index >= Storage.CUPBOARD_MAXIMUM)
+                throw new IndexOutOfRangeException();
+            
+            return new Storage(this,
+                Storage.START_ADDRESS_CUPBOARD_METADATA + Storage.LENGTH_METADATA * index,
+                Storage.START_ADDRESS_CUPBOARD_CONTENTS + Storage.LENGTH_CONTENTS * index);
+        }
+        public IEnumerable<Storage> GetCupboards(int index = 0, int count = Storage.CUPBOARD_MAXIMUM)
+        {
+            if (index < 0 || index >= Storage.CUPBOARD_MAXIMUM)
+                throw new IndexOutOfRangeException();
+            
+            for (int i = 0; i < count && i + index < Storage.CUPBOARD_MAXIMUM; i++)
+                yield return GetCupboard(i + index);
+        }
+        public Storage GetDrawer(int index)
+        {
+            if (index < 0 || index >= Storage.DRAWER_MAXIMUM)
+                throw new IndexOutOfRangeException();
+            
+            return new Storage(this,
+                Storage.START_ADDRESS_DRAWER_METADATA + Storage.LENGTH_METADATA * index,
+                Storage.START_ADDRESS_DRAWER_CONTENTS + Storage.LENGTH_CONTENTS * index);
+        }
+        public IEnumerable<Storage> GetDrawers(int index = 0, int count = Storage.DRAWER_MAXIMUM)
+        {
+            if (index < 0 || index >= Storage.DRAWER_MAXIMUM)
+                throw new IndexOutOfRangeException();
+            
+            for (int i = 0; i < count && i + index < Storage.DRAWER_MAXIMUM; i++)
+                yield return GetDrawer(i + index);
+        }
+        public IEnumerable<Storage> GetAllStorage()
+        {
+            foreach (Storage storage in GetChests())
+                yield return storage;
+            foreach (Storage storage in GetStoragesType2())
+                yield return storage;
+            foreach (Storage storage in GetStoragesType3())
+                yield return storage;
+            foreach (Storage storage in GetWardrobes())
+                yield return storage;
+            yield return GetMultiplayerChest();
+            foreach (Storage storage in GetCupboards())
+                yield return storage;
+            foreach (Storage storage in GetDrawers())
+                yield return storage;
+        }
+        public Storage GetStorageAtPosition(Vector3I position)
+        {
+            return GetAllStorage().FirstOrDefault(storage => storage.Enabled && storage.GetPosition() == position);
+        }
+
+        public class ItemDisplay(StageData saveData, int metadataAddress, int contentsAddress) : BlockEntity(saveData)
+        {
+            public const int LENGTH_METADATA = 8;
+            public const int LENGTH_CONTENTS = 4;
+
+            public const int START_ADDRESS_ITEM_DISPLAY_METADATA = 0xF775;
+            public const int START_ADDRESS_ITEM_DISPLAY_CONTENTS = 0x2486BC;
+            public const int ITEM_DISPLAY_MAXIMUM = 128;
+            public const byte ITEM_DISPLAY_TYPE = 4;
+
+            public const int START_ADDRESS_EQUIPMENT_DISPLAY_METADATA = 0xFB75;
+            public const int START_ADDRESS_EQUIPMENT_DISPLAY_CONTENTS = 0x2488BC;
+            public const int EQUIPMENT_DISPLAY_MAXIMUM = 32;
+            public const byte EQUIPMENT_DISPLAY_TYPE = 5;
+
+            public const int START_ADDRESS_FOOD_DISPLAY_METADATA = 0xFC75;
+            public const int START_ADDRESS_FOOD_DISPLAY_CONTENTS = 0x24893C;
+            public const int FOOD_DISPLAY_MAXIMUM = 32;
+            public const byte FOOD_DISPLAY_TYPE = 6;
+
+            public const int START_ADDRESS_DECORATIVE_FOOD_METADATA = 0xFD75;
+            public const int START_ADDRESS_DECORATIVE_FOOD_CONTENTS = 0x2489BC;
+            public const int DECORATIVE_FOOD_MAXIMUM = 32;
+            public const byte DECORATIVE_FOOD_TYPE = 7;
+
+            public const int START_ADDRESS_PET_BOWL_METADATA = 0xFE75;
+            public const int START_ADDRESS_PET_BOWL_CONTENTS = 0x248A3C;
+            public const int PET_BOWL_MAXIMUM = 32;
+            public const byte PET_BOWL_TYPE = 8;
+
+            public const int START_ADDRESS_PRICE_TAG_METADATA = 0x10175;
+            public const int START_ADDRESS_PRICE_TAG_CONTENTS = 0x24A8BC;
+            public const int PRICE_TAG_MAXIMUM = 32;
+            public const byte PRICE_TAG_TYPE = 0xA;
+
+            public const int START_ADDRESS_BEVERAGE_METADATA = 0x103FD;
+            public const int START_ADDRESS_BEVERAGE_CONTENTS = 0x24C034;
+            public const int BEVERAGE_MAXIMUM = 32;
+            public const byte BEVERAGE_TYPE = 0xE;
+
+            public readonly int MetadataAddress = metadataAddress;
+            public readonly int ContentsAddress = contentsAddress;
+
+            public InventoryItem Item => new(SaveData, ContentsAddress);
+
+            public override ushort X { get { return SaveData.GetUInt16(MetadataAddress); } set { SaveData.SetUInt16(MetadataAddress, value); } }
+            public override byte Y { get { return SaveData.GetByte(MetadataAddress + 2); } set { SaveData.SetUInt16(MetadataAddress + 2, value); } }
+            public override ushort Z { get { return SaveData.GetUInt16(MetadataAddress + 4); } set { SaveData.SetUInt16(MetadataAddress + 4, value); } }
+
+            public bool Enabled { get => SaveData.GetBit(MetadataAddress + 6, 0); set => SaveData.SetBit(MetadataAddress + 6, 0, value); }
+
+            public byte StorageType { get => SaveData.GetByte(MetadataAddress + 7); set => SaveData.SetByte(MetadataAddress + 7, value); } // Type must match for the area in STGDAT.
+        
+            public override void Clear()
+            {
+                SaveData.Fill(0, MetadataAddress, LENGTH_METADATA);
+                SaveData.Fill(0, ContentsAddress, LENGTH_CONTENTS);
+            }
+        }
+        public ItemDisplay GetItemDisplayGeneric(int index)
+        {
+            if (index < 0 || index >= ItemDisplay.ITEM_DISPLAY_MAXIMUM)
+                throw new IndexOutOfRangeException();
+
+            return new ItemDisplay(this,
+                ItemDisplay.START_ADDRESS_ITEM_DISPLAY_METADATA + ItemDisplay.LENGTH_METADATA * index,
+                ItemDisplay.START_ADDRESS_ITEM_DISPLAY_CONTENTS + ItemDisplay.LENGTH_CONTENTS * index);
+        }
+        public IEnumerable<ItemDisplay> GetItemDisplaysGeneric(int index = 0, int count = ItemDisplay.ITEM_DISPLAY_MAXIMUM)
+        {
+            if (index < 0 || index >= ItemDisplay.ITEM_DISPLAY_MAXIMUM)
+                throw new IndexOutOfRangeException();
+            
+            for (int i = 0; i < count && i + index < ItemDisplay.ITEM_DISPLAY_MAXIMUM; i++)
+                yield return GetItemDisplayGeneric(i + index);
+        }
+        public ItemDisplay GetEquipmentDisplay(int index)
+        {
+            if (index < 0 || index >= ItemDisplay.EQUIPMENT_DISPLAY_MAXIMUM)
+                throw new IndexOutOfRangeException();
+
+            return new ItemDisplay(this,
+                ItemDisplay.START_ADDRESS_EQUIPMENT_DISPLAY_METADATA + ItemDisplay.LENGTH_METADATA * index,
+                ItemDisplay.START_ADDRESS_EQUIPMENT_DISPLAY_CONTENTS + ItemDisplay.LENGTH_CONTENTS * index);
+        }
+        public IEnumerable<ItemDisplay> GetEquipmentDisplays(int index = 0, int count = ItemDisplay.EQUIPMENT_DISPLAY_MAXIMUM)
+        {
+            if (index < 0 || index >= ItemDisplay.EQUIPMENT_DISPLAY_MAXIMUM)
+                throw new IndexOutOfRangeException();
+            
+            for (int i = 0; i < count && i + index < ItemDisplay.EQUIPMENT_DISPLAY_MAXIMUM; i++)
+                yield return GetEquipmentDisplay(i + index);
+        }
+        public ItemDisplay GetFoodDisplay(int index)
+        {
+            if (index < 0 || index >= ItemDisplay.FOOD_DISPLAY_MAXIMUM)
+                throw new IndexOutOfRangeException();
+
+            return new ItemDisplay(this,
+                ItemDisplay.START_ADDRESS_FOOD_DISPLAY_METADATA + ItemDisplay.LENGTH_METADATA * index,
+                ItemDisplay.START_ADDRESS_FOOD_DISPLAY_CONTENTS + ItemDisplay.LENGTH_CONTENTS * index);
+        }
+        public IEnumerable<ItemDisplay> GetFoodDisplays(int index = 0, int count = ItemDisplay.FOOD_DISPLAY_MAXIMUM)
+        {
+            if (index < 0 || index >= ItemDisplay.FOOD_DISPLAY_MAXIMUM)
+                throw new IndexOutOfRangeException();
+            
+            for (int i = 0; i < count && i + index < ItemDisplay.FOOD_DISPLAY_MAXIMUM; i++)
+                yield return GetFoodDisplay(i + index);
+        }
+        public ItemDisplay GetDecorativeFood(int index)
+        {
+            if (index < 0 || index >= ItemDisplay.DECORATIVE_FOOD_MAXIMUM)
+                throw new IndexOutOfRangeException();
+
+            return new ItemDisplay(this,
+                ItemDisplay.START_ADDRESS_DECORATIVE_FOOD_METADATA + ItemDisplay.LENGTH_METADATA * index,
+                ItemDisplay.START_ADDRESS_DECORATIVE_FOOD_CONTENTS + ItemDisplay.LENGTH_CONTENTS * index);
+        }
+        public IEnumerable<ItemDisplay> GetDecorativeFoods(int index = 0, int count = ItemDisplay.DECORATIVE_FOOD_MAXIMUM)
+        {
+            if (index < 0 || index >= ItemDisplay.DECORATIVE_FOOD_MAXIMUM)
+                throw new IndexOutOfRangeException();
+            
+            for (int i = 0; i < count && i + index < ItemDisplay.DECORATIVE_FOOD_MAXIMUM; i++)
+                yield return GetDecorativeFood(i + index);
+        }
+        public ItemDisplay GetPetBowl(int index)
+        {
+            if (index < 0 || index >= ItemDisplay.PET_BOWL_MAXIMUM)
+                throw new IndexOutOfRangeException();
+
+            return new ItemDisplay(this,
+                ItemDisplay.START_ADDRESS_PET_BOWL_METADATA + ItemDisplay.LENGTH_METADATA * index,
+                ItemDisplay.START_ADDRESS_PET_BOWL_CONTENTS + ItemDisplay.LENGTH_CONTENTS * index);
+        }
+        public IEnumerable<ItemDisplay> GetPetBowls(int index = 0, int count = ItemDisplay.PET_BOWL_MAXIMUM)
+        {
+            if (index < 0 || index >= ItemDisplay.PET_BOWL_MAXIMUM)
+                throw new IndexOutOfRangeException();
+            
+            for (int i = 0; i < count && i + index < ItemDisplay.PET_BOWL_MAXIMUM; i++)
+                yield return GetPetBowl(i + index);
+        }
+        public ItemDisplay GetBeverage(int index)
+        {
+            if (index < 0 || index >= ItemDisplay.BEVERAGE_MAXIMUM)
+                throw new IndexOutOfRangeException();
+
+            return new ItemDisplay(this,
+                ItemDisplay.START_ADDRESS_BEVERAGE_METADATA + ItemDisplay.LENGTH_METADATA * index,
+                ItemDisplay.START_ADDRESS_BEVERAGE_CONTENTS + ItemDisplay.LENGTH_CONTENTS * index);
+        }
+        public IEnumerable<ItemDisplay> GetBeverages(int index = 0, int count = ItemDisplay.BEVERAGE_MAXIMUM)
+        {
+            if (index < 0 || index >= ItemDisplay.BEVERAGE_MAXIMUM)
+                throw new IndexOutOfRangeException();
+            
+            for (int i = 0; i < count && i + index < ItemDisplay.BEVERAGE_MAXIMUM; i++)
+                yield return GetBeverage(i + index);
+        }
+        public ItemDisplay GetPriceTag(int index)
+        {
+            if (index < 0 || index >= ItemDisplay.PRICE_TAG_MAXIMUM)
+                throw new IndexOutOfRangeException();
+
+            return new ItemDisplay(this,
+                ItemDisplay.START_ADDRESS_PRICE_TAG_METADATA + ItemDisplay.LENGTH_METADATA * index,
+                ItemDisplay.START_ADDRESS_PRICE_TAG_CONTENTS + ItemDisplay.LENGTH_CONTENTS * index);
+        }
+        public IEnumerable<ItemDisplay> GetPriceTags(int index = 0, int count = ItemDisplay.PRICE_TAG_MAXIMUM)
+        {
+            if (index < 0 || index >= ItemDisplay.PRICE_TAG_MAXIMUM)
+                throw new IndexOutOfRangeException();
+            
+            for (int i = 0; i < count && i + index < ItemDisplay.PRICE_TAG_MAXIMUM; i++)
+                yield return GetPriceTag(i + index);
+        }
+        public IEnumerable<ItemDisplay> GetAllItemDisplays()
+        {
+            foreach (ItemDisplay display in GetItemDisplaysGeneric())
+                yield return display;
+            foreach (ItemDisplay display in GetEquipmentDisplays())
+                yield return display;
+            foreach (ItemDisplay display in GetFoodDisplays())
+                yield return display;
+            foreach (ItemDisplay display in GetDecorativeFoods())
+                yield return display;
+            foreach (ItemDisplay display in GetPetBowls())
+                yield return display;
+            foreach (ItemDisplay display in GetBeverages())
+                yield return display;
+            foreach (ItemDisplay display in GetPriceTags())
+                yield return display;
+        }
+        public ItemDisplay GetItemDisplayAtPosition(Vector3I position)
+        {
+            return GetAllItemDisplays().FirstOrDefault(display => display.Enabled && display.GetPosition() == position);
+        }
+
         public class CraftingStation(StageData saveData, int address) : BlockEntity(saveData)
         {
             public const int START_ADDRESS = 0x10EA5;
@@ -886,7 +1303,37 @@ namespace EyeOfRubiss
             public override ushort X { get { return SaveData.GetUInt16(Address); } set { SaveData.SetUInt16(Address, value); } }
             public override byte Y { get { return SaveData.GetByte(Address + 2); } set { SaveData.SetUInt16(Address + 2, value); } }
             public override ushort Z { get { return SaveData.GetUInt16(Address + 4); } set { SaveData.SetUInt16(Address + 4, value); } }
+
+            public override void Clear()
+            {
+                SaveData.Fill(0, Address, LENGTH);
+            }
+
+            public bool Exists()
+            {
+                return SaveData.GetBytes(Address, LENGTH).ToArray().All(b => b == 0);
+            }
         }
+        public CraftingStation GetCraftingStation(int index)
+        {
+            if (index < 0 || index >= CraftingStation.MAXIMUM)
+                throw new IndexOutOfRangeException();
+
+            return new CraftingStation(this, CraftingStation.START_ADDRESS + index * CraftingStation.LENGTH);
+        }
+        public IEnumerable<CraftingStation> GetCraftingStations(int index = 0, int count = CraftingStation.MAXIMUM)
+        {
+            if (index < 0 || index >= CraftingStation.MAXIMUM)
+                throw new IndexOutOfRangeException();
+
+            for (int i = 0; i < count && i + index < CraftingStation.MAXIMUM; i++)
+                yield return GetCraftingStation(i + index);
+        }
+        public CraftingStation GetCraftingStationAtPosition(Vector3I position)
+        {
+            return GetCraftingStations().FirstOrDefault(craft => craft.GetPosition() == position);
+        }
+
         public class Signpost(StageData saveData, int address) : BlockEntity(saveData)
         {
             public const int START_ADDRESS = 0x148FE;
@@ -895,129 +1342,20 @@ namespace EyeOfRubiss
 
             public readonly int Address = address;
 
-            public string Text { get { return SaveData.GetString(Address + 6, 127); } set { SaveData.SetString(Address + 6, value, 127); SaveData.SetByte(Address + LENGTH - 1, 0); } }
-
-            public override ushort X { get { return SaveData.GetUInt16(Address); } set { SaveData.SetUInt16(Address, value); } }
-            public override ushort Z { get { return SaveData.GetUInt16(Address + 2); } set { SaveData.SetUInt16(Address + 2, value); } }
-            public override byte Y { get { return SaveData.GetByte(Address + 4); } set { SaveData.SetByte(Address + 4, value); } }
-        }
-        public class SalutationStation(StageData saveData, int address) : BlockEntity(saveData)
-        {
-            public const int START_ADDRESS = 0x16B36;
-            public const int LENGTH = 0xE4;
-            public const int MAXIMUM = 64;
-
-            public readonly int Address = address;
-
-            public string Text { get { return SaveData.GetString(Address + 7, 0xD8); } set { SaveData.SetString(Address + 7, value, 0xD8); SaveData.SetByte(Address + 7 + 0xD9, 0); } }
-
-            public override ushort X { get { return SaveData.GetUInt16(Address); } set { SaveData.SetUInt16(Address, value); } }
-            public override byte Y { get { return SaveData.GetByte(Address + 2); } set { SaveData.SetUInt16(Address + 2, value); } }
-            public override ushort Z { get { return SaveData.GetUInt16(Address + 4); } set { SaveData.SetUInt16(Address + 4, value); } }
-
-            public bool Active { get { return SaveData.GetByte(Address + 6) == 1; } set { SaveData.SetByte(Address + 6, (byte)(value ? 1 : 0)); } }
-
-            public ushort ResidentID { get { return SaveData.GetUInt16(Address + 0xE0); } set { SaveData.SetUInt16(Address + 0xE0, value); SaveData.SetUInt16(Address + 0xE2, value); } } // Duplicated. Why?
-        }
-        public class MagnetBlock(StageData saveData, int address) : BlockEntity(saveData)
-        {
-            public const int START_ADDRESS = 0x1310D;
-            public const int LENGTH = 9;
-            public const int MAXIMUM = 256;
-
-            public readonly int Address = address;
-
-            public override ushort X { get { return SaveData.GetUInt16(Address); } set { SaveData.SetUInt16(Address, value); } }
-            public override byte Y { get { return SaveData.GetByte(Address + 2); } set { SaveData.SetUInt16(Address + 2, value); } }
-            public override ushort Z { get { return SaveData.GetUInt16(Address + 4); } set { SaveData.SetUInt16(Address + 4, value); } }
-
-            public ushort Camouflage { get { return (ushort)SaveData.GetNumberBitwise(Address + 7, 0, 13); } set { SaveData.SetNumberBitwise(Address + 7, 0, 13, value); } }
-
-            public bool Active { get { return SaveData.GetByte(Address + 6) == 1; } set { SaveData.SetByte(Address + 6, (byte)(value ? 1 : 0)); } }
-
-            // NOTE: If last bit of Address + 8 is 0, and Camouflage > 0, block is invisible
-        }
-        public class Crop(StageData saveData, int address) : BlockEntity(saveData)
-        {
-            public const int START_ADDRESS = 0xB560;
-            public const int LENGTH = 0x10;
-            public const int MAXIMUM = 1024;
-
-            public readonly int Address = address;
-
-            public override ushort X { get { return SaveData.GetUInt16(Address + 4); } set { SaveData.SetUInt16(Address + 4, value); } }
-            public override byte Y { get { return SaveData.GetByte(Address + 8); } set { SaveData.SetUInt16(Address + 8, value); } }
-            public override ushort Z { get { return SaveData.GetUInt16(Address + 6); } set { SaveData.SetUInt16(Address + 6, value); } }
-
-            public DQB2Crop CropType { get { return (DQB2Crop)SaveData.GetByte(Address + 9); } set { SaveData.SetByte(Address + 9, (byte)value); } }
-        }
-        public class Scarecrow(StageData saveData, int address) : BlockEntity(saveData)
-        {
-            public const int START_ADDRESS = 0x15376;
-            public const int MAXIMUM = 64;
-            public const int LENGTH = 7;
-
-            public readonly int Address = address;
+            public string Text { get { return SaveData.GetString(Address + 6, 127); } set { SaveData.SetString(Address + 6, value, 127); } }
 
             public override ushort X { get { return SaveData.GetUInt16(Address); } set { SaveData.SetUInt16(Address, value); } }
             public override ushort Z { get { return SaveData.GetUInt16(Address + 2); } set { SaveData.SetUInt16(Address + 2, value); } }
             public override byte Y { get { return SaveData.GetByte(Address + 4); } set { SaveData.SetByte(Address + 4, value); } }
 
-            public bool Active { get { return SaveData.GetByte(Address + 6) == 1; } set { SaveData.SetByte(Address + 6, (byte)(value ? 1 : 0)); } }
+            public bool Enabled { get { return SaveData.GetBit(Address + 5, 0); } set { SaveData.SetBit(Address + 5, 0, value); } }
+            public bool Written { get { return SaveData.GetBit(Address + 5, 1); } set { SaveData.SetBit(Address + 5, 1, value); } }
 
-            public DQB2Crop CropType { get { return (DQB2Crop)SaveData.GetByte(Address + 5); } set { SaveData.SetByte(Address + 5, (byte)value); } }
-
-            // See also 0x2CA3E
-            // I think fields are 0xC bytes long
+            public override void Clear()
+            {
+                SaveData.Fill(0, Address, LENGTH);
+            }
         }
-        public class FireworkCannon(StageData saveData, int address) : BlockEntity(saveData)
-        {
-            public const int START_ADDRESS = 0x12DCD;
-            public const int LENGTH = 9;
-            public const int MAXIMUM = 64;
-
-            public readonly int Address = address;
-
-            public override ushort X { get { return SaveData.GetUInt16(Address); } set { SaveData.SetUInt16(Address, value); } } // This might be signed, but even if it is it's kind of pointless.
-            public override byte Y { get { return SaveData.GetByte(Address + 2); } set { SaveData.SetUInt16(Address + 2, value); } }
-            public override ushort Z { get { return SaveData.GetUInt16(Address + 4); } set { SaveData.SetUInt16(Address + 4, value); } }
-
-            public bool Active { get { return SaveData.GetByte(Address + 6) == 1; } set { SaveData.SetByte(Address + 6, (byte)(value ? 1 : 0)); } }
-
-            public DyeColor Color { get { return (DyeColor)SaveData.GetNumberBitwise(Address + 7, 0, 15); } set { SaveData.SetNumberBitwise(Address + 7, 0, 15, (ushort)value); } }
-        }
-        public class Instrument(StageData saveData, int address) : BlockEntity(saveData)
-        {
-            public const int START_ADDRESS = 0x289A0; // Start of overworld stuff = 0x287E8
-            public const int LENGTH = 8;
-            public const int MAXIMUM = 100; // 101?
-
-            public readonly int Address = address;
-
-            public override ushort X { get => SaveData.GetUInt16(Address); set => SaveData.SetUInt16(Address, value); }
-            public override ushort Z { get => SaveData.GetUInt16(Address + 2); set => SaveData.SetUInt16(Address + 2, value); }
-            public override byte Y { get => SaveData.GetByte(Address + 4); set => SaveData.SetByte(Address + 4, value); }
-
-            public byte Song { get => SaveData.GetByte(Address + 5); set => SaveData.SetByte(Address + 5, value); }
-
-            public bool IsPlaying() => Song > 0;
-            public bool Exists() => !SaveData.GetBytes(Address, LENGTH).ToArray().All(b => b == 0);
-        }
-        public class MagicPencil(StageData saveData, int address) : BlockEntity(saveData)
-        {
-            public const int START_ADDRESS = 0x13DB5;
-            public const int LENGTH = 7;
-            public const int MAXIMUM = 2;
-
-            public readonly int Address = address;
-
-            public override ushort X { get => SaveData.GetUInt16(Address); set => SaveData.SetUInt16(Address, value); }
-            public override byte Y { get => SaveData.GetByte(Address + 2); set => SaveData.SetByte(Address + 2, value); }  
-            public override ushort Z { get => SaveData.GetUInt16(Address + 4); set => SaveData.SetUInt16(Address + 4, value); }
-
-            public bool Exists { get => SaveData.GetByte(Address + 6) == 1; set => SaveData.SetByte(Address + 6, (byte)(value ? 1 : 0)); }
-        }
-
         public Signpost GetSignpost(int index)
         {
             if (index < 0 || index >= Signpost.MAXIMUM)
@@ -1033,7 +1371,35 @@ namespace EyeOfRubiss
             for (int i = 0; i < count && i + index < Signpost.MAXIMUM; i++)
                 yield return GetSignpost(i + index);
         }
+        public Signpost GetSignpostAtPosition(Vector3I position)
+        {
+            return GetSignposts().FirstOrDefault(signpost => signpost.Enabled && signpost.GetPosition() == position);
+        }
 
+        public class SalutationStation(StageData saveData, int address) : BlockEntity(saveData)
+        {
+            public const int START_ADDRESS = 0x16B36;
+            public const int LENGTH = 0xE4;
+            public const int MAXIMUM = 64;
+
+            public readonly int Address = address;
+
+            public string Text { get { return SaveData.GetString(Address + 7, 0xD8); } set { SaveData.SetString(Address + 7, value, 0xD8); } }
+
+            public override ushort X { get { return SaveData.GetUInt16(Address); } set { SaveData.SetUInt16(Address, value); } }
+            public override byte Y { get { return SaveData.GetByte(Address + 2); } set { SaveData.SetUInt16(Address + 2, value); } }
+            public override ushort Z { get { return SaveData.GetUInt16(Address + 4); } set { SaveData.SetUInt16(Address + 4, value); } }
+
+            public bool Enabled { get { return SaveData.GetByte(Address + 6) == 1; } set { SaveData.SetByte(Address + 6, (byte)(value ? 1 : 0)); } }
+
+            public ushort ResidentID { get { return SaveData.GetUInt16(Address + 0xE0); } set { SaveData.SetUInt16(Address + 0xE0, value); SaveData.SetUInt16(Address + 0xE2, value); } } // Duplicated. Why?
+            // effectively acts as "Written" flag
+
+            public override void Clear()
+            {
+                SaveData.Fill(0, Address, LENGTH);
+            }    
+        }
         public SalutationStation GetSalutationStation(int index)
         {
             if (index < 0 || index >= SalutationStation.MAXIMUM)
@@ -1049,7 +1415,34 @@ namespace EyeOfRubiss
             for (int i = 0; i < count && i + index < SalutationStation.MAXIMUM; i++)
                 yield return GetSalutationStation(i + index);
         }
+        public SalutationStation GetSalutationStationAtPosition(Vector3I position)
+        {
+            return GetSalutationStations().FirstOrDefault(station => station.Enabled && station.GetPosition() == position);
+        }
 
+        public ushort CropCount { get { return GetUInt16(0xF560); } set { SetUInt16(0xF560, value); } }
+        public class Crop(StageData saveData, int address) : BlockEntity(saveData)
+        {
+            public const int START_ADDRESS = 0xB560;
+            public const int LENGTH = 0x10;
+            public const int MAXIMUM = 1024;
+
+            public readonly int Address = address;
+
+            public override ushort X { get { return SaveData.GetUInt16(Address + 4); } set { SaveData.SetUInt16(Address + 4, value); } }
+            public override byte Y { get { return SaveData.GetByte(Address + 8); } set { SaveData.SetUInt16(Address + 8, value); } }
+            public override ushort Z { get { return SaveData.GetUInt16(Address + 6); } set { SaveData.SetUInt16(Address + 6, value); } }
+
+            public DQB2Crop CropType { get { return (DQB2Crop)SaveData.GetByte(Address + 9); } set { SaveData.SetByte(Address + 9, (byte)value); } }
+
+            public Span<byte> GetBytes() => SaveData.GetBytes(Address, LENGTH);
+            public void SetBytes(byte[] bytes) => SaveData.SetBytes(Address, bytes, LENGTH);
+
+            public override void Clear()
+            {
+                SaveData.Fill(0, Address, LENGTH);
+            }
+        }
         public Crop GetCrop(int index)
         {
             if (index < 0 || index >= Crop.MAXIMUM)
@@ -1065,10 +1458,52 @@ namespace EyeOfRubiss
             for (int i = 0; i < count && i + index < Crop.MAXIMUM; i++)
                 yield return GetCrop(i + index);
         }
+        public Crop GetCropAtPosition(Vector3I position)
+        {
+            return GetCrops().FirstOrDefault(crop => crop.GetPosition() == position);
+        }
+        public void DefragmentCrops()
+        {
+            List<byte[]> cropsdata = [];
+            for (int i = 0; i < CropCount && i < Crop.MAXIMUM; i++)
+            {
+                Crop crop = GetCrop(i);
+                cropsdata.Add([.. crop.GetBytes()]);
+            }
 
+            for (int i = 0; i < cropsdata.Count; i++)
+            {
+                Crop crop = GetCrop(i);
+                crop.SetBytes(cropsdata[i]);
+            }
+
+            CropCount = (ushort)cropsdata.Count;
+        }
+
+        public class Scarecrow(StageData saveData, int address) : BlockEntity(saveData)
+        {
+            public const int START_ADDRESS = 0x15376;
+            public const int MAXIMUM = 64;
+            public const int LENGTH = 7;
+
+            public readonly int Address = address;
+
+            public override ushort X { get { return SaveData.GetUInt16(Address); } set { SaveData.SetUInt16(Address, value); } }
+            public override ushort Z { get { return SaveData.GetUInt16(Address + 2); } set { SaveData.SetUInt16(Address + 2, value); } }
+            public override byte Y { get { return SaveData.GetByte(Address + 4); } set { SaveData.SetByte(Address + 4, value); } }
+
+            public bool Enabled { get { return SaveData.GetByte(Address + 6) == 1; } set { SaveData.SetByte(Address + 6, (byte)(value ? 1 : 0)); } }
+
+            public DQB2Crop CropType { get { return (DQB2Crop)SaveData.GetByte(Address + 5); } set { SaveData.SetByte(Address + 5, (byte)value); } }
+
+            public override void Clear()
+            {
+                SaveData.Fill(0, Address, LENGTH);
+            }
+        }
         public Scarecrow GetScarecrow(int index)
         {
-            if (index < 0 || index >= Signpost.MAXIMUM)
+            if (index < 0 || index >= Scarecrow.MAXIMUM)
                 throw new IndexOutOfRangeException();
 
             return new Scarecrow(this, Scarecrow.START_ADDRESS + index * Scarecrow.LENGTH);
@@ -1081,7 +1516,156 @@ namespace EyeOfRubiss
             for (int i = 0; i < count && i + index < Scarecrow.MAXIMUM; i++)
                 yield return GetScarecrow(i + index);
         }
+        public Scarecrow GetScarecrowAtPosition(Vector3I position)
+        {
+            return GetScarecrows().FirstOrDefault(scarecrow => scarecrow.Enabled && scarecrow.GetPosition() == position);
+        }
 
+        public class Instrument(StageData saveData, int address) : BlockEntity(saveData)
+        {
+            public const int START_ADDRESS = 0x287E8;
+            public const int MAXIMUM = 137;
+            public const int LENGTH = 8;
+
+            public readonly int Address = address;
+
+            public override ushort X { get => SaveData.GetUInt16(Address); set => SaveData.SetUInt16(Address, value); }
+            public override ushort Z { get => SaveData.GetUInt16(Address + 2); set => SaveData.SetUInt16(Address + 2, value); }
+            public override byte Y { get => SaveData.GetByte(Address + 4); set => SaveData.SetByte(Address + 4, value); }
+
+            public byte Song { get => SaveData.GetByte(Address + 5); set => SaveData.SetByte(Address + 5, value); }
+
+            public bool IsPlaying() => Song > 0;
+            public bool Exists() => !SaveData.GetBytes(Address, LENGTH).ToArray().All(b => b == 0);
+
+            public override void Clear()
+            {
+                SaveData.Fill(0, Address, LENGTH);
+            }
+        }
+        public Instrument GetInstrument(int index)
+        {
+            if (index < 0 || index >= Instrument.MAXIMUM)
+                throw new IndexOutOfRangeException();
+            
+            return new Instrument(this, Instrument.START_ADDRESS + Instrument.LENGTH * index);
+        }
+        public IEnumerable<Instrument> GetInstruments(int index = 0, int count = Instrument.MAXIMUM)
+        {
+            if (index < 0 || index >= Instrument.MAXIMUM)
+                throw new IndexOutOfRangeException();
+            
+            for (int i = 0; i < count && i + index < Instrument.MAXIMUM; i++)
+                yield return GetInstrument(i + index);
+        }
+        public Instrument GetInstrumentAtPosition(Vector3I position)
+        {
+            return GetInstruments().FirstOrDefault(instrument => instrument.GetPosition() == position);
+        }
+
+        public class MagneticBlock(StageData saveData, int address) : BlockEntity(saveData)
+        {
+            public const int START_ADDRESS = 0x1310D;
+            public const int LENGTH = 9;
+            public const int MAXIMUM = 256;
+
+            public readonly int Address = address;
+
+            public override ushort X { get { return SaveData.GetUInt16(Address); } set { SaveData.SetUInt16(Address, value); } }
+            public override byte Y { get { return SaveData.GetByte(Address + 2); } set { SaveData.SetUInt16(Address + 2, value); } }
+            public override ushort Z { get { return SaveData.GetUInt16(Address + 4); } set { SaveData.SetUInt16(Address + 4, value); } }
+
+            public ushort Camouflage { get { return (ushort)SaveData.GetNumberBitwise(Address + 7, 0, 13); } set { SaveData.SetNumberBitwise(Address + 7, 0, 13, value); } }
+            public bool BGPartsCamouflaged { get { return SaveData.GetBit(Address + 8, 7); } set { SaveData.SetBit(Address + 8, 7, value); } }
+            
+            public bool Enabled { get { return SaveData.GetByte(Address + 6) == 1; } set { SaveData.SetByte(Address + 6, (byte)(value ? 1 : 0)); } }
+
+            public override void Clear()
+            {
+                SaveData.Fill(0, Address, LENGTH);
+            }
+        }
+        public MagneticBlock GetMagneticBlock(int index)
+        {
+            if (index < 0 || index >= MagneticBlock.MAXIMUM)
+                throw new IndexOutOfRangeException();
+
+            return new MagneticBlock(this, MagneticBlock.START_ADDRESS + index * MagneticBlock.LENGTH);
+        }
+        public IEnumerable<MagneticBlock> GetMagneticBlocks(int index = 0, int count = MagneticBlock.MAXIMUM)
+        {
+            if (index < 0 || index >= MagneticBlock.MAXIMUM)
+                throw new IndexOutOfRangeException();
+
+            for (int i = 0; i < count && i + index < MagneticBlock.MAXIMUM; i++)
+                yield return GetMagneticBlock(i + index);
+        }
+        public MagneticBlock GetMagneticBlockAtPosition(Vector3I position)
+        {
+            return GetMagneticBlocks().FirstOrDefault(block => block.Enabled && block.GetPosition() == position);
+        }
+
+        public class MagicPencil(StageData saveData, int address) : BlockEntity(saveData)
+        {
+            public const int START_ADDRESS = 0x13DB5;
+            public const int LENGTH = 7;
+            public const int MAXIMUM = 2;
+
+            public readonly int Address = address;
+
+            public override ushort X { get => SaveData.GetUInt16(Address); set => SaveData.SetUInt16(Address, value); }
+            public override byte Y { get => SaveData.GetByte(Address + 2); set => SaveData.SetByte(Address + 2, value); }  
+            public override ushort Z { get => SaveData.GetUInt16(Address + 4); set => SaveData.SetUInt16(Address + 4, value); }
+
+            public bool Enabled { get => SaveData.GetByte(Address + 6) == 1; set => SaveData.SetByte(Address + 6, (byte)(value ? 1 : 0)); }
+
+            public override void Clear()
+            {
+                SaveData.Fill(0, Address, LENGTH);
+            }
+        }
+        public MagicPencil GetMagicPencil(int index)
+        {
+            if (index < 0 || index >= MagicPencil.MAXIMUM)
+                throw new IndexOutOfRangeException();
+
+            return new MagicPencil(this, MagicPencil.START_ADDRESS + index * MagicPencil.LENGTH);
+        }
+        public IEnumerable<MagicPencil> GetMagicPencils(int index = 0, int count = MagicPencil.MAXIMUM)
+        {
+            if (index < 0 || index >= MagicPencil.MAXIMUM)
+                throw new IndexOutOfRangeException();
+
+            for (int i = 0; i < count && i + index < MagicPencil.MAXIMUM; i++)
+                yield return GetMagicPencil(i + index);
+        }
+        public MagicPencil GetMagicPencilAtPosition(Vector3I position)
+        {
+            return GetMagicPencils().FirstOrDefault(pencil => pencil.Enabled && pencil.GetPosition() == position);
+        }
+
+        public class FireworkCannon(StageData saveData, int address) : BlockEntity(saveData)
+        {
+            public const int START_ADDRESS = 0x12DCD;
+            public const int LENGTH = 9;
+            public const int MAXIMUM = 64;
+
+            public readonly int Address = address;
+
+            public override ushort X { get { return SaveData.GetUInt16(Address); } set { SaveData.SetUInt16(Address, value); } } // This might be signed, but even if it is it's kind of pointless.
+            public override byte Y { get { return SaveData.GetByte(Address + 2); } set { SaveData.SetUInt16(Address + 2, value); } }
+            public override ushort Z { get { return SaveData.GetUInt16(Address + 4); } set { SaveData.SetUInt16(Address + 4, value); } }
+
+            public bool Enabled { get { return SaveData.GetByte(Address + 6) == 1; } set { SaveData.SetByte(Address + 6, (byte)(value ? 1 : 0)); } }
+
+            public ushort Color { get { return (ushort)SaveData.GetNumberBitwise(Address + 7, 0, 15); } set { SaveData.SetNumberBitwise(Address + 7, 0, 15, value); } }
+
+            public override void Clear()
+            {
+                SaveData.Fill(0, Address, LENGTH);
+                Color = 0x7FFF;
+            }
+        }
         public FireworkCannon GetFireworkCannon(int index)
         {
             if (index < 0 || index >= FireworkCannon.MAXIMUM)
@@ -1097,67 +1681,260 @@ namespace EyeOfRubiss
             for (int i = 0; i < count && i + index < FireworkCannon.MAXIMUM; i++)
                 yield return GetFireworkCannon(i + index);
         }
+        public FireworkCannon GetFireworkCannonAtPosition(Vector3I position)
+        {
+            return GetFireworkCannons().FirstOrDefault(cannon => cannon.Enabled && cannon.GetPosition() == position);
+        }
+        
+        public class PictureFrame(StageData saveData, int address) : BlockEntity(saveData)
+        {
+            public const int START_ADDRESS = 0x1300D;
+            public const int LENGTH = 8;
+            public const int MAXIMUM = 10; // There's slots for 32 but everything after 10 is non-functional
 
-        public ItemDisplay GetItemDisplay(int index)
-        {
-            return new ItemDisplay(this, 0xF775 + 8 * index, 0x2486BC + 4 * index);
+            public readonly int Address = address;
+
+            public override ushort X { get { return SaveData.GetUInt16(Address); } set { SaveData.SetUInt16(Address, value); } }
+            public override byte Y { get { return SaveData.GetByte(Address + 2); } set { SaveData.SetUInt16(Address + 2, value); } }
+            public override ushort Z { get { return SaveData.GetUInt16(Address + 4); } set { SaveData.SetUInt16(Address + 4, value); } }
+
+            public bool Enabled { get { return SaveData.GetByte(Address + 6) == 1; } set { SaveData.SetByte(Address + 6, (byte)(value ? 1 : 0)); } }
+
+            public byte Screenshot { get { return SaveData.GetByte(Address + 7); } set { SaveData.SetByte(Address + 7, value); } }
+
+            public override void Clear()
+            {
+                SaveData.Fill(0, Address, LENGTH);
+                Screenshot = byte.MaxValue;
+            }
         }
-        public ItemDisplay GetEquipmentDisplay(int index)
+        public PictureFrame GetPictureFrame(int index)
         {
-            return new ItemDisplay(this, 0xFB75 + 8 * index, 0x2488BC + 4 * index);
+            if (index < 0 || index >= PictureFrame.MAXIMUM)
+                throw new IndexOutOfRangeException();
+
+            return new PictureFrame(this, PictureFrame.START_ADDRESS + index * PictureFrame.LENGTH);
         }
-        public ItemDisplay GetFoodDisplay(int index)
+        public IEnumerable<PictureFrame> GetPictureFrames(int index = 0, int count = PictureFrame.MAXIMUM)
         {
-            return new ItemDisplay(this, 0xFC75 + 8 * index, 0x24893C + 4 * index);
+            if (index < 0 || index >= PictureFrame.MAXIMUM)
+                throw new IndexOutOfRangeException();
+
+            for (int i = 0; i < count && i + index < PictureFrame.MAXIMUM; i++)
+                yield return GetPictureFrame(i + index);
         }
-        public ItemDisplay GetDecorativeFood(int index)
+        public PictureFrame GetPictureFrameAtPosition(Vector3I position)
         {
-            return new ItemDisplay(this, 0xFD75 + 8 * index, 0x2489BC + 4 * index);
+            return GetPictureFrames().FirstOrDefault(frame => frame.Enabled && frame.GetPosition() == position);
         }
-        public ItemDisplay GetPetBowl(int index)
+        
+        public class Watchfire(StageData saveData, int address) : BlockEntity(saveData)
         {
-            return new ItemDisplay(this, 0xFE75 + 8 * index, 0x248A3C + 4 * index);
+            public const int START_ADDRESS = 0x13A0D;
+            public const int LENGTH = 7;
+            public const int MAXIMUM = 64;
+
+            public readonly int Address = address;
+
+            public override ushort X { get { return SaveData.GetUInt16(Address); } set { SaveData.SetUInt16(Address, value); } }
+            public override byte Y { get { return SaveData.GetByte(Address + 2); } set { SaveData.SetUInt16(Address + 2, value); } }
+            public override ushort Z { get { return SaveData.GetUInt16(Address + 4); } set { SaveData.SetUInt16(Address + 4, value); } }
+
+            public bool Enabled { get { return SaveData.GetByte(Address + 6) == 1; } set { SaveData.SetByte(Address + 6, (byte)(value ? 1 : 0)); } }
+
+            public override void Clear()
+            {
+                SaveData.Fill(0, Address, LENGTH);
+            }
         }
-        public ItemDisplay GetBeverage(int index)
+        public Watchfire GetWatchfire(int index)
         {
-            return new ItemDisplay(this, 0x103FD + 8 * index, 0x24C034 + 4 * index);
+            if (index < 0 || index >= Watchfire.MAXIMUM)
+                throw new IndexOutOfRangeException();
+
+            return new Watchfire(this, Watchfire.START_ADDRESS + index * Watchfire.LENGTH);
         }
-        public ItemDisplay GetPriceTag(int index)
+        public IEnumerable<Watchfire> GetWatchfires(int index = 0, int count = Watchfire.MAXIMUM)
         {
-            return new ItemDisplay(this, 0xD39C7 + 8 * index, 0x24A8BC + 4 * index);
+            if (index < 0 || index >= Watchfire.MAXIMUM)
+                throw new IndexOutOfRangeException();
+
+            for (int i = 0; i < count && i + index < Watchfire.MAXIMUM; i++)
+                yield return GetWatchfire(i + index);
+        }
+        public Watchfire GetWatchfireAtPosition(Vector3I position)
+        {
+            return GetWatchfires().FirstOrDefault(watchfire => watchfire.Enabled && watchfire.GetPosition() == position);
+        }
+        
+        public class WardOfErdrick(StageData saveData, int address) : BlockEntity(saveData)
+        {
+            public const int START_ADDRESS = 0x145258;
+            public const int LENGTH = 6;
+            public const int MAXIMUM = 4;
+
+            public readonly int Address = address;
+
+            public override ushort X { get { return SaveData.GetUInt16(Address); } set { SaveData.SetUInt16(Address, value); } }
+            public override byte Y { get { return SaveData.GetByte(Address + 4); } set { SaveData.SetUInt16(Address + 4, value); } }
+            public override ushort Z { get { return SaveData.GetUInt16(Address + 2); } set { SaveData.SetUInt16(Address + 2, value); } }
+
+            public bool Enabled { get { return SaveData.GetByte(Address + 5) == 1; } set { SaveData.SetByte(Address + 5, (byte)(value ? 1 : 0)); } }
+
+            public override void Clear()
+            {
+                SaveData.Fill(0, Address, LENGTH);
+            }
+        }
+        public WardOfErdrick GetWardOfErdrick(int index)
+        {
+            if (index < 0 || index >= WardOfErdrick.MAXIMUM)
+                throw new IndexOutOfRangeException();
+
+            return new WardOfErdrick(this, WardOfErdrick.START_ADDRESS + index * WardOfErdrick.LENGTH);
+        }
+        public IEnumerable<WardOfErdrick> GetWardsOfErdrick(int index = 0, int count = WardOfErdrick.MAXIMUM)
+        {
+            if (index < 0 || index >= WardOfErdrick.MAXIMUM)
+                throw new IndexOutOfRangeException();
+
+            for (int i = 0; i < count && i + index < WardOfErdrick.MAXIMUM; i++)
+                yield return GetWardOfErdrick(i + index);
+        }
+        public WardOfErdrick GetWardOfErdrickAtPosition(Vector3I position)
+        {
+            return GetWardsOfErdrick().FirstOrDefault(ward => ward.Enabled &&  ward.GetPosition() == position);
+        }
+        
+        public class Buggy(StageData saveData, int address) : BlockEntity(saveData)
+        {
+            public const int START_ADDRESS = 0x13D8D;
+            public const int LENGTH = 10;
+            public const int MAXIMUM = 4;
+
+            public readonly int Address = address;
+
+            public override ushort X { get { return SaveData.GetUInt16(Address); } set { SaveData.SetUInt16(Address, value); } }
+            public override byte Y { get { return SaveData.GetByte(Address + 2); } set { SaveData.SetUInt16(Address + 2, value); } }
+            public override ushort Z { get { return SaveData.GetUInt16(Address + 4); } set { SaveData.SetUInt16(Address + 4, value); } }
+
+            public bool Enabled { get { return SaveData.GetByte(Address + 6) == 1; } set { SaveData.SetByte(Address + 5, (byte)(value ? 1 : 0)); } }
+
+            // Bytes 7, 8, and 9 appear to always be 0xC3, 0x0A, 0x02 while the prop is Enabled.
+
+            public override void Clear()
+            {
+                SaveData.Fill(0, Address, LENGTH);
+            }
+        }
+        public Buggy GetBuggy(int index)
+        {
+            if (index < 0 || index >= Buggy.MAXIMUM)
+                throw new IndexOutOfRangeException();
+
+            return new Buggy(this, Buggy.START_ADDRESS + index * Buggy.LENGTH);
+        }
+        public IEnumerable<Buggy> GetBuggies(int index = 0, int count = Buggy.MAXIMUM)
+        {
+            if (index < 0 || index >= Buggy.MAXIMUM)
+                throw new IndexOutOfRangeException();
+
+            for (int i = 0; i < count && i + index < Buggy.MAXIMUM; i++)
+                yield return GetBuggy(i + index);
+        }
+        public Buggy GetBuggyAtPosition(Vector3I position)
+        {
+            return GetBuggies().FirstOrDefault(buggy => buggy.Enabled && buggy.GetPosition() == position);
+        }
+        
+        public class Toilet(StageData saveData, int address) : BlockEntity(saveData)
+        {
+            public const int START_ADDRESS = 0x12A65;
+            public const int LENGTH = 8;
+            public const int MAXIMUM = 64;
+
+            public readonly int Address = address;
+
+            public override ushort X { get { return SaveData.GetUInt16(Address); } set { SaveData.SetUInt16(Address, value); } }
+            public override byte Y { get { return SaveData.GetByte(Address + 2); } set { SaveData.SetUInt16(Address + 2, value); } }
+            public override ushort Z { get { return SaveData.GetUInt16(Address + 4); } set { SaveData.SetUInt16(Address + 4, value); } }
+
+            public bool Enabled { get { return SaveData.GetByte(Address + 6) == 1; } set { SaveData.SetByte(Address + 5, (byte)(value ? 1 : 0)); } }
+
+            public override void Clear()
+            {
+                SaveData.Fill(0, Address, LENGTH);
+            }
+        }
+        public Toilet GetToilet(int index)
+        {
+            if (index < 0 || index >= Toilet.MAXIMUM)
+                throw new IndexOutOfRangeException();
+
+            return new Toilet(this, Toilet.START_ADDRESS + index * Toilet.LENGTH);
+        }
+        public IEnumerable<Toilet> GetToilets(int index = 0, int count = Toilet.MAXIMUM)
+        {
+            if (index < 0 || index >= Toilet.MAXIMUM)
+                throw new IndexOutOfRangeException();
+
+            for (int i = 0; i < count && i + index < Toilet.MAXIMUM; i++)
+                yield return GetToilet(i + index);
+        }
+        public Toilet GetToiletAtPosition(Vector3I position)
+        {
+            return GetToilets().FirstOrDefault(toilet => toilet.Enabled && toilet.GetPosition() == position);
         }
         #endregion
 
         #region Other Classes
-        public class Room(StageData saveData, int address)
+        public class Room(StageData saveData, int index)
         {
             public const int START_ADDRESS = 0x10;
             public const int LENGTH = 0x150;
             public const int MAXIMUM = 100; // Maybe?
 
             public readonly StageData SaveData = saveData;
-            public readonly int Address = address;
+            public readonly int Index = index;
 
-            public ushort X { get => SaveData.GetUInt16(Address + 0x14); set => SaveData.SetUInt16(Address + 0x14, value); }
-            public ushort Z { get => SaveData.GetUInt16(Address + 0x16); set => SaveData.SetUInt16(Address + 0x16, value); }
-            public byte Y { get => SaveData.GetByte(Address + 0x1C); set => SaveData.SetByte(Address + 0x1C, value); }
+            public int GetAddress() => START_ADDRESS + LENGTH * Index;
+
+            public ushort X { get => SaveData.GetUInt16(GetAddress() + 0x14); set => SaveData.SetUInt16(GetAddress() + 0x14, value); }
+            public ushort Z { get => SaveData.GetUInt16(GetAddress() + 0x16); set => SaveData.SetUInt16(GetAddress() + 0x16, value); }
+            public byte Y { get => SaveData.GetByte(GetAddress() + 0x1C); set => SaveData.SetByte(GetAddress() + 0x1C, value); }
 
             public Vector3I GetPosition() => new(X, Y, Z);
 
-            public byte Width { get => SaveData.GetByte(Address + 0x1D); set => SaveData.SetByte(Address + 0x1D, value); }
-            public byte Depth { get => SaveData.GetByte(Address + 0x1F); set => SaveData.SetByte(Address + 0x1F, value); }
+            public byte SizeX { get => SaveData.GetByte(GetAddress() + 0x1D); set => SaveData.SetByte(GetAddress() + 0x1D, value); }
+            public byte SizeZ { get => SaveData.GetByte(GetAddress() + 0x1F); set => SaveData.SetByte(GetAddress() + 0x1F, value); }
 
-            public ushort RoomType { get => SaveData.GetUInt16(Address + 2); set => SaveData.SetUInt16(Address + 2, value); }
+            public ushort RoomType { get => SaveData.GetUInt16(GetAddress() + 2); set => SaveData.SetUInt16(GetAddress() + 2, value); }
 
-            public uint Fanciness { get => SaveData.GetUInt32(Address + 4); set => SaveData.SetUInt32(Address + 4, value); }
+            public uint Fanciness { get => SaveData.GetUInt32(GetAddress() + 4); set => SaveData.SetUInt32(GetAddress() + 4, value); }
 
-            public ushort Cuteness { get => SaveData.GetUInt16(Address + 0x8); set => SaveData.SetUInt16(Address + 0x8, value); }
-            public ushort Coolness { get => SaveData.GetUInt16(Address + 0xA); set => SaveData.SetUInt16(Address + 0xA, value); }
-            public ushort Naturalness { get => SaveData.GetUInt16(Address + 0xC); set => SaveData.SetUInt16(Address + 0xC, value); }
-            public ushort Flamboyantness { get => SaveData.GetUInt16(Address + 0xE); set => SaveData.SetUInt16(Address + 0xE, value); }
-            public ushort Cheekiness { get => SaveData.GetUInt16(Address + 0x10); set => SaveData.SetUInt16(Address + 0x10, value); }
-            public ushort Normalness { get => SaveData.GetUInt16(Address + 0x12); set => SaveData.SetUInt16(Address + 0x12, value); }
+            public ushort Cuteness { get => SaveData.GetUInt16(GetAddress() + 0x8); set => SaveData.SetUInt16(GetAddress() + 0x8, value); }
+            public ushort Coolness { get => SaveData.GetUInt16(GetAddress() + 0xA); set => SaveData.SetUInt16(GetAddress() + 0xA, value); }
+            public ushort Naturalness { get => SaveData.GetUInt16(GetAddress() + 0xC); set => SaveData.SetUInt16(GetAddress() + 0xC, value); }
+            public ushort Flamboyantness { get => SaveData.GetUInt16(GetAddress() + 0xE); set => SaveData.SetUInt16(GetAddress() + 0xE, value); }
+            public ushort Cheekiness { get => SaveData.GetUInt16(GetAddress() + 0x10); set => SaveData.SetUInt16(GetAddress() + 0x10, value); }
+            public ushort Normalness { get => SaveData.GetUInt16(GetAddress() + 0x12); set => SaveData.SetUInt16(GetAddress() + 0x12, value); }
         }
+        public Room GetRoom(int index)
+        {
+            if (index < 0 || index >= Room.MAXIMUM)
+                throw new IndexOutOfRangeException();
+
+            return new Room(this, index);
+        }
+        public IEnumerable<Room> GetRooms(int index = 0, int count = Room.MAXIMUM)
+        {
+            if (index < 0 || index >= Room.MAXIMUM)
+                throw new IndexOutOfRangeException();
+
+            for (int i = 0; i < count && i + index < Room.MAXIMUM; i++)
+                yield return GetRoom(i + index);
+        }
+        
         public class BlueprintInstance(StageData saveData, int address)
         {
             public const int START_ADDRESS = 0x2CA3C;
@@ -1174,10 +1951,26 @@ namespace EyeOfRubiss
             public byte Y { get { return SaveData.GetByte(Address + 6); } set { SaveData.SetUInt16(Address + 6, value); } }
             // No clue what determines the pivot point.....
         }
+        public BlueprintInstance GetBlueprintInstance(int index)
+        {
+            if (index < 0 || index >= BlueprintInstance.MAXIMUM)
+                throw new IndexOutOfRangeException();
+            
+            return new BlueprintInstance(this, BlueprintInstance.START_ADDRESS + BlueprintInstance.LENGTH * index);
+        }
+        public IEnumerable<BlueprintInstance> GetBlueprintInstances(int index = 0, int count = BlueprintInstance.MAXIMUM)
+        {
+            if (index < 0 || index >= BlueprintInstance.MAXIMUM)
+                throw new IndexOutOfRangeException();
+            
+            for (int i = 0; i < count && i + index < BlueprintInstance.MAXIMUM; i++)
+                yield return GetBlueprintInstance(i + index);
+        }
+
         public class Field(StageData saveData, int address)
         {
             public const int START_ADDRESS = 0x2CA9C;
-            public const int LENGTH = 0x12;
+            public const int LENGTH = 0xE;
             public const int MAXIMUM = 64;
 
             public readonly StageData SaveData = saveData;
@@ -1190,11 +1983,29 @@ namespace EyeOfRubiss
             public ushort ScarecrowZ { get { return SaveData.GetUInt16(Address + 6); } set { SaveData.SetUInt16(Address + 6, value); } }
             public byte ScarecrowY { get { return SaveData.GetByte(Address + 8); } set { SaveData.SetByte(Address + 8, value); } }
 
-            public byte Width { get { return SaveData.GetByte(Address + 9); } set { SaveData.SetByte(Address + 9, value); } } // East-West (X)
-            public byte Depth { get { return SaveData.GetByte(Address + 9); } set { SaveData.SetByte(Address + 9, value); } } // North-South (Z)
+            public byte SizeX { get { return SaveData.GetByte(Address + 9); } set { SaveData.SetByte(Address + 9, value); } } // East-West (X)
+            public byte SizeZ { get { return SaveData.GetByte(Address + 9); } set { SaveData.SetByte(Address + 9, value); } } // North-South (Z)
 
             public ushort Crop { get { return SaveData.GetUInt16(Address + 0xC); } set { SaveData.SetUInt16(Address + 0xC, value); } }
+
+            // It seems like it's perfectly fine to delete the scarecrow entry without deleting the corresponding field. The field automatically goes away if there's no scarecrow in its place.
         }
+        public Field GetField(int index)
+        {
+            if (index < 0 || index >= Field.MAXIMUM)
+                throw new IndexOutOfRangeException();
+            
+            return new Field(this, Field.START_ADDRESS + Field.LENGTH * index);
+        }
+        public IEnumerable<Field> GetFields(int index = 0, int count = Field.MAXIMUM)
+        {
+            if (index < 0 || index >= Field.MAXIMUM)
+                throw new IndexOutOfRangeException();
+            
+            for (int i = 0; i < count && i + index < Field.MAXIMUM; i++)
+                yield return GetField(i + index);
+        }
+
         public class Drop(StageData saveData, int address)
         {
             public const int START_ADDRESS = 0x24334C;
@@ -1217,6 +2028,22 @@ namespace EyeOfRubiss
                 item.Count = 0;
             }
         }
+        public Drop GetDrop(int index = 0)
+        {
+            if (index < 0 || index >= Drop.MAXIMUM)
+                throw new IndexOutOfRangeException();
+            
+            return new Drop(this, Drop.START_ADDRESS + Drop.LENGTH * index);
+        }
+        public IEnumerable<Drop> GetDrops(int index = 0, int count = Drop.MAXIMUM)
+        {
+            if (index < 0 || index >= Drop.MAXIMUM)
+                throw new IndexOutOfRangeException();
+            
+            for (int i = 0; i < count && i + index < Drop.MAXIMUM; i++)
+                yield return GetDrop(i + index);
+        }
+        
         public class Fish(StageData saveData, int address)
         {
             public const int START_ADDRESS = 0x28DEC;
@@ -1237,21 +2064,46 @@ namespace EyeOfRubiss
                 SaveData.Fill(0, Address, LENGTH);
             }
         }
-
-        public Room GetRoom(int index)
+        public Fish GetFish(int index = 0)
         {
-            if (index < 0 || index >= Room.MAXIMUM)
+            if (index < 0 || index >= Fish.MAXIMUM)
                 throw new IndexOutOfRangeException();
-
-            return new Room(this, Room.START_ADDRESS + index * Room.LENGTH);
+            
+            return new Fish(this, Fish.START_ADDRESS + Fish.LENGTH * index);
         }
-        public IEnumerable<Room> GetRooms(int index = 0, int count = Room.MAXIMUM)
+        public IEnumerable<Fish> GetFishes(int index = 0, int count = Fish.MAXIMUM)
         {
-            if (index < 0 || index >= Room.MAXIMUM)
+            if (index < 0 || index >= Fish.MAXIMUM)
                 throw new IndexOutOfRangeException();
+            
+            for (int i = 0; i < count && i + index < Fish.MAXIMUM; i++)
+                yield return GetFish(i + index);
+        }
+        #endregion
 
-            for (int i = 0; i < count && i + index < Room.MAXIMUM; i++)
-                yield return GetRoom(i + index);
+        #region Biome Map Data
+        public class BiomeMapData(StageData saveData, int index)
+        {
+            public const int START_ADDRESS = 0x34EC8;
+            public const int LENGTH = 35;
+            public const int MAXIMUM = 0x4000;
+
+            public readonly StageData SaveData = saveData;
+            public readonly int Index = index;
+
+            public int GetAddress() => START_ADDRESS + Index * LENGTH;
+
+            public ushort Biome { get { return SaveData.GetUInt16(GetAddress()); } set { SaveData.SetUInt16(GetAddress(), value); } }
+            public ushort Diorama { get { return SaveData.GetUInt16(GetAddress() + 0x10); } set { SaveData.SetUInt16(GetAddress() + 0x10, value); } }
+            public byte Area { get { return SaveData.GetByte(GetAddress() + 0x22); } set { SaveData.SetByte(GetAddress() + 0x22, value); } }
+        }
+
+        public BiomeMapData GetBiomeMapData(Vector3I position)
+        {
+            int x = position.X / 16;
+            int z = position.Z / 16;
+            int index = z + x * 128;
+            return new BiomeMapData(this, index);
         }
         #endregion
     }

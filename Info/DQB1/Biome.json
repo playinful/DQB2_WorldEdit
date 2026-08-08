@@ -1,0 +1,1026 @@
+[
+    {
+        "ID": 0,
+        "Name": "NONE"
+    },
+    {
+        "ID": 1,
+        "Name": "PLAIN"
+    },
+    {
+        "ID": 2,
+        "Name": "DESERT"
+    },
+    {
+        "ID": 3,
+        "Name": "POISON_SWAMP"
+    },
+    {
+        "ID": 4,
+        "Name": "FOREST"
+    },
+    {
+        "ID": 5,
+        "Name": "SAT_MOUNTAIN"
+    },
+    {
+        "ID": 6,
+        "Name": "ROCKY_MOUNTAIN"
+    },
+    {
+        "ID": 7,
+        "Name": "SEA"
+    },
+    {
+        "ID": 8,
+        "Name": "DESERT_ROCK"
+    },
+    {
+        "ID": 9,
+        "Name": "SAT_MOUNTAIN_ST"
+    },
+    {
+        "ID": 10,
+        "Name": "ST1_OPZONE1"
+    },
+    {
+        "ID": 11,
+        "Name": "ST1_EVENT"
+    },
+    {
+        "ID": 12,
+        "Name": "ST1_1_BASE_AREA"
+    },
+    {
+        "ID": 13,
+        "Name": "ST1_1_PLAIN"
+    },
+    {
+        "ID": 14,
+        "Name": "ST1_1_PLAIN_X"
+    },
+    {
+        "ID": 15,
+        "Name": "ST1_1_PLAIN_X2"
+    },
+    {
+        "ID": 16,
+        "Name": "ST1_1_PLAIN_X3"
+    },
+    {
+        "ID": 17,
+        "Name": "ST1_1_PLAIN_X4"
+    },
+    {
+        "ID": 18,
+        "Name": "ST1_1_PLAIN2"
+    },
+    {
+        "ID": 19,
+        "Name": "ST1_1_PLAIN2_X"
+    },
+    {
+        "ID": 20,
+        "Name": "ST1_1_PLAIN2_X2"
+    },
+    {
+        "ID": 21,
+        "Name": "ST1_1_POISON_PLAIN"
+    },
+    {
+        "ID": 22,
+        "Name": "ST1_1_POISON_PLAIN2"
+    },
+    {
+        "ID": 23,
+        "Name": "ST1_1_FOREST_X"
+    },
+    {
+        "ID": 24,
+        "Name": "ST1_1_FOREST_X2"
+    },
+    {
+        "ID": 25,
+        "Name": "ST1_1_FOREST2"
+    },
+    {
+        "ID": 26,
+        "Name": "ST1_1_2_FOREST"
+    },
+    {
+        "ID": 27,
+        "Name": "ST1_1_2_ROCKY_MOUNTAIN"
+    },
+    {
+        "ID": 28,
+        "Name": "ST1_2_MOUNTAIN"
+    },
+    {
+        "ID": 29,
+        "Name": "ST1_2_MOUNTAIN_X"
+    },
+    {
+        "ID": 30,
+        "Name": "ST1_2_MOUNTAIN_X2"
+    },
+    {
+        "ID": 31,
+        "Name": "ST1_2_MOUNTAIN2"
+    },
+    {
+        "ID": 32,
+        "Name": "ST1_2_MOUNTAIN2_X"
+    },
+    {
+        "ID": 33,
+        "Name": "ST1_2_FOREST_X"
+    },
+    {
+        "ID": 34,
+        "Name": "ST1_2_FOREST_X2"
+    },
+    {
+        "ID": 35,
+        "Name": "ST1_2_PLAIN"
+    },
+    {
+        "ID": 36,
+        "Name": "ST1_2_PLAIN_X"
+    },
+    {
+        "ID": 37,
+        "Name": "ST1_3_SANDMNT"
+    },
+    {
+        "ID": 38,
+        "Name": "ST1_3_SANDMNT2_X"
+    },
+    {
+        "ID": 39,
+        "Name": "ST1_3_SANDMNT3"
+    },
+    {
+        "ID": 40,
+        "Name": "ST1_3_DESERT_SEP_X"
+    },
+    {
+        "ID": 41,
+        "Name": "ST1_3_DESERT"
+    },
+    {
+        "ID": 42,
+        "Name": "ST1_3_DESERT_X"
+    },
+    {
+        "ID": 43,
+        "Name": "ST1_3_DESERT_X2"
+    },
+    {
+        "ID": 44,
+        "Name": "ST1_3_DESERT_X3"
+    },
+    {
+        "ID": 45,
+        "Name": "ST1_3_DESERT2"
+    },
+    {
+        "ID": 46,
+        "Name": "ST1_3_DESERT2_X"
+    },
+    {
+        "ID": 47,
+        "Name": "ST1_3_MOUNTAIN"
+    },
+    {
+        "ID": 48,
+        "Name": "ST1_3_FOREST_X"
+    },
+    {
+        "ID": 49,
+        "Name": "ST1_3_FOREST_X2"
+    },
+    {
+        "ID": 50,
+        "Name": "ST1_3_PLAIN"
+    },
+    {
+        "ID": 51,
+        "Name": "ST1_3_PLAIN_X"
+    },
+    {
+        "ID": 52,
+        "Name": "ST1_4_ROCKY_MOUNTAIN"
+    },
+    {
+        "ID": 53,
+        "Name": "ST1_4_SANDFST"
+    },
+    {
+        "ID": 54,
+        "Name": "ST1_4_SANDFST_X"
+    },
+    {
+        "ID": 55,
+        "Name": "ST1_BOSS_BASE"
+    },
+    {
+        "ID": 56,
+        "Name": "ST1_BOSS_DESERT"
+    },
+    {
+        "ID": 57,
+        "Name": "ST1_RESERVE1"
+    },
+    {
+        "ID": 58,
+        "Name": "ST1_RESERVE2"
+    },
+    {
+        "ID": 59,
+        "Name": "ST2_1_BASE_AREA"
+    },
+    {
+        "ID": 60,
+        "Name": "ST2_1_POISON_SWAMP"
+    },
+    {
+        "ID": 61,
+        "Name": "ST2_1_POLLUTION_MOUNTAIN"
+    },
+    {
+        "ID": 62,
+        "Name": "ST2_1_POLLUTION_MOUNTAIN_X"
+    },
+    {
+        "ID": 63,
+        "Name": "ST2_1_POLLUTION_MOUNTAIN2_X"
+    },
+    {
+        "ID": 64,
+        "Name": "ST2_1_POLLUTION_MOUNTAIN2_X2"
+    },
+    {
+        "ID": 65,
+        "Name": "ST2_1_POLLUTION_MOUNTAIN2_X3"
+    },
+    {
+        "ID": 66,
+        "Name": "ST2_1_POLLUTION_MOUNTAIN3"
+    },
+    {
+        "ID": 67,
+        "Name": "ST2_1_POLLUTION_MOUNTAIN3_X"
+    },
+    {
+        "ID": 68,
+        "Name": "ST2_1_POLLUTION_MOUNTAIN_LOW"
+    },
+    {
+        "ID": 69,
+        "Name": "ST2_1_ROCKY_MOUNTAIN"
+    },
+    {
+        "ID": 70,
+        "Name": "ST2_1_CAMOUFLAGE_PSW_PLAIN"
+    },
+    {
+        "ID": 71,
+        "Name": "ST2_1_CAMOUFLAGE_PSO_PLAIN"
+    },
+    {
+        "ID": 72,
+        "Name": "ST2_1_CAMOUFLAGE_PSO_PLAIN_X"
+    },
+    {
+        "ID": 73,
+        "Name": "ST2_1_CAMOUFLAGE_PSO_PLAIN_X2"
+    },
+    {
+        "ID": 74,
+        "Name": "ST2_1_CAMOUFLAGE_PSW_FOREST"
+    },
+    {
+        "ID": 75,
+        "Name": "ST2_1_CAMOUFLAGE_PSO_FOREST"
+    },
+    {
+        "ID": 76,
+        "Name": "ST2_1_CAMOUFLAGE_PSW_HIGH_PLAIN"
+    },
+    {
+        "ID": 77,
+        "Name": "ST2_2_DENSE_FOREST_M"
+    },
+    {
+        "ID": 78,
+        "Name": "ST2_2_DENSE_FOREST_M_X"
+    },
+    {
+        "ID": 79,
+        "Name": "ST2_2_DENSE_FOREST_M2_X"
+    },
+    {
+        "ID": 80,
+        "Name": "ST2_2_GRASSLAND"
+    },
+    {
+        "ID": 81,
+        "Name": "ST2_2_DENSE_FOREST_RIVER"
+    },
+    {
+        "ID": 82,
+        "Name": "ST2_2_DENSE_FOREST_PLAIN"
+    },
+    {
+        "ID": 83,
+        "Name": "ST2_2_DENSE_FOREST_PLAIN_X"
+    },
+    {
+        "ID": 84,
+        "Name": "ST2_2_DENSE_FOREST_PLAIN_X2"
+    },
+    {
+        "ID": 85,
+        "Name": "ST2_2_DENSE_FOREST"
+    },
+    {
+        "ID": 86,
+        "Name": "ST2_2_DENSE_FOREST_X"
+    },
+    {
+        "ID": 87,
+        "Name": "ST2_2_DENSE_FOREST_X2"
+    },
+    {
+        "ID": 88,
+        "Name": "ST2_2_DENSE_FOREST2"
+    },
+    {
+        "ID": 89,
+        "Name": "ST2_2_DENSE_FOREST2_X"
+    },
+    {
+        "ID": 90,
+        "Name": "ST2_2_DENSE_FOREST_HIGH_PLAIN"
+    },
+    {
+        "ID": 91,
+        "Name": "ST2_3_DENSE_FOREST_M"
+    },
+    {
+        "ID": 92,
+        "Name": "ST2_3_DENSE_FOREST_M_X"
+    },
+    {
+        "ID": 93,
+        "Name": "ST2_3_DENSE_FOREST_RIVER"
+    },
+    {
+        "ID": 94,
+        "Name": "ST2_3_SWAMP"
+    },
+    {
+        "ID": 95,
+        "Name": "ST2_3_SWAMP_X"
+    },
+    {
+        "ID": 96,
+        "Name": "ST2_3_HIGHMOOR"
+    },
+    {
+        "ID": 97,
+        "Name": "ST2_3_HIGHMOOR_SAT"
+    },
+    {
+        "ID": 98,
+        "Name": "ST2_3_REMAINS"
+    },
+    {
+        "ID": 99,
+        "Name": "ST2_3_REMAINS_X"
+    },
+    {
+        "ID": 100,
+        "Name": "ST2_3_REMAINS_X2"
+    },
+    {
+        "ID": 101,
+        "Name": "ST2_3_DENSE_FOREST"
+    },
+    {
+        "ID": 102,
+        "Name": "ST2_3_DENSE_FOREST_X"
+    },
+    {
+        "ID": 103,
+        "Name": "ST2_3_ROCKY_MOUNTAIN"
+    },
+    {
+        "ID": 104,
+        "Name": "ST2_3_HIGH_PLAIN"
+    },
+    {
+        "ID": 105,
+        "Name": "ST2_4_FOREST_OF_DEATH"
+    },
+    {
+        "ID": 106,
+        "Name": "ST2_4_FOREST_OF_DEATH_X"
+    },
+    {
+        "ID": 107,
+        "Name": "ST2_4_LAKE"
+    },
+    {
+        "ID": 108,
+        "Name": "ST2_4_MOUNTAIN_OF_DEATH"
+    },
+    {
+        "ID": 109,
+        "Name": "ST2_4_MOUNTAIN_OF_DEATH_X"
+    },
+    {
+        "ID": 110,
+        "Name": "ST2_4_PLAINS_OF_DEATH"
+    },
+    {
+        "ID": 111,
+        "Name": "ST2_4_PLAINS_OF_DEATH_X"
+    },
+    {
+        "ID": 112,
+        "Name": "ST2_4_PLAINS_OF_DEATH2"
+    },
+    {
+        "ID": 113,
+        "Name": "ST2_4_PLAINS_OF_DEATH2_X"
+    },
+    {
+        "ID": 114,
+        "Name": "ST2_4_HIGH_PLAINS_OF_DEATH"
+    },
+    {
+        "ID": 115,
+        "Name": "ST2_4_FOREST_WORLD_TREE"
+    },
+    {
+        "ID": 116,
+        "Name": "ST2_4_FOREST_WORLD_TREE_X"
+    },
+    {
+        "ID": 117,
+        "Name": "ST2_BOSS_BASE"
+    },
+    {
+        "ID": 118,
+        "Name": "ST2_BOSS_POISON_SWAMP"
+    },
+    {
+        "ID": 119,
+        "Name": "ST2_BOSS_ROCKY_MOUNTAIN"
+    },
+    {
+        "ID": 120,
+        "Name": "ST3_LAVA_FLOW"
+    },
+    {
+        "ID": 121,
+        "Name": "ST3_LAVA_FLOW_2"
+    },
+    {
+        "ID": 122,
+        "Name": "ST3_LAVA_MOUTAIN"
+    },
+    {
+        "ID": 123,
+        "Name": "ST3_1_BASE_AREA"
+    },
+    {
+        "ID": 124,
+        "Name": "ST3_1_MOUNTAIN_X"
+    },
+    {
+        "ID": 125,
+        "Name": "ST3_1_KENZAN"
+    },
+    {
+        "ID": 126,
+        "Name": "ST3_1_WILDERNESS_HIGH_PLAIN"
+    },
+    {
+        "ID": 127,
+        "Name": "ST3_1_WILDERNESS_FO"
+    },
+    {
+        "ID": 128,
+        "Name": "ST3_1_WILDERNESS_FO_X"
+    },
+    {
+        "ID": 129,
+        "Name": "ST3_1_WILDERNESS_FO2"
+    },
+    {
+        "ID": 130,
+        "Name": "ST3_1_WILDERNESS_FO2_X"
+    },
+    {
+        "ID": 131,
+        "Name": "ST3_1_WILDERNESS_FO2_X2"
+    },
+    {
+        "ID": 132,
+        "Name": "ST3_1_WILDERNESS_FO3_X"
+    },
+    {
+        "ID": 133,
+        "Name": "ST3_1_DESERT"
+    },
+    {
+        "ID": 134,
+        "Name": "ST3_1_LAVA_FIELD_FO"
+    },
+    {
+        "ID": 135,
+        "Name": "ST3_1_LAVA_FIELD_PO"
+    },
+    {
+        "ID": 136,
+        "Name": "ST3_2_LAVA_FIELD_PL"
+    },
+    {
+        "ID": 137,
+        "Name": "ST3_2_LAVA_FIELD_PL_X"
+    },
+    {
+        "ID": 138,
+        "Name": "ST3_2_LAVA_FIELD_PL_X2"
+    },
+    {
+        "ID": 139,
+        "Name": "ST3_2_LAVA_FIELD_PL2_X"
+    },
+    {
+        "ID": 140,
+        "Name": "ST3_2_LAVA_FIELD_PL2_X2"
+    },
+    {
+        "ID": 141,
+        "Name": "ST3_2_LAVA_FIELD_MO"
+    },
+    {
+        "ID": 142,
+        "Name": "ST3_2_LAVA_FIELD_MO_X"
+    },
+    {
+        "ID": 143,
+        "Name": "ST3_2_LAVA_FIELD_MO_X2"
+    },
+    {
+        "ID": 144,
+        "Name": "ST3_2_LAVA_FIELD_FO_X"
+    },
+    {
+        "ID": 145,
+        "Name": "ST3_2_LAVA_FIELD_HIGH_PLAIN"
+    },
+    {
+        "ID": 146,
+        "Name": "ST3_2_KENZAN"
+    },
+    {
+        "ID": 147,
+        "Name": "ST3_2_MOUNTAIN"
+    },
+    {
+        "ID": 148,
+        "Name": "ST3_2_MOUNTAIN_X"
+    },
+    {
+        "ID": 149,
+        "Name": "ST3_2_HOT_SPRINGS_WILD"
+    },
+    {
+        "ID": 150,
+        "Name": "ST3_2_HOT_SPRINGS_WILD_X"
+    },
+    {
+        "ID": 151,
+        "Name": "ST3_2_HOT_SPRINGS_WILD2"
+    },
+    {
+        "ID": 152,
+        "Name": "ST3_2_MONSTER_BASE"
+    },
+    {
+        "ID": 153,
+        "Name": "ST3_2_MONSTER_BASE_X"
+    },
+    {
+        "ID": 154,
+        "Name": "ST3_2_BIG_BORDER_BASE"
+    },
+    {
+        "ID": 155,
+        "Name": "ST3_BIG_BORDER"
+    },
+    {
+        "ID": 156,
+        "Name": "ST3_3_BIG_BORDER_DUNGEON"
+    },
+    {
+        "ID": 157,
+        "Name": "ST3_SNOW_MOUTAIN"
+    },
+    {
+        "ID": 158,
+        "Name": "ST3_SNOW_LAKE"
+    },
+    {
+        "ID": 159,
+        "Name": "ST3_3_SNOW_FIELD_PL"
+    },
+    {
+        "ID": 160,
+        "Name": "ST3_3_SNOW_FIELD_PL_X"
+    },
+    {
+        "ID": 161,
+        "Name": "ST3_3_SNOW_FIELD_PL_X2"
+    },
+    {
+        "ID": 162,
+        "Name": "ST3_3_SNOW_FIELD_PL_X3"
+    },
+    {
+        "ID": 163,
+        "Name": "ST3_3_SNOW_FIELD_PL_X4"
+    },
+    {
+        "ID": 164,
+        "Name": "ST3_3_SNOW_FIELD_MO"
+    },
+    {
+        "ID": 165,
+        "Name": "ST3_3_SNOW_FIELD_MO_X"
+    },
+    {
+        "ID": 166,
+        "Name": "ST3_3_SNOW_FIELD_MO_X2"
+    },
+    {
+        "ID": 167,
+        "Name": "ST3_3_SNOW_FIELD_FO"
+    },
+    {
+        "ID": 168,
+        "Name": "ST3_3_SNOW_FIELD_FO_X"
+    },
+    {
+        "ID": 169,
+        "Name": "ST3_3_SNOW_FIELD_FO2"
+    },
+    {
+        "ID": 170,
+        "Name": "ST3_3_SNOW_FIELD_FO2_X"
+    },
+    {
+        "ID": 171,
+        "Name": "ST3_3_SNOW_FIELD_FO3"
+    },
+    {
+        "ID": 172,
+        "Name": "ST3_3_SNOW_FIELD_LAKE"
+    },
+    {
+        "ID": 173,
+        "Name": "ST3_3_SNOW_FIELD_LAKE2"
+    },
+    {
+        "ID": 174,
+        "Name": "ST3_3_SNOW_FIELD_HIGH_PLAIN"
+    },
+    {
+        "ID": 175,
+        "Name": "ST3_3_SEA_ROUTE"
+    },
+    {
+        "ID": 176,
+        "Name": "ST3_4_GALAI_TOWN"
+    },
+    {
+        "ID": 177,
+        "Name": "ST3_4_ICE_FIELD"
+    },
+    {
+        "ID": 178,
+        "Name": "ST3_4_SNOW_FIELD_PL"
+    },
+    {
+        "ID": 179,
+        "Name": "ST3_4_SNOW_FIELD_MO"
+    },
+    {
+        "ID": 180,
+        "Name": "ST3_4_SNOW_FIELD_MO_X"
+    },
+    {
+        "ID": 181,
+        "Name": "ST3_4_SNOW_FIELD_FO"
+    },
+    {
+        "ID": 182,
+        "Name": "ST3_4_SNOW_FIELD_FO_X"
+    },
+    {
+        "ID": 183,
+        "Name": "ST3_4_SNOW_FIELD_FO2"
+    },
+    {
+        "ID": 184,
+        "Name": "ST3_4_SNOW_FIELD_FO3"
+    },
+    {
+        "ID": 185,
+        "Name": "ST3_4_SNOW_FIELD_FO3_X"
+    },
+    {
+        "ID": 186,
+        "Name": "ST3_4_SNOW_FIELD_LAKE"
+    },
+    {
+        "ID": 187,
+        "Name": "ST3_4_SNOW_FIELD_HIGH_PLAIN"
+    },
+    {
+        "ID": 188,
+        "Name": "ST3_4_GLACIER_PL"
+    },
+    {
+        "ID": 189,
+        "Name": "ST3_BOSS_BASE"
+    },
+    {
+        "ID": 190,
+        "Name": "ST3_BOSS_LAVA_FLOW"
+    },
+    {
+        "ID": 191,
+        "Name": "ST3_BOSS_ROCKY_MOUNTAIN"
+    },
+    {
+        "ID": 192,
+        "Name": "ST3_RESERVE1"
+    },
+    {
+        "ID": 193,
+        "Name": "ST4_HELL_MOUTAIN"
+    },
+    {
+        "ID": 194,
+        "Name": "ST4_HELL_MOUTAIN2"
+    },
+    {
+        "ID": 195,
+        "Name": "ST4_HELL_MOUTAIN2_X"
+    },
+    {
+        "ID": 196,
+        "Name": "ST4_1_PROVISIONAL_BASE_AREA"
+    },
+    {
+        "ID": 197,
+        "Name": "ST4_1_HELL_PL1"
+    },
+    {
+        "ID": 198,
+        "Name": "ST4_1_HELL_PL1_X"
+    },
+    {
+        "ID": 199,
+        "Name": "ST4_1_HELL_PL1_X2"
+    },
+    {
+        "ID": 200,
+        "Name": "ST4_1_HELL_PL1_X3"
+    },
+    {
+        "ID": 201,
+        "Name": "ST4_1_HELL_PL2"
+    },
+    {
+        "ID": 202,
+        "Name": "ST4_1_HELL_PL2_X"
+    },
+    {
+        "ID": 203,
+        "Name": "ST4_1_HELL_PL2_X2"
+    },
+    {
+        "ID": 204,
+        "Name": "ST4_1_HELL_MO"
+    },
+    {
+        "ID": 205,
+        "Name": "ST4_1_HELL_MO_X"
+    },
+    {
+        "ID": 206,
+        "Name": "ST4_2_HELL_MOUTAIN"
+    },
+    {
+        "ID": 207,
+        "Name": "ST4_2_HELL_PL"
+    },
+    {
+        "ID": 208,
+        "Name": "ST4_2_HELL_PL_X"
+    },
+    {
+        "ID": 209,
+        "Name": "ST4_2_HELL_PL2"
+    },
+    {
+        "ID": 210,
+        "Name": "ST4_2_HELL_PL_BLOOD"
+    },
+    {
+        "ID": 211,
+        "Name": "ST4_2_HELL_HIGH_PLAIN"
+    },
+    {
+        "ID": 212,
+        "Name": "ST4_2_HELL_FO"
+    },
+    {
+        "ID": 213,
+        "Name": "ST4_2_HELL_MO"
+    },
+    {
+        "ID": 214,
+        "Name": "ST4_2_BASE_AREA"
+    },
+    {
+        "ID": 215,
+        "Name": "ST4_2_BASE_AREA_PERIPHERY"
+    },
+    {
+        "ID": 216,
+        "Name": "ST4_3_DESERT"
+    },
+    {
+        "ID": 217,
+        "Name": "ST4_3_DESERT_ICE_LAKE"
+    },
+    {
+        "ID": 218,
+        "Name": "ST4_3_POISON_SWAMP"
+    },
+    {
+        "ID": 219,
+        "Name": "ST4_3_POISON_SWAMP_X"
+    },
+    {
+        "ID": 220,
+        "Name": "ST4_3_POISON_FIELD"
+    },
+    {
+        "ID": 221,
+        "Name": "ST4_3_POISON_FIELD2"
+    },
+    {
+        "ID": 222,
+        "Name": "ST4_3_LAVA_FLOW"
+    },
+    {
+        "ID": 223,
+        "Name": "ST4_3_LAVA_FLOW_X"
+    },
+    {
+        "ID": 224,
+        "Name": "ST4_3_LAVA_FIELD_PL"
+    },
+    {
+        "ID": 225,
+        "Name": "ST4_3_LAVA_FIELD_PL2"
+    },
+    {
+        "ID": 226,
+        "Name": "ST4_3_HELL_PL"
+    },
+    {
+        "ID": 227,
+        "Name": "ST4_3_HELL_PL2"
+    },
+    {
+        "ID": 228,
+        "Name": "ST4_3_HELL_PL3"
+    },
+    {
+        "ID": 229,
+        "Name": "ST4_3_HELL_PL_BLOOD"
+    },
+    {
+        "ID": 230,
+        "Name": "ST4_3_HELL_HIGH_PLAIN"
+    },
+    {
+        "ID": 231,
+        "Name": "ST4_3_HELL_FO"
+    },
+    {
+        "ID": 232,
+        "Name": "ST4_3_HELL_FO_X"
+    },
+    {
+        "ID": 233,
+        "Name": "ST4_4_DEVIL_ISLAND_MO"
+    },
+    {
+        "ID": 234,
+        "Name": "ST4_4_DEVIL_ISLAND_DE"
+    },
+    {
+        "ID": 235,
+        "Name": "ST4_4_DEVIL_ISLAND_DE_X"
+    },
+    {
+        "ID": 236,
+        "Name": "ST4_4_DEVIL_ISLAND_DE_X2"
+    },
+    {
+        "ID": 237,
+        "Name": "ST4_4_DEVIL_ISLAND_DE2"
+    },
+    {
+        "ID": 238,
+        "Name": "ST4_4_DEVIL_ISLAND_CASTLE"
+    },
+    {
+        "ID": 239,
+        "Name": "ST4_4_DEVIL_ISLAND_CASTLE_X"
+    },
+    {
+        "ID": 240,
+        "Name": "ST4_ENDING"
+    },
+    {
+        "ID": 241,
+        "Name": "ST4_ENDING2"
+    },
+    {
+        "ID": 242,
+        "Name": "ST4_RESERVE1"
+    },
+    {
+        "ID": 243,
+        "Name": "ST4_RESERVE2"
+    },
+    {
+        "ID": 244,
+        "Name": "ST4_RESERVE3"
+    },
+    {
+        "ID": 245,
+        "Name": "ST4_RESERVE4"
+    },
+    {
+        "ID": 246,
+        "Name": "ST4_RESERVE5"
+    },
+    {
+        "ID": 247,
+        "Name": "FREE_CRAFT_INVALID"
+    },
+    {
+        "ID": 248,
+        "Name": "ST5_RIVER"
+    },
+    {
+        "ID": 249,
+        "Name": "ST5_PLAIN_LOW"
+    },
+    {
+        "ID": 250,
+        "Name": "ST5_CLAY_HILL"
+    },
+    {
+        "ID": 251,
+        "Name": "ST5_ROCK_LOW"
+    },
+    {
+        "ID": 252,
+        "Name": "ST5_WOODS"
+    },
+    {
+        "ID": 253,
+        "Name": "ST5_WAVE_ISLAND_PLAIN_LOW"
+    },
+    {
+        "ID": 254,
+        "Name": "ST5_BABY"
+    },
+    {
+        "ID": 255,
+        "Name": "ST5_RESERVE3"
+    }
+]

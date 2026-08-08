@@ -1,0 +1,140 @@
+[gd_scene load_steps=4 format=3 uid="uid://u7wl43257yo8"]
+
+[ext_resource type="Theme" uid="uid://nd34kb5d40qb" path="res://Resources/DQB_Theme.tres" id="1_k5fwx"]
+[ext_resource type="Script" uid="uid://drrtysjot6267" path="res://Scenes/ResidentEditorDQB1.cs" id="2_an7um"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k5fwx"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[node name="ResidentEditorDQB1" type="Window" node_paths=PackedStringArray("_Resident_ItemList", "_ResidentID_OptionButton", "_Type_OptionButton", "_HP_SpinBox", "_TownNpcState_OptionButton1", "_TownNpcState_OptionButton2", "_Export_Button", "_Import_Button", "_Clone_Button", "_Clear_Button")]
+oversampling_override = 1.0
+title = "Residents"
+position = Vector2i(0, 36)
+size = Vector2i(700, 440)
+theme = ExtResource("1_k5fwx")
+script = ExtResource("2_an7um")
+_Resident_ItemList = NodePath("ItemList")
+_ResidentID_OptionButton = NodePath("ResidentID_OptionButton")
+_Type_OptionButton = NodePath("ResidentType_OptionButton")
+_HP_SpinBox = NodePath("HP_SpinBox")
+_TownNpcState_OptionButton1 = NodePath("TownNpcState_OptionButton1")
+_TownNpcState_OptionButton2 = NodePath("TownNpcState_OptionButton2")
+_Export_Button = NodePath("Export_Button")
+_Import_Button = NodePath("Import_Button")
+_Clone_Button = NodePath("Clone_Button")
+_Clear_Button = NodePath("Clear_Button")
+
+[node name="ItemList" type="ItemList" parent="."]
+offset_left = 19.0
+offset_top = 21.0
+offset_right = 274.0
+offset_bottom = 410.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_k5fwx")
+
+[node name="ResidentID_OptionButton" type="OptionButton" parent="."]
+offset_left = 311.0
+offset_top = 65.0
+offset_right = 449.0
+offset_bottom = 85.0
+
+[node name="ResidentID_Label" type="Label" parent="."]
+offset_left = 321.0
+offset_top = 31.0
+offset_right = 361.0
+offset_bottom = 53.0
+text = "ID"
+
+[node name="ResidentType_OptionButton" type="OptionButton" parent="."]
+offset_left = 310.0
+offset_top = 132.0
+offset_right = 448.0
+offset_bottom = 152.0
+
+[node name="Type_Label" type="Label" parent="."]
+offset_left = 320.0
+offset_top = 98.0
+offset_right = 360.0
+offset_bottom = 120.0
+text = "Type"
+
+[node name="HP_Label" type="Label" parent="."]
+offset_left = 495.0
+offset_top = 39.0
+offset_right = 535.0
+offset_bottom = 61.0
+text = "HP (TODO):"
+
+[node name="HP_SpinBox" type="SpinBox" parent="."]
+offset_left = 598.0
+offset_top = 38.0
+offset_right = 680.0
+offset_bottom = 68.0
+
+[node name="TownNpcState_Label" type="Label" parent="."]
+offset_left = 315.0
+offset_top = 180.0
+offset_right = 355.0
+offset_bottom = 202.0
+text = "States:"
+
+[node name="TownNpcState_OptionButton1" type="OptionButton" parent="."]
+offset_left = 309.0
+offset_top = 223.0
+offset_right = 445.0
+offset_bottom = 243.0
+
+[node name="TownNpcState_OptionButton2" type="OptionButton" parent="."]
+offset_left = 309.0
+offset_top = 252.0
+offset_right = 445.0
+offset_bottom = 272.0
+
+[node name="Export_Button" type="Button" parent="."]
+offset_left = 334.0
+offset_top = 308.0
+offset_right = 434.0
+offset_bottom = 338.0
+text = "Export..."
+
+[node name="Import_Button" type="Button" parent="."]
+offset_left = 447.0
+offset_top = 310.0
+offset_right = 544.0
+offset_bottom = 340.0
+text = "Import..."
+
+[node name="Clone_Button" type="Button" parent="."]
+offset_left = 334.0
+offset_top = 346.0
+offset_right = 393.0
+offset_bottom = 376.0
+toggle_mode = true
+text = "Clone"
+
+[node name="Clear_Button" type="Button" parent="."]
+offset_left = 403.0
+offset_top = 348.0
+offset_right = 460.0
+offset_bottom = 378.0
+text = "Clear"
+
+[connection signal="close_requested" from="." to="." method="Close"]
+[connection signal="item_selected" from="ItemList" to="." method="_On_Resident_ItemList_ItemSelected"]
+[connection signal="item_selected" from="ResidentID_OptionButton" to="." method="_On_ResidentID_OptionButton_ItemSelected"]
+[connection signal="item_selected" from="ResidentType_OptionButton" to="." method="_On_Type_OptionButton_ItemSelected"]
+[connection signal="value_changed" from="HP_SpinBox" to="." method="_On_HP_SpinBox_ValueChanged"]
+[connection signal="item_selected" from="TownNpcState_OptionButton1" to="." method="_On_TownNpcState1_OptionButton_ItemSelected"]
+[connection signal="item_selected" from="TownNpcState_OptionButton2" to="." method="_On_TownNpcState2_OptionButton_ItemSelected"]
+[connection signal="pressed" from="Export_Button" to="." method="_On_Export_Button_Pressed"]
+[connection signal="pressed" from="Import_Button" to="." method="_On_Import_Button_Pressed"]
+[connection signal="toggled" from="Clone_Button" to="." method="_On_Clone_Button_Toggled"]
+[connection signal="pressed" from="Clear_Button" to="." method="_On_Clear_Button_Pressed"]

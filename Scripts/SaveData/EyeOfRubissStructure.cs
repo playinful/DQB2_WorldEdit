@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Drawing;
 using System.Linq;
 using System.Reflection.Metadata.Ecma335;
@@ -7,6 +8,7 @@ using System.Runtime.ExceptionServices;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using EyeOfRubiss;
+using EyeOfRubiss.Info.DQB2;
 using EyeOfRubiss.Nodes;
 using Godot;
 
@@ -55,6 +57,9 @@ public class EyeOfRubissStructure()
         EyeOfRubissStructure structure = new()
         {
             SourceGame = 1,
+            SizeX = blueprint.SizeX,
+            SizeY = blueprint.SizeY,
+            SizeZ = blueprint.SizeZ,
         };
 
         foreach (BlueprintAssetDQB1.ObjectStruct obj in blueprint.Objects)
@@ -81,6 +86,9 @@ public class EyeOfRubissStructure()
         EyeOfRubissStructure structure = new()
         {
             SourceGame = 1,
+            SizeX = header.SizeX,
+            SizeY = header.SizeY,
+            SizeZ = header.SizeZ,
         };
 
         List<ushort> blocks = [];
@@ -120,11 +128,61 @@ public class EyeOfRubissStructure()
 
         return structure;
     }
-    public static EyeOfRubissStructure From(Blueprint blueprint)
+    public static EyeOfRubissStructure From(DioramaDataAssetDQB1 data, int sizeX, int sizeY, int sizeZ)
+    {
+        EyeOfRubissStructure structure = new()
+        {
+            SourceGame = 1,
+            SizeX = sizeX,
+            SizeY = sizeY,
+            SizeZ = sizeZ,
+        };
+
+        List<ushort> blocks = [];
+        for (int i = 0; i + 1 < data.Blocks.Length; i += 2)
+        {
+            if (data.Blocks[i] == 0 && data.Blocks[i + 1] == 0)
+            {
+                blocks = [];
+                continue;
+            }
+            for (int j = 1; j <= data.Blocks[i]; j++)
+            {
+                blocks.Add((ushort)data.Blocks[i + 1]);
+            }
+        }
+
+        for (int x = 0; x < sizeX; x++)
+        {
+            for (int y = 0; y < sizeY; y++)
+            {
+                for (int z = 0; z < sizeZ; z++)
+                {
+                    int index = z * sizeX * sizeY + x * sizeY + y;
+                    if (index < blocks.Count && blocks[index] != 0)
+                        structure._Blocks[new Vector3I(x, y, z)] = blocks[index];
+                }
+            }
+        }
+
+        foreach (DioramaDataAssetDQB1.BGPartsStruct bgparts in data.BGParts)
+        {
+            structure._BGParts.Add(new BGPartsData(structure, bgparts.BGPartsID, bgparts.X, bgparts.Y, bgparts.Z, bgparts.Direction));
+        }
+        
+        structure.CreateBGPartsPositionDictionary();
+        structure.CreateBGPartsOverlapDictionary();
+
+        return structure;
+    }
+    public static EyeOfRubissStructure From(PencilSketch blueprint)
     {
         EyeOfRubissStructure structure = new()
         {
             SourceGame = 2,
+            SizeX = blueprint.SizeX,
+            SizeY = blueprint.SizeY,
+            SizeZ = blueprint.SizeZ,
         };
 
         for (int x = 0; x < blueprint.SizeX; x++)
@@ -133,7 +191,7 @@ public class EyeOfRubissStructure()
             {
                 for (int z = 0; z < blueprint.SizeZ; z++)
                 {
-                    Blueprint.BlueprintBlockInstance block = blueprint.GetBlock(new Vector3I(x, y, z));
+                    PencilSketch.BlueprintBlockInstance block = blueprint.GetBlock(new Vector3I(x, y, z));
 
                     structure._Blocks[new Vector3I(x, y, z)] = block.BlockID.SetChiselShape(block.Chisel);
 
@@ -150,11 +208,132 @@ public class EyeOfRubissStructure()
 
         return structure;
     }
+    public static EyeOfRubissStructure FromDQB2Diorama(SaveData diorama, int sizeX, int sizeY, int sizeZ)
+    {
+        EyeOfRubissStructure structure = new()
+        {
+            SourceGame = 2,
+            SizeX = sizeX,
+            SizeY = sizeY,
+            SizeZ = sizeZ,
+        };
+
+        ushort bgPartsCount = diorama.GetUInt16(0);
+        for (int i = 0; i < bgPartsCount; i++)
+        {
+            int address = 4 + 8 * i;
+            byte x = diorama.GetByte(address);
+            byte y = diorama.GetByte(address + 1);
+            byte z = diorama.GetByte(address + 2);
+            byte dir = (byte)diorama.GetNumberBitwise(address + 3, 0, 2);
+            byte rot = (byte)diorama.GetNumberBitwise(address + 3, 2, 2);
+            ushort bgPartsId = diorama.GetUInt16(address + 4);
+
+            BGPartsInfo info = BGPartsInfo.Get(bgPartsId);
+            structure._BGParts.Add(new BGPartsData(structure, bgPartsId, x, y, z, dir, collision: info.Collision, effects: info.Effects, connectingWindowRotation: rot));
+        }
+
+        List<ushort> blocks = [];
+        bool blockDataStarted = false;
+        for (int i = bgPartsCount * 8 + 4; i < diorama.BufferSize; i += 4)
+        {
+            uint countUp = diorama.GetUInt32(i);
+            if (!blockDataStarted)
+            {
+                if (diorama.BufferSize - (i + 4) == countUp * 4)
+                {
+                    blockDataStarted = true;
+                }
+                continue;
+            }
+
+            byte count = diorama.GetByte(i);
+            byte chisel = diorama.GetByte(i + 1);
+            ushort blockId = diorama.GetUInt16(i + 2);
+
+            for (int j = 0; j < count; j++)
+            {
+                blocks.Add(blockId.SetChiselShape((ChiselShape)chisel));
+            }
+        }
+        if (!blockDataStarted)
+        {
+            StatusLabel.PrintMessage("Misconfigured diorama data.");
+        }
+
+        for (int z = 0; z < sizeZ; z++)
+        {
+            for (int y = 0; y < sizeY; y++)
+            {
+                for (int x = 0; x < sizeX; x++)
+                {
+                    int index = z * sizeX * sizeY + x * sizeY + y;
+                    if (index < blocks.Count && blocks[index] != 0)
+                        structure._Blocks[new Vector3I(x, y, z)] = blocks[index];
+                }
+            }
+        }
+        
+        structure.CreateBGPartsPositionDictionary();
+        structure.CreateBGPartsOverlapDictionary();
+
+        return structure;
+    }
+    public static EyeOfRubissStructure FromDQB2Blueprint(SaveData blueprint)
+    {
+        byte sizeX = blueprint.GetByte(1);
+        byte sizeY = blueprint.GetByte(2);
+        byte sizeZ = blueprint.GetByte(3);
+
+        EyeOfRubissStructure structure = new()
+        {
+            SourceGame = 2,
+            SizeX = sizeX,
+            SizeY = sizeY,
+            SizeZ = sizeZ,
+        };
+
+        int i = 0;
+        for (int z = 0; z < sizeZ; z++)
+        {
+            for (int x = 0; x < sizeX; x++)
+            {
+                for (int y = 0; y < sizeY; y++)
+                {
+                    int address = 4 + i * 6;
+
+                    ushort block = blueprint.GetUInt16(address + 2);
+
+                    ChiselShape chisel = (ChiselShape)blueprint.GetNumberBitwise(address + 5, 0, 4);
+
+                    structure._Blocks[new Vector3I(x,y,z)] = block.SetChiselShape(chisel);
+
+                    ushort bgPartsId = blueprint.GetUInt16(address);
+                    if (bgPartsId != 0)
+                    {
+                        byte dir = (byte)blueprint.GetNumberBitwise(address + 4, 0, 2);
+                        byte rot = (byte)blueprint.GetNumberBitwise(address + 4, 2, 2);
+                        BGPartsInfo info = BGPartsInfo.Get(bgPartsId);
+                        structure._BGParts.Add(new BGPartsData(structure, bgPartsId, x, y, z, dir, collision: info.Collision, effects: info.Effects, connectingWindowRotation: rot));
+                    }
+                    i++;
+                }
+            }
+        }
+
+        structure.CreateBGPartsPositionDictionary();
+        structure.CreateBGPartsOverlapDictionary();
+
+        return structure;
+    }
     public static EyeOfRubissStructure From(WorldData worldData)
     {
         EyeOfRubissStructure structure = new()
         {
-            SourceGame = 1
+            SourceGame = 1,
+            SizeX = WorldData.WORLD_SIZE_BLOCKS,
+            SizeY = WorldData.WORLD_HEIGHT_BLOCKS,
+            SizeZ = WorldData.WORLD_SIZE_BLOCKS
         };
 
         foreach (WorldData.Chunk chunk in worldData.GetUsedChunks())
@@ -179,7 +358,7 @@ public class EyeOfRubissStructure()
                 if (bgParts.BGPartsID != 0)
                 {
                     Vector3I position = bgParts.GetPosition();
-                    structure._BGParts.Add(new BGPartsData(structure, bgParts.BGPartsID, position.X, position.Y, position.Z, bgParts.Direction, bgParts.Collision, bgParts.Effects));
+                    structure._BGParts.Add(new BGPartsData(structure, bgParts.BGPartsID, position.X, position.Y, position.Z, bgParts.Direction, bgParts.Collision, bgParts.Effects, bgParts.Unbreakable));
                 }
             }
         }
@@ -188,9 +367,13 @@ public class EyeOfRubissStructure()
     }
     public static EyeOfRubissStructure From(WorldData worldData, Vector3I start, Vector3I end)
     {
+        Vector3I size = end - start + Vector3I.One;
         EyeOfRubissStructure structure = new()
         {
-            SourceGame = 1
+            SourceGame = 1,
+            SizeX = size.X,
+            SizeY = size.Y,
+            SizeZ = size.Z,
         };
 
         for (int x = 0; x <= end.X - start.X; x++)
@@ -207,7 +390,7 @@ public class EyeOfRubissStructure()
                     }
                     foreach (WorldData.BGParts bgParts in worldData.GetAllBGPartsAtPosition(position + start))
                     {
-                        structure._BGParts.Add(new BGPartsData(structure, bgParts.BGPartsID, position.X, position.Y, position.Z, bgParts.Direction, bgParts.Collision, bgParts.Effects));
+                        structure._BGParts.Add(new BGPartsData(structure, bgParts.BGPartsID, position.X, position.Y, position.Z, bgParts.Direction, bgParts.Collision, bgParts.Effects, bgParts.Unbreakable));
                     }
                 }
             }
@@ -223,7 +406,10 @@ public class EyeOfRubissStructure()
     {
         EyeOfRubissStructure structure = new()
         {
-            SourceGame = 2
+            SourceGame = 2,
+            SizeX = StageData.WORLD_SIZE_BLOCKS,
+            SizeY = StageData.WORLD_HEIGHT_BLOCKS,
+            SizeZ = StageData.WORLD_SIZE_BLOCKS,
         };
 
         foreach (StageData.Chunk chunk in stageData.GetUsedChunks())
@@ -249,7 +435,7 @@ public class EyeOfRubissStructure()
             if (bgParts.Exists())
             {
                 Vector3I position = bgParts.GetPosition() - new Vector3I(1024, 0, 1024);
-                structure._BGParts.Add(new BGPartsData(structure, bgParts.BGPartsID, position.X, position.Y, position.Z, bgParts.Direction, bgParts.Collision, bgParts.Effects, bgParts.ConnectingWindowRotation));
+                structure._BGParts.Add(new BGPartsData(structure, bgParts.BGPartsID, position.X, position.Y, position.Z, bgParts.Direction, bgParts.Collision, bgParts.Effects, bgParts.Unbreakable, bgParts.Size, bgParts.ConnectingWindowRotation));
             }
         }
 
@@ -257,9 +443,13 @@ public class EyeOfRubissStructure()
     }
     public static EyeOfRubissStructure From(StageData stageData, Vector3I start, Vector3I end)
     {
+        Vector3I size = end - start + Vector3I.One;
         EyeOfRubissStructure structure = new()
         {
-            SourceGame = 2
+            SourceGame = 2,
+            SizeX = size.X,
+            SizeY = size.Y,
+            SizeZ = size.Z,
         };
 
         for (int x = 0; x <= end.X - start.X; x++)
@@ -277,7 +467,7 @@ public class EyeOfRubissStructure()
 
                     foreach (StageData.BGParts bgParts in stageData.GetAllBGPartsAtPosition(position + start))
                     {
-                        structure._BGParts.Add(new BGPartsData(structure, bgParts.BGPartsID, position.X, position.Y, position.Z, bgParts.Direction, bgParts.Collision, bgParts.Effects, bgParts.ConnectingWindowRotation));
+                        structure._BGParts.Add(new BGPartsData(structure, bgParts.BGPartsID, position.X, position.Y, position.Z, bgParts.Direction, bgParts.Collision, bgParts.Effects, bgParts.Unbreakable, bgParts.Size, bgParts.ConnectingWindowRotation));
                     }
                 }
             }
@@ -290,15 +480,19 @@ public class EyeOfRubissStructure()
     }
     public static EyeOfRubissStructure From(EyeOfRubissStructure structure)
     {
+        Vector3I size = structure.GetSize();
         EyeOfRubissStructure newStructure = new()
         {
             SourceGame = structure.SourceGame,
+            SizeX = size.X,
+            SizeY = size.Y,
+            SizeZ = size.Z,
             _Blocks = structure.GetAllBlocks()
         };
 
         foreach (BGPartsData bgPartsData in structure._BGParts)
         {
-            newStructure._BGParts.Add(new(newStructure, bgPartsData.BGPartsID, bgPartsData.X, bgPartsData.Y, bgPartsData.Z, bgPartsData.Direction, bgPartsData.Collision, bgPartsData.Effects, bgPartsData.ConnectingWindowRotation));
+            newStructure._BGParts.Add(new(newStructure, bgPartsData.BGPartsID, bgPartsData.X, bgPartsData.Y, bgPartsData.Z, bgPartsData.Direction, bgPartsData.Collision, bgPartsData.Effects, bgPartsData.Unbreakable, bgPartsData.Size, bgPartsData.ConnectingWindowRotation));
         }
 
         newStructure.CreateBGPartsPositionDictionary();
@@ -308,9 +502,13 @@ public class EyeOfRubissStructure()
     }
     public static EyeOfRubissStructure From(EyeOfRubissStructure structure, Vector3I start, Vector3I end)
     {
+        Vector3I size = end - start + Vector3I.One;
         EyeOfRubissStructure newStructure = new()
         {
-            SourceGame = structure.SourceGame
+            SourceGame = structure.SourceGame,
+            SizeX = size.X,
+            SizeY = size.Y,
+            SizeZ = size.Z,
         };
 
         for (int x = 0; x <= end.X - start.X; x++)
@@ -328,7 +526,7 @@ public class EyeOfRubissStructure()
 
                     foreach (BGPartsData bgParts in structure.GetAllBGPartsAtPosition(position + start))
                     {
-                        newStructure._BGParts.Add(new BGPartsData(structure, bgParts.BGPartsID, position.X, position.Y, position.Z, bgParts.Direction, bgParts.Collision, bgParts.Effects, bgParts.ConnectingWindowRotation));
+                        newStructure._BGParts.Add(new BGPartsData(structure, bgParts.BGPartsID, position.X, position.Y, position.Z, bgParts.Direction, bgParts.Collision, bgParts.Effects, bgParts.Unbreakable, bgParts.Size, bgParts.ConnectingWindowRotation));
                     }
                 }
             }
@@ -343,7 +541,10 @@ public class EyeOfRubissStructure()
     {
         EyeOfRubissStructure structure = new()
         {
-            SourceGame = serializable.SourceGame
+            SourceGame = serializable.SourceGame,
+            SizeX = serializable.SizeX,
+            SizeY = serializable.SizeY,
+            SizeZ = serializable.SizeZ,
         };
 
         int x = 0;
@@ -419,7 +620,7 @@ public class EyeOfRubissStructure()
         return structure;
     }
 
-    public BlueprintFileDQB2 ToBlueprint()
+    public PencilSketchFile ToBlueprint()
     {
         (Vector3I min, Vector3I max) = GetBounds();
         Vector3I size = max - min + Vector3I.One;
@@ -428,8 +629,8 @@ public class EyeOfRubissStructure()
             return null;
         }
 
-        BlueprintFileDQB2 blueprintFile = BlueprintFileDQB2.CreateNew();
-        Blueprint blueprint = blueprintFile.Blueprint;
+        PencilSketchFile blueprintFile = PencilSketchFile.CreateNew();
+        PencilSketch blueprint = blueprintFile.PencilSketch;
 
         blueprint.Exists = true;
         blueprint.SizeX = (ushort)size.X;
@@ -441,14 +642,14 @@ public class EyeOfRubissStructure()
             foreach ((Vector3I position, ushort block) in _Blocks)
             {
                 Vector3I adjustedPosition = position - min;
-                Blueprint.BlueprintBlockInstance blockInstance = blueprint.GetBlock(adjustedPosition);
+                PencilSketch.BlueprintBlockInstance blockInstance = blueprint.GetBlock(adjustedPosition);
                 blockInstance.BlockID = EyeOfRubiss.Info.DQB1.BlockInfo.Get((byte)block).DQB2Block;
             }
             foreach (BGPartsData bgParts in _BGParts)
             {
                 Vector3I position = bgParts.GetPosition();
                 Vector3I adjustedPosition = position - min;
-                Blueprint.BlueprintBlockInstance blockInstance = blueprint.GetBlock(adjustedPosition);
+                PencilSketch.BlueprintBlockInstance blockInstance = blueprint.GetBlock(adjustedPosition);
                 blockInstance.BGPartsID = EyeOfRubiss.Info.DQB1.BGPartsInfo.Get(bgParts.BGPartsID).DQB2BGParts;
                 blockInstance.Direction = bgParts.Direction;
             }
@@ -458,7 +659,7 @@ public class EyeOfRubissStructure()
             foreach ((Vector3I position, ushort block) in _Blocks)
             {
                 Vector3I adjustedPosition = position - min;
-                Blueprint.BlueprintBlockInstance blockInstance = blueprint.GetBlock(adjustedPosition);
+                PencilSketch.BlueprintBlockInstance blockInstance = blueprint.GetBlock(adjustedPosition);
                 blockInstance.BlockID = block.GetBlockID();
                 blockInstance.Chisel = block.GetChiselShape();
             }
@@ -466,7 +667,7 @@ public class EyeOfRubissStructure()
             {
                 Vector3I position = bgParts.GetPosition();
                 Vector3I adjustedPosition = position - min;
-                Blueprint.BlueprintBlockInstance blockInstance = blueprint.GetBlock(adjustedPosition);
+                PencilSketch.BlueprintBlockInstance blockInstance = blueprint.GetBlock(adjustedPosition);
                 blockInstance.BGPartsID = bgParts.BGPartsID;
                 blockInstance.Direction = bgParts.Direction;
             }
@@ -546,12 +747,17 @@ public class EyeOfRubissStructure()
         return parts;
     }
 
-    public BGPartsData AddBGParts(Vector3I position, ushort bgPartsId, byte direction, bool collision = false, bool effects = false, byte connectingWindowRotation = 0)
+    public List<BGPartsData> GetAllBGParts()
+    {
+        return [.. _BGParts];
+    }
+
+    public BGPartsData AddBGParts(Vector3I position, ushort bgPartsId, byte direction, bool collision = false, bool effects = false, bool unbreakable = false, byte size = 0, byte connectingWindowRotation = 0)
     {
         if (_BGPartsPositionDictionary is null)
             CreateBGPartsPositionDictionary();
         
-        BGPartsData bgParts = new(this, bgPartsId, position.X, position.Y, position.Z, direction, collision, effects, connectingWindowRotation);
+        BGPartsData bgParts = new(this, bgPartsId, position.X, position.Y, position.Z, direction, collision, effects, unbreakable, size, connectingWindowRotation);
         _BGParts.Add(bgParts);
         AddBGPartsToPositionDictionary(bgParts);
         AddBGPartsToOverlapDictionary(bgParts);
@@ -711,7 +917,9 @@ public class EyeOfRubissStructure()
 
         public bool Collision { get; set; }
         public bool Effects { get; set; }
+        public bool Unbreakable { get; set; }
 
+        public byte Size { get; set; } = 0;
         public byte ConnectingWindowRotation { get; set; } = 0;
 
         public Tuple<Vector3I, Vector3I> GetBounds()
@@ -760,7 +968,7 @@ public class EyeOfRubissStructure()
             );
         }
     
-        public BGPartsData(EyeOfRubissStructure structure, ushort bgPartsId, int x, int y, int z, byte direction = 0, bool collision = false, bool effects = false, byte connectingWindowRotation = 0)
+        public BGPartsData(EyeOfRubissStructure structure, ushort bgPartsId, int x, int y, int z, byte direction = 0, bool collision = false, bool effects = false, bool unbreakable = false, byte size = 0, byte connectingWindowRotation = 0)
         {
             Structure = structure;
             _bgPartsID = bgPartsId;
@@ -770,6 +978,8 @@ public class EyeOfRubissStructure()
             _direction = direction;
             Collision = collision;
             Effects = effects;
+            Unbreakable = unbreakable;
+            Size = size;
             ConnectingWindowRotation = connectingWindowRotation;
         }
         public BGPartsData(EyeOfRubissStructure structure, BGPartsDataSerializable serializable)
@@ -782,6 +992,8 @@ public class EyeOfRubissStructure()
             _direction = serializable.Direction;
             Collision = serializable.Collision;
             Effects = serializable.Effects;
+            Unbreakable = serializable.Unbreakable;
+            Size = serializable.Size;
             ConnectingWindowRotation = serializable.ConnectingWindowRotation;
         }
     }
@@ -862,7 +1074,11 @@ public class EyeOfRubissStructure()
         public bool Collision { get; set; } = false;
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingDefault)][JsonPropertyName("Eff")]
         public bool Effects { get; set; } = false;
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingDefault)][JsonPropertyName("Unb")]
+        public bool Unbreakable { get; set; } = false;
 
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingDefault)][JsonPropertyName("Size")]
+        public byte Size { get; set; } = 0;
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingDefault)][JsonPropertyName("Rot")]
         public byte ConnectingWindowRotation { get; set; } = 0;
 
@@ -876,6 +1092,8 @@ public class EyeOfRubissStructure()
             Direction = bgParts.Direction;
             Collision = bgParts.Collision;
             Effects = bgParts.Effects;
+            Unbreakable = bgParts.Unbreakable;
+            Size = bgParts.Size;
             ConnectingWindowRotation = bgParts.ConnectingWindowRotation;
         }
     }

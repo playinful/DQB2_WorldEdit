@@ -1,0 +1,7 @@
+# ISLAND INFO #
+
+0x00 = ushort(?) 0x0020 (32) (amount of entries in file)
+0x02..0x3F = Empty
+0x40..0xBF = uint[] Integers from 0-31
+0xC0..0x1BF = Island Info[] (8 bytes each) (32 count)
+    +0x00 = ushort Name

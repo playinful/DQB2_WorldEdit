@@ -25,7 +25,7 @@ namespace EyeOfRubiss
 
             if (originInVoxels.Y < 0 && !ShowPartsBlock)
             {
-                outBuffer.Fill(Constants.VOXEL_SEAFLOOR);
+                outBuffer.Fill(ShowTerrain ? Constants.VOXEL_SEAFLOOR : Constants.VOXEL_FLOOR_COLLISION);
                 return;
             }
             Vector3I bufferSize = outBuffer.GetSize();
@@ -53,6 +53,9 @@ namespace EyeOfRubiss
     
         public static ulong GetVoxelAtPosition(StageData stageData, Vector3I position, bool showTerrain = true, bool showFluid = true, bool showPartsBlock = false)
         {
+            if (position.Y < 0 && !showPartsBlock)
+                return showTerrain ? Constants.VOXEL_SEAFLOOR : Constants.VOXEL_FLOOR_COLLISION;
+
             StageData.BlockInstance block = stageData.GetBlockAtPosition(position);
             if (block is null)
                 return Constants.VOXEL_AIR;
@@ -60,7 +63,7 @@ namespace EyeOfRubiss
             BlockInfo blockInfo = BlockInfo.Get(block.BlockID);
 
             if (showPartsBlock)
-                return (ulong)blockInfo.GetPartsType();
+                return (ulong)((int)blockInfo.GetPartsType() + 1);
 
             ulong voxelId = blockInfo.Voxel;
 
